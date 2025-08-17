@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.gcp.m.upbound.io;
+#nullable enable
 /// <summary>AppConnection is the Schema for the AppConnections API. A BeyondCorp AppConnection resource represents a BeyondCorp protected AppConnection to a remote application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AppConnectionList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1AppConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderApplicationEndpoint
@@ -46,7 +49,9 @@ public partial class V1beta1AppConnectionSpecForProviderApplicationEndpoint
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderConnectorsRefsPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1AppConnectionSpecForProviderConnectorsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderConnectorsRefs
@@ -76,7 +83,9 @@ public partial class V1beta1AppConnectionSpecForProviderConnectorsRefs
     [JsonPropertyName("policy")]
     public V1beta1AppConnectionSpecForProviderConnectorsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderConnectorsSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1AppConnectionSpecForProviderConnectorsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of AppConnector in beyondcorp to populate connectors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderConnectorsSelector
@@ -110,7 +121,9 @@ public partial class V1beta1AppConnectionSpecForProviderConnectorsSelector
     [JsonPropertyName("policy")]
     public V1beta1AppConnectionSpecForProviderConnectorsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderGatewayAppGatewayRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1AppConnectionSpecForProviderGatewayAppGatewayRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AppGateway in beyondcorp to populate appGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderGatewayAppGatewayRef
@@ -140,7 +155,9 @@ public partial class V1beta1AppConnectionSpecForProviderGatewayAppGatewayRef
     [JsonPropertyName("policy")]
     public V1beta1AppConnectionSpecForProviderGatewayAppGatewayRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderGatewayAppGatewaySelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1AppConnectionSpecForProviderGatewayAppGatewaySelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AppGateway in beyondcorp to populate appGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderGatewayAppGatewaySelector
@@ -174,7 +193,9 @@ public partial class V1beta1AppConnectionSpecForProviderGatewayAppGatewaySelecto
     [JsonPropertyName("policy")]
     public V1beta1AppConnectionSpecForProviderGatewayAppGatewaySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gateway used by the AppConnection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderGateway
@@ -195,7 +216,9 @@ public partial class V1beta1AppConnectionSpecForProviderGateway
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProvider
@@ -244,7 +267,9 @@ public partial class V1beta1AppConnectionSpecForProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderApplicationEndpoint
@@ -257,7 +282,9 @@ public partial class V1beta1AppConnectionSpecInitProviderApplicationEndpoint
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderConnectorsRefsPolicy
@@ -270,7 +297,9 @@ public partial class V1beta1AppConnectionSpecInitProviderConnectorsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderConnectorsRefs
@@ -287,7 +316,9 @@ public partial class V1beta1AppConnectionSpecInitProviderConnectorsRefs
     [JsonPropertyName("policy")]
     public V1beta1AppConnectionSpecInitProviderConnectorsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderConnectorsSelectorPolicy
@@ -300,7 +331,9 @@ public partial class V1beta1AppConnectionSpecInitProviderConnectorsSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of AppConnector in beyondcorp to populate connectors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderConnectorsSelector
@@ -321,7 +354,9 @@ public partial class V1beta1AppConnectionSpecInitProviderConnectorsSelector
     [JsonPropertyName("policy")]
     public V1beta1AppConnectionSpecInitProviderConnectorsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderGatewayAppGatewayRefPolicy
@@ -334,7 +369,9 @@ public partial class V1beta1AppConnectionSpecInitProviderGatewayAppGatewayRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AppGateway in beyondcorp to populate appGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderGatewayAppGatewayRef
@@ -351,7 +388,9 @@ public partial class V1beta1AppConnectionSpecInitProviderGatewayAppGatewayRef
     [JsonPropertyName("policy")]
     public V1beta1AppConnectionSpecInitProviderGatewayAppGatewayRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderGatewayAppGatewaySelectorPolicy
@@ -364,7 +403,9 @@ public partial class V1beta1AppConnectionSpecInitProviderGatewayAppGatewaySelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AppGateway in beyondcorp to populate appGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderGatewayAppGatewaySelector
@@ -385,7 +426,9 @@ public partial class V1beta1AppConnectionSpecInitProviderGatewayAppGatewaySelect
     [JsonPropertyName("policy")]
     public V1beta1AppConnectionSpecInitProviderGatewayAppGatewaySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gateway used by the AppConnection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProviderGateway
@@ -406,7 +449,9 @@ public partial class V1beta1AppConnectionSpecInitProviderGateway
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecInitProvider
@@ -455,7 +500,9 @@ public partial class V1beta1AppConnectionSpecInitProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecProviderConfigRef
@@ -468,7 +515,9 @@ public partial class V1beta1AppConnectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecWriteConnectionSecretToRef
@@ -477,7 +526,9 @@ public partial class V1beta1AppConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppConnectionSpec defines the desired state of AppConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpec
@@ -502,7 +553,9 @@ public partial class V1beta1AppConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AppConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionStatusAtProviderApplicationEndpoint
@@ -515,7 +568,9 @@ public partial class V1beta1AppConnectionStatusAtProviderApplicationEndpoint
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gateway used by the AppConnection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionStatusAtProviderGateway
@@ -536,7 +591,9 @@ public partial class V1beta1AppConnectionStatusAtProviderGateway
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionStatusAtProvider
@@ -589,7 +646,9 @@ public partial class V1beta1AppConnectionStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionStatusConditions
@@ -618,7 +677,9 @@ public partial class V1beta1AppConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppConnectionStatus defines the observed state of AppConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionStatus
@@ -635,7 +696,9 @@ public partial class V1beta1AppConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppConnection is the Schema for the AppConnections API. A BeyondCorp AppConnection resource represents a BeyondCorp protected AppConnection to a remote application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -665,3 +728,4 @@ public partial class V1beta1AppConnection : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1AppConnectionStatus? Status { get; set; }
 }
+#nullable disable

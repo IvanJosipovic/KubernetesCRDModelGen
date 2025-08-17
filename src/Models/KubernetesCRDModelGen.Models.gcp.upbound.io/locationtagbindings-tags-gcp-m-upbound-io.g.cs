@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tags.gcp.m.upbound.io;
+#nullable enable
 /// <summary>LocationTagBinding is the Schema for the LocationTagBindings API. A LocationTagBinding represents a connection between a TagValue and a non-global cloud resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LocationTagBindingList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1LocationTagBinding> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecForProviderTagValueRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LocationTagBindingSpecForProviderTagValueRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TagValue in tags to populate tagValue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecForProviderTagValueRef
@@ -63,7 +68,9 @@ public partial class V1beta1LocationTagBindingSpecForProviderTagValueRef
     [JsonPropertyName("policy")]
     public V1beta1LocationTagBindingSpecForProviderTagValueRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecForProviderTagValueSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LocationTagBindingSpecForProviderTagValueSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TagValue in tags to populate tagValue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecForProviderTagValueSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LocationTagBindingSpecForProviderTagValueSelector
     [JsonPropertyName("policy")]
     public V1beta1LocationTagBindingSpecForProviderTagValueSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1LocationTagBindingSpecForProvider
     [JsonPropertyName("tagValueSelector")]
     public V1beta1LocationTagBindingSpecForProviderTagValueSelector? TagValueSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecInitProviderTagValueRefPolicy
@@ -135,7 +148,9 @@ public partial class V1beta1LocationTagBindingSpecInitProviderTagValueRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TagValue in tags to populate tagValue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecInitProviderTagValueRef
@@ -152,7 +167,9 @@ public partial class V1beta1LocationTagBindingSpecInitProviderTagValueRef
     [JsonPropertyName("policy")]
     public V1beta1LocationTagBindingSpecInitProviderTagValueRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecInitProviderTagValueSelectorPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1LocationTagBindingSpecInitProviderTagValueSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TagValue in tags to populate tagValue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecInitProviderTagValueSelector
@@ -186,7 +205,9 @@ public partial class V1beta1LocationTagBindingSpecInitProviderTagValueSelector
     [JsonPropertyName("policy")]
     public V1beta1LocationTagBindingSpecInitProviderTagValueSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecInitProvider
@@ -211,7 +232,9 @@ public partial class V1beta1LocationTagBindingSpecInitProvider
     [JsonPropertyName("tagValueSelector")]
     public V1beta1LocationTagBindingSpecInitProviderTagValueSelector? TagValueSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecProviderConfigRef
@@ -224,7 +247,9 @@ public partial class V1beta1LocationTagBindingSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpecWriteConnectionSecretToRef
@@ -233,7 +258,9 @@ public partial class V1beta1LocationTagBindingSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocationTagBindingSpec defines the desired state of LocationTagBinding</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingSpec
@@ -258,7 +285,9 @@ public partial class V1beta1LocationTagBindingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LocationTagBindingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingStatusAtProvider
@@ -283,7 +312,9 @@ public partial class V1beta1LocationTagBindingStatusAtProvider
     [JsonPropertyName("tagValue")]
     public string? TagValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingStatusConditions
@@ -312,7 +343,9 @@ public partial class V1beta1LocationTagBindingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocationTagBindingStatus defines the observed state of LocationTagBinding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationTagBindingStatus
@@ -329,7 +362,9 @@ public partial class V1beta1LocationTagBindingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocationTagBinding is the Schema for the LocationTagBindings API. A LocationTagBinding represents a connection between a TagValue and a non-global cloud resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -359,3 +394,4 @@ public partial class V1beta1LocationTagBinding : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1LocationTagBindingStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>LoadBalancerBackendAddressPool is the Schema for the LoadBalancerBackendAddressPools API. Manages a Load Balancer Backend Address Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1LoadBalancerBackendAddressPool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbal
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancer in network to populate loadbalancerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbal
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbal
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancer in network to populate loadbalancerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbal
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderTunnelInterface
@@ -110,7 +121,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderTunnelI
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProvider
@@ -139,7 +152,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProvider
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProviderTunnelInterface
@@ -160,7 +175,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProviderTunnel
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProvider
@@ -177,7 +194,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProvider
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicy
@@ -190,7 +209,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRef
@@ -203,7 +224,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerBackendAddressPoolSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecWriteConnectionSecretToRef
@@ -216,7 +239,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecWriteConnectionSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerBackendAddressPoolSpec defines the desired state of LoadBalancerBackendAddressPool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpec
@@ -245,7 +270,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LoadBalancerBackendAddressPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolStatusAtProviderTunnelInterface
@@ -266,7 +293,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolStatusAtProviderTunnel
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolStatusAtProvider
@@ -307,7 +336,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolStatusAtProvider
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolStatusConditions
@@ -336,7 +367,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerBackendAddressPoolStatus defines the observed state of LoadBalancerBackendAddressPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolStatus
@@ -353,7 +386,9 @@ public partial class V1beta1LoadBalancerBackendAddressPoolStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerBackendAddressPool is the Schema for the LoadBalancerBackendAddressPools API. Manages a Load Balancer Backend Address Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -383,3 +418,4 @@ public partial class V1beta1LoadBalancerBackendAddressPool : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1LoadBalancerBackendAddressPoolStatus? Status { get; set; }
 }
+#nullable disable

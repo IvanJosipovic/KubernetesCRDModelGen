@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identitygovernance.azuread.m.upbound.io;
+#nullable enable
 /// <summary>PrivilegedAccessGroupAssignmentSchedule is the Schema for the PrivilegedAccessGroupAssignmentSchedules API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleList : IKuber
     [JsonPropertyName("items")]
     public IList<V1beta1PrivilegedAccessGroupAssignmentSchedule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in groups to populate groupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderGroupIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderGroupIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in groups to populate groupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderGroupIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderPrincipalIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in users to populate principalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderPrincipalIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderPrincipalIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderPrincipalIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in users to populate principalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderPrincipalIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderPrincipalIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvider
@@ -222,7 +241,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProvid
     [JsonPropertyName("ticketSystem")]
     public string? TicketSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderGroupIdRefPolicy
@@ -235,7 +256,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in groups to populate groupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderGroupIdRef
@@ -252,7 +275,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderGroupIdSelectorPolicy
@@ -265,7 +290,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in groups to populate groupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderGroupIdSelector
@@ -286,7 +313,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderPrincipalIdRefPolicy
@@ -299,7 +328,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in users to populate principalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderPrincipalIdRef
@@ -316,7 +347,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderPrincipalIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderPrincipalIdSelectorPolicy
@@ -329,7 +362,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in users to populate principalId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderPrincipalIdSelector
@@ -350,7 +385,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProviderPrincipalIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvider
@@ -411,7 +448,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecInitProvi
     [JsonPropertyName("ticketSystem")]
     public string? TicketSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecProviderConfigRef
@@ -424,7 +463,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecProviderC
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecWriteConnectionSecretToRef
@@ -433,7 +474,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecWriteConn
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivilegedAccessGroupAssignmentScheduleSpec defines the desired state of PrivilegedAccessGroupAssignmentSchedule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpec
@@ -458,7 +501,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleStatusAtProvider
@@ -511,7 +556,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleStatusAtProvi
     [JsonPropertyName("ticketSystem")]
     public string? TicketSystem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleStatusConditions
@@ -540,7 +587,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleStatusConditi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivilegedAccessGroupAssignmentScheduleStatus defines the observed state of PrivilegedAccessGroupAssignmentSchedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleStatus
@@ -557,7 +606,9 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivilegedAccessGroupAssignmentSchedule is the Schema for the PrivilegedAccessGroupAssignmentSchedules API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -587,3 +638,4 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentSchedule : IKubernete
     [JsonPropertyName("status")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleStatus? Status { get; set; }
 }
+#nullable disable

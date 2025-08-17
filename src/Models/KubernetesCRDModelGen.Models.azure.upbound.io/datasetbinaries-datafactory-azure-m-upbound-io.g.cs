@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+#nullable enable
 /// <summary>DataSetBinary is the Schema for the DataSetBinarys API. Manages a Data Factory Binary Dataset inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataSetBinaryList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1DataSetBinary> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A azure_blob_storage_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderAzureBlobStorageLocation
@@ -62,7 +65,9 @@ public partial class V1beta1DataSetBinarySpecForProviderAzureBlobStorageLocation
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A compression block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderCompression
@@ -75,7 +80,9 @@ public partial class V1beta1DataSetBinarySpecForProviderCompression
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderDataFactoryIdRefPolicy
@@ -88,7 +95,9 @@ public partial class V1beta1DataSetBinarySpecForProviderDataFactoryIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderDataFactoryIdRef
@@ -105,7 +114,9 @@ public partial class V1beta1DataSetBinarySpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetBinarySpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderDataFactoryIdSelectorPolicy
@@ -118,7 +129,9 @@ public partial class V1beta1DataSetBinarySpecForProviderDataFactoryIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderDataFactoryIdSelector
@@ -139,7 +152,9 @@ public partial class V1beta1DataSetBinarySpecForProviderDataFactoryIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DataSetBinarySpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A http_server_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderHttpServerLocation
@@ -164,7 +179,9 @@ public partial class V1beta1DataSetBinarySpecForProviderHttpServerLocation
     [JsonPropertyName("relativeUrl")]
     public string? RelativeUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderLinkedServiceNameRefPolicy
@@ -177,7 +194,9 @@ public partial class V1beta1DataSetBinarySpecForProviderLinkedServiceNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinkedServiceSFTP in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderLinkedServiceNameRef
@@ -194,7 +213,9 @@ public partial class V1beta1DataSetBinarySpecForProviderLinkedServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetBinarySpecForProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderLinkedServiceNameSelectorPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1DataSetBinarySpecForProviderLinkedServiceNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinkedServiceSFTP in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderLinkedServiceNameSelector
@@ -228,7 +251,9 @@ public partial class V1beta1DataSetBinarySpecForProviderLinkedServiceNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1DataSetBinarySpecForProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sftp_server_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderSftpServerLocation
@@ -249,7 +274,9 @@ public partial class V1beta1DataSetBinarySpecForProviderSftpServerLocation
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProvider
@@ -314,7 +341,9 @@ public partial class V1beta1DataSetBinarySpecForProvider
     [JsonPropertyName("sftpServerLocation")]
     public V1beta1DataSetBinarySpecForProviderSftpServerLocation? SftpServerLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A azure_blob_storage_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProviderAzureBlobStorageLocation
@@ -343,7 +372,9 @@ public partial class V1beta1DataSetBinarySpecInitProviderAzureBlobStorageLocatio
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A compression block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProviderCompression
@@ -356,7 +387,9 @@ public partial class V1beta1DataSetBinarySpecInitProviderCompression
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A http_server_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProviderHttpServerLocation
@@ -381,7 +414,9 @@ public partial class V1beta1DataSetBinarySpecInitProviderHttpServerLocation
     [JsonPropertyName("relativeUrl")]
     public string? RelativeUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProviderLinkedServiceNameRefPolicy
@@ -394,7 +429,9 @@ public partial class V1beta1DataSetBinarySpecInitProviderLinkedServiceNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinkedServiceSFTP in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProviderLinkedServiceNameRef
@@ -411,7 +448,9 @@ public partial class V1beta1DataSetBinarySpecInitProviderLinkedServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetBinarySpecInitProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProviderLinkedServiceNameSelectorPolicy
@@ -424,7 +463,9 @@ public partial class V1beta1DataSetBinarySpecInitProviderLinkedServiceNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinkedServiceSFTP in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProviderLinkedServiceNameSelector
@@ -445,7 +486,9 @@ public partial class V1beta1DataSetBinarySpecInitProviderLinkedServiceNameSelect
     [JsonPropertyName("policy")]
     public V1beta1DataSetBinarySpecInitProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sftp_server_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProviderSftpServerLocation
@@ -466,7 +509,9 @@ public partial class V1beta1DataSetBinarySpecInitProviderSftpServerLocation
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecInitProvider
@@ -519,7 +564,9 @@ public partial class V1beta1DataSetBinarySpecInitProvider
     [JsonPropertyName("sftpServerLocation")]
     public V1beta1DataSetBinarySpecInitProviderSftpServerLocation? SftpServerLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecProviderConfigRef
@@ -532,7 +579,9 @@ public partial class V1beta1DataSetBinarySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecWriteConnectionSecretToRef
@@ -541,7 +590,9 @@ public partial class V1beta1DataSetBinarySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetBinarySpec defines the desired state of DataSetBinary</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpec
@@ -566,7 +617,9 @@ public partial class V1beta1DataSetBinarySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataSetBinarySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A azure_blob_storage_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinaryStatusAtProviderAzureBlobStorageLocation
@@ -595,7 +648,9 @@ public partial class V1beta1DataSetBinaryStatusAtProviderAzureBlobStorageLocatio
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A compression block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinaryStatusAtProviderCompression
@@ -608,7 +663,9 @@ public partial class V1beta1DataSetBinaryStatusAtProviderCompression
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A http_server_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinaryStatusAtProviderHttpServerLocation
@@ -633,7 +690,9 @@ public partial class V1beta1DataSetBinaryStatusAtProviderHttpServerLocation
     [JsonPropertyName("relativeUrl")]
     public string? RelativeUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sftp_server_location block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinaryStatusAtProviderSftpServerLocation
@@ -654,7 +713,9 @@ public partial class V1beta1DataSetBinaryStatusAtProviderSftpServerLocation
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinaryStatusAtProvider
@@ -707,7 +768,9 @@ public partial class V1beta1DataSetBinaryStatusAtProvider
     [JsonPropertyName("sftpServerLocation")]
     public V1beta1DataSetBinaryStatusAtProviderSftpServerLocation? SftpServerLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinaryStatusConditions
@@ -736,7 +799,9 @@ public partial class V1beta1DataSetBinaryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetBinaryStatus defines the observed state of DataSetBinary.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinaryStatus
@@ -753,7 +818,9 @@ public partial class V1beta1DataSetBinaryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetBinary is the Schema for the DataSetBinarys API. Manages a Data Factory Binary Dataset inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -783,3 +850,4 @@ public partial class V1beta1DataSetBinary : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1DataSetBinaryStatus? Status { get; set; }
 }
+#nullable disable

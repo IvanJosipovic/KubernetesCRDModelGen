@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+#nullable enable
 /// <summary>RoutingProfile is the Schema for the RoutingProfiles API. Provides details about a specific Amazon Connect Routing Profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta2RoutingProfileList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta2RoutingProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in connect to populate defaultOutboundQueueId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdRef
@@ -59,7 +64,9 @@ public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdR
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in connect to populate defaultOutboundQueueId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdS
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecForProviderDefaultOutboundQueueIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderInstanceIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta2RoutingProfileSpecForProviderInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderInstanceIdRef
@@ -115,7 +128,9 @@ public partial class V1beta2RoutingProfileSpecForProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderInstanceIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta2RoutingProfileSpecForProviderInstanceIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderInstanceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta2RoutingProfileSpecForProviderInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderMediaConcurrencies
@@ -158,7 +177,9 @@ public partial class V1beta2RoutingProfileSpecForProviderMediaConcurrencies
     [JsonPropertyName("concurrency")]
     public double? Concurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProviderQueueConfigs
@@ -179,7 +200,9 @@ public partial class V1beta2RoutingProfileSpecForProviderQueueConfigs
     [JsonPropertyName("queueId")]
     public string? QueueId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecForProvider
@@ -232,7 +255,9 @@ public partial class V1beta2RoutingProfileSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdRefPolicy
@@ -245,7 +270,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in connect to populate defaultOutboundQueueId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdRef
@@ -258,7 +285,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueId
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdSelectorPolicy
@@ -271,7 +300,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in connect to populate defaultOutboundQueueId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdSelector
@@ -288,7 +319,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueId
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecInitProviderDefaultOutboundQueueIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdRefPolicy
@@ -301,7 +334,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdRef
@@ -314,7 +349,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecInitProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdSelectorPolicy
@@ -327,7 +364,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdSelector
@@ -344,7 +383,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderMediaConcurrencies
@@ -357,7 +398,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderMediaConcurrencies
     [JsonPropertyName("concurrency")]
     public double? Concurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProviderQueueConfigs
@@ -378,7 +421,9 @@ public partial class V1beta2RoutingProfileSpecInitProviderQueueConfigs
     [JsonPropertyName("queueId")]
     public string? QueueId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecInitProvider
@@ -427,7 +472,9 @@ public partial class V1beta2RoutingProfileSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecProviderConfigRefPolicy
@@ -440,7 +487,9 @@ public partial class V1beta2RoutingProfileSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecProviderConfigRef
@@ -453,7 +502,9 @@ public partial class V1beta2RoutingProfileSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta2RoutingProfileSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpecWriteConnectionSecretToRef
@@ -466,7 +517,9 @@ public partial class V1beta2RoutingProfileSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoutingProfileSpec defines the desired state of RoutingProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileSpec
@@ -495,7 +548,9 @@ public partial class V1beta2RoutingProfileSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta2RoutingProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileStatusAtProviderMediaConcurrencies
@@ -508,7 +563,9 @@ public partial class V1beta2RoutingProfileStatusAtProviderMediaConcurrencies
     [JsonPropertyName("concurrency")]
     public double? Concurrency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileStatusAtProviderQueueConfigs
@@ -537,7 +594,9 @@ public partial class V1beta2RoutingProfileStatusAtProviderQueueConfigs
     [JsonPropertyName("queueName")]
     public string? QueueName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileStatusAtProvider
@@ -590,7 +649,9 @@ public partial class V1beta2RoutingProfileStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileStatusConditions
@@ -619,7 +680,9 @@ public partial class V1beta2RoutingProfileStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoutingProfileStatus defines the observed state of RoutingProfile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RoutingProfileStatus
@@ -636,7 +699,9 @@ public partial class V1beta2RoutingProfileStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoutingProfile is the Schema for the RoutingProfiles API. Provides details about a specific Amazon Connect Routing Profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -666,3 +731,4 @@ public partial class V1beta2RoutingProfile : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta2RoutingProfileStatus? Status { get; set; }
 }
+#nullable disable

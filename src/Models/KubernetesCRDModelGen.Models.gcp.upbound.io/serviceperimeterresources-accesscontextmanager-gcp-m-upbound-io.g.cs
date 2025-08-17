@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ServicePerimeterResource is the Schema for the ServicePerimeterResources API. Allows configuring a single GCP resource that should be inside the 'status' block of a service perimeter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServicePerimeterResourceList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1ServicePerimeterResource> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecForProviderPerimeterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ServicePerimeterResourceSpecForProviderPerimeterName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServicePerimeter in accesscontextmanager to populate perimeterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecForProviderPerimeterNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ServicePerimeterResourceSpecForProviderPerimeterName
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterResourceSpecForProviderPerimeterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecForProviderPerimeterNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ServicePerimeterResourceSpecForProviderPerimeterName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServicePerimeter in accesscontextmanager to populate perimeterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecForProviderPerimeterNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ServicePerimeterResourceSpecForProviderPerimeterName
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterResourceSpecForProviderPerimeterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1ServicePerimeterResourceSpecForProvider
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNameRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServicePerimeter in accesscontextmanager to populate perimeterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNameRef
@@ -148,7 +163,9 @@ public partial class V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNam
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNameSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServicePerimeter in accesscontextmanager to populate perimeterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNameSelector
@@ -182,7 +201,9 @@ public partial class V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNam
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterResourceSpecInitProviderPerimeterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecInitProvider
@@ -203,7 +224,9 @@ public partial class V1beta1ServicePerimeterResourceSpecInitProvider
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecProviderConfigRef
@@ -216,7 +239,9 @@ public partial class V1beta1ServicePerimeterResourceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpecWriteConnectionSecretToRef
@@ -225,7 +250,9 @@ public partial class V1beta1ServicePerimeterResourceSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServicePerimeterResourceSpec defines the desired state of ServicePerimeterResource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceSpec
@@ -250,7 +277,9 @@ public partial class V1beta1ServicePerimeterResourceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServicePerimeterResourceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceStatusAtProvider
@@ -275,7 +304,9 @@ public partial class V1beta1ServicePerimeterResourceStatusAtProvider
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceStatusConditions
@@ -304,7 +335,9 @@ public partial class V1beta1ServicePerimeterResourceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServicePerimeterResourceStatus defines the observed state of ServicePerimeterResource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceStatus
@@ -321,7 +354,9 @@ public partial class V1beta1ServicePerimeterResourceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServicePerimeterResource is the Schema for the ServicePerimeterResources API. Allows configuring a single GCP resource that should be inside the 'status' block of a service perimeter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -351,3 +386,4 @@ public partial class V1beta1ServicePerimeterResource : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1ServicePerimeterResourceStatus? Status { get; set; }
 }
+#nullable disable

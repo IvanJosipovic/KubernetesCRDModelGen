@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alloydb.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Instance is the Schema for the Instances API. A managed alloydb cluster instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InstanceList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Instance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SSL config option for this instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderClientConnectionConfigSslConfig
@@ -42,7 +45,9 @@ public partial class V1beta1InstanceSpecForProviderClientConnectionConfigSslConf
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Client connection specific configurations. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderClientConnectionConfig
@@ -55,7 +60,9 @@ public partial class V1beta1InstanceSpecForProviderClientConnectionConfig
     [JsonPropertyName("sslConfig")]
     public V1beta1InstanceSpecForProviderClientConnectionConfigSslConfig? SslConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderClusterRefPolicy
@@ -68,7 +75,9 @@ public partial class V1beta1InstanceSpecForProviderClusterRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in alloydb to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderClusterRef
@@ -85,7 +94,9 @@ public partial class V1beta1InstanceSpecForProviderClusterRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceSpecForProviderClusterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderClusterSelectorPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1InstanceSpecForProviderClusterSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in alloydb to populate cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderClusterSelector
@@ -119,7 +132,9 @@ public partial class V1beta1InstanceSpecForProviderClusterSelector
     [JsonPropertyName("policy")]
     public V1beta1InstanceSpecForProviderClusterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderInstanceTypeRefPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1InstanceSpecForProviderInstanceTypeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in alloydb to populate instanceType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderInstanceTypeRef
@@ -149,7 +166,9 @@ public partial class V1beta1InstanceSpecForProviderInstanceTypeRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceSpecForProviderInstanceTypeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderInstanceTypeSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1InstanceSpecForProviderInstanceTypeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in alloydb to populate instanceType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderInstanceTypeSelector
@@ -183,7 +204,9 @@ public partial class V1beta1InstanceSpecForProviderInstanceTypeSelector
     [JsonPropertyName("policy")]
     public V1beta1InstanceSpecForProviderInstanceTypeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for the machines that host the underlying database engine. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderMachineConfig
@@ -192,7 +215,9 @@ public partial class V1beta1InstanceSpecForProviderMachineConfig
     [JsonPropertyName("cpuCount")]
     public double? CpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderNetworkConfigAuthorizedExternalNetworks
@@ -201,7 +226,9 @@ public partial class V1beta1InstanceSpecForProviderNetworkConfigAuthorizedExtern
     [JsonPropertyName("cidrRange")]
     public string? CidrRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance level network configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderNetworkConfig
@@ -222,7 +249,9 @@ public partial class V1beta1InstanceSpecForProviderNetworkConfig
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderPscInstanceConfigPscAutoConnections
@@ -235,7 +264,9 @@ public partial class V1beta1InstanceSpecForProviderPscInstanceConfigPscAutoConne
     [JsonPropertyName("consumerProject")]
     public string? ConsumerProject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderPscInstanceConfigPscInterfaceConfigs
@@ -244,7 +275,9 @@ public partial class V1beta1InstanceSpecForProviderPscInstanceConfigPscInterface
     [JsonPropertyName("networkAttachmentResource")]
     public string? NetworkAttachmentResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Private Service Connect (PSC) for the instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderPscInstanceConfig
@@ -261,7 +294,9 @@ public partial class V1beta1InstanceSpecForProviderPscInstanceConfig
     [JsonPropertyName("pscInterfaceConfigs")]
     public IList<V1beta1InstanceSpecForProviderPscInstanceConfigPscInterfaceConfigs>? PscInterfaceConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for query insights. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderQueryInsightsConfig
@@ -282,7 +317,9 @@ public partial class V1beta1InstanceSpecForProviderQueryInsightsConfig
     [JsonPropertyName("recordClientAddress")]
     public bool? RecordClientAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Read pool specific config. If the instance type is READ_POOL, this configuration must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderReadPoolConfig
@@ -291,7 +328,9 @@ public partial class V1beta1InstanceSpecForProviderReadPoolConfig
     [JsonPropertyName("nodeCount")]
     public double? NodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProvider
@@ -372,7 +411,9 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("readPoolConfig")]
     public V1beta1InstanceSpecForProviderReadPoolConfig? ReadPoolConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SSL config option for this instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderClientConnectionConfigSslConfig
@@ -381,7 +422,9 @@ public partial class V1beta1InstanceSpecInitProviderClientConnectionConfigSslCon
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Client connection specific configurations. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderClientConnectionConfig
@@ -394,7 +437,9 @@ public partial class V1beta1InstanceSpecInitProviderClientConnectionConfig
     [JsonPropertyName("sslConfig")]
     public V1beta1InstanceSpecInitProviderClientConnectionConfigSslConfig? SslConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderInstanceTypeRefPolicy
@@ -407,7 +452,9 @@ public partial class V1beta1InstanceSpecInitProviderInstanceTypeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in alloydb to populate instanceType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderInstanceTypeRef
@@ -424,7 +471,9 @@ public partial class V1beta1InstanceSpecInitProviderInstanceTypeRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceSpecInitProviderInstanceTypeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderInstanceTypeSelectorPolicy
@@ -437,7 +486,9 @@ public partial class V1beta1InstanceSpecInitProviderInstanceTypeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in alloydb to populate instanceType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderInstanceTypeSelector
@@ -458,7 +509,9 @@ public partial class V1beta1InstanceSpecInitProviderInstanceTypeSelector
     [JsonPropertyName("policy")]
     public V1beta1InstanceSpecInitProviderInstanceTypeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for the machines that host the underlying database engine. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderMachineConfig
@@ -467,7 +520,9 @@ public partial class V1beta1InstanceSpecInitProviderMachineConfig
     [JsonPropertyName("cpuCount")]
     public double? CpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderNetworkConfigAuthorizedExternalNetworks
@@ -476,7 +531,9 @@ public partial class V1beta1InstanceSpecInitProviderNetworkConfigAuthorizedExter
     [JsonPropertyName("cidrRange")]
     public string? CidrRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance level network configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderNetworkConfig
@@ -497,7 +554,9 @@ public partial class V1beta1InstanceSpecInitProviderNetworkConfig
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderPscInstanceConfigPscAutoConnections
@@ -510,7 +569,9 @@ public partial class V1beta1InstanceSpecInitProviderPscInstanceConfigPscAutoConn
     [JsonPropertyName("consumerProject")]
     public string? ConsumerProject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderPscInstanceConfigPscInterfaceConfigs
@@ -519,7 +580,9 @@ public partial class V1beta1InstanceSpecInitProviderPscInstanceConfigPscInterfac
     [JsonPropertyName("networkAttachmentResource")]
     public string? NetworkAttachmentResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Private Service Connect (PSC) for the instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderPscInstanceConfig
@@ -536,7 +599,9 @@ public partial class V1beta1InstanceSpecInitProviderPscInstanceConfig
     [JsonPropertyName("pscInterfaceConfigs")]
     public IList<V1beta1InstanceSpecInitProviderPscInstanceConfigPscInterfaceConfigs>? PscInterfaceConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for query insights. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderQueryInsightsConfig
@@ -557,7 +622,9 @@ public partial class V1beta1InstanceSpecInitProviderQueryInsightsConfig
     [JsonPropertyName("recordClientAddress")]
     public bool? RecordClientAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Read pool specific config. If the instance type is READ_POOL, this configuration must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderReadPoolConfig
@@ -566,7 +633,9 @@ public partial class V1beta1InstanceSpecInitProviderReadPoolConfig
     [JsonPropertyName("nodeCount")]
     public double? NodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProvider
@@ -635,7 +704,9 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("readPoolConfig")]
     public V1beta1InstanceSpecInitProviderReadPoolConfig? ReadPoolConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecProviderConfigRef
@@ -648,7 +719,9 @@ public partial class V1beta1InstanceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
@@ -657,7 +730,9 @@ public partial class V1beta1InstanceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceSpec defines the desired state of Instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpec
@@ -682,7 +757,9 @@ public partial class V1beta1InstanceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SSL config option for this instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderClientConnectionConfigSslConfig
@@ -691,7 +768,9 @@ public partial class V1beta1InstanceStatusAtProviderClientConnectionConfigSslCon
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Client connection specific configurations. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderClientConnectionConfig
@@ -704,7 +783,9 @@ public partial class V1beta1InstanceStatusAtProviderClientConnectionConfig
     [JsonPropertyName("sslConfig")]
     public V1beta1InstanceStatusAtProviderClientConnectionConfigSslConfig? SslConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configurations for the machines that host the underlying database engine. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderMachineConfig
@@ -713,7 +794,9 @@ public partial class V1beta1InstanceStatusAtProviderMachineConfig
     [JsonPropertyName("cpuCount")]
     public double? CpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderNetworkConfigAuthorizedExternalNetworks
@@ -722,7 +805,9 @@ public partial class V1beta1InstanceStatusAtProviderNetworkConfigAuthorizedExter
     [JsonPropertyName("cidrRange")]
     public string? CidrRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance level network configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderNetworkConfig
@@ -743,7 +828,9 @@ public partial class V1beta1InstanceStatusAtProviderNetworkConfig
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderPscInstanceConfigPscAutoConnections
@@ -768,7 +855,9 @@ public partial class V1beta1InstanceStatusAtProviderPscInstanceConfigPscAutoConn
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderPscInstanceConfigPscInterfaceConfigs
@@ -777,7 +866,9 @@ public partial class V1beta1InstanceStatusAtProviderPscInstanceConfigPscInterfac
     [JsonPropertyName("networkAttachmentResource")]
     public string? NetworkAttachmentResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for Private Service Connect (PSC) for the instance. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderPscInstanceConfig
@@ -802,7 +893,9 @@ public partial class V1beta1InstanceStatusAtProviderPscInstanceConfig
     [JsonPropertyName("serviceAttachmentLink")]
     public string? ServiceAttachmentLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for query insights. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderQueryInsightsConfig
@@ -823,7 +916,9 @@ public partial class V1beta1InstanceStatusAtProviderQueryInsightsConfig
     [JsonPropertyName("recordClientAddress")]
     public bool? RecordClientAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Read pool specific config. If the instance type is READ_POOL, this configuration must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderReadPoolConfig
@@ -832,7 +927,9 @@ public partial class V1beta1InstanceStatusAtProviderReadPoolConfig
     [JsonPropertyName("nodeCount")]
     public double? NodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProvider
@@ -949,7 +1046,9 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusConditions
@@ -978,7 +1077,9 @@ public partial class V1beta1InstanceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceStatus defines the observed state of Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatus
@@ -995,7 +1096,9 @@ public partial class V1beta1InstanceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instance is the Schema for the Instances API. A managed alloydb cluster instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1025,3 +1128,4 @@ public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1InstanceStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.protection.crossplane.io;
+#nullable enable
 /// <summary>A ClusterUsage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about usages](https://docs.crossplane.io/latest/concepts/usages).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterUsageList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1ClusterUsage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageSpecByResourceRef
@@ -42,7 +45,9 @@ public partial class V1beta1ClusterUsageSpecByResourceRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageSpecByResourceSelector
@@ -55,7 +60,9 @@ public partial class V1beta1ClusterUsageSpecByResourceSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>By is the resource that is "using the other resource".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageSpecBy
@@ -76,7 +83,9 @@ public partial class V1beta1ClusterUsageSpecBy
     [JsonPropertyName("resourceSelector")]
     public V1beta1ClusterUsageSpecByResourceSelector? ResourceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageSpecOfResourceRef
@@ -85,7 +94,9 @@ public partial class V1beta1ClusterUsageSpecOfResourceRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageSpecOfResourceSelector
@@ -98,7 +109,9 @@ public partial class V1beta1ClusterUsageSpecOfResourceSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Of is the resource that is "being used".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageSpecOf
@@ -119,7 +132,9 @@ public partial class V1beta1ClusterUsageSpecOf
     [JsonPropertyName("resourceSelector")]
     public V1beta1ClusterUsageSpecOfResourceSelector? ResourceSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterUsageSpec defines the desired state of a ClusterUsage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageSpec
@@ -140,7 +155,9 @@ public partial class V1beta1ClusterUsageSpec
     [JsonPropertyName("replayDeletion")]
     public bool? ReplayDeletion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageStatusConditions
@@ -169,7 +186,9 @@ public partial class V1beta1ClusterUsageStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UsageStatus defines the observed state of Usage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageStatus
@@ -178,7 +197,9 @@ public partial class V1beta1ClusterUsageStatus
     [JsonPropertyName("conditions")]
     public IList<V1beta1ClusterUsageStatusConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ClusterUsage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about usages](https://docs.crossplane.io/latest/concepts/usages).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -208,3 +229,4 @@ public partial class V1beta1ClusterUsage : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1ClusterUsageStatus? Status { get; set; }
 }
+#nullable disable

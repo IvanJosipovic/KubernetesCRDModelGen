@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.m.upbound.io;
+#nullable enable
 /// <summary>ResourceDataSync is the Schema for the ResourceDataSyncs API. Provides a SSM resource data sync.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourceDataSyncList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1ResourceDataSync> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNa
     [JsonPropertyName("policy")]
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNa
     [JsonPropertyName("policy")]
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRef
@@ -127,7 +140,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRe
     [JsonPropertyName("policy")]
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate region.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSe
     [JsonPropertyName("policy")]
     public V1beta1ResourceDataSyncSpecForProviderS3DestinationRegionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Amazon S3 configuration details for the sync.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProviderS3Destination
@@ -202,7 +221,9 @@ public partial class V1beta1ResourceDataSyncSpecForProviderS3Destination
     [JsonPropertyName("syncFormat")]
     public string? SyncFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecForProvider
@@ -215,7 +236,9 @@ public partial class V1beta1ResourceDataSyncSpecForProvider
     [JsonPropertyName("s3Destination")]
     public V1beta1ResourceDataSyncSpecForProviderS3Destination? S3Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameRefPolicy
@@ -228,7 +251,9 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameRef
@@ -245,7 +270,9 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketN
     [JsonPropertyName("policy")]
     public V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameSelectorPolicy
@@ -258,7 +285,9 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameSelector
@@ -279,7 +308,9 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketN
     [JsonPropertyName("policy")]
     public V1beta1ResourceDataSyncSpecInitProviderS3DestinationBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Amazon S3 configuration details for the sync.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecInitProviderS3Destination
@@ -308,7 +339,9 @@ public partial class V1beta1ResourceDataSyncSpecInitProviderS3Destination
     [JsonPropertyName("syncFormat")]
     public string? SyncFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecInitProvider
@@ -317,7 +350,9 @@ public partial class V1beta1ResourceDataSyncSpecInitProvider
     [JsonPropertyName("s3Destination")]
     public V1beta1ResourceDataSyncSpecInitProviderS3Destination? S3Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecProviderConfigRef
@@ -330,7 +365,9 @@ public partial class V1beta1ResourceDataSyncSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpecWriteConnectionSecretToRef
@@ -339,7 +376,9 @@ public partial class V1beta1ResourceDataSyncSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceDataSyncSpec defines the desired state of ResourceDataSync</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncSpec
@@ -364,7 +403,9 @@ public partial class V1beta1ResourceDataSyncSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourceDataSyncSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Amazon S3 configuration details for the sync.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncStatusAtProviderS3Destination
@@ -389,7 +430,9 @@ public partial class V1beta1ResourceDataSyncStatusAtProviderS3Destination
     [JsonPropertyName("syncFormat")]
     public string? SyncFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncStatusAtProvider
@@ -406,7 +449,9 @@ public partial class V1beta1ResourceDataSyncStatusAtProvider
     [JsonPropertyName("s3Destination")]
     public V1beta1ResourceDataSyncStatusAtProviderS3Destination? S3Destination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncStatusConditions
@@ -435,7 +480,9 @@ public partial class V1beta1ResourceDataSyncStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceDataSyncStatus defines the observed state of ResourceDataSync.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceDataSyncStatus
@@ -452,7 +499,9 @@ public partial class V1beta1ResourceDataSyncStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceDataSync is the Schema for the ResourceDataSyncs API. Provides a SSM resource data sync.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -482,3 +531,4 @@ public partial class V1beta1ResourceDataSync : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ResourceDataSyncStatus? Status { get; set; }
 }
+#nullable disable

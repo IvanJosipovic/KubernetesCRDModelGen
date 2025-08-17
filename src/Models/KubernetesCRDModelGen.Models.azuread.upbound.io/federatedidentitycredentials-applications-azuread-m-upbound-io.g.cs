@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.applications.azuread.m.upbound.io;
+#nullable enable
 /// <summary>FederatedIdentityCredential is the Schema for the FederatedIdentityCredentials API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FederatedIdentityCredentialList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1FederatedIdentityCredential> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     [JsonPropertyName("policy")]
     public V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     [JsonPropertyName("policy")]
     public V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecForProvider
@@ -134,7 +145,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProvider
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdRefPolicy
@@ -147,7 +160,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdRef
@@ -164,7 +179,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     [JsonPropertyName("policy")]
     public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdSelectorPolicy
@@ -177,7 +194,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdSelector
@@ -198,7 +217,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     [JsonPropertyName("policy")]
     public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecInitProvider
@@ -235,7 +256,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProvider
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecProviderConfigRef
@@ -248,7 +271,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecWriteConnectionSecretToRef
@@ -257,7 +282,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecWriteConnectionSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FederatedIdentityCredentialSpec defines the desired state of FederatedIdentityCredential</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpec
@@ -282,7 +309,9 @@ public partial class V1beta1FederatedIdentityCredentialSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FederatedIdentityCredentialSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialStatusAtProvider
@@ -319,7 +348,9 @@ public partial class V1beta1FederatedIdentityCredentialStatusAtProvider
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialStatusConditions
@@ -348,7 +379,9 @@ public partial class V1beta1FederatedIdentityCredentialStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FederatedIdentityCredentialStatus defines the observed state of FederatedIdentityCredential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialStatus
@@ -365,7 +398,9 @@ public partial class V1beta1FederatedIdentityCredentialStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FederatedIdentityCredential is the Schema for the FederatedIdentityCredentials API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -395,3 +430,4 @@ public partial class V1beta1FederatedIdentityCredential : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1FederatedIdentityCredentialStatus? Status { get; set; }
 }
+#nullable disable

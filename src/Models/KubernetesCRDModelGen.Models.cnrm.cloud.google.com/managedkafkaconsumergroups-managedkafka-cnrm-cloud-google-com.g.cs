@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedkafka.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ManagedKafkaConsumerGroup is the Schema for the ManagedKafkaConsumerGroup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1alpha1ManagedKafkaConsumerGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterRef defines the resource reference to ManagedKafkaCluster, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupSpecClusterRef
@@ -50,7 +53,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupSpecClusterRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupSpecProjectRef
@@ -71,7 +76,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedKafkaConsumerGroupSpec defines the desired state of ManagedKafkaConsumerGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupSpec
@@ -92,7 +99,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupStatusConditions
@@ -117,7 +126,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupStatusObservedStateTopicsPartitions
@@ -134,7 +145,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupStatusObservedStateTopicsP
     [JsonPropertyName("offset")]
     public long Offset { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupStatusObservedStateTopics
@@ -143,7 +156,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupStatusObservedStateTopics
     [JsonPropertyName("partitions")]
     public IList<V1alpha1ManagedKafkaConsumerGroupStatusObservedStateTopicsPartitions>? Partitions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupStatusObservedState
@@ -152,7 +167,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupStatusObservedState
     [JsonPropertyName("topics")]
     public IDictionary<string, V1alpha1ManagedKafkaConsumerGroupStatusObservedStateTopics>? Topics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedKafkaConsumerGroupStatus defines the config connector machine state of ManagedKafkaConsumerGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupStatus
@@ -173,7 +190,9 @@ public partial class V1alpha1ManagedKafkaConsumerGroupStatus
     [JsonPropertyName("observedState")]
     public V1alpha1ManagedKafkaConsumerGroupStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedKafkaConsumerGroup is the Schema for the ManagedKafkaConsumerGroup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -203,3 +222,4 @@ public partial class V1alpha1ManagedKafkaConsumerGroup : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1alpha1ManagedKafkaConsumerGroupStatus? Status { get; set; }
 }
+#nullable disable

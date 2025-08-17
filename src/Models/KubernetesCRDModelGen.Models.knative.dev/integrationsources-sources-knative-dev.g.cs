@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
+#nullable enable
 /// <summary>IntegrationSource is an event source that starts a container image which generates events under certain situations and sends messages to a sink URI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1IntegrationSourceList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1alpha1IntegrationSource> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecCeOverrides
@@ -42,7 +45,9 @@ public partial class V1alpha1IntegrationSourceSpecCeOverrides
     [JsonPropertyName("extensions")]
     public JsonNode? Extensions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecSinkRef
@@ -63,7 +68,9 @@ public partial class V1alpha1IntegrationSourceSpecSinkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecSink
@@ -84,7 +91,9 @@ public partial class V1alpha1IntegrationSourceSpecSink
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecTimer
@@ -105,7 +114,9 @@ public partial class V1alpha1IntegrationSourceSpecTimer
     [JsonPropertyName("repeatCount")]
     public int? RepeatCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecAwsS3
@@ -170,7 +181,9 @@ public partial class V1alpha1IntegrationSourceSpecAwsS3
     [JsonPropertyName("maxMessagesPerPoll")]
     public int? MaxMessagesPerPoll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecAwsSqs
@@ -231,7 +244,9 @@ public partial class V1alpha1IntegrationSourceSpecAwsSqs
     [JsonPropertyName("visibilityTimeout")]
     public int? VisibilityTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecAwsDdbStreams
@@ -260,7 +275,9 @@ public partial class V1alpha1IntegrationSourceSpecAwsDdbStreams
     [JsonPropertyName("delay")]
     public int? Delay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secret reference. </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecAwsAuthSecretRef
@@ -269,7 +286,9 @@ public partial class V1alpha1IntegrationSourceSpecAwsAuthSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecAwsAuthSecret
@@ -278,7 +297,9 @@ public partial class V1alpha1IntegrationSourceSpecAwsAuthSecret
     [JsonPropertyName("ref")]
     public V1alpha1IntegrationSourceSpecAwsAuthSecretRef? Ref { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth configurations</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecAwsAuth
@@ -287,7 +308,9 @@ public partial class V1alpha1IntegrationSourceSpecAwsAuth
     [JsonPropertyName("secret")]
     public V1alpha1IntegrationSourceSpecAwsAuthSecret? Secret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpecAws
@@ -308,7 +331,9 @@ public partial class V1alpha1IntegrationSourceSpecAws
     [JsonPropertyName("auth")]
     public V1alpha1IntegrationSourceSpecAwsAuth? Auth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceSpec
@@ -333,7 +358,9 @@ public partial class V1alpha1IntegrationSourceSpec
     [JsonPropertyName("template")]
     public JsonNode? Template { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceStatusAuth
@@ -346,7 +373,9 @@ public partial class V1alpha1IntegrationSourceStatusAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceStatusCeAttributes
@@ -359,7 +388,9 @@ public partial class V1alpha1IntegrationSourceStatusCeAttributes
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceStatusConditions
@@ -388,7 +419,9 @@ public partial class V1alpha1IntegrationSourceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IntegrationSourceStatus
@@ -425,7 +458,9 @@ public partial class V1alpha1IntegrationSourceStatus
     [JsonPropertyName("sinkAudience")]
     public string? SinkAudience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IntegrationSource is an event source that starts a container image which generates events under certain situations and sends messages to a sink URI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -455,3 +490,4 @@ public partial class V1alpha1IntegrationSource : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1alpha1IntegrationSourceStatus? Status { get; set; }
 }
+#nullable disable

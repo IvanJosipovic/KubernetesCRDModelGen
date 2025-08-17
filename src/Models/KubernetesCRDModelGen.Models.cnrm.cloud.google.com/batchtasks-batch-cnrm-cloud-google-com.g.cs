@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.batch.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BatchTask is the Schema for the BatchTask API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BatchTaskList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1alpha1BatchTask> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchTaskSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1BatchTaskSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BatchTaskSpec defines the desired state of BatchTask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchTaskSpec
@@ -71,7 +76,9 @@ public partial class V1alpha1BatchTaskSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchTaskStatusConditions
@@ -96,7 +103,9 @@ public partial class V1alpha1BatchTaskStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Task Execution. This field is only defined for task-level status events where the task fails.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchTaskStatusObservedStateStatusStatusEventsTaskExecution
@@ -105,7 +114,9 @@ public partial class V1alpha1BatchTaskStatusObservedStateStatusStatusEventsTaskE
     [JsonPropertyName("exitCode")]
     public int? ExitCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchTaskStatusObservedStateStatusStatusEvents
@@ -130,7 +141,9 @@ public partial class V1alpha1BatchTaskStatusObservedStateStatusStatusEvents
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Task Status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchTaskStatusObservedStateStatus
@@ -143,7 +156,9 @@ public partial class V1alpha1BatchTaskStatusObservedStateStatus
     [JsonPropertyName("statusEvents")]
     public IList<V1alpha1BatchTaskStatusObservedStateStatusStatusEvents>? StatusEvents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BatchTaskObservedState is the state of the BatchTask resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchTaskStatusObservedState
@@ -152,7 +167,9 @@ public partial class V1alpha1BatchTaskStatusObservedState
     [JsonPropertyName("status")]
     public V1alpha1BatchTaskStatusObservedStateStatus? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BatchTaskStatus defines the config connector machine state of BatchTask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchTaskStatus
@@ -177,7 +194,9 @@ public partial class V1alpha1BatchTaskStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BatchTaskStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BatchTask is the Schema for the BatchTask API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -207,3 +226,4 @@ public partial class V1alpha1BatchTask : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1alpha1BatchTaskStatus? Status { get; set; }
 }
+#nullable disable

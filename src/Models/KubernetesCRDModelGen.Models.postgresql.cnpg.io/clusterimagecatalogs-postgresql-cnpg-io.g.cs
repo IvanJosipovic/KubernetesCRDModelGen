@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>ClusterImageCatalog is the Schema for the clusterimagecatalogs API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ClusterImageCatalogList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1ClusterImageCatalog> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CatalogImage defines the image and major version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterImageCatalogSpecImages
@@ -46,7 +49,9 @@ public partial class V1ClusterImageCatalogSpecImages
     [JsonPropertyName("major")]
     public int Major { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the ClusterImageCatalog. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterImageCatalogSpec
@@ -55,7 +60,9 @@ public partial class V1ClusterImageCatalogSpec
     [JsonPropertyName("images")]
     public IList<V1ClusterImageCatalogSpecImages> Images { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterImageCatalog is the Schema for the clusterimagecatalogs API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -81,3 +88,4 @@ public partial class V1ClusterImageCatalog : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("spec")]
     public V1ClusterImageCatalogSpec Spec { get; set; }
 }
+#nullable disable

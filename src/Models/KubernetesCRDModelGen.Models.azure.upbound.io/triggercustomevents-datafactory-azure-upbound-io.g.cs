@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+#nullable enable
 /// <summary>TriggerCustomEvent is the Schema for the TriggerCustomEvents API. Manages a Custom Event Trigger inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TriggerCustomEventList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1TriggerCustomEvent> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelect
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in eventgrid to populate eventgridTopicId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in eventgrid to populate eventgridTopicId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSel
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecForProviderEventgridTopicIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pipeline in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecForProviderPipelineNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pipeline in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipelineNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecForProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProviderPipeline
@@ -222,7 +249,9 @@ public partial class V1beta1TriggerCustomEventSpecForProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecForProvider
@@ -283,7 +312,9 @@ public partial class V1beta1TriggerCustomEventSpecForProvider
     [JsonPropertyName("subjectEndsWith")]
     public string? SubjectEndsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRefPolicy
@@ -296,7 +327,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in eventgrid to populate eventgridTopicId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRef
@@ -309,7 +342,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRe
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSelectorPolicy
@@ -322,7 +357,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in eventgrid to populate eventgridTopicId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSelector
@@ -339,7 +376,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSe
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecInitProviderEventgridTopicIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameRefPolicy
@@ -352,7 +391,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pipeline in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameRef
@@ -365,7 +406,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecInitProviderPipelineNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelectorPolicy
@@ -378,7 +421,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pipeline in datafactory to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelector
@@ -395,7 +440,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelect
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecInitProviderPipelineNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProviderPipeline
@@ -416,7 +463,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecInitProvider
@@ -465,7 +514,9 @@ public partial class V1beta1TriggerCustomEventSpecInitProvider
     [JsonPropertyName("subjectEndsWith")]
     public string? SubjectEndsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecProviderConfigRefPolicy
@@ -478,7 +529,9 @@ public partial class V1beta1TriggerCustomEventSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecProviderConfigRef
@@ -491,7 +544,9 @@ public partial class V1beta1TriggerCustomEventSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerCustomEventSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpecWriteConnectionSecretToRef
@@ -504,7 +559,9 @@ public partial class V1beta1TriggerCustomEventSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerCustomEventSpec defines the desired state of TriggerCustomEvent</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventSpec
@@ -533,7 +590,9 @@ public partial class V1beta1TriggerCustomEventSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TriggerCustomEventSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventStatusAtProviderPipeline
@@ -546,7 +605,9 @@ public partial class V1beta1TriggerCustomEventStatusAtProviderPipeline
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventStatusAtProvider
@@ -595,7 +656,9 @@ public partial class V1beta1TriggerCustomEventStatusAtProvider
     [JsonPropertyName("subjectEndsWith")]
     public string? SubjectEndsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventStatusConditions
@@ -624,7 +687,9 @@ public partial class V1beta1TriggerCustomEventStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerCustomEventStatus defines the observed state of TriggerCustomEvent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerCustomEventStatus
@@ -641,7 +706,9 @@ public partial class V1beta1TriggerCustomEventStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerCustomEvent is the Schema for the TriggerCustomEvents API. Manages a Custom Event Trigger inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -671,3 +738,4 @@ public partial class V1beta1TriggerCustomEvent : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1TriggerCustomEventStatus? Status { get; set; }
 }
+#nullable disable

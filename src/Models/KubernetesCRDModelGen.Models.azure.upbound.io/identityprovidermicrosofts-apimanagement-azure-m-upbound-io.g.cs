@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>IdentityProviderMicrosoft is the Schema for the IdentityProviderMicrosofts API. Manages an API Management Microsoft Identity Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IdentityProviderMicrosoftList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1IdentityProviderMicrosoft> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderApiManagementNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderApiManagemen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderApiManagementNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderApiManagemen
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderMicrosoftSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderApiManagementNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderApiManagemen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderApiManagementNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderApiManagemen
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderMicrosoftSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Client secret of the Azure AD Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderClientSecretSecretRef
@@ -110,7 +121,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderClientSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderResourceGroupNameRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderResourceGroupNameRef
@@ -140,7 +155,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderMicrosoftSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderResourceGroupNameSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProviderResourceGroupNameSelector
@@ -174,7 +193,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderMicrosoftSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecForProvider
@@ -211,7 +232,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IdentityProviderMicrosoftSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderApiManagementNameRefPolicy
@@ -224,7 +247,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderApiManageme
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderApiManagementNameRef
@@ -241,7 +266,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderApiManageme
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderMicrosoftSpecInitProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderApiManagementNameSelectorPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderApiManageme
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderApiManagementNameSelector
@@ -275,7 +304,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderApiManageme
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderMicrosoftSpecInitProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Client secret of the Azure AD Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderClientSecretSecretRef
@@ -288,7 +319,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderClientSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGroupNameRefPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGroupNameRef
@@ -318,7 +353,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGro
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGroupNameSelectorPolicy
@@ -331,7 +368,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGroupNameSelector
@@ -352,7 +391,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGro
     [JsonPropertyName("policy")]
     public V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecInitProvider
@@ -389,7 +430,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecInitProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IdentityProviderMicrosoftSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecProviderConfigRef
@@ -402,7 +445,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpecWriteConnectionSecretToRef
@@ -411,7 +456,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderMicrosoftSpec defines the desired state of IdentityProviderMicrosoft</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftSpec
@@ -436,7 +483,9 @@ public partial class V1beta1IdentityProviderMicrosoftSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IdentityProviderMicrosoftSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftStatusAtProvider
@@ -457,7 +506,9 @@ public partial class V1beta1IdentityProviderMicrosoftStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftStatusConditions
@@ -486,7 +537,9 @@ public partial class V1beta1IdentityProviderMicrosoftStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderMicrosoftStatus defines the observed state of IdentityProviderMicrosoft.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderMicrosoftStatus
@@ -503,7 +556,9 @@ public partial class V1beta1IdentityProviderMicrosoftStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IdentityProviderMicrosoft is the Schema for the IdentityProviderMicrosofts API. Manages an API Management Microsoft Identity Provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -533,3 +588,4 @@ public partial class V1beta1IdentityProviderMicrosoft : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1IdentityProviderMicrosoftStatus? Status { get; set; }
 }
+#nullable disable

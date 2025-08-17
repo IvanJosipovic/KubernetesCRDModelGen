@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>VertexAIMetadataStore is the Schema for the VertexAIMetadataStore API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VertexAIMetadataStoreList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1VertexAIMetadataStore> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Dataplex integration settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreSpecDataplexConfig
@@ -42,7 +45,9 @@ public partial class V1beta1VertexAIMetadataStoreSpecDataplexConfig
     [JsonPropertyName("enabledPipelinesLineage")]
     public bool? EnabledPipelinesLineage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. The key needs to be in the same region as where the compute resource is created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreSpecEncryptionSpecKmsKeyRef
@@ -59,7 +64,9 @@ public partial class V1beta1VertexAIMetadataStoreSpecEncryptionSpecKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customer-managed encryption key spec for a Metadata Store. If set, this Metadata Store and all sub-resources of this Metadata Store are secured using this key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreSpecEncryptionSpec
@@ -68,7 +75,9 @@ public partial class V1beta1VertexAIMetadataStoreSpecEncryptionSpec
     [JsonPropertyName("kmsKeyRef")]
     public V1beta1VertexAIMetadataStoreSpecEncryptionSpecKmsKeyRef KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreSpecProjectRef
@@ -89,7 +98,9 @@ public partial class V1beta1VertexAIMetadataStoreSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VertexAIMetadataStoreSpec defines the desired state of VertexAIMetadataStore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreSpec
@@ -118,7 +129,9 @@ public partial class V1beta1VertexAIMetadataStoreSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreStatusConditions
@@ -143,7 +156,9 @@ public partial class V1beta1VertexAIMetadataStoreStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. State information of the MetadataStore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreStatusObservedStateState
@@ -152,7 +167,9 @@ public partial class V1beta1VertexAIMetadataStoreStatusObservedStateState
     [JsonPropertyName("diskUtilizationBytes")]
     public long? DiskUtilizationBytes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreStatusObservedState
@@ -173,7 +190,9 @@ public partial class V1beta1VertexAIMetadataStoreStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VertexAIMetadataStoreStatus defines the config connector machine state of VertexAIMetadataStore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VertexAIMetadataStoreStatus
@@ -194,7 +213,9 @@ public partial class V1beta1VertexAIMetadataStoreStatus
     [JsonPropertyName("observedState")]
     public V1beta1VertexAIMetadataStoreStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VertexAIMetadataStore is the Schema for the VertexAIMetadataStore API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -224,3 +245,4 @@ public partial class V1beta1VertexAIMetadataStore : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1VertexAIMetadataStoreStatus? Status { get; set; }
 }
+#nullable disable

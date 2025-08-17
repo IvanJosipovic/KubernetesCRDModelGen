@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220301.SitesSourcecontrol Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/sourcecontrols/web</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220301storageSitesSourcecontrolList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1api20220301storageSitesSourcecontrol> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.GitHubActionCodeConfiguration The GitHub action code configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpecGitHubActionConfigurationCodeConfiguration
@@ -50,7 +53,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpecGitHubActionConfi
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpecGitHubActionConfigurationContainerConfigurationPassword
@@ -63,7 +68,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpecGitHubActionConfi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.GitHubActionContainerConfiguration The GitHub action container configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpecGitHubActionConfigurationContainerConfiguration
@@ -88,7 +95,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpecGitHubActionConfi
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.GitHubActionConfiguration The GitHub action configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpecGitHubActionConfiguration
@@ -113,7 +122,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpecGitHubActionConfi
     [JsonPropertyName("isLinux")]
     public bool? IsLinux { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpecOperatorSpecConfigMapExpressions
@@ -130,7 +141,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpecOperatorSpecConfi
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpecOperatorSpecSecretExpressions
@@ -147,7 +160,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpecOperatorSpecSecre
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SitesSourcecontrolOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpecOperatorSpec
@@ -164,7 +179,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220301storageSitesSourcecontrolSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a web.azure.com/Site resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpecOwner
@@ -177,7 +194,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SitesSourcecontrol_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolSpec
@@ -230,7 +249,9 @@ public partial class V1api20220301storageSitesSourcecontrolSpec
     [JsonPropertyName("repoUrl")]
     public string? RepoUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolStatusConditions
@@ -263,7 +284,9 @@ public partial class V1api20220301storageSitesSourcecontrolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.GitHubActionCodeConfiguration_STATUS The GitHub action code configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolStatusGitHubActionConfigurationCodeConfiguration
@@ -280,7 +303,9 @@ public partial class V1api20220301storageSitesSourcecontrolStatusGitHubActionCon
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.GitHubActionContainerConfiguration_STATUS The GitHub action container configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolStatusGitHubActionConfigurationContainerConfiguration
@@ -301,7 +326,9 @@ public partial class V1api20220301storageSitesSourcecontrolStatusGitHubActionCon
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.GitHubActionConfiguration_STATUS The GitHub action configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolStatusGitHubActionConfiguration
@@ -326,7 +353,9 @@ public partial class V1api20220301storageSitesSourcecontrolStatusGitHubActionCon
     [JsonPropertyName("isLinux")]
     public bool? IsLinux { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SitesSourcecontrol_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSitesSourcecontrolStatus
@@ -383,7 +412,9 @@ public partial class V1api20220301storageSitesSourcecontrolStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SitesSourcecontrol Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/sourcecontrols/web</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -413,3 +444,4 @@ public partial class V1api20220301storageSitesSourcecontrol : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1api20220301storageSitesSourcecontrolStatus? Status { get; set; }
 }
+#nullable disable

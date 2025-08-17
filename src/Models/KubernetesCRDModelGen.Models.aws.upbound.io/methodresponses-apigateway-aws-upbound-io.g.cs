@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigateway.aws.upbound.io;
+#nullable enable
 /// <summary>MethodResponse is the Schema for the MethodResponses API. Provides an HTTP Method Response for an API Gateway Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MethodResponseList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1MethodResponse> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderHttpMethodRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MethodResponseSpecForProviderHttpMethodRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Method in apigateway to populate httpMethod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderHttpMethodRef
@@ -59,7 +64,9 @@ public partial class V1beta1MethodResponseSpecForProviderHttpMethodRef
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecForProviderHttpMethodRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderHttpMethodSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MethodResponseSpecForProviderHttpMethodSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Method in apigateway to populate httpMethod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderHttpMethodSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MethodResponseSpecForProviderHttpMethodSelector
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecForProviderHttpMethodSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderResourceIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1MethodResponseSpecForProviderResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Resource in apigateway to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderResourceIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1MethodResponseSpecForProviderResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecForProviderResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderResourceIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1MethodResponseSpecForProviderResourceIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Resource in apigateway to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderResourceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1MethodResponseSpecForProviderResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecForProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderRestApiIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1MethodResponseSpecForProviderRestApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RestAPI in apigateway to populate restApiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderRestApiIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1MethodResponseSpecForProviderRestApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecForProviderRestApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderRestApiIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1MethodResponseSpecForProviderRestApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RestAPI in apigateway to populate restApiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProviderRestApiIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1MethodResponseSpecForProviderRestApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecForProviderRestApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecForProvider
@@ -258,7 +285,9 @@ public partial class V1beta1MethodResponseSpecForProvider
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderHttpMethodRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1MethodResponseSpecInitProviderHttpMethodRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Method in apigateway to populate httpMethod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderHttpMethodRef
@@ -284,7 +315,9 @@ public partial class V1beta1MethodResponseSpecInitProviderHttpMethodRef
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecInitProviderHttpMethodRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderHttpMethodSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1MethodResponseSpecInitProviderHttpMethodSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Method in apigateway to populate httpMethod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderHttpMethodSelector
@@ -314,7 +349,9 @@ public partial class V1beta1MethodResponseSpecInitProviderHttpMethodSelector
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecInitProviderHttpMethodSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderResourceIdRefPolicy
@@ -327,7 +364,9 @@ public partial class V1beta1MethodResponseSpecInitProviderResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Resource in apigateway to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderResourceIdRef
@@ -340,7 +379,9 @@ public partial class V1beta1MethodResponseSpecInitProviderResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecInitProviderResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderResourceIdSelectorPolicy
@@ -353,7 +394,9 @@ public partial class V1beta1MethodResponseSpecInitProviderResourceIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Resource in apigateway to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderResourceIdSelector
@@ -370,7 +413,9 @@ public partial class V1beta1MethodResponseSpecInitProviderResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecInitProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderRestApiIdRefPolicy
@@ -383,7 +428,9 @@ public partial class V1beta1MethodResponseSpecInitProviderRestApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RestAPI in apigateway to populate restApiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderRestApiIdRef
@@ -396,7 +443,9 @@ public partial class V1beta1MethodResponseSpecInitProviderRestApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecInitProviderRestApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderRestApiIdSelectorPolicy
@@ -409,7 +458,9 @@ public partial class V1beta1MethodResponseSpecInitProviderRestApiIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RestAPI in apigateway to populate restApiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProviderRestApiIdSelector
@@ -426,7 +477,9 @@ public partial class V1beta1MethodResponseSpecInitProviderRestApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecInitProviderRestApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecInitProvider
@@ -479,7 +532,9 @@ public partial class V1beta1MethodResponseSpecInitProvider
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecProviderConfigRefPolicy
@@ -492,7 +547,9 @@ public partial class V1beta1MethodResponseSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecProviderConfigRef
@@ -505,7 +562,9 @@ public partial class V1beta1MethodResponseSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MethodResponseSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpecWriteConnectionSecretToRef
@@ -518,7 +577,9 @@ public partial class V1beta1MethodResponseSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MethodResponseSpec defines the desired state of MethodResponse</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseSpec
@@ -547,7 +608,9 @@ public partial class V1beta1MethodResponseSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MethodResponseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseStatusAtProvider
@@ -584,7 +647,9 @@ public partial class V1beta1MethodResponseStatusAtProvider
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseStatusConditions
@@ -613,7 +678,9 @@ public partial class V1beta1MethodResponseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MethodResponseStatus defines the observed state of MethodResponse.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MethodResponseStatus
@@ -630,7 +697,9 @@ public partial class V1beta1MethodResponseStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MethodResponse is the Schema for the MethodResponses API. Provides an HTTP Method Response for an API Gateway Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -660,3 +729,4 @@ public partial class V1beta1MethodResponse : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1MethodResponseStatus? Status { get; set; }
 }
+#nullable disable

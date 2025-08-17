@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
+#nullable enable
 /// <summary>HTTPRoute provides a way to route HTTP requests. This includes the capability to match requests by hostname, path, header, or query param. Filters can be used to specify additional processing steps. Backends specify where matching requests should be routed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1HTTPRouteList : IKubernetesObject<V1ListMeta>, IItems<V1H
     [JsonPropertyName("items")]
     public IList<V1HTTPRoute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ParentReference identifies an API object (usually a Gateway) that can be considered a parent of this resource (usually a route). There are two kinds of parent resources with "Core" support:  * Gateway (Gateway conformance profile) * Service (Mesh conformance profile, ClusterIP Services only)  This API may be extended in the future to support additional kinds of parent resources.  The API object must be valid in the cluster; the Group and Kind must be registered in the cluster for this reference to be valid.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecParentRefs
@@ -62,7 +65,9 @@ public partial class V1HTTPRouteSpecParentRefs
     [JsonPropertyName("sectionName")]
     public string? SectionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExtensionRef is an optional, implementation-specific extension to the "filter" behavior.  For example, resource "myroutefilter" in group "networking.example.net"). ExtensionRef MUST NOT be used for core and extended filters.  This filter can be used multiple times within the same rule.  Support: Implementation-specific</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersExtensionRef
@@ -79,7 +84,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersExtensionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestHeaderModifierAdd
@@ -92,7 +99,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestHeaderModifierSet
@@ -105,7 +114,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestHeaderModifier defines a schema for a filter that modifies request headers.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
@@ -122,7 +133,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     [JsonPropertyName("set")]
     public IList<V1HTTPRouteSpecRulesBackendRefsFiltersRequestHeaderModifierSet>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendRef references a resource where mirrored requests are sent.  Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.  If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.  If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.  In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.  Support: Extended for Kubernetes Service  Support: Implementation-specific for any other resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirrorBackendRef
@@ -147,7 +160,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirrorBackendR
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fraction represents the fraction of requests that should be mirrored to BackendRef.  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirrorFraction
@@ -160,7 +175,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirrorFraction
     [JsonPropertyName("numerator")]
     public int Numerator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirror
@@ -177,7 +194,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirror
     [JsonPropertyName("percent")]
     public int? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Path defines parameters used to modify the path of the incoming request. The modified path is then used to construct the `Location` header. When empty, the request path is used as-is.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPath
@@ -194,7 +213,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPath
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestRedirect defines a schema for a filter that responds to the request with an HTTP redirection.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirect
@@ -219,7 +240,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirect
     [JsonPropertyName("statusCode")]
     public int? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifierAdd
@@ -232,7 +255,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet
@@ -245,7 +270,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseHeaderModifier defines a schema for a filter that modifies response headers.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifier
@@ -262,7 +289,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     [JsonPropertyName("set")]
     public IList<V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Path defines a path rewrite.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePath
@@ -279,7 +308,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePath
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URLRewrite defines a schema for a filter that modifies a request during forwarding.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewrite
@@ -292,7 +323,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewrite
     [JsonPropertyName("path")]
     public V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePath? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPRouteFilter defines processing steps that must be completed during the request or response lifecycle. HTTPRouteFilters are meant as an extension point to express processing that may be done in Gateway implementations. Some examples include request or response modification, implementing authentication strategies, rate-limiting, and traffic shaping. API guarantee/conformance is defined based on the type of the filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFilters
@@ -325,7 +358,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFilters
     [JsonPropertyName("urlRewrite")]
     public V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewrite? UrlRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPBackendRef defines how a HTTPRoute forwards a HTTP request.  Note that when a namespace different than the local namespace is specified, a ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefs
@@ -358,7 +393,9 @@ public partial class V1HTTPRouteSpecRulesBackendRefs
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExtensionRef is an optional, implementation-specific extension to the "filter" behavior.  For example, resource "myroutefilter" in group "networking.example.net"). ExtensionRef MUST NOT be used for core and extended filters.  This filter can be used multiple times within the same rule.  Support: Implementation-specific</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersExtensionRef
@@ -375,7 +412,9 @@ public partial class V1HTTPRouteSpecRulesFiltersExtensionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestHeaderModifierAdd
@@ -388,7 +427,9 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestHeaderModifierAdd
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestHeaderModifierSet
@@ -401,7 +442,9 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestHeaderModifierSet
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestHeaderModifier defines a schema for a filter that modifies request headers.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestHeaderModifier
@@ -418,7 +461,9 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestHeaderModifier
     [JsonPropertyName("set")]
     public IList<V1HTTPRouteSpecRulesFiltersRequestHeaderModifierSet>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendRef references a resource where mirrored requests are sent.  Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.  If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.  If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.  In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.  Support: Extended for Kubernetes Service  Support: Implementation-specific for any other resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestMirrorBackendRef
@@ -443,7 +488,9 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestMirrorBackendRef
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fraction represents the fraction of requests that should be mirrored to BackendRef.  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestMirrorFraction
@@ -456,7 +503,9 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestMirrorFraction
     [JsonPropertyName("numerator")]
     public int Numerator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestMirror
@@ -473,7 +522,9 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestMirror
     [JsonPropertyName("percent")]
     public int? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Path defines parameters used to modify the path of the incoming request. The modified path is then used to construct the `Location` header. When empty, the request path is used as-is.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestRedirectPath
@@ -490,7 +541,9 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestRedirectPath
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestRedirect defines a schema for a filter that responds to the request with an HTTP redirection.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestRedirect
@@ -515,7 +568,9 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestRedirect
     [JsonPropertyName("statusCode")]
     public int? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersResponseHeaderModifierAdd
@@ -528,7 +583,9 @@ public partial class V1HTTPRouteSpecRulesFiltersResponseHeaderModifierAdd
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersResponseHeaderModifierSet
@@ -541,7 +598,9 @@ public partial class V1HTTPRouteSpecRulesFiltersResponseHeaderModifierSet
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseHeaderModifier defines a schema for a filter that modifies response headers.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersResponseHeaderModifier
@@ -558,7 +617,9 @@ public partial class V1HTTPRouteSpecRulesFiltersResponseHeaderModifier
     [JsonPropertyName("set")]
     public IList<V1HTTPRouteSpecRulesFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Path defines a path rewrite.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersUrlRewritePath
@@ -575,7 +636,9 @@ public partial class V1HTTPRouteSpecRulesFiltersUrlRewritePath
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>URLRewrite defines a schema for a filter that modifies a request during forwarding.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersUrlRewrite
@@ -588,7 +651,9 @@ public partial class V1HTTPRouteSpecRulesFiltersUrlRewrite
     [JsonPropertyName("path")]
     public V1HTTPRouteSpecRulesFiltersUrlRewritePath? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPRouteFilter defines processing steps that must be completed during the request or response lifecycle. HTTPRouteFilters are meant as an extension point to express processing that may be done in Gateway implementations. Some examples include request or response modification, implementing authentication strategies, rate-limiting, and traffic shaping. API guarantee/conformance is defined based on the type of the filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFilters
@@ -621,7 +686,9 @@ public partial class V1HTTPRouteSpecRulesFilters
     [JsonPropertyName("urlRewrite")]
     public V1HTTPRouteSpecRulesFiltersUrlRewrite? UrlRewrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeaderMatch describes how to select a HTTP route by matching HTTP request headers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesMatchesHeaders
@@ -638,7 +705,9 @@ public partial class V1HTTPRouteSpecRulesMatchesHeaders
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Path specifies a HTTP request path matcher. If this field is not specified, a default prefix match on the "/" path is provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesMatchesPath
@@ -651,7 +720,9 @@ public partial class V1HTTPRouteSpecRulesMatchesPath
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPQueryParamMatch describes how to select a HTTP route by matching HTTP query parameters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesMatchesQueryParams
@@ -668,7 +739,9 @@ public partial class V1HTTPRouteSpecRulesMatchesQueryParams
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPRouteMatch defines the predicate used to match requests to a given action. Multiple match types are ANDed together, i.e. the match will evaluate to true only if all conditions are satisfied.  For example, the match below will match a HTTP request only if its path starts with `/foo` AND it contains the `version: v1` header:  ``` match:  	path: 	  value: "/foo" 	headers: 	- name: "version" 	  value "v1"  ```</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesMatches
@@ -689,7 +762,9 @@ public partial class V1HTTPRouteSpecRulesMatches
     [JsonPropertyName("queryParams")]
     public IList<V1HTTPRouteSpecRulesMatchesQueryParams>? QueryParams { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Timeouts defines the timeouts that can be configured for an HTTP request.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesTimeouts
@@ -702,7 +777,9 @@ public partial class V1HTTPRouteSpecRulesTimeouts
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPRouteRule defines semantics for matching an HTTP request based on conditions (matches), processing it (filters), and forwarding the request to an API object (backendRefs).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRules
@@ -727,7 +804,9 @@ public partial class V1HTTPRouteSpecRules
     [JsonPropertyName("timeouts")]
     public V1HTTPRouteSpecRulesTimeouts? Timeouts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of HTTPRoute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpec
@@ -744,7 +823,9 @@ public partial class V1HTTPRouteSpec
     [JsonPropertyName("rules")]
     public IList<V1HTTPRouteSpecRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteStatusParentsConditions
@@ -773,7 +854,9 @@ public partial class V1HTTPRouteStatusParentsConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ParentRef corresponds with a ParentRef in the spec that this RouteParentStatus struct describes the status of.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteStatusParentsParentRef
@@ -802,7 +885,9 @@ public partial class V1HTTPRouteStatusParentsParentRef
     [JsonPropertyName("sectionName")]
     public string? SectionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteParentStatus describes the status of a route with respect to an associated Parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteStatusParents
@@ -819,7 +904,9 @@ public partial class V1HTTPRouteStatusParents
     [JsonPropertyName("parentRef")]
     public V1HTTPRouteStatusParentsParentRef ParentRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status defines the current state of HTTPRoute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteStatus
@@ -828,7 +915,9 @@ public partial class V1HTTPRouteStatus
     [JsonPropertyName("parents")]
     public IList<V1HTTPRouteStatusParents> Parents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPRoute provides a way to route HTTP requests. This includes the capability to match requests by hostname, path, header, or query param. Filters can be used to specify additional processing steps. Backends specify where matching requests should be routed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -858,3 +947,4 @@ public partial class V1HTTPRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1HTTP
     [JsonPropertyName("status")]
     public V1HTTPRouteStatus? Status { get; set; }
 }
+#nullable disable

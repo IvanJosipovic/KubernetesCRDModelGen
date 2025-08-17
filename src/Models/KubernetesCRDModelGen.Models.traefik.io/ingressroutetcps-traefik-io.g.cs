@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+#nullable enable
 /// <summary>IngressRouteTCP is the CRD implementation of a Traefik TCP Router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1IngressRouteTCPList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1alpha1IngressRouteTCP> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObjectReference is a generic reference to a Traefik resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutesMiddlewares
@@ -46,7 +49,9 @@ public partial class V1alpha1IngressRouteTCPSpecRoutesMiddlewares
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxyProtocol defines the PROXY protocol configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#proxy-protocol</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutesServicesProxyProtocol
@@ -55,7 +60,9 @@ public partial class V1alpha1IngressRouteTCPSpecRoutesServicesProxyProtocol
     [JsonPropertyName("version")]
     public int? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceTCP defines an upstream TCP service to proxy traffic to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutesServices
@@ -100,7 +107,9 @@ public partial class V1alpha1IngressRouteTCPSpecRoutesServices
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteTCP holds the TCP route configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutes
@@ -125,7 +134,9 @@ public partial class V1alpha1IngressRouteTCPSpecRoutes
     [JsonPropertyName("syntax")]
     public string? Syntax { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Domain holds a domain name with SANs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecTlsDomains
@@ -138,7 +149,9 @@ public partial class V1alpha1IngressRouteTCPSpecTlsDomains
     [JsonPropertyName("sans")]
     public IList<string>? Sans { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecTlsOptions
@@ -151,7 +164,9 @@ public partial class V1alpha1IngressRouteTCPSpecTlsOptions
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Store defines the reference to the TLSStore, that will be used to store certificates. Please note that only `default` TLSStore can be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecTlsStore
@@ -164,7 +179,9 @@ public partial class V1alpha1IngressRouteTCPSpecTlsStore
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS defines the TLS configuration on a layer 4 / TCP Route. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#tls_1</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecTls
@@ -193,7 +210,9 @@ public partial class V1alpha1IngressRouteTCPSpecTls
     [JsonPropertyName("store")]
     public V1alpha1IngressRouteTCPSpecTlsStore? Store { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IngressRouteTCPSpec defines the desired state of IngressRouteTCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpec
@@ -210,7 +229,9 @@ public partial class V1alpha1IngressRouteTCPSpec
     [JsonPropertyName("tls")]
     public V1alpha1IngressRouteTCPSpecTls? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IngressRouteTCP is the CRD implementation of a Traefik TCP Router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -236,3 +257,4 @@ public partial class V1alpha1IngressRouteTCP : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("spec")]
     public V1alpha1IngressRouteTCPSpec Spec { get; set; }
 }
+#nullable disable

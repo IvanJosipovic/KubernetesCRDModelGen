@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>OpenIDConnectProvider is the Schema for the OpenIDConnectProviders API. Manages an OpenID Connect Provider within a API Management Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OpenIDConnectProviderList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1OpenIDConnectProvider> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderApiManagementNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderApiManagementNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderApiManagementNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderApiManagementNam
     [JsonPropertyName("policy")]
     public V1beta1OpenIDConnectProviderSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderApiManagementNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderApiManagementNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderApiManagementNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderApiManagementNam
     [JsonPropertyName("policy")]
     public V1beta1OpenIDConnectProviderSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Client ID used for the Client Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderClientIdSecretRef
@@ -110,7 +121,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderClientIdSecretRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Client Secret used for the Client Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderClientSecretSecretRef
@@ -123,7 +136,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderClientSecretSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNameRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNameRef
@@ -153,7 +170,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNameSelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNameSelector
@@ -187,7 +208,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProvider
@@ -236,7 +259,9 @@ public partial class V1beta1OpenIDConnectProviderSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1OpenIDConnectProviderSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Client ID used for the Client Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecInitProviderClientIdSecretRef
@@ -249,7 +274,9 @@ public partial class V1beta1OpenIDConnectProviderSpecInitProviderClientIdSecretR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Client Secret used for the Client Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecInitProviderClientSecretSecretRef
@@ -262,7 +289,9 @@ public partial class V1beta1OpenIDConnectProviderSpecInitProviderClientSecretSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecInitProvider
@@ -287,7 +316,9 @@ public partial class V1beta1OpenIDConnectProviderSpecInitProvider
     [JsonPropertyName("metadataEndpoint")]
     public string? MetadataEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecProviderConfigRef
@@ -300,7 +331,9 @@ public partial class V1beta1OpenIDConnectProviderSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecWriteConnectionSecretToRef
@@ -309,7 +342,9 @@ public partial class V1beta1OpenIDConnectProviderSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OpenIDConnectProviderSpec defines the desired state of OpenIDConnectProvider</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpec
@@ -334,7 +369,9 @@ public partial class V1beta1OpenIDConnectProviderSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OpenIDConnectProviderSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderStatusAtProvider
@@ -363,7 +400,9 @@ public partial class V1beta1OpenIDConnectProviderStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderStatusConditions
@@ -392,7 +431,9 @@ public partial class V1beta1OpenIDConnectProviderStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OpenIDConnectProviderStatus defines the observed state of OpenIDConnectProvider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderStatus
@@ -409,7 +450,9 @@ public partial class V1beta1OpenIDConnectProviderStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OpenIDConnectProvider is the Schema for the OpenIDConnectProviders API. Manages an OpenID Connect Provider within a API Management Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -439,3 +482,4 @@ public partial class V1beta1OpenIDConnectProvider : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1OpenIDConnectProviderStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elbv2.aws.upbound.io;
+#nullable enable
 /// <summary>LBListenerCertificate is the Schema for the LBListenerCertificates API. Provides a Load Balancer Listener Certificate resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LBListenerCertificateList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1LBListenerCertificate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProviderCertificateArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LBListenerCertificateSpecForProviderCertificateArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProviderCertificateArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1LBListenerCertificateSpecForProviderCertificateArnRe
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecForProviderCertificateArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProviderCertificateArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LBListenerCertificateSpecForProviderCertificateArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProviderCertificateArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LBListenerCertificateSpecForProviderCertificateArnSe
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecForProviderCertificateArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProviderListenerArnRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LBListenerCertificateSpecForProviderListenerArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBListener in elbv2 to populate listenerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProviderListenerArnRef
@@ -115,7 +128,9 @@ public partial class V1beta1LBListenerCertificateSpecForProviderListenerArnRef
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecForProviderListenerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProviderListenerArnSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1LBListenerCertificateSpecForProviderListenerArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBListener in elbv2 to populate listenerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProviderListenerArnSelector
@@ -145,7 +162,9 @@ public partial class V1beta1LBListenerCertificateSpecForProviderListenerArnSelec
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecForProviderListenerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1LBListenerCertificateSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProviderCertificateArnRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProviderCertificateArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProviderCertificateArnRef
@@ -204,7 +227,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProviderCertificateArnR
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecInitProviderCertificateArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProviderCertificateArnSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProviderCertificateArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProviderCertificateArnSelector
@@ -234,7 +261,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProviderCertificateArnS
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecInitProviderCertificateArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProviderListenerArnRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProviderListenerArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBListener in elbv2 to populate listenerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProviderListenerArnRef
@@ -260,7 +291,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProviderListenerArnRef
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecInitProviderListenerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProviderListenerArnSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProviderListenerArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBListener in elbv2 to populate listenerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProviderListenerArnSelector
@@ -290,7 +325,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProviderListenerArnSele
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecInitProviderListenerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1LBListenerCertificateSpecInitProvider
     [JsonPropertyName("listenerArnSelector")]
     public V1beta1LBListenerCertificateSpecInitProviderListenerArnSelector? ListenerArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1LBListenerCertificateSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1LBListenerCertificateSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LBListenerCertificateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1LBListenerCertificateSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBListenerCertificateSpec defines the desired state of LBListenerCertificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateSpec
@@ -387,7 +432,9 @@ public partial class V1beta1LBListenerCertificateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LBListenerCertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1LBListenerCertificateStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1LBListenerCertificateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBListenerCertificateStatus defines the observed state of LBListenerCertificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerCertificateStatus
@@ -454,7 +505,9 @@ public partial class V1beta1LBListenerCertificateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBListenerCertificate is the Schema for the LBListenerCertificates API. Provides a Load Balancer Listener Certificate resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1LBListenerCertificate : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1LBListenerCertificateStatus? Status { get; set; }
 }
+#nullable disable

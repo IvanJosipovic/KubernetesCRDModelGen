@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>PrivateEndpointApplicationSecurityGroupAssociation is the Schema for the PrivateEndpointApplicationSecurityGroupAssociations API. Manages an association between Private Endpoint and Application Security Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationLi
     [JsonPropertyName("items")]
     public IList<V1beta1PrivateEndpointApplicationSecurityGroupAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderApplicationSecurityGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationSecurityGroup in network to populate applicationSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderApplicationSecurityGroupIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderApplicationSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderApplicationSecurityGroupIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationSecurityGroup in network to populate applicationSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderApplicationSecurityGroupIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderApplicationSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderPrivateEndpointIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateEndpoint in network to populate privateEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderPrivateEndpointIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderPrivateEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderPrivateEndpointIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateEndpoint in network to populate privateEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderPrivateEndpointIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderPrivateEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProvider
@@ -174,7 +193,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("privateEndpointIdSelector")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecForProviderPrivateEndpointIdSelector? PrivateEndpointIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderApplicationSecurityGroupIdRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ApplicationSecurityGroup in network to populate applicationSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderApplicationSecurityGroupIdRef
@@ -200,7 +223,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderApplicationSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderApplicationSecurityGroupIdSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ApplicationSecurityGroup in network to populate applicationSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderApplicationSecurityGroupIdSelector
@@ -230,7 +257,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderApplicationSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderPrivateEndpointIdRefPolicy
@@ -243,7 +272,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateEndpoint in network to populate privateEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderPrivateEndpointIdRef
@@ -256,7 +287,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderPrivateEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderPrivateEndpointIdSelectorPolicy
@@ -269,7 +302,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateEndpoint in network to populate privateEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderPrivateEndpointIdSelector
@@ -286,7 +321,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderPrivateEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProvider
@@ -315,7 +352,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("privateEndpointIdSelector")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecInitProviderPrivateEndpointIdSelector? PrivateEndpointIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecProviderConfigRefPolicy
@@ -328,7 +367,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecProviderConfigRef
@@ -341,7 +382,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("policy")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecWriteConnectionSecretToRef
@@ -354,7 +397,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateEndpointApplicationSecurityGroupAssociationSpec defines the desired state of PrivateEndpointApplicationSecurityGroupAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpec
@@ -383,7 +428,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSp
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationStatusAtProvider
@@ -400,7 +447,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSt
     [JsonPropertyName("privateEndpointId")]
     public string? PrivateEndpointId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationStatusConditions
@@ -429,7 +478,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSt
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateEndpointApplicationSecurityGroupAssociationStatus defines the observed state of PrivateEndpointApplicationSecurityGroupAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationStatus
@@ -446,7 +497,9 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociationSt
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateEndpointApplicationSecurityGroupAssociation is the Schema for the PrivateEndpointApplicationSecurityGroupAssociations API. Manages an association between Private Endpoint and Application Security Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -476,3 +529,4 @@ public partial class V1beta1PrivateEndpointApplicationSecurityGroupAssociation :
     [JsonPropertyName("status")]
     public V1beta1PrivateEndpointApplicationSecurityGroupAssociationStatus? Status { get; set; }
 }
+#nullable disable

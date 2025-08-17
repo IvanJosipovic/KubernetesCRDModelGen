@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Autoscaler is the Schema for the Autoscalers API. Represents an Autoscaler resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AutoscalerList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Autoscaler> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyCpuUtilization
@@ -46,7 +49,9 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyCpuUtiliza
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters of autoscaling based on a load balancer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyLoadBalancingUtilization
@@ -55,7 +60,9 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyLoadBalanc
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyMetric
@@ -80,7 +87,9 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyMetric
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
@@ -93,7 +102,9 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScaleInCon
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScaleInControl
@@ -106,7 +117,9 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScaleInCon
     [JsonPropertyName("timeWindowSec")]
     public double? TimeWindowSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScalingSchedules
@@ -139,7 +152,9 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicyScalingSch
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicy
@@ -180,7 +195,9 @@ public partial class V1beta1AutoscalerSpecForProviderAutoscalingPolicy
     [JsonPropertyName("scalingSchedules")]
     public IList<V1beta1AutoscalerSpecForProviderAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderTargetRefPolicy
@@ -193,7 +210,9 @@ public partial class V1beta1AutoscalerSpecForProviderTargetRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceGroupManager in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderTargetRef
@@ -210,7 +229,9 @@ public partial class V1beta1AutoscalerSpecForProviderTargetRef
     [JsonPropertyName("policy")]
     public V1beta1AutoscalerSpecForProviderTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderTargetSelectorPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1AutoscalerSpecForProviderTargetSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceGroupManager in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProviderTargetSelector
@@ -244,7 +267,9 @@ public partial class V1beta1AutoscalerSpecForProviderTargetSelector
     [JsonPropertyName("policy")]
     public V1beta1AutoscalerSpecForProviderTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecForProvider
@@ -277,7 +302,9 @@ public partial class V1beta1AutoscalerSpecForProvider
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyCpuUtilization
@@ -290,7 +317,9 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyCpuUtiliz
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters of autoscaling based on a load balancer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyLoadBalancingUtilization
@@ -299,7 +328,9 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyLoadBalan
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyMetric
@@ -324,7 +355,9 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyMetric
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
@@ -337,7 +370,9 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScaleInCo
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScaleInControl
@@ -350,7 +385,9 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScaleInCo
     [JsonPropertyName("timeWindowSec")]
     public double? TimeWindowSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScalingSchedules
@@ -383,7 +420,9 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScalingSc
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicy
@@ -424,7 +463,9 @@ public partial class V1beta1AutoscalerSpecInitProviderAutoscalingPolicy
     [JsonPropertyName("scalingSchedules")]
     public IList<V1beta1AutoscalerSpecInitProviderAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderTargetRefPolicy
@@ -437,7 +478,9 @@ public partial class V1beta1AutoscalerSpecInitProviderTargetRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceGroupManager in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderTargetRef
@@ -454,7 +497,9 @@ public partial class V1beta1AutoscalerSpecInitProviderTargetRef
     [JsonPropertyName("policy")]
     public V1beta1AutoscalerSpecInitProviderTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderTargetSelectorPolicy
@@ -467,7 +512,9 @@ public partial class V1beta1AutoscalerSpecInitProviderTargetSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceGroupManager in compute to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProviderTargetSelector
@@ -488,7 +535,9 @@ public partial class V1beta1AutoscalerSpecInitProviderTargetSelector
     [JsonPropertyName("policy")]
     public V1beta1AutoscalerSpecInitProviderTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecInitProvider
@@ -517,7 +566,9 @@ public partial class V1beta1AutoscalerSpecInitProvider
     [JsonPropertyName("targetSelector")]
     public V1beta1AutoscalerSpecInitProviderTargetSelector? TargetSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecProviderConfigRef
@@ -530,7 +581,9 @@ public partial class V1beta1AutoscalerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpecWriteConnectionSecretToRef
@@ -539,7 +592,9 @@ public partial class V1beta1AutoscalerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AutoscalerSpec defines the desired state of Autoscaler</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerSpec
@@ -564,7 +619,9 @@ public partial class V1beta1AutoscalerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AutoscalerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyCpuUtilization
@@ -577,7 +634,9 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyCpuUtiliz
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters of autoscaling based on a load balancer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyLoadBalancingUtilization
@@ -586,7 +645,9 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyLoadBalan
     [JsonPropertyName("target")]
     public double? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyMetric
@@ -611,7 +672,9 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyMetric
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScaleInControlMaxScaledInReplicas
@@ -624,7 +687,9 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScaleInCo
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScaleInControl
@@ -637,7 +702,9 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScaleInCo
     [JsonPropertyName("timeWindowSec")]
     public double? TimeWindowSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScalingSchedules
@@ -670,7 +737,9 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScalingSc
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicy
@@ -711,7 +780,9 @@ public partial class V1beta1AutoscalerStatusAtProviderAutoscalingPolicy
     [JsonPropertyName("scalingSchedules")]
     public IList<V1beta1AutoscalerStatusAtProviderAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusAtProvider
@@ -748,7 +819,9 @@ public partial class V1beta1AutoscalerStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatusConditions
@@ -777,7 +850,9 @@ public partial class V1beta1AutoscalerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AutoscalerStatus defines the observed state of Autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalerStatus
@@ -794,7 +869,9 @@ public partial class V1beta1AutoscalerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Autoscaler is the Schema for the Autoscalers API. Represents an Autoscaler resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -824,3 +901,4 @@ public partial class V1beta1Autoscaler : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1AutoscalerStatus? Status { get; set; }
 }
+#nullable disable

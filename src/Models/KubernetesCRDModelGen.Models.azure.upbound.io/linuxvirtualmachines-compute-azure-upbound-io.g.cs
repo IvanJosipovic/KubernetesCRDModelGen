@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+#nullable enable
 /// <summary>LinuxVirtualMachine is the Schema for the LinuxVirtualMachines API. Manages a Linux Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LinuxVirtualMachineList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1LinuxVirtualMachine> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderAdditionalCapabilities
@@ -46,7 +49,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderAdditionalCapabili
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminPasswordSecretRef
@@ -63,7 +68,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminPasswordSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminSshKey
@@ -76,7 +83,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminSshKey
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderBootDiagnostics
@@ -85,7 +94,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderBootDiagnostics
     [JsonPropertyName("storageAccountUri")]
     public string? StorageAccountUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderCustomDataSecretRef
@@ -102,7 +113,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderCustomDataSecretRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderGalleryApplication
@@ -131,7 +144,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderGalleryApplication
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderIdentity
@@ -144,7 +159,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsRefsPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsRefs
@@ -170,7 +189,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceId
     [JsonPropertyName("policy")]
     public V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsSelectorPolicy
@@ -183,7 +204,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of NetworkInterface in network to populate networkInterfaceIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsSelector
@@ -200,7 +223,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceId
     [JsonPropertyName("policy")]
     public V1beta1LinuxVirtualMachineSpecForProviderNetworkInterfaceIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderOsDiskDiffDiskSettings
@@ -213,7 +238,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderOsDiskDiffDiskSett
     [JsonPropertyName("placement")]
     public string? Placement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderOsDisk
@@ -254,7 +281,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderOsDisk
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderOsImageNotification
@@ -263,7 +292,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderOsImageNotificatio
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderPlan
@@ -280,7 +311,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderPlan
     [JsonPropertyName("publisher")]
     public string? Publisher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRefPolicy
@@ -293,7 +326,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRef
@@ -306,7 +341,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameR
     [JsonPropertyName("policy")]
     public V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelector
@@ -336,7 +375,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameS
     [JsonPropertyName("policy")]
     public V1beta1LinuxVirtualMachineSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderSecretCertificate
@@ -345,7 +386,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderSecretCertificate
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderSecret
@@ -358,7 +401,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderSecret
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderSourceImageReference
@@ -379,7 +424,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderSourceImageReferen
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderTerminationNotification
@@ -392,7 +439,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderTerminationNotific
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProvider
@@ -605,7 +654,9 @@ public partial class V1beta1LinuxVirtualMachineSpecForProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdditionalCapabilities
@@ -618,7 +669,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdditionalCapabil
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminPasswordSecretRef
@@ -635,7 +688,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminPasswordSecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminSshKey
@@ -648,7 +703,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminSshKey
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderBootDiagnostics
@@ -657,7 +714,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderBootDiagnostics
     [JsonPropertyName("storageAccountUri")]
     public string? StorageAccountUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderCustomDataSecretRef
@@ -674,7 +733,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderCustomDataSecretR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderGalleryApplication
@@ -703,7 +764,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderGalleryApplicatio
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderIdentity
@@ -716,7 +779,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsRefsPolicy
@@ -729,7 +794,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsRefs
@@ -742,7 +809,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceI
     [JsonPropertyName("policy")]
     public V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsSelectorPolicy
@@ -755,7 +824,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of NetworkInterface in network to populate networkInterfaceIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsSelector
@@ -772,7 +843,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceI
     [JsonPropertyName("policy")]
     public V1beta1LinuxVirtualMachineSpecInitProviderNetworkInterfaceIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsDiskDiffDiskSettings
@@ -785,7 +858,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsDiskDiffDiskSet
     [JsonPropertyName("placement")]
     public string? Placement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsDisk
@@ -826,7 +901,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsDisk
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsImageNotification
@@ -835,7 +912,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderOsImageNotificati
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderPlan
@@ -852,7 +931,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderPlan
     [JsonPropertyName("publisher")]
     public string? Publisher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderSecretCertificate
@@ -861,7 +942,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderSecretCertificate
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderSecret
@@ -874,7 +957,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderSecret
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderSourceImageReference
@@ -895,7 +980,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderSourceImageRefere
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderTerminationNotification
@@ -908,7 +995,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderTerminationNotifi
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProvider
@@ -1109,7 +1198,9 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicy
@@ -1122,7 +1213,9 @@ public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRef
@@ -1135,7 +1228,9 @@ public partial class V1beta1LinuxVirtualMachineSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LinuxVirtualMachineSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef
@@ -1148,7 +1243,9 @@ public partial class V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinuxVirtualMachineSpec defines the desired state of LinuxVirtualMachine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpec
@@ -1177,7 +1274,9 @@ public partial class V1beta1LinuxVirtualMachineSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LinuxVirtualMachineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdditionalCapabilities
@@ -1190,7 +1289,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdditionalCapabil
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdminSshKey
@@ -1203,7 +1304,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdminSshKey
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderBootDiagnostics
@@ -1212,7 +1315,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderBootDiagnostics
     [JsonPropertyName("storageAccountUri")]
     public string? StorageAccountUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderGalleryApplication
@@ -1241,7 +1346,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderGalleryApplicatio
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderIdentity
@@ -1262,7 +1369,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDiskDiffDiskSettings
@@ -1275,7 +1384,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDiskDiffDiskSet
     [JsonPropertyName("placement")]
     public string? Placement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDisk
@@ -1320,7 +1431,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDisk
     [JsonPropertyName("writeAcceleratorEnabled")]
     public bool? WriteAcceleratorEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsImageNotification
@@ -1329,7 +1442,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsImageNotificati
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderPlan
@@ -1346,7 +1461,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderPlan
     [JsonPropertyName("publisher")]
     public string? Publisher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderSecretCertificate
@@ -1355,7 +1472,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderSecretCertificate
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderSecret
@@ -1368,7 +1487,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderSecret
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderSourceImageReference
@@ -1389,7 +1510,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderSourceImageRefere
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderTerminationNotification
@@ -1402,7 +1525,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderTerminationNotifi
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProvider
@@ -1615,7 +1740,9 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusConditions
@@ -1644,7 +1771,9 @@ public partial class V1beta1LinuxVirtualMachineStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinuxVirtualMachineStatus defines the observed state of LinuxVirtualMachine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatus
@@ -1661,7 +1790,9 @@ public partial class V1beta1LinuxVirtualMachineStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinuxVirtualMachine is the Schema for the LinuxVirtualMachines API. Manages a Linux Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1691,3 +1822,4 @@ public partial class V1beta1LinuxVirtualMachine : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1LinuxVirtualMachineStatus? Status { get; set; }
 }
+#nullable disable

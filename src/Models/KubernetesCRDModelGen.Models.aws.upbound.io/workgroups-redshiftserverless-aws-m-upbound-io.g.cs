@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshiftserverless.aws.m.upbound.io;
+#nullable enable
 /// <summary>Workgroup is the Schema for the Workgroups API. Provides a Redshift Serverless Workgroup resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkgroupList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1Workgroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigParameter
@@ -46,7 +49,9 @@ public partial class V1beta1WorkgroupSpecForProviderConfigParameter
     [JsonPropertyName("parameterValue")]
     public string? ParameterValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderPricePerformanceTarget
@@ -59,7 +64,9 @@ public partial class V1beta1WorkgroupSpecForProviderPricePerformanceTarget
     [JsonPropertyName("level")]
     public double? Level { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdRefsPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdRefs
@@ -89,7 +98,9 @@ public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdSelectorPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdSelector
@@ -123,7 +136,9 @@ public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSubnetIdRefsPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1WorkgroupSpecForProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSubnetIdRefs
@@ -153,7 +170,9 @@ public partial class V1beta1WorkgroupSpecForProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSubnetIdSelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1WorkgroupSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSubnetIdSelector
@@ -187,7 +208,9 @@ public partial class V1beta1WorkgroupSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProvider
@@ -260,7 +283,9 @@ public partial class V1beta1WorkgroupSpecForProvider
     [JsonPropertyName("trackName")]
     public string? TrackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderConfigParameter
@@ -273,7 +298,9 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigParameter
     [JsonPropertyName("parameterValue")]
     public string? ParameterValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderPricePerformanceTarget
@@ -286,7 +313,9 @@ public partial class V1beta1WorkgroupSpecInitProviderPricePerformanceTarget
     [JsonPropertyName("level")]
     public double? Level { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderSecurityGroupIdRefsPolicy
@@ -299,7 +328,9 @@ public partial class V1beta1WorkgroupSpecInitProviderSecurityGroupIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderSecurityGroupIdRefs
@@ -316,7 +347,9 @@ public partial class V1beta1WorkgroupSpecInitProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderSecurityGroupIdSelectorPolicy
@@ -329,7 +362,9 @@ public partial class V1beta1WorkgroupSpecInitProviderSecurityGroupIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderSecurityGroupIdSelector
@@ -350,7 +385,9 @@ public partial class V1beta1WorkgroupSpecInitProviderSecurityGroupIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderSubnetIdRefsPolicy
@@ -363,7 +400,9 @@ public partial class V1beta1WorkgroupSpecInitProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderSubnetIdRefs
@@ -380,7 +419,9 @@ public partial class V1beta1WorkgroupSpecInitProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderSubnetIdSelectorPolicy
@@ -393,7 +434,9 @@ public partial class V1beta1WorkgroupSpecInitProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProviderSubnetIdSelector
@@ -414,7 +457,9 @@ public partial class V1beta1WorkgroupSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkgroupSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecInitProvider
@@ -483,7 +528,9 @@ public partial class V1beta1WorkgroupSpecInitProvider
     [JsonPropertyName("trackName")]
     public string? TrackName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecProviderConfigRef
@@ -496,7 +543,9 @@ public partial class V1beta1WorkgroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecWriteConnectionSecretToRef
@@ -505,7 +554,9 @@ public partial class V1beta1WorkgroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkgroupSpec defines the desired state of Workgroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpec
@@ -530,7 +581,9 @@ public partial class V1beta1WorkgroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkgroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderConfigParameter
@@ -543,7 +596,9 @@ public partial class V1beta1WorkgroupStatusAtProviderConfigParameter
     [JsonPropertyName("parameterValue")]
     public string? ParameterValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderEndpointVpcEndpointNetworkInterface
@@ -564,7 +619,9 @@ public partial class V1beta1WorkgroupStatusAtProviderEndpointVpcEndpointNetworkI
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderEndpointVpcEndpoint
@@ -581,7 +638,9 @@ public partial class V1beta1WorkgroupStatusAtProviderEndpointVpcEndpoint
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderEndpoint
@@ -598,7 +657,9 @@ public partial class V1beta1WorkgroupStatusAtProviderEndpoint
     [JsonPropertyName("vpcEndpoint")]
     public IList<V1beta1WorkgroupStatusAtProviderEndpointVpcEndpoint>? VpcEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProviderPricePerformanceTarget
@@ -611,7 +672,9 @@ public partial class V1beta1WorkgroupStatusAtProviderPricePerformanceTarget
     [JsonPropertyName("level")]
     public double? Level { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProvider
@@ -688,7 +751,9 @@ public partial class V1beta1WorkgroupStatusAtProvider
     [JsonPropertyName("workgroupId")]
     public string? WorkgroupId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusConditions
@@ -717,7 +782,9 @@ public partial class V1beta1WorkgroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkgroupStatus defines the observed state of Workgroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatus
@@ -734,7 +801,9 @@ public partial class V1beta1WorkgroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Workgroup is the Schema for the Workgroups API. Provides a Redshift Serverless Workgroup resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -764,3 +833,4 @@ public partial class V1beta1Workgroup : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1WorkgroupStatus? Status { get; set; }
 }
+#nullable disable

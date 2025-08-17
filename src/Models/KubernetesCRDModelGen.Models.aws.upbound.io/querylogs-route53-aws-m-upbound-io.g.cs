@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53.aws.m.upbound.io;
+#nullable enable
 /// <summary>QueryLog is the Schema for the QueryLogs API. Provides a Route53 query logging configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1QueryLogList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1QueryLog> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnRef
     [JsonPropertyName("policy")]
     public V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnSelector
     [JsonPropertyName("policy")]
     public V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProviderZoneIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1QueryLogSpecForProviderZoneIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProviderZoneIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1QueryLogSpecForProviderZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1QueryLogSpecForProviderZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProviderZoneIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1QueryLogSpecForProviderZoneIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProviderZoneIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1QueryLogSpecForProviderZoneIdSelector
     [JsonPropertyName("policy")]
     public V1beta1QueryLogSpecForProviderZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1QueryLogSpecForProvider
     [JsonPropertyName("zoneIdSelector")]
     public V1beta1QueryLogSpecForProviderZoneIdSelector? ZoneIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnRef
@@ -220,7 +243,9 @@ public partial class V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnRef
     [JsonPropertyName("policy")]
     public V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate cloudwatchLogGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnSelector
@@ -254,7 +281,9 @@ public partial class V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1QueryLogSpecInitProviderCloudwatchLogGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProviderZoneIdRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1QueryLogSpecInitProviderZoneIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProviderZoneIdRef
@@ -284,7 +315,9 @@ public partial class V1beta1QueryLogSpecInitProviderZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1QueryLogSpecInitProviderZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProviderZoneIdSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1QueryLogSpecInitProviderZoneIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProviderZoneIdSelector
@@ -318,7 +353,9 @@ public partial class V1beta1QueryLogSpecInitProviderZoneIdSelector
     [JsonPropertyName("policy")]
     public V1beta1QueryLogSpecInitProviderZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1QueryLogSpecInitProvider
     [JsonPropertyName("zoneIdSelector")]
     public V1beta1QueryLogSpecInitProviderZoneIdSelector? ZoneIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1QueryLogSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1QueryLogSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueryLogSpec defines the desired state of QueryLog</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogSpec
@@ -394,7 +437,9 @@ public partial class V1beta1QueryLogSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1QueryLogSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogStatusAtProvider
@@ -415,7 +460,9 @@ public partial class V1beta1QueryLogStatusAtProvider
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogStatusConditions
@@ -444,7 +491,9 @@ public partial class V1beta1QueryLogStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueryLogStatus defines the observed state of QueryLog.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueryLogStatus
@@ -461,7 +510,9 @@ public partial class V1beta1QueryLogStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>QueryLog is the Schema for the QueryLogs API. Provides a Route53 query logging configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -491,3 +542,4 @@ public partial class V1beta1QueryLog : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1QueryLogStatus? Status { get; set; }
 }
+#nullable disable

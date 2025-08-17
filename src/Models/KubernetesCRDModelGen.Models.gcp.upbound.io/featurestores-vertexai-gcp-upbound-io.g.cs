@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.gcp.upbound.io;
+#nullable enable
 /// <summary>Featurestore is the Schema for the Featurestores API. A collection of DataItems and Annotations on them.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FeaturestoreList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1Featurestore> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecForProviderEncryptionSpec
@@ -42,7 +45,9 @@ public partial class V1beta1FeaturestoreSpecForProviderEncryptionSpec
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecForProviderOnlineServingConfigScaling
@@ -55,7 +60,9 @@ public partial class V1beta1FeaturestoreSpecForProviderOnlineServingConfigScalin
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecForProviderOnlineServingConfig
@@ -68,7 +75,9 @@ public partial class V1beta1FeaturestoreSpecForProviderOnlineServingConfig
     [JsonPropertyName("scaling")]
     public IList<V1beta1FeaturestoreSpecForProviderOnlineServingConfigScaling>? Scaling { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecForProvider
@@ -101,7 +110,9 @@ public partial class V1beta1FeaturestoreSpecForProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecInitProviderEncryptionSpec
@@ -110,7 +121,9 @@ public partial class V1beta1FeaturestoreSpecInitProviderEncryptionSpec
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecInitProviderOnlineServingConfigScaling
@@ -123,7 +136,9 @@ public partial class V1beta1FeaturestoreSpecInitProviderOnlineServingConfigScali
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecInitProviderOnlineServingConfig
@@ -136,7 +151,9 @@ public partial class V1beta1FeaturestoreSpecInitProviderOnlineServingConfig
     [JsonPropertyName("scaling")]
     public IList<V1beta1FeaturestoreSpecInitProviderOnlineServingConfigScaling>? Scaling { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecInitProvider
@@ -169,7 +186,9 @@ public partial class V1beta1FeaturestoreSpecInitProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecProviderConfigRefPolicy
@@ -182,7 +201,9 @@ public partial class V1beta1FeaturestoreSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecProviderConfigRef
@@ -195,7 +216,9 @@ public partial class V1beta1FeaturestoreSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FeaturestoreSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpecWriteConnectionSecretToRef
@@ -208,7 +231,9 @@ public partial class V1beta1FeaturestoreSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FeaturestoreSpec defines the desired state of Featurestore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreSpec
@@ -237,7 +262,9 @@ public partial class V1beta1FeaturestoreSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FeaturestoreSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreStatusAtProviderEncryptionSpec
@@ -246,7 +273,9 @@ public partial class V1beta1FeaturestoreStatusAtProviderEncryptionSpec
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreStatusAtProviderOnlineServingConfigScaling
@@ -259,7 +288,9 @@ public partial class V1beta1FeaturestoreStatusAtProviderOnlineServingConfigScali
     [JsonPropertyName("minNodeCount")]
     public double? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreStatusAtProviderOnlineServingConfig
@@ -272,7 +303,9 @@ public partial class V1beta1FeaturestoreStatusAtProviderOnlineServingConfig
     [JsonPropertyName("scaling")]
     public IList<V1beta1FeaturestoreStatusAtProviderOnlineServingConfigScaling>? Scaling { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreStatusAtProvider
@@ -329,7 +362,9 @@ public partial class V1beta1FeaturestoreStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreStatusConditions
@@ -358,7 +393,9 @@ public partial class V1beta1FeaturestoreStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FeaturestoreStatus defines the observed state of Featurestore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeaturestoreStatus
@@ -375,7 +412,9 @@ public partial class V1beta1FeaturestoreStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Featurestore is the Schema for the Featurestores API. A collection of DataItems and Annotations on them.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -405,3 +444,4 @@ public partial class V1beta1Featurestore : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1FeaturestoreStatus? Status { get; set; }
 }
+#nullable disable

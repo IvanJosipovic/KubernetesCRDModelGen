@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deployment.databricks.crossplane.io;
+#nullable enable
 /// <summary>MwsCustomerManagedKeys is the Schema for the MwsCustomerManagedKeyss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MwsCustomerManagedKeysList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1alpha1MwsCustomerManagedKeys> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecForProviderAwsKeyInfo
@@ -50,7 +53,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecForProviderAwsKeyInfo
     [JsonPropertyName("keyRegion")]
     public string? KeyRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecForProviderGcpKeyInfo
@@ -59,7 +64,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecForProviderGcpKeyInfo
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecForProvider
@@ -88,7 +95,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecForProvider
     [JsonPropertyName("useCases")]
     public IList<string>? UseCases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecInitProviderAwsKeyInfo
@@ -105,7 +114,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecInitProviderAwsKeyInfo
     [JsonPropertyName("keyRegion")]
     public string? KeyRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecInitProviderGcpKeyInfo
@@ -114,7 +125,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecInitProviderGcpKeyInfo
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecInitProvider
@@ -143,7 +156,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecInitProvider
     [JsonPropertyName("useCases")]
     public IList<string>? UseCases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecProviderConfigRefPolicy
@@ -156,7 +171,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecProviderConfigRef
@@ -169,7 +186,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1MwsCustomerManagedKeysSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsToConfigRefPolicy
@@ -182,7 +201,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsToConfigRef
@@ -195,7 +216,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsT
     [JsonPropertyName("policy")]
     public V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsToMetadata
@@ -212,7 +235,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsT
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsTo
@@ -229,7 +254,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecPublishConnectionDetailsT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpecWriteConnectionSecretToRef
@@ -242,7 +269,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsCustomerManagedKeysSpec defines the desired state of MwsCustomerManagedKeys</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysSpec
@@ -275,7 +304,9 @@ public partial class V1alpha1MwsCustomerManagedKeysSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1MwsCustomerManagedKeysSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysStatusAtProviderAwsKeyInfo
@@ -292,7 +323,9 @@ public partial class V1alpha1MwsCustomerManagedKeysStatusAtProviderAwsKeyInfo
     [JsonPropertyName("keyRegion")]
     public string? KeyRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysStatusAtProviderGcpKeyInfo
@@ -301,7 +334,9 @@ public partial class V1alpha1MwsCustomerManagedKeysStatusAtProviderGcpKeyInfo
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysStatusAtProvider
@@ -334,7 +369,9 @@ public partial class V1alpha1MwsCustomerManagedKeysStatusAtProvider
     [JsonPropertyName("useCases")]
     public IList<string>? UseCases { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysStatusConditions
@@ -363,7 +400,9 @@ public partial class V1alpha1MwsCustomerManagedKeysStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsCustomerManagedKeysStatus defines the observed state of MwsCustomerManagedKeys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsCustomerManagedKeysStatus
@@ -380,7 +419,9 @@ public partial class V1alpha1MwsCustomerManagedKeysStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsCustomerManagedKeys is the Schema for the MwsCustomerManagedKeyss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -410,3 +451,4 @@ public partial class V1alpha1MwsCustomerManagedKeys : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1alpha1MwsCustomerManagedKeysStatus? Status { get; set; }
 }
+#nullable disable

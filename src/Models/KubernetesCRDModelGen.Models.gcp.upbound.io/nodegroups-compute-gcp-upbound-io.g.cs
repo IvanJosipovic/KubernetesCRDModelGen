@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>NodeGroup is the Schema for the NodeGroups API. Represents a NodeGroup resource to manage a group of sole-tenant nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NodeGroupList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1NodeGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderAutoscalingPolicy
@@ -50,7 +53,9 @@ public partial class V1beta1NodeGroupSpecForProviderAutoscalingPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderMaintenanceWindow
@@ -59,7 +64,9 @@ public partial class V1beta1NodeGroupSpecForProviderMaintenanceWindow
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NodeTemplate in compute to populate nodeTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRef
@@ -85,7 +94,9 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRef
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NodeTemplate in compute to populate nodeTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelector
@@ -115,7 +128,9 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelector
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
@@ -141,7 +158,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicy
@@ -154,7 +173,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelector
@@ -171,7 +192,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSel
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRef
@@ -197,7 +222,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicy
@@ -210,7 +237,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelector
@@ -227,7 +256,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMap
@@ -256,7 +287,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMap
     [JsonPropertyName("projectIdSelector")]
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelector? ProjectIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProviderShareSettings
@@ -269,7 +302,9 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettings
     [JsonPropertyName("shareType")]
     public string? ShareType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecForProvider
@@ -318,7 +353,9 @@ public partial class V1beta1NodeGroupSpecForProvider
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderAutoscalingPolicy
@@ -335,7 +372,9 @@ public partial class V1beta1NodeGroupSpecInitProviderAutoscalingPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderMaintenanceWindow
@@ -344,7 +383,9 @@ public partial class V1beta1NodeGroupSpecInitProviderMaintenanceWindow
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy
@@ -357,7 +398,9 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NodeTemplate in compute to populate nodeTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRef
@@ -370,7 +413,9 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRef
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy
@@ -383,7 +428,9 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NodeTemplate in compute to populate nodeTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelector
@@ -400,7 +447,9 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelector
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicy
@@ -413,7 +462,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRef
@@ -426,7 +477,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRe
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicy
@@ -439,7 +492,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelector
@@ -456,7 +511,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSe
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicy
@@ -469,7 +526,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRef
@@ -482,7 +541,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicy
@@ -495,7 +556,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate projectId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelector
@@ -512,7 +575,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMap
@@ -541,7 +606,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMap
     [JsonPropertyName("projectIdSelector")]
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelector? ProjectIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProviderShareSettings
@@ -554,7 +621,9 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettings
     [JsonPropertyName("shareType")]
     public string? ShareType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecInitProvider
@@ -599,7 +668,9 @@ public partial class V1beta1NodeGroupSpecInitProvider
     [JsonPropertyName("shareSettings")]
     public IList<V1beta1NodeGroupSpecInitProviderShareSettings>? ShareSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecProviderConfigRefPolicy
@@ -612,7 +683,9 @@ public partial class V1beta1NodeGroupSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecProviderConfigRef
@@ -625,7 +698,9 @@ public partial class V1beta1NodeGroupSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NodeGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpecWriteConnectionSecretToRef
@@ -638,7 +713,9 @@ public partial class V1beta1NodeGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NodeGroupSpec defines the desired state of NodeGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupSpec
@@ -667,7 +744,9 @@ public partial class V1beta1NodeGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NodeGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProviderAutoscalingPolicy
@@ -684,7 +763,9 @@ public partial class V1beta1NodeGroupStatusAtProviderAutoscalingPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProviderMaintenanceWindow
@@ -693,7 +774,9 @@ public partial class V1beta1NodeGroupStatusAtProviderMaintenanceWindow
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProviderShareSettingsProjectMap
@@ -706,7 +789,9 @@ public partial class V1beta1NodeGroupStatusAtProviderShareSettingsProjectMap
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProviderShareSettings
@@ -719,7 +804,9 @@ public partial class V1beta1NodeGroupStatusAtProviderShareSettings
     [JsonPropertyName("shareType")]
     public string? ShareType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusAtProvider
@@ -776,7 +863,9 @@ public partial class V1beta1NodeGroupStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatusConditions
@@ -805,7 +894,9 @@ public partial class V1beta1NodeGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NodeGroupStatus defines the observed state of NodeGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeGroupStatus
@@ -822,7 +913,9 @@ public partial class V1beta1NodeGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NodeGroup is the Schema for the NodeGroups API. Represents a NodeGroup resource to manage a group of sole-tenant nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -852,3 +945,4 @@ public partial class V1beta1NodeGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1NodeGroupStatus? Status { get; set; }
 }
+#nullable disable

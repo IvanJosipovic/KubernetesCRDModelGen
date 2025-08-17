@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privateca.gcp.upbound.io;
+#nullable enable
 /// <summary>CertificateTemplate is the Schema for the CertificateTemplates API. Certificate Authority Service provides reusable and parameterized templates that you can use for common certificate issuance scenarios. A certificate template represents a relatively static and well-defined certificate issuance schema within an organization.  A certificate template can essentially become a full-fledged vertical certificate issuance framework.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateTemplateList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1CertificateTemplate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraintsCelExpression
@@ -54,7 +57,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraint
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraints
@@ -71,7 +76,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraint
     [JsonPropertyName("celExpression")]
     public IList<V1beta1CertificateTemplateSpecForProviderIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPassthroughExtensionsAdditionalExtensions
@@ -80,7 +87,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPassthroughExtensi
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPassthroughExtensions
@@ -93,7 +102,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPassthroughExtensi
     [JsonPropertyName("knownExtensions")]
     public IList<string>? KnownExtensions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAdditionalExtensionsObjectId
@@ -102,7 +113,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAd
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAdditionalExtensions
@@ -119,7 +132,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAd
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesCaOptions
@@ -140,7 +155,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesCa
     [JsonPropertyName("zeroMaxIssuerPathLength")]
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsageBaseKeyUsage
@@ -181,7 +198,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
     [JsonPropertyName("keyEncipherment")]
     public bool? KeyEncipherment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsageExtendedKeyUsage
@@ -210,7 +229,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
     [JsonPropertyName("timeStamping")]
     public bool? TimeStamping { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages
@@ -219,7 +240,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsage
@@ -236,7 +259,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
     [JsonPropertyName("unknownExtendedKeyUsages")]
     public IList<V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesNameConstraints
@@ -277,7 +302,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesNa
     [JsonPropertyName("permittedUris")]
     public IList<string>? PermittedUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesPolicyIds
@@ -286,7 +313,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesPo
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValues
@@ -315,7 +344,9 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValues
     [JsonPropertyName("policyIds")]
     public IList<V1beta1CertificateTemplateSpecForProviderPredefinedValuesPolicyIds>? PolicyIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProvider
@@ -352,7 +383,9 @@ public partial class V1beta1CertificateTemplateSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderIdentityConstraintsCelExpression
@@ -369,7 +402,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderIdentityConstrain
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderIdentityConstraints
@@ -386,7 +421,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderIdentityConstrain
     [JsonPropertyName("celExpression")]
     public IList<V1beta1CertificateTemplateSpecInitProviderIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPassthroughExtensionsAdditionalExtensions
@@ -395,7 +432,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPassthroughExtens
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPassthroughExtensions
@@ -408,7 +447,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPassthroughExtens
     [JsonPropertyName("knownExtensions")]
     public IList<string>? KnownExtensions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesAdditionalExtensionsObjectId
@@ -417,7 +458,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesA
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesAdditionalExtensions
@@ -434,7 +477,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesA
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesCaOptions
@@ -455,7 +500,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesC
     [JsonPropertyName("zeroMaxIssuerPathLength")]
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsageBaseKeyUsage
@@ -496,7 +543,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
     [JsonPropertyName("keyEncipherment")]
     public bool? KeyEncipherment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsageExtendedKeyUsage
@@ -525,7 +574,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
     [JsonPropertyName("timeStamping")]
     public bool? TimeStamping { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages
@@ -534,7 +585,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsage
@@ -551,7 +604,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
     [JsonPropertyName("unknownExtendedKeyUsages")]
     public IList<V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesNameConstraints
@@ -592,7 +647,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesN
     [JsonPropertyName("permittedUris")]
     public IList<string>? PermittedUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesPolicyIds
@@ -601,7 +658,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesP
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValues
@@ -630,7 +689,9 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValues
     [JsonPropertyName("policyIds")]
     public IList<V1beta1CertificateTemplateSpecInitProviderPredefinedValuesPolicyIds>? PolicyIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProvider
@@ -663,7 +724,9 @@ public partial class V1beta1CertificateTemplateSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecProviderConfigRefPolicy
@@ -676,7 +739,9 @@ public partial class V1beta1CertificateTemplateSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecProviderConfigRef
@@ -689,7 +754,9 @@ public partial class V1beta1CertificateTemplateSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateTemplateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecWriteConnectionSecretToRef
@@ -702,7 +769,9 @@ public partial class V1beta1CertificateTemplateSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateTemplateSpec defines the desired state of CertificateTemplate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpec
@@ -731,7 +800,9 @@ public partial class V1beta1CertificateTemplateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateTemplateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderIdentityConstraintsCelExpression
@@ -752,7 +823,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderIdentityConstrain
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderIdentityConstraints
@@ -769,7 +842,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderIdentityConstrain
     [JsonPropertyName("celExpression")]
     public IList<V1beta1CertificateTemplateStatusAtProviderIdentityConstraintsCelExpression>? CelExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPassthroughExtensionsAdditionalExtensions
@@ -778,7 +853,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPassthroughExtens
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPassthroughExtensions
@@ -791,7 +868,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPassthroughExtens
     [JsonPropertyName("knownExtensions")]
     public IList<string>? KnownExtensions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesAdditionalExtensionsObjectId
@@ -800,7 +879,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesA
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesAdditionalExtensions
@@ -817,7 +898,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesA
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesCaOptions
@@ -838,7 +921,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesC
     [JsonPropertyName("zeroMaxIssuerPathLength")]
     public bool? ZeroMaxIssuerPathLength { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsageBaseKeyUsage
@@ -879,7 +964,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
     [JsonPropertyName("keyEncipherment")]
     public bool? KeyEncipherment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsageExtendedKeyUsage
@@ -908,7 +995,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
     [JsonPropertyName("timeStamping")]
     public bool? TimeStamping { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages
@@ -917,7 +1006,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsage
@@ -934,7 +1025,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
     [JsonPropertyName("unknownExtendedKeyUsages")]
     public IList<V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesNameConstraints
@@ -975,7 +1068,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesN
     [JsonPropertyName("permittedUris")]
     public IList<string>? PermittedUris { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesPolicyIds
@@ -984,7 +1079,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesP
     [JsonPropertyName("objectIdPath")]
     public IList<double>? ObjectIdPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValues
@@ -1013,7 +1110,9 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValues
     [JsonPropertyName("policyIds")]
     public IList<V1beta1CertificateTemplateStatusAtProviderPredefinedValuesPolicyIds>? PolicyIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProvider
@@ -1070,7 +1169,9 @@ public partial class V1beta1CertificateTemplateStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusConditions
@@ -1099,7 +1200,9 @@ public partial class V1beta1CertificateTemplateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateTemplateStatus defines the observed state of CertificateTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatus
@@ -1116,7 +1219,9 @@ public partial class V1beta1CertificateTemplateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateTemplate is the Schema for the CertificateTemplates API. Certificate Authority Service provides reusable and parameterized templates that you can use for common certificate issuance scenarios. A certificate template represents a relatively static and well-defined certificate issuance schema within an organization.  A certificate template can essentially become a full-fledged vertical certificate issuance framework.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1146,3 +1251,4 @@ public partial class V1beta1CertificateTemplate : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1CertificateTemplateStatus? Status { get; set; }
 }
+#nullable disable

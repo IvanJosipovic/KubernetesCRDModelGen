@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.mq.aws.upbound.io;
+#nullable enable
 /// <summary>Broker is the Schema for the Brokers API. Manages an AWS MQ broker</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BrokerList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Broker> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderConfigurationIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BrokerSpecForProviderConfigurationIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Configuration in mq to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderConfigurationIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1BrokerSpecForProviderConfigurationIdRef
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecForProviderConfigurationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderConfigurationIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BrokerSpecForProviderConfigurationIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Configuration in mq to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderConfigurationIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BrokerSpecForProviderConfigurationIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecForProviderConfigurationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderConfiguration
@@ -110,7 +121,9 @@ public partial class V1beta1BrokerSpecForProviderConfiguration
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Broker in mq to populate dataReplicationPrimaryBrokerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnRef
@@ -136,7 +151,9 @@ public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArn
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Broker in mq to populate dataReplicationPrimaryBrokerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnSelector
@@ -166,7 +185,9 @@ public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArn
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderEncryptionOptions
@@ -179,7 +200,9 @@ public partial class V1beta1BrokerSpecForProviderEncryptionOptions
     [JsonPropertyName("useAwsOwnedKey")]
     public bool? UseAwsOwnedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service account password.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderLdapServerMetadataServiceAccountPasswordSecretRef
@@ -196,7 +219,9 @@ public partial class V1beta1BrokerSpecForProviderLdapServerMetadataServiceAccoun
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderLdapServerMetadata
@@ -245,7 +270,9 @@ public partial class V1beta1BrokerSpecForProviderLdapServerMetadata
     [JsonPropertyName("userSearchSubtree")]
     public bool? UserSearchSubtree { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderLogs
@@ -258,7 +285,9 @@ public partial class V1beta1BrokerSpecForProviderLogs
     [JsonPropertyName("general")]
     public bool? General { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderMaintenanceWindowStartTime
@@ -275,7 +304,9 @@ public partial class V1beta1BrokerSpecForProviderMaintenanceWindowStartTime
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderSecurityGroupRefsPolicy
@@ -288,7 +319,9 @@ public partial class V1beta1BrokerSpecForProviderSecurityGroupRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderSecurityGroupRefs
@@ -301,7 +334,9 @@ public partial class V1beta1BrokerSpecForProviderSecurityGroupRefs
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecForProviderSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderSecurityGroupSelectorPolicy
@@ -314,7 +349,9 @@ public partial class V1beta1BrokerSpecForProviderSecurityGroupSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderSecurityGroupSelector
@@ -331,7 +368,9 @@ public partial class V1beta1BrokerSpecForProviderSecurityGroupSelector
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecForProviderSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderSubnetIdRefsPolicy
@@ -344,7 +383,9 @@ public partial class V1beta1BrokerSpecForProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderSubnetIdRefs
@@ -357,7 +398,9 @@ public partial class V1beta1BrokerSpecForProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderSubnetIdSelectorPolicy
@@ -370,7 +413,9 @@ public partial class V1beta1BrokerSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderSubnetIdSelector
@@ -387,7 +432,9 @@ public partial class V1beta1BrokerSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password of the user. Must be 12 to 250 characters long, contain at least 4 unique characters, and must not contain commas.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderUserPasswordSecretRef
@@ -404,7 +451,9 @@ public partial class V1beta1BrokerSpecForProviderUserPasswordSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderUser
@@ -429,7 +478,9 @@ public partial class V1beta1BrokerSpecForProviderUser
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProvider
@@ -546,7 +597,9 @@ public partial class V1beta1BrokerSpecForProvider
     [JsonPropertyName("user")]
     public IList<V1beta1BrokerSpecForProviderUser>? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderConfigurationIdRefPolicy
@@ -559,7 +612,9 @@ public partial class V1beta1BrokerSpecInitProviderConfigurationIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Configuration in mq to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderConfigurationIdRef
@@ -572,7 +627,9 @@ public partial class V1beta1BrokerSpecInitProviderConfigurationIdRef
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecInitProviderConfigurationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelectorPolicy
@@ -585,7 +642,9 @@ public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Configuration in mq to populate id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelector
@@ -602,7 +661,9 @@ public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecInitProviderConfigurationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderConfiguration
@@ -623,7 +684,9 @@ public partial class V1beta1BrokerSpecInitProviderConfiguration
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnRefPolicy
@@ -636,7 +699,9 @@ public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Broker in mq to populate dataReplicationPrimaryBrokerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnRef
@@ -649,7 +714,9 @@ public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerAr
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnSelectorPolicy
@@ -662,7 +729,9 @@ public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Broker in mq to populate dataReplicationPrimaryBrokerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnSelector
@@ -679,7 +748,9 @@ public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerAr
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderEncryptionOptions
@@ -692,7 +763,9 @@ public partial class V1beta1BrokerSpecInitProviderEncryptionOptions
     [JsonPropertyName("useAwsOwnedKey")]
     public bool? UseAwsOwnedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service account password.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderLdapServerMetadataServiceAccountPasswordSecretRef
@@ -709,7 +782,9 @@ public partial class V1beta1BrokerSpecInitProviderLdapServerMetadataServiceAccou
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderLdapServerMetadata
@@ -758,7 +833,9 @@ public partial class V1beta1BrokerSpecInitProviderLdapServerMetadata
     [JsonPropertyName("userSearchSubtree")]
     public bool? UserSearchSubtree { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderLogs
@@ -771,7 +848,9 @@ public partial class V1beta1BrokerSpecInitProviderLogs
     [JsonPropertyName("general")]
     public bool? General { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderMaintenanceWindowStartTime
@@ -788,7 +867,9 @@ public partial class V1beta1BrokerSpecInitProviderMaintenanceWindowStartTime
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderSecurityGroupRefsPolicy
@@ -801,7 +882,9 @@ public partial class V1beta1BrokerSpecInitProviderSecurityGroupRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderSecurityGroupRefs
@@ -814,7 +897,9 @@ public partial class V1beta1BrokerSpecInitProviderSecurityGroupRefs
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecInitProviderSecurityGroupRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderSecurityGroupSelectorPolicy
@@ -827,7 +912,9 @@ public partial class V1beta1BrokerSpecInitProviderSecurityGroupSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderSecurityGroupSelector
@@ -844,7 +931,9 @@ public partial class V1beta1BrokerSpecInitProviderSecurityGroupSelector
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecInitProviderSecurityGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderSubnetIdRefsPolicy
@@ -857,7 +946,9 @@ public partial class V1beta1BrokerSpecInitProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderSubnetIdRefs
@@ -870,7 +961,9 @@ public partial class V1beta1BrokerSpecInitProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicy
@@ -883,7 +976,9 @@ public partial class V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderSubnetIdSelector
@@ -900,7 +995,9 @@ public partial class V1beta1BrokerSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password of the user. Must be 12 to 250 characters long, contain at least 4 unique characters, and must not contain commas.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderUserPasswordSecretRef
@@ -917,7 +1014,9 @@ public partial class V1beta1BrokerSpecInitProviderUserPasswordSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderUser
@@ -942,7 +1041,9 @@ public partial class V1beta1BrokerSpecInitProviderUser
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProvider
@@ -1055,7 +1156,9 @@ public partial class V1beta1BrokerSpecInitProvider
     [JsonPropertyName("user")]
     public IList<V1beta1BrokerSpecInitProviderUser>? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecProviderConfigRefPolicy
@@ -1068,7 +1171,9 @@ public partial class V1beta1BrokerSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecProviderConfigRef
@@ -1081,7 +1186,9 @@ public partial class V1beta1BrokerSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BrokerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecWriteConnectionSecretToRef
@@ -1094,7 +1201,9 @@ public partial class V1beta1BrokerSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BrokerSpec defines the desired state of Broker</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpec
@@ -1123,7 +1232,9 @@ public partial class V1beta1BrokerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BrokerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderConfiguration
@@ -1136,7 +1247,9 @@ public partial class V1beta1BrokerStatusAtProviderConfiguration
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderEncryptionOptions
@@ -1149,7 +1262,9 @@ public partial class V1beta1BrokerStatusAtProviderEncryptionOptions
     [JsonPropertyName("useAwsOwnedKey")]
     public bool? UseAwsOwnedKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderInstances
@@ -1166,7 +1281,9 @@ public partial class V1beta1BrokerStatusAtProviderInstances
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderLdapServerMetadata
@@ -1211,7 +1328,9 @@ public partial class V1beta1BrokerStatusAtProviderLdapServerMetadata
     [JsonPropertyName("userSearchSubtree")]
     public bool? UserSearchSubtree { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderLogs
@@ -1224,7 +1343,9 @@ public partial class V1beta1BrokerStatusAtProviderLogs
     [JsonPropertyName("general")]
     public bool? General { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderMaintenanceWindowStartTime
@@ -1241,7 +1362,9 @@ public partial class V1beta1BrokerStatusAtProviderMaintenanceWindowStartTime
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderUser
@@ -1262,7 +1385,9 @@ public partial class V1beta1BrokerStatusAtProviderUser
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProvider
@@ -1375,7 +1500,9 @@ public partial class V1beta1BrokerStatusAtProvider
     [JsonPropertyName("user")]
     public IList<V1beta1BrokerStatusAtProviderUser>? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusConditions
@@ -1404,7 +1531,9 @@ public partial class V1beta1BrokerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BrokerStatus defines the observed state of Broker.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatus
@@ -1421,7 +1550,9 @@ public partial class V1beta1BrokerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Broker is the Schema for the Brokers API. Manages an AWS MQ broker</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1451,3 +1582,4 @@ public partial class V1beta1Broker : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1BrokerStatus? Status { get; set; }
 }
+#nullable disable

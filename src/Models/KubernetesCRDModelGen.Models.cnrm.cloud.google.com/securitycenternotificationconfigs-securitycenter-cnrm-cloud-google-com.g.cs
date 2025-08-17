@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securitycenter.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1SecurityCenterNotificationConfigList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1alpha1SecurityCenterNotificationConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigSpecOrganizationRef
@@ -50,7 +53,9 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpecOrganizationRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config for triggering streaming-based notifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigSpecStreamingConfig
@@ -59,7 +64,9 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpecStreamingConfig
     [JsonPropertyName("filter")]
     public string Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigSpec
@@ -88,7 +95,9 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpec
     [JsonPropertyName("streamingConfig")]
     public V1alpha1SecurityCenterNotificationConfigSpecStreamingConfig StreamingConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigStatusConditions
@@ -113,7 +122,9 @@ public partial class V1alpha1SecurityCenterNotificationConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecurityCenterNotificationConfigStatus
@@ -134,7 +145,9 @@ public partial class V1alpha1SecurityCenterNotificationConfigStatus
     [JsonPropertyName("serviceAccount")]
     public string? ServiceAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -164,3 +177,4 @@ public partial class V1alpha1SecurityCenterNotificationConfig : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1alpha1SecurityCenterNotificationConfigStatus? Status { get; set; }
 }
+#nullable disable

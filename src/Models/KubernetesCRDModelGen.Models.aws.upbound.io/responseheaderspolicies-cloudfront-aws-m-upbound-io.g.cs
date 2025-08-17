@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.m.upbound.io;
+#nullable enable
 /// <summary>ResponseHeadersPolicy is the Schema for the ResponseHeadersPolicys API. Provides a CloudFront response headers policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResponseHeadersPolicyList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ResponseHeadersPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP header names that CloudFront includes as values for the Access-Control-Allow-Headers HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlAllowHeaders
@@ -42,7 +45,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccess
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP methods that CloudFront includes as values for the Access-Control-Allow-Methods HTTP response header. Valid values: GET | POST | OPTIONS | PUT | DELETE | HEAD | ALL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlAllowMethods
@@ -51,7 +56,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccess
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of origins that CloudFront can use as the value for the Access-Control-Allow-Origin HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlAllowOrigins
@@ -60,7 +67,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccess
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP headers that CloudFront includes as values for the Access-Control-Expose-Headers HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlExposeHeaders
@@ -69,7 +78,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccess
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfig
@@ -102,7 +113,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfig
     [JsonPropertyName("originOverride")]
     public bool? OriginOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersConfigItems
@@ -119,7 +132,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersCon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of custom headers. See Custom Header for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersConfig
@@ -128,7 +143,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersCon
     [JsonPropertyName("items")]
     public IList<V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersConfigItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersConfigItems
@@ -137,7 +154,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersCon
     [JsonPropertyName("header")]
     public string? Header { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of HTTP headers to remove from the HTTP response. Object that contains an attribute items that contains a list of headers. See Remove Header for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersConfig
@@ -146,7 +165,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersCon
     [JsonPropertyName("items")]
     public IList<V1beta1ResponseHeadersPolicySpecForProviderRemoveHeadersConfigItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigContentSecurityPolicy
@@ -159,7 +180,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the X-Content-Type-Options HTTP response header with its value set to nosniff. See Content Type Options for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigContentTypeOptions
@@ -168,7 +191,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the X-Frame-Options HTTP response header and the header’s value. See Frame Options for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigFrameOptions
@@ -181,7 +206,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the Referrer-Policy HTTP response header and the header’s value. See Referrer Policy for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigReferrerPolicy
@@ -194,7 +221,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     [JsonPropertyName("referrerPolicy")]
     public string? ReferrerPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the Strict-Transport-Security HTTP response header and the header’s value. See Strict Transport Security for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigStrictTransportSecurity
@@ -215,7 +244,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     [JsonPropertyName("preload")]
     public bool? Preload { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determine whether CloudFront includes the X-XSS-Protection HTTP response header and the header’s value. See XSS Protection for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigXssProtection
@@ -236,7 +267,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     [JsonPropertyName("reportUri")]
     public string? ReportUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfig
@@ -265,7 +298,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersC
     [JsonPropertyName("xssProtection")]
     public V1beta1ResponseHeadersPolicySpecForProviderSecurityHeadersConfigXssProtection? XssProtection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for enabling the Server-Timing header in HTTP responses sent from CloudFront. See Server Timing Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderServerTimingHeadersConfig
@@ -278,7 +313,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProviderServerTimingHead
     [JsonPropertyName("samplingRate")]
     public double? SamplingRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProvider
@@ -311,7 +348,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProvider
     [JsonPropertyName("serverTimingHeadersConfig")]
     public V1beta1ResponseHeadersPolicySpecForProviderServerTimingHeadersConfig? ServerTimingHeadersConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP header names that CloudFront includes as values for the Access-Control-Allow-Headers HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAccessControlAllowHeaders
@@ -320,7 +359,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAcces
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP methods that CloudFront includes as values for the Access-Control-Allow-Methods HTTP response header. Valid values: GET | POST | OPTIONS | PUT | DELETE | HEAD | ALL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAccessControlAllowMethods
@@ -329,7 +370,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAcces
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of origins that CloudFront can use as the value for the Access-Control-Allow-Origin HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAccessControlAllowOrigins
@@ -338,7 +381,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAcces
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP headers that CloudFront includes as values for the Access-Control-Expose-Headers HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAccessControlExposeHeaders
@@ -347,7 +392,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfigAcces
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfig
@@ -380,7 +427,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCorsConfig
     [JsonPropertyName("originOverride")]
     public bool? OriginOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersConfigItems
@@ -397,7 +446,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersCo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of custom headers. See Custom Header for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersConfig
@@ -406,7 +457,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersCo
     [JsonPropertyName("items")]
     public IList<V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersConfigItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersConfigItems
@@ -415,7 +468,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersCo
     [JsonPropertyName("header")]
     public string? Header { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of HTTP headers to remove from the HTTP response. Object that contains an attribute items that contains a list of headers. See Remove Header for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersConfig
@@ -424,7 +479,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersCo
     [JsonPropertyName("items")]
     public IList<V1beta1ResponseHeadersPolicySpecInitProviderRemoveHeadersConfigItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigContentSecurityPolicy
@@ -437,7 +494,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the X-Content-Type-Options HTTP response header with its value set to nosniff. See Content Type Options for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigContentTypeOptions
@@ -446,7 +505,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the X-Frame-Options HTTP response header and the header’s value. See Frame Options for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigFrameOptions
@@ -459,7 +520,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the Referrer-Policy HTTP response header and the header’s value. See Referrer Policy for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigReferrerPolicy
@@ -472,7 +535,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     [JsonPropertyName("referrerPolicy")]
     public string? ReferrerPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the Strict-Transport-Security HTTP response header and the header’s value. See Strict Transport Security for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigStrictTransportSecurity
@@ -493,7 +558,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     [JsonPropertyName("preload")]
     public bool? Preload { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determine whether CloudFront includes the X-XSS-Protection HTTP response header and the header’s value. See XSS Protection for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigXssProtection
@@ -514,7 +581,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     [JsonPropertyName("reportUri")]
     public string? ReportUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfig
@@ -543,7 +612,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeaders
     [JsonPropertyName("xssProtection")]
     public V1beta1ResponseHeadersPolicySpecInitProviderSecurityHeadersConfigXssProtection? XssProtection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for enabling the Server-Timing header in HTTP responses sent from CloudFront. See Server Timing Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProviderServerTimingHeadersConfig
@@ -556,7 +627,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProviderServerTimingHea
     [JsonPropertyName("samplingRate")]
     public double? SamplingRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecInitProvider
@@ -589,7 +662,9 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProvider
     [JsonPropertyName("serverTimingHeadersConfig")]
     public V1beta1ResponseHeadersPolicySpecInitProviderServerTimingHeadersConfig? ServerTimingHeadersConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecProviderConfigRef
@@ -602,7 +677,9 @@ public partial class V1beta1ResponseHeadersPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecWriteConnectionSecretToRef
@@ -611,7 +688,9 @@ public partial class V1beta1ResponseHeadersPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseHeadersPolicySpec defines the desired state of ResponseHeadersPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpec
@@ -636,7 +715,9 @@ public partial class V1beta1ResponseHeadersPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResponseHeadersPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP header names that CloudFront includes as values for the Access-Control-Allow-Headers HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAccessControlAllowHeaders
@@ -645,7 +726,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAcces
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP methods that CloudFront includes as values for the Access-Control-Allow-Methods HTTP response header. Valid values: GET | POST | OPTIONS | PUT | DELETE | HEAD | ALL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAccessControlAllowMethods
@@ -654,7 +737,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAcces
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of origins that CloudFront can use as the value for the Access-Control-Allow-Origin HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAccessControlAllowOrigins
@@ -663,7 +748,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAcces
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of HTTP headers that CloudFront includes as values for the Access-Control-Expose-Headers HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAccessControlExposeHeaders
@@ -672,7 +759,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfigAcces
     [JsonPropertyName("items")]
     public IList<string>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfig
@@ -705,7 +794,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCorsConfig
     [JsonPropertyName("originOverride")]
     public bool? OriginOverride { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersConfigItems
@@ -722,7 +813,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersCo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that contains an attribute items that contains a list of custom headers. See Custom Header for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersConfig
@@ -731,7 +824,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersCo
     [JsonPropertyName("items")]
     public IList<V1beta1ResponseHeadersPolicyStatusAtProviderCustomHeadersConfigItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersConfigItems
@@ -740,7 +835,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersCo
     [JsonPropertyName("header")]
     public string? Header { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of HTTP headers to remove from the HTTP response. Object that contains an attribute items that contains a list of headers. See Remove Header for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersConfig
@@ -749,7 +846,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersCo
     [JsonPropertyName("items")]
     public IList<V1beta1ResponseHeadersPolicyStatusAtProviderRemoveHeadersConfigItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header. See Content Security Policy for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigContentSecurityPolicy
@@ -762,7 +861,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the X-Content-Type-Options HTTP response header with its value set to nosniff. See Content Type Options for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigContentTypeOptions
@@ -771,7 +872,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the X-Frame-Options HTTP response header and the header’s value. See Frame Options for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigFrameOptions
@@ -784,7 +887,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     [JsonPropertyName("override")]
     public bool? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the Referrer-Policy HTTP response header and the header’s value. See Referrer Policy for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigReferrerPolicy
@@ -797,7 +902,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     [JsonPropertyName("referrerPolicy")]
     public string? ReferrerPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determines whether CloudFront includes the Strict-Transport-Security HTTP response header and the header’s value. See Strict Transport Security for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigStrictTransportSecurity
@@ -818,7 +925,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     [JsonPropertyName("preload")]
     public bool? Preload { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Determine whether CloudFront includes the X-XSS-Protection HTTP response header and the header’s value. See XSS Protection for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigXssProtection
@@ -839,7 +948,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     [JsonPropertyName("reportUri")]
     public string? ReportUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfig
@@ -868,7 +979,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeaders
     [JsonPropertyName("xssProtection")]
     public V1beta1ResponseHeadersPolicyStatusAtProviderSecurityHeadersConfigXssProtection? XssProtection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A configuration for enabling the Server-Timing header in HTTP responses sent from CloudFront. See Server Timing Headers Config for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProviderServerTimingHeadersConfig
@@ -881,7 +994,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderServerTimingHea
     [JsonPropertyName("samplingRate")]
     public double? SamplingRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProvider
@@ -926,7 +1041,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProvider
     [JsonPropertyName("serverTimingHeadersConfig")]
     public V1beta1ResponseHeadersPolicyStatusAtProviderServerTimingHeadersConfig? ServerTimingHeadersConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusConditions
@@ -955,7 +1072,9 @@ public partial class V1beta1ResponseHeadersPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseHeadersPolicyStatus defines the observed state of ResponseHeadersPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatus
@@ -972,7 +1091,9 @@ public partial class V1beta1ResponseHeadersPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseHeadersPolicy is the Schema for the ResponseHeadersPolicys API. Provides a CloudFront response headers policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1002,3 +1123,4 @@ public partial class V1beta1ResponseHeadersPolicy : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ResponseHeadersPolicyStatus? Status { get; set; }
 }
+#nullable disable

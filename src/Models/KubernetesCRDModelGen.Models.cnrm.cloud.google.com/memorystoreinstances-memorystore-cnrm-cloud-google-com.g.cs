@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.memorystore.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>MemorystoreInstance is the Schema for the MemorystoreInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MemorystoreInstanceList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1MemorystoreInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. AOF configuration. This field will be ignored if mode is not AOF.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpecPersistenceConfigAofConfig
@@ -42,7 +45,9 @@ public partial class V1alpha1MemorystoreInstanceSpecPersistenceConfigAofConfig
     [JsonPropertyName("appendFsync")]
     public string? AppendFsync { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. RDB configuration. This field will be ignored if mode is not RDB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpecPersistenceConfigRdbConfig
@@ -55,7 +60,9 @@ public partial class V1alpha1MemorystoreInstanceSpecPersistenceConfigRdbConfig
     [JsonPropertyName("rdbSnapshotStartTime")]
     public string? RdbSnapshotStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Persistence configuration of the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpecPersistenceConfig
@@ -72,7 +79,9 @@ public partial class V1alpha1MemorystoreInstanceSpecPersistenceConfig
     [JsonPropertyName("rdbConfig")]
     public V1alpha1MemorystoreInstanceSpecPersistenceConfigRdbConfig? RdbConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpecProjectRef
@@ -93,7 +102,9 @@ public partial class V1alpha1MemorystoreInstanceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The network where the PSC endpoints are created, in the form of projects/{project_id}/global/networks/{network_id}.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpecPscAutoConnectionsNetworkRef
@@ -110,7 +121,9 @@ public partial class V1alpha1MemorystoreInstanceSpecPscAutoConnectionsNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The consumer project_id where PSC connections are established. This should be the same project_id that the cluster is being created in.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpecPscAutoConnectionsProjectRef
@@ -131,7 +144,9 @@ public partial class V1alpha1MemorystoreInstanceSpecPscAutoConnectionsProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>kcc specific struct to separate input and output fields in google.cloud.memorystore.v1beta.PscAutoConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpecPscAutoConnections
@@ -144,7 +159,9 @@ public partial class V1alpha1MemorystoreInstanceSpecPscAutoConnections
     [JsonPropertyName("projectRef")]
     public V1alpha1MemorystoreInstanceSpecPscAutoConnectionsProjectRef ProjectRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Immutable. Zone distribution configuration of the instance for node allocatiteon.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpecZoneDistributionConfig
@@ -157,7 +174,9 @@ public partial class V1alpha1MemorystoreInstanceSpecZoneDistributionConfig
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MemorystoreInstanceSpec defines the desired state of MemorystoreInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceSpec
@@ -218,7 +237,9 @@ public partial class V1alpha1MemorystoreInstanceSpec
     [JsonPropertyName("zoneDistributionConfig")]
     public V1alpha1MemorystoreInstanceSpecZoneDistributionConfig? ZoneDistributionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatusConditions
@@ -243,7 +264,9 @@ public partial class V1alpha1MemorystoreInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatusObservedStateDiscoveryEndpoints
@@ -260,7 +283,9 @@ public partial class V1alpha1MemorystoreInstanceStatusObservedStateDiscoveryEndp
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Configuration of individual nodes of the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatusObservedStateNodeConfig
@@ -269,7 +294,9 @@ public partial class V1alpha1MemorystoreInstanceStatusObservedStateNodeConfig
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatusObservedStatePscAutoConnections
@@ -310,7 +337,9 @@ public partial class V1alpha1MemorystoreInstanceStatusObservedStatePscAutoConnec
     [JsonPropertyName("serviceAttachment")]
     public string? ServiceAttachment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Describes ongoing update when instance state is UPDATING.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatusObservedStateStateInfoUpdateInfo
@@ -323,7 +352,9 @@ public partial class V1alpha1MemorystoreInstanceStatusObservedStateStateInfoUpda
     [JsonPropertyName("targetShardCount")]
     public int? TargetShardCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Additional information about the state of the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatusObservedStateStateInfo
@@ -332,7 +363,9 @@ public partial class V1alpha1MemorystoreInstanceStatusObservedStateStateInfo
     [JsonPropertyName("updateInfo")]
     public V1alpha1MemorystoreInstanceStatusObservedStateStateInfoUpdateInfo? UpdateInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Immutable. Zone distribution configuration of the instance for node allocation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatusObservedStateZoneDistributionConfig
@@ -345,7 +378,9 @@ public partial class V1alpha1MemorystoreInstanceStatusObservedStateZoneDistribut
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatusObservedState
@@ -406,7 +441,9 @@ public partial class V1alpha1MemorystoreInstanceStatusObservedState
     [JsonPropertyName("zoneDistributionConfig")]
     public V1alpha1MemorystoreInstanceStatusObservedStateZoneDistributionConfig? ZoneDistributionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MemorystoreInstanceStatus defines the config connector machine state of MemorystoreInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MemorystoreInstanceStatus
@@ -427,7 +464,9 @@ public partial class V1alpha1MemorystoreInstanceStatus
     [JsonPropertyName("observedState")]
     public V1alpha1MemorystoreInstanceStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MemorystoreInstance is the Schema for the MemorystoreInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -457,3 +496,4 @@ public partial class V1alpha1MemorystoreInstance : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1MemorystoreInstanceStatus? Status { get; set; }
 }
+#nullable disable

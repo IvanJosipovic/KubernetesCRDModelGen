@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>ExpressRouteCircuitAuthorization is the Schema for the ExpressRouteCircuitAuthorizations API. Manages an ExpressRoute Circuit Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1ExpressRouteCircuitAuthorization> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpressRouteCircuitNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpre
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ExpressRouteCircuit in network to populate expressRouteCircuitName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpressRouteCircuitNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpre
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpressRouteCircuitNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpressRouteCircuitNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpre
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ExpressRouteCircuit in network to populate expressRouteCircuitName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpressRouteCircuitNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpre
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteCircuitAuthorizationSpecForProviderExpressRouteCircuitNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResourceGroupNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResourceGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResou
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResourceGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResourceGroupNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResou
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProvider
@@ -190,13 +209,17 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1ExpressRouteCircuitAuthorizationSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecInitProvider
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecProviderConfigRef
@@ -209,7 +232,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecProviderConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpecWriteConnectionSecretToRef
@@ -218,7 +243,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpecWriteConnectionS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteCircuitAuthorizationSpec defines the desired state of ExpressRouteCircuitAuthorization</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationSpec
@@ -243,7 +270,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ExpressRouteCircuitAuthorizationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationStatusAtProvider
@@ -264,7 +293,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationStatusConditions
@@ -293,7 +324,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteCircuitAuthorizationStatus defines the observed state of ExpressRouteCircuitAuthorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitAuthorizationStatus
@@ -310,7 +343,9 @@ public partial class V1beta1ExpressRouteCircuitAuthorizationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteCircuitAuthorization is the Schema for the ExpressRouteCircuitAuthorizations API. Manages an ExpressRoute Circuit Authorization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -340,3 +375,4 @@ public partial class V1beta1ExpressRouteCircuitAuthorization : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1ExpressRouteCircuitAuthorizationStatus? Status { get; set; }
 }
+#nullable disable

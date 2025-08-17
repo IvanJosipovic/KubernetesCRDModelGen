@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudbuild.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Trigger is the Schema for the Triggers API. Configuration for an automated build in response to source repository changes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TriggerList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Trigger> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderApprovalConfig
@@ -42,7 +45,9 @@ public partial class V1beta1TriggerSpecForProviderApprovalConfig
     [JsonPropertyName("approvalRequired")]
     public bool? ApprovalRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter to match changes in pull requests. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfigPullRequest
@@ -59,7 +64,9 @@ public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfigPu
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter to match changes in refs like branches, tags. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfigPush
@@ -76,7 +83,9 @@ public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfigPu
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfig
@@ -101,7 +110,9 @@ public partial class V1beta1TriggerSpecForProviderBitbucketServerTriggerConfig
     [JsonPropertyName("repoSlug")]
     public string? RepoSlug { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildArtifactsMavenArtifacts
@@ -126,7 +137,9 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifactsMavenArtifacts
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildArtifactsNpmPackages
@@ -139,7 +152,9 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifactsNpmPackages
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildArtifactsObjects
@@ -152,7 +167,9 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifactsObjects
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildArtifactsPythonPackages
@@ -165,7 +182,9 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifactsPythonPackages
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Artifacts produced by the build that should be uploaded upon successful completion of all build steps. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildArtifacts
@@ -190,7 +209,9 @@ public partial class V1beta1TriggerSpecForProviderBuildArtifacts
     [JsonPropertyName("pythonPackages")]
     public IList<V1beta1TriggerSpecForProviderBuildArtifactsPythonPackages>? PythonPackages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildAvailableSecretsSecretManager
@@ -203,7 +224,9 @@ public partial class V1beta1TriggerSpecForProviderBuildAvailableSecretsSecretMan
     [JsonPropertyName("versionName")]
     public string? VersionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secrets and secret environment variables. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildAvailableSecrets
@@ -212,7 +235,9 @@ public partial class V1beta1TriggerSpecForProviderBuildAvailableSecrets
     [JsonPropertyName("secretManager")]
     public IList<V1beta1TriggerSpecForProviderBuildAvailableSecretsSecretManager>? SecretManager { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildOptionsVolumes
@@ -225,7 +250,9 @@ public partial class V1beta1TriggerSpecForProviderBuildOptionsVolumes
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Special options for this build. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildOptions
@@ -278,7 +305,9 @@ public partial class V1beta1TriggerSpecForProviderBuildOptions
     [JsonPropertyName("workerPool")]
     public string? WorkerPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildSecret
@@ -291,7 +320,9 @@ public partial class V1beta1TriggerSpecForProviderBuildSecret
     [JsonPropertyName("secretEnv")]
     public IDictionary<string, string>? SecretEnv { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location of the source in a Google Cloud Source Repository. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildSourceRepoSource
@@ -328,7 +359,9 @@ public partial class V1beta1TriggerSpecForProviderBuildSourceRepoSource
     [JsonPropertyName("tagName")]
     public string? TagName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location of the source in an archive file in Google Cloud Storage. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildSourceStorageSource
@@ -345,7 +378,9 @@ public partial class V1beta1TriggerSpecForProviderBuildSourceStorageSource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The location of the source files to build. One of storageSource or repoSource must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildSource
@@ -358,7 +393,9 @@ public partial class V1beta1TriggerSpecForProviderBuildSource
     [JsonPropertyName("storageSource")]
     public V1beta1TriggerSpecForProviderBuildSourceStorageSource? StorageSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildStepVolumes
@@ -371,7 +408,9 @@ public partial class V1beta1TriggerSpecForProviderBuildStepVolumes
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuildStep
@@ -432,7 +471,9 @@ public partial class V1beta1TriggerSpecForProviderBuildStep
     [JsonPropertyName("waitFor")]
     public IList<string>? WaitFor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contents of the build template. Either a filename or build template must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderBuild
@@ -485,7 +526,9 @@ public partial class V1beta1TriggerSpecForProviderBuild
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The file source describing the local or remote Build template. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderGitFileSource
@@ -518,7 +561,9 @@ public partial class V1beta1TriggerSpecForProviderGitFileSource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>filter to match changes in pull requests. Specify only one of pull_request or push. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderGithubPullRequest
@@ -535,7 +580,9 @@ public partial class V1beta1TriggerSpecForProviderGithubPullRequest
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>filter to match changes in refs, like branches or tags. Specify only one of pull_request or push. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderGithubPush
@@ -552,7 +599,9 @@ public partial class V1beta1TriggerSpecForProviderGithubPush
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of trigger_template, github, pubsub_config or webhook_config must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderGithub
@@ -577,7 +626,9 @@ public partial class V1beta1TriggerSpecForProviderGithub
     [JsonPropertyName("push")]
     public V1beta1TriggerSpecForProviderGithubPush? Push { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicRefPolicy
@@ -590,7 +641,9 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicRef
@@ -607,7 +660,9 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecForProviderPubsubConfigTopicRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicSelectorPolicy
@@ -620,7 +675,9 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicSelector
@@ -641,7 +698,9 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfigTopicSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecForProviderPubsubConfigTopicSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderPubsubConfig
@@ -662,7 +721,9 @@ public partial class V1beta1TriggerSpecForProviderPubsubConfig
     [JsonPropertyName("topicSelector")]
     public V1beta1TriggerSpecForProviderPubsubConfigTopicSelector? TopicSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains filter properties for matching Pull Requests. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderRepositoryEventConfigPullRequest
@@ -679,7 +740,9 @@ public partial class V1beta1TriggerSpecForProviderRepositoryEventConfigPullReque
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains filter properties for matching git pushes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderRepositoryEventConfigPush
@@ -696,7 +759,9 @@ public partial class V1beta1TriggerSpecForProviderRepositoryEventConfigPush
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a trigger that creates a build whenever an event from Repo API is received. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderRepositoryEventConfig
@@ -713,7 +778,9 @@ public partial class V1beta1TriggerSpecForProviderRepositoryEventConfig
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderServiceAccountRefPolicy
@@ -726,7 +793,9 @@ public partial class V1beta1TriggerSpecForProviderServiceAccountRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderServiceAccountRef
@@ -743,7 +812,9 @@ public partial class V1beta1TriggerSpecForProviderServiceAccountRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecForProviderServiceAccountRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderServiceAccountSelectorPolicy
@@ -756,7 +827,9 @@ public partial class V1beta1TriggerSpecForProviderServiceAccountSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderServiceAccountSelector
@@ -777,7 +850,9 @@ public partial class V1beta1TriggerSpecForProviderServiceAccountSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecForProviderServiceAccountSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderSourceToBuild
@@ -806,7 +881,9 @@ public partial class V1beta1TriggerSpecForProviderSourceToBuild
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. One of trigger_template, github, pubsub_config, webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderTriggerTemplate
@@ -839,7 +916,9 @@ public partial class V1beta1TriggerSpecForProviderTriggerTemplate
     [JsonPropertyName("tagName")]
     public string? TagName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretRefPolicy
@@ -852,7 +931,9 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecretVersion in secretmanager to populate secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretRef
@@ -869,7 +950,9 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecForProviderWebhookConfigSecretRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretSelectorPolicy
@@ -882,7 +965,9 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecretVersion in secretmanager to populate secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretSelector
@@ -903,7 +988,9 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfigSecretSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecForProviderWebhookConfigSecretSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderWebhookConfig
@@ -920,7 +1007,9 @@ public partial class V1beta1TriggerSpecForProviderWebhookConfig
     [JsonPropertyName("secretSelector")]
     public V1beta1TriggerSpecForProviderWebhookConfigSecretSelector? SecretSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProvider
@@ -1025,7 +1114,9 @@ public partial class V1beta1TriggerSpecForProvider
     [JsonPropertyName("webhookConfig")]
     public V1beta1TriggerSpecForProviderWebhookConfig? WebhookConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderApprovalConfig
@@ -1034,7 +1125,9 @@ public partial class V1beta1TriggerSpecInitProviderApprovalConfig
     [JsonPropertyName("approvalRequired")]
     public bool? ApprovalRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter to match changes in pull requests. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfigPullRequest
@@ -1051,7 +1144,9 @@ public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfigP
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter to match changes in refs like branches, tags. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfigPush
@@ -1068,7 +1163,9 @@ public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfigP
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfig
@@ -1093,7 +1190,9 @@ public partial class V1beta1TriggerSpecInitProviderBitbucketServerTriggerConfig
     [JsonPropertyName("repoSlug")]
     public string? RepoSlug { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildArtifactsMavenArtifacts
@@ -1118,7 +1217,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifactsMavenArtifacts
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildArtifactsNpmPackages
@@ -1131,7 +1232,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifactsNpmPackages
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildArtifactsObjects
@@ -1144,7 +1247,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifactsObjects
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildArtifactsPythonPackages
@@ -1157,7 +1262,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifactsPythonPackages
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Artifacts produced by the build that should be uploaded upon successful completion of all build steps. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildArtifacts
@@ -1182,7 +1289,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildArtifacts
     [JsonPropertyName("pythonPackages")]
     public IList<V1beta1TriggerSpecInitProviderBuildArtifactsPythonPackages>? PythonPackages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildAvailableSecretsSecretManager
@@ -1195,7 +1304,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildAvailableSecretsSecretMa
     [JsonPropertyName("versionName")]
     public string? VersionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secrets and secret environment variables. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildAvailableSecrets
@@ -1204,7 +1315,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildAvailableSecrets
     [JsonPropertyName("secretManager")]
     public IList<V1beta1TriggerSpecInitProviderBuildAvailableSecretsSecretManager>? SecretManager { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildOptionsVolumes
@@ -1217,7 +1330,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildOptionsVolumes
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Special options for this build. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildOptions
@@ -1270,7 +1385,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildOptions
     [JsonPropertyName("workerPool")]
     public string? WorkerPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildSecret
@@ -1283,7 +1400,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildSecret
     [JsonPropertyName("secretEnv")]
     public IDictionary<string, string>? SecretEnv { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location of the source in a Google Cloud Source Repository. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildSourceRepoSource
@@ -1320,7 +1439,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildSourceRepoSource
     [JsonPropertyName("tagName")]
     public string? TagName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location of the source in an archive file in Google Cloud Storage. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildSourceStorageSource
@@ -1337,7 +1458,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildSourceStorageSource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The location of the source files to build. One of storageSource or repoSource must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildSource
@@ -1350,7 +1473,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildSource
     [JsonPropertyName("storageSource")]
     public V1beta1TriggerSpecInitProviderBuildSourceStorageSource? StorageSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildStepVolumes
@@ -1363,7 +1488,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildStepVolumes
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuildStep
@@ -1424,7 +1551,9 @@ public partial class V1beta1TriggerSpecInitProviderBuildStep
     [JsonPropertyName("waitFor")]
     public IList<string>? WaitFor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contents of the build template. Either a filename or build template must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderBuild
@@ -1477,7 +1606,9 @@ public partial class V1beta1TriggerSpecInitProviderBuild
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The file source describing the local or remote Build template. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderGitFileSource
@@ -1510,7 +1641,9 @@ public partial class V1beta1TriggerSpecInitProviderGitFileSource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>filter to match changes in pull requests. Specify only one of pull_request or push. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderGithubPullRequest
@@ -1527,7 +1660,9 @@ public partial class V1beta1TriggerSpecInitProviderGithubPullRequest
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>filter to match changes in refs, like branches or tags. Specify only one of pull_request or push. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderGithubPush
@@ -1544,7 +1679,9 @@ public partial class V1beta1TriggerSpecInitProviderGithubPush
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of trigger_template, github, pubsub_config or webhook_config must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderGithub
@@ -1569,7 +1706,9 @@ public partial class V1beta1TriggerSpecInitProviderGithub
     [JsonPropertyName("push")]
     public V1beta1TriggerSpecInitProviderGithubPush? Push { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicRefPolicy
@@ -1582,7 +1721,9 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicRef
@@ -1599,7 +1740,9 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecInitProviderPubsubConfigTopicRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicSelectorPolicy
@@ -1612,7 +1755,9 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicSelector
@@ -1633,7 +1778,9 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfigTopicSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecInitProviderPubsubConfigTopicSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderPubsubConfig
@@ -1654,7 +1801,9 @@ public partial class V1beta1TriggerSpecInitProviderPubsubConfig
     [JsonPropertyName("topicSelector")]
     public V1beta1TriggerSpecInitProviderPubsubConfigTopicSelector? TopicSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains filter properties for matching Pull Requests. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfigPullRequest
@@ -1671,7 +1820,9 @@ public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfigPullRequ
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains filter properties for matching git pushes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfigPush
@@ -1688,7 +1839,9 @@ public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfigPush
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a trigger that creates a build whenever an event from Repo API is received. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfig
@@ -1705,7 +1858,9 @@ public partial class V1beta1TriggerSpecInitProviderRepositoryEventConfig
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderServiceAccountRefPolicy
@@ -1718,7 +1873,9 @@ public partial class V1beta1TriggerSpecInitProviderServiceAccountRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderServiceAccountRef
@@ -1735,7 +1892,9 @@ public partial class V1beta1TriggerSpecInitProviderServiceAccountRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecInitProviderServiceAccountRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderServiceAccountSelectorPolicy
@@ -1748,7 +1907,9 @@ public partial class V1beta1TriggerSpecInitProviderServiceAccountSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderServiceAccountSelector
@@ -1769,7 +1930,9 @@ public partial class V1beta1TriggerSpecInitProviderServiceAccountSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecInitProviderServiceAccountSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderSourceToBuild
@@ -1798,7 +1961,9 @@ public partial class V1beta1TriggerSpecInitProviderSourceToBuild
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. One of trigger_template, github, pubsub_config, webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderTriggerTemplate
@@ -1831,7 +1996,9 @@ public partial class V1beta1TriggerSpecInitProviderTriggerTemplate
     [JsonPropertyName("tagName")]
     public string? TagName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretRefPolicy
@@ -1844,7 +2011,9 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecretVersion in secretmanager to populate secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretRef
@@ -1861,7 +2030,9 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretRef
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecInitProviderWebhookConfigSecretRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretSelectorPolicy
@@ -1874,7 +2045,9 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecretVersion in secretmanager to populate secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretSelector
@@ -1895,7 +2068,9 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfigSecretSelector
     [JsonPropertyName("policy")]
     public V1beta1TriggerSpecInitProviderWebhookConfigSecretSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProviderWebhookConfig
@@ -1912,7 +2087,9 @@ public partial class V1beta1TriggerSpecInitProviderWebhookConfig
     [JsonPropertyName("secretSelector")]
     public V1beta1TriggerSpecInitProviderWebhookConfigSecretSelector? SecretSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProvider
@@ -2017,7 +2194,9 @@ public partial class V1beta1TriggerSpecInitProvider
     [JsonPropertyName("webhookConfig")]
     public V1beta1TriggerSpecInitProviderWebhookConfig? WebhookConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecProviderConfigRef
@@ -2030,7 +2209,9 @@ public partial class V1beta1TriggerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecWriteConnectionSecretToRef
@@ -2039,7 +2220,9 @@ public partial class V1beta1TriggerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerSpec defines the desired state of Trigger</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpec
@@ -2064,7 +2247,9 @@ public partial class V1beta1TriggerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TriggerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderApprovalConfig
@@ -2073,7 +2258,9 @@ public partial class V1beta1TriggerStatusAtProviderApprovalConfig
     [JsonPropertyName("approvalRequired")]
     public bool? ApprovalRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter to match changes in pull requests. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfigPullRequest
@@ -2090,7 +2277,9 @@ public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfigP
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Filter to match changes in refs like branches, tags. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfigPush
@@ -2107,7 +2296,9 @@ public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfigP
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfig
@@ -2132,7 +2323,9 @@ public partial class V1beta1TriggerStatusAtProviderBitbucketServerTriggerConfig
     [JsonPropertyName("repoSlug")]
     public string? RepoSlug { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsMavenArtifacts
@@ -2157,7 +2350,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsMavenArtifacts
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsNpmPackages
@@ -2170,7 +2365,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsNpmPackages
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsObjectsTiming
@@ -2183,7 +2380,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsObjectsTiming
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsObjects
@@ -2200,7 +2399,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsObjects
     [JsonPropertyName("timing")]
     public IList<V1beta1TriggerStatusAtProviderBuildArtifactsObjectsTiming>? Timing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildArtifactsPythonPackages
@@ -2213,7 +2414,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifactsPythonPackages
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Artifacts produced by the build that should be uploaded upon successful completion of all build steps. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildArtifacts
@@ -2238,7 +2441,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildArtifacts
     [JsonPropertyName("pythonPackages")]
     public IList<V1beta1TriggerStatusAtProviderBuildArtifactsPythonPackages>? PythonPackages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildAvailableSecretsSecretManager
@@ -2251,7 +2456,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildAvailableSecretsSecretMa
     [JsonPropertyName("versionName")]
     public string? VersionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secrets and secret environment variables. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildAvailableSecrets
@@ -2260,7 +2467,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildAvailableSecrets
     [JsonPropertyName("secretManager")]
     public IList<V1beta1TriggerStatusAtProviderBuildAvailableSecretsSecretManager>? SecretManager { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildOptionsVolumes
@@ -2273,7 +2482,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildOptionsVolumes
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Special options for this build. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildOptions
@@ -2326,7 +2537,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildOptions
     [JsonPropertyName("workerPool")]
     public string? WorkerPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildSecret
@@ -2339,7 +2552,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildSecret
     [JsonPropertyName("secretEnv")]
     public IDictionary<string, string>? SecretEnv { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location of the source in a Google Cloud Source Repository. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildSourceRepoSource
@@ -2376,7 +2591,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildSourceRepoSource
     [JsonPropertyName("tagName")]
     public string? TagName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Location of the source in an archive file in Google Cloud Storage. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildSourceStorageSource
@@ -2393,7 +2610,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildSourceStorageSource
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The location of the source files to build. One of storageSource or repoSource must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildSource
@@ -2406,7 +2625,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildSource
     [JsonPropertyName("storageSource")]
     public V1beta1TriggerStatusAtProviderBuildSourceStorageSource? StorageSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildStepVolumes
@@ -2419,7 +2640,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildStepVolumes
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuildStep
@@ -2480,7 +2703,9 @@ public partial class V1beta1TriggerStatusAtProviderBuildStep
     [JsonPropertyName("waitFor")]
     public IList<string>? WaitFor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contents of the build template. Either a filename or build template must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderBuild
@@ -2533,7 +2758,9 @@ public partial class V1beta1TriggerStatusAtProviderBuild
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The file source describing the local or remote Build template. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderGitFileSource
@@ -2566,7 +2793,9 @@ public partial class V1beta1TriggerStatusAtProviderGitFileSource
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>filter to match changes in pull requests. Specify only one of pull_request or push. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderGithubPullRequest
@@ -2583,7 +2812,9 @@ public partial class V1beta1TriggerStatusAtProviderGithubPullRequest
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>filter to match changes in refs, like branches or tags. Specify only one of pull_request or push. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderGithubPush
@@ -2600,7 +2831,9 @@ public partial class V1beta1TriggerStatusAtProviderGithubPush
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the configuration of a trigger that creates a build whenever a GitHub event is received. One of trigger_template, github, pubsub_config or webhook_config must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderGithub
@@ -2625,7 +2858,9 @@ public partial class V1beta1TriggerStatusAtProviderGithub
     [JsonPropertyName("push")]
     public V1beta1TriggerStatusAtProviderGithubPush? Push { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderPubsubConfig
@@ -2646,7 +2881,9 @@ public partial class V1beta1TriggerStatusAtProviderPubsubConfig
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains filter properties for matching Pull Requests. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfigPullRequest
@@ -2663,7 +2900,9 @@ public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfigPullRequ
     [JsonPropertyName("invertRegex")]
     public bool? InvertRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains filter properties for matching git pushes. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfigPush
@@ -2680,7 +2919,9 @@ public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfigPush
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of a trigger that creates a build whenever an event from Repo API is received. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfig
@@ -2697,7 +2938,9 @@ public partial class V1beta1TriggerStatusAtProviderRepositoryEventConfig
     [JsonPropertyName("repository")]
     public string? Repository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderSourceToBuild
@@ -2726,7 +2969,9 @@ public partial class V1beta1TriggerStatusAtProviderSourceToBuild
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template describing the types of source changes to trigger a build. Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or tag change that matches that regular expression will trigger a build. One of trigger_template, github, pubsub_config, webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderTriggerTemplate
@@ -2759,7 +3004,9 @@ public partial class V1beta1TriggerStatusAtProviderTriggerTemplate
     [JsonPropertyName("tagName")]
     public string? TagName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProviderWebhookConfig
@@ -2772,7 +3019,9 @@ public partial class V1beta1TriggerStatusAtProviderWebhookConfig
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProvider
@@ -2881,7 +3130,9 @@ public partial class V1beta1TriggerStatusAtProvider
     [JsonPropertyName("webhookConfig")]
     public V1beta1TriggerStatusAtProviderWebhookConfig? WebhookConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusConditions
@@ -2910,7 +3161,9 @@ public partial class V1beta1TriggerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TriggerStatus defines the observed state of Trigger.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatus
@@ -2927,7 +3180,9 @@ public partial class V1beta1TriggerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Trigger is the Schema for the Triggers API. Configuration for an automated build in response to source repository changes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2957,3 +3212,4 @@ public partial class V1beta1Trigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1TriggerStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.m.upbound.io;
+#nullable enable
 /// <summary>MongoRoleDefinition is the Schema for the MongoRoleDefinitions API. Manages a Cosmos DB Mongo Role Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MongoRoleDefinitionList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1MongoRoleDefinition> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabaseIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabas
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MongoDatabase in cosmosdb to populate cosmosMongoDatabaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabaseIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabas
     [JsonPropertyName("policy")]
     public V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabaseIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabaseIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabas
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MongoDatabase in cosmosdb to populate cosmosMongoDatabaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabaseIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabas
     [JsonPropertyName("policy")]
     public V1beta1MongoRoleDefinitionSpecForProviderCosmosMongoDatabaseIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A resource block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecForProviderPrivilegeResource
@@ -110,7 +121,9 @@ public partial class V1beta1MongoRoleDefinitionSpecForProviderPrivilegeResource
     [JsonPropertyName("dbName")]
     public string? DbName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecForProviderPrivilege
@@ -123,7 +136,9 @@ public partial class V1beta1MongoRoleDefinitionSpecForProviderPrivilege
     [JsonPropertyName("resource")]
     public V1beta1MongoRoleDefinitionSpecForProviderPrivilegeResource? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecForProvider
@@ -148,7 +163,9 @@ public partial class V1beta1MongoRoleDefinitionSpecForProvider
     [JsonPropertyName("privilege")]
     public IList<V1beta1MongoRoleDefinitionSpecForProviderPrivilege>? Privilege { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDatabaseIdRefPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDataba
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MongoDatabase in cosmosdb to populate cosmosMongoDatabaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDatabaseIdRef
@@ -178,7 +197,9 @@ public partial class V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDataba
     [JsonPropertyName("policy")]
     public V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDatabaseIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDatabaseIdSelectorPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDataba
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MongoDatabase in cosmosdb to populate cosmosMongoDatabaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDatabaseIdSelector
@@ -212,7 +235,9 @@ public partial class V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDataba
     [JsonPropertyName("policy")]
     public V1beta1MongoRoleDefinitionSpecInitProviderCosmosMongoDatabaseIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A resource block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecInitProviderPrivilegeResource
@@ -225,7 +250,9 @@ public partial class V1beta1MongoRoleDefinitionSpecInitProviderPrivilegeResource
     [JsonPropertyName("dbName")]
     public string? DbName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecInitProviderPrivilege
@@ -238,7 +265,9 @@ public partial class V1beta1MongoRoleDefinitionSpecInitProviderPrivilege
     [JsonPropertyName("resource")]
     public V1beta1MongoRoleDefinitionSpecInitProviderPrivilegeResource? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecInitProvider
@@ -263,7 +292,9 @@ public partial class V1beta1MongoRoleDefinitionSpecInitProvider
     [JsonPropertyName("privilege")]
     public IList<V1beta1MongoRoleDefinitionSpecInitProviderPrivilege>? Privilege { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecProviderConfigRef
@@ -276,7 +307,9 @@ public partial class V1beta1MongoRoleDefinitionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpecWriteConnectionSecretToRef
@@ -285,7 +318,9 @@ public partial class V1beta1MongoRoleDefinitionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MongoRoleDefinitionSpec defines the desired state of MongoRoleDefinition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionSpec
@@ -310,7 +345,9 @@ public partial class V1beta1MongoRoleDefinitionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MongoRoleDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A resource block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionStatusAtProviderPrivilegeResource
@@ -323,7 +360,9 @@ public partial class V1beta1MongoRoleDefinitionStatusAtProviderPrivilegeResource
     [JsonPropertyName("dbName")]
     public string? DbName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionStatusAtProviderPrivilege
@@ -336,7 +375,9 @@ public partial class V1beta1MongoRoleDefinitionStatusAtProviderPrivilege
     [JsonPropertyName("resource")]
     public V1beta1MongoRoleDefinitionStatusAtProviderPrivilegeResource? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionStatusAtProvider
@@ -357,7 +398,9 @@ public partial class V1beta1MongoRoleDefinitionStatusAtProvider
     [JsonPropertyName("privilege")]
     public IList<V1beta1MongoRoleDefinitionStatusAtProviderPrivilege>? Privilege { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionStatusConditions
@@ -386,7 +429,9 @@ public partial class V1beta1MongoRoleDefinitionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MongoRoleDefinitionStatus defines the observed state of MongoRoleDefinition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MongoRoleDefinitionStatus
@@ -403,7 +448,9 @@ public partial class V1beta1MongoRoleDefinitionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MongoRoleDefinition is the Schema for the MongoRoleDefinitions API. Manages a Cosmos DB Mongo Role Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -433,3 +480,4 @@ public partial class V1beta1MongoRoleDefinition : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1MongoRoleDefinitionStatus? Status { get; set; }
 }
+#nullable disable

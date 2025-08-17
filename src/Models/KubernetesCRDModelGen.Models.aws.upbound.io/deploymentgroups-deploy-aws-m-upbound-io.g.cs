@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deploy.aws.m.upbound.io;
+#nullable enable
 /// <summary>DeploymentGroup is the Schema for the DeploymentGroups API. Provides a CodeDeploy deployment group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DeploymentGroupList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1DeploymentGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of alarms associated with the deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderAlarmConfiguration
@@ -50,7 +53,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderAlarmConfiguration
     [JsonPropertyName("ignorePollAlarmFailure")]
     public bool? IgnorePollAlarmFailure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderAppNameRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderAppNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a App in deploy to populate appName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderAppNameRef
@@ -80,7 +87,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderAppNameRef
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderAppNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderAppNameSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderAppNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a App in deploy to populate appName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderAppNameSelector
@@ -114,7 +125,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderAppNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderAppNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the automatic rollback configuration associated with the deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderAutoRollbackConfiguration
@@ -127,7 +140,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderAutoRollbackConfigurat
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentConfigDeploymentReadyOption
@@ -140,7 +155,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentCon
     [JsonPropertyName("waitTimeInMinutes")]
     public double? WaitTimeInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentConfigGreenFleetProvisioningOption
@@ -149,7 +166,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentCon
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess
@@ -162,7 +181,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentCon
     [JsonPropertyName("terminationWaitTimeInMinutes")]
     public double? TerminationWaitTimeInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the blue/green deployment options for a deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentConfig
@@ -179,7 +200,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentCon
     [JsonPropertyName("terminateBlueInstancesOnDeploymentSuccess")]
     public V1beta1DeploymentGroupSpecForProviderBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess? TerminateBlueInstancesOnDeploymentSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderDeploymentStyle
@@ -192,7 +215,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderDeploymentStyle
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEc2TagFilter
@@ -209,7 +234,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEc2TagFilter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEc2TagSetEc2TagFilter
@@ -226,7 +253,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEc2TagSetEc2TagFilter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEc2TagSet
@@ -235,7 +264,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEc2TagSet
     [JsonPropertyName("ec2TagFilter")]
     public IList<V1beta1DeploymentGroupSpecForProviderEc2TagSetEc2TagFilter>? Ec2TagFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameRefPolicy
@@ -248,7 +279,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in ecs to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameRef
@@ -265,7 +298,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameR
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameSelectorPolicy
@@ -278,7 +313,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in ecs to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameSelector
@@ -299,7 +336,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameS
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderEcsServiceClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameRefPolicy
@@ -312,7 +351,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Service in ecs to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameRef
@@ -329,7 +370,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameR
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameSelectorPolicy
@@ -342,7 +385,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Service in ecs to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameSelector
@@ -363,7 +408,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameS
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block(s) of the ECS services for a deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderEcsService
@@ -392,7 +439,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderEcsService
     [JsonPropertyName("serviceNameSelector")]
     public V1beta1DeploymentGroupSpecForProviderEcsServiceServiceNameSelector? ServiceNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInfoNameRefPolicy
@@ -405,7 +454,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInf
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ELB in elb to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInfoNameRef
@@ -422,7 +473,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInf
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInfoNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInfoNameSelectorPolicy
@@ -435,7 +488,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInf
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ELB in elb to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInfoNameSelector
@@ -456,7 +511,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInf
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInfoNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInfo
@@ -473,7 +530,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInf
     [JsonPropertyName("nameSelector")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoElbInfoNameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupInfo
@@ -482,7 +541,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefsPolicy
@@ -495,7 +556,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefs
@@ -512,7 +575,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelectorPolicy
@@ -525,7 +590,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of LBListener in elbv2 to populate listenerArns.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelector
@@ -546,7 +613,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the production traffic route (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute
@@ -563,7 +632,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("listenerArnsSelector")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelector? ListenerArnsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameRefPolicy
@@ -576,7 +647,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameRef
@@ -593,7 +666,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameSelectorPolicy
@@ -606,7 +681,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameSelector
@@ -627,7 +704,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTargetGroup
@@ -644,7 +723,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("nameSelector")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the test traffic route (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute
@@ -653,7 +734,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("listenerArns")]
     public IList<string>? ListenerArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with elb_info and target_group_info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfo
@@ -670,7 +753,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     [JsonPropertyName("testTrafficRoute")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute? TestTrafficRoute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Single configuration block of the load balancer to use in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfo
@@ -687,7 +772,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfo
     [JsonPropertyName("targetGroupPairInfo")]
     public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfo? TargetGroupPairInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderOnPremisesInstanceTagFilter
@@ -704,7 +791,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderOnPremisesInstanceTagF
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderServiceRoleArnRefPolicy
@@ -717,7 +806,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderServiceRoleArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderServiceRoleArnRef
@@ -734,7 +825,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderServiceRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderServiceRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderServiceRoleArnSelectorPolicy
@@ -747,7 +840,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderServiceRoleArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderServiceRoleArnSelector
@@ -768,7 +863,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderServiceRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTriggerTargetArnRefPolicy
@@ -781,7 +878,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate triggerTargetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTriggerTargetArnRef
@@ -798,7 +897,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTr
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTriggerTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTriggerTargetArnSelectorPolicy
@@ -811,7 +912,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate triggerTargetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTriggerTargetArnSelector
@@ -832,7 +935,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTr
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTriggerTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfiguration
@@ -857,7 +962,9 @@ public partial class V1beta1DeploymentGroupSpecForProviderTriggerConfiguration
     [JsonPropertyName("triggerTargetArnSelector")]
     public V1beta1DeploymentGroupSpecForProviderTriggerConfigurationTriggerTargetArnSelector? TriggerTargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProvider
@@ -950,7 +1057,9 @@ public partial class V1beta1DeploymentGroupSpecForProvider
     [JsonPropertyName("triggerConfiguration")]
     public IList<V1beta1DeploymentGroupSpecForProviderTriggerConfiguration>? TriggerConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of alarms associated with the deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderAlarmConfiguration
@@ -967,7 +1076,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderAlarmConfiguration
     [JsonPropertyName("ignorePollAlarmFailure")]
     public bool? IgnorePollAlarmFailure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the automatic rollback configuration associated with the deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderAutoRollbackConfiguration
@@ -980,7 +1091,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderAutoRollbackConfigura
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentConfigDeploymentReadyOption
@@ -993,7 +1106,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentCo
     [JsonPropertyName("waitTimeInMinutes")]
     public double? WaitTimeInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentConfigGreenFleetProvisioningOption
@@ -1002,7 +1117,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentCo
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess
@@ -1015,7 +1132,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentCo
     [JsonPropertyName("terminationWaitTimeInMinutes")]
     public double? TerminationWaitTimeInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the blue/green deployment options for a deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentConfig
@@ -1032,7 +1151,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentCo
     [JsonPropertyName("terminateBlueInstancesOnDeploymentSuccess")]
     public V1beta1DeploymentGroupSpecInitProviderBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess? TerminateBlueInstancesOnDeploymentSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderDeploymentStyle
@@ -1045,7 +1166,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderDeploymentStyle
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEc2TagFilter
@@ -1062,7 +1185,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEc2TagFilter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEc2TagSetEc2TagFilter
@@ -1079,7 +1204,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEc2TagSetEc2TagFilter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEc2TagSet
@@ -1088,7 +1215,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEc2TagSet
     [JsonPropertyName("ec2TagFilter")]
     public IList<V1beta1DeploymentGroupSpecInitProviderEc2TagSetEc2TagFilter>? Ec2TagFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterNameRefPolicy
@@ -1101,7 +1230,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in ecs to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterNameRef
@@ -1118,7 +1249,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterName
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterNameSelectorPolicy
@@ -1131,7 +1264,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in ecs to populate clusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterNameSelector
@@ -1152,7 +1287,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterName
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderEcsServiceClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceNameRefPolicy
@@ -1165,7 +1302,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Service in ecs to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceNameRef
@@ -1182,7 +1321,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceName
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceNameSelectorPolicy
@@ -1195,7 +1336,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Service in ecs to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceNameSelector
@@ -1216,7 +1359,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceName
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block(s) of the ECS services for a deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderEcsService
@@ -1245,7 +1390,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderEcsService
     [JsonPropertyName("serviceNameSelector")]
     public V1beta1DeploymentGroupSpecInitProviderEcsServiceServiceNameSelector? ServiceNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbInfoNameRefPolicy
@@ -1258,7 +1405,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbIn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ELB in elb to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbInfoNameRef
@@ -1275,7 +1424,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbIn
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbInfoNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbInfoNameSelectorPolicy
@@ -1288,7 +1439,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbIn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ELB in elb to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbInfoNameSelector
@@ -1309,7 +1462,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbIn
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbInfoNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbInfo
@@ -1326,7 +1481,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbIn
     [JsonPropertyName("nameSelector")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoElbInfoNameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupInfo
@@ -1335,7 +1492,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefsPolicy
@@ -1348,7 +1507,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefs
@@ -1365,7 +1526,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelectorPolicy
@@ -1378,7 +1541,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of LBListener in elbv2 to populate listenerArns.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelector
@@ -1399,7 +1564,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the production traffic route (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute
@@ -1416,7 +1583,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("listenerArnsSelector")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelector? ListenerArnsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameRefPolicy
@@ -1429,7 +1598,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameRef
@@ -1446,7 +1617,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameSelectorPolicy
@@ -1459,7 +1632,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameSelector
@@ -1480,7 +1655,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTargetGroup
@@ -1497,7 +1674,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("nameSelector")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTargetGroupNameSelector? NameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the test traffic route (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute
@@ -1506,7 +1685,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("listenerArns")]
     public IList<string>? ListenerArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with elb_info and target_group_info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfo
@@ -1523,7 +1704,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     [JsonPropertyName("testTrafficRoute")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute? TestTrafficRoute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Single configuration block of the load balancer to use in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfo
@@ -1540,7 +1723,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfo
     [JsonPropertyName("targetGroupPairInfo")]
     public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfo? TargetGroupPairInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderOnPremisesInstanceTagFilter
@@ -1557,7 +1742,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderOnPremisesInstanceTag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderServiceRoleArnRefPolicy
@@ -1570,7 +1757,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderServiceRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderServiceRoleArnRef
@@ -1587,7 +1776,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderServiceRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderServiceRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderServiceRoleArnSelectorPolicy
@@ -1600,7 +1791,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderServiceRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderServiceRoleArnSelector
@@ -1621,7 +1814,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderServiceRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationTriggerTargetArnRefPolicy
@@ -1634,7 +1829,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate triggerTargetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationTriggerTargetArnRef
@@ -1651,7 +1848,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationT
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationTriggerTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationTriggerTargetArnSelectorPolicy
@@ -1664,7 +1863,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate triggerTargetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationTriggerTargetArnSelector
@@ -1685,7 +1886,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationT
     [JsonPropertyName("policy")]
     public V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationTriggerTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfiguration
@@ -1710,7 +1913,9 @@ public partial class V1beta1DeploymentGroupSpecInitProviderTriggerConfiguration
     [JsonPropertyName("triggerTargetArnSelector")]
     public V1beta1DeploymentGroupSpecInitProviderTriggerConfigurationTriggerTargetArnSelector? TriggerTargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProvider
@@ -1787,7 +1992,9 @@ public partial class V1beta1DeploymentGroupSpecInitProvider
     [JsonPropertyName("triggerConfiguration")]
     public IList<V1beta1DeploymentGroupSpecInitProviderTriggerConfiguration>? TriggerConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecProviderConfigRef
@@ -1800,7 +2007,9 @@ public partial class V1beta1DeploymentGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecWriteConnectionSecretToRef
@@ -1809,7 +2018,9 @@ public partial class V1beta1DeploymentGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeploymentGroupSpec defines the desired state of DeploymentGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpec
@@ -1834,7 +2045,9 @@ public partial class V1beta1DeploymentGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DeploymentGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of alarms associated with the deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderAlarmConfiguration
@@ -1851,7 +2064,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderAlarmConfiguration
     [JsonPropertyName("ignorePollAlarmFailure")]
     public bool? IgnorePollAlarmFailure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the automatic rollback configuration associated with the deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderAutoRollbackConfiguration
@@ -1864,7 +2079,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderAutoRollbackConfigura
     [JsonPropertyName("events")]
     public IList<string>? Events { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentConfigDeploymentReadyOption
@@ -1877,7 +2094,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentCo
     [JsonPropertyName("waitTimeInMinutes")]
     public double? WaitTimeInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentConfigGreenFleetProvisioningOption
@@ -1886,7 +2105,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentCo
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess
@@ -1899,7 +2120,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentCo
     [JsonPropertyName("terminationWaitTimeInMinutes")]
     public double? TerminationWaitTimeInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the blue/green deployment options for a deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentConfig
@@ -1916,7 +2139,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentCo
     [JsonPropertyName("terminateBlueInstancesOnDeploymentSuccess")]
     public V1beta1DeploymentGroupStatusAtProviderBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess? TerminateBlueInstancesOnDeploymentSuccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderDeploymentStyle
@@ -1929,7 +2154,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderDeploymentStyle
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderEc2TagFilter
@@ -1946,7 +2173,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderEc2TagFilter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderEc2TagSetEc2TagFilter
@@ -1963,7 +2192,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderEc2TagSetEc2TagFilter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderEc2TagSet
@@ -1972,7 +2203,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderEc2TagSet
     [JsonPropertyName("ec2TagFilter")]
     public IList<V1beta1DeploymentGroupStatusAtProviderEc2TagSetEc2TagFilter>? Ec2TagFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block(s) of the ECS services for a deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderEcsService
@@ -1985,7 +2218,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderEcsService
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoElbInfo
@@ -1994,7 +2229,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoElbIn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTargetGroupInfo
@@ -2003,7 +2240,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTarge
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the production traffic route (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute
@@ -2012,7 +2251,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTarge
     [JsonPropertyName("listenerArns")]
     public IList<string>? ListenerArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTargetGroupPairInfoTargetGroup
@@ -2021,7 +2262,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTarge
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the test traffic route (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute
@@ -2030,7 +2273,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTarge
     [JsonPropertyName("listenerArns")]
     public IList<string>? ListenerArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with elb_info and target_group_info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTargetGroupPairInfo
@@ -2047,7 +2292,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTarge
     [JsonPropertyName("testTrafficRoute")]
     public V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute? TestTrafficRoute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Single configuration block of the load balancer to use in a blue/green deployment (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfo
@@ -2064,7 +2311,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfo
     [JsonPropertyName("targetGroupPairInfo")]
     public V1beta1DeploymentGroupStatusAtProviderLoadBalancerInfoTargetGroupPairInfo? TargetGroupPairInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderOnPremisesInstanceTagFilter
@@ -2081,7 +2330,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderOnPremisesInstanceTag
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderTriggerConfiguration
@@ -2098,7 +2349,9 @@ public partial class V1beta1DeploymentGroupStatusAtProviderTriggerConfiguration
     [JsonPropertyName("triggerTargetArn")]
     public string? TriggerTargetArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProvider
@@ -2195,7 +2448,9 @@ public partial class V1beta1DeploymentGroupStatusAtProvider
     [JsonPropertyName("triggerConfiguration")]
     public IList<V1beta1DeploymentGroupStatusAtProviderTriggerConfiguration>? TriggerConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusConditions
@@ -2224,7 +2479,9 @@ public partial class V1beta1DeploymentGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeploymentGroupStatus defines the observed state of DeploymentGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatus
@@ -2241,7 +2498,9 @@ public partial class V1beta1DeploymentGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DeploymentGroup is the Schema for the DeploymentGroups API. Provides a CodeDeploy deployment group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2271,3 +2530,4 @@ public partial class V1beta1DeploymentGroup : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1DeploymentGroupStatus? Status { get; set; }
 }
+#nullable disable

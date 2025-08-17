@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IAMServiceAccountKeyList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1IAMServiceAccountKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountKeySpecServiceAccountRef
@@ -50,7 +53,9 @@ public partial class V1beta1IAMServiceAccountKeySpecServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountKeySpec
@@ -75,7 +80,9 @@ public partial class V1beta1IAMServiceAccountKeySpec
     [JsonPropertyName("serviceAccountRef")]
     public V1beta1IAMServiceAccountKeySpecServiceAccountRef ServiceAccountRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountKeyStatusConditions
@@ -100,7 +107,9 @@ public partial class V1beta1IAMServiceAccountKeyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMServiceAccountKeyStatus
@@ -133,7 +142,9 @@ public partial class V1beta1IAMServiceAccountKeyStatus
     [JsonPropertyName("validBefore")]
     public string? ValidBefore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -163,3 +174,4 @@ public partial class V1beta1IAMServiceAccountKey : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1IAMServiceAccountKeyStatus? Status { get; set; }
 }
+#nullable disable

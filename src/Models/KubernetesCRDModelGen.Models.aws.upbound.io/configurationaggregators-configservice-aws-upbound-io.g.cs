@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configservice.aws.upbound.io;
+#nullable enable
 /// <summary>ConfigurationAggregator is the Schema for the ConfigurationAggregators API. Manages an AWS Config Configuration Aggregator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConfigurationAggregatorList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1ConfigurationAggregator> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecForProviderAccountAggregationSource
@@ -50,7 +53,9 @@ public partial class V1beta1ConfigurationAggregatorSpecForProviderAccountAggrega
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAggregationSourceRoleArnRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAg
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAggregationSourceRoleArnRef
@@ -76,7 +83,9 @@ public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAg
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationAggregatorSpecForProviderOrganizationAggregationSourceRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAggregationSourceRoleArnSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAg
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAggregationSourceRoleArnSelector
@@ -106,7 +117,9 @@ public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAg
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationAggregatorSpecForProviderOrganizationAggregationSourceRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAggregationSource
@@ -131,7 +144,9 @@ public partial class V1beta1ConfigurationAggregatorSpecForProviderOrganizationAg
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ConfigurationAggregatorSpecForProviderOrganizationAggregationSourceRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecForProvider
@@ -152,7 +167,9 @@ public partial class V1beta1ConfigurationAggregatorSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecInitProviderAccountAggregationSource
@@ -169,7 +186,9 @@ public partial class V1beta1ConfigurationAggregatorSpecInitProviderAccountAggreg
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationAggregationSourceRoleArnRefPolicy
@@ -182,7 +201,9 @@ public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationAggregationSourceRoleArnRef
@@ -195,7 +216,9 @@ public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationA
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationAggregatorSpecInitProviderOrganizationAggregationSourceRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationAggregationSourceRoleArnSelectorPolicy
@@ -208,7 +231,9 @@ public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationAggregationSourceRoleArnSelector
@@ -225,7 +250,9 @@ public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationA
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationAggregatorSpecInitProviderOrganizationAggregationSourceRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationAggregationSource
@@ -250,7 +277,9 @@ public partial class V1beta1ConfigurationAggregatorSpecInitProviderOrganizationA
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ConfigurationAggregatorSpecInitProviderOrganizationAggregationSourceRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecInitProvider
@@ -267,7 +296,9 @@ public partial class V1beta1ConfigurationAggregatorSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecProviderConfigRefPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1ConfigurationAggregatorSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecProviderConfigRef
@@ -293,7 +326,9 @@ public partial class V1beta1ConfigurationAggregatorSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationAggregatorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpecWriteConnectionSecretToRef
@@ -306,7 +341,9 @@ public partial class V1beta1ConfigurationAggregatorSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationAggregatorSpec defines the desired state of ConfigurationAggregator</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorSpec
@@ -335,7 +372,9 @@ public partial class V1beta1ConfigurationAggregatorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConfigurationAggregatorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorStatusAtProviderAccountAggregationSource
@@ -352,7 +391,9 @@ public partial class V1beta1ConfigurationAggregatorStatusAtProviderAccountAggreg
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorStatusAtProviderOrganizationAggregationSource
@@ -369,7 +410,9 @@ public partial class V1beta1ConfigurationAggregatorStatusAtProviderOrganizationA
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorStatusAtProvider
@@ -402,7 +445,9 @@ public partial class V1beta1ConfigurationAggregatorStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorStatusConditions
@@ -431,7 +476,9 @@ public partial class V1beta1ConfigurationAggregatorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationAggregatorStatus defines the observed state of ConfigurationAggregator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationAggregatorStatus
@@ -448,7 +495,9 @@ public partial class V1beta1ConfigurationAggregatorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationAggregator is the Schema for the ConfigurationAggregators API. Manages an AWS Config Configuration Aggregator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -478,3 +527,4 @@ public partial class V1beta1ConfigurationAggregator : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1ConfigurationAggregatorStatus? Status { get; set; }
 }
+#nullable disable

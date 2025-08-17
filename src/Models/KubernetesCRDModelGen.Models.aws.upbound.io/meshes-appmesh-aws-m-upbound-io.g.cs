@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appmesh.aws.m.upbound.io;
+#nullable enable
 /// <summary>Mesh is the Schema for the Meshs API. Provides an AWS App Mesh service mesh resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MeshList : IKubernetesObject<V1ListMeta>, IItems<V1b
     [JsonPropertyName("items")]
     public IList<V1beta1Mesh> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Egress filter rules for the service mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecForProviderSpecEgressFilter
@@ -42,7 +45,9 @@ public partial class V1beta1MeshSpecForProviderSpecEgressFilter
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service discovery information for the service mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecForProviderSpecServiceDiscovery
@@ -51,7 +56,9 @@ public partial class V1beta1MeshSpecForProviderSpecServiceDiscovery
     [JsonPropertyName("ipPreference")]
     public string? IpPreference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service mesh specification to apply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecForProviderSpec
@@ -64,7 +71,9 @@ public partial class V1beta1MeshSpecForProviderSpec
     [JsonPropertyName("serviceDiscovery")]
     public V1beta1MeshSpecForProviderSpecServiceDiscovery? ServiceDiscovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecForProvider
@@ -81,7 +90,9 @@ public partial class V1beta1MeshSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Egress filter rules for the service mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecInitProviderSpecEgressFilter
@@ -90,7 +101,9 @@ public partial class V1beta1MeshSpecInitProviderSpecEgressFilter
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service discovery information for the service mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecInitProviderSpecServiceDiscovery
@@ -99,7 +112,9 @@ public partial class V1beta1MeshSpecInitProviderSpecServiceDiscovery
     [JsonPropertyName("ipPreference")]
     public string? IpPreference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service mesh specification to apply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecInitProviderSpec
@@ -112,7 +127,9 @@ public partial class V1beta1MeshSpecInitProviderSpec
     [JsonPropertyName("serviceDiscovery")]
     public V1beta1MeshSpecInitProviderSpecServiceDiscovery? ServiceDiscovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecInitProvider
@@ -125,7 +142,9 @@ public partial class V1beta1MeshSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecProviderConfigRef
@@ -138,7 +157,9 @@ public partial class V1beta1MeshSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecWriteConnectionSecretToRef
@@ -147,7 +168,9 @@ public partial class V1beta1MeshSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MeshSpec defines the desired state of Mesh</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpec
@@ -172,7 +195,9 @@ public partial class V1beta1MeshSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MeshSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Egress filter rules for the service mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshStatusAtProviderSpecEgressFilter
@@ -181,7 +206,9 @@ public partial class V1beta1MeshStatusAtProviderSpecEgressFilter
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service discovery information for the service mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshStatusAtProviderSpecServiceDiscovery
@@ -190,7 +217,9 @@ public partial class V1beta1MeshStatusAtProviderSpecServiceDiscovery
     [JsonPropertyName("ipPreference")]
     public string? IpPreference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service mesh specification to apply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshStatusAtProviderSpec
@@ -203,7 +232,9 @@ public partial class V1beta1MeshStatusAtProviderSpec
     [JsonPropertyName("serviceDiscovery")]
     public V1beta1MeshStatusAtProviderSpecServiceDiscovery? ServiceDiscovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshStatusAtProvider
@@ -248,7 +279,9 @@ public partial class V1beta1MeshStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshStatusConditions
@@ -277,7 +310,9 @@ public partial class V1beta1MeshStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MeshStatus defines the observed state of Mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshStatus
@@ -294,7 +329,9 @@ public partial class V1beta1MeshStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Mesh is the Schema for the Meshs API. Provides an AWS App Mesh service mesh resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -324,3 +361,4 @@ public partial class V1beta1Mesh : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1MeshStatus? Status { get; set; }
 }
+#nullable disable

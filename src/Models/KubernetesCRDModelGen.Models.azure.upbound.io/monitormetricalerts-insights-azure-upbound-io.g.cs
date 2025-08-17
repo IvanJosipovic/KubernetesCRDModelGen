@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+#nullable enable
 /// <summary>MonitorMetricAlert is the Schema for the MonitorMetricAlerts API. Manages a Metric Alert within Azure Monitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorMetricAlertList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorMetricAlert> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorActionGroup in insights to populate actionGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupId
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorActionGroup in insights to populate actionGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupId
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderAction
@@ -110,7 +121,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderAction
     [JsonPropertyName("webhookProperties")]
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderApplicationInsightsWebTestLocationAvailabilityCriteria
@@ -127,7 +140,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderApplicationInsights
     [JsonPropertyName("webTestId")]
     public string? WebTestId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderCriteriaDimension
@@ -144,7 +159,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderCriteriaDimension
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderCriteria
@@ -177,7 +194,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderCriteria
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderDynamicCriteriaDimension
@@ -194,7 +213,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderDynamicCriteriaDime
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderDynamicCriteria
@@ -239,7 +260,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderDynamicCriteria
     [JsonPropertyName("skipMetricValidation")]
     public bool? SkipMetricValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRefPolicy
@@ -252,7 +275,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRef
@@ -265,7 +290,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSelectorPolicy
@@ -278,7 +305,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSelector
@@ -295,7 +324,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderScopesRefsPolicy
@@ -308,7 +339,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderScopesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderScopesRefs
@@ -321,7 +354,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderScopesRefs
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecForProviderScopesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderScopesSelectorPolicy
@@ -334,7 +369,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderScopesSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Account in storage to populate scopes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderScopesSelector
@@ -351,7 +388,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderScopesSelector
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecForProviderScopesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProvider
@@ -432,7 +471,9 @@ public partial class V1beta1MonitorMetricAlertSpecForProvider
     [JsonPropertyName("windowSize")]
     public string? WindowSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdRefPolicy
@@ -445,7 +486,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MonitorActionGroup in insights to populate actionGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdRef
@@ -458,7 +501,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupI
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdSelectorPolicy
@@ -471,7 +516,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MonitorActionGroup in insights to populate actionGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdSelector
@@ -488,7 +535,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupI
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderAction
@@ -509,7 +558,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderAction
     [JsonPropertyName("webhookProperties")]
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderApplicationInsightsWebTestLocationAvailabilityCriteria
@@ -526,7 +577,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderApplicationInsight
     [JsonPropertyName("webTestId")]
     public string? WebTestId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderCriteriaDimension
@@ -543,7 +596,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderCriteriaDimension
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderCriteria
@@ -576,7 +631,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderCriteria
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderDynamicCriteriaDimension
@@ -593,7 +650,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderDynamicCriteriaDim
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderDynamicCriteria
@@ -638,7 +697,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderDynamicCriteria
     [JsonPropertyName("skipMetricValidation")]
     public bool? SkipMetricValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesRefsPolicy
@@ -651,7 +712,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesRefs
@@ -664,7 +727,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesRefs
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecInitProviderScopesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesSelectorPolicy
@@ -677,7 +742,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Account in storage to populate scopes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesSelector
@@ -694,7 +761,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesSelector
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecInitProviderScopesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecInitProvider
@@ -763,7 +832,9 @@ public partial class V1beta1MonitorMetricAlertSpecInitProvider
     [JsonPropertyName("windowSize")]
     public string? WindowSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecProviderConfigRefPolicy
@@ -776,7 +847,9 @@ public partial class V1beta1MonitorMetricAlertSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecProviderConfigRef
@@ -789,7 +862,9 @@ public partial class V1beta1MonitorMetricAlertSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MonitorMetricAlertSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecWriteConnectionSecretToRef
@@ -802,7 +877,9 @@ public partial class V1beta1MonitorMetricAlertSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorMetricAlertSpec defines the desired state of MonitorMetricAlert</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpec
@@ -831,7 +908,9 @@ public partial class V1beta1MonitorMetricAlertSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorMetricAlertSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatusAtProviderAction
@@ -844,7 +923,9 @@ public partial class V1beta1MonitorMetricAlertStatusAtProviderAction
     [JsonPropertyName("webhookProperties")]
     public IDictionary<string, string>? WebhookProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatusAtProviderApplicationInsightsWebTestLocationAvailabilityCriteria
@@ -861,7 +942,9 @@ public partial class V1beta1MonitorMetricAlertStatusAtProviderApplicationInsight
     [JsonPropertyName("webTestId")]
     public string? WebTestId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatusAtProviderCriteriaDimension
@@ -878,7 +961,9 @@ public partial class V1beta1MonitorMetricAlertStatusAtProviderCriteriaDimension
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatusAtProviderCriteria
@@ -911,7 +996,9 @@ public partial class V1beta1MonitorMetricAlertStatusAtProviderCriteria
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatusAtProviderDynamicCriteriaDimension
@@ -928,7 +1015,9 @@ public partial class V1beta1MonitorMetricAlertStatusAtProviderDynamicCriteriaDim
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatusAtProviderDynamicCriteria
@@ -973,7 +1062,9 @@ public partial class V1beta1MonitorMetricAlertStatusAtProviderDynamicCriteria
     [JsonPropertyName("skipMetricValidation")]
     public bool? SkipMetricValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatusAtProvider
@@ -1042,7 +1133,9 @@ public partial class V1beta1MonitorMetricAlertStatusAtProvider
     [JsonPropertyName("windowSize")]
     public string? WindowSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatusConditions
@@ -1071,7 +1164,9 @@ public partial class V1beta1MonitorMetricAlertStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorMetricAlertStatus defines the observed state of MonitorMetricAlert.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertStatus
@@ -1088,7 +1183,9 @@ public partial class V1beta1MonitorMetricAlertStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorMetricAlert is the Schema for the MonitorMetricAlerts API. Manages a Metric Alert within Azure Monitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1118,3 +1215,4 @@ public partial class V1beta1MonitorMetricAlert : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1MonitorMetricAlertStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Connection is the Schema for the Connections API. A connection allows BigQuery connections to external data sources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConnectionList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Connection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authentication using Google owned service account to assume into customer's AWS IAM Role. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAwsAccessRole
@@ -42,7 +45,9 @@ public partial class V1beta1ConnectionSpecForProviderAwsAccessRole
     [JsonPropertyName("iamRoleId")]
     public string? IamRoleId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to Amazon Web Services. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAws
@@ -51,7 +56,9 @@ public partial class V1beta1ConnectionSpecForProviderAws
     [JsonPropertyName("accessRole")]
     public V1beta1ConnectionSpecForProviderAwsAccessRole? AccessRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties specific to Azure. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderAzure
@@ -64,13 +71,17 @@ public partial class V1beta1ConnectionSpecForProviderAzure
     [JsonPropertyName("federatedApplicationClientId")]
     public string? FederatedApplicationClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties for delegation of access to GCP resources. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudResource
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to Cloud Spanner Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSpanner
@@ -99,7 +110,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSpanner
     [JsonPropertyName("useServerlessAnalytics")]
     public bool? UseServerlessAnalytics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password for database. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialPasswordSecretRef
@@ -112,7 +125,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialPasswordS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameRefPolicy
@@ -125,7 +140,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in sql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameRef
@@ -142,7 +159,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameR
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelectorPolicy
@@ -155,7 +174,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in sql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelector
@@ -176,7 +197,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameS
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud SQL properties. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlCredential
@@ -197,7 +220,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlCredential
     [JsonPropertyName("usernameSelector")]
     public V1beta1ConnectionSpecForProviderCloudSqlCredentialUsernameSelector? UsernameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseRefPolicy
@@ -210,7 +235,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in sql to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseRef
@@ -227,7 +254,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecForProviderCloudSqlDatabaseRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelectorPolicy
@@ -240,7 +269,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in sql to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelector
@@ -261,7 +292,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelector
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecForProviderCloudSqlDatabaseSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRefPolicy
@@ -274,7 +307,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DatabaseInstance in sql to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRef
@@ -291,7 +326,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecForProviderCloudSqlInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelectorPolicy
@@ -304,7 +341,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DatabaseInstance in sql to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelector
@@ -325,7 +364,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecForProviderCloudSqlInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to the Cloud SQL. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderCloudSql
@@ -362,7 +403,9 @@ public partial class V1beta1ConnectionSpecForProviderCloudSql
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Dataproc Metastore Service configuration for the connection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderSparkMetastoreServiceConfig
@@ -371,7 +414,9 @@ public partial class V1beta1ConnectionSpecForProviderSparkMetastoreServiceConfig
     [JsonPropertyName("metastoreService")]
     public string? MetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterRefPolicy
@@ -384,7 +429,9 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in dataproc to populate dataprocCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterRef
@@ -401,7 +448,9 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicy
@@ -414,7 +463,9 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in dataproc to populate dataprocCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelector
@@ -435,7 +486,9 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spark History Server configuration for the connection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfig
@@ -452,7 +505,9 @@ public partial class V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConf
     [JsonPropertyName("dataprocClusterSelector")]
     public V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfigDataprocClusterSelector? DataprocClusterSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties to execute stored procedures for Apache Spark. resources. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderSpark
@@ -465,7 +520,9 @@ public partial class V1beta1ConnectionSpecForProviderSpark
     [JsonPropertyName("sparkHistoryServerConfig")]
     public V1beta1ConnectionSpecForProviderSparkSparkHistoryServerConfig? SparkHistoryServerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProvider
@@ -518,7 +575,9 @@ public partial class V1beta1ConnectionSpecForProvider
     [JsonPropertyName("spark")]
     public V1beta1ConnectionSpecForProviderSpark? Spark { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authentication using Google owned service account to assume into customer's AWS IAM Role. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAwsAccessRole
@@ -527,7 +586,9 @@ public partial class V1beta1ConnectionSpecInitProviderAwsAccessRole
     [JsonPropertyName("iamRoleId")]
     public string? IamRoleId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to Amazon Web Services. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAws
@@ -536,7 +597,9 @@ public partial class V1beta1ConnectionSpecInitProviderAws
     [JsonPropertyName("accessRole")]
     public V1beta1ConnectionSpecInitProviderAwsAccessRole? AccessRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties specific to Azure. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderAzure
@@ -549,13 +612,17 @@ public partial class V1beta1ConnectionSpecInitProviderAzure
     [JsonPropertyName("federatedApplicationClientId")]
     public string? FederatedApplicationClientId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties for delegation of access to GCP resources. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudResource
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to Cloud Spanner Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSpanner
@@ -584,7 +651,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSpanner
     [JsonPropertyName("useServerlessAnalytics")]
     public bool? UseServerlessAnalytics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password for database. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialPasswordSecretRef
@@ -597,7 +666,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialPassword
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameRefPolicy
@@ -610,7 +681,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsername
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in sql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameRef
@@ -627,7 +700,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsername
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelectorPolicy
@@ -640,7 +715,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsername
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in sql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelector
@@ -661,7 +738,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsername
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud SQL properties. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredential
@@ -682,7 +761,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlCredential
     [JsonPropertyName("usernameSelector")]
     public V1beta1ConnectionSpecInitProviderCloudSqlCredentialUsernameSelector? UsernameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRefPolicy
@@ -695,7 +776,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in sql to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRef
@@ -712,7 +795,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecInitProviderCloudSqlDatabaseRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelectorPolicy
@@ -725,7 +810,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in sql to populate database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelector
@@ -746,7 +833,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelector
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecInitProviderCloudSqlDatabaseSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRefPolicy
@@ -759,7 +848,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DatabaseInstance in sql to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRef
@@ -776,7 +867,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelectorPolicy
@@ -789,7 +882,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DatabaseInstance in sql to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelector
@@ -810,7 +905,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecInitProviderCloudSqlInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to the Cloud SQL. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderCloudSql
@@ -847,7 +944,9 @@ public partial class V1beta1ConnectionSpecInitProviderCloudSql
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Dataproc Metastore Service configuration for the connection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderSparkMetastoreServiceConfig
@@ -856,7 +955,9 @@ public partial class V1beta1ConnectionSpecInitProviderSparkMetastoreServiceConfi
     [JsonPropertyName("metastoreService")]
     public string? MetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterRefPolicy
@@ -869,7 +970,9 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in dataproc to populate dataprocCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterRef
@@ -886,7 +989,9 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicy
@@ -899,7 +1004,9 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in dataproc to populate dataprocCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelector
@@ -920,7 +1027,9 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     [JsonPropertyName("policy")]
     public V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spark History Server configuration for the connection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfig
@@ -937,7 +1046,9 @@ public partial class V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerCon
     [JsonPropertyName("dataprocClusterSelector")]
     public V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfigDataprocClusterSelector? DataprocClusterSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties to execute stored procedures for Apache Spark. resources. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderSpark
@@ -950,7 +1061,9 @@ public partial class V1beta1ConnectionSpecInitProviderSpark
     [JsonPropertyName("sparkHistoryServerConfig")]
     public V1beta1ConnectionSpecInitProviderSparkSparkHistoryServerConfig? SparkHistoryServerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProvider
@@ -1003,7 +1116,9 @@ public partial class V1beta1ConnectionSpecInitProvider
     [JsonPropertyName("spark")]
     public V1beta1ConnectionSpecInitProviderSpark? Spark { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecProviderConfigRef
@@ -1016,7 +1131,9 @@ public partial class V1beta1ConnectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecWriteConnectionSecretToRef
@@ -1025,7 +1142,9 @@ public partial class V1beta1ConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionSpec defines the desired state of Connection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpec
@@ -1050,7 +1169,9 @@ public partial class V1beta1ConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authentication using Google owned service account to assume into customer's AWS IAM Role. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAwsAccessRole
@@ -1063,7 +1184,9 @@ public partial class V1beta1ConnectionStatusAtProviderAwsAccessRole
     [JsonPropertyName("identity")]
     public string? Identity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to Amazon Web Services. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAws
@@ -1072,7 +1195,9 @@ public partial class V1beta1ConnectionStatusAtProviderAws
     [JsonPropertyName("accessRole")]
     public V1beta1ConnectionStatusAtProviderAwsAccessRole? AccessRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties specific to Azure. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderAzure
@@ -1105,7 +1230,9 @@ public partial class V1beta1ConnectionStatusAtProviderAzure
     [JsonPropertyName("redirectUri")]
     public string? RedirectUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties for delegation of access to GCP resources. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderCloudResource
@@ -1114,7 +1241,9 @@ public partial class V1beta1ConnectionStatusAtProviderCloudResource
     [JsonPropertyName("serviceAccountId")]
     public string? ServiceAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to Cloud Spanner Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderCloudSpanner
@@ -1143,7 +1272,9 @@ public partial class V1beta1ConnectionStatusAtProviderCloudSpanner
     [JsonPropertyName("useServerlessAnalytics")]
     public bool? UseServerlessAnalytics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud SQL properties. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderCloudSqlCredential
@@ -1152,7 +1283,9 @@ public partial class V1beta1ConnectionStatusAtProviderCloudSqlCredential
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection properties specific to the Cloud SQL. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderCloudSql
@@ -1177,7 +1310,9 @@ public partial class V1beta1ConnectionStatusAtProviderCloudSql
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Dataproc Metastore Service configuration for the connection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderSparkMetastoreServiceConfig
@@ -1186,7 +1321,9 @@ public partial class V1beta1ConnectionStatusAtProviderSparkMetastoreServiceConfi
     [JsonPropertyName("metastoreService")]
     public string? MetastoreService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spark History Server configuration for the connection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderSparkSparkHistoryServerConfig
@@ -1195,7 +1332,9 @@ public partial class V1beta1ConnectionStatusAtProviderSparkSparkHistoryServerCon
     [JsonPropertyName("dataprocCluster")]
     public string? DataprocCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container for connection properties to execute stored procedures for Apache Spark. resources. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProviderSpark
@@ -1212,7 +1351,9 @@ public partial class V1beta1ConnectionStatusAtProviderSpark
     [JsonPropertyName("sparkHistoryServerConfig")]
     public V1beta1ConnectionStatusAtProviderSparkSparkHistoryServerConfig? SparkHistoryServerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProvider
@@ -1277,7 +1418,9 @@ public partial class V1beta1ConnectionStatusAtProvider
     [JsonPropertyName("spark")]
     public V1beta1ConnectionStatusAtProviderSpark? Spark { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusConditions
@@ -1306,7 +1449,9 @@ public partial class V1beta1ConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionStatus defines the observed state of Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatus
@@ -1323,7 +1468,9 @@ public partial class V1beta1ConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection is the Schema for the Connections API. A connection allows BigQuery connections to external data sources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1353,3 +1500,4 @@ public partial class V1beta1Connection : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1ConnectionStatus? Status { get; set; }
 }
+#nullable disable

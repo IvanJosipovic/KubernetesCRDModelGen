@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ecr.aws.m.upbound.io;
+#nullable enable
 /// <summary>ReplicationConfiguration is the Schema for the ReplicationConfigurations API. Provides an Elastic Container Registry Replication Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ReplicationConfigurationList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1ReplicationConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationConfigurationRuleDestination
@@ -46,7 +49,9 @@ public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationCo
     [JsonPropertyName("registryId")]
     public string? RegistryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationConfigurationRuleRepositoryFilter
@@ -59,7 +64,9 @@ public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationCo
     [JsonPropertyName("filterType")]
     public string? FilterType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationConfigurationRule
@@ -72,7 +79,9 @@ public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationCo
     [JsonPropertyName("repositoryFilter")]
     public IList<V1beta1ReplicationConfigurationSpecForProviderReplicationConfigurationRuleRepositoryFilter>? RepositoryFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replication configuration for a registry. See Replication Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationConfiguration
@@ -81,7 +90,9 @@ public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationCo
     [JsonPropertyName("rule")]
     public IList<V1beta1ReplicationConfigurationSpecForProviderReplicationConfigurationRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecForProvider
@@ -94,7 +105,9 @@ public partial class V1beta1ReplicationConfigurationSpecForProvider
     [JsonPropertyName("replicationConfiguration")]
     public V1beta1ReplicationConfigurationSpecForProviderReplicationConfiguration? ReplicationConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecInitProviderReplicationConfigurationRuleDestination
@@ -103,7 +116,9 @@ public partial class V1beta1ReplicationConfigurationSpecInitProviderReplicationC
     [JsonPropertyName("registryId")]
     public string? RegistryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecInitProviderReplicationConfigurationRuleRepositoryFilter
@@ -116,7 +131,9 @@ public partial class V1beta1ReplicationConfigurationSpecInitProviderReplicationC
     [JsonPropertyName("filterType")]
     public string? FilterType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecInitProviderReplicationConfigurationRule
@@ -129,7 +146,9 @@ public partial class V1beta1ReplicationConfigurationSpecInitProviderReplicationC
     [JsonPropertyName("repositoryFilter")]
     public IList<V1beta1ReplicationConfigurationSpecInitProviderReplicationConfigurationRuleRepositoryFilter>? RepositoryFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replication configuration for a registry. See Replication Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecInitProviderReplicationConfiguration
@@ -138,7 +157,9 @@ public partial class V1beta1ReplicationConfigurationSpecInitProviderReplicationC
     [JsonPropertyName("rule")]
     public IList<V1beta1ReplicationConfigurationSpecInitProviderReplicationConfigurationRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecInitProvider
@@ -147,7 +168,9 @@ public partial class V1beta1ReplicationConfigurationSpecInitProvider
     [JsonPropertyName("replicationConfiguration")]
     public V1beta1ReplicationConfigurationSpecInitProviderReplicationConfiguration? ReplicationConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecProviderConfigRef
@@ -160,7 +183,9 @@ public partial class V1beta1ReplicationConfigurationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecWriteConnectionSecretToRef
@@ -169,7 +194,9 @@ public partial class V1beta1ReplicationConfigurationSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationConfigurationSpec defines the desired state of ReplicationConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpec
@@ -194,7 +221,9 @@ public partial class V1beta1ReplicationConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ReplicationConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationConfigurationRuleDestination
@@ -207,7 +236,9 @@ public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationC
     [JsonPropertyName("registryId")]
     public string? RegistryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationConfigurationRuleRepositoryFilter
@@ -220,7 +251,9 @@ public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationC
     [JsonPropertyName("filterType")]
     public string? FilterType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationConfigurationRule
@@ -233,7 +266,9 @@ public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationC
     [JsonPropertyName("repositoryFilter")]
     public IList<V1beta1ReplicationConfigurationStatusAtProviderReplicationConfigurationRuleRepositoryFilter>? RepositoryFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replication configuration for a registry. See Replication Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationConfiguration
@@ -242,7 +277,9 @@ public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationC
     [JsonPropertyName("rule")]
     public IList<V1beta1ReplicationConfigurationStatusAtProviderReplicationConfigurationRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationStatusAtProvider
@@ -263,7 +300,9 @@ public partial class V1beta1ReplicationConfigurationStatusAtProvider
     [JsonPropertyName("replicationConfiguration")]
     public V1beta1ReplicationConfigurationStatusAtProviderReplicationConfiguration? ReplicationConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationStatusConditions
@@ -292,7 +331,9 @@ public partial class V1beta1ReplicationConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationConfigurationStatus defines the observed state of ReplicationConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationStatus
@@ -309,7 +350,9 @@ public partial class V1beta1ReplicationConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplicationConfiguration is the Schema for the ReplicationConfigurations API. Provides an Elastic Container Registry Replication Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -339,3 +382,4 @@ public partial class V1beta1ReplicationConfiguration : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1ReplicationConfigurationStatus? Status { get; set; }
 }
+#nullable disable

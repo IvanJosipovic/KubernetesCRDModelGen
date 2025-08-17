@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vmwareengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>VMwareEngineExternalAddress is the Schema for the VMwareEngineExternalAddress API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1VMwareEngineExternalAddressList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1alpha1VMwareEngineExternalAddress> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The resource name of the private cloud to create a new external IP address in.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineExternalAddressSpecPrivateCloudRef
@@ -50,7 +53,9 @@ public partial class V1alpha1VMwareEngineExternalAddressSpecPrivateCloudRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineExternalAddressSpec defines the desired state of VMwareEngineExternalAddress</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineExternalAddressSpec
@@ -71,7 +76,9 @@ public partial class V1alpha1VMwareEngineExternalAddressSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineExternalAddressStatusConditions
@@ -96,7 +103,9 @@ public partial class V1alpha1VMwareEngineExternalAddressStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineExternalAddressStatusObservedState
@@ -121,7 +130,9 @@ public partial class V1alpha1VMwareEngineExternalAddressStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineExternalAddressStatus defines the config connector machine state of VMwareEngineExternalAddress</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineExternalAddressStatus
@@ -142,7 +153,9 @@ public partial class V1alpha1VMwareEngineExternalAddressStatus
     [JsonPropertyName("observedState")]
     public V1alpha1VMwareEngineExternalAddressStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineExternalAddress is the Schema for the VMwareEngineExternalAddress API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -172,3 +185,4 @@ public partial class V1alpha1VMwareEngineExternalAddress : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1alpha1VMwareEngineExternalAddressStatus? Status { get; set; }
 }
+#nullable disable

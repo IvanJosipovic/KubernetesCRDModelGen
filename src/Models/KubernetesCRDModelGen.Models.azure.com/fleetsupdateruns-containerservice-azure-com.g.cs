@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.FleetsUpdateRun Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1api20230315previewstorageFleetsUpdateRun> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ManagedClusterUpgradeSpec The upgrade to apply to a ManagedCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedClusterUpdateUpgrade
@@ -50,7 +53,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedCluste
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ManagedClusterUpdate The update to be applied to the ManagedClusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedClusterUpdate
@@ -63,7 +68,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedCluste
     [JsonPropertyName("upgrade")]
     public V1api20230315previewstorageFleetsUpdateRunSpecManagedClusterUpdateUpgrade? Upgrade { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecOperatorSpecConfigMapExpressions
@@ -80,7 +87,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecOperatorSpecC
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecOperatorSpecSecretExpressions
@@ -97,7 +106,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecOperatorSpecS
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.FleetsUpdateRunOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecOperatorSpec
@@ -114,7 +125,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230315previewstorageFleetsUpdateRunSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a containerservice.azure.com/Fleet resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecOwner
@@ -127,7 +140,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateGroup A group to be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategyStagesGroups
@@ -140,7 +155,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategyStage
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateStage Defines a stage which contains the groups to update and the steps to take (e.g., wait for a time period) before starting the next stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategyStages
@@ -161,7 +178,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategyStage
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateRunStrategy Defines the update sequence of the clusters via stages and groups. Stages within a run are executed sequentially one after another. Groups within a stage are executed in parallel. Member clusters within a group are updated sequentially one after another. A valid strategy contains no duplicate groups within or across stages.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategy
@@ -174,7 +193,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategy
     [JsonPropertyName("stages")]
     public IList<V1api20230315previewstorageFleetsUpdateRunSpecStrategyStages>? Stages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.FleetsUpdateRun_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpec
@@ -207,7 +228,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpec
     [JsonPropertyName("strategy")]
     public V1api20230315previewstorageFleetsUpdateRunSpecStrategy? Strategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusConditions
@@ -240,7 +263,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ManagedClusterUpgradeSpec_STATUS The upgrade to apply to a ManagedCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusManagedClusterUpdateUpgrade
@@ -257,7 +282,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusManagedClus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ManagedClusterUpdate_STATUS The update to be applied to the ManagedClusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusManagedClusterUpdate
@@ -270,7 +297,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusManagedClus
     [JsonPropertyName("upgrade")]
     public V1api20230315previewstorageFleetsUpdateRunStatusManagedClusterUpdateUpgrade? Upgrade { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatusErrorAdditionalInfo
@@ -287,7 +316,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatusErrorDetailsAdditionalInfo
@@ -304,7 +335,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatusErrorDetails
@@ -329,7 +362,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatusError
@@ -358,7 +393,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatusStatus
@@ -383,7 +420,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.WaitStatus_STATUS The status of the wait duration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesAfterStageWaitStatus
@@ -400,7 +439,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("waitDurationInSeconds")]
     public int? WaitDurationInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatusErrorAdditionalInfo
@@ -417,7 +458,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatusErrorDetailsAdditionalInfo
@@ -434,7 +477,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatusErrorDetails
@@ -459,7 +504,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatusError
@@ -488,7 +535,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatus
@@ -513,7 +562,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.MemberUpdateStatus_STATUS The status of a member update operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembers
@@ -538,7 +589,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("status")]
     public V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsMembersStatus? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatusErrorAdditionalInfo
@@ -555,7 +608,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatusErrorDetailsAdditionalInfo
@@ -572,7 +627,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatusErrorDetails
@@ -597,7 +654,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatusError
@@ -626,7 +685,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatus
@@ -651,7 +712,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateGroupStatus_STATUS The status of a UpdateGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroups
@@ -672,7 +735,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("status")]
     public V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesGroupsStatus? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatusErrorAdditionalInfo
@@ -689,7 +754,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatusErrorDetailsAdditionalInfo
@@ -706,7 +773,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatusErrorDetails
@@ -731,7 +800,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatusError
@@ -760,7 +831,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatus
@@ -785,7 +858,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateStageStatus_STATUS The status of a UpdateStage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStages
@@ -810,7 +885,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStage
     [JsonPropertyName("status")]
     public V1api20230315previewstorageFleetsUpdateRunStatusStatusStagesStatus? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatusErrorAdditionalInfo
@@ -827,7 +904,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatusErrorDetailsAdditionalInfo
@@ -844,7 +923,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatusErrorDetails
@@ -869,7 +950,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatusError
@@ -898,7 +981,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateStatus_STATUS The status for an operation or group of operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatus
@@ -923,7 +1008,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatusStatu
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateRunStatus_STATUS The status of a UpdateRun.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatus
@@ -940,7 +1027,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStatus
     [JsonPropertyName("status")]
     public V1api20230315previewstorageFleetsUpdateRunStatusStatusStatus? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateGroup_STATUS A group to be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategyStagesGroups
@@ -953,7 +1042,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategySta
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateStage_STATUS Defines a stage which contains the groups to update and the steps to take (e.g., wait for a time period) before starting the next stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategyStages
@@ -974,7 +1065,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategySta
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.UpdateRunStrategy_STATUS Defines the update sequence of the clusters via stages and groups. Stages within a run are executed sequentially one after another. Groups within a stage are executed in parallel. Member clusters within a group are updated sequentially one after another. A valid strategy contains no duplicate groups within or across stages.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategy
@@ -987,7 +1080,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusStrategy
     [JsonPropertyName("stages")]
     public IList<V1api20230315previewstorageFleetsUpdateRunStatusStrategyStages>? Stages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatusSystemData
@@ -1020,7 +1115,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.FleetsUpdateRun_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatus
@@ -1069,7 +1166,9 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230315preview.FleetsUpdateRun Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1099,3 +1198,4 @@ public partial class V1api20230315previewstorageFleetsUpdateRun : IKubernetesObj
     [JsonPropertyName("status")]
     public V1api20230315previewstorageFleetsUpdateRunStatus? Status { get; set; }
 }
+#nullable disable

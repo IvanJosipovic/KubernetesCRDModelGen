@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Agent is the Schema for the Agents API. Agents are best described as Natural Language Understanding (NLU) modules that transform user requests into actionable data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AgentList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Agent> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderAdvancedSettingsAudioExportGcsDestination
@@ -42,7 +45,9 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettingsAudioExportGcsDe
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderAdvancedSettingsDtmfSettings
@@ -59,7 +64,9 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettingsDtmfSettings
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderAdvancedSettingsLoggingSettings
@@ -76,7 +83,9 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettingsLoggingSettings
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderAdvancedSettingsSpeechSettings
@@ -97,7 +106,9 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettingsSpeechSettings
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderAdvancedSettings
@@ -118,7 +129,9 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettings
     [JsonPropertyName("speechSettings")]
     public V1beta1AgentSpecForProviderAdvancedSettingsSpeechSettings? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gen App Builder-related agent-level settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderGenAppBuilderSettings
@@ -127,7 +140,9 @@ public partial class V1beta1AgentSpecForProviderGenAppBuilderSettings
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The access token used to authenticate the access to the GitHub repository. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSettingsAccessTokenSecretRef
@@ -140,7 +155,9 @@ public partial class V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSett
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings of integration with GitHub. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSettings
@@ -165,7 +182,9 @@ public partial class V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSett
     [JsonPropertyName("trackingBranch")]
     public string? TrackingBranch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Git integration settings for this agent. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderGitIntegrationSettings
@@ -174,7 +193,9 @@ public partial class V1beta1AgentSpecForProviderGitIntegrationSettings
     [JsonPropertyName("githubSettings")]
     public V1beta1AgentSpecForProviderGitIntegrationSettingsGithubSettings? GithubSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings related to speech recognition. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderSpeechToTextSettings
@@ -183,7 +204,9 @@ public partial class V1beta1AgentSpecForProviderSpeechToTextSettings
     [JsonPropertyName("enableSpeechAdaptation")]
     public bool? EnableSpeechAdaptation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings related to speech synthesizing. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderTextToSpeechSettings
@@ -192,7 +215,9 @@ public partial class V1beta1AgentSpecForProviderTextToSpeechSettings
     [JsonPropertyName("synthesizeSpeechConfigs")]
     public string? SynthesizeSpeechConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProvider
@@ -265,7 +290,9 @@ public partial class V1beta1AgentSpecForProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderAdvancedSettingsAudioExportGcsDestination
@@ -274,7 +301,9 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettingsAudioExportGcsD
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderAdvancedSettingsDtmfSettings
@@ -291,7 +320,9 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettingsDtmfSettings
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderAdvancedSettingsLoggingSettings
@@ -308,7 +339,9 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettingsLoggingSettings
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderAdvancedSettingsSpeechSettings
@@ -329,7 +362,9 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettingsSpeechSettings
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderAdvancedSettings
@@ -350,7 +385,9 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettings
     [JsonPropertyName("speechSettings")]
     public V1beta1AgentSpecInitProviderAdvancedSettingsSpeechSettings? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gen App Builder-related agent-level settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderGenAppBuilderSettings
@@ -359,7 +396,9 @@ public partial class V1beta1AgentSpecInitProviderGenAppBuilderSettings
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The access token used to authenticate the access to the GitHub repository. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSettingsAccessTokenSecretRef
@@ -372,7 +411,9 @@ public partial class V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSet
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings of integration with GitHub. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSettings
@@ -397,7 +438,9 @@ public partial class V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSet
     [JsonPropertyName("trackingBranch")]
     public string? TrackingBranch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Git integration settings for this agent. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderGitIntegrationSettings
@@ -406,7 +449,9 @@ public partial class V1beta1AgentSpecInitProviderGitIntegrationSettings
     [JsonPropertyName("githubSettings")]
     public V1beta1AgentSpecInitProviderGitIntegrationSettingsGithubSettings? GithubSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings related to speech recognition. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderSpeechToTextSettings
@@ -415,7 +460,9 @@ public partial class V1beta1AgentSpecInitProviderSpeechToTextSettings
     [JsonPropertyName("enableSpeechAdaptation")]
     public bool? EnableSpeechAdaptation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings related to speech synthesizing. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderTextToSpeechSettings
@@ -424,7 +471,9 @@ public partial class V1beta1AgentSpecInitProviderTextToSpeechSettings
     [JsonPropertyName("synthesizeSpeechConfigs")]
     public string? SynthesizeSpeechConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProvider
@@ -497,7 +546,9 @@ public partial class V1beta1AgentSpecInitProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecProviderConfigRef
@@ -510,7 +561,9 @@ public partial class V1beta1AgentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecWriteConnectionSecretToRef
@@ -519,7 +572,9 @@ public partial class V1beta1AgentSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AgentSpec defines the desired state of Agent</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpec
@@ -544,7 +599,9 @@ public partial class V1beta1AgentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AgentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderAdvancedSettingsAudioExportGcsDestination
@@ -553,7 +610,9 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettingsAudioExportGcsD
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderAdvancedSettingsDtmfSettings
@@ -570,7 +629,9 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettingsDtmfSettings
     [JsonPropertyName("maxDigits")]
     public double? MaxDigits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderAdvancedSettingsLoggingSettings
@@ -587,7 +648,9 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettingsLoggingSettings
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderAdvancedSettingsSpeechSettings
@@ -608,7 +671,9 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettingsSpeechSettings
     [JsonPropertyName("useTimeoutBasedEndpointing")]
     public bool? UseTimeoutBasedEndpointing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderAdvancedSettings
@@ -629,7 +694,9 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettings
     [JsonPropertyName("speechSettings")]
     public V1beta1AgentStatusAtProviderAdvancedSettingsSpeechSettings? SpeechSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gen App Builder-related agent-level settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderGenAppBuilderSettings
@@ -638,7 +705,9 @@ public partial class V1beta1AgentStatusAtProviderGenAppBuilderSettings
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings of integration with GitHub. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderGitIntegrationSettingsGithubSettings
@@ -659,7 +728,9 @@ public partial class V1beta1AgentStatusAtProviderGitIntegrationSettingsGithubSet
     [JsonPropertyName("trackingBranch")]
     public string? TrackingBranch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Git integration settings for this agent. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderGitIntegrationSettings
@@ -668,7 +739,9 @@ public partial class V1beta1AgentStatusAtProviderGitIntegrationSettings
     [JsonPropertyName("githubSettings")]
     public V1beta1AgentStatusAtProviderGitIntegrationSettingsGithubSettings? GithubSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings related to speech recognition. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderSpeechToTextSettings
@@ -677,7 +750,9 @@ public partial class V1beta1AgentStatusAtProviderSpeechToTextSettings
     [JsonPropertyName("enableSpeechAdaptation")]
     public bool? EnableSpeechAdaptation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings related to speech synthesizing. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderTextToSpeechSettings
@@ -686,7 +761,9 @@ public partial class V1beta1AgentStatusAtProviderTextToSpeechSettings
     [JsonPropertyName("synthesizeSpeechConfigs")]
     public string? SynthesizeSpeechConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProvider
@@ -771,7 +848,9 @@ public partial class V1beta1AgentStatusAtProvider
     [JsonPropertyName("timeZone")]
     public string? TimeZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusConditions
@@ -800,7 +879,9 @@ public partial class V1beta1AgentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AgentStatus defines the observed state of Agent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatus
@@ -817,7 +898,9 @@ public partial class V1beta1AgentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Agent is the Schema for the Agents API. Agents are best described as Natural Language Understanding (NLU) modules that transform user requests into actionable data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -847,3 +930,4 @@ public partial class V1beta1Agent : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1AgentStatus? Status { get; set; }
 }
+#nullable disable

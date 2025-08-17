@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>ManagerManagementGroupConnection is the Schema for the ManagerManagementGroupConnections API. Manages a Network Manager Management Group Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagerManagementGroupConnectionList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1ManagerManagementGroupConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManagementGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManag
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManagementGroupIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManag
     [JsonPropertyName("policy")]
     public V1beta1ManagerManagementGroupConnectionSpecForProviderManagementGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManagementGroupIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManag
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManagementGroupIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManag
     [JsonPropertyName("policy")]
     public V1beta1ManagerManagementGroupConnectionSpecForProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderNetworkManagerIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Manager in network to populate networkManagerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderNetworkManagerIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderNetwo
     [JsonPropertyName("policy")]
     public V1beta1ManagerManagementGroupConnectionSpecForProviderNetworkManagerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderNetworkManagerIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Manager in network to populate networkManagerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderNetworkManagerIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderNetwo
     [JsonPropertyName("policy")]
     public V1beta1ManagerManagementGroupConnectionSpecForProviderNetworkManagerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecForProvider
     [JsonPropertyName("networkManagerIdSelector")]
     public V1beta1ManagerManagementGroupConnectionSpecForProviderNetworkManagerIdSelector? NetworkManagerIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecInitProviderNetworkManagerIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecInitProviderNetw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Manager in network to populate networkManagerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecInitProviderNetworkManagerIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecInitProviderNetw
     [JsonPropertyName("policy")]
     public V1beta1ManagerManagementGroupConnectionSpecInitProviderNetworkManagerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecInitProviderNetworkManagerIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecInitProviderNetw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Manager in network to populate networkManagerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecInitProviderNetworkManagerIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecInitProviderNetw
     [JsonPropertyName("policy")]
     public V1beta1ManagerManagementGroupConnectionSpecInitProviderNetworkManagerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecInitProvider
@@ -255,7 +284,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecInitProvider
     [JsonPropertyName("networkManagerIdSelector")]
     public V1beta1ManagerManagementGroupConnectionSpecInitProviderNetworkManagerIdSelector? NetworkManagerIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecProviderConfigRefPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecProviderConfigRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecProviderConfigRef
@@ -281,7 +314,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecProviderConfigRe
     [JsonPropertyName("policy")]
     public V1beta1ManagerManagementGroupConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecWriteConnectionSecretToRef
@@ -294,7 +329,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpecWriteConnectionS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagerManagementGroupConnectionSpec defines the desired state of ManagerManagementGroupConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpec
@@ -323,7 +360,9 @@ public partial class V1beta1ManagerManagementGroupConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagerManagementGroupConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionStatusAtProvider
@@ -348,7 +387,9 @@ public partial class V1beta1ManagerManagementGroupConnectionStatusAtProvider
     [JsonPropertyName("networkManagerId")]
     public string? NetworkManagerId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionStatusConditions
@@ -377,7 +418,9 @@ public partial class V1beta1ManagerManagementGroupConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagerManagementGroupConnectionStatus defines the observed state of ManagerManagementGroupConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionStatus
@@ -394,7 +437,9 @@ public partial class V1beta1ManagerManagementGroupConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagerManagementGroupConnection is the Schema for the ManagerManagementGroupConnections API. Manages a Network Manager Management Group Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -424,3 +469,4 @@ public partial class V1beta1ManagerManagementGroupConnection : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1ManagerManagementGroupConnectionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accessanalyzer.aws.m.upbound.io;
+#nullable enable
 /// <summary>Analyzer is the Schema for the Analyzers API. Manages an Access Analyzer Analyzer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AnalyzerList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Analyzer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAnalysisRuleInclusion
@@ -50,7 +53,9 @@ public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAn
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about analysis rules for the internal access analyzer. These rules determine which resources and access patterns will be analyzed. See analysis_rule Block for Internal Access Analyzer for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAnalysisRule
@@ -59,7 +64,9 @@ public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAn
     [JsonPropertyName("inclusion")]
     public IList<V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAnalysisRuleInclusion>? Inclusion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration of an internal access analyzer for an AWS organization or account. This configuration determines how the analyzer evaluates access within your AWS environment. See internal_access Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccess
@@ -68,7 +75,9 @@ public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccess
     [JsonPropertyName("analysisRule")]
     public V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAnalysisRule? AnalysisRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnalysisRuleExclusion
@@ -81,7 +90,9 @@ public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnal
     [JsonPropertyName("resourceTags")]
     public IList<IDictionary<string, string>>? ResourceTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about analysis rules for the analyzer. Analysis rules determine which entities will generate findings based on the criteria you define when you create the rule. See analysis_rule Block for Unused Access Analyzer for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnalysisRule
@@ -90,7 +101,9 @@ public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnal
     [JsonPropertyName("exclusion")]
     public IList<V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnalysisRuleExclusion>? Exclusion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration of an unused access analyzer for an AWS organization or account. See unused_access Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccess
@@ -103,7 +116,9 @@ public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccess
     [JsonPropertyName("unusedAccessAge")]
     public double? UnusedAccessAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the analyzer. See configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfiguration
@@ -116,7 +131,9 @@ public partial class V1beta1AnalyzerSpecForProviderConfiguration
     [JsonPropertyName("unusedAccess")]
     public V1beta1AnalyzerSpecForProviderConfigurationUnusedAccess? UnusedAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProvider
@@ -137,7 +154,9 @@ public partial class V1beta1AnalyzerSpecForProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessAnalysisRuleInclusion
@@ -154,7 +173,9 @@ public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessA
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about analysis rules for the internal access analyzer. These rules determine which resources and access patterns will be analyzed. See analysis_rule Block for Internal Access Analyzer for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessAnalysisRule
@@ -163,7 +184,9 @@ public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessA
     [JsonPropertyName("inclusion")]
     public IList<V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessAnalysisRuleInclusion>? Inclusion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration of an internal access analyzer for an AWS organization or account. This configuration determines how the analyzer evaluates access within your AWS environment. See internal_access Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccess
@@ -172,7 +195,9 @@ public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccess
     [JsonPropertyName("analysisRule")]
     public V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessAnalysisRule? AnalysisRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAnalysisRuleExclusion
@@ -185,7 +210,9 @@ public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAna
     [JsonPropertyName("resourceTags")]
     public IList<IDictionary<string, string>>? ResourceTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about analysis rules for the analyzer. Analysis rules determine which entities will generate findings based on the criteria you define when you create the rule. See analysis_rule Block for Unused Access Analyzer for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAnalysisRule
@@ -194,7 +221,9 @@ public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAna
     [JsonPropertyName("exclusion")]
     public IList<V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAnalysisRuleExclusion>? Exclusion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration of an unused access analyzer for an AWS organization or account. See unused_access Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccess
@@ -207,7 +236,9 @@ public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccess
     [JsonPropertyName("unusedAccessAge")]
     public double? UnusedAccessAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the analyzer. See configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfiguration
@@ -220,7 +251,9 @@ public partial class V1beta1AnalyzerSpecInitProviderConfiguration
     [JsonPropertyName("unusedAccess")]
     public V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccess? UnusedAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProvider
@@ -237,7 +270,9 @@ public partial class V1beta1AnalyzerSpecInitProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecProviderConfigRef
@@ -250,7 +285,9 @@ public partial class V1beta1AnalyzerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecWriteConnectionSecretToRef
@@ -259,7 +296,9 @@ public partial class V1beta1AnalyzerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AnalyzerSpec defines the desired state of Analyzer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpec
@@ -284,7 +323,9 @@ public partial class V1beta1AnalyzerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AnalyzerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessAnalysisRuleInclusion
@@ -301,7 +342,9 @@ public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessA
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about analysis rules for the internal access analyzer. These rules determine which resources and access patterns will be analyzed. See analysis_rule Block for Internal Access Analyzer for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessAnalysisRule
@@ -310,7 +353,9 @@ public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessA
     [JsonPropertyName("inclusion")]
     public IList<V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessAnalysisRuleInclusion>? Inclusion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration of an internal access analyzer for an AWS organization or account. This configuration determines how the analyzer evaluates access within your AWS environment. See internal_access Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccess
@@ -319,7 +364,9 @@ public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccess
     [JsonPropertyName("analysisRule")]
     public V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessAnalysisRule? AnalysisRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAnalysisRuleExclusion
@@ -332,7 +379,9 @@ public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAna
     [JsonPropertyName("resourceTags")]
     public IList<IDictionary<string, string>>? ResourceTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about analysis rules for the analyzer. Analysis rules determine which entities will generate findings based on the criteria you define when you create the rule. See analysis_rule Block for Unused Access Analyzer for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAnalysisRule
@@ -341,7 +390,9 @@ public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAna
     [JsonPropertyName("exclusion")]
     public IList<V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAnalysisRuleExclusion>? Exclusion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the configuration of an unused access analyzer for an AWS organization or account. See unused_access Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccess
@@ -354,7 +405,9 @@ public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccess
     [JsonPropertyName("unusedAccessAge")]
     public double? UnusedAccessAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that specifies the configuration of the analyzer. See configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfiguration
@@ -367,7 +420,9 @@ public partial class V1beta1AnalyzerStatusAtProviderConfiguration
     [JsonPropertyName("unusedAccess")]
     public V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccess? UnusedAccess { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProvider
@@ -400,7 +455,9 @@ public partial class V1beta1AnalyzerStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusConditions
@@ -429,7 +486,9 @@ public partial class V1beta1AnalyzerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AnalyzerStatus defines the observed state of Analyzer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatus
@@ -446,7 +505,9 @@ public partial class V1beta1AnalyzerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Analyzer is the Schema for the Analyzers API. Manages an Access Analyzer Analyzer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -476,3 +537,4 @@ public partial class V1beta1Analyzer : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1AnalyzerStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+#nullable enable
 /// <summary>DataSetDelimitedText is the Schema for the DataSetDelimitedTexts API. Manages an Azure Delimited Text Dataset inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataSetDelimitedTextList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1DataSetDelimitedText> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderAzureBlobFsLocation
@@ -62,7 +65,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderAzureBlobFsLocati
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderAzureBlobStorageLocation
@@ -91,7 +96,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderAzureBlobStorageL
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdRefPolicy
@@ -104,7 +111,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdRef
@@ -117,7 +126,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdSelectorPolicy
@@ -130,7 +141,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdSelector
@@ -147,7 +160,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdSele
     [JsonPropertyName("policy")]
     public V1beta1DataSetDelimitedTextSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderHttpServerLocation
@@ -172,7 +187,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderHttpServerLocatio
     [JsonPropertyName("relativeUrl")]
     public string? RelativeUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceNameRefPolicy
@@ -185,7 +202,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceNameRef
@@ -198,7 +217,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceName
     [JsonPropertyName("policy")]
     public V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceNameSelectorPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceNameSelector
@@ -228,7 +251,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceName
     [JsonPropertyName("policy")]
     public V1beta1DataSetDelimitedTextSpecForProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProviderSchemaColumn
@@ -245,7 +270,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecForProvider
@@ -346,7 +373,9 @@ public partial class V1beta1DataSetDelimitedTextSpecForProvider
     [JsonPropertyName("schemaColumn")]
     public IList<V1beta1DataSetDelimitedTextSpecForProviderSchemaColumn>? SchemaColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProviderAzureBlobFsLocation
@@ -375,7 +404,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProviderAzureBlobFsLocat
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProviderAzureBlobStorageLocation
@@ -404,7 +435,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProviderAzureBlobStorage
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProviderHttpServerLocation
@@ -429,7 +462,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProviderHttpServerLocati
     [JsonPropertyName("relativeUrl")]
     public string? RelativeUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNameRefPolicy
@@ -442,7 +477,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNameRef
@@ -455,7 +492,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNam
     [JsonPropertyName("policy")]
     public V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNameSelectorPolicy
@@ -468,7 +507,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinkedServiceWeb in datafactory to populate linkedServiceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNameSelector
@@ -485,7 +526,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNam
     [JsonPropertyName("policy")]
     public V1beta1DataSetDelimitedTextSpecInitProviderLinkedServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProviderSchemaColumn
@@ -502,7 +545,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecInitProvider
@@ -591,7 +636,9 @@ public partial class V1beta1DataSetDelimitedTextSpecInitProvider
     [JsonPropertyName("schemaColumn")]
     public IList<V1beta1DataSetDelimitedTextSpecInitProviderSchemaColumn>? SchemaColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecProviderConfigRefPolicy
@@ -604,7 +651,9 @@ public partial class V1beta1DataSetDelimitedTextSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecProviderConfigRef
@@ -617,7 +666,9 @@ public partial class V1beta1DataSetDelimitedTextSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetDelimitedTextSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpecWriteConnectionSecretToRef
@@ -630,7 +681,9 @@ public partial class V1beta1DataSetDelimitedTextSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetDelimitedTextSpec defines the desired state of DataSetDelimitedText</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextSpec
@@ -659,7 +712,9 @@ public partial class V1beta1DataSetDelimitedTextSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataSetDelimitedTextSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextStatusAtProviderAzureBlobFsLocation
@@ -688,7 +743,9 @@ public partial class V1beta1DataSetDelimitedTextStatusAtProviderAzureBlobFsLocat
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextStatusAtProviderAzureBlobStorageLocation
@@ -717,7 +774,9 @@ public partial class V1beta1DataSetDelimitedTextStatusAtProviderAzureBlobStorage
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextStatusAtProviderHttpServerLocation
@@ -742,7 +801,9 @@ public partial class V1beta1DataSetDelimitedTextStatusAtProviderHttpServerLocati
     [JsonPropertyName("relativeUrl")]
     public string? RelativeUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextStatusAtProviderSchemaColumn
@@ -759,7 +820,9 @@ public partial class V1beta1DataSetDelimitedTextStatusAtProviderSchemaColumn
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextStatusAtProvider
@@ -848,7 +911,9 @@ public partial class V1beta1DataSetDelimitedTextStatusAtProvider
     [JsonPropertyName("schemaColumn")]
     public IList<V1beta1DataSetDelimitedTextStatusAtProviderSchemaColumn>? SchemaColumn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextStatusConditions
@@ -877,7 +942,9 @@ public partial class V1beta1DataSetDelimitedTextStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetDelimitedTextStatus defines the observed state of DataSetDelimitedText.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetDelimitedTextStatus
@@ -894,7 +961,9 @@ public partial class V1beta1DataSetDelimitedTextStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetDelimitedText is the Schema for the DataSetDelimitedTexts API. Manages an Azure Delimited Text Dataset inside an Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -924,3 +993,4 @@ public partial class V1beta1DataSetDelimitedText : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1DataSetDelimitedTextStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspacesBigDataPool Generator information: - Generated from: /synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/bigDataPool.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools/{bigDataPoolName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1api20210601storageWorkspacesBigDataPool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.AutoPauseProperties Auto-pausing properties of a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoPause
@@ -50,7 +53,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoPause
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.AutoScaleProperties Auto-scaling properties of a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoScale
@@ -71,7 +76,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecAutoScale
     [JsonPropertyName("minNodeCount")]
     public int? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.LibraryInfo Library/package information of a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecCustomLibraries
@@ -96,7 +103,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecCustomLibrarie
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DynamicExecutorAllocation Dynamic Executor Allocation Properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecDynamicExecutorAllocation
@@ -117,7 +126,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecDynamicExecuto
     [JsonPropertyName("minExecutors")]
     public int? MinExecutors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.LibraryRequirements Library requirements for a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecLibraryRequirements
@@ -134,7 +145,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecLibraryRequire
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecOperatorSpecConfigMapExpressions
@@ -151,7 +164,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecOperatorSpecCo
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecOperatorSpecSecretExpressions
@@ -168,7 +183,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecOperatorSpecSe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspacesBigDataPoolOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecOperatorSpec
@@ -185,7 +202,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20210601storageWorkspacesBigDataPoolSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a synapse.azure.com/Workspace resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecOwner
@@ -198,7 +217,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.SparkConfigProperties SparkConfig Properties for a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpecSparkConfigProperties
@@ -219,7 +240,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecSparkConfigPro
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspacesBigDataPool_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpec
@@ -320,7 +343,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.AutoPauseProperties_STATUS Auto-pausing properties of a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoPause
@@ -337,7 +362,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoPause
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.AutoScaleProperties_STATUS Auto-scaling properties of a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoScale
@@ -358,7 +385,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusAutoScale
     [JsonPropertyName("minNodeCount")]
     public int? MinNodeCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusConditions
@@ -391,7 +420,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.LibraryInfo_STATUS Library/package information of a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusCustomLibraries
@@ -428,7 +459,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusCustomLibrar
     [JsonPropertyName("uploadedTimestamp")]
     public string? UploadedTimestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DynamicExecutorAllocation_STATUS Dynamic Executor Allocation Properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusDynamicExecutorAllocation
@@ -449,7 +482,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusDynamicExecu
     [JsonPropertyName("minExecutors")]
     public int? MinExecutors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.LibraryRequirements_STATUS Library requirements for a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusLibraryRequirements
@@ -470,7 +505,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusLibraryRequi
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.SparkConfigProperties_STATUS SparkConfig Properties for a Big Data pool powered by Apache Spark</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatusSparkConfigProperties
@@ -495,7 +532,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusSparkConfigP
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspacesBigDataPool_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatus
@@ -604,7 +643,9 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.WorkspacesBigDataPool Generator information: - Generated from: /synapse/resource-manager/Microsoft.Synapse/stable/2021-06-01/bigDataPool.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Synapse/workspaces/{workspaceName}/bigDataPools/{bigDataPoolName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -634,3 +675,4 @@ public partial class V1api20210601storageWorkspacesBigDataPool : IKubernetesObje
     [JsonPropertyName("status")]
     public V1api20210601storageWorkspacesBigDataPoolStatus? Status { get; set; }
 }
+#nullable disable

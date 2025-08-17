@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.m.upbound.io;
+#nullable enable
 /// <summary>CertificateIssuer is the Schema for the CertificateIssuers API. Manages a Key Vault Certificate Issuer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateIssuerList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1CertificateIssuer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecForProviderAdmin
@@ -54,7 +57,9 @@ public partial class V1beta1CertificateIssuerSpecForProviderAdmin
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecForProviderKeyVaultIdRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1CertificateIssuerSpecForProviderKeyVaultIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecForProviderKeyVaultIdRef
@@ -84,7 +91,9 @@ public partial class V1beta1CertificateIssuerSpecForProviderKeyVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateIssuerSpecForProviderKeyVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecForProviderKeyVaultIdSelectorPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1CertificateIssuerSpecForProviderKeyVaultIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecForProviderKeyVaultIdSelector
@@ -118,7 +129,9 @@ public partial class V1beta1CertificateIssuerSpecForProviderKeyVaultIdSelector
     [JsonPropertyName("policy")]
     public V1beta1CertificateIssuerSpecForProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the account and organization ID at the third-party Certificate Issuer. If not specified, will not overwrite any previous value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecForProviderPasswordSecretRef
@@ -131,7 +144,9 @@ public partial class V1beta1CertificateIssuerSpecForProviderPasswordSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecForProvider
@@ -168,7 +183,9 @@ public partial class V1beta1CertificateIssuerSpecForProvider
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecInitProviderAdmin
@@ -189,7 +206,9 @@ public partial class V1beta1CertificateIssuerSpecInitProviderAdmin
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecInitProviderKeyVaultIdRefPolicy
@@ -202,7 +221,9 @@ public partial class V1beta1CertificateIssuerSpecInitProviderKeyVaultIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecInitProviderKeyVaultIdRef
@@ -219,7 +240,9 @@ public partial class V1beta1CertificateIssuerSpecInitProviderKeyVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateIssuerSpecInitProviderKeyVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecInitProviderKeyVaultIdSelectorPolicy
@@ -232,7 +255,9 @@ public partial class V1beta1CertificateIssuerSpecInitProviderKeyVaultIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecInitProviderKeyVaultIdSelector
@@ -253,7 +278,9 @@ public partial class V1beta1CertificateIssuerSpecInitProviderKeyVaultIdSelector
     [JsonPropertyName("policy")]
     public V1beta1CertificateIssuerSpecInitProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the account and organization ID at the third-party Certificate Issuer. If not specified, will not overwrite any previous value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecInitProviderPasswordSecretRef
@@ -266,7 +293,9 @@ public partial class V1beta1CertificateIssuerSpecInitProviderPasswordSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecInitProvider
@@ -303,7 +332,9 @@ public partial class V1beta1CertificateIssuerSpecInitProvider
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecProviderConfigRef
@@ -316,7 +347,9 @@ public partial class V1beta1CertificateIssuerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecWriteConnectionSecretToRef
@@ -325,7 +358,9 @@ public partial class V1beta1CertificateIssuerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateIssuerSpec defines the desired state of CertificateIssuer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpec
@@ -350,7 +385,9 @@ public partial class V1beta1CertificateIssuerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateIssuerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerStatusAtProviderAdmin
@@ -371,7 +408,9 @@ public partial class V1beta1CertificateIssuerStatusAtProviderAdmin
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerStatusAtProvider
@@ -400,7 +439,9 @@ public partial class V1beta1CertificateIssuerStatusAtProvider
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerStatusConditions
@@ -429,7 +470,9 @@ public partial class V1beta1CertificateIssuerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateIssuerStatus defines the observed state of CertificateIssuer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerStatus
@@ -446,7 +489,9 @@ public partial class V1beta1CertificateIssuerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateIssuer is the Schema for the CertificateIssuers API. Manages a Key Vault Certificate Issuer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -476,3 +521,4 @@ public partial class V1beta1CertificateIssuer : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1CertificateIssuerStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>NetworkInterfaceBackendAddressPoolAssociation is the Schema for the NetworkInterfaceBackendAddressPoolAssociations API. Manages the association between a Network Interface and a Load Balancer's Backend Address Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationList : 
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkInterfaceBackendAddressPoolAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdRef
@@ -224,7 +247,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdSelector
@@ -258,7 +285,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdRef
@@ -288,7 +319,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in network to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdSelector
@@ -322,7 +357,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("policy")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecPro
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecWri
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceBackendAddressPoolAssociationSpec defines the desired state of NetworkInterfaceBackendAddressPoolAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpec
@@ -402,7 +445,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationStatusAtProvider
@@ -423,7 +468,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationStatusA
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationStatusConditions
@@ -452,7 +499,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationStatusC
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceBackendAddressPoolAssociationStatus defines the observed state of NetworkInterfaceBackendAddressPoolAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationStatus
@@ -469,7 +518,9 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkInterfaceBackendAddressPoolAssociation is the Schema for the NetworkInterfaceBackendAddressPoolAssociations API. Manages the association between a Network Interface and a Load Balancer's Backend Address Pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -499,3 +550,4 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociation : IKub
     [JsonPropertyName("status")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationStatus? Status { get; set; }
 }
+#nullable disable

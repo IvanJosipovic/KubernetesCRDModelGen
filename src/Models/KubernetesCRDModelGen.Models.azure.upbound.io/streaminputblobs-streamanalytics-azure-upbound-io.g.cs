@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+#nullable enable
 /// <summary>StreamInputBlob is the Schema for the StreamInputBlobs API. Manages a Stream Analytics Stream Input Blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StreamInputBlobList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1StreamInputBlob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderResourceGroupNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderResourceGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderResourceGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderResourceGroupNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderResourceGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderResourceGroupNameSelec
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderSerialization
@@ -106,7 +117,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Access Key which should be used to connect to this Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountKeySecretRef
@@ -123,7 +136,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountKeySecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountNameRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountNameRef
@@ -149,7 +166,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountNameSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountNameSelector
@@ -179,7 +200,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageAccountNameSele
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageContainerNameRefPolicy
@@ -192,7 +215,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageContainerNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageContainerNameRef
@@ -205,7 +230,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageContainerNameRe
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecForProviderStorageContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageContainerNameSelectorPolicy
@@ -218,7 +245,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageContainerNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStorageContainerNameSelector
@@ -235,7 +264,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStorageContainerNameSe
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecForProviderStorageContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobNameRefPolicy
@@ -248,7 +279,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobNameRef
@@ -261,7 +294,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobName
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobNameSelectorPolicy
@@ -274,7 +309,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobNameSelector
@@ -291,7 +328,9 @@ public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobName
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProvider
@@ -372,7 +411,9 @@ public partial class V1beta1StreamInputBlobSpecForProvider
     [JsonPropertyName("timeFormat")]
     public string? TimeFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderResourceGroupNameRefPolicy
@@ -385,7 +426,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderResourceGroupNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderResourceGroupNameRef
@@ -398,7 +441,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderResourceGroupNameSelectorPolicy
@@ -411,7 +456,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderResourceGroupNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderResourceGroupNameSelector
@@ -428,7 +475,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderResourceGroupNameSele
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderSerialization
@@ -445,7 +494,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Access Key which should be used to connect to this Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountKeySecretRef
@@ -462,7 +513,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountKeySecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountNameRefPolicy
@@ -475,7 +528,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountNameRef
@@ -488,7 +543,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecInitProviderStorageAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountNameSelectorPolicy
@@ -501,7 +558,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountNameSelector
@@ -518,7 +577,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountNameSel
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecInitProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageContainerNameRefPolicy
@@ -531,7 +592,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageContainerNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate storageContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageContainerNameRef
@@ -544,7 +607,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageContainerNameR
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecInitProviderStorageContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageContainerNameSelectorPolicy
@@ -557,7 +622,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageContainerNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate storageContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStorageContainerNameSelector
@@ -574,7 +641,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStorageContainerNameS
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecInitProviderStorageContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNameRefPolicy
@@ -587,7 +656,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNameRef
@@ -600,7 +671,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNam
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
@@ -613,7 +686,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNameSelector
@@ -630,7 +705,9 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNam
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProvider
@@ -711,7 +788,9 @@ public partial class V1beta1StreamInputBlobSpecInitProvider
     [JsonPropertyName("timeFormat")]
     public string? TimeFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecProviderConfigRefPolicy
@@ -724,7 +803,9 @@ public partial class V1beta1StreamInputBlobSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecProviderConfigRef
@@ -737,7 +818,9 @@ public partial class V1beta1StreamInputBlobSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1StreamInputBlobSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecWriteConnectionSecretToRef
@@ -750,7 +833,9 @@ public partial class V1beta1StreamInputBlobSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StreamInputBlobSpec defines the desired state of StreamInputBlob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpec
@@ -779,7 +864,9 @@ public partial class V1beta1StreamInputBlobSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1StreamInputBlobSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobStatusAtProviderSerialization
@@ -796,7 +883,9 @@ public partial class V1beta1StreamInputBlobStatusAtProviderSerialization
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobStatusAtProvider
@@ -845,7 +934,9 @@ public partial class V1beta1StreamInputBlobStatusAtProvider
     [JsonPropertyName("timeFormat")]
     public string? TimeFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobStatusConditions
@@ -874,7 +965,9 @@ public partial class V1beta1StreamInputBlobStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StreamInputBlobStatus defines the observed state of StreamInputBlob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobStatus
@@ -891,7 +984,9 @@ public partial class V1beta1StreamInputBlobStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StreamInputBlob is the Schema for the StreamInputBlobs API. Manages a Stream Analytics Stream Input Blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -921,3 +1016,4 @@ public partial class V1beta1StreamInputBlob : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1StreamInputBlobStatus? Status { get; set; }
 }
+#nullable disable

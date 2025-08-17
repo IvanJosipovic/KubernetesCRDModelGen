@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>Reservation is the Schema for the Reservations API. Represents a reservation resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ReservationList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1Reservation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecForProviderShareSettingsProjectMap
@@ -46,7 +49,9 @@ public partial class V1beta1ReservationSpecForProviderShareSettingsProjectMap
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecForProviderShareSettings
@@ -59,7 +64,9 @@ public partial class V1beta1ReservationSpecForProviderShareSettings
     [JsonPropertyName("shareType")]
     public string? ShareType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecForProviderSpecificReservationInstancePropertiesGuestAccelerators
@@ -72,7 +79,9 @@ public partial class V1beta1ReservationSpecForProviderSpecificReservationInstanc
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecForProviderSpecificReservationInstancePropertiesLocalSsds
@@ -85,7 +94,9 @@ public partial class V1beta1ReservationSpecForProviderSpecificReservationInstanc
     [JsonPropertyName("interface")]
     public string? Interface { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecForProviderSpecificReservationInstanceProperties
@@ -106,7 +117,9 @@ public partial class V1beta1ReservationSpecForProviderSpecificReservationInstanc
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecForProviderSpecificReservation
@@ -119,7 +132,9 @@ public partial class V1beta1ReservationSpecForProviderSpecificReservation
     [JsonPropertyName("instanceProperties")]
     public IList<V1beta1ReservationSpecForProviderSpecificReservationInstanceProperties>? InstanceProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecForProvider
@@ -148,7 +163,9 @@ public partial class V1beta1ReservationSpecForProvider
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecInitProviderShareSettingsProjectMap
@@ -161,7 +178,9 @@ public partial class V1beta1ReservationSpecInitProviderShareSettingsProjectMap
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecInitProviderShareSettings
@@ -174,7 +193,9 @@ public partial class V1beta1ReservationSpecInitProviderShareSettings
     [JsonPropertyName("shareType")]
     public string? ShareType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecInitProviderSpecificReservationInstancePropertiesGuestAccelerators
@@ -187,7 +208,9 @@ public partial class V1beta1ReservationSpecInitProviderSpecificReservationInstan
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecInitProviderSpecificReservationInstancePropertiesLocalSsds
@@ -200,7 +223,9 @@ public partial class V1beta1ReservationSpecInitProviderSpecificReservationInstan
     [JsonPropertyName("interface")]
     public string? Interface { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecInitProviderSpecificReservationInstanceProperties
@@ -221,7 +246,9 @@ public partial class V1beta1ReservationSpecInitProviderSpecificReservationInstan
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecInitProviderSpecificReservation
@@ -234,7 +261,9 @@ public partial class V1beta1ReservationSpecInitProviderSpecificReservation
     [JsonPropertyName("instanceProperties")]
     public IList<V1beta1ReservationSpecInitProviderSpecificReservationInstanceProperties>? InstanceProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecInitProvider
@@ -259,7 +288,9 @@ public partial class V1beta1ReservationSpecInitProvider
     [JsonPropertyName("specificReservationRequired")]
     public bool? SpecificReservationRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecProviderConfigRefPolicy
@@ -272,7 +303,9 @@ public partial class V1beta1ReservationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecProviderConfigRef
@@ -285,7 +318,9 @@ public partial class V1beta1ReservationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ReservationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpecWriteConnectionSecretToRef
@@ -298,7 +333,9 @@ public partial class V1beta1ReservationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReservationSpec defines the desired state of Reservation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationSpec
@@ -327,7 +364,9 @@ public partial class V1beta1ReservationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ReservationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusAtProviderShareSettingsProjectMap
@@ -340,7 +379,9 @@ public partial class V1beta1ReservationStatusAtProviderShareSettingsProjectMap
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusAtProviderShareSettings
@@ -353,7 +394,9 @@ public partial class V1beta1ReservationStatusAtProviderShareSettings
     [JsonPropertyName("shareType")]
     public string? ShareType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusAtProviderSpecificReservationInstancePropertiesGuestAccelerators
@@ -366,7 +409,9 @@ public partial class V1beta1ReservationStatusAtProviderSpecificReservationInstan
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusAtProviderSpecificReservationInstancePropertiesLocalSsds
@@ -379,7 +424,9 @@ public partial class V1beta1ReservationStatusAtProviderSpecificReservationInstan
     [JsonPropertyName("interface")]
     public string? Interface { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusAtProviderSpecificReservationInstanceProperties
@@ -400,7 +447,9 @@ public partial class V1beta1ReservationStatusAtProviderSpecificReservationInstan
     [JsonPropertyName("minCpuPlatform")]
     public string? MinCpuPlatform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusAtProviderSpecificReservation
@@ -417,7 +466,9 @@ public partial class V1beta1ReservationStatusAtProviderSpecificReservation
     [JsonPropertyName("instanceProperties")]
     public IList<V1beta1ReservationStatusAtProviderSpecificReservationInstanceProperties>? InstanceProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusAtProvider
@@ -466,7 +517,9 @@ public partial class V1beta1ReservationStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusConditions
@@ -495,7 +548,9 @@ public partial class V1beta1ReservationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReservationStatus defines the observed state of Reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatus
@@ -512,7 +567,9 @@ public partial class V1beta1ReservationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reservation is the Schema for the Reservations API. Represents a reservation resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -542,3 +599,4 @@ public partial class V1beta1Reservation : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ReservationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230701.Vault Generator information: - Generated from: /keyvault/resource-manager/Microsoft.KeyVault/stable/2023-07-01/keyvault.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230701storageVaultList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1api20230701storageVault> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20230701storageVaultSpecOperatorSpecConfigMapExpressio
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20230701storageVaultSpecOperatorSpecSecretExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.VaultOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20230701storageVaultSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230701storageVaultSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20230701storageVaultSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesApplicationIdFromConfig
@@ -110,7 +121,9 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesApplic
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesObjectIdFromConfig
@@ -123,7 +136,9 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesObject
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Permissions Permissions the identity has for keys, secrets, certificates and storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesPermissions
@@ -148,7 +163,9 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesPermis
     [JsonPropertyName("storage")]
     public IList<string>? Storage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesTenantIdFromConfig
@@ -161,7 +178,9 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesTenant
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.AccessPolicyEntry An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesAccessPolicies
@@ -198,7 +217,9 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPolicies
     [JsonPropertyName("tenantIdFromConfig")]
     public V1api20230701storageVaultSpecPropertiesAccessPoliciesTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.IPRule A rule governing the accessibility of a vault from a specific ip address or ip range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsIpRules
@@ -211,7 +232,9 @@ public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsIpRules
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNetworkRulesReference
@@ -232,7 +255,9 @@ public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.VirtualNetworkRule A rule governing the accessibility of a vault from a specific virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNetworkRules
@@ -249,7 +274,9 @@ public partial class V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNe
     [JsonPropertyName("reference")]
     public V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNetworkRulesReference Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.NetworkRuleSet A set of rules governing the network accessibility of a vault.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesNetworkAcls
@@ -274,7 +301,9 @@ public partial class V1api20230701storageVaultSpecPropertiesNetworkAcls
     [JsonPropertyName("virtualNetworkRules")]
     public IList<V1api20230701storageVaultSpecPropertiesNetworkAclsVirtualNetworkRules>? VirtualNetworkRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Sku SKU details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesSku
@@ -291,7 +320,9 @@ public partial class V1api20230701storageVaultSpecPropertiesSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesTenantIdFromConfig
@@ -304,7 +335,9 @@ public partial class V1api20230701storageVaultSpecPropertiesTenantIdFromConfig
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.VaultProperties Properties of the vault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecProperties
@@ -377,7 +410,9 @@ public partial class V1api20230701storageVaultSpecProperties
     [JsonPropertyName("vaultUri")]
     public string? VaultUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Vault_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpec
@@ -414,7 +449,9 @@ public partial class V1api20230701storageVaultSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusConditions
@@ -447,7 +484,9 @@ public partial class V1api20230701storageVaultStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Permissions_STATUS Permissions the identity has for keys, secrets, certificates and storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesAccessPoliciesPermissions
@@ -472,7 +511,9 @@ public partial class V1api20230701storageVaultStatusPropertiesAccessPoliciesPerm
     [JsonPropertyName("storage")]
     public IList<string>? Storage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.AccessPolicyEntry_STATUS An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesAccessPolicies
@@ -497,7 +538,9 @@ public partial class V1api20230701storageVaultStatusPropertiesAccessPolicies
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.IPRule_STATUS A rule governing the accessibility of a vault from a specific ip address or ip range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesNetworkAclsIpRules
@@ -510,7 +553,9 @@ public partial class V1api20230701storageVaultStatusPropertiesNetworkAclsIpRules
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.VirtualNetworkRule_STATUS A rule governing the accessibility of a vault from a specific virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesNetworkAclsVirtualNetworkRules
@@ -527,7 +572,9 @@ public partial class V1api20230701storageVaultStatusPropertiesNetworkAclsVirtual
     [JsonPropertyName("ignoreMissingVnetServiceEndpoint")]
     public bool? IgnoreMissingVnetServiceEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.NetworkRuleSet_STATUS A set of rules governing the network accessibility of a vault.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesNetworkAcls
@@ -552,7 +599,9 @@ public partial class V1api20230701storageVaultStatusPropertiesNetworkAcls
     [JsonPropertyName("virtualNetworkRules")]
     public IList<V1api20230701storageVaultStatusPropertiesNetworkAclsVirtualNetworkRules>? VirtualNetworkRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.PrivateEndpoint_STATUS Private endpoint object properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointConnectionsPrivateEndpoint
@@ -565,7 +614,9 @@ public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointCon
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.PrivateLinkServiceConnectionState_STATUS An object that represents the approval state of the private link connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointConnectionsPrivateLinkServiceConnectionState
@@ -586,7 +637,9 @@ public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointCon
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.PrivateEndpointConnectionItem_STATUS Private endpoint connection item.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointConnections
@@ -615,7 +668,9 @@ public partial class V1api20230701storageVaultStatusPropertiesPrivateEndpointCon
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Sku_STATUS SKU details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusPropertiesSku
@@ -632,7 +687,9 @@ public partial class V1api20230701storageVaultStatusPropertiesSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.VaultProperties_STATUS Properties of the vault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusProperties
@@ -709,7 +766,9 @@ public partial class V1api20230701storageVaultStatusProperties
     [JsonPropertyName("vaultUri")]
     public string? VaultUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.SystemData_STATUS Metadata pertaining to creation and last modification of the key vault resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusSystemData
@@ -742,7 +801,9 @@ public partial class V1api20230701storageVaultStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Vault_STATUS Resource information with extended details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatus
@@ -783,7 +844,9 @@ public partial class V1api20230701storageVaultStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230701.Vault Generator information: - Generated from: /keyvault/resource-manager/Microsoft.KeyVault/stable/2023-07-01/keyvault.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -813,3 +876,4 @@ public partial class V1api20230701storageVault : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1api20230701storageVaultStatus? Status { get; set; }
 }
+#nullable disable

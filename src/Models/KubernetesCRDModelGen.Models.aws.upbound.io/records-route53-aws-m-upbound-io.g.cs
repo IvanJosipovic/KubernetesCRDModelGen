@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53.aws.m.upbound.io;
+#nullable enable
 /// <summary>Record is the Schema for the Records API. Provides a Route53 record resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RecordList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Record> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderAlias
@@ -50,7 +53,9 @@ public partial class V1beta1RecordSpecForProviderAlias
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the IP network ranges of requestors. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderCidrRoutingPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1RecordSpecForProviderCidrRoutingPolicy
     [JsonPropertyName("locationName")]
     public string? LocationName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderFailoverRoutingPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1RecordSpecForProviderFailoverRoutingPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderGeolocationRoutingPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1RecordSpecForProviderGeolocationRoutingPolicy
     [JsonPropertyName("subdivision")]
     public string? Subdivision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderGeoproximityRoutingPolicyCoordinates
@@ -102,7 +113,9 @@ public partial class V1beta1RecordSpecForProviderGeoproximityRoutingPolicyCoordi
     [JsonPropertyName("longitude")]
     public string? Longitude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the geoproximity of the requestor. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderGeoproximityRoutingPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1RecordSpecForProviderGeoproximityRoutingPolicy
     [JsonPropertyName("localZoneGroup")]
     public string? LocalZoneGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderHealthCheckIdRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1RecordSpecForProviderHealthCheckIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthCheck in route53 to populate healthCheckId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderHealthCheckIdRef
@@ -153,7 +170,9 @@ public partial class V1beta1RecordSpecForProviderHealthCheckIdRef
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecForProviderHealthCheckIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderHealthCheckIdSelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1RecordSpecForProviderHealthCheckIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthCheck in route53 to populate healthCheckId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderHealthCheckIdSelector
@@ -187,7 +208,9 @@ public partial class V1beta1RecordSpecForProviderHealthCheckIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecForProviderHealthCheckIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderLatencyRoutingPolicy
@@ -196,7 +219,9 @@ public partial class V1beta1RecordSpecForProviderLatencyRoutingPolicy
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderRecordsRefsPolicy
@@ -209,7 +234,9 @@ public partial class V1beta1RecordSpecForProviderRecordsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderRecordsRefs
@@ -226,7 +253,9 @@ public partial class V1beta1RecordSpecForProviderRecordsRefs
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecForProviderRecordsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderRecordsSelectorPolicy
@@ -239,7 +268,9 @@ public partial class V1beta1RecordSpecForProviderRecordsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of EIP in ec2 to populate records.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderRecordsSelector
@@ -260,7 +291,9 @@ public partial class V1beta1RecordSpecForProviderRecordsSelector
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecForProviderRecordsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderWeightedRoutingPolicy
@@ -269,7 +302,9 @@ public partial class V1beta1RecordSpecForProviderWeightedRoutingPolicy
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderZoneIdRefPolicy
@@ -282,7 +317,9 @@ public partial class V1beta1RecordSpecForProviderZoneIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderZoneIdRef
@@ -299,7 +336,9 @@ public partial class V1beta1RecordSpecForProviderZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecForProviderZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderZoneIdSelectorPolicy
@@ -312,7 +351,9 @@ public partial class V1beta1RecordSpecForProviderZoneIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderZoneIdSelector
@@ -333,7 +374,9 @@ public partial class V1beta1RecordSpecForProviderZoneIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecForProviderZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProvider
@@ -426,7 +469,9 @@ public partial class V1beta1RecordSpecForProvider
     [JsonPropertyName("zoneIdSelector")]
     public V1beta1RecordSpecForProviderZoneIdSelector? ZoneIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderAlias
@@ -443,7 +488,9 @@ public partial class V1beta1RecordSpecInitProviderAlias
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the IP network ranges of requestors. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderCidrRoutingPolicy
@@ -456,7 +503,9 @@ public partial class V1beta1RecordSpecInitProviderCidrRoutingPolicy
     [JsonPropertyName("locationName")]
     public string? LocationName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderFailoverRoutingPolicy
@@ -465,7 +514,9 @@ public partial class V1beta1RecordSpecInitProviderFailoverRoutingPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderGeolocationRoutingPolicy
@@ -482,7 +533,9 @@ public partial class V1beta1RecordSpecInitProviderGeolocationRoutingPolicy
     [JsonPropertyName("subdivision")]
     public string? Subdivision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderGeoproximityRoutingPolicyCoordinates
@@ -495,7 +548,9 @@ public partial class V1beta1RecordSpecInitProviderGeoproximityRoutingPolicyCoord
     [JsonPropertyName("longitude")]
     public string? Longitude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the geoproximity of the requestor. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderGeoproximityRoutingPolicy
@@ -516,7 +571,9 @@ public partial class V1beta1RecordSpecInitProviderGeoproximityRoutingPolicy
     [JsonPropertyName("localZoneGroup")]
     public string? LocalZoneGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderHealthCheckIdRefPolicy
@@ -529,7 +586,9 @@ public partial class V1beta1RecordSpecInitProviderHealthCheckIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthCheck in route53 to populate healthCheckId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderHealthCheckIdRef
@@ -546,7 +605,9 @@ public partial class V1beta1RecordSpecInitProviderHealthCheckIdRef
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecInitProviderHealthCheckIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderHealthCheckIdSelectorPolicy
@@ -559,7 +620,9 @@ public partial class V1beta1RecordSpecInitProviderHealthCheckIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthCheck in route53 to populate healthCheckId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderHealthCheckIdSelector
@@ -580,13 +643,17 @@ public partial class V1beta1RecordSpecInitProviderHealthCheckIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecInitProviderHealthCheckIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderLatencyRoutingPolicy
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderRecordsRefsPolicy
@@ -599,7 +666,9 @@ public partial class V1beta1RecordSpecInitProviderRecordsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderRecordsRefs
@@ -616,7 +685,9 @@ public partial class V1beta1RecordSpecInitProviderRecordsRefs
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecInitProviderRecordsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderRecordsSelectorPolicy
@@ -629,7 +700,9 @@ public partial class V1beta1RecordSpecInitProviderRecordsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of EIP in ec2 to populate records.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderRecordsSelector
@@ -650,7 +723,9 @@ public partial class V1beta1RecordSpecInitProviderRecordsSelector
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecInitProviderRecordsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderWeightedRoutingPolicy
@@ -659,7 +734,9 @@ public partial class V1beta1RecordSpecInitProviderWeightedRoutingPolicy
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderZoneIdRefPolicy
@@ -672,7 +749,9 @@ public partial class V1beta1RecordSpecInitProviderZoneIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderZoneIdRef
@@ -689,7 +768,9 @@ public partial class V1beta1RecordSpecInitProviderZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecInitProviderZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderZoneIdSelectorPolicy
@@ -702,7 +783,9 @@ public partial class V1beta1RecordSpecInitProviderZoneIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderZoneIdSelector
@@ -723,7 +806,9 @@ public partial class V1beta1RecordSpecInitProviderZoneIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RecordSpecInitProviderZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProvider
@@ -816,7 +901,9 @@ public partial class V1beta1RecordSpecInitProvider
     [JsonPropertyName("zoneIdSelector")]
     public V1beta1RecordSpecInitProviderZoneIdSelector? ZoneIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecProviderConfigRef
@@ -829,7 +916,9 @@ public partial class V1beta1RecordSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecWriteConnectionSecretToRef
@@ -838,7 +927,9 @@ public partial class V1beta1RecordSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RecordSpec defines the desired state of Record</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpec
@@ -863,7 +954,9 @@ public partial class V1beta1RecordSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RecordSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An alias block. Conflicts with ttl &amp; records. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderAlias
@@ -880,7 +973,9 @@ public partial class V1beta1RecordStatusAtProviderAlias
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the IP network ranges of requestors. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderCidrRoutingPolicy
@@ -893,7 +988,9 @@ public partial class V1beta1RecordStatusAtProviderCidrRoutingPolicy
     [JsonPropertyName("locationName")]
     public string? LocationName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderFailoverRoutingPolicy
@@ -902,7 +999,9 @@ public partial class V1beta1RecordStatusAtProviderFailoverRoutingPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderGeolocationRoutingPolicy
@@ -919,7 +1018,9 @@ public partial class V1beta1RecordStatusAtProviderGeolocationRoutingPolicy
     [JsonPropertyName("subdivision")]
     public string? Subdivision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderGeoproximityRoutingPolicyCoordinates
@@ -932,7 +1033,9 @@ public partial class V1beta1RecordStatusAtProviderGeoproximityRoutingPolicyCoord
     [JsonPropertyName("longitude")]
     public string? Longitude { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the geoproximity of the requestor. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderGeoproximityRoutingPolicy
@@ -953,7 +1056,9 @@ public partial class V1beta1RecordStatusAtProviderGeoproximityRoutingPolicy
     [JsonPropertyName("localZoneGroup")]
     public string? LocalZoneGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderLatencyRoutingPolicy
@@ -962,7 +1067,9 @@ public partial class V1beta1RecordStatusAtProviderLatencyRoutingPolicy
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderWeightedRoutingPolicy
@@ -971,7 +1078,9 @@ public partial class V1beta1RecordStatusAtProviderWeightedRoutingPolicy
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProvider
@@ -1048,7 +1157,9 @@ public partial class V1beta1RecordStatusAtProvider
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusConditions
@@ -1077,7 +1188,9 @@ public partial class V1beta1RecordStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RecordStatus defines the observed state of Record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatus
@@ -1094,7 +1207,9 @@ public partial class V1beta1RecordStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Record is the Schema for the Records API. Provides a Route53 record resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1124,3 +1239,4 @@ public partial class V1beta1Record : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1RecordStatus? Status { get; set; }
 }
+#nullable disable

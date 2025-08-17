@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1alpha1VertexAIFeaturestoreEntityType> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigCategoricalThresholdConfig
@@ -42,7 +45,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigC
     [JsonPropertyName("value")]
     public double Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config for ImportFeatures Analysis Based Feature Monitoring.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigImportFeaturesAnalysis
@@ -55,7 +60,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigI
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Threshold for numerical features of anomaly detection. This is shared by all objectives of Featurestore Monitoring for numerical features (i.e. Features with type (Feature.ValueType) DOUBLE or INT64).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigNumericalThresholdConfig
@@ -64,7 +71,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigN
     [JsonPropertyName("value")]
     public double Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The config for Snapshot Analysis Based Feature Monitoring.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigSnapshotAnalysis
@@ -85,7 +94,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigS
     [JsonPropertyName("stalenessDays")]
     public int? StalenessDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The default monitoring configuration for all Features under this EntityType.  If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfig
@@ -106,7 +117,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfig
     [JsonPropertyName("snapshotAnalysis")]
     public V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigSnapshotAnalysis? SnapshotAnalysis { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpec
@@ -131,7 +144,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeStatusConditions
@@ -156,7 +171,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeStatus
@@ -185,7 +202,9 @@ public partial class V1alpha1VertexAIFeaturestoreEntityTypeStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -215,3 +234,4 @@ public partial class V1alpha1VertexAIFeaturestoreEntityType : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1alpha1VertexAIFeaturestoreEntityTypeStatus? Status { get; set; }
 }
+#nullable disable

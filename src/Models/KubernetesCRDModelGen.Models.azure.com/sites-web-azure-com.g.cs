@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220301.Site Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220301storageSiteList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1api20220301storageSite> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SourceWebAppReference: ARM resource ID of the source app. App resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecCloningInfoSourceWebAppReference
@@ -54,7 +57,9 @@ public partial class V1api20220301storageSiteSpecCloningInfoSourceWebAppReferenc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficManagerProfileReference: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecCloningInfoTrafficManagerProfileReference
@@ -75,7 +80,9 @@ public partial class V1api20220301storageSiteSpecCloningInfoTrafficManagerProfil
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.CloningInfo Information needed for cloning operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecCloningInfo
@@ -128,7 +135,9 @@ public partial class V1api20220301storageSiteSpecCloningInfo
     [JsonPropertyName("trafficManagerProfileReference")]
     public V1api20220301storageSiteSpecCloningInfoTrafficManagerProfileReference? TrafficManagerProfileReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ExtendedLocation Extended Location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecExtendedLocation
@@ -141,7 +150,9 @@ public partial class V1api20220301storageSiteSpecExtendedLocation
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.HostNameSslState SSL-enabled hostname.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecHostNameSslStates
@@ -174,7 +185,9 @@ public partial class V1api20220301storageSiteSpecHostNameSslStates
     [JsonPropertyName("virtualIP")]
     public string? VirtualIP { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID of the App Service Environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecHostingEnvironmentProfileReference
@@ -195,7 +208,9 @@ public partial class V1api20220301storageSiteSpecHostingEnvironmentProfileRefere
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.HostingEnvironmentProfile Specification for an App Service Environment to use for this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecHostingEnvironmentProfile
@@ -208,7 +223,9 @@ public partial class V1api20220301storageSiteSpecHostingEnvironmentProfile
     [JsonPropertyName("reference")]
     public V1api20220301storageSiteSpecHostingEnvironmentProfileReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecIdentityUserAssignedIdentitiesReference
@@ -229,7 +246,9 @@ public partial class V1api20220301storageSiteSpecIdentityUserAssignedIdentitiesR
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecIdentityUserAssignedIdentities
@@ -242,7 +261,9 @@ public partial class V1api20220301storageSiteSpecIdentityUserAssignedIdentities
     [JsonPropertyName("reference")]
     public V1api20220301storageSiteSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ManagedServiceIdentity Managed service identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecIdentity
@@ -259,7 +280,9 @@ public partial class V1api20220301storageSiteSpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20220301storageSiteSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecOperatorSpecConfigMapExpressions
@@ -276,7 +299,9 @@ public partial class V1api20220301storageSiteSpecOperatorSpecConfigMapExpression
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecOperatorSpecSecretExpressions
@@ -293,7 +318,9 @@ public partial class V1api20220301storageSiteSpecOperatorSpecSecretExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SiteOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecOperatorSpec
@@ -310,7 +337,9 @@ public partial class V1api20220301storageSiteSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220301storageSiteSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecOwner
@@ -323,7 +352,9 @@ public partial class V1api20220301storageSiteSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServerFarmReference: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecServerFarmReference
@@ -344,7 +375,9 @@ public partial class V1api20220301storageSiteSpecServerFarmReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApiDefinitionInfo Information about the formal API definition for the app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigApiDefinition
@@ -357,7 +390,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigApiDefinition
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: APIM-Api Identifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigApiManagementConfigReference
@@ -378,7 +413,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigApiManagementConfigRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApiManagementConfig Azure API management (APIM) configuration linked to the app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigApiManagementConfig
@@ -391,7 +428,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigApiManagementConfig
     [JsonPropertyName("reference")]
     public V1api20220301storageSiteSpecSiteConfigApiManagementConfigReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.NameValuePair Name value pair.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAppSettings
@@ -408,7 +447,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAppSettings
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutoHealCustomAction Custom action to be executed when an auto heal rule is triggered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesActionsCustomAction
@@ -425,7 +466,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesActionsC
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutoHealActions Actions which to take by the auto-heal module when a rule is triggered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesActions
@@ -446,7 +489,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesActions
     [JsonPropertyName("minProcessExecutionTime")]
     public string? MinProcessExecutionTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.RequestsBasedTrigger Trigger based on total requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggersRequests
@@ -463,7 +508,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers
     [JsonPropertyName("timeInterval")]
     public string? TimeInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SlowRequestsBasedTrigger Trigger based on request execution time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggersSlowRequests
@@ -488,7 +535,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers
     [JsonPropertyName("timeTaken")]
     public string? TimeTaken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SlowRequestsBasedTrigger Trigger based on request execution time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggersSlowRequestsWithPath
@@ -513,7 +562,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers
     [JsonPropertyName("timeTaken")]
     public string? TimeTaken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.StatusCodesBasedTrigger Trigger based on status code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggersStatusCodes
@@ -546,7 +597,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers
     [JsonPropertyName("win32Status")]
     public int? Win32Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.StatusCodesRangeBasedTrigger Trigger based on range of status codes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggersStatusCodesRange
@@ -571,7 +624,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers
     [JsonPropertyName("timeInterval")]
     public string? TimeInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutoHealTriggers Triggers for auto-heal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers
@@ -604,7 +659,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers
     [JsonPropertyName("statusCodesRange")]
     public IList<V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggersStatusCodesRange>? StatusCodesRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutoHealRules Rules that can be defined for auto-heal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRules
@@ -621,7 +678,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRules
     [JsonPropertyName("triggers")]
     public V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAzureStorageAccountsAccessKey
@@ -634,7 +693,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAzureStorageAccountsA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AzureStorageInfoValue Azure Files or Blob Storage access information value for dictionary storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAzureStorageAccounts
@@ -663,7 +724,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigAzureStorageAccounts
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ConnStringInfo Database connection string information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigConnectionStrings
@@ -684,7 +747,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigConnectionStrings
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.CorsSettings Cross-Origin Resource Sharing (CORS) settings for the app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigCors
@@ -701,7 +766,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigCors
     [JsonPropertyName("supportCredentials")]
     public bool? SupportCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.RampUpRule Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigExperimentsRampUpRules
@@ -742,7 +809,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigExperimentsRampUpRule
     [JsonPropertyName("reroutePercentage")]
     public double? ReroutePercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Experiments Routing rules in production experiments.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigExperiments
@@ -755,7 +824,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigExperiments
     [JsonPropertyName("rampUpRules")]
     public IList<V1api20220301storageSiteSpecSiteConfigExperimentsRampUpRules>? RampUpRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.HandlerMapping The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigHandlerMappings
@@ -776,7 +847,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigHandlerMappings
     [JsonPropertyName("scriptProcessor")]
     public string? ScriptProcessor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VnetSubnetResourceReference: Virtual network resource id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigIpSecurityRestrictionsVnetSubnetResourceReference
@@ -797,7 +870,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigIpSecurityRestriction
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.IpSecurityRestriction IP security restriction on an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigIpSecurityRestrictions
@@ -850,7 +925,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigIpSecurityRestriction
     [JsonPropertyName("vnetTrafficTag")]
     public int? VnetTrafficTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SiteLimits Metric limits set on an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigLimits
@@ -871,7 +948,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigLimits
     [JsonPropertyName("maxPercentageCpu")]
     public double? MaxPercentageCpu { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.PushSettings Push settings for the App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigPush
@@ -900,7 +979,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigPush
     [JsonPropertyName("tagsRequiringAuth")]
     public string? TagsRequiringAuth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VnetSubnetResourceReference: Virtual network resource id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigScmIpSecurityRestrictionsVnetSubnetResourceReference
@@ -921,7 +1002,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigScmIpSecurityRestrict
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.IpSecurityRestriction IP security restriction on an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigScmIpSecurityRestrictions
@@ -974,7 +1057,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigScmIpSecurityRestrict
     [JsonPropertyName("vnetTrafficTag")]
     public int? VnetTrafficTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualDirectory Directory for virtual application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigVirtualApplicationsVirtualDirectories
@@ -991,7 +1076,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigVirtualApplicationsVi
     [JsonPropertyName("virtualPath")]
     public string? VirtualPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualApplication Virtual application in an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigVirtualApplications
@@ -1016,7 +1103,9 @@ public partial class V1api20220301storageSiteSpecSiteConfigVirtualApplications
     [JsonPropertyName("virtualPath")]
     public string? VirtualPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SiteConfig Configuration of an App Service app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfig
@@ -1289,7 +1378,9 @@ public partial class V1api20220301storageSiteSpecSiteConfig
     [JsonPropertyName("xManagedServiceIdentityId")]
     public int? XManagedServiceIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNetworkSubnetReference: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration. This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecVirtualNetworkSubnetReference
@@ -1310,7 +1401,9 @@ public partial class V1api20220301storageSiteSpecVirtualNetworkSubnetReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Site_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpec
@@ -1463,7 +1556,9 @@ public partial class V1api20220301storageSiteSpec
     [JsonPropertyName("vnetRouteAllEnabled")]
     public bool? VnetRouteAllEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.CloningInfo_STATUS Information needed for cloning operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusCloningInfo
@@ -1516,7 +1611,9 @@ public partial class V1api20220301storageSiteStatusCloningInfo
     [JsonPropertyName("trafficManagerProfileName")]
     public string? TrafficManagerProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusConditions
@@ -1549,7 +1646,9 @@ public partial class V1api20220301storageSiteStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ExtendedLocation_STATUS Extended Location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusExtendedLocation
@@ -1566,7 +1665,9 @@ public partial class V1api20220301storageSiteStatusExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.HostNameSslState_STATUS SSL-enabled hostname.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusHostNameSslStates
@@ -1599,7 +1700,9 @@ public partial class V1api20220301storageSiteStatusHostNameSslStates
     [JsonPropertyName("virtualIP")]
     public string? VirtualIP { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.HostingEnvironmentProfile_STATUS Specification for an App Service Environment to use for this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusHostingEnvironmentProfile
@@ -1620,7 +1723,9 @@ public partial class V1api20220301storageSiteStatusHostingEnvironmentProfile
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.UserAssignedIdentity_STATUS User Assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusIdentityUserAssignedIdentities
@@ -1637,7 +1742,9 @@ public partial class V1api20220301storageSiteStatusIdentityUserAssignedIdentitie
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ManagedServiceIdentity_STATUS Managed service identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusIdentity
@@ -1662,7 +1769,9 @@ public partial class V1api20220301storageSiteStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20220301storageSiteStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApiDefinitionInfo_STATUS Information about the formal API definition for the app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigApiDefinition
@@ -1675,7 +1784,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigApiDefinition
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ApiManagementConfig_STATUS Azure API management (APIM) configuration linked to the app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigApiManagementConfig
@@ -1688,7 +1799,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigApiManagementConfig
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.NameValuePair_STATUS Name value pair.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAppSettings
@@ -1705,7 +1818,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAppSettings
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutoHealCustomAction_STATUS Custom action to be executed when an auto heal rule is triggered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesActionsCustomAction
@@ -1722,7 +1837,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesAction
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutoHealActions_STATUS Actions which to take by the auto-heal module when a rule is triggered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesActions
@@ -1743,7 +1860,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesAction
     [JsonPropertyName("minProcessExecutionTime")]
     public string? MinProcessExecutionTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.RequestsBasedTrigger_STATUS Trigger based on total requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTriggersRequests
@@ -1760,7 +1879,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTrigge
     [JsonPropertyName("timeInterval")]
     public string? TimeInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SlowRequestsBasedTrigger_STATUS Trigger based on request execution time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTriggersSlowRequests
@@ -1785,7 +1906,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTrigge
     [JsonPropertyName("timeTaken")]
     public string? TimeTaken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SlowRequestsBasedTrigger_STATUS Trigger based on request execution time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTriggersSlowRequestsWithPath
@@ -1810,7 +1933,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTrigge
     [JsonPropertyName("timeTaken")]
     public string? TimeTaken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.StatusCodesBasedTrigger_STATUS Trigger based on status code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTriggersStatusCodes
@@ -1843,7 +1968,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTrigge
     [JsonPropertyName("win32Status")]
     public int? Win32Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.StatusCodesRangeBasedTrigger_STATUS Trigger based on range of status codes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTriggersStatusCodesRange
@@ -1868,7 +1995,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTrigge
     [JsonPropertyName("timeInterval")]
     public string? TimeInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutoHealTriggers_STATUS Triggers for auto-heal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTriggers
@@ -1901,7 +2030,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRulesTrigge
     [JsonPropertyName("statusCodesRange")]
     public IList<V1api20220301storageSiteStatusSiteConfigAutoHealRulesTriggersStatusCodesRange>? StatusCodesRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AutoHealRules_STATUS Rules that can be defined for auto-heal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRules
@@ -1918,7 +2049,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAutoHealRules
     [JsonPropertyName("triggers")]
     public V1api20220301storageSiteStatusSiteConfigAutoHealRulesTriggers? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.AzureStorageInfoValue_STATUS Azure Files or Blob Storage access information value for dictionary storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigAzureStorageAccounts
@@ -1947,7 +2080,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigAzureStorageAccount
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ConnStringInfo_STATUS Database connection string information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigConnectionStrings
@@ -1968,7 +2103,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigConnectionStrings
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.CorsSettings_STATUS Cross-Origin Resource Sharing (CORS) settings for the app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigCors
@@ -1985,7 +2122,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigCors
     [JsonPropertyName("supportCredentials")]
     public bool? SupportCredentials { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.RampUpRule_STATUS Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigExperimentsRampUpRules
@@ -2026,7 +2165,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigExperimentsRampUpRu
     [JsonPropertyName("reroutePercentage")]
     public double? ReroutePercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Experiments_STATUS Routing rules in production experiments.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigExperiments
@@ -2039,7 +2180,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigExperiments
     [JsonPropertyName("rampUpRules")]
     public IList<V1api20220301storageSiteStatusSiteConfigExperimentsRampUpRules>? RampUpRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.HandlerMapping_STATUS The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigHandlerMappings
@@ -2060,7 +2203,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigHandlerMappings
     [JsonPropertyName("scriptProcessor")]
     public string? ScriptProcessor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.IpSecurityRestriction_STATUS IP security restriction on an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigIpSecurityRestrictions
@@ -2113,7 +2258,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigIpSecurityRestricti
     [JsonPropertyName("vnetTrafficTag")]
     public int? VnetTrafficTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SiteLimits_STATUS Metric limits set on an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigLimits
@@ -2134,7 +2281,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigLimits
     [JsonPropertyName("maxPercentageCpu")]
     public double? MaxPercentageCpu { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SiteMachineKey_STATUS MachineKey of an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigMachineKey
@@ -2159,7 +2308,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigMachineKey
     [JsonPropertyName("validationKey")]
     public string? ValidationKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.PushSettings_STATUS Push settings for the App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigPush
@@ -2200,7 +2351,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigPush
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.IpSecurityRestriction_STATUS IP security restriction on an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigScmIpSecurityRestrictions
@@ -2253,7 +2406,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigScmIpSecurityRestri
     [JsonPropertyName("vnetTrafficTag")]
     public int? VnetTrafficTag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualDirectory_STATUS Directory for virtual application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigVirtualApplicationsVirtualDirectories
@@ -2270,7 +2425,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigVirtualApplications
     [JsonPropertyName("virtualPath")]
     public string? VirtualPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.VirtualApplication_STATUS Virtual application in an app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfigVirtualApplications
@@ -2295,7 +2452,9 @@ public partial class V1api20220301storageSiteStatusSiteConfigVirtualApplications
     [JsonPropertyName("virtualPath")]
     public string? VirtualPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SiteConfig_STATUS Configuration of an App Service app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSiteConfig
@@ -2572,7 +2731,9 @@ public partial class V1api20220301storageSiteStatusSiteConfig
     [JsonPropertyName("xManagedServiceIdentityId")]
     public int? XManagedServiceIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SlotSwapStatus_STATUS The status of the last successful slot swap operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusSlotSwapStatus
@@ -2593,7 +2754,9 @@ public partial class V1api20220301storageSiteStatusSlotSwapStatus
     [JsonPropertyName("timestampUtc")]
     public string? TimestampUtc { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Site_STATUS A web app, a mobile app backend, or an API app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatus
@@ -2818,7 +2981,9 @@ public partial class V1api20220301storageSiteStatus
     [JsonPropertyName("vnetRouteAllEnabled")]
     public bool? VnetRouteAllEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Site Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2848,3 +3013,4 @@ public partial class V1api20220301storageSite : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1api20220301storageSiteStatus? Status { get; set; }
 }
+#nullable disable

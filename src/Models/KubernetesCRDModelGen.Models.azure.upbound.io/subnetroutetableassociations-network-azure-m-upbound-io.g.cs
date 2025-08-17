@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>SubnetRouteTableAssociation is the Schema for the SubnetRouteTableAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubnetRouteTableAssociationList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1SubnetRouteTableAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTableIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTable
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RouteTable in network to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTableIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTable
     [JsonPropertyName("policy")]
     public V1beta1SubnetRouteTableAssociationSpecForProviderRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTableIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTable
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RouteTable in network to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTableIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTable
     [JsonPropertyName("policy")]
     public V1beta1SubnetRouteTableAssociationSpecForProviderRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdRe
     [JsonPropertyName("policy")]
     public V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdSe
     [JsonPropertyName("policy")]
     public V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetRouteTableAssociationSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTableIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTabl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RouteTable in network to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTableIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTabl
     [JsonPropertyName("policy")]
     public V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTableIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTabl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RouteTable in network to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTableIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTabl
     [JsonPropertyName("policy")]
     public V1beta1SubnetRouteTableAssociationSpecInitProviderRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdRef
@@ -284,7 +315,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdR
     [JsonPropertyName("policy")]
     public V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdSelector
@@ -318,7 +353,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdS
     [JsonPropertyName("policy")]
     public V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetRouteTableAssociationSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpecWriteConnectionSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetRouteTableAssociationSpec defines the desired state of SubnetRouteTableAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpec
@@ -394,7 +437,9 @@ public partial class V1beta1SubnetRouteTableAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubnetRouteTableAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationStatusAtProvider
@@ -411,7 +456,9 @@ public partial class V1beta1SubnetRouteTableAssociationStatusAtProvider
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationStatusConditions
@@ -440,7 +487,9 @@ public partial class V1beta1SubnetRouteTableAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetRouteTableAssociationStatus defines the observed state of SubnetRouteTableAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationStatus
@@ -457,7 +506,9 @@ public partial class V1beta1SubnetRouteTableAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubnetRouteTableAssociation is the Schema for the SubnetRouteTableAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -487,3 +538,4 @@ public partial class V1beta1SubnetRouteTableAssociation : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1SubnetRouteTableAssociationStatus? Status { get; set; }
 }
+#nullable disable

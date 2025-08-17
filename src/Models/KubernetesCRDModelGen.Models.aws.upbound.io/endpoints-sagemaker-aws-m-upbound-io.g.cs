@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+#nullable enable
 /// <summary>Endpoint is the Schema for the Endpoints API. Provides a SageMaker AI Endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EndpointList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Endpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfigurationAlarms
@@ -42,7 +45,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackC
     [JsonPropertyName("alarmName")]
     public string? AlarmName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfiguration
@@ -51,7 +56,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackC
     [JsonPropertyName("alarms")]
     public IList<V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant's total instance count. See Canary Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize
@@ -64,7 +71,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for each step to turn on traffic on the new endpoint fleet. Value must be 10-50% of the variant's total instance count. See Linear Step Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize
@@ -77,7 +86,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the traffic routing strategy to shift traffic from the old fleet to the new fleet during an endpoint deployment. See Traffic Routing Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration
@@ -98,7 +109,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker AI creates a new fleet during the deployment while maintaining the old fleet. SageMaker AI flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker AI uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicy
@@ -115,7 +128,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     [JsonPropertyName("trafficRoutingConfiguration")]
     public V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration? TrafficRoutingConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance count. See Maximum Batch Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicyMaximumBatchSize
@@ -128,7 +143,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdate
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on traffic on the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is absent, the default value will be set to 100% of total capacity which means to bring up the whole capacity of the old fleet at once during rollback. See Rollback Maximum Batch Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize
@@ -141,7 +158,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdate
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a rolling deployment strategy for updating a SageMaker AI endpoint. See Rolling Update Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicy
@@ -162,7 +181,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdate
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfig
@@ -179,7 +200,9 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfig
     [JsonPropertyName("rollingUpdatePolicy")]
     public V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicy? RollingUpdatePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderEndpointConfigNameRefPolicy
@@ -192,7 +215,9 @@ public partial class V1beta1EndpointSpecForProviderEndpointConfigNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EndpointConfiguration in sagemaker to populate endpointConfigName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderEndpointConfigNameRef
@@ -209,7 +234,9 @@ public partial class V1beta1EndpointSpecForProviderEndpointConfigNameRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointSpecForProviderEndpointConfigNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderEndpointConfigNameSelectorPolicy
@@ -222,7 +249,9 @@ public partial class V1beta1EndpointSpecForProviderEndpointConfigNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EndpointConfiguration in sagemaker to populate endpointConfigName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderEndpointConfigNameSelector
@@ -243,7 +272,9 @@ public partial class V1beta1EndpointSpecForProviderEndpointConfigNameSelector
     [JsonPropertyName("policy")]
     public V1beta1EndpointSpecForProviderEndpointConfigNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProvider
@@ -272,7 +303,9 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfigurationAlarms
@@ -281,7 +314,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollback
     [JsonPropertyName("alarmName")]
     public string? AlarmName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfiguration
@@ -290,7 +325,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollback
     [JsonPropertyName("alarms")]
     public IList<V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant's total instance count. See Canary Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize
@@ -303,7 +340,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for each step to turn on traffic on the new endpoint fleet. Value must be 10-50% of the variant's total instance count. See Linear Step Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize
@@ -316,7 +355,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the traffic routing strategy to shift traffic from the old fleet to the new fleet during an endpoint deployment. See Traffic Routing Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration
@@ -337,7 +378,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker AI creates a new fleet during the deployment while maintaining the old fleet. SageMaker AI flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker AI uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicy
@@ -354,7 +397,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("trafficRoutingConfiguration")]
     public V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration? TrafficRoutingConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance count. See Maximum Batch Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicyMaximumBatchSize
@@ -367,7 +412,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdat
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on traffic on the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is absent, the default value will be set to 100% of total capacity which means to bring up the whole capacity of the old fleet at once during rollback. See Rollback Maximum Batch Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize
@@ -380,7 +427,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdat
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a rolling deployment strategy for updating a SageMaker AI endpoint. See Rolling Update Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicy
@@ -401,7 +450,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdat
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfig
@@ -418,7 +469,9 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfig
     [JsonPropertyName("rollingUpdatePolicy")]
     public V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicy? RollingUpdatePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameRefPolicy
@@ -431,7 +484,9 @@ public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EndpointConfiguration in sagemaker to populate endpointConfigName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameRef
@@ -448,7 +503,9 @@ public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointSpecInitProviderEndpointConfigNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameSelectorPolicy
@@ -461,7 +518,9 @@ public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EndpointConfiguration in sagemaker to populate endpointConfigName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameSelector
@@ -482,7 +541,9 @@ public partial class V1beta1EndpointSpecInitProviderEndpointConfigNameSelector
     [JsonPropertyName("policy")]
     public V1beta1EndpointSpecInitProviderEndpointConfigNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProvider
@@ -507,7 +568,9 @@ public partial class V1beta1EndpointSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecProviderConfigRef
@@ -520,7 +583,9 @@ public partial class V1beta1EndpointSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
@@ -529,7 +594,9 @@ public partial class V1beta1EndpointSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointSpec defines the desired state of Endpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpec
@@ -554,7 +621,9 @@ public partial class V1beta1EndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfigurationAlarms
@@ -563,7 +632,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollback
     [JsonPropertyName("alarmName")]
     public string? AlarmName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfiguration
@@ -572,7 +643,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollback
     [JsonPropertyName("alarms")]
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant's total instance count. See Canary Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize
@@ -585,7 +658,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for each step to turn on traffic on the new endpoint fleet. Value must be 10-50% of the variant's total instance count. See Linear Step Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize
@@ -598,7 +673,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the traffic routing strategy to shift traffic from the old fleet to the new fleet during an endpoint deployment. See Traffic Routing Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration
@@ -619,7 +696,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker AI creates a new fleet during the deployment while maintaining the old fleet. SageMaker AI flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker AI uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicy
@@ -636,7 +715,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("trafficRoutingConfiguration")]
     public V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration? TrafficRoutingConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for each rolling step to provision capacity and turn on traffic on the new endpoint fleet, and terminate capacity on the old endpoint fleet. Value must be between 5% to 50% of the variant's total instance count. See Maximum Batch Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicyMaximumBatchSize
@@ -649,7 +730,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdat
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Batch size for rollback to the old endpoint fleet. Each rolling step to provision capacity and turn on traffic on the old endpoint fleet, and terminate capacity on the new endpoint fleet. If this field is absent, the default value will be set to 100% of total capacity which means to bring up the whole capacity of the old fleet at once during rollback. See Rollback Maximum Batch Size.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize
@@ -662,7 +745,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdat
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a rolling deployment strategy for updating a SageMaker AI endpoint. See Rolling Update Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicy
@@ -683,7 +768,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdat
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfig
@@ -700,7 +787,9 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfig
     [JsonPropertyName("rollingUpdatePolicy")]
     public V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicy? RollingUpdatePolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProvider
@@ -733,7 +822,9 @@ public partial class V1beta1EndpointStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusConditions
@@ -762,7 +853,9 @@ public partial class V1beta1EndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatus
@@ -779,7 +872,9 @@ public partial class V1beta1EndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Endpoint is the Schema for the Endpoints API. Provides a SageMaker AI Endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -809,3 +904,4 @@ public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1EndpointStatus? Status { get; set; }
 }
+#nullable disable

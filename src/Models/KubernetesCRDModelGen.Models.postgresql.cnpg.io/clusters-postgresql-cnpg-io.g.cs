@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>Cluster is the Schema for the PostgreSQL API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ClusterList : IKubernetesObject<V1ListMeta>, IItems<V1Clu
     [JsonPropertyName("items")]
     public IList<V1Cluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
@@ -50,7 +53,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSc
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
@@ -63,7 +68,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSc
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
@@ -80,7 +87,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSc
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
@@ -93,7 +102,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSc
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
@@ -122,7 +133,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSc
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -135,7 +148,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityPreferredDuringSc
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
@@ -152,7 +167,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSch
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
@@ -165,7 +182,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSch
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
@@ -182,7 +201,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSch
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
@@ -195,7 +216,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSch
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -224,7 +247,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSch
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AdditionalPodAffinity allows to specify pod affinity terms to be passed to all the cluster's pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAffinity
@@ -237,7 +262,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAffinity
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public IList<V1ClusterSpecAffinityAdditionalPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
@@ -254,7 +281,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuri
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
@@ -267,7 +296,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuri
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
@@ -284,7 +315,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuri
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
@@ -297,7 +330,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuri
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
@@ -326,7 +361,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuri
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -339,7 +376,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityPreferredDuri
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
@@ -356,7 +395,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDurin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
@@ -369,7 +410,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDurin
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
@@ -386,7 +429,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDurin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
@@ -399,7 +444,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDurin
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -428,7 +475,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDurin
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AdditionalPodAntiAffinity allows to specify pod anti-affinity terms to be added to the ones generated by the operator if EnablePodAntiAffinity is set to true (default) or to be used exclusively if set to false.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinity
@@ -441,7 +490,9 @@ public partial class V1ClusterSpecAffinityAdditionalPodAntiAffinity
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public IList<V1ClusterSpecAffinityAdditionalPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
@@ -458,7 +509,9 @@ public partial class V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingI
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
@@ -475,7 +528,9 @@ public partial class V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingI
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
@@ -488,7 +543,9 @@ public partial class V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingI
     [JsonPropertyName("matchFields")]
     public IList<V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -501,7 +558,9 @@ public partial class V1ClusterSpecAffinityNodeAffinityPreferredDuringSchedulingI
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
@@ -518,7 +577,9 @@ public partial class V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIg
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
@@ -535,7 +596,9 @@ public partial class V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIg
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
@@ -548,7 +611,9 @@ public partial class V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIg
     [JsonPropertyName("matchFields")]
     public IList<V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -557,7 +622,9 @@ public partial class V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIg
     [JsonPropertyName("nodeSelectorTerms")]
     public IList<V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NodeAffinity describes node affinity scheduling rules for the pod. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityNodeAffinity
@@ -570,7 +637,9 @@ public partial class V1ClusterSpecAffinityNodeAffinity
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public V1ClusterSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinityTolerations
@@ -595,7 +664,9 @@ public partial class V1ClusterSpecAffinityTolerations
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Affinity/Anti-affinity rules for Pods</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecAffinity
@@ -632,7 +703,9 @@ public partial class V1ClusterSpecAffinity
     [JsonPropertyName("topologyKey")]
     public string? TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string to be used</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsConnectionString
@@ -645,7 +718,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsConnect
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The storage account where to upload data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorageAccount
@@ -658,7 +733,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorage
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The storage account key to be used in conjunction with the storage account name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorageKey
@@ -671,7 +748,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorage
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A shared-access-signature to be used in conjunction with the storage account name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorageSasToken
@@ -684,7 +763,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorage
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to Azure Blob Storage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentials
@@ -709,7 +790,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentials
     [JsonPropertyName("storageSasToken")]
     public V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorageSasToken? StorageSasToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration to be used to backup the data files When not defined, base backups files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreData
@@ -734,7 +817,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreData
     [JsonPropertyName("jobs")]
     public int? Jobs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointCA store the CA bundle of the barman endpoint. Useful when using self-signed certificates to avoid errors with certificate issuer and barman-cloud-wal-archive</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreEndpointCA
@@ -747,7 +832,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreEndpointCA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The secret containing the Google Cloud Storage JSON file with the credentials</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreGoogleCredentialsApplicationCredentials
@@ -760,7 +847,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreGoogleCredentialsApplic
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to Google Cloud Storage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreGoogleCredentials
@@ -773,7 +862,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreGoogleCredentials
     [JsonPropertyName("gkeEnvironment")]
     public bool? GkeEnvironment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the access key id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreS3CredentialsAccessKeyId
@@ -786,7 +877,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreS3CredentialsAccessKeyI
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the secret containing the region name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreS3CredentialsRegion
@@ -799,7 +892,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreS3CredentialsRegion
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the secret access key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreS3CredentialsSecretAccessKey
@@ -812,7 +907,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreS3CredentialsSecretAcce
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The references to the session key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreS3CredentialsSessionToken
@@ -825,7 +922,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreS3CredentialsSessionTok
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to S3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreS3Credentials
@@ -850,7 +949,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreS3Credentials
     [JsonPropertyName("sessionToken")]
     public V1ClusterSpecBackupBarmanObjectStoreS3CredentialsSessionToken? SessionToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the backup of the WAL stream. When not defined, WAL files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreWal
@@ -875,7 +976,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreWal
     [JsonPropertyName("restoreAdditionalCommandArgs")]
     public IList<string>? RestoreAdditionalCommandArgs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the barman-cloud tool suite</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStore
@@ -924,7 +1027,9 @@ public partial class V1ClusterSpecBackupBarmanObjectStore
     [JsonPropertyName("wal")]
     public V1ClusterSpecBackupBarmanObjectStoreWal? Wal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters to control the online/hot backup with volume snapshots</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupVolumeSnapshotOnlineConfiguration
@@ -937,7 +1042,9 @@ public partial class V1ClusterSpecBackupVolumeSnapshotOnlineConfiguration
     [JsonPropertyName("waitForArchive")]
     public bool? WaitForArchive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeSnapshot provides the configuration for the execution of volume snapshot backups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupVolumeSnapshot
@@ -974,7 +1081,9 @@ public partial class V1ClusterSpecBackupVolumeSnapshot
     [JsonPropertyName("walClassName")]
     public string? WalClassName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration to be used for backups</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackup
@@ -995,7 +1104,9 @@ public partial class V1ClusterSpecBackup
     [JsonPropertyName("volumeSnapshot")]
     public V1ClusterSpecBackupVolumeSnapshot? VolumeSnapshot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source of the import</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbImportSource
@@ -1004,7 +1115,9 @@ public partial class V1ClusterSpecBootstrapInitdbImportSource
     [JsonPropertyName("externalCluster")]
     public string ExternalCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bootstraps the new cluster by importing data from an existing PostgreSQL instance using logical backup (`pg_dump` and `pg_restore`)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbImport
@@ -1041,7 +1154,9 @@ public partial class V1ClusterSpecBootstrapInitdbImport
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapKeySelector contains enough information to let you locate the key of a ConfigMap</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitApplicationSQLRefsConfigMapRefs
@@ -1054,7 +1169,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitApplicationSQLRefsConfi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretKeySelector contains enough information to let you locate the key of a Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitApplicationSQLRefsSecretRefs
@@ -1067,7 +1184,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitApplicationSQLRefsSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>List of references to ConfigMaps or Secrets containing SQL files to be executed as a superuser in the application database right after the cluster has been created. The references are processed in a specific order: first, all Secrets are processed, followed by all ConfigMaps. Within each group, the processing order follows the sequence specified in their respective arrays. (by default empty)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitApplicationSQLRefs
@@ -1080,7 +1199,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitApplicationSQLRefs
     [JsonPropertyName("secretRefs")]
     public IList<V1ClusterSpecBootstrapInitdbPostInitApplicationSQLRefsSecretRefs>? SecretRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapKeySelector contains enough information to let you locate the key of a ConfigMap</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitSQLRefsConfigMapRefs
@@ -1093,7 +1214,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitSQLRefsConfigMapRefs
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretKeySelector contains enough information to let you locate the key of a Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitSQLRefsSecretRefs
@@ -1106,7 +1229,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitSQLRefsSecretRefs
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>List of references to ConfigMaps or Secrets containing SQL files to be executed as a superuser in the `postgres` database right after the cluster has been created. The references are processed in a specific order: first, all Secrets are processed, followed by all ConfigMaps. Within each group, the processing order follows the sequence specified in their respective arrays. (by default empty)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitSQLRefs
@@ -1119,7 +1244,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitSQLRefs
     [JsonPropertyName("secretRefs")]
     public IList<V1ClusterSpecBootstrapInitdbPostInitSQLRefsSecretRefs>? SecretRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapKeySelector contains enough information to let you locate the key of a ConfigMap</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitTemplateSQLRefsConfigMapRefs
@@ -1132,7 +1259,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitTemplateSQLRefsConfigMa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretKeySelector contains enough information to let you locate the key of a Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitTemplateSQLRefsSecretRefs
@@ -1145,7 +1274,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitTemplateSQLRefsSecretRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>List of references to ConfigMaps or Secrets containing SQL files to be executed as a superuser in the `template1` database right after the cluster has been created. The references are processed in a specific order: first, all Secrets are processed, followed by all ConfigMaps. Within each group, the processing order follows the sequence specified in their respective arrays. (by default empty)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbPostInitTemplateSQLRefs
@@ -1158,7 +1289,9 @@ public partial class V1ClusterSpecBootstrapInitdbPostInitTemplateSQLRefs
     [JsonPropertyName("secretRefs")]
     public IList<V1ClusterSpecBootstrapInitdbPostInitTemplateSQLRefsSecretRefs>? SecretRefs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdbSecret
@@ -1167,7 +1300,9 @@ public partial class V1ClusterSpecBootstrapInitdbSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bootstrap the cluster via initdb</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdb
@@ -1256,7 +1391,9 @@ public partial class V1ClusterSpecBootstrapInitdb
     [JsonPropertyName("walSegmentSize")]
     public int? WalSegmentSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapPgBasebackupSecret
@@ -1265,7 +1402,9 @@ public partial class V1ClusterSpecBootstrapPgBasebackupSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bootstrap the cluster taking a physical backup of another compatible PostgreSQL instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapPgBasebackup
@@ -1286,7 +1425,9 @@ public partial class V1ClusterSpecBootstrapPgBasebackup
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointCA store the CA bundle of the barman endpoint. Useful when using self-signed certificates to avoid errors with certificate issuer and barman-cloud-wal-archive.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecoveryBackupEndpointCA
@@ -1299,7 +1440,9 @@ public partial class V1ClusterSpecBootstrapRecoveryBackupEndpointCA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The backup object containing the physical base backup from which to initiate the recovery procedure. Mutually exclusive with `source` and `volumeSnapshots`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecoveryBackup
@@ -1312,7 +1455,9 @@ public partial class V1ClusterSpecBootstrapRecoveryBackup
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>By default, the recovery process applies all the available WAL files in the archive (full recovery). However, you can also end the recovery as soon as a consistent state is reached or recover to a point-in-time (PITR) by specifying a `RecoveryTarget` object, as expected by PostgreSQL (i.e., timestamp, transaction Id, LSN, ...). More info: https://www.postgresql.org/docs/current/runtime-config-wal.html#RUNTIME-CONFIG-WAL-RECOVERY-TARGET</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecoveryRecoveryTarget
@@ -1349,7 +1494,9 @@ public partial class V1ClusterSpecBootstrapRecoveryRecoveryTarget
     [JsonPropertyName("targetXID")]
     public string? TargetXID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecoverySecret
@@ -1358,7 +1505,9 @@ public partial class V1ClusterSpecBootstrapRecoverySecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the storage of the instances</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecoveryVolumeSnapshotsStorage
@@ -1375,7 +1524,9 @@ public partial class V1ClusterSpecBootstrapRecoveryVolumeSnapshotsStorage
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecoveryVolumeSnapshotsTablespaceStorage
@@ -1392,7 +1543,9 @@ public partial class V1ClusterSpecBootstrapRecoveryVolumeSnapshotsTablespaceStor
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the storage for PostgreSQL WAL (Write-Ahead Log)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecoveryVolumeSnapshotsWalStorage
@@ -1409,7 +1562,9 @@ public partial class V1ClusterSpecBootstrapRecoveryVolumeSnapshotsWalStorage
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The static PVC data source(s) from which to initiate the recovery procedure. Currently supporting `VolumeSnapshot` and `PersistentVolumeClaim` resources that map an existing PVC group, compatible with CloudNativePG, and taken with a cold backup copy on a fenced Postgres instance (limitation which will be removed in the future when online backup will be implemented). Mutually exclusive with `backup`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecoveryVolumeSnapshots
@@ -1426,7 +1581,9 @@ public partial class V1ClusterSpecBootstrapRecoveryVolumeSnapshots
     [JsonPropertyName("walStorage")]
     public V1ClusterSpecBootstrapRecoveryVolumeSnapshotsWalStorage? WalStorage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bootstrap the cluster from a backup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapRecovery
@@ -1459,7 +1616,9 @@ public partial class V1ClusterSpecBootstrapRecovery
     [JsonPropertyName("volumeSnapshots")]
     public V1ClusterSpecBootstrapRecoveryVolumeSnapshots? VolumeSnapshots { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instructions to bootstrap this cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrap
@@ -1476,7 +1635,9 @@ public partial class V1ClusterSpecBootstrap
     [JsonPropertyName("recovery")]
     public V1ClusterSpecBootstrapRecovery? Recovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the CA and related certificates</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecCertificates
@@ -1501,7 +1662,9 @@ public partial class V1ClusterSpecCertificates
     [JsonPropertyName("serverTLSSecret")]
     public string? ServerTLSSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a ConfigMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnvValueFromConfigMapKeyRef
@@ -1518,7 +1681,9 @@ public partial class V1ClusterSpecEnvValueFromConfigMapKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnvValueFromFieldRef
@@ -1531,7 +1696,9 @@ public partial class V1ClusterSpecEnvValueFromFieldRef
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnvValueFromResourceFieldRef
@@ -1548,7 +1715,9 @@ public partial class V1ClusterSpecEnvValueFromResourceFieldRef
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a secret in the pod's namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnvValueFromSecretKeyRef
@@ -1565,7 +1734,9 @@ public partial class V1ClusterSpecEnvValueFromSecretKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnvValueFrom
@@ -1586,7 +1757,9 @@ public partial class V1ClusterSpecEnvValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1ClusterSpecEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvVar represents an environment variable present in a Container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnv
@@ -1603,7 +1776,9 @@ public partial class V1ClusterSpecEnv
     [JsonPropertyName("valueFrom")]
     public V1ClusterSpecEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ConfigMap to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnvFromConfigMapRef
@@ -1616,7 +1791,9 @@ public partial class V1ClusterSpecEnvFromConfigMapRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnvFromSecretRef
@@ -1629,7 +1806,9 @@ public partial class V1ClusterSpecEnvFromSecretRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvFromSource represents the source of a set of ConfigMaps or Secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEnvFrom
@@ -1646,13 +1825,17 @@ public partial class V1ClusterSpecEnvFrom
     [JsonPropertyName("secretRef")]
     public V1ClusterSpecEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateMetadata
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecDataSource
@@ -1669,7 +1852,9 @@ public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecDa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecDataSourceRef
@@ -1690,7 +1875,9 @@ public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecDa
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecResources
@@ -1703,7 +1890,9 @@ public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecRe
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecSelectorMatchExpressions
@@ -1720,7 +1909,9 @@ public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecSe
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>selector is a label query over volumes to consider for binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecSelector
@@ -1733,7 +1924,9 @@ public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpecSe
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpec
@@ -1774,7 +1967,9 @@ public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpec
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).  An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.  This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.  Required, must not be nil.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplate
@@ -1787,7 +1982,9 @@ public partial class V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplate
     [JsonPropertyName("spec")]
     public V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplateSpec Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EphemeralVolumeSource allows the user to configure the source of ephemeral volumes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumeSource
@@ -1796,7 +1993,9 @@ public partial class V1ClusterSpecEphemeralVolumeSource
     [JsonPropertyName("volumeClaimTemplate")]
     public V1ClusterSpecEphemeralVolumeSourceVolumeClaimTemplate? VolumeClaimTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EphemeralVolumesSizeLimit allows the user to set the limits for the ephemeral volumes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecEphemeralVolumesSizeLimit
@@ -1809,7 +2008,9 @@ public partial class V1ClusterSpecEphemeralVolumesSizeLimit
     [JsonPropertyName("temporaryData")]
     public IntstrIntOrString? TemporaryData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string to be used</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredentialsConnectionString
@@ -1822,7 +2023,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredenti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The storage account where to upload data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredentialsStorageAccount
@@ -1835,7 +2038,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredenti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The storage account key to be used in conjunction with the storage account name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredentialsStorageKey
@@ -1848,7 +2053,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredenti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A shared-access-signature to be used in conjunction with the storage account name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredentialsStorageSasToken
@@ -1861,7 +2068,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredenti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to Azure Blob Storage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredentials
@@ -1886,7 +2095,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredenti
     [JsonPropertyName("storageSasToken")]
     public V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredentialsStorageSasToken? StorageSasToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration to be used to backup the data files When not defined, base backups files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreData
@@ -1911,7 +2122,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreData
     [JsonPropertyName("jobs")]
     public int? Jobs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointCA store the CA bundle of the barman endpoint. Useful when using self-signed certificates to avoid errors with certificate issuer and barman-cloud-wal-archive</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreEndpointCA
@@ -1924,7 +2137,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreEndpointCA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The secret containing the Google Cloud Storage JSON file with the credentials</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreGoogleCredentialsApplicationCredentials
@@ -1937,7 +2152,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreGoogleCredent
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to Google Cloud Storage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreGoogleCredentials
@@ -1950,7 +2167,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreGoogleCredent
     [JsonPropertyName("gkeEnvironment")]
     public bool? GkeEnvironment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the access key id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3CredentialsAccessKeyId
@@ -1963,7 +2182,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3Credentials
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the secret containing the region name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3CredentialsRegion
@@ -1976,7 +2197,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3Credentials
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the secret access key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3CredentialsSecretAccessKey
@@ -1989,7 +2212,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3Credentials
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The references to the session key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3CredentialsSessionToken
@@ -2002,7 +2227,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3Credentials
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to S3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3Credentials
@@ -2027,7 +2254,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3Credentials
     [JsonPropertyName("sessionToken")]
     public V1ClusterSpecExternalClustersBarmanObjectStoreS3CredentialsSessionToken? SessionToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the backup of the WAL stream. When not defined, WAL files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreWal
@@ -2052,7 +2281,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreWal
     [JsonPropertyName("restoreAdditionalCommandArgs")]
     public IList<string>? RestoreAdditionalCommandArgs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the barman-cloud tool suite</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStore
@@ -2101,7 +2332,9 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStore
     [JsonPropertyName("wal")]
     public V1ClusterSpecExternalClustersBarmanObjectStoreWal? Wal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the password to be used to connect to the server. If a password is provided, CloudNativePG creates a PostgreSQL passfile at `/controller/external/NAME/pass` (where "NAME" is the cluster's name). This passfile is automatically referenced in the connection string when establishing a connection to the remote PostgreSQL server from the current PostgreSQL `Cluster`. This ensures secure and efficient password management for external clusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersPassword
@@ -2118,7 +2351,9 @@ public partial class V1ClusterSpecExternalClustersPassword
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the plugin that is taking care of WAL archiving and backups for this external cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersPlugin
@@ -2139,7 +2374,9 @@ public partial class V1ClusterSpecExternalClustersPlugin
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to an SSL certificate to be used to connect to this instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersSslCert
@@ -2156,7 +2393,9 @@ public partial class V1ClusterSpecExternalClustersSslCert
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to an SSL private key to be used to connect to this instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersSslKey
@@ -2173,7 +2412,9 @@ public partial class V1ClusterSpecExternalClustersSslKey
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to an SSL CA public key to be used to connect to this instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersSslRootCert
@@ -2190,7 +2431,9 @@ public partial class V1ClusterSpecExternalClustersSslRootCert
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExternalCluster represents the connection parameters to an external cluster which is used in the other sections of the configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClusters
@@ -2227,7 +2470,9 @@ public partial class V1ClusterSpecExternalClusters
     [JsonPropertyName("sslRootCert")]
     public V1ClusterSpecExternalClustersSslRootCert? SslRootCert { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the major PostgreSQL version we want to use within an ImageCatalog</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecImageCatalogRef
@@ -2248,7 +2493,9 @@ public partial class V1ClusterSpecImageCatalogRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalObjectReference contains enough information to let you locate a local object with a known type inside the same namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecImagePullSecrets
@@ -2257,7 +2504,9 @@ public partial class V1ClusterSpecImagePullSecrets
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata that will be inherited by all objects related to the Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecInheritedMetadata
@@ -2270,7 +2519,9 @@ public partial class V1ClusterSpecInheritedMetadata
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secret containing the password of the role (if present) If null, the password will be ignored unless DisablePassword is set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedRolesPasswordSecret
@@ -2279,7 +2530,9 @@ public partial class V1ClusterSpecManagedRolesPasswordSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleConfiguration is the representation, in Kubernetes, of a PostgreSQL role with the additional field Ensure specifying whether to ensure the presence or absence of the role in the database  The defaults of the CREATE ROLE command are applied Reference: https://www.postgresql.org/docs/current/sql-createrole.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedRoles
@@ -2344,7 +2597,9 @@ public partial class V1ClusterSpecManagedRoles
     [JsonPropertyName("validUntil")]
     public string? ValidUntil { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateMetadata
@@ -2361,7 +2616,9 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateMetada
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServicePort contains information on service's port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpecPorts
@@ -2390,7 +2647,9 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpecPo
     [JsonPropertyName("targetPort")]
     public IntstrIntOrString? TargetPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>clientIP contains the configurations of Client IP based session affinity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpecSessionAffinityConfigClientIP
@@ -2399,7 +2658,9 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpecSe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>sessionAffinityConfig contains the configurations of session affinity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpecSessionAffinityConfig
@@ -2408,7 +2669,9 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpecSe
     [JsonPropertyName("clientIP")]
     public V1ClusterSpecManagedServicesAdditionalServiceTemplateSpecSessionAffinityConfigClientIP? ClientIP { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the service. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpec
@@ -2493,7 +2756,9 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceTemplate is the template specification for the service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplate
@@ -2506,7 +2771,9 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplate
     [JsonPropertyName("spec")]
     public V1ClusterSpecManagedServicesAdditionalServiceTemplateSpec? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedService represents a specific service managed by the cluster. It includes the type of service and its associated template specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServicesAdditional
@@ -2523,7 +2790,9 @@ public partial class V1ClusterSpecManagedServicesAdditional
     [JsonPropertyName("updateStrategy")]
     public string? UpdateStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Services roles managed by the `Cluster`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServices
@@ -2536,7 +2805,9 @@ public partial class V1ClusterSpecManagedServices
     [JsonPropertyName("disabledDefaultServices")]
     public IList<string>? DisabledDefaultServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration that is used by the portions of PostgreSQL that are managed by the instance manager</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManaged
@@ -2549,7 +2820,9 @@ public partial class V1ClusterSpecManaged
     [JsonPropertyName("services")]
     public V1ClusterSpecManagedServices? Services { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapKeySelector contains enough information to let you locate the key of a ConfigMap</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecMonitoringCustomQueriesConfigMap
@@ -2562,7 +2835,9 @@ public partial class V1ClusterSpecMonitoringCustomQueriesConfigMap
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretKeySelector contains enough information to let you locate the key of a Secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecMonitoringCustomQueriesSecret
@@ -2575,7 +2850,9 @@ public partial class V1ClusterSpecMonitoringCustomQueriesSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RelabelConfig allows dynamic rewriting of the label set for targets, alerts, scraped samples and remote write samples.  More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecMonitoringPodMonitorMetricRelabelings
@@ -2608,7 +2885,9 @@ public partial class V1ClusterSpecMonitoringPodMonitorMetricRelabelings
     [JsonPropertyName("targetLabel")]
     public string? TargetLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RelabelConfig allows dynamic rewriting of the label set for targets, alerts, scraped samples and remote write samples.  More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecMonitoringPodMonitorRelabelings
@@ -2641,7 +2920,9 @@ public partial class V1ClusterSpecMonitoringPodMonitorRelabelings
     [JsonPropertyName("targetLabel")]
     public string? TargetLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure TLS communication for the metrics endpoint. Changing tls.enabled option will force a rollout of all instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecMonitoringTls
@@ -2650,7 +2931,9 @@ public partial class V1ClusterSpecMonitoringTls
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the monitoring infrastructure of this cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecMonitoring
@@ -2683,7 +2966,9 @@ public partial class V1ClusterSpecMonitoring
     [JsonPropertyName("tls")]
     public V1ClusterSpecMonitoringTls? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Define a maintenance window for the Kubernetes nodes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecNodeMaintenanceWindow
@@ -2696,7 +2981,9 @@ public partial class V1ClusterSpecNodeMaintenanceWindow
     [JsonPropertyName("reusePVC")]
     public bool? ReusePVC { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PluginConfiguration specifies a plugin that need to be loaded for this cluster to be reconciled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPlugins
@@ -2717,7 +3004,9 @@ public partial class V1ClusterSpecPlugins
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The image containing the extension, required</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlExtensionsImage
@@ -2730,7 +3019,9 @@ public partial class V1ClusterSpecPostgresqlExtensionsImage
     [JsonPropertyName("reference")]
     public string? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExtensionConfiguration is the configuration used to add PostgreSQL extensions to the Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlExtensions
@@ -2755,7 +3046,9 @@ public partial class V1ClusterSpecPostgresqlExtensions
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bind as authentication configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlLdapBindAsAuth
@@ -2768,7 +3061,9 @@ public partial class V1ClusterSpecPostgresqlLdapBindAsAuth
     [JsonPropertyName("suffix")]
     public string? Suffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Secret with the password for the user to bind to the directory</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlLdapBindSearchAuthBindPassword
@@ -2785,7 +3080,9 @@ public partial class V1ClusterSpecPostgresqlLdapBindSearchAuthBindPassword
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bind+Search authentication configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlLdapBindSearchAuth
@@ -2810,7 +3107,9 @@ public partial class V1ClusterSpecPostgresqlLdapBindSearchAuth
     [JsonPropertyName("searchFilter")]
     public string? SearchFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options to specify LDAP configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlLdap
@@ -2839,7 +3138,9 @@ public partial class V1ClusterSpecPostgresqlLdap
     [JsonPropertyName("tls")]
     public bool? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Requirements to be met by sync replicas. This will affect how the "synchronous_standby_names" parameter will be set up.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlSyncReplicaElectionConstraint
@@ -2852,7 +3153,9 @@ public partial class V1ClusterSpecPostgresqlSyncReplicaElectionConstraint
     [JsonPropertyName("nodeLabelsAntiAffinity")]
     public IList<string>? NodeLabelsAntiAffinity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the PostgreSQL synchronous replication feature</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlSynchronous
@@ -2881,7 +3184,9 @@ public partial class V1ClusterSpecPostgresqlSynchronous
     [JsonPropertyName("standbyNamesPre")]
     public IList<string>? StandbyNamesPre { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the PostgreSQL server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresql
@@ -2926,7 +3231,9 @@ public partial class V1ClusterSpecPostgresql
     [JsonPropertyName("synchronous")]
     public V1ClusterSpecPostgresqlSynchronous? Synchronous { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure the feature that extends the liveness probe for a primary instance. In addition to the basic checks, this verifies whether the primary is isolated from the Kubernetes API server and from its replicas, ensuring that it can be safely shut down if network partition or API unavailability is detected. Enabled by default.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProbesLivenessIsolationCheck
@@ -2943,7 +3250,9 @@ public partial class V1ClusterSpecProbesLivenessIsolationCheck
     [JsonPropertyName("requestTimeout")]
     public int? RequestTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The liveness probe configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProbesLiveness
@@ -2976,7 +3285,9 @@ public partial class V1ClusterSpecProbesLiveness
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The readiness probe configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProbesReadiness
@@ -3013,7 +3324,9 @@ public partial class V1ClusterSpecProbesReadiness
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The startup probe configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProbesStartup
@@ -3050,7 +3363,9 @@ public partial class V1ClusterSpecProbesStartup
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the probes to be injected in the PostgreSQL Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProbes
@@ -3067,7 +3382,9 @@ public partial class V1ClusterSpecProbes
     [JsonPropertyName("startup")]
     public V1ClusterSpecProbesStartup? Startup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesClusterTrustBundleLabelSelectorMatchExpressions
@@ -3084,7 +3401,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesClusterTrustBund
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Select all ClusterTrustBundles that match this label selector.  Only has effect if signerName is set.  Mutually-exclusive with name.  If unset, interpreted as "match nothing".  If set but empty, interpreted as "match everything".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesClusterTrustBundleLabelSelector
@@ -3097,7 +3416,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesClusterTrustBund
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field of ClusterTrustBundle objects in an auto-updating file.  Alpha, gated by the ClusterTrustBundleProjection feature gate.  ClusterTrustBundle objects can either be selected by name, or by the combination of signer name and a label selector.  Kubelet performs aggressive normalization of the PEM contents written into the pod filesystem.  Esoteric PEM features such as inter-block comments and block headers are stripped.  Certificates are deduplicated. The ordering of certificates within the file is arbitrary, and Kubelet may change the order over time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesClusterTrustBundle
@@ -3122,7 +3443,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesClusterTrustBund
     [JsonPropertyName("signerName")]
     public string? SignerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesConfigMapItems
@@ -3139,7 +3462,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesConfigMapItems
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>configMap information about the configMap data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesConfigMap
@@ -3156,7 +3481,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesConfigMap
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPIItemsFieldRef
@@ -3169,7 +3496,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPIItems
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPIItemsResourceFieldRef
@@ -3186,7 +3515,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPIItems
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPIItems
@@ -3207,7 +3538,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPIItems
     [JsonPropertyName("resourceFieldRef")]
     public V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>downwardAPI information about the downwardAPI data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPI
@@ -3216,7 +3549,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPI
     [JsonPropertyName("items")]
     public IList<V1ClusterSpecProjectedVolumeTemplateSourcesDownwardAPIItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesSecretItems
@@ -3233,7 +3568,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesSecretItems
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secret information about the secret data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesSecret
@@ -3250,7 +3587,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesSecret
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>serviceAccountToken is information about the serviceAccountToken data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSourcesServiceAccountToken
@@ -3267,7 +3606,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSourcesServiceAccountTo
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Projection that may be projected along with other supported volume types. Exactly one of these fields must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplateSources
@@ -3292,7 +3633,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplateSources
     [JsonPropertyName("serviceAccountToken")]
     public V1ClusterSpecProjectedVolumeTemplateSourcesServiceAccountToken? ServiceAccountToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template to be used to define projected volumes, projected volumes will be mounted under `/projected` base folder</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProjectedVolumeTemplate
@@ -3305,7 +3648,9 @@ public partial class V1ClusterSpecProjectedVolumeTemplate
     [JsonPropertyName("sources")]
     public IList<V1ClusterSpecProjectedVolumeTemplateSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replica cluster configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecReplica
@@ -3334,7 +3679,9 @@ public partial class V1ClusterSpecReplica
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replication slots for high availability configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecReplicationSlotsHighAvailability
@@ -3351,7 +3698,9 @@ public partial class V1ClusterSpecReplicationSlotsHighAvailability
     [JsonPropertyName("synchronizeLogicalDecoding")]
     public bool? SynchronizeLogicalDecoding { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the synchronization of the user defined physical replication slots</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecReplicationSlotsSynchronizeReplicas
@@ -3364,7 +3713,9 @@ public partial class V1ClusterSpecReplicationSlotsSynchronizeReplicas
     [JsonPropertyName("excludePatterns")]
     public IList<string>? ExcludePatterns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replication slots management configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecReplicationSlots
@@ -3381,7 +3732,9 @@ public partial class V1ClusterSpecReplicationSlots
     [JsonPropertyName("updateInterval")]
     public int? UpdateInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecResourcesClaims
@@ -3394,7 +3747,9 @@ public partial class V1ClusterSpecResourcesClaims
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resources requirements of every generated Pod. Please refer to https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecResources
@@ -3411,7 +3766,9 @@ public partial class V1ClusterSpecResources
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SeccompProfile applied to every Pod and Container. Defaults to: `RuntimeDefault`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecSeccompProfile
@@ -3424,7 +3781,9 @@ public partial class V1ClusterSpecSeccompProfile
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata are the metadata to be used for the generated service account</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecServiceAccountTemplateMetadata
@@ -3441,7 +3800,9 @@ public partial class V1ClusterSpecServiceAccountTemplateMetadata
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configure the generation of the service account</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecServiceAccountTemplate
@@ -3450,7 +3811,9 @@ public partial class V1ClusterSpecServiceAccountTemplate
     [JsonPropertyName("metadata")]
     public V1ClusterSpecServiceAccountTemplateMetadata Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecStoragePvcTemplateDataSource
@@ -3467,7 +3830,9 @@ public partial class V1ClusterSpecStoragePvcTemplateDataSource
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecStoragePvcTemplateDataSourceRef
@@ -3488,7 +3853,9 @@ public partial class V1ClusterSpecStoragePvcTemplateDataSourceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecStoragePvcTemplateResources
@@ -3501,7 +3868,9 @@ public partial class V1ClusterSpecStoragePvcTemplateResources
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecStoragePvcTemplateSelectorMatchExpressions
@@ -3518,7 +3887,9 @@ public partial class V1ClusterSpecStoragePvcTemplateSelectorMatchExpressions
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>selector is a label query over volumes to consider for binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecStoragePvcTemplateSelector
@@ -3531,7 +3902,9 @@ public partial class V1ClusterSpecStoragePvcTemplateSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template to be used to generate the Persistent Volume Claim</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecStoragePvcTemplate
@@ -3572,7 +3945,9 @@ public partial class V1ClusterSpecStoragePvcTemplate
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the storage of the instances</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecStorage
@@ -3593,7 +3968,9 @@ public partial class V1ClusterSpecStorage
     [JsonPropertyName("storageClass")]
     public string? StorageClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The secret containing the superuser password. If not defined a new secret will be created with a randomly generated password</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecSuperuserSecret
@@ -3602,7 +3979,9 @@ public partial class V1ClusterSpecSuperuserSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner is the PostgreSQL user owning the tablespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespacesOwner
@@ -3611,7 +3990,9 @@ public partial class V1ClusterSpecTablespacesOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespacesStoragePvcTemplateDataSource
@@ -3628,7 +4009,9 @@ public partial class V1ClusterSpecTablespacesStoragePvcTemplateDataSource
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespacesStoragePvcTemplateDataSourceRef
@@ -3649,7 +4032,9 @@ public partial class V1ClusterSpecTablespacesStoragePvcTemplateDataSourceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespacesStoragePvcTemplateResources
@@ -3662,7 +4047,9 @@ public partial class V1ClusterSpecTablespacesStoragePvcTemplateResources
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespacesStoragePvcTemplateSelectorMatchExpressions
@@ -3679,7 +4066,9 @@ public partial class V1ClusterSpecTablespacesStoragePvcTemplateSelectorMatchExpr
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>selector is a label query over volumes to consider for binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespacesStoragePvcTemplateSelector
@@ -3692,7 +4081,9 @@ public partial class V1ClusterSpecTablespacesStoragePvcTemplateSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template to be used to generate the Persistent Volume Claim</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespacesStoragePvcTemplate
@@ -3733,7 +4124,9 @@ public partial class V1ClusterSpecTablespacesStoragePvcTemplate
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The storage configuration for the tablespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespacesStorage
@@ -3754,7 +4147,9 @@ public partial class V1ClusterSpecTablespacesStorage
     [JsonPropertyName("storageClass")]
     public string? StorageClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TablespaceConfiguration is the configuration of a tablespace, and includes the storage specification for the tablespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTablespaces
@@ -3775,7 +4170,9 @@ public partial class V1ClusterSpecTablespaces
     [JsonPropertyName("temporary")]
     public bool? Temporary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTopologySpreadConstraintsLabelSelectorMatchExpressions
@@ -3792,7 +4189,9 @@ public partial class V1ClusterSpecTopologySpreadConstraintsLabelSelectorMatchExp
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTopologySpreadConstraintsLabelSelector
@@ -3805,7 +4204,9 @@ public partial class V1ClusterSpecTopologySpreadConstraintsLabelSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopologySpreadConstraint specifies how to spread matching pods among the given topology.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecTopologySpreadConstraints
@@ -3842,7 +4243,9 @@ public partial class V1ClusterSpecTopologySpreadConstraints
     [JsonPropertyName("whenUnsatisfiable")]
     public string WhenUnsatisfiable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecWalStoragePvcTemplateDataSource
@@ -3859,7 +4262,9 @@ public partial class V1ClusterSpecWalStoragePvcTemplateDataSource
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecWalStoragePvcTemplateDataSourceRef
@@ -3880,7 +4285,9 @@ public partial class V1ClusterSpecWalStoragePvcTemplateDataSourceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecWalStoragePvcTemplateResources
@@ -3893,7 +4300,9 @@ public partial class V1ClusterSpecWalStoragePvcTemplateResources
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecWalStoragePvcTemplateSelectorMatchExpressions
@@ -3910,7 +4319,9 @@ public partial class V1ClusterSpecWalStoragePvcTemplateSelectorMatchExpressions
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>selector is a label query over volumes to consider for binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecWalStoragePvcTemplateSelector
@@ -3923,7 +4334,9 @@ public partial class V1ClusterSpecWalStoragePvcTemplateSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template to be used to generate the Persistent Volume Claim</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecWalStoragePvcTemplate
@@ -3964,7 +4377,9 @@ public partial class V1ClusterSpecWalStoragePvcTemplate
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration of the storage for PostgreSQL WAL (Write-Ahead Log)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecWalStorage
@@ -3985,7 +4400,9 @@ public partial class V1ClusterSpecWalStorage
     [JsonPropertyName("storageClass")]
     public string? StorageClass { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the cluster. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpec
@@ -4190,7 +4607,9 @@ public partial class V1ClusterSpec
     [JsonPropertyName("walStorage")]
     public V1ClusterSpecWalStorage? WalStorage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AvailableArchitecture represents the state of a cluster's architecture</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusAvailableArchitectures
@@ -4203,7 +4622,9 @@ public partial class V1ClusterStatusAvailableArchitectures
     [JsonPropertyName("hash")]
     public string Hash { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the CA and related certificates, initialized with defaults.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusCertificates
@@ -4232,7 +4653,9 @@ public partial class V1ClusterStatusCertificates
     [JsonPropertyName("serverTLSSecret")]
     public string? ServerTLSSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusConditions
@@ -4261,7 +4684,9 @@ public partial class V1ClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The list of resource versions of the configmaps, managed by the operator. Every change here is done in the interest of the instance manager, which will refresh the configmap data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusConfigMapResourceVersion
@@ -4270,7 +4695,9 @@ public partial class V1ClusterStatusConfigMapResourceVersion
     [JsonPropertyName("metrics")]
     public IDictionary<string, string>? Metrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceReportedState describes the last reported state of an instance during a reconciliation loop</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusInstancesReportedState
@@ -4287,7 +4714,9 @@ public partial class V1ClusterStatusInstancesReportedState
     [JsonPropertyName("timeLineID")]
     public int? TimeLineID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PasswordState represents the state of the password of a managed RoleConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusManagedRolesStatusPasswordStatus
@@ -4300,7 +4729,9 @@ public partial class V1ClusterStatusManagedRolesStatusPasswordStatus
     [JsonPropertyName("transactionID")]
     public long? TransactionID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedRolesStatus reports the state of the managed roles in the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusManagedRolesStatus
@@ -4317,7 +4748,9 @@ public partial class V1ClusterStatusManagedRolesStatus
     [JsonPropertyName("passwordStatus")]
     public IDictionary<string, V1ClusterStatusManagedRolesStatusPasswordStatus>? PasswordStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PGDataImageInfo contains the details of the latest image that has run on the current data directory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusPgDataImageInfo
@@ -4330,7 +4763,9 @@ public partial class V1ClusterStatusPgDataImageInfo
     [JsonPropertyName("majorVersion")]
     public int MajorVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PluginStatus is the status of a loaded plugin</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusPluginStatus
@@ -4367,7 +4802,9 @@ public partial class V1ClusterStatusPluginStatus
     [JsonPropertyName("walCapabilities")]
     public IList<string>? WalCapabilities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PgBouncerIntegrationStatus encapsulates the needed integration for the pgbouncer poolers referencing the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusPoolerIntegrationsPgBouncerIntegration
@@ -4376,7 +4813,9 @@ public partial class V1ClusterStatusPoolerIntegrationsPgBouncerIntegration
     [JsonPropertyName("secrets")]
     public IList<string>? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The integration needed by poolers referencing the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusPoolerIntegrations
@@ -4385,7 +4824,9 @@ public partial class V1ClusterStatusPoolerIntegrations
     [JsonPropertyName("pgBouncerIntegration")]
     public V1ClusterStatusPoolerIntegrationsPgBouncerIntegration? PgBouncerIntegration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The list of resource versions of the secrets managed by the operator. Every change here is done in the interest of the instance manager, which will refresh the secret data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusSecretsResourceVersion
@@ -4434,7 +4875,9 @@ public partial class V1ClusterStatusSecretsResourceVersion
     [JsonPropertyName("superuserSecretVersion")]
     public string? SuperuserSecretVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SwitchReplicaClusterStatus is the status of the switch to replica cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusSwitchReplicaClusterStatus
@@ -4443,7 +4886,9 @@ public partial class V1ClusterStatusSwitchReplicaClusterStatus
     [JsonPropertyName("inProgress")]
     public bool? InProgress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TablespaceState represents the state of a tablespace in a cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusTablespacesStatus
@@ -4464,7 +4909,9 @@ public partial class V1ClusterStatusTablespacesStatus
     [JsonPropertyName("state")]
     public string State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Instances topology.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusTopology
@@ -4481,7 +4928,9 @@ public partial class V1ClusterStatusTopology
     [JsonPropertyName("successfullyExtracted")]
     public bool? SuccessfullyExtracted { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Most recently observed status of the cluster. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatus
@@ -4674,7 +5123,9 @@ public partial class V1ClusterStatus
     [JsonPropertyName("writeService")]
     public string? WriteService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cluster is the Schema for the PostgreSQL API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -4704,3 +5155,4 @@ public partial class V1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1Cluste
     [JsonPropertyName("status")]
     public V1ClusterStatus? Status { get; set; }
 }
+#nullable disable

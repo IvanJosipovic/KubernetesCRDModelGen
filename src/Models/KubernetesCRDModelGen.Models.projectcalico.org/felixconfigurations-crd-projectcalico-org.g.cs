@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+#nullable enable
 /// <summary>Felix Configuration contains the configuration for Felix.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1FelixConfigurationList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1FelixConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BPFConntrackTimers overrides the default values for the specified conntrack timer if set. Each value can be either a duration or `Auto` to pick the value from a Linux conntrack timeout.  Configurable timers are: CreationGracePeriod, TCPSynSent, TCPEstablished, TCPFinsSeen, TCPResetSeen, UDPTimeout, GenericTimeout, ICMPTimeout.  Unset values are replaced by the default values with a warning log for incorrect values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecBpfConntrackTimeouts
@@ -70,7 +73,9 @@ public partial class V1FelixConfigurationSpecBpfConntrackTimeouts
     [JsonPropertyName("udpTimeout")]
     public string? UdpTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProtoPort is combination of protocol, port, and CIDR. Protocol and port must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecFailsafeInboundHostPorts
@@ -87,7 +92,9 @@ public partial class V1FelixConfigurationSpecFailsafeInboundHostPorts
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProtoPort is combination of protocol, port, and CIDR. Protocol and port must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecFailsafeOutboundHostPorts
@@ -104,7 +111,9 @@ public partial class V1FelixConfigurationSpecFailsafeOutboundHostPorts
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecHealthTimeoutOverrides
@@ -117,7 +126,9 @@ public partial class V1FelixConfigurationSpecHealthTimeoutOverrides
     [JsonPropertyName("timeout")]
     public string Timeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated in favor of RouteTableRanges. Calico programs additional Linux route tables for various purposes. RouteTableRange specifies the indices of the route tables that Calico should use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecRouteTableRange
@@ -130,7 +141,9 @@ public partial class V1FelixConfigurationSpecRouteTableRange
     [JsonPropertyName("min")]
     public int Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecRouteTableRanges
@@ -143,7 +156,9 @@ public partial class V1FelixConfigurationSpecRouteTableRanges
     [JsonPropertyName("min")]
     public int Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FelixConfigurationSpec contains the values of the Felix configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpec
@@ -808,7 +823,9 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("xdpRefreshInterval")]
     public string? XdpRefreshInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Felix Configuration contains the configuration for Felix.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -834,3 +851,4 @@ public partial class V1FelixConfiguration : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("spec")]
     public V1FelixConfigurationSpec? Spec { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appstream.aws.upbound.io;
+#nullable enable
 /// <summary>Fleet is the Schema for the Fleets API. Provides an AppStream fleet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FleetList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Fleet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderComputeCapacity
@@ -46,7 +49,9 @@ public partial class V1beta1FleetSpecForProviderComputeCapacity
     [JsonPropertyName("desiredSessions")]
     public double? DesiredSessions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderDomainJoinInfo
@@ -59,7 +64,9 @@ public partial class V1beta1FleetSpecForProviderDomainJoinInfo
     [JsonPropertyName("organizationalUnitDistinguishedName")]
     public string? OrganizationalUnitDistinguishedName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderIamRoleArnRefPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1FleetSpecForProviderIamRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderIamRoleArnRef
@@ -85,7 +94,9 @@ public partial class V1beta1FleetSpecForProviderIamRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecForProviderIamRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderIamRoleArnSelectorPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1FleetSpecForProviderIamRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderIamRoleArnSelector
@@ -115,7 +128,9 @@ public partial class V1beta1FleetSpecForProviderIamRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecForProviderIamRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderVpcConfigSubnetIdRefsPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1FleetSpecForProviderVpcConfigSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderVpcConfigSubnetIdRefs
@@ -141,7 +158,9 @@ public partial class V1beta1FleetSpecForProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecForProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderVpcConfigSubnetIdSelectorPolicy
@@ -154,7 +173,9 @@ public partial class V1beta1FleetSpecForProviderVpcConfigSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderVpcConfigSubnetIdSelector
@@ -171,7 +192,9 @@ public partial class V1beta1FleetSpecForProviderVpcConfigSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecForProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderVpcConfig
@@ -192,7 +215,9 @@ public partial class V1beta1FleetSpecForProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProvider
@@ -281,7 +306,9 @@ public partial class V1beta1FleetSpecForProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1FleetSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderComputeCapacity
@@ -294,7 +321,9 @@ public partial class V1beta1FleetSpecInitProviderComputeCapacity
     [JsonPropertyName("desiredSessions")]
     public double? DesiredSessions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderDomainJoinInfo
@@ -307,7 +336,9 @@ public partial class V1beta1FleetSpecInitProviderDomainJoinInfo
     [JsonPropertyName("organizationalUnitDistinguishedName")]
     public string? OrganizationalUnitDistinguishedName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderIamRoleArnRefPolicy
@@ -320,7 +351,9 @@ public partial class V1beta1FleetSpecInitProviderIamRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderIamRoleArnRef
@@ -333,7 +366,9 @@ public partial class V1beta1FleetSpecInitProviderIamRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecInitProviderIamRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderIamRoleArnSelectorPolicy
@@ -346,7 +381,9 @@ public partial class V1beta1FleetSpecInitProviderIamRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderIamRoleArnSelector
@@ -363,7 +400,9 @@ public partial class V1beta1FleetSpecInitProviderIamRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecInitProviderIamRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderVpcConfigSubnetIdRefsPolicy
@@ -376,7 +415,9 @@ public partial class V1beta1FleetSpecInitProviderVpcConfigSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderVpcConfigSubnetIdRefs
@@ -389,7 +430,9 @@ public partial class V1beta1FleetSpecInitProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecInitProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderVpcConfigSubnetIdSelectorPolicy
@@ -402,7 +445,9 @@ public partial class V1beta1FleetSpecInitProviderVpcConfigSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderVpcConfigSubnetIdSelector
@@ -419,7 +464,9 @@ public partial class V1beta1FleetSpecInitProviderVpcConfigSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecInitProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderVpcConfig
@@ -440,7 +487,9 @@ public partial class V1beta1FleetSpecInitProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProvider
@@ -525,7 +574,9 @@ public partial class V1beta1FleetSpecInitProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1FleetSpecInitProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecProviderConfigRefPolicy
@@ -538,7 +589,9 @@ public partial class V1beta1FleetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecProviderConfigRef
@@ -551,7 +604,9 @@ public partial class V1beta1FleetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecWriteConnectionSecretToRef
@@ -564,7 +619,9 @@ public partial class V1beta1FleetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FleetSpec defines the desired state of Fleet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpec
@@ -593,7 +650,9 @@ public partial class V1beta1FleetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FleetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderComputeCapacity
@@ -618,7 +677,9 @@ public partial class V1beta1FleetStatusAtProviderComputeCapacity
     [JsonPropertyName("running")]
     public double? Running { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderDomainJoinInfo
@@ -631,7 +692,9 @@ public partial class V1beta1FleetStatusAtProviderDomainJoinInfo
     [JsonPropertyName("organizationalUnitDistinguishedName")]
     public string? OrganizationalUnitDistinguishedName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderVpcConfig
@@ -644,7 +707,9 @@ public partial class V1beta1FleetStatusAtProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProvider
@@ -745,7 +810,9 @@ public partial class V1beta1FleetStatusAtProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1FleetStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusConditions
@@ -774,7 +841,9 @@ public partial class V1beta1FleetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FleetStatus defines the observed state of Fleet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatus
@@ -791,7 +860,9 @@ public partial class V1beta1FleetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fleet is the Schema for the Fleets API. Provides an AppStream fleet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -821,3 +892,4 @@ public partial class V1beta1Fleet : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1FleetStatus? Status { get; set; }
 }
+#nullable disable

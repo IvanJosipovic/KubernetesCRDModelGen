@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.subscription.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20211001.Alias Generator information: - Generated from: /subscription/resource-manager/Microsoft.Subscription/stable/2021-10-01/subscriptions.json - ARM URI: /providers/Microsoft.Subscription/aliases/{aliasName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20211001storageAliasList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1api20211001storageAlias> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20211001storageAliasSpecOperatorSpecConfigMapExpressio
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20211001storageAliasSpecOperatorSpecSecretExpressions
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211001.AliasOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20211001storageAliasSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20211001storageAliasSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211001.PutAliasRequestAdditionalProperties Put subscription additional properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasSpecPropertiesAdditionalProperties
@@ -109,7 +118,9 @@ public partial class V1api20211001storageAliasSpecPropertiesAdditionalProperties
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211001.PutAliasRequestProperties Put subscription properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasSpecProperties
@@ -142,7 +153,9 @@ public partial class V1api20211001storageAliasSpecProperties
     [JsonPropertyName("workload")]
     public string? Workload { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211001.Alias_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasSpec
@@ -167,7 +180,9 @@ public partial class V1api20211001storageAliasSpec
     [JsonPropertyName("properties")]
     public V1api20211001storageAliasSpecProperties? Properties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasStatusConditions
@@ -200,7 +215,9 @@ public partial class V1api20211001storageAliasStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211001.SubscriptionAliasResponseProperties_STATUS Put subscription creation result properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasStatusProperties
@@ -257,7 +274,9 @@ public partial class V1api20211001storageAliasStatusProperties
     [JsonPropertyName("workload")]
     public string? Workload { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasStatusSystemData
@@ -290,7 +309,9 @@ public partial class V1api20211001storageAliasStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211001.Alias_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageAliasStatus
@@ -323,7 +344,9 @@ public partial class V1api20211001storageAliasStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20211001.Alias Generator information: - Generated from: /subscription/resource-manager/Microsoft.Subscription/stable/2021-10-01/subscriptions.json - ARM URI: /providers/Microsoft.Subscription/aliases/{aliasName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -353,3 +376,4 @@ public partial class V1api20211001storageAlias : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1api20211001storageAliasStatus? Status { get; set; }
 }
+#nullable disable

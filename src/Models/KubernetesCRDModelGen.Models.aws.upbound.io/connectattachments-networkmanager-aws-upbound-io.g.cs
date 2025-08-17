@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.upbound.io;
+#nullable enable
 /// <summary>ConnectAttachment is the Schema for the ConnectAttachments API. Manages an AWS Network Manager Connect Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConnectAttachmentList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1ConnectAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCAttachment in networkmanager to populate edgeLocation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationRef
@@ -115,7 +128,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecForProviderEdgeLocationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCAttachment in networkmanager to populate edgeLocation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelector
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderOptions
@@ -154,7 +173,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderOptions
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdRefPolicy
@@ -167,7 +188,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCAttachment in networkmanager to populate transportAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdRef
@@ -180,7 +203,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentI
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelectorPolicy
@@ -193,7 +218,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCAttachment in networkmanager to populate transportAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelector
@@ -210,7 +237,9 @@ public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentI
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProvider
@@ -259,7 +288,9 @@ public partial class V1beta1ConnectAttachmentSpecForProvider
     [JsonPropertyName("transportAttachmentIdSelector")]
     public V1beta1ConnectAttachmentSpecForProviderTransportAttachmentIdSelector? TransportAttachmentIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRefPolicy
@@ -272,7 +303,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRef
@@ -285,7 +318,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelectorPolicy
@@ -298,7 +333,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CoreNetwork in networkmanager to populate coreNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelector
@@ -315,7 +352,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelect
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRefPolicy
@@ -328,7 +367,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCAttachment in networkmanager to populate edgeLocation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRef
@@ -341,7 +382,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecInitProviderEdgeLocationRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelectorPolicy
@@ -354,7 +397,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCAttachment in networkmanager to populate edgeLocation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelector
@@ -371,7 +416,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelecto
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderOptions
@@ -380,7 +427,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderOptions
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdRefPolicy
@@ -393,7 +442,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachment
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCAttachment in networkmanager to populate transportAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdRef
@@ -406,7 +457,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachment
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelectorPolicy
@@ -419,7 +472,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachment
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCAttachment in networkmanager to populate transportAttachmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelector
@@ -436,7 +491,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachment
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProvider
@@ -485,7 +542,9 @@ public partial class V1beta1ConnectAttachmentSpecInitProvider
     [JsonPropertyName("transportAttachmentIdSelector")]
     public V1beta1ConnectAttachmentSpecInitProviderTransportAttachmentIdSelector? TransportAttachmentIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecProviderConfigRefPolicy
@@ -498,7 +557,9 @@ public partial class V1beta1ConnectAttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecProviderConfigRef
@@ -511,7 +572,9 @@ public partial class V1beta1ConnectAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConnectAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecWriteConnectionSecretToRef
@@ -524,7 +587,9 @@ public partial class V1beta1ConnectAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectAttachmentSpec defines the desired state of ConnectAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpec
@@ -553,7 +618,9 @@ public partial class V1beta1ConnectAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConnectAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentStatusAtProviderOptions
@@ -562,7 +629,9 @@ public partial class V1beta1ConnectAttachmentStatusAtProviderOptions
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentStatusAtProvider
@@ -631,7 +700,9 @@ public partial class V1beta1ConnectAttachmentStatusAtProvider
     [JsonPropertyName("transportAttachmentId")]
     public string? TransportAttachmentId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentStatusConditions
@@ -660,7 +731,9 @@ public partial class V1beta1ConnectAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectAttachmentStatus defines the observed state of ConnectAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentStatus
@@ -677,7 +750,9 @@ public partial class V1beta1ConnectAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectAttachment is the Schema for the ConnectAttachments API. Manages an AWS Network Manager Connect Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -707,3 +782,4 @@ public partial class V1beta1ConnectAttachment : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1ConnectAttachmentStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deploymentmanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DeploymentManagerDeploymentList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1alpha1DeploymentManagerDeployment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DeploymentManagerDeploymentSpecProjectRef
@@ -50,7 +53,9 @@ public partial class V1alpha1DeploymentManagerDeploymentSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The root configuration file to use for this deployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DeploymentManagerDeploymentSpecTargetConfig
@@ -59,7 +64,9 @@ public partial class V1alpha1DeploymentManagerDeploymentSpecTargetConfig
     [JsonPropertyName("content")]
     public string Content { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DeploymentManagerDeploymentSpecTargetImports
@@ -72,7 +79,9 @@ public partial class V1alpha1DeploymentManagerDeploymentSpecTargetImports
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters that define your deployment, including the deployment configuration and relevant templates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DeploymentManagerDeploymentSpecTarget
@@ -85,7 +94,9 @@ public partial class V1alpha1DeploymentManagerDeploymentSpecTarget
     [JsonPropertyName("imports")]
     public IList<V1alpha1DeploymentManagerDeploymentSpecTargetImports>? Imports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DeploymentManagerDeploymentSpec
@@ -118,7 +129,9 @@ public partial class V1alpha1DeploymentManagerDeploymentSpec
     [JsonPropertyName("target")]
     public V1alpha1DeploymentManagerDeploymentSpecTarget Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DeploymentManagerDeploymentStatusConditions
@@ -143,7 +156,9 @@ public partial class V1alpha1DeploymentManagerDeploymentStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DeploymentManagerDeploymentStatus
@@ -168,7 +183,9 @@ public partial class V1alpha1DeploymentManagerDeploymentStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -198,3 +215,4 @@ public partial class V1alpha1DeploymentManagerDeployment : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1alpha1DeploymentManagerDeploymentStatus? Status { get; set; }
 }
+#nullable disable

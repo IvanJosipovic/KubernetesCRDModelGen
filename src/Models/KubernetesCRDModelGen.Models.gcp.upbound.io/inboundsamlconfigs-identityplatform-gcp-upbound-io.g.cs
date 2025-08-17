@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.upbound.io;
+#nullable enable
 /// <summary>InboundSAMLConfig is the Schema for the InboundSAMLConfigs API. Inbound SAML configuration for a Identity Toolkit project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InboundSAMLConfigList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1InboundSAMLConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Output) The x509 certificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecForProviderIdpConfigIdpCertificatesX509CertificateSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1InboundSAMLConfigSpecForProviderIdpConfigIdpCertific
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecForProviderIdpConfigIdpCertificates
@@ -59,7 +64,9 @@ public partial class V1beta1InboundSAMLConfigSpecForProviderIdpConfigIdpCertific
     [JsonPropertyName("x509CertificateSecretRef")]
     public V1beta1InboundSAMLConfigSpecForProviderIdpConfigIdpCertificatesX509CertificateSecretRef? X509CertificateSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecForProviderIdpConfig
@@ -80,7 +87,9 @@ public partial class V1beta1InboundSAMLConfigSpecForProviderIdpConfig
     [JsonPropertyName("ssoUrl")]
     public string? SsoUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecForProviderSpConfig
@@ -93,7 +102,9 @@ public partial class V1beta1InboundSAMLConfigSpecForProviderSpConfig
     [JsonPropertyName("spEntityId")]
     public string? SpEntityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1InboundSAMLConfigSpecForProvider
     [JsonPropertyName("spConfig")]
     public IList<V1beta1InboundSAMLConfigSpecForProviderSpConfig>? SpConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Output) The x509 certificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecInitProviderIdpConfigIdpCertificatesX509CertificateSecretRef
@@ -139,7 +152,9 @@ public partial class V1beta1InboundSAMLConfigSpecInitProviderIdpConfigIdpCertifi
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecInitProviderIdpConfigIdpCertificates
@@ -148,7 +163,9 @@ public partial class V1beta1InboundSAMLConfigSpecInitProviderIdpConfigIdpCertifi
     [JsonPropertyName("x509CertificateSecretRef")]
     public V1beta1InboundSAMLConfigSpecInitProviderIdpConfigIdpCertificatesX509CertificateSecretRef? X509CertificateSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecInitProviderIdpConfig
@@ -169,7 +186,9 @@ public partial class V1beta1InboundSAMLConfigSpecInitProviderIdpConfig
     [JsonPropertyName("ssoUrl")]
     public string? SsoUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecInitProviderSpConfig
@@ -182,7 +201,9 @@ public partial class V1beta1InboundSAMLConfigSpecInitProviderSpConfig
     [JsonPropertyName("spEntityId")]
     public string? SpEntityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecInitProvider
@@ -211,7 +232,9 @@ public partial class V1beta1InboundSAMLConfigSpecInitProvider
     [JsonPropertyName("spConfig")]
     public IList<V1beta1InboundSAMLConfigSpecInitProviderSpConfig>? SpConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecProviderConfigRefPolicy
@@ -224,7 +247,9 @@ public partial class V1beta1InboundSAMLConfigSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecProviderConfigRef
@@ -237,7 +262,9 @@ public partial class V1beta1InboundSAMLConfigSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1InboundSAMLConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpecWriteConnectionSecretToRef
@@ -250,7 +277,9 @@ public partial class V1beta1InboundSAMLConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InboundSAMLConfigSpec defines the desired state of InboundSAMLConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigSpec
@@ -279,7 +308,9 @@ public partial class V1beta1InboundSAMLConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InboundSAMLConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>(Output) The x509 certificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigStatusAtProviderIdpConfigIdpCertificatesX509CertificateSecretRef
@@ -296,7 +327,9 @@ public partial class V1beta1InboundSAMLConfigStatusAtProviderIdpConfigIdpCertifi
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigStatusAtProviderIdpConfigIdpCertificates
@@ -305,7 +338,9 @@ public partial class V1beta1InboundSAMLConfigStatusAtProviderIdpConfigIdpCertifi
     [JsonPropertyName("x509CertificateSecretRef")]
     public V1beta1InboundSAMLConfigStatusAtProviderIdpConfigIdpCertificatesX509CertificateSecretRef? X509CertificateSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigStatusAtProviderIdpConfig
@@ -326,7 +361,9 @@ public partial class V1beta1InboundSAMLConfigStatusAtProviderIdpConfig
     [JsonPropertyName("ssoUrl")]
     public string? SsoUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigStatusAtProviderSpConfigSpCertificates
@@ -335,7 +372,9 @@ public partial class V1beta1InboundSAMLConfigStatusAtProviderSpConfigSpCertifica
     [JsonPropertyName("x509Certificate")]
     public string? X509Certificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigStatusAtProviderSpConfig
@@ -352,7 +391,9 @@ public partial class V1beta1InboundSAMLConfigStatusAtProviderSpConfig
     [JsonPropertyName("spEntityId")]
     public string? SpEntityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigStatusAtProvider
@@ -385,7 +426,9 @@ public partial class V1beta1InboundSAMLConfigStatusAtProvider
     [JsonPropertyName("spConfig")]
     public IList<V1beta1InboundSAMLConfigStatusAtProviderSpConfig>? SpConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigStatusConditions
@@ -414,7 +457,9 @@ public partial class V1beta1InboundSAMLConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InboundSAMLConfigStatus defines the observed state of InboundSAMLConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InboundSAMLConfigStatus
@@ -431,7 +476,9 @@ public partial class V1beta1InboundSAMLConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InboundSAMLConfig is the Schema for the InboundSAMLConfigs API. Inbound SAML configuration for a Identity Toolkit project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -461,3 +508,4 @@ public partial class V1beta1InboundSAMLConfig : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1InboundSAMLConfigStatus? Status { get; set; }
 }
+#nullable disable

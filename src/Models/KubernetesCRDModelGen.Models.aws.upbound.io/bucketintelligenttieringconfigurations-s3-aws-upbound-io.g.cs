@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+#nullable enable
 /// <summary>BucketIntelligentTieringConfiguration is the Schema for the BucketIntelligentTieringConfigurations API. Provides an S3 Intelligent-Tiering configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationList : IKuberne
     [JsonPropertyName("items")]
     public IList<V1beta1BucketIntelligentTieringConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRef
@@ -59,7 +64,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     [JsonPropertyName("policy")]
     public V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderFilter
@@ -102,7 +113,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProviderTiering
@@ -115,7 +128,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
@@ -152,7 +167,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     [JsonPropertyName("tiering")]
     public IList<V1beta1BucketIntelligentTieringConfigurationSpecForProviderTiering>? Tiering { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRefPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRef
@@ -178,7 +197,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelectorPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelector
@@ -208,7 +231,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     [JsonPropertyName("policy")]
     public V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderFilter
@@ -221,7 +246,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProviderTiering
@@ -234,7 +261,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvider
@@ -267,7 +296,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     [JsonPropertyName("tiering")]
     public IList<V1beta1BucketIntelligentTieringConfigurationSpecInitProviderTiering>? Tiering { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecProviderCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRef
@@ -293,7 +326,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecProviderCon
     [JsonPropertyName("policy")]
     public V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpecWriteConnectionSecretToRef
@@ -306,7 +341,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecWriteConnec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketIntelligentTieringConfigurationSpec defines the desired state of BucketIntelligentTieringConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationSpec
@@ -335,7 +372,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketIntelligentTieringConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProviderFilter
@@ -348,7 +387,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProvide
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProviderTiering
@@ -361,7 +402,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProvide
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProvider
@@ -394,7 +437,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatusAtProvide
     [JsonPropertyName("tiering")]
     public IList<V1beta1BucketIntelligentTieringConfigurationStatusAtProviderTiering>? Tiering { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationStatusConditions
@@ -423,7 +468,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatusCondition
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketIntelligentTieringConfigurationStatus defines the observed state of BucketIntelligentTieringConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketIntelligentTieringConfigurationStatus
@@ -440,7 +487,9 @@ public partial class V1beta1BucketIntelligentTieringConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketIntelligentTieringConfiguration is the Schema for the BucketIntelligentTieringConfigurations API. Provides an S3 Intelligent-Tiering configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -470,3 +519,4 @@ public partial class V1beta1BucketIntelligentTieringConfiguration : IKubernetesO
     [JsonPropertyName("status")]
     public V1beta1BucketIntelligentTieringConfigurationStatus? Status { get; set; }
 }
+#nullable disable

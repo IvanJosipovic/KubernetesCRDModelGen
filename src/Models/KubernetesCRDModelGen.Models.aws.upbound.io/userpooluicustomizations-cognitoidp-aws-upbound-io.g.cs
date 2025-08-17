@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.upbound.io;
+#nullable enable
 /// <summary>UserPoolUICustomization is the Schema for the UserPoolUICustomizations API. Provides a Cognito User Pool UI Customization resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UserPoolUICustomizationList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1UserPoolUICustomization> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProviderClientIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProviderClientIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProviderClientIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProviderClientIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecForProviderClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProviderClientIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProviderClientIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProviderClientIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProviderClientIdSelect
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecForProviderClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdSele
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1UserPoolUICustomizationSpecForProvider
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1UserPoolUICustomizationSpecForProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProviderClientIdRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProviderClientIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProviderClientIdRef
@@ -212,7 +235,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProviderClientIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecInitProviderClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProviderClientIdSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProviderClientIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProviderClientIdSelector
@@ -242,7 +269,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProviderClientIdSelec
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecInitProviderClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdRef
@@ -268,7 +299,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdSelector
@@ -298,7 +333,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdSel
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecInitProvider
@@ -335,7 +372,9 @@ public partial class V1beta1UserPoolUICustomizationSpecInitProvider
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1UserPoolUICustomizationSpecInitProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecProviderConfigRefPolicy
@@ -348,7 +387,9 @@ public partial class V1beta1UserPoolUICustomizationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecProviderConfigRef
@@ -361,7 +402,9 @@ public partial class V1beta1UserPoolUICustomizationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1UserPoolUICustomizationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpecWriteConnectionSecretToRef
@@ -374,7 +417,9 @@ public partial class V1beta1UserPoolUICustomizationSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPoolUICustomizationSpec defines the desired state of UserPoolUICustomization</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationSpec
@@ -403,7 +448,9 @@ public partial class V1beta1UserPoolUICustomizationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UserPoolUICustomizationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationStatusAtProvider
@@ -448,7 +495,9 @@ public partial class V1beta1UserPoolUICustomizationStatusAtProvider
     [JsonPropertyName("userPoolId")]
     public string? UserPoolId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationStatusConditions
@@ -477,7 +526,9 @@ public partial class V1beta1UserPoolUICustomizationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPoolUICustomizationStatus defines the observed state of UserPoolUICustomization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolUICustomizationStatus
@@ -494,7 +545,9 @@ public partial class V1beta1UserPoolUICustomizationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserPoolUICustomization is the Schema for the UserPoolUICustomizations API. Provides a Cognito User Pool UI Customization resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -524,3 +577,4 @@ public partial class V1beta1UserPoolUICustomization : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1UserPoolUICustomizationStatus? Status { get; set; }
 }
+#nullable disable

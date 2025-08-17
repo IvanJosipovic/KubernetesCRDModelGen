@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53recoverycontrolconfig.aws.m.upbound.io;
+#nullable enable
 /// <summary>RoutingControl is the Schema for the RoutingControls API. Provides an AWS Route 53 Recovery Control Config Routing Control</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RoutingControlList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1RoutingControl> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProviderClusterArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RoutingControlSpecForProviderClusterArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in route53recoverycontrolconfig to populate clusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProviderClusterArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1RoutingControlSpecForProviderClusterArnRef
     [JsonPropertyName("policy")]
     public V1beta1RoutingControlSpecForProviderClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProviderClusterArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1RoutingControlSpecForProviderClusterArnSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in route53recoverycontrolconfig to populate clusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProviderClusterArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1RoutingControlSpecForProviderClusterArnSelector
     [JsonPropertyName("policy")]
     public V1beta1RoutingControlSpecForProviderClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProviderControlPanelArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1RoutingControlSpecForProviderControlPanelArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProviderControlPanelArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1RoutingControlSpecForProviderControlPanelArnRef
     [JsonPropertyName("policy")]
     public V1beta1RoutingControlSpecForProviderControlPanelArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProviderControlPanelArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1RoutingControlSpecForProviderControlPanelArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProviderControlPanelArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1RoutingControlSpecForProviderControlPanelArnSelector
     [JsonPropertyName("policy")]
     public V1beta1RoutingControlSpecForProviderControlPanelArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1RoutingControlSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProviderClusterArnRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1RoutingControlSpecInitProviderClusterArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in route53recoverycontrolconfig to populate clusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProviderClusterArnRef
@@ -224,7 +247,9 @@ public partial class V1beta1RoutingControlSpecInitProviderClusterArnRef
     [JsonPropertyName("policy")]
     public V1beta1RoutingControlSpecInitProviderClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProviderClusterArnSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1RoutingControlSpecInitProviderClusterArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in route53recoverycontrolconfig to populate clusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProviderClusterArnSelector
@@ -258,7 +285,9 @@ public partial class V1beta1RoutingControlSpecInitProviderClusterArnSelector
     [JsonPropertyName("policy")]
     public V1beta1RoutingControlSpecInitProviderClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnRef
@@ -288,7 +319,9 @@ public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnRef
     [JsonPropertyName("policy")]
     public V1beta1RoutingControlSpecInitProviderControlPanelArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnSelector
@@ -322,7 +357,9 @@ public partial class V1beta1RoutingControlSpecInitProviderControlPanelArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1RoutingControlSpecInitProviderControlPanelArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1RoutingControlSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1RoutingControlSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1RoutingControlSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoutingControlSpec defines the desired state of RoutingControl</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlSpec
@@ -402,7 +445,9 @@ public partial class V1beta1RoutingControlSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RoutingControlSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlStatusAtProvider
@@ -431,7 +476,9 @@ public partial class V1beta1RoutingControlStatusAtProvider
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlStatusConditions
@@ -460,7 +507,9 @@ public partial class V1beta1RoutingControlStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoutingControlStatus defines the observed state of RoutingControl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoutingControlStatus
@@ -477,7 +526,9 @@ public partial class V1beta1RoutingControlStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoutingControl is the Schema for the RoutingControls API. Provides an AWS Route 53 Recovery Control Config Routing Control</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -507,3 +558,4 @@ public partial class V1beta1RoutingControl : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1RoutingControlStatus? Status { get; set; }
 }
+#nullable disable

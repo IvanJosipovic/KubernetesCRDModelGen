@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storagecache.azure.m.upbound.io;
+#nullable enable
 /// <summary>HPCCache is the Schema for the HPCCaches API. Manages a HPC Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HPCCacheList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1HPCCache> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDefaultAccessPolicyAccessRule
@@ -70,7 +73,9 @@ public partial class V1beta1HPCCacheSpecForProviderDefaultAccessPolicyAccessRule
     [JsonPropertyName("suidEnabled")]
     public bool? SuidEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A default_access_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDefaultAccessPolicy
@@ -79,7 +84,9 @@ public partial class V1beta1HPCCacheSpecForProviderDefaultAccessPolicy
     [JsonPropertyName("accessRule")]
     public IList<V1beta1HPCCacheSpecForProviderDefaultAccessPolicyAccessRule>? AccessRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password of the Active Directory domain administrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDirectoryActiveDirectoryPasswordSecretRef
@@ -92,7 +99,9 @@ public partial class V1beta1HPCCacheSpecForProviderDirectoryActiveDirectoryPassw
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_active_directory block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDirectoryActiveDirectory
@@ -125,7 +134,9 @@ public partial class V1beta1HPCCacheSpecForProviderDirectoryActiveDirectory
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_flat_file block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDirectoryFlatFile
@@ -138,7 +149,9 @@ public partial class V1beta1HPCCacheSpecForProviderDirectoryFlatFile
     [JsonPropertyName("passwordFileUri")]
     public string? PasswordFileUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password of the Active Directory domain administrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDirectoryLdapBindPasswordSecretRef
@@ -151,7 +164,9 @@ public partial class V1beta1HPCCacheSpecForProviderDirectoryLdapBindPasswordSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A bind block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDirectoryLdapBind
@@ -164,7 +179,9 @@ public partial class V1beta1HPCCacheSpecForProviderDirectoryLdapBind
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1HPCCacheSpecForProviderDirectoryLdapBindPasswordSecretRef? PasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_ldap block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDirectoryLdap
@@ -193,7 +210,9 @@ public partial class V1beta1HPCCacheSpecForProviderDirectoryLdap
     [JsonPropertyName("server")]
     public string? Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dns block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderDns
@@ -206,7 +225,9 @@ public partial class V1beta1HPCCacheSpecForProviderDns
     [JsonPropertyName("servers")]
     public IList<string>? Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderIdentity
@@ -219,7 +240,9 @@ public partial class V1beta1HPCCacheSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderResourceGroupNameRefPolicy
@@ -232,7 +255,9 @@ public partial class V1beta1HPCCacheSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderResourceGroupNameRef
@@ -249,7 +274,9 @@ public partial class V1beta1HPCCacheSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderResourceGroupNameSelectorPolicy
@@ -262,7 +289,9 @@ public partial class V1beta1HPCCacheSpecForProviderResourceGroupNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderResourceGroupNameSelector
@@ -283,7 +312,9 @@ public partial class V1beta1HPCCacheSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderSubnetIdRefPolicy
@@ -296,7 +327,9 @@ public partial class V1beta1HPCCacheSpecForProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderSubnetIdRef
@@ -313,7 +346,9 @@ public partial class V1beta1HPCCacheSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderSubnetIdSelectorPolicy
@@ -326,7 +361,9 @@ public partial class V1beta1HPCCacheSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProviderSubnetIdSelector
@@ -347,7 +384,9 @@ public partial class V1beta1HPCCacheSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecForProvider
@@ -432,7 +471,9 @@ public partial class V1beta1HPCCacheSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDefaultAccessPolicyAccessRule
@@ -469,7 +510,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDefaultAccessPolicyAccessRul
     [JsonPropertyName("suidEnabled")]
     public bool? SuidEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A default_access_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDefaultAccessPolicy
@@ -478,7 +521,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDefaultAccessPolicy
     [JsonPropertyName("accessRule")]
     public IList<V1beta1HPCCacheSpecInitProviderDefaultAccessPolicyAccessRule>? AccessRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password of the Active Directory domain administrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDirectoryActiveDirectoryPasswordSecretRef
@@ -491,7 +536,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDirectoryActiveDirectoryPass
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_active_directory block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDirectoryActiveDirectory
@@ -524,7 +571,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDirectoryActiveDirectory
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_flat_file block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDirectoryFlatFile
@@ -537,7 +586,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDirectoryFlatFile
     [JsonPropertyName("passwordFileUri")]
     public string? PasswordFileUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password of the Active Directory domain administrator.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDirectoryLdapBindPasswordSecretRef
@@ -550,7 +601,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDirectoryLdapBindPasswordSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A bind block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDirectoryLdapBind
@@ -563,7 +616,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDirectoryLdapBind
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1HPCCacheSpecInitProviderDirectoryLdapBindPasswordSecretRef PasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_ldap block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDirectoryLdap
@@ -592,7 +647,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDirectoryLdap
     [JsonPropertyName("server")]
     public string? Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dns block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderDns
@@ -605,7 +662,9 @@ public partial class V1beta1HPCCacheSpecInitProviderDns
     [JsonPropertyName("servers")]
     public IList<string>? Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderIdentity
@@ -618,7 +677,9 @@ public partial class V1beta1HPCCacheSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderSubnetIdRefPolicy
@@ -631,7 +692,9 @@ public partial class V1beta1HPCCacheSpecInitProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderSubnetIdRef
@@ -648,7 +711,9 @@ public partial class V1beta1HPCCacheSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderSubnetIdSelectorPolicy
@@ -661,7 +726,9 @@ public partial class V1beta1HPCCacheSpecInitProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProviderSubnetIdSelector
@@ -682,7 +749,9 @@ public partial class V1beta1HPCCacheSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecInitProvider
@@ -755,7 +824,9 @@ public partial class V1beta1HPCCacheSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecProviderConfigRef
@@ -768,7 +839,9 @@ public partial class V1beta1HPCCacheSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpecWriteConnectionSecretToRef
@@ -777,7 +850,9 @@ public partial class V1beta1HPCCacheSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheSpec defines the desired state of HPCCache</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheSpec
@@ -802,7 +877,9 @@ public partial class V1beta1HPCCacheSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HPCCacheSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProviderDefaultAccessPolicyAccessRule
@@ -839,7 +916,9 @@ public partial class V1beta1HPCCacheStatusAtProviderDefaultAccessPolicyAccessRul
     [JsonPropertyName("suidEnabled")]
     public bool? SuidEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A default_access_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProviderDefaultAccessPolicy
@@ -848,7 +927,9 @@ public partial class V1beta1HPCCacheStatusAtProviderDefaultAccessPolicy
     [JsonPropertyName("accessRule")]
     public IList<V1beta1HPCCacheStatusAtProviderDefaultAccessPolicyAccessRule>? AccessRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_active_directory block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProviderDirectoryActiveDirectory
@@ -877,7 +958,9 @@ public partial class V1beta1HPCCacheStatusAtProviderDirectoryActiveDirectory
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_flat_file block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProviderDirectoryFlatFile
@@ -890,7 +973,9 @@ public partial class V1beta1HPCCacheStatusAtProviderDirectoryFlatFile
     [JsonPropertyName("passwordFileUri")]
     public string? PasswordFileUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A bind block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProviderDirectoryLdapBind
@@ -899,7 +984,9 @@ public partial class V1beta1HPCCacheStatusAtProviderDirectoryLdapBind
     [JsonPropertyName("dn")]
     public string? Dn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A directory_ldap block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProviderDirectoryLdap
@@ -928,7 +1015,9 @@ public partial class V1beta1HPCCacheStatusAtProviderDirectoryLdap
     [JsonPropertyName("server")]
     public string? Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A dns block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProviderDns
@@ -941,7 +1030,9 @@ public partial class V1beta1HPCCacheStatusAtProviderDns
     [JsonPropertyName("servers")]
     public IList<string>? Servers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProviderIdentity
@@ -962,7 +1053,9 @@ public partial class V1beta1HPCCacheStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusAtProvider
@@ -1039,7 +1132,9 @@ public partial class V1beta1HPCCacheStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatusConditions
@@ -1068,7 +1163,9 @@ public partial class V1beta1HPCCacheStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheStatus defines the observed state of HPCCache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheStatus
@@ -1085,7 +1182,9 @@ public partial class V1beta1HPCCacheStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCache is the Schema for the HPCCaches API. Manages a HPC Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1115,3 +1214,4 @@ public partial class V1beta1HPCCache : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1HPCCacheStatus? Status { get; set; }
 }
+#nullable disable

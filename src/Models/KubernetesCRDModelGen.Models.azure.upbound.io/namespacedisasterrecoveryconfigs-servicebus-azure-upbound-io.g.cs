@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.upbound.io;
+#nullable enable
 /// <summary>NamespaceDisasterRecoveryConfig is the Schema for the NamespaceDisasterRecoveryConfigs API. Manages a Disaster Recovery Config for a Service Bus Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1NamespaceDisasterRecoveryConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasAuthorizationRuleIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NamespaceAuthorizationRule in servicebus to populate aliasAuthorizationRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasAuthorizationRuleIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasA
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasAuthorizationRuleIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasAuthorizationRuleIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NamespaceAuthorizationRule in servicebus to populate aliasAuthorizationRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasAuthorizationRuleIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasA
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderAliasAuthorizationRuleIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceBusNamespace in servicebus to populate partnerNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartne
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceBusNamespace in servicebus to populate partnerNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartne
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPartnerNamespaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimaryNamespaceIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimar
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceBusNamespace in servicebus to populate primaryNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimaryNamespaceIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimar
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimaryNamespaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimaryNamespaceIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimar
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceBusNamespace in servicebus to populate primaryNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimaryNamespaceIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimar
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimaryNamespaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProvider
@@ -242,7 +269,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecForProvider
     [JsonPropertyName("primaryNamespaceIdSelector")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecForProviderPrimaryNamespaceIdSelector? PrimaryNamespaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAliasAuthorizationRuleIdRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAlias
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NamespaceAuthorizationRule in servicebus to populate aliasAuthorizationRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAliasAuthorizationRuleIdRef
@@ -268,7 +299,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAlias
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAliasAuthorizationRuleIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAliasAuthorizationRuleIdSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAlias
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NamespaceAuthorizationRule in servicebus to populate aliasAuthorizationRuleId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAliasAuthorizationRuleIdSelector
@@ -298,7 +333,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAlias
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderAliasAuthorizationRuleIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdRefPolicy
@@ -311,7 +348,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceBusNamespace in servicebus to populate partnerNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdRef
@@ -324,7 +363,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartn
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdSelectorPolicy
@@ -337,7 +378,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceBusNamespace in servicebus to populate partnerNamespaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdSelector
@@ -354,7 +397,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartn
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProvider
@@ -383,7 +428,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecInitProvider
     [JsonPropertyName("partnerNamespaceIdSelector")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecInitProviderPartnerNamespaceIdSelector? PartnerNamespaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecProviderConfigRefPolicy
@@ -396,7 +443,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecProviderConfigRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecProviderConfigRef
@@ -409,7 +458,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpecWriteConnectionSecretToRef
@@ -422,7 +473,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpecWriteConnectionSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceDisasterRecoveryConfigSpec defines the desired state of NamespaceDisasterRecoveryConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigSpec
@@ -451,7 +504,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NamespaceDisasterRecoveryConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigStatusAtProvider
@@ -472,7 +527,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigStatusAtProvider
     [JsonPropertyName("primaryNamespaceId")]
     public string? PrimaryNamespaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigStatusConditions
@@ -501,7 +558,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceDisasterRecoveryConfigStatus defines the observed state of NamespaceDisasterRecoveryConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceDisasterRecoveryConfigStatus
@@ -518,7 +577,9 @@ public partial class V1beta1NamespaceDisasterRecoveryConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NamespaceDisasterRecoveryConfig is the Schema for the NamespaceDisasterRecoveryConfigs API. Manages a Disaster Recovery Config for a Service Bus Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -548,3 +609,4 @@ public partial class V1beta1NamespaceDisasterRecoveryConfig : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1NamespaceDisasterRecoveryConfigStatus? Status { get; set; }
 }
+#nullable disable

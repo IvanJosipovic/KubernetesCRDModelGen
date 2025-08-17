@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpannerDatabaseList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1SpannerDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fully qualified name of the KMS key to use to encrypt this database. This key must exist in the same location as the Spanner Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerDatabaseSpecEncryptionConfigKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1beta1SpannerDatabaseSpecEncryptionConfigKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Encryption configuration for the database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerDatabaseSpecEncryptionConfig
@@ -59,7 +64,9 @@ public partial class V1beta1SpannerDatabaseSpecEncryptionConfig
     [JsonPropertyName("kmsKeyRef")]
     public V1beta1SpannerDatabaseSpecEncryptionConfigKmsKeyRef KmsKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The instance to create the database on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerDatabaseSpecInstanceRef
@@ -76,7 +83,9 @@ public partial class V1beta1SpannerDatabaseSpecInstanceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerDatabaseSpec
@@ -109,7 +118,9 @@ public partial class V1beta1SpannerDatabaseSpec
     [JsonPropertyName("versionRetentionPeriod")]
     public string? VersionRetentionPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerDatabaseStatusConditions
@@ -134,7 +145,9 @@ public partial class V1beta1SpannerDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerDatabaseStatus
@@ -151,7 +164,9 @@ public partial class V1beta1SpannerDatabaseStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -181,3 +196,4 @@ public partial class V1beta1SpannerDatabase : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1SpannerDatabaseStatus? Status { get; set; }
 }
+#nullable disable

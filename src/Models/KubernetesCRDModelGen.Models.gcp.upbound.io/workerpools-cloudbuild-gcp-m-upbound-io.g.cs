@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudbuild.gcp.m.upbound.io;
+#nullable enable
 /// <summary>WorkerPool is the Schema for the WorkerPools API. Configuration for custom WorkerPool to run builds</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkerPoolList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1WorkerPool> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate peeredNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkRef
@@ -63,7 +68,9 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkR
     [JsonPropertyName("policy")]
     public V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate peeredNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelector
@@ -97,7 +106,9 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkS
     [JsonPropertyName("policy")]
     public V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network configuration for the WorkerPool. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProviderNetworkConfig
@@ -118,7 +129,9 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfig
     [JsonPropertyName("peeredNetworkSelector")]
     public V1beta1WorkerPoolSpecForProviderNetworkConfigPeeredNetworkSelector? PeeredNetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProviderPrivateServiceConnect
@@ -131,7 +144,9 @@ public partial class V1beta1WorkerPoolSpecForProviderPrivateServiceConnect
     [JsonPropertyName("routeAllTraffic")]
     public bool? RouteAllTraffic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to be used for a creating workers in the WorkerPool. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProviderWorkerConfig
@@ -148,7 +163,9 @@ public partial class V1beta1WorkerPoolSpecForProviderWorkerConfig
     [JsonPropertyName("noExternalIp")]
     public bool? NoExternalIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProvider
@@ -181,7 +198,9 @@ public partial class V1beta1WorkerPoolSpecForProvider
     [JsonPropertyName("workerConfig")]
     public V1beta1WorkerPoolSpecForProviderWorkerConfig? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkRefPolicy
@@ -194,7 +213,9 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate peeredNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkRef
@@ -211,7 +232,9 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetwork
     [JsonPropertyName("policy")]
     public V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelectorPolicy
@@ -224,7 +247,9 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate peeredNetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelector
@@ -245,7 +270,9 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetwork
     [JsonPropertyName("policy")]
     public V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network configuration for the WorkerPool. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfig
@@ -266,7 +293,9 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfig
     [JsonPropertyName("peeredNetworkSelector")]
     public V1beta1WorkerPoolSpecInitProviderNetworkConfigPeeredNetworkSelector? PeeredNetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProviderPrivateServiceConnect
@@ -279,7 +308,9 @@ public partial class V1beta1WorkerPoolSpecInitProviderPrivateServiceConnect
     [JsonPropertyName("routeAllTraffic")]
     public bool? RouteAllTraffic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to be used for a creating workers in the WorkerPool. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProviderWorkerConfig
@@ -296,7 +327,9 @@ public partial class V1beta1WorkerPoolSpecInitProviderWorkerConfig
     [JsonPropertyName("noExternalIp")]
     public bool? NoExternalIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProvider
@@ -325,7 +358,9 @@ public partial class V1beta1WorkerPoolSpecInitProvider
     [JsonPropertyName("workerConfig")]
     public V1beta1WorkerPoolSpecInitProviderWorkerConfig? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecProviderConfigRef
@@ -338,7 +373,9 @@ public partial class V1beta1WorkerPoolSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecWriteConnectionSecretToRef
@@ -347,7 +384,9 @@ public partial class V1beta1WorkerPoolSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkerPoolSpec defines the desired state of WorkerPool</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpec
@@ -372,7 +411,9 @@ public partial class V1beta1WorkerPoolSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkerPoolSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Network configuration for the WorkerPool. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolStatusAtProviderNetworkConfig
@@ -385,7 +426,9 @@ public partial class V1beta1WorkerPoolStatusAtProviderNetworkConfig
     [JsonPropertyName("peeredNetworkIpRange")]
     public string? PeeredNetworkIpRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolStatusAtProviderPrivateServiceConnect
@@ -398,7 +441,9 @@ public partial class V1beta1WorkerPoolStatusAtProviderPrivateServiceConnect
     [JsonPropertyName("routeAllTraffic")]
     public bool? RouteAllTraffic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to be used for a creating workers in the WorkerPool. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolStatusAtProviderWorkerConfig
@@ -415,7 +460,9 @@ public partial class V1beta1WorkerPoolStatusAtProviderWorkerConfig
     [JsonPropertyName("noExternalIp")]
     public bool? NoExternalIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolStatusAtProvider
@@ -476,7 +523,9 @@ public partial class V1beta1WorkerPoolStatusAtProvider
     [JsonPropertyName("workerConfig")]
     public V1beta1WorkerPoolStatusAtProviderWorkerConfig? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolStatusConditions
@@ -505,7 +554,9 @@ public partial class V1beta1WorkerPoolStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkerPoolStatus defines the observed state of WorkerPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolStatus
@@ -522,7 +573,9 @@ public partial class V1beta1WorkerPoolStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkerPool is the Schema for the WorkerPools API. Configuration for custom WorkerPool to run builds</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -552,3 +605,4 @@ public partial class V1beta1WorkerPool : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1WorkerPoolStatus? Status { get; set; }
 }
+#nullable disable

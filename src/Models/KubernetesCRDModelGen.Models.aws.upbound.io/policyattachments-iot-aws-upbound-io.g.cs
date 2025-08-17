@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.upbound.io;
+#nullable enable
 /// <summary>PolicyAttachment is the Schema for the PolicyAttachments API. Provides an IoT policy attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PolicyAttachmentList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1PolicyAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProviderPolicyRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PolicyAttachmentSpecForProviderPolicyRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Policy in iot to populate policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProviderPolicyRef
@@ -59,7 +64,9 @@ public partial class V1beta1PolicyAttachmentSpecForProviderPolicyRef
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecForProviderPolicyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProviderPolicySelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PolicyAttachmentSpecForProviderPolicySelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Policy in iot to populate policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProviderPolicySelector
@@ -89,7 +98,9 @@ public partial class V1beta1PolicyAttachmentSpecForProviderPolicySelector
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecForProviderPolicySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProviderTargetRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1PolicyAttachmentSpecForProviderTargetRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in iot to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProviderTargetRef
@@ -115,7 +128,9 @@ public partial class V1beta1PolicyAttachmentSpecForProviderTargetRef
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecForProviderTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProviderTargetSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1PolicyAttachmentSpecForProviderTargetSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in iot to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProviderTargetSelector
@@ -145,7 +162,9 @@ public partial class V1beta1PolicyAttachmentSpecForProviderTargetSelector
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecForProviderTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1PolicyAttachmentSpecForProvider
     [JsonPropertyName("targetSelector")]
     public V1beta1PolicyAttachmentSpecForProviderTargetSelector? TargetSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Policy in iot to populate policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyRef
@@ -204,7 +227,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderPolicyRef
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecInitProviderPolicyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProviderPolicySelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderPolicySelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Policy in iot to populate policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProviderPolicySelector
@@ -234,7 +261,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderPolicySelector
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecInitProviderPolicySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProviderTargetRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderTargetRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in iot to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProviderTargetRef
@@ -260,7 +291,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderTargetRef
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecInitProviderTargetRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProviderTargetSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderTargetSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in iot to populate target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProviderTargetSelector
@@ -290,7 +325,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProviderTargetSelector
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecInitProviderTargetSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1PolicyAttachmentSpecInitProvider
     [JsonPropertyName("targetSelector")]
     public V1beta1PolicyAttachmentSpecInitProviderTargetSelector? TargetSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1PolicyAttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1PolicyAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PolicyAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1PolicyAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyAttachmentSpec defines the desired state of PolicyAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentSpec
@@ -387,7 +432,9 @@ public partial class V1beta1PolicyAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PolicyAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1PolicyAttachmentStatusAtProvider
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1PolicyAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyAttachmentStatus defines the observed state of PolicyAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyAttachmentStatus
@@ -454,7 +505,9 @@ public partial class V1beta1PolicyAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyAttachment is the Schema for the PolicyAttachments API. Provides an IoT policy attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1PolicyAttachment : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1PolicyAttachmentStatus? Status { get; set; }
 }
+#nullable disable

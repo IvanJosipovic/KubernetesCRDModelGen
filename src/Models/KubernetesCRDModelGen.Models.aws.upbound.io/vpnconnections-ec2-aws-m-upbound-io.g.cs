@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>VPNConnection is the Schema for the VPNConnections API. Manages a Site-to-Site VPN connection. A Site-to-Site VPN connection is an Internet Protocol security (IPsec) VPN connection between a VPC and an on-premises network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPNConnectionList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1VPNConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomerGateway in ec2 to populate customerGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomerGateway in ec2 to populate customerGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecForProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecForProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for sending VPN tunnel logs to CloudWatch. See CloudWatch Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTunnel1LogOptionsCloudwatchLogOptions
@@ -178,7 +197,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTunnel1LogOptionsCloudwa
     [JsonPropertyName("logOutputFormat")]
     public string? LogOutputFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for logging VPN tunnel activity. See Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTunnel1LogOptions
@@ -187,7 +208,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTunnel1LogOptions
     [JsonPropertyName("cloudwatchLogOptions")]
     public V1beta1VPNConnectionSpecForProviderTunnel1LogOptionsCloudwatchLogOptions? CloudwatchLogOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTunnel1PresharedKeySecretRef
@@ -200,7 +223,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTunnel1PresharedKeySecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for sending VPN tunnel logs to CloudWatch. See CloudWatch Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTunnel2LogOptionsCloudwatchLogOptions
@@ -217,7 +242,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTunnel2LogOptionsCloudwa
     [JsonPropertyName("logOutputFormat")]
     public string? LogOutputFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for logging VPN tunnel activity. See Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTunnel2LogOptions
@@ -226,7 +253,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTunnel2LogOptions
     [JsonPropertyName("cloudwatchLogOptions")]
     public V1beta1VPNConnectionSpecForProviderTunnel2LogOptionsCloudwatchLogOptions? CloudwatchLogOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTunnel2PresharedKeySecretRef
@@ -239,7 +268,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTunnel2PresharedKeySecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTypeRefPolicy
@@ -252,7 +283,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTypeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomerGateway in ec2 to populate type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTypeRef
@@ -269,7 +302,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTypeRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecForProviderTypeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTypeSelectorPolicy
@@ -282,7 +317,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTypeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomerGateway in ec2 to populate type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderTypeSelector
@@ -303,7 +340,9 @@ public partial class V1beta1VPNConnectionSpecForProviderTypeSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecForProviderTypeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdRefPolicy
@@ -316,7 +355,9 @@ public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdRef
@@ -333,7 +374,9 @@ public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecForProviderVpnGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelectorPolicy
@@ -346,7 +389,9 @@ public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelector
@@ -367,7 +412,9 @@ public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecForProvider
@@ -628,7 +675,9 @@ public partial class V1beta1VPNConnectionSpecForProvider
     [JsonPropertyName("vpnGatewayIdSelector")]
     public V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelector? VpnGatewayIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRefPolicy
@@ -641,7 +690,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomerGateway in ec2 to populate customerGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRef
@@ -658,7 +709,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelectorPolicy
@@ -671,7 +724,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomerGateway in ec2 to populate customerGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelector
@@ -692,7 +747,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelect
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRefPolicy
@@ -705,7 +762,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRef
@@ -722,7 +781,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdSelectorPolicy
@@ -735,7 +796,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdSelector
@@ -756,7 +819,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecInitProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for sending VPN tunnel logs to CloudWatch. See CloudWatch Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTunnel1LogOptionsCloudwatchLogOptions
@@ -773,7 +838,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTunnel1LogOptionsCloudw
     [JsonPropertyName("logOutputFormat")]
     public string? LogOutputFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for logging VPN tunnel activity. See Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTunnel1LogOptions
@@ -782,7 +849,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTunnel1LogOptions
     [JsonPropertyName("cloudwatchLogOptions")]
     public V1beta1VPNConnectionSpecInitProviderTunnel1LogOptionsCloudwatchLogOptions? CloudwatchLogOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTunnel1PresharedKeySecretRef
@@ -795,7 +864,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTunnel1PresharedKeySecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for sending VPN tunnel logs to CloudWatch. See CloudWatch Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTunnel2LogOptionsCloudwatchLogOptions
@@ -812,7 +883,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTunnel2LogOptionsCloudw
     [JsonPropertyName("logOutputFormat")]
     public string? LogOutputFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for logging VPN tunnel activity. See Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTunnel2LogOptions
@@ -821,7 +894,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTunnel2LogOptions
     [JsonPropertyName("cloudwatchLogOptions")]
     public V1beta1VPNConnectionSpecInitProviderTunnel2LogOptionsCloudwatchLogOptions? CloudwatchLogOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTunnel2PresharedKeySecretRef
@@ -834,7 +909,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTunnel2PresharedKeySecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTypeRefPolicy
@@ -847,7 +924,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTypeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomerGateway in ec2 to populate type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTypeRef
@@ -864,7 +943,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTypeRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecInitProviderTypeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTypeSelectorPolicy
@@ -877,7 +958,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTypeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomerGateway in ec2 to populate type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderTypeSelector
@@ -898,7 +981,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderTypeSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecInitProviderTypeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRefPolicy
@@ -911,7 +996,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRef
@@ -928,7 +1015,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelectorPolicy
@@ -941,7 +1030,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNGateway in ec2 to populate vpnGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelector
@@ -962,7 +1053,9 @@ public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecInitProvider
@@ -1219,7 +1312,9 @@ public partial class V1beta1VPNConnectionSpecInitProvider
     [JsonPropertyName("vpnGatewayIdSelector")]
     public V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelector? VpnGatewayIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecProviderConfigRef
@@ -1232,7 +1327,9 @@ public partial class V1beta1VPNConnectionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpecWriteConnectionSecretToRef
@@ -1241,7 +1338,9 @@ public partial class V1beta1VPNConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNConnectionSpec defines the desired state of VPNConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionSpec
@@ -1266,7 +1365,9 @@ public partial class V1beta1VPNConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPNConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatusAtProviderRoutes
@@ -1283,7 +1384,9 @@ public partial class V1beta1VPNConnectionStatusAtProviderRoutes
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for sending VPN tunnel logs to CloudWatch. See CloudWatch Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatusAtProviderTunnel1LogOptionsCloudwatchLogOptions
@@ -1300,7 +1403,9 @@ public partial class V1beta1VPNConnectionStatusAtProviderTunnel1LogOptionsCloudw
     [JsonPropertyName("logOutputFormat")]
     public string? LogOutputFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for logging VPN tunnel activity. See Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatusAtProviderTunnel1LogOptions
@@ -1309,7 +1414,9 @@ public partial class V1beta1VPNConnectionStatusAtProviderTunnel1LogOptions
     [JsonPropertyName("cloudwatchLogOptions")]
     public V1beta1VPNConnectionStatusAtProviderTunnel1LogOptionsCloudwatchLogOptions? CloudwatchLogOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for sending VPN tunnel logs to CloudWatch. See CloudWatch Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatusAtProviderTunnel2LogOptionsCloudwatchLogOptions
@@ -1326,7 +1433,9 @@ public partial class V1beta1VPNConnectionStatusAtProviderTunnel2LogOptionsCloudw
     [JsonPropertyName("logOutputFormat")]
     public string? LogOutputFormat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options for logging VPN tunnel activity. See Log Options below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatusAtProviderTunnel2LogOptions
@@ -1335,7 +1444,9 @@ public partial class V1beta1VPNConnectionStatusAtProviderTunnel2LogOptions
     [JsonPropertyName("cloudwatchLogOptions")]
     public V1beta1VPNConnectionStatusAtProviderTunnel2LogOptionsCloudwatchLogOptions? CloudwatchLogOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatusAtProviderVgwTelemetry
@@ -1364,7 +1475,9 @@ public partial class V1beta1VPNConnectionStatusAtProviderVgwTelemetry
     [JsonPropertyName("statusMessage")]
     public string? StatusMessage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatusAtProvider
@@ -1661,7 +1774,9 @@ public partial class V1beta1VPNConnectionStatusAtProvider
     [JsonPropertyName("vpnGatewayId")]
     public string? VpnGatewayId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatusConditions
@@ -1690,7 +1805,9 @@ public partial class V1beta1VPNConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNConnectionStatus defines the observed state of VPNConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNConnectionStatus
@@ -1707,7 +1824,9 @@ public partial class V1beta1VPNConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNConnection is the Schema for the VPNConnections API. Manages a Site-to-Site VPN connection. A Site-to-Site VPN connection is an Internet Protocol security (IPsec) VPN connection between a VPC and an on-premises network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1737,3 +1856,4 @@ public partial class V1beta1VPNConnection : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1VPNConnectionStatus? Status { get; set; }
 }
+#nullable disable

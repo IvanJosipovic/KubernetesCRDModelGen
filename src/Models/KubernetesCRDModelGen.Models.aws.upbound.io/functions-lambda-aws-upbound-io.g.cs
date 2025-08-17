@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.upbound.io;
+#nullable enable
 /// <summary>Function is the Schema for the Functions API. Manages an AWS Lambda Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FunctionList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Function> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnSele
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderDeadLetterConfig
@@ -106,7 +117,9 @@ public partial class V1beta1FunctionSpecForProviderDeadLetterConfig
     [JsonPropertyName("targetArnSelector")]
     public V1beta1FunctionSpecForProviderDeadLetterConfigTargetArnSelector? TargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderEnvironment
@@ -115,7 +128,9 @@ public partial class V1beta1FunctionSpecForProviderEnvironment
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderEphemeralStorage
@@ -124,7 +139,9 @@ public partial class V1beta1FunctionSpecForProviderEphemeralStorage
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnRefPolicy
@@ -137,7 +154,9 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AccessPoint in efs to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnRef
@@ -150,7 +169,9 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderFileSystemConfigArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnSelectorPolicy
@@ -163,7 +184,9 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AccessPoint in efs to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnSelector
@@ -180,7 +203,9 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfigArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderFileSystemConfigArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderFileSystemConfig
@@ -201,7 +226,9 @@ public partial class V1beta1FunctionSpecForProviderFileSystemConfig
     [JsonPropertyName("localMountPath")]
     public string? LocalMountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderImageConfig
@@ -218,7 +245,9 @@ public partial class V1beta1FunctionSpecForProviderImageConfig
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderKmsKeyArnRefPolicy
@@ -231,7 +260,9 @@ public partial class V1beta1FunctionSpecForProviderKmsKeyArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderKmsKeyArnRef
@@ -244,7 +275,9 @@ public partial class V1beta1FunctionSpecForProviderKmsKeyArnRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderKmsKeyArnSelectorPolicy
@@ -257,7 +290,9 @@ public partial class V1beta1FunctionSpecForProviderKmsKeyArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderKmsKeyArnSelector
@@ -274,7 +309,9 @@ public partial class V1beta1FunctionSpecForProviderKmsKeyArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderLayersRefsPolicy
@@ -287,7 +324,9 @@ public partial class V1beta1FunctionSpecForProviderLayersRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderLayersRefs
@@ -300,7 +339,9 @@ public partial class V1beta1FunctionSpecForProviderLayersRefs
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderLayersRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderLayersSelectorPolicy
@@ -313,7 +354,9 @@ public partial class V1beta1FunctionSpecForProviderLayersSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of LayerVersion in lambda to populate layers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderLayersSelector
@@ -330,7 +373,9 @@ public partial class V1beta1FunctionSpecForProviderLayersSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderLayersSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderLoggingConfig
@@ -351,7 +396,9 @@ public partial class V1beta1FunctionSpecForProviderLoggingConfig
     [JsonPropertyName("systemLogLevel")]
     public string? SystemLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRefsPolicy
@@ -364,7 +411,9 @@ public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRefs
@@ -377,7 +426,9 @@ public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderReplacementSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSelectorPolicy
@@ -390,7 +441,9 @@ public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate replacementSecurityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSelector
@@ -407,7 +460,9 @@ public partial class V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSel
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderReplacementSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderRoleRefPolicy
@@ -420,7 +475,9 @@ public partial class V1beta1FunctionSpecForProviderRoleRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderRoleRef
@@ -433,7 +490,9 @@ public partial class V1beta1FunctionSpecForProviderRoleRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderRoleSelectorPolicy
@@ -446,7 +505,9 @@ public partial class V1beta1FunctionSpecForProviderRoleSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderRoleSelector
@@ -463,7 +524,9 @@ public partial class V1beta1FunctionSpecForProviderRoleSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderS3BucketRefPolicy
@@ -476,7 +539,9 @@ public partial class V1beta1FunctionSpecForProviderS3BucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate s3Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderS3BucketRef
@@ -489,7 +554,9 @@ public partial class V1beta1FunctionSpecForProviderS3BucketRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderS3BucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderS3BucketSelectorPolicy
@@ -502,7 +569,9 @@ public partial class V1beta1FunctionSpecForProviderS3BucketSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate s3Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderS3BucketSelector
@@ -519,7 +588,9 @@ public partial class V1beta1FunctionSpecForProviderS3BucketSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderS3BucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSnapStart
@@ -528,7 +599,9 @@ public partial class V1beta1FunctionSpecForProviderSnapStart
     [JsonPropertyName("applyOn")]
     public string? ApplyOn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderTracingConfig
@@ -537,7 +610,9 @@ public partial class V1beta1FunctionSpecForProviderTracingConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -550,7 +625,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefs
@@ -563,7 +640,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy
@@ -576,7 +655,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelector
@@ -593,7 +674,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelec
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderVpcConfigSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefsPolicy
@@ -606,7 +689,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefs
@@ -619,7 +704,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelectorPolicy
@@ -632,7 +719,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelector
@@ -649,7 +738,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderVpcConfig
@@ -682,7 +773,9 @@ public partial class V1beta1FunctionSpecForProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProvider
@@ -855,7 +948,9 @@ public partial class V1beta1FunctionSpecForProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1FunctionSpecForProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnRefPolicy
@@ -868,7 +963,9 @@ public partial class V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnRef
@@ -881,7 +978,9 @@ public partial class V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnSelectorPolicy
@@ -894,7 +993,9 @@ public partial class V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate targetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnSelector
@@ -911,7 +1012,9 @@ public partial class V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnSel
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderDeadLetterConfig
@@ -928,7 +1031,9 @@ public partial class V1beta1FunctionSpecInitProviderDeadLetterConfig
     [JsonPropertyName("targetArnSelector")]
     public V1beta1FunctionSpecInitProviderDeadLetterConfigTargetArnSelector? TargetArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderEnvironment
@@ -937,7 +1042,9 @@ public partial class V1beta1FunctionSpecInitProviderEnvironment
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderEphemeralStorage
@@ -946,7 +1053,9 @@ public partial class V1beta1FunctionSpecInitProviderEphemeralStorage
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnRefPolicy
@@ -959,7 +1068,9 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AccessPoint in efs to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnRef
@@ -972,7 +1083,9 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderFileSystemConfigArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnSelectorPolicy
@@ -985,7 +1098,9 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AccessPoint in efs to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnSelector
@@ -1002,7 +1117,9 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfigArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderFileSystemConfigArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderFileSystemConfig
@@ -1023,7 +1140,9 @@ public partial class V1beta1FunctionSpecInitProviderFileSystemConfig
     [JsonPropertyName("localMountPath")]
     public string? LocalMountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderImageConfig
@@ -1040,7 +1159,9 @@ public partial class V1beta1FunctionSpecInitProviderImageConfig
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderKmsKeyArnRefPolicy
@@ -1053,7 +1174,9 @@ public partial class V1beta1FunctionSpecInitProviderKmsKeyArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderKmsKeyArnRef
@@ -1066,7 +1189,9 @@ public partial class V1beta1FunctionSpecInitProviderKmsKeyArnRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderKmsKeyArnSelectorPolicy
@@ -1079,7 +1204,9 @@ public partial class V1beta1FunctionSpecInitProviderKmsKeyArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderKmsKeyArnSelector
@@ -1096,7 +1223,9 @@ public partial class V1beta1FunctionSpecInitProviderKmsKeyArnSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderLayersRefsPolicy
@@ -1109,7 +1238,9 @@ public partial class V1beta1FunctionSpecInitProviderLayersRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderLayersRefs
@@ -1122,7 +1253,9 @@ public partial class V1beta1FunctionSpecInitProviderLayersRefs
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderLayersRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderLayersSelectorPolicy
@@ -1135,7 +1268,9 @@ public partial class V1beta1FunctionSpecInitProviderLayersSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of LayerVersion in lambda to populate layers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderLayersSelector
@@ -1152,7 +1287,9 @@ public partial class V1beta1FunctionSpecInitProviderLayersSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderLayersSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderLoggingConfig
@@ -1173,7 +1310,9 @@ public partial class V1beta1FunctionSpecInitProviderLoggingConfig
     [JsonPropertyName("systemLogLevel")]
     public string? SystemLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRefsPolicy
@@ -1186,7 +1325,9 @@ public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRefs
@@ -1199,7 +1340,9 @@ public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRe
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSelectorPolicy
@@ -1212,7 +1355,9 @@ public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate replacementSecurityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSelector
@@ -1229,7 +1374,9 @@ public partial class V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSe
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderReplacementSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderRoleRefPolicy
@@ -1242,7 +1389,9 @@ public partial class V1beta1FunctionSpecInitProviderRoleRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderRoleRef
@@ -1255,7 +1404,9 @@ public partial class V1beta1FunctionSpecInitProviderRoleRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderRoleRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderRoleSelectorPolicy
@@ -1268,7 +1419,9 @@ public partial class V1beta1FunctionSpecInitProviderRoleSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderRoleSelector
@@ -1285,7 +1438,9 @@ public partial class V1beta1FunctionSpecInitProviderRoleSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderRoleSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderS3BucketRefPolicy
@@ -1298,7 +1453,9 @@ public partial class V1beta1FunctionSpecInitProviderS3BucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate s3Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderS3BucketRef
@@ -1311,7 +1468,9 @@ public partial class V1beta1FunctionSpecInitProviderS3BucketRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderS3BucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderS3BucketSelectorPolicy
@@ -1324,7 +1483,9 @@ public partial class V1beta1FunctionSpecInitProviderS3BucketSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate s3Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderS3BucketSelector
@@ -1341,7 +1502,9 @@ public partial class V1beta1FunctionSpecInitProviderS3BucketSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderS3BucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSnapStart
@@ -1350,7 +1513,9 @@ public partial class V1beta1FunctionSpecInitProviderSnapStart
     [JsonPropertyName("applyOn")]
     public string? ApplyOn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderTracingConfig
@@ -1359,7 +1524,9 @@ public partial class V1beta1FunctionSpecInitProviderTracingConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -1372,7 +1539,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefs
@@ -1385,7 +1554,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy
@@ -1398,7 +1569,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSelector
@@ -1415,7 +1588,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSele
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderVpcConfigSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefsPolicy
@@ -1428,7 +1603,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefs
@@ -1441,7 +1618,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderVpcConfigSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelectorPolicy
@@ -1454,7 +1633,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelector
@@ -1471,7 +1652,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderVpcConfigSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderVpcConfig
@@ -1504,7 +1687,9 @@ public partial class V1beta1FunctionSpecInitProviderVpcConfig
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProvider
@@ -1673,7 +1858,9 @@ public partial class V1beta1FunctionSpecInitProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1FunctionSpecInitProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecProviderConfigRefPolicy
@@ -1686,7 +1873,9 @@ public partial class V1beta1FunctionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecProviderConfigRef
@@ -1699,7 +1888,9 @@ public partial class V1beta1FunctionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecWriteConnectionSecretToRef
@@ -1712,7 +1903,9 @@ public partial class V1beta1FunctionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionSpec defines the desired state of Function</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpec
@@ -1741,7 +1934,9 @@ public partial class V1beta1FunctionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FunctionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderDeadLetterConfig
@@ -1750,7 +1945,9 @@ public partial class V1beta1FunctionStatusAtProviderDeadLetterConfig
     [JsonPropertyName("targetArn")]
     public string? TargetArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderEnvironment
@@ -1759,7 +1956,9 @@ public partial class V1beta1FunctionStatusAtProviderEnvironment
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderEphemeralStorage
@@ -1768,7 +1967,9 @@ public partial class V1beta1FunctionStatusAtProviderEphemeralStorage
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderFileSystemConfig
@@ -1781,7 +1982,9 @@ public partial class V1beta1FunctionStatusAtProviderFileSystemConfig
     [JsonPropertyName("localMountPath")]
     public string? LocalMountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderImageConfig
@@ -1798,7 +2001,9 @@ public partial class V1beta1FunctionStatusAtProviderImageConfig
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderLoggingConfig
@@ -1819,7 +2024,9 @@ public partial class V1beta1FunctionStatusAtProviderLoggingConfig
     [JsonPropertyName("systemLogLevel")]
     public string? SystemLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderSnapStart
@@ -1832,7 +2039,9 @@ public partial class V1beta1FunctionStatusAtProviderSnapStart
     [JsonPropertyName("optimizationStatus")]
     public string? OptimizationStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderTracingConfig
@@ -1841,7 +2050,9 @@ public partial class V1beta1FunctionStatusAtProviderTracingConfig
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderVpcConfig
@@ -1862,7 +2073,9 @@ public partial class V1beta1FunctionStatusAtProviderVpcConfig
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProvider
@@ -2043,7 +2256,9 @@ public partial class V1beta1FunctionStatusAtProvider
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1FunctionStatusAtProviderVpcConfig>? VpcConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusConditions
@@ -2072,7 +2287,9 @@ public partial class V1beta1FunctionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionStatus defines the observed state of Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatus
@@ -2089,7 +2306,9 @@ public partial class V1beta1FunctionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Function is the Schema for the Functions API. Manages an AWS Lambda Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2119,3 +2338,4 @@ public partial class V1beta1Function : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1FunctionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.costmanagement.azure.upbound.io;
+#nullable enable
 /// <summary>SubscriptionCostManagementExport is the Schema for the SubscriptionCostManagementExports API. Manages an Azure Cost Management Export for a Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubscriptionCostManagementExportList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1SubscriptionCostManagementExport> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExportDataOptions
@@ -46,7 +49,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExpor
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExpor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExpor
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecForProviderExportDataStorageLocationContainerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExpor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelector
@@ -102,7 +113,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExpor
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecForProviderExportDataStorageLocationContainerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExportDataStorageLocation
@@ -123,7 +136,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderExpor
     [JsonPropertyName("rootFolderPath")]
     public string? RootFolderPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderSubscriptionIdRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderSubsc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subscription in azure to populate subscriptionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderSubscriptionIdRef
@@ -149,7 +166,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderSubsc
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecForProviderSubscriptionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderSubscriptionIdSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderSubsc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subscription in azure to populate subscriptionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProviderSubscriptionIdSelector
@@ -179,7 +200,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProviderSubsc
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecForProviderSubscriptionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecForProvider
@@ -228,7 +251,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProvider
     [JsonPropertyName("subscriptionIdSelector")]
     public V1beta1SubscriptionCostManagementExportSpecForProviderSubscriptionIdSelector? SubscriptionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataOptions
@@ -241,7 +266,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExpo
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRefPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExpo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate containerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRef
@@ -267,7 +296,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExpo
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelectorPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExpo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate containerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelector
@@ -297,7 +330,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExpo
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataStorageLocationContainerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataStorageLocation
@@ -318,7 +353,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderExpo
     [JsonPropertyName("rootFolderPath")]
     public string? RootFolderPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderSubscriptionIdRefPolicy
@@ -331,7 +368,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderSubs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subscription in azure to populate subscriptionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderSubscriptionIdRef
@@ -344,7 +383,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderSubs
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecInitProviderSubscriptionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderSubscriptionIdSelectorPolicy
@@ -357,7 +398,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderSubs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subscription in azure to populate subscriptionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderSubscriptionIdSelector
@@ -374,7 +417,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProviderSubs
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecInitProviderSubscriptionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecInitProvider
@@ -423,7 +468,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProvider
     [JsonPropertyName("subscriptionIdSelector")]
     public V1beta1SubscriptionCostManagementExportSpecInitProviderSubscriptionIdSelector? SubscriptionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecProviderConfigRefPolicy
@@ -436,7 +483,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecProviderConfigRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecProviderConfigRef
@@ -449,7 +498,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecProviderConfigRe
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionCostManagementExportSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpecWriteConnectionSecretToRef
@@ -462,7 +513,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpecWriteConnectionS
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionCostManagementExportSpec defines the desired state of SubscriptionCostManagementExport</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportSpec
@@ -491,7 +544,9 @@ public partial class V1beta1SubscriptionCostManagementExportSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubscriptionCostManagementExportSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportStatusAtProviderExportDataOptions
@@ -504,7 +559,9 @@ public partial class V1beta1SubscriptionCostManagementExportStatusAtProviderExpo
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportStatusAtProviderExportDataStorageLocation
@@ -517,7 +574,9 @@ public partial class V1beta1SubscriptionCostManagementExportStatusAtProviderExpo
     [JsonPropertyName("rootFolderPath")]
     public string? RootFolderPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportStatusAtProvider
@@ -562,7 +621,9 @@ public partial class V1beta1SubscriptionCostManagementExportStatusAtProvider
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportStatusConditions
@@ -591,7 +652,9 @@ public partial class V1beta1SubscriptionCostManagementExportStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionCostManagementExportStatus defines the observed state of SubscriptionCostManagementExport.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionCostManagementExportStatus
@@ -608,7 +671,9 @@ public partial class V1beta1SubscriptionCostManagementExportStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionCostManagementExport is the Schema for the SubscriptionCostManagementExports API. Manages an Azure Cost Management Export for a Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -638,3 +703,4 @@ public partial class V1beta1SubscriptionCostManagementExport : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1SubscriptionCostManagementExportStatus? Status { get; set; }
 }
+#nullable disable

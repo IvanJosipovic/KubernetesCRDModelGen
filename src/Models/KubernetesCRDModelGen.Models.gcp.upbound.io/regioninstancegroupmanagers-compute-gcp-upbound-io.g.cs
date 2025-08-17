@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+#nullable enable
 /// <summary>RegionInstanceGroupManager is the Schema for the RegionInstanceGroupManagers API. Manages an Regional Instance Group within GCE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegionInstanceGroupManagerList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1RegionInstanceGroupManager> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAllInstancesConfig
@@ -46,7 +49,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAllInstance
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRef
@@ -72,7 +79,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelector
@@ -102,7 +113,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPoliciesHealthCheckSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealingPolicies
@@ -123,7 +136,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
     [JsonPropertyName("initialDelaySec")]
     public double? InitialDelaySec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFlexibilityPolicyInstanceSelections
@@ -140,7 +155,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFle
     [JsonPropertyName("rank")]
     public double? Rank { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFlexibilityPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFle
     [JsonPropertyName("instanceSelections")]
     public IList<V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFlexibilityPolicyInstanceSelections>? InstanceSelections { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceLifecyclePolicy
@@ -162,7 +181,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceLif
     [JsonPropertyName("forceUpdateOnRepair")]
     public string? ForceUpdateOnRepair { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderNamedPort
@@ -175,7 +196,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderNamedPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulDisk
@@ -188,7 +211,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulDis
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulExternalIp
@@ -201,7 +226,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulExt
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulInternalIp
@@ -214,7 +241,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderStatefulInt
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsRefsPolicy
@@ -227,7 +256,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPools
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsRefs
@@ -240,7 +271,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPools
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsSelectorPolicy
@@ -253,7 +286,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPools
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of TargetPool in compute to populate targetPools.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsSelector
@@ -270,7 +305,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderTargetPools
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecForProviderTargetPoolsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderUpdatePolicy
@@ -311,7 +348,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderUpdatePolic
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateRefPolicy
@@ -324,7 +363,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInst
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceTemplate in compute to populate instanceTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateRef
@@ -337,7 +378,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInst
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateSelectorPolicy
@@ -350,7 +393,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInst
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceTemplate in compute to populate instanceTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateSelector
@@ -367,7 +412,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionInst
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecForProviderVersionInstanceTemplateSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionTargetSize
@@ -380,7 +427,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersionTarg
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersion
@@ -405,7 +454,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderVersion
     [JsonPropertyName("targetSize")]
     public IList<V1beta1RegionInstanceGroupManagerSpecForProviderVersionTargetSize>? TargetSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProvider
@@ -514,7 +565,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProvider
     [JsonPropertyName("waitForInstancesStatus")]
     public string? WaitForInstancesStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAllInstancesConfig
@@ -527,7 +580,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAllInstanc
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRefPolicy
@@ -540,7 +595,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRef
@@ -553,7 +610,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelectorPolicy
@@ -566,7 +625,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelector
@@ -583,7 +644,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPoliciesHealthCheckSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealingPolicies
@@ -604,7 +667,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
     [JsonPropertyName("initialDelaySec")]
     public double? InitialDelaySec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFlexibilityPolicyInstanceSelections
@@ -621,7 +686,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFl
     [JsonPropertyName("rank")]
     public double? Rank { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFlexibilityPolicy
@@ -630,7 +697,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFl
     [JsonPropertyName("instanceSelections")]
     public IList<V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFlexibilityPolicyInstanceSelections>? InstanceSelections { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceLifecyclePolicy
@@ -643,7 +712,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceLi
     [JsonPropertyName("forceUpdateOnRepair")]
     public string? ForceUpdateOnRepair { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderNamedPort
@@ -656,7 +727,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderNamedPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStandbyPolicy
@@ -669,7 +742,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStandbyPol
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulDisk
@@ -682,7 +757,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulDi
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulExternalIp
@@ -695,7 +772,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulEx
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulInternalIp
@@ -708,7 +787,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStatefulIn
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsRefsPolicy
@@ -721,7 +802,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPool
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsRefs
@@ -734,7 +817,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPool
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsSelectorPolicy
@@ -747,7 +832,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPool
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of TargetPool in compute to populate targetPools.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsSelector
@@ -764,7 +851,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPool
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecInitProviderTargetPoolsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderUpdatePolicy
@@ -805,7 +894,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderUpdatePoli
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateRefPolicy
@@ -818,7 +909,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionIns
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InstanceTemplate in compute to populate instanceTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateRef
@@ -831,7 +924,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionIns
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelectorPolicy
@@ -844,7 +939,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionIns
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InstanceTemplate in compute to populate instanceTemplate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelector
@@ -861,7 +958,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionIns
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecInitProviderVersionInstanceTemplateSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionTargetSize
@@ -874,7 +973,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersionTar
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersion
@@ -899,7 +1000,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderVersion
     [JsonPropertyName("targetSize")]
     public IList<V1beta1RegionInstanceGroupManagerSpecInitProviderVersionTargetSize>? TargetSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProvider
@@ -1012,7 +1115,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProvider
     [JsonPropertyName("waitForInstancesStatus")]
     public string? WaitForInstancesStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecProviderConfigRefPolicy
@@ -1025,7 +1130,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecProviderConfigRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecProviderConfigRef
@@ -1038,7 +1145,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RegionInstanceGroupManagerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecWriteConnectionSecretToRef
@@ -1051,7 +1160,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpecWriteConnectionSecretT
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionInstanceGroupManagerSpec defines the desired state of RegionInstanceGroupManager</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpec
@@ -1080,7 +1191,9 @@ public partial class V1beta1RegionInstanceGroupManagerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegionInstanceGroupManagerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAllInstancesConfig
@@ -1093,7 +1206,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAllInstanc
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAutoHealingPolicies
@@ -1106,7 +1221,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAutoHealin
     [JsonPropertyName("initialDelaySec")]
     public double? InitialDelaySec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFlexibilityPolicyInstanceSelections
@@ -1123,7 +1240,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFl
     [JsonPropertyName("rank")]
     public double? Rank { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFlexibilityPolicy
@@ -1132,7 +1251,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFl
     [JsonPropertyName("instanceSelections")]
     public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFlexibilityPolicyInstanceSelections>? InstanceSelections { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceLifecyclePolicy
@@ -1145,7 +1266,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceLi
     [JsonPropertyName("forceUpdateOnRepair")]
     public string? ForceUpdateOnRepair { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderNamedPort
@@ -1158,7 +1281,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderNamedPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStandbyPolicy
@@ -1171,7 +1296,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStandbyPol
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulDisk
@@ -1184,7 +1311,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulDi
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulExternalIp
@@ -1197,7 +1326,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulEx
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulInternalIp
@@ -1210,7 +1341,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulIn
     [JsonPropertyName("interfaceName")]
     public string? InterfaceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusAllInstancesConfig
@@ -1223,7 +1356,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusAllI
     [JsonPropertyName("effective")]
     public bool? Effective { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStatefulPerInstanceConfigs
@@ -1232,7 +1367,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStat
     [JsonPropertyName("allEffective")]
     public bool? AllEffective { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStateful
@@ -1245,7 +1382,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStat
     [JsonPropertyName("perInstanceConfigs")]
     public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderStatusStatefulPerInstanceConfigs>? PerInstanceConfigs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusVersionTarget
@@ -1254,7 +1393,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatusVers
     [JsonPropertyName("isReached")]
     public bool? IsReached { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatus
@@ -1275,7 +1416,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStatus
     [JsonPropertyName("versionTarget")]
     public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderStatusVersionTarget>? VersionTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderUpdatePolicy
@@ -1316,7 +1459,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderUpdatePoli
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderVersionTargetSize
@@ -1329,7 +1474,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderVersionTar
     [JsonPropertyName("percent")]
     public double? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderVersion
@@ -1346,7 +1493,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderVersion
     [JsonPropertyName("targetSize")]
     public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderVersionTargetSize>? TargetSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProvider
@@ -1479,7 +1628,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProvider
     [JsonPropertyName("waitForInstancesStatus")]
     public string? WaitForInstancesStatus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusConditions
@@ -1508,7 +1659,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionInstanceGroupManagerStatus defines the observed state of RegionInstanceGroupManager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatus
@@ -1525,7 +1678,9 @@ public partial class V1beta1RegionInstanceGroupManagerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionInstanceGroupManager is the Schema for the RegionInstanceGroupManagers API. Manages an Regional Instance Group within GCE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1555,3 +1710,4 @@ public partial class V1beta1RegionInstanceGroupManager : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1RegionInstanceGroupManagerStatus? Status { get; set; }
 }
+#nullable disable

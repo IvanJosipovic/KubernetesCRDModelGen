@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesVirtualNetworkLink Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2024-06-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/virtualNetworkLinks/{virtualNetworkLinkName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkList :
     [JsonPropertyName("items")]
     public IList<V1api20240601storagePrivateDnsZonesVirtualNetworkLink> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesVirtualNetworkLinkOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOp
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/PrivateDnsZone resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecOw
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetworkReference
@@ -118,7 +129,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecVi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetwork
@@ -131,7 +144,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecVi
     [JsonPropertyName("reference")]
     public V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetworkReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesVirtualNetworkLink_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpec
@@ -180,7 +195,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpec
     [JsonPropertyName("virtualNetwork")]
     public V1api20240601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetwork? VirtualNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkStatusConditions
@@ -213,7 +230,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkStatus
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkStatusVirtualNetwork
@@ -226,7 +245,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkStatus
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesVirtualNetworkLink_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkStatus
@@ -283,7 +304,9 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLinkStatus
     [JsonPropertyName("virtualNetworkLinkState")]
     public string? VirtualNetworkLinkState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240601.PrivateDnsZonesVirtualNetworkLink Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2024-06-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}/virtualNetworkLinks/{virtualNetworkLinkName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -313,3 +336,4 @@ public partial class V1api20240601storagePrivateDnsZonesVirtualNetworkLink : IKu
     [JsonPropertyName("status")]
     public V1api20240601storagePrivateDnsZonesVirtualNetworkLinkStatus? Status { get; set; }
 }
+#nullable disable

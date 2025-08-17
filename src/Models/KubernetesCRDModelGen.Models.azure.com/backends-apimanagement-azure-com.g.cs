@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220801.Backend Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimbackends.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/backends/{backendId}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220801storageBackendList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1api20220801storageBackend> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendAuthorizationHeaderCredentials Authorization header information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecCredentialsAuthorization
@@ -50,7 +53,9 @@ public partial class V1api20220801storageBackendSpecCredentialsAuthorization
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendCredentialsContract Details of the Credentials used to connect to Backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecCredentials
@@ -79,7 +84,9 @@ public partial class V1api20220801storageBackendSpecCredentials
     [JsonPropertyName("query")]
     public IDictionary<string, IList<string>>? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecOperatorSpecConfigMapExpressions
@@ -96,7 +103,9 @@ public partial class V1api20220801storageBackendSpecOperatorSpecConfigMapExpress
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecOperatorSpecSecretExpressions
@@ -113,7 +122,9 @@ public partial class V1api20220801storageBackendSpecOperatorSpecSecretExpression
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecOperatorSpec
@@ -130,7 +141,9 @@ public partial class V1api20220801storageBackendSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220801storageBackendSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecOwner
@@ -143,7 +156,9 @@ public partial class V1api20220801storageBackendSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.X509CertificateName Properties of server X509Names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecPropertiesServiceFabricClusterServerX509Names
@@ -160,7 +175,9 @@ public partial class V1api20220801storageBackendSpecPropertiesServiceFabricClust
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendServiceFabricClusterProperties Properties of the Service Fabric Type Backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecPropertiesServiceFabricCluster
@@ -193,7 +210,9 @@ public partial class V1api20220801storageBackendSpecPropertiesServiceFabricClust
     [JsonPropertyName("serverX509Names")]
     public IList<V1api20220801storageBackendSpecPropertiesServiceFabricClusterServerX509Names>? ServerX509Names { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendProperties Properties specific to the Backend Type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecProperties
@@ -206,7 +225,9 @@ public partial class V1api20220801storageBackendSpecProperties
     [JsonPropertyName("serviceFabricCluster")]
     public V1api20220801storageBackendSpecPropertiesServiceFabricCluster? ServiceFabricCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecProxyPassword
@@ -219,7 +240,9 @@ public partial class V1api20220801storageBackendSpecProxyPassword
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendProxyContract Details of the Backend WebProxy Server to use in the Request to Backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecProxy
@@ -240,7 +263,9 @@ public partial class V1api20220801storageBackendSpecProxy
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: Management Uri of the Resource in External System. This URL can be the Arm Resource Id of Logic Apps, Function Apps or API Apps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecResourceReference
@@ -261,7 +286,9 @@ public partial class V1api20220801storageBackendSpecResourceReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendTlsProperties Properties controlling TLS Certificate Validation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpecTls
@@ -278,7 +305,9 @@ public partial class V1api20220801storageBackendSpecTls
     [JsonPropertyName("validateCertificateName")]
     public bool? ValidateCertificateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.Backend_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpec
@@ -339,7 +368,9 @@ public partial class V1api20220801storageBackendSpec
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusConditions
@@ -372,7 +403,9 @@ public partial class V1api20220801storageBackendStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendAuthorizationHeaderCredentials_STATUS Authorization header information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusCredentialsAuthorization
@@ -389,7 +422,9 @@ public partial class V1api20220801storageBackendStatusCredentialsAuthorization
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendCredentialsContract_STATUS Details of the Credentials used to connect to Backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusCredentials
@@ -418,7 +453,9 @@ public partial class V1api20220801storageBackendStatusCredentials
     [JsonPropertyName("query")]
     public IDictionary<string, IList<string>>? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.X509CertificateName_STATUS Properties of server X509Names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusPropertiesServiceFabricClusterServerX509Names
@@ -435,7 +472,9 @@ public partial class V1api20220801storageBackendStatusPropertiesServiceFabricClu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendServiceFabricClusterProperties_STATUS Properties of the Service Fabric Type Backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusPropertiesServiceFabricCluster
@@ -468,7 +507,9 @@ public partial class V1api20220801storageBackendStatusPropertiesServiceFabricClu
     [JsonPropertyName("serverX509Names")]
     public IList<V1api20220801storageBackendStatusPropertiesServiceFabricClusterServerX509Names>? ServerX509Names { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendProperties_STATUS Properties specific to the Backend Type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusProperties
@@ -481,7 +522,9 @@ public partial class V1api20220801storageBackendStatusProperties
     [JsonPropertyName("serviceFabricCluster")]
     public V1api20220801storageBackendStatusPropertiesServiceFabricCluster? ServiceFabricCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendProxyContract_STATUS Details of the Backend WebProxy Server to use in the Request to Backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusProxy
@@ -498,7 +541,9 @@ public partial class V1api20220801storageBackendStatusProxy
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.BackendTlsProperties_STATUS Properties controlling TLS Certificate Validation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatusTls
@@ -515,7 +560,9 @@ public partial class V1api20220801storageBackendStatusTls
     [JsonPropertyName("validateCertificateName")]
     public bool? ValidateCertificateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.Backend_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatus
@@ -576,7 +623,9 @@ public partial class V1api20220801storageBackendStatus
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220801.Backend Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimbackends.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/backends/{backendId}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -606,3 +655,4 @@ public partial class V1api20220801storageBackend : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1api20220801storageBackendStatus? Status { get; set; }
 }
+#nullable disable

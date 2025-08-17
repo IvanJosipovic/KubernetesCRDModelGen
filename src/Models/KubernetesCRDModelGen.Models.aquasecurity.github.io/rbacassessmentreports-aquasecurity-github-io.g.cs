@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aquasecurity.github.io;
+#nullable enable
 /// <summary>RbacAssessmentReport is a specification for the RbacAssessmentReport resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1RbacAssessmentReportList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1alpha1RbacAssessmentReport> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scope indicates the section of config that was audited.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RbacAssessmentReportReportChecksScope
@@ -46,7 +49,9 @@ public partial class V1alpha1RbacAssessmentReportReportChecksScope
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Check provides the result of conducting a single audit step.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RbacAssessmentReportReportChecks
@@ -87,7 +92,9 @@ public partial class V1alpha1RbacAssessmentReportReportChecks
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scanner is the spec for a scanner generating a security assessment report.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RbacAssessmentReportReportScanner
@@ -104,7 +111,9 @@ public partial class V1alpha1RbacAssessmentReportReportScanner
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RbacAssessmentSummary counts failed checks by severity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RbacAssessmentReportReportSummary
@@ -125,7 +134,9 @@ public partial class V1alpha1RbacAssessmentReportReportSummary
     [JsonPropertyName("mediumCount")]
     public int MediumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RbacAssessmentReportReport
@@ -142,7 +153,9 @@ public partial class V1alpha1RbacAssessmentReportReport
     [JsonPropertyName("summary")]
     public V1alpha1RbacAssessmentReportReportSummary Summary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RbacAssessmentReport is a specification for the RbacAssessmentReport resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -171,3 +184,4 @@ public partial class V1alpha1RbacAssessmentReport : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("report")]
     public V1alpha1RbacAssessmentReportReport Report { get; set; }
 }
+#nullable disable

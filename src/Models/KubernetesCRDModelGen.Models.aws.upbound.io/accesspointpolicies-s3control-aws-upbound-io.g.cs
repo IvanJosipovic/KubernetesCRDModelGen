@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3control.aws.upbound.io;
+#nullable enable
 /// <summary>AccessPointPolicy is the Schema for the AccessPointPolicys API. Provides a resource to manage an S3 Access Point resource policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AccessPointPolicyList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1AccessPointPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AccessPoint in s3control to populate accessPointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnRef
     [JsonPropertyName("policy")]
     public V1beta1AccessPointPolicySpecForProviderAccessPointArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AccessPoint in s3control to populate accessPointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnSelect
     [JsonPropertyName("policy")]
     public V1beta1AccessPointPolicySpecForProviderAccessPointArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecForProvider
@@ -114,7 +125,9 @@ public partial class V1beta1AccessPointPolicySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecInitProviderAccessPointArnRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1AccessPointPolicySpecInitProviderAccessPointArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AccessPoint in s3control to populate accessPointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecInitProviderAccessPointArnRef
@@ -140,7 +155,9 @@ public partial class V1beta1AccessPointPolicySpecInitProviderAccessPointArnRef
     [JsonPropertyName("policy")]
     public V1beta1AccessPointPolicySpecInitProviderAccessPointArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecInitProviderAccessPointArnSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1AccessPointPolicySpecInitProviderAccessPointArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AccessPoint in s3control to populate accessPointArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecInitProviderAccessPointArnSelector
@@ -170,7 +189,9 @@ public partial class V1beta1AccessPointPolicySpecInitProviderAccessPointArnSelec
     [JsonPropertyName("policy")]
     public V1beta1AccessPointPolicySpecInitProviderAccessPointArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecInitProvider
@@ -191,7 +212,9 @@ public partial class V1beta1AccessPointPolicySpecInitProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecProviderConfigRefPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1AccessPointPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecProviderConfigRef
@@ -217,7 +242,9 @@ public partial class V1beta1AccessPointPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AccessPointPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecWriteConnectionSecretToRef
@@ -230,7 +257,9 @@ public partial class V1beta1AccessPointPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessPointPolicySpec defines the desired state of AccessPointPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpec
@@ -259,7 +288,9 @@ public partial class V1beta1AccessPointPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AccessPointPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicyStatusAtProvider
@@ -284,7 +315,9 @@ public partial class V1beta1AccessPointPolicyStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicyStatusConditions
@@ -313,7 +346,9 @@ public partial class V1beta1AccessPointPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessPointPolicyStatus defines the observed state of AccessPointPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicyStatus
@@ -330,7 +365,9 @@ public partial class V1beta1AccessPointPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessPointPolicy is the Schema for the AccessPointPolicys API. Provides a resource to manage an S3 Access Point resource policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -360,3 +397,4 @@ public partial class V1beta1AccessPointPolicy : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1AccessPointPolicyStatus? Status { get; set; }
 }
+#nullable disable

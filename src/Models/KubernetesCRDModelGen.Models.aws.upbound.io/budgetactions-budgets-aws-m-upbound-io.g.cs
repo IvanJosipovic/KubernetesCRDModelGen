@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.budgets.aws.m.upbound.io;
+#nullable enable
 /// <summary>BudgetAction is the Schema for the BudgetActions API. Provides a budget action resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BudgetActionList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1BudgetAction> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The trigger threshold of the action. See Action Threshold.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderActionThreshold
@@ -46,7 +49,9 @@ public partial class V1beta1BudgetActionSpecForProviderActionThreshold
     [JsonPropertyName("actionThresholdValue")]
     public double? ActionThresholdValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderBudgetNameRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1BudgetActionSpecForProviderBudgetNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Budget in budgets to populate budgetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderBudgetNameRef
@@ -76,7 +83,9 @@ public partial class V1beta1BudgetActionSpecForProviderBudgetNameRef
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecForProviderBudgetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderBudgetNameSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1BudgetActionSpecForProviderBudgetNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Budget in budgets to populate budgetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderBudgetNameSelector
@@ -110,7 +121,9 @@ public partial class V1beta1BudgetActionSpecForProviderBudgetNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecForProviderBudgetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Policy in iam to populate policyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnRef
@@ -140,7 +155,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Policy in iam to populate policyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnSelector
@@ -174,7 +193,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesRefsPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesRefs
@@ -204,7 +227,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Role in iam to populate roles.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesSelector
@@ -238,7 +265,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinition
@@ -275,7 +304,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     [JsonPropertyName("users")]
     public IList<string>? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service control policies (SCPs) action definition details. See SCP Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionScpActionDefinition
@@ -288,7 +319,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionScpActionDefini
     [JsonPropertyName("targetIds")]
     public IList<string>? TargetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionSsmActionDefinition
@@ -305,7 +338,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionSsmActionDefini
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies all of the type-specific parameters. See Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinition
@@ -322,7 +357,9 @@ public partial class V1beta1BudgetActionSpecForProviderDefinition
     [JsonPropertyName("ssmActionDefinition")]
     public V1beta1BudgetActionSpecForProviderDefinitionSsmActionDefinition? SsmActionDefinition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnRefPolicy
@@ -335,7 +372,9 @@ public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnRef
@@ -352,7 +391,9 @@ public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecForProviderExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnSelectorPolicy
@@ -365,7 +406,9 @@ public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnSelector
@@ -386,7 +429,9 @@ public partial class V1beta1BudgetActionSpecForProviderExecutionRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecForProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderSubscriber
@@ -399,7 +444,9 @@ public partial class V1beta1BudgetActionSpecForProviderSubscriber
     [JsonPropertyName("subscriptionType")]
     public string? SubscriptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProvider
@@ -460,7 +507,9 @@ public partial class V1beta1BudgetActionSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The trigger threshold of the action. See Action Threshold.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderActionThreshold
@@ -473,7 +522,9 @@ public partial class V1beta1BudgetActionSpecInitProviderActionThreshold
     [JsonPropertyName("actionThresholdValue")]
     public double? ActionThresholdValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderBudgetNameRefPolicy
@@ -486,7 +537,9 @@ public partial class V1beta1BudgetActionSpecInitProviderBudgetNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Budget in budgets to populate budgetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderBudgetNameRef
@@ -503,7 +556,9 @@ public partial class V1beta1BudgetActionSpecInitProviderBudgetNameRef
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecInitProviderBudgetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderBudgetNameSelectorPolicy
@@ -516,7 +571,9 @@ public partial class V1beta1BudgetActionSpecInitProviderBudgetNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Budget in budgets to populate budgetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderBudgetNameSelector
@@ -537,7 +594,9 @@ public partial class V1beta1BudgetActionSpecInitProviderBudgetNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecInitProviderBudgetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnRefPolicy
@@ -550,7 +609,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Policy in iam to populate policyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnRef
@@ -567,7 +628,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy
@@ -580,7 +643,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Policy in iam to populate policyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnSelector
@@ -601,7 +666,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesRefsPolicy
@@ -614,7 +681,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesRefs
@@ -631,7 +700,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesSelectorPolicy
@@ -644,7 +715,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Role in iam to populate roles.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesSelector
@@ -665,7 +738,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinition
@@ -702,7 +777,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     [JsonPropertyName("users")]
     public IList<string>? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service control policies (SCPs) action definition details. See SCP Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionScpActionDefinition
@@ -715,7 +792,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionScpActionDefin
     [JsonPropertyName("targetIds")]
     public IList<string>? TargetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionSsmActionDefinition
@@ -728,7 +807,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionSsmActionDefin
     [JsonPropertyName("instanceIds")]
     public IList<string>? InstanceIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies all of the type-specific parameters. See Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinition
@@ -745,7 +826,9 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinition
     [JsonPropertyName("ssmActionDefinition")]
     public V1beta1BudgetActionSpecInitProviderDefinitionSsmActionDefinition? SsmActionDefinition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnRefPolicy
@@ -758,7 +841,9 @@ public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnRef
@@ -775,7 +860,9 @@ public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecInitProviderExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelectorPolicy
@@ -788,7 +875,9 @@ public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelector
@@ -809,7 +898,9 @@ public partial class V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1BudgetActionSpecInitProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderSubscriber
@@ -822,7 +913,9 @@ public partial class V1beta1BudgetActionSpecInitProviderSubscriber
     [JsonPropertyName("subscriptionType")]
     public string? SubscriptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProvider
@@ -883,7 +976,9 @@ public partial class V1beta1BudgetActionSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecProviderConfigRef
@@ -896,7 +991,9 @@ public partial class V1beta1BudgetActionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecWriteConnectionSecretToRef
@@ -905,7 +1002,9 @@ public partial class V1beta1BudgetActionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetActionSpec defines the desired state of BudgetAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpec
@@ -930,7 +1029,9 @@ public partial class V1beta1BudgetActionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BudgetActionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The trigger threshold of the action. See Action Threshold.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatusAtProviderActionThreshold
@@ -943,7 +1044,9 @@ public partial class V1beta1BudgetActionStatusAtProviderActionThreshold
     [JsonPropertyName("actionThresholdValue")]
     public double? ActionThresholdValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatusAtProviderDefinitionIamActionDefinition
@@ -964,7 +1067,9 @@ public partial class V1beta1BudgetActionStatusAtProviderDefinitionIamActionDefin
     [JsonPropertyName("users")]
     public IList<string>? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service control policies (SCPs) action definition details. See SCP Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatusAtProviderDefinitionScpActionDefinition
@@ -977,7 +1082,9 @@ public partial class V1beta1BudgetActionStatusAtProviderDefinitionScpActionDefin
     [JsonPropertyName("targetIds")]
     public IList<string>? TargetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatusAtProviderDefinitionSsmActionDefinition
@@ -994,7 +1101,9 @@ public partial class V1beta1BudgetActionStatusAtProviderDefinitionSsmActionDefin
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies all of the type-specific parameters. See Definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatusAtProviderDefinition
@@ -1011,7 +1120,9 @@ public partial class V1beta1BudgetActionStatusAtProviderDefinition
     [JsonPropertyName("ssmActionDefinition")]
     public V1beta1BudgetActionStatusAtProviderDefinitionSsmActionDefinition? SsmActionDefinition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatusAtProviderSubscriber
@@ -1024,7 +1135,9 @@ public partial class V1beta1BudgetActionStatusAtProviderSubscriber
     [JsonPropertyName("subscriptionType")]
     public string? SubscriptionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatusAtProvider
@@ -1089,7 +1202,9 @@ public partial class V1beta1BudgetActionStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatusConditions
@@ -1118,7 +1233,9 @@ public partial class V1beta1BudgetActionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetActionStatus defines the observed state of BudgetAction.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionStatus
@@ -1135,7 +1252,9 @@ public partial class V1beta1BudgetActionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BudgetAction is the Schema for the BudgetActions API. Provides a budget action resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1165,3 +1284,4 @@ public partial class V1beta1BudgetAction : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1BudgetActionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ComputeFirewallPolicyRule is the Schema for the compute API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeFirewallPolicyRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecFirewallPolicyRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecFirewallPolicyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecMatchLayer4Configs
@@ -63,7 +68,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecMatchLayer4Configs
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecMatch
@@ -112,7 +119,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecMatch
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetResources
@@ -129,7 +138,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetResources
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetServiceAccounts
@@ -146,7 +157,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetServiceAccounts
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpec
@@ -191,7 +204,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpec
     [JsonPropertyName("targetServiceAccounts")]
     public IList<V1beta1ComputeFirewallPolicyRuleSpecTargetServiceAccounts>? TargetServiceAccounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleStatusConditions
@@ -216,7 +231,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleStatus
@@ -241,7 +258,9 @@ public partial class V1beta1ComputeFirewallPolicyRuleStatus
     [JsonPropertyName("ruleTupleCount")]
     public long? RuleTupleCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ComputeFirewallPolicyRule is the Schema for the compute API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -271,3 +290,4 @@ public partial class V1beta1ComputeFirewallPolicyRule : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1ComputeFirewallPolicyRuleStatus? Status { get; set; }
 }
+#nullable disable

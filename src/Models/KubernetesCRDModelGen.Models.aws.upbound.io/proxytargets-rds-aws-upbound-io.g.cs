@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.upbound.io;
+#nullable enable
 /// <summary>ProxyTarget is the Schema for the ProxyTargets API. Provides an RDS DB proxy target resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProxyTargetList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ProxyTarget> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in rds to populate dbInstanceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierRef
@@ -59,7 +64,9 @@ public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in rds to populate dbInstanceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierSelect
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbProxyNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ProxyTargetSpecForProviderDbProxyNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Proxy in rds to populate dbProxyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbProxyNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1ProxyTargetSpecForProviderDbProxyNameRef
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecForProviderDbProxyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbProxyNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ProxyTargetSpecForProviderDbProxyNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Proxy in rds to populate dbProxyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbProxyNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ProxyTargetSpecForProviderDbProxyNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecForProviderDbProxyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProvider
@@ -186,7 +205,9 @@ public partial class V1beta1ProxyTargetSpecForProvider
     [JsonPropertyName("targetGroupName")]
     public string? TargetGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierRefPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in rds to populate dbInstanceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierRef
@@ -212,7 +235,9 @@ public partial class V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierSelectorPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in rds to populate dbInstanceIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierSelector
@@ -242,7 +269,9 @@ public partial class V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierSelec
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecInitProviderDbInstanceIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProviderDbProxyNameRefPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1ProxyTargetSpecInitProviderDbProxyNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Proxy in rds to populate dbProxyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProviderDbProxyNameRef
@@ -268,7 +299,9 @@ public partial class V1beta1ProxyTargetSpecInitProviderDbProxyNameRef
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecInitProviderDbProxyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProviderDbProxyNameSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1ProxyTargetSpecInitProviderDbProxyNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Proxy in rds to populate dbProxyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProviderDbProxyNameSelector
@@ -298,7 +333,9 @@ public partial class V1beta1ProxyTargetSpecInitProviderDbProxyNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecInitProviderDbProxyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecInitProvider
@@ -335,7 +372,9 @@ public partial class V1beta1ProxyTargetSpecInitProvider
     [JsonPropertyName("targetGroupName")]
     public string? TargetGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecProviderConfigRefPolicy
@@ -348,7 +387,9 @@ public partial class V1beta1ProxyTargetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecProviderConfigRef
@@ -361,7 +402,9 @@ public partial class V1beta1ProxyTargetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ProxyTargetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecWriteConnectionSecretToRef
@@ -374,7 +417,9 @@ public partial class V1beta1ProxyTargetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxyTargetSpec defines the desired state of ProxyTarget</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpec
@@ -403,7 +448,9 @@ public partial class V1beta1ProxyTargetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ProxyTargetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetStatusAtProvider
@@ -456,7 +503,9 @@ public partial class V1beta1ProxyTargetStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetStatusConditions
@@ -485,7 +534,9 @@ public partial class V1beta1ProxyTargetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxyTargetStatus defines the observed state of ProxyTarget.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetStatus
@@ -502,7 +553,9 @@ public partial class V1beta1ProxyTargetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxyTarget is the Schema for the ProxyTargets API. Provides an RDS DB proxy target resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -532,3 +585,4 @@ public partial class V1beta1ProxyTarget : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ProxyTargetStatus? Status { get; set; }
 }
+#nullable disable

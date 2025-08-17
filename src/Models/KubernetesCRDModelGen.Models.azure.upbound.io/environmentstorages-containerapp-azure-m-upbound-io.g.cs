@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerapp.azure.m.upbound.io;
+#nullable enable
 /// <summary>EnvironmentStorage is the Schema for the EnvironmentStorages API. Manages a Container App Environment Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EnvironmentStorageList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1EnvironmentStorage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Storage Account Access Key. The Storage Account Access Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderAccessKeySecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderAccessKeySecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderAccountNameRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderAccountNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderAccountNameRef
@@ -76,7 +83,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderAccountNameSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderAccountNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderAccountNameSelector
@@ -110,7 +121,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderContainerAppEnvironmentIdRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderContainerAppEnviron
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderContainerAppEnvironmentIdRef
@@ -140,7 +155,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderContainerAppEnviron
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecForProviderContainerAppEnvironmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderContainerAppEnvironmentIdSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderContainerAppEnviron
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderContainerAppEnvironmentIdSelector
@@ -174,7 +193,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderContainerAppEnviron
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecForProviderContainerAppEnvironmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderShareNameRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderShareNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Share in storage to populate shareName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderShareNameRef
@@ -204,7 +227,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderShareNameRef
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecForProviderShareNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderShareNameSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderShareNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Share in storage to populate shareName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProviderShareNameSelector
@@ -238,7 +265,9 @@ public partial class V1beta1EnvironmentStorageSpecForProviderShareNameSelector
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecForProviderShareNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecForProvider
@@ -291,7 +320,9 @@ public partial class V1beta1EnvironmentStorageSpecForProvider
     [JsonPropertyName("shareNameSelector")]
     public V1beta1EnvironmentStorageSpecForProviderShareNameSelector? ShareNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Storage Account Access Key. The Storage Account Access Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderAccessKeySecretRef
@@ -304,7 +335,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderAccessKeySecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderAccountNameRefPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderAccountNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderAccountNameRef
@@ -334,7 +369,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecInitProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderAccountNameSelectorPolicy
@@ -347,7 +384,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderAccountNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderAccountNameSelector
@@ -368,7 +407,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderAccountNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecInitProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderShareNameRefPolicy
@@ -381,7 +422,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderShareNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Share in storage to populate shareName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderShareNameRef
@@ -398,7 +441,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderShareNameRef
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecInitProviderShareNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderShareNameSelectorPolicy
@@ -411,7 +456,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderShareNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Share in storage to populate shareName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProviderShareNameSelector
@@ -432,7 +479,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProviderShareNameSelector
     [JsonPropertyName("policy")]
     public V1beta1EnvironmentStorageSpecInitProviderShareNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecInitProvider
@@ -473,7 +522,9 @@ public partial class V1beta1EnvironmentStorageSpecInitProvider
     [JsonPropertyName("shareNameSelector")]
     public V1beta1EnvironmentStorageSpecInitProviderShareNameSelector? ShareNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecProviderConfigRef
@@ -486,7 +537,9 @@ public partial class V1beta1EnvironmentStorageSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpecWriteConnectionSecretToRef
@@ -495,7 +548,9 @@ public partial class V1beta1EnvironmentStorageSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentStorageSpec defines the desired state of EnvironmentStorage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageSpec
@@ -520,7 +575,9 @@ public partial class V1beta1EnvironmentStorageSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EnvironmentStorageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageStatusAtProvider
@@ -549,7 +606,9 @@ public partial class V1beta1EnvironmentStorageStatusAtProvider
     [JsonPropertyName("shareName")]
     public string? ShareName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageStatusConditions
@@ -578,7 +637,9 @@ public partial class V1beta1EnvironmentStorageStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentStorageStatus defines the observed state of EnvironmentStorage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStorageStatus
@@ -595,7 +656,9 @@ public partial class V1beta1EnvironmentStorageStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvironmentStorage is the Schema for the EnvironmentStorages API. Manages a Container App Environment Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -625,3 +688,4 @@ public partial class V1beta1EnvironmentStorage : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1EnvironmentStorageStatus? Status { get; set; }
 }
+#nullable disable

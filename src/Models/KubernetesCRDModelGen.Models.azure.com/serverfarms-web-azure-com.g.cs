@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220301.ServerFarm Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220301storageServerFarmList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1api20220301storageServerFarm> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ExtendedLocation Extended Location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecExtendedLocation
@@ -46,7 +49,9 @@ public partial class V1api20220301storageServerFarmSpecExtendedLocation
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID of the App Service Environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecHostingEnvironmentProfileReference
@@ -67,7 +72,9 @@ public partial class V1api20220301storageServerFarmSpecHostingEnvironmentProfile
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.HostingEnvironmentProfile Specification for an App Service Environment to use for this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecHostingEnvironmentProfile
@@ -80,7 +87,9 @@ public partial class V1api20220301storageServerFarmSpecHostingEnvironmentProfile
     [JsonPropertyName("reference")]
     public V1api20220301storageServerFarmSpecHostingEnvironmentProfileReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID of the Kubernetes Environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecKubeEnvironmentProfileReference
@@ -101,7 +110,9 @@ public partial class V1api20220301storageServerFarmSpecKubeEnvironmentProfileRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.KubeEnvironmentProfile Specification for a Kubernetes Environment to use for this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecKubeEnvironmentProfile
@@ -114,7 +125,9 @@ public partial class V1api20220301storageServerFarmSpecKubeEnvironmentProfile
     [JsonPropertyName("reference")]
     public V1api20220301storageServerFarmSpecKubeEnvironmentProfileReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecOperatorSpecConfigMapExpressions
@@ -131,7 +144,9 @@ public partial class V1api20220301storageServerFarmSpecOperatorSpecConfigMapExpr
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecOperatorSpecSecretExpressions
@@ -148,7 +163,9 @@ public partial class V1api20220301storageServerFarmSpecOperatorSpecSecretExpress
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ServerFarmOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecOperatorSpec
@@ -165,7 +182,9 @@ public partial class V1api20220301storageServerFarmSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220301storageServerFarmSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecOwner
@@ -178,7 +197,9 @@ public partial class V1api20220301storageServerFarmSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Capability Describes the capabilities/features allowed for a specific SKU.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecSkuCapabilities
@@ -199,7 +220,9 @@ public partial class V1api20220301storageServerFarmSpecSkuCapabilities
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SkuCapacity Description of the App Service plan scale options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecSkuSkuCapacity
@@ -228,7 +251,9 @@ public partial class V1api20220301storageServerFarmSpecSkuSkuCapacity
     [JsonPropertyName("scaleType")]
     public string? ScaleType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SkuDescription Description of a SKU for a scalable resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpecSku
@@ -269,7 +294,9 @@ public partial class V1api20220301storageServerFarmSpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ServerFarm_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpec
@@ -374,7 +401,9 @@ public partial class V1api20220301storageServerFarmSpec
     [JsonPropertyName("zoneRedundant")]
     public bool? ZoneRedundant { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatusConditions
@@ -407,7 +436,9 @@ public partial class V1api20220301storageServerFarmStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ExtendedLocation_STATUS Extended Location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatusExtendedLocation
@@ -424,7 +455,9 @@ public partial class V1api20220301storageServerFarmStatusExtendedLocation
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.HostingEnvironmentProfile_STATUS Specification for an App Service Environment to use for this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatusHostingEnvironmentProfile
@@ -445,7 +478,9 @@ public partial class V1api20220301storageServerFarmStatusHostingEnvironmentProfi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.KubeEnvironmentProfile_STATUS Specification for a Kubernetes Environment to use for this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatusKubeEnvironmentProfile
@@ -466,7 +501,9 @@ public partial class V1api20220301storageServerFarmStatusKubeEnvironmentProfile
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.Capability_STATUS Describes the capabilities/features allowed for a specific SKU.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatusSkuCapabilities
@@ -487,7 +524,9 @@ public partial class V1api20220301storageServerFarmStatusSkuCapabilities
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SkuCapacity_STATUS Description of the App Service plan scale options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatusSkuSkuCapacity
@@ -516,7 +555,9 @@ public partial class V1api20220301storageServerFarmStatusSkuSkuCapacity
     [JsonPropertyName("scaleType")]
     public string? ScaleType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.SkuDescription_STATUS Description of a SKU for a scalable resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatusSku
@@ -557,7 +598,9 @@ public partial class V1api20220301storageServerFarmStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ServerFarm_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatus
@@ -694,7 +737,9 @@ public partial class V1api20220301storageServerFarmStatus
     [JsonPropertyName("zoneRedundant")]
     public bool? ZoneRedundant { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220301.ServerFarm Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -724,3 +769,4 @@ public partial class V1api20220301storageServerFarm : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1api20220301storageServerFarmStatus? Status { get; set; }
 }
+#nullable disable

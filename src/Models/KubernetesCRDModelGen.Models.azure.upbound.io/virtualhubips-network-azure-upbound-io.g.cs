@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>VirtualHubIP is the Schema for the VirtualHubIPs API. Manages a Virtual Hub IP. This resource is also known as a Route Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualHubIPList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualHubIP> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderSubnetIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderSubnetIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderSubnetIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderSubnetIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderVirtualHubIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderVirtualHubIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderVirtualHubIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderVirtualHubIdRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecForProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderVirtualHubIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderVirtualHubIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderVirtualHubIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1VirtualHubIPSpecForProviderVirtualHubIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecForProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1VirtualHubIPSpecForProvider
     [JsonPropertyName("virtualHubIdSelector")]
     public V1beta1VirtualHubIPSpecForProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdRef
@@ -276,7 +307,9 @@ public partial class V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdSelector
@@ -306,7 +341,9 @@ public partial class V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecInitProviderPublicIpAddressIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProviderSubnetIdRefPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1VirtualHubIPSpecInitProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProviderSubnetIdRef
@@ -332,7 +371,9 @@ public partial class V1beta1VirtualHubIPSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProviderSubnetIdSelectorPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1VirtualHubIPSpecInitProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProviderSubnetIdSelector
@@ -362,7 +405,9 @@ public partial class V1beta1VirtualHubIPSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecInitProvider
@@ -399,7 +444,9 @@ public partial class V1beta1VirtualHubIPSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1VirtualHubIPSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecProviderConfigRefPolicy
@@ -412,7 +459,9 @@ public partial class V1beta1VirtualHubIPSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecProviderConfigRef
@@ -425,7 +474,9 @@ public partial class V1beta1VirtualHubIPSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualHubIPSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecWriteConnectionSecretToRef
@@ -438,7 +489,9 @@ public partial class V1beta1VirtualHubIPSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubIPSpec defines the desired state of VirtualHubIP</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpec
@@ -467,7 +520,9 @@ public partial class V1beta1VirtualHubIPSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualHubIPSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPStatusAtProvider
@@ -496,7 +551,9 @@ public partial class V1beta1VirtualHubIPStatusAtProvider
     [JsonPropertyName("virtualHubId")]
     public string? VirtualHubId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPStatusConditions
@@ -525,7 +582,9 @@ public partial class V1beta1VirtualHubIPStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubIPStatus defines the observed state of VirtualHubIP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPStatus
@@ -542,7 +601,9 @@ public partial class V1beta1VirtualHubIPStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualHubIP is the Schema for the VirtualHubIPs API. Manages a Virtual Hub IP. This resource is also known as a Route Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -572,3 +633,4 @@ public partial class V1beta1VirtualHubIP : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1VirtualHubIPStatus? Status { get; set; }
 }
+#nullable disable

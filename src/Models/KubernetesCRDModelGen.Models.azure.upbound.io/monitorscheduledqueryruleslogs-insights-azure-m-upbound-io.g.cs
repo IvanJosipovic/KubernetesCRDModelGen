@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+#nullable enable
 /// <summary>MonitorScheduledQueryRulesLog is the Schema for the MonitorScheduledQueryRulesLogs API. Manages a LogToMetricAction Scheduled Query Rules resources within Azure Monitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorScheduledQueryRulesLog> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderCriteriaDimension
@@ -50,7 +53,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderCriteria
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderCriteria
@@ -63,7 +68,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderCriteria
     [JsonPropertyName("metricName")]
     public string? MetricName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSourceIdRefPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate dataSourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSourceIdRef
@@ -93,7 +102,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSour
     [JsonPropertyName("policy")]
     public V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSourceIdSelectorPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate dataSourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSourceIdSelector
@@ -127,7 +140,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSour
     [JsonPropertyName("policy")]
     public V1beta1MonitorScheduledQueryRulesLogSpecForProviderDataSourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderResourceGroupNameRefPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderResourceGroupNameRef
@@ -157,7 +174,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1MonitorScheduledQueryRulesLogSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderResourceGroupNameSelectorPolicy
@@ -170,7 +189,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderResourceGroupNameSelector
@@ -191,7 +212,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1MonitorScheduledQueryRulesLogSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProvider
@@ -248,7 +271,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderCriteriaDimension
@@ -265,7 +290,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderCriteri
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderCriteria
@@ -278,7 +305,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderCriteri
     [JsonPropertyName("metricName")]
     public string? MetricName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSourceIdRefPolicy
@@ -291,7 +320,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate dataSourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSourceIdRef
@@ -308,7 +339,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSou
     [JsonPropertyName("policy")]
     public V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSourceIdSelectorPolicy
@@ -321,7 +354,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate dataSourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSourceIdSelector
@@ -342,7 +377,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSou
     [JsonPropertyName("policy")]
     public V1beta1MonitorScheduledQueryRulesLogSpecInitProviderDataSourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourceGroupNameRefPolicy
@@ -355,7 +392,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourceGroupNameRef
@@ -372,7 +411,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourc
     [JsonPropertyName("policy")]
     public V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourceGroupNameSelectorPolicy
@@ -385,7 +426,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourceGroupNameSelector
@@ -406,7 +449,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourc
     [JsonPropertyName("policy")]
     public V1beta1MonitorScheduledQueryRulesLogSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProvider
@@ -463,7 +508,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecProviderConfigRef
@@ -476,7 +523,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpecWriteConnectionSecretToRef
@@ -485,7 +534,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpecWriteConnectionSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorScheduledQueryRulesLogSpec defines the desired state of MonitorScheduledQueryRulesLog</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogSpec
@@ -510,7 +561,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorScheduledQueryRulesLogSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogStatusAtProviderCriteriaDimension
@@ -527,7 +580,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogStatusAtProviderCriteri
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A criteria block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogStatusAtProviderCriteria
@@ -540,7 +595,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogStatusAtProviderCriteri
     [JsonPropertyName("metricName")]
     public string? MetricName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogStatusAtProvider
@@ -585,7 +642,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogStatusConditions
@@ -614,7 +673,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorScheduledQueryRulesLogStatus defines the observed state of MonitorScheduledQueryRulesLog.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesLogStatus
@@ -631,7 +692,9 @@ public partial class V1beta1MonitorScheduledQueryRulesLogStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorScheduledQueryRulesLog is the Schema for the MonitorScheduledQueryRulesLogs API. Manages a LogToMetricAction Scheduled Query Rules resources within Azure Monitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -661,3 +724,4 @@ public partial class V1beta1MonitorScheduledQueryRulesLog : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1MonitorScheduledQueryRulesLogStatus? Status { get; set; }
 }
+#nullable disable

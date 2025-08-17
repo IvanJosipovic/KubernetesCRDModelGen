@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeSnapshotList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeSnapshot> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption key that is stored in Google Cloud KMS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyKmsKeyServiceAccountRef
@@ -67,7 +72,9 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyKmsKeyServic
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueFromSecretKeyRef
@@ -80,7 +87,9 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueF
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueFrom
@@ -89,7 +98,9 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueF
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKey
@@ -102,7 +113,9 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKey
     [JsonPropertyName("valueFrom")]
     public V1beta1ComputeSnapshotSpecSnapshotEncryptionKeyRawKeyValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Encrypts the snapshot using a customer-supplied encryption key.  After you encrypt a snapshot using a customer-supplied key, you must provide the same key if you use the snapshot later. For example, you must provide the encryption key when you create a disk from the encrypted snapshot in a future request.  Customer-supplied encryption keys do not protect access to metadata of the snapshot.  If you do not provide an encryption key when creating the snapshot, then the snapshot will be encrypted using an automatically generated key and you do not need to provide a key to use the snapshot later.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKey
@@ -123,7 +136,9 @@ public partial class V1beta1ComputeSnapshotSpecSnapshotEncryptionKey
     [JsonPropertyName("sha256")]
     public string? Sha256 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyKmsKeyServiceAccountRef
@@ -140,7 +155,9 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyKmsKeyServ
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValueFromSecretKeyRef
@@ -153,7 +170,9 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValu
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValueFrom
@@ -162,7 +181,9 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValu
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKey
@@ -175,7 +196,9 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKey
     [JsonPropertyName("valueFrom")]
     public V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKeyValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKey
@@ -188,7 +211,9 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskEncryptionKey
     [JsonPropertyName("rawKey")]
     public V1beta1ComputeSnapshotSpecSourceDiskEncryptionKeyRawKey? RawKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A reference to the disk used to create this snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpecSourceDiskRef
@@ -205,7 +230,9 @@ public partial class V1beta1ComputeSnapshotSpecSourceDiskRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotSpec
@@ -242,7 +269,9 @@ public partial class V1beta1ComputeSnapshotSpec
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotStatusConditions
@@ -267,7 +296,9 @@ public partial class V1beta1ComputeSnapshotStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeSnapshotStatus
@@ -308,7 +339,9 @@ public partial class V1beta1ComputeSnapshotStatus
     [JsonPropertyName("storageBytes")]
     public int? StorageBytes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -338,3 +371,4 @@ public partial class V1beta1ComputeSnapshot : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ComputeSnapshotStatus? Status { get; set; }
 }
+#nullable disable

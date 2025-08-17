@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+#nullable enable
 /// <summary>A Configuration installs an OCI compatible Crossplane package, extending Crossplane with support for new kinds of CompositeResourceDefinitions and Compositions.  Read the Crossplane documentation for [more information about Configuration packages](https://docs.crossplane.io/latest/concepts/packages).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ConfigurationList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1Configuration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecPackagePullSecrets
@@ -42,7 +45,9 @@ public partial class V1ConfigurationSpecPackagePullSecrets
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationSpec specifies details about a request to install a configuration to Crossplane.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpec
@@ -79,7 +84,9 @@ public partial class V1ConfigurationSpec
     [JsonPropertyName("skipDependencyResolution")]
     public bool? SkipDependencyResolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageConfigRef is a reference to an image config that indicates how the referenced image config was used by the package manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationStatusAppliedImageConfigRefs
@@ -92,7 +99,9 @@ public partial class V1ConfigurationStatusAppliedImageConfigRefs
     [JsonPropertyName("reason")]
     public string Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationStatusConditions
@@ -121,7 +130,9 @@ public partial class V1ConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationStatus represents the observed state of a Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationStatus
@@ -146,7 +157,9 @@ public partial class V1ConfigurationStatus
     [JsonPropertyName("resolvedPackage")]
     public string? ResolvedPackage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Configuration installs an OCI compatible Crossplane package, extending Crossplane with support for new kinds of CompositeResourceDefinitions and Compositions.  Read the Crossplane documentation for [more information about Configuration packages](https://docs.crossplane.io/latest/concepts/packages).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -176,3 +189,4 @@ public partial class V1Configuration : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1ConfigurationStatus? Status { get; set; }
 }
+#nullable disable

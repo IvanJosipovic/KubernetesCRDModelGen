@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+#nullable enable
 /// <summary>ManagementGroupPolicyExemption is the Schema for the ManagementGroupPolicyExemptions API. Manages a Management Group Policy Exemption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1ManagementGroupPolicyExemption> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagementGroupIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagem
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagementGroupIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagem
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupPolicyExemptionSpecForProviderManagementGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagementGroupIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagem
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagementGroupIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagem
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupPolicyExemptionSpecForProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyAssignmentIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroupPolicyAssignment in authorization to populate policyAssignmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyAssignmentIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyA
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyAssignmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyAssignmentIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroupPolicyAssignment in authorization to populate policyAssignmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyAssignmentIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyA
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupPolicyExemptionSpecForProviderPolicyAssignmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecForProvider
     [JsonPropertyName("policyDefinitionReferenceIds")]
     public IList<string>? PolicyDefinitionReferenceIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicyAssignmentIdRefPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagementGroupPolicyAssignment in authorization to populate policyAssignmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicyAssignmentIdRef
@@ -224,7 +247,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicy
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicyAssignmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicyAssignmentIdSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagementGroupPolicyAssignment in authorization to populate policyAssignmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicyAssignmentIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicy
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupPolicyExemptionSpecInitProviderPolicyAssignmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProvider
@@ -295,7 +324,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecInitProvider
     [JsonPropertyName("policyDefinitionReferenceIds")]
     public IList<string>? PolicyDefinitionReferenceIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecProviderConfigRefPolicy
@@ -308,7 +339,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecProviderConfigRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecProviderConfigRef
@@ -321,7 +354,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ManagementGroupPolicyExemptionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecWriteConnectionSecretToRef
@@ -334,7 +369,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpecWriteConnectionSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagementGroupPolicyExemptionSpec defines the desired state of ManagementGroupPolicyExemption</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpec
@@ -363,7 +400,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ManagementGroupPolicyExemptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionStatusAtProvider
@@ -404,7 +443,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionStatusAtProvider
     [JsonPropertyName("policyDefinitionReferenceIds")]
     public IList<string>? PolicyDefinitionReferenceIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionStatusConditions
@@ -433,7 +474,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagementGroupPolicyExemptionStatus defines the observed state of ManagementGroupPolicyExemption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionStatus
@@ -450,7 +493,9 @@ public partial class V1beta1ManagementGroupPolicyExemptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagementGroupPolicyExemption is the Schema for the ManagementGroupPolicyExemptions API. Manages a Management Group Policy Exemption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -480,3 +525,4 @@ public partial class V1beta1ManagementGroupPolicyExemption : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1ManagementGroupPolicyExemptionStatus? Status { get; set; }
 }
+#nullable disable

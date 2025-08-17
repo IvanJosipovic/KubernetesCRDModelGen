@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.upbound.io;
+#nullable enable
 /// <summary>SiteRecoveryNetworkMapping is the Schema for the SiteRecoveryNetworkMappings API. Manages a site recovery network mapping on Azure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1SiteRecoveryNetworkMapping> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVau
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVau
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVau
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVau
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGro
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGro
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate sourceNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetwo
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate sourceNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetwo
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderSourceNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdRefPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate targetNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdRef
@@ -227,7 +256,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetwo
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdSelectorPolicy
@@ -240,7 +271,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate targetNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdSelector
@@ -257,7 +290,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetwo
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecForProviderTargetNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecForProvider
@@ -322,7 +357,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecForProvider
     [JsonPropertyName("targetRecoveryFabricName")]
     public string? TargetRecoveryFabricName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameRefPolicy
@@ -335,7 +372,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameRef
@@ -348,7 +387,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVa
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameSelectorPolicy
@@ -361,7 +402,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameSelector
@@ -378,7 +421,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVa
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameRefPolicy
@@ -391,7 +436,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameRef
@@ -404,7 +451,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGr
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameSelectorPolicy
@@ -417,7 +466,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameSelector
@@ -434,7 +485,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGr
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdRefPolicy
@@ -447,7 +500,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate sourceNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdRef
@@ -460,7 +515,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetw
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdSelectorPolicy
@@ -473,7 +530,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate sourceNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdSelector
@@ -490,7 +549,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetw
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderSourceNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdRefPolicy
@@ -503,7 +564,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate targetNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdRef
@@ -516,7 +579,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetw
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdSelectorPolicy
@@ -529,7 +594,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate targetNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdSelector
@@ -546,7 +613,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetw
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecInitProviderTargetNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProvider
@@ -611,7 +680,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecInitProvider
     [JsonPropertyName("targetRecoveryFabricName")]
     public string? TargetRecoveryFabricName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRefPolicy
@@ -624,7 +695,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRef
@@ -637,7 +710,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryNetworkMappingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpecWriteConnectionSecretToRef
@@ -650,7 +725,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpecWriteConnectionSecretT
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SiteRecoveryNetworkMappingSpec defines the desired state of SiteRecoveryNetworkMapping</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingSpec
@@ -679,7 +756,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SiteRecoveryNetworkMappingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingStatusAtProvider
@@ -716,7 +795,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingStatusAtProvider
     [JsonPropertyName("targetRecoveryFabricName")]
     public string? TargetRecoveryFabricName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingStatusConditions
@@ -745,7 +826,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SiteRecoveryNetworkMappingStatus defines the observed state of SiteRecoveryNetworkMapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryNetworkMappingStatus
@@ -762,7 +845,9 @@ public partial class V1beta1SiteRecoveryNetworkMappingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SiteRecoveryNetworkMapping is the Schema for the SiteRecoveryNetworkMappings API. Manages a site recovery network mapping on Azure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -792,3 +877,4 @@ public partial class V1beta1SiteRecoveryNetworkMapping : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1SiteRecoveryNetworkMappingStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.m.upbound.io;
+#nullable enable
 /// <summary>TransitGatewayConnectPeerAssociation is the Schema for the TransitGatewayConnectPeerAssociations API. Manages a Network Manager transit gateway Connect peer association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1beta1TransitGatewayConnectPeerAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderDeviceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Device in networkmanager to populate deviceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderDeviceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderD
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderDeviceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderDeviceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Device in networkmanager to populate deviceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderDeviceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderD
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderDeviceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderGlobalNetworkIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderGlobalNetworkIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderG
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderGlobalNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderGlobalNetworkIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderGlobalNetworkIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderG
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderGlobalNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderTransitGatewayConnectPeerArnRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGatewayConnectPeer in ec2 to populate transitGatewayConnectPeerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderTransitGatewayConnectPeerArnRef
@@ -191,7 +212,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderT
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderTransitGatewayConnectPeerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderTransitGatewayConnectPeerArnSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGatewayConnectPeer in ec2 to populate transitGatewayConnectPeerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderTransitGatewayConnectPeerArnSelector
@@ -225,7 +250,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderT
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderTransitGatewayConnectPeerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProvider
@@ -270,7 +297,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProvider
     [JsonPropertyName("transitGatewayConnectPeerArnSelector")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderTransitGatewayConnectPeerArnSelector? TransitGatewayConnectPeerArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProviderDeviceIdRefPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Device in networkmanager to populate deviceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProviderDeviceIdRef
@@ -300,7 +331,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecInitProviderDeviceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProviderDeviceIdSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Device in networkmanager to populate deviceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProviderDeviceIdSelector
@@ -334,7 +369,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecInitProviderDeviceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecProviderConf
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecWriteConnect
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayConnectPeerAssociationSpec defines the desired state of TransitGatewayConnectPeerAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpec
@@ -402,7 +445,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationStatusAtProvider
@@ -427,7 +472,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationStatusAtProvider
     [JsonPropertyName("transitGatewayConnectPeerArn")]
     public string? TransitGatewayConnectPeerArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationStatusConditions
@@ -456,7 +503,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayConnectPeerAssociationStatus defines the observed state of TransitGatewayConnectPeerAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationStatus
@@ -473,7 +522,9 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayConnectPeerAssociation is the Schema for the TransitGatewayConnectPeerAssociations API. Manages a Network Manager transit gateway Connect peer association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -503,3 +554,4 @@ public partial class V1beta1TransitGatewayConnectPeerAssociation : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1TransitGatewayConnectPeerAssociationStatus? Status { get; set; }
 }
+#nullable disable

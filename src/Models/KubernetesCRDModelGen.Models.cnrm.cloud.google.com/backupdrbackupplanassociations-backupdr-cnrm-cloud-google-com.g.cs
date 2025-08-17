@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backupdr.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BackupDRBackupPlanAssociation is the Schema for the BackupDRBackupPlanAssociation API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1alpha1BackupDRBackupPlanAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The backup plan which needs to be applied on workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationSpecBackupPlanRef
@@ -50,7 +53,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationSpecBackupPlanRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationSpecProjectRef
@@ -71,7 +76,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceRef defines the resource reference to ComputeInstance, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationSpecResourceComputeInstanceRef
@@ -88,7 +95,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationSpecResourceComputeIns
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. Resource name of workload on which backupplan is applied</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationSpecResource
@@ -97,7 +106,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationSpecResource
     [JsonPropertyName("computeInstanceRef")]
     public V1alpha1BackupDRBackupPlanAssociationSpecResourceComputeInstanceRef? ComputeInstanceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRBackupPlanAssociationSpec defines the desired state of BackupDRBackupPlanAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationSpec
@@ -126,7 +137,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationSpec
     [JsonPropertyName("resourceType")]
     public string ResourceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationStatusConditions
@@ -151,7 +164,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationStatusObservedStateRulesConfigInfoLastBackupErrorDetails
@@ -164,7 +179,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationStatusObservedStateRul
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. google.rpc.Status object to store the last backup error.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationStatusObservedStateRulesConfigInfoLastBackupError
@@ -181,7 +198,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationStatusObservedStateRul
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationStatusObservedStateRulesConfigInfo
@@ -202,7 +221,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationStatusObservedStateRul
     [JsonPropertyName("ruleID")]
     public string? RuleID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationStatusObservedState
@@ -227,7 +248,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRBackupPlanAssociationStatus defines the config connector machine state of BackupDRBackupPlanAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanAssociationStatus
@@ -248,7 +271,9 @@ public partial class V1alpha1BackupDRBackupPlanAssociationStatus
     [JsonPropertyName("observedState")]
     public V1alpha1BackupDRBackupPlanAssociationStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupDRBackupPlanAssociation is the Schema for the BackupDRBackupPlanAssociation API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -278,3 +303,4 @@ public partial class V1alpha1BackupDRBackupPlanAssociation : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1alpha1BackupDRBackupPlanAssociationStatus? Status { get; set; }
 }
+#nullable disable

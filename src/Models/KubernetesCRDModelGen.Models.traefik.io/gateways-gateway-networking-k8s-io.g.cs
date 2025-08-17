@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
+#nullable enable
 /// <summary>Gateway represents an instance of a service-traffic handling infrastructure by binding Listeners to a set of IP addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1GatewayList : IKubernetesObject<V1ListMeta>, IItems<V1Gat
     [JsonPropertyName("items")]
     public IList<V1Gateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GatewaySpecAddress describes an address that can be bound to a Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecAddresses
@@ -46,7 +49,9 @@ public partial class V1GatewaySpecAddresses
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ParametersRef is a reference to a resource that contains the configuration parameters corresponding to the Gateway. This is optional if the controller does not require any additional configuration.  This follows the same semantics as GatewayClass's `parametersRef`, but on a per-Gateway basis  The Gateway's GatewayClass may provide its own `parametersRef`. When both are specified, the merging behavior is implementation specific. It is generally recommended that GatewayClass provides defaults that can be overridden by a Gateway.  If the referent cannot be found, refers to an unsupported kind, or when the data within that resource is malformed, the Gateway SHOULD be rejected with the "Accepted" status condition set to "False" and an "InvalidParameters" reason.  Support: Implementation-specific</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecInfrastructureParametersRef
@@ -63,7 +68,9 @@ public partial class V1GatewaySpecInfrastructureParametersRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Infrastructure defines infrastructure level attributes about this Gateway instance.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecInfrastructure
@@ -80,7 +87,9 @@ public partial class V1GatewaySpecInfrastructure
     [JsonPropertyName("parametersRef")]
     public V1GatewaySpecInfrastructureParametersRef? ParametersRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteGroupKind indicates the group and kind of a Route resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersAllowedRoutesKinds
@@ -93,7 +102,9 @@ public partial class V1GatewaySpecListenersAllowedRoutesKinds
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelectorMatchExpressions
@@ -110,7 +121,9 @@ public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelectorMatchE
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector must be specified when From is set to "Selector". In that case, only Routes in Namespaces matching this Selector will be selected by this Gateway. This field is ignored for other values of "From".  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelector
@@ -123,7 +136,9 @@ public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Namespaces indicates namespaces from which Routes may be attached to this Listener. This is restricted to the namespace of this Gateway by default.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersAllowedRoutesNamespaces
@@ -136,7 +151,9 @@ public partial class V1GatewaySpecListenersAllowedRoutesNamespaces
     [JsonPropertyName("selector")]
     public V1GatewaySpecListenersAllowedRoutesNamespacesSelector? Selector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AllowedRoutes defines the types of routes that MAY be attached to a Listener and the trusted namespaces where those Route resources MAY be present.  Although a client request may match multiple route rules, only one rule may ultimately receive the request. Matching precedence MUST be determined in order of the following criteria:  * The most specific match as defined by the Route type. * The oldest Route based on creation timestamp. For example, a Route with   a creation timestamp of "2020-09-08 01:02:03" is given precedence over   a Route with a creation timestamp of "2020-09-08 01:02:04". * If everything else is equivalent, the Route appearing first in   alphabetical order (namespace/name) should be given precedence. For   example, foo/bar is given precedence over foo/baz.  All valid rules within a Route attached to this Listener should be implemented. Invalid Route rules can be ignored (sometimes that will mean the full Route). If a Route rule transitions from valid to invalid, support for that Route rule should be dropped to ensure consistency. For example, even if a filter specified by a Route rule is invalid, the rest of the rules within that Route should still be supported.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersAllowedRoutes
@@ -149,7 +166,9 @@ public partial class V1GatewaySpecListenersAllowedRoutes
     [JsonPropertyName("namespaces")]
     public V1GatewaySpecListenersAllowedRoutesNamespaces? Namespaces { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretObjectReference identifies an API object including its namespace, defaulting to Secret.  The API object must be valid in the cluster; the Group and Kind must be registered in the cluster for this reference to be valid.  References to objects with invalid Group and Kind are not valid, and must be rejected by the implementation, with appropriate Conditions set on the containing object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersTlsCertificateRefs
@@ -170,7 +189,9 @@ public partial class V1GatewaySpecListenersTlsCertificateRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS is the TLS configuration for the Listener. This field is required if the Protocol field is "HTTPS" or "TLS". It is invalid to set this field if the Protocol field is "HTTP", "TCP", or "UDP".  The association of SNIs to Certificate defined in GatewayTLSConfig is defined based on the Hostname field for this listener.  The GatewayClass MUST use the longest matching SNI out of all available certificates for any TLS handshake.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersTls
@@ -187,7 +208,9 @@ public partial class V1GatewaySpecListenersTls
     [JsonPropertyName("options")]
     public IDictionary<string, string>? Options { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Listener embodies the concept of a logical endpoint where a Gateway accepts network connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListeners
@@ -216,7 +239,9 @@ public partial class V1GatewaySpecListeners
     [JsonPropertyName("tls")]
     public V1GatewaySpecListenersTls? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpec
@@ -237,7 +262,9 @@ public partial class V1GatewaySpec
     [JsonPropertyName("listeners")]
     public IList<V1GatewaySpecListeners> Listeners { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GatewayStatusAddress describes a network address that is bound to a Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayStatusAddresses
@@ -250,7 +277,9 @@ public partial class V1GatewayStatusAddresses
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayStatusConditions
@@ -279,7 +308,9 @@ public partial class V1GatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayStatusListenersConditions
@@ -308,7 +339,9 @@ public partial class V1GatewayStatusListenersConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteGroupKind indicates the group and kind of a Route resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayStatusListenersSupportedKinds
@@ -321,7 +354,9 @@ public partial class V1GatewayStatusListenersSupportedKinds
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ListenerStatus is the status associated with a Listener.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayStatusListeners
@@ -342,7 +377,9 @@ public partial class V1GatewayStatusListeners
     [JsonPropertyName("supportedKinds")]
     public IList<V1GatewayStatusListenersSupportedKinds> SupportedKinds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status defines the current state of Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayStatus
@@ -359,7 +396,9 @@ public partial class V1GatewayStatus
     [JsonPropertyName("listeners")]
     public IList<V1GatewayStatusListeners>? Listeners { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gateway represents an instance of a service-traffic handling infrastructure by binding Listeners to a set of IP addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -389,3 +428,4 @@ public partial class V1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1Gatewa
     [JsonPropertyName("status")]
     public V1GatewayStatus? Status { get; set; }
 }
+#nullable disable

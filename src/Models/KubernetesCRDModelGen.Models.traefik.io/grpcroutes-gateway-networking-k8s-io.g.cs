@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
+#nullable enable
 /// <summary>GRPCRoute provides a way to route gRPC requests. This includes the capability to match requests by hostname, gRPC service, gRPC method, or HTTP/2 header. Filters can be used to specify additional processing steps. Backends specify where matching requests will be routed.  GRPCRoute falls under extended support within the Gateway API. Within the following specification, the word "MUST" indicates that an implementation supporting GRPCRoute must conform to the indicated requirement, but an implementation not supporting this route type need not follow the requirement unless explicitly indicated.  Implementations supporting `GRPCRoute` with the `HTTPS` `ProtocolType` MUST accept HTTP/2 connections without an initial upgrade from HTTP/1.1, i.e. via ALPN. If the implementation does not support this, then it MUST set the "Accepted" condition to "False" for the affected listener with a reason of "UnsupportedProtocol".  Implementations MAY also accept HTTP/2 connections with an upgrade from HTTP/1.  Implementations supporting `GRPCRoute` with the `HTTP` `ProtocolType` MUST support HTTP/2 over cleartext TCP (h2c, https://www.rfc-editor.org/rfc/rfc7540#section-3.1) without an initial upgrade from HTTP/1.1, i.e. with prior knowledge (https://www.rfc-editor.org/rfc/rfc7540#section-3.4). If the implementation does not support this, then it MUST set the "Accepted" condition to "False" for the affected listener with a reason of "UnsupportedProtocol". Implementations MAY also accept HTTP/2 connections with an upgrade from HTTP/1, i.e. without prior knowledge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1GRPCRouteList : IKubernetesObject<V1ListMeta>, IItems<V1G
     [JsonPropertyName("items")]
     public IList<V1GRPCRoute> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ParentReference identifies an API object (usually a Gateway) that can be considered a parent of this resource (usually a route). There are two kinds of parent resources with "Core" support:  * Gateway (Gateway conformance profile) * Service (Mesh conformance profile, ClusterIP Services only)  This API may be extended in the future to support additional kinds of parent resources.  The API object must be valid in the cluster; the Group and Kind must be registered in the cluster for this reference to be valid.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecParentRefs
@@ -62,7 +65,9 @@ public partial class V1GRPCRouteSpecParentRefs
     [JsonPropertyName("sectionName")]
     public string? SectionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExtensionRef is an optional, implementation-specific extension to the "filter" behavior.  For example, resource "myroutefilter" in group "networking.example.net"). ExtensionRef MUST NOT be used for core and extended filters.  Support: Implementation-specific  This filter can be used multiple times within the same rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersExtensionRef
@@ -79,7 +84,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersExtensionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierAdd
@@ -92,7 +99,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierSet
@@ -105,7 +114,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestHeaderModifier defines a schema for a filter that modifies request headers.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
@@ -122,7 +133,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
     [JsonPropertyName("set")]
     public IList<V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierSet>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendRef references a resource where mirrored requests are sent.  Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.  If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.  If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.  In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.  Support: Extended for Kubernetes Service  Support: Implementation-specific for any other resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendRef
@@ -147,7 +160,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendR
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fraction represents the fraction of requests that should be mirrored to BackendRef.  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorFraction
@@ -160,7 +175,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorFraction
     [JsonPropertyName("numerator")]
     public int Numerator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirror
@@ -177,7 +194,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirror
     [JsonPropertyName("percent")]
     public int? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierAdd
@@ -190,7 +209,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet
@@ -203,7 +224,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseHeaderModifier defines a schema for a filter that modifies response headers.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifier
@@ -220,7 +243,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     [JsonPropertyName("set")]
     public IList<V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPCRouteFilter defines processing steps that must be completed during the request or response lifecycle. GRPCRouteFilters are meant as an extension point to express processing that may be done in Gateway implementations. Some examples include request or response modification, implementing authentication strategies, rate-limiting, and traffic shaping. API guarantee/conformance is defined based on the type of the filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFilters
@@ -245,7 +270,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFilters
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPCBackendRef defines how a GRPCRoute forwards a gRPC request.  Note that when a namespace different than the local namespace is specified, a ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefs
@@ -278,7 +305,9 @@ public partial class V1GRPCRouteSpecRulesBackendRefs
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExtensionRef is an optional, implementation-specific extension to the "filter" behavior.  For example, resource "myroutefilter" in group "networking.example.net"). ExtensionRef MUST NOT be used for core and extended filters.  Support: Implementation-specific  This filter can be used multiple times within the same rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersExtensionRef
@@ -295,7 +324,9 @@ public partial class V1GRPCRouteSpecRulesFiltersExtensionRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierAdd
@@ -308,7 +339,9 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierAdd
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet
@@ -321,7 +354,9 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestHeaderModifier defines a schema for a filter that modifies request headers.  Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifier
@@ -338,7 +373,9 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifier
     [JsonPropertyName("set")]
     public IList<V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackendRef references a resource where mirrored requests are sent.  Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.  If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.  If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.  In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.  Support: Extended for Kubernetes Service  Support: Implementation-specific for any other resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef
@@ -363,7 +400,9 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fraction represents the fraction of requests that should be mirrored to BackendRef.  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorFraction
@@ -376,7 +415,9 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorFraction
     [JsonPropertyName("numerator")]
     public int Numerator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirror
@@ -393,7 +434,9 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirror
     [JsonPropertyName("percent")]
     public int? Percent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierAdd
@@ -406,7 +449,9 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierAdd
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet
@@ -419,7 +464,9 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseHeaderModifier defines a schema for a filter that modifies response headers.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifier
@@ -436,7 +483,9 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifier
     [JsonPropertyName("set")]
     public IList<V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPCRouteFilter defines processing steps that must be completed during the request or response lifecycle. GRPCRouteFilters are meant as an extension point to express processing that may be done in Gateway implementations. Some examples include request or response modification, implementing authentication strategies, rate-limiting, and traffic shaping. API guarantee/conformance is defined based on the type of the filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFilters
@@ -461,7 +510,9 @@ public partial class V1GRPCRouteSpecRulesFilters
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPCHeaderMatch describes how to select a gRPC route by matching gRPC request headers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesMatchesHeaders
@@ -478,7 +529,9 @@ public partial class V1GRPCRouteSpecRulesMatchesHeaders
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Method specifies a gRPC request service/method matcher. If this field is not specified, all services and methods will match.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesMatchesMethod
@@ -495,7 +548,9 @@ public partial class V1GRPCRouteSpecRulesMatchesMethod
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPCRouteMatch defines the predicate used to match requests to a given action. Multiple match types are ANDed together, i.e. the match will evaluate to true only if all conditions are satisfied.  For example, the match below will match a gRPC request only if its service is `foo` AND it contains the `version: v1` header:  ``` matches:   - method:     type: Exact     service: "foo"     headers:   - name: "version"     value "v1"  ```</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesMatches
@@ -508,7 +563,9 @@ public partial class V1GRPCRouteSpecRulesMatches
     [JsonPropertyName("method")]
     public V1GRPCRouteSpecRulesMatchesMethod? Method { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPCRouteRule defines the semantics for matching a gRPC request based on conditions (matches), processing it (filters), and forwarding the request to an API object (backendRefs).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRules
@@ -525,7 +582,9 @@ public partial class V1GRPCRouteSpecRules
     [JsonPropertyName("matches")]
     public IList<V1GRPCRouteSpecRulesMatches>? Matches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spec defines the desired state of GRPCRoute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpec
@@ -542,7 +601,9 @@ public partial class V1GRPCRouteSpec
     [JsonPropertyName("rules")]
     public IList<V1GRPCRouteSpecRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatusParentsConditions
@@ -571,7 +632,9 @@ public partial class V1GRPCRouteStatusParentsConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ParentRef corresponds with a ParentRef in the spec that this RouteParentStatus struct describes the status of.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatusParentsParentRef
@@ -600,7 +663,9 @@ public partial class V1GRPCRouteStatusParentsParentRef
     [JsonPropertyName("sectionName")]
     public string? SectionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteParentStatus describes the status of a route with respect to an associated Parent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatusParents
@@ -617,7 +682,9 @@ public partial class V1GRPCRouteStatusParents
     [JsonPropertyName("parentRef")]
     public V1GRPCRouteStatusParentsParentRef ParentRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status defines the current state of GRPCRoute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatus
@@ -626,7 +693,9 @@ public partial class V1GRPCRouteStatus
     [JsonPropertyName("parents")]
     public IList<V1GRPCRouteStatusParents> Parents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPCRoute provides a way to route gRPC requests. This includes the capability to match requests by hostname, gRPC service, gRPC method, or HTTP/2 header. Filters can be used to specify additional processing steps. Backends specify where matching requests will be routed.  GRPCRoute falls under extended support within the Gateway API. Within the following specification, the word "MUST" indicates that an implementation supporting GRPCRoute must conform to the indicated requirement, but an implementation not supporting this route type need not follow the requirement unless explicitly indicated.  Implementations supporting `GRPCRoute` with the `HTTPS` `ProtocolType` MUST accept HTTP/2 connections without an initial upgrade from HTTP/1.1, i.e. via ALPN. If the implementation does not support this, then it MUST set the "Accepted" condition to "False" for the affected listener with a reason of "UnsupportedProtocol".  Implementations MAY also accept HTTP/2 connections with an upgrade from HTTP/1.  Implementations supporting `GRPCRoute` with the `HTTP` `ProtocolType` MUST support HTTP/2 over cleartext TCP (h2c, https://www.rfc-editor.org/rfc/rfc7540#section-3.1) without an initial upgrade from HTTP/1.1, i.e. with prior knowledge (https://www.rfc-editor.org/rfc/rfc7540#section-3.4). If the implementation does not support this, then it MUST set the "Accepted" condition to "False" for the affected listener with a reason of "UnsupportedProtocol". Implementations MAY also accept HTTP/2 connections with an upgrade from HTTP/1, i.e. without prior knowledge.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -656,3 +725,4 @@ public partial class V1GRPCRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1GRPC
     [JsonPropertyName("status")]
     public V1GRPCRouteStatus? Status { get; set; }
 }
+#nullable disable

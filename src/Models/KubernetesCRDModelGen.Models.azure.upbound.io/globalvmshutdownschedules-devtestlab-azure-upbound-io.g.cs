@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devtestlab.azure.upbound.io;
+#nullable enable
 /// <summary>GlobalVMShutdownSchedule is the Schema for the GlobalVMShutdownSchedules API. Manages automated shutdown schedules for Azure Resource Manager VMs outside of Dev Test Labs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GlobalVMShutdownScheduleList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1GlobalVMShutdownSchedule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderNotificationSettings
@@ -54,7 +57,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderNotificationS
     [JsonPropertyName("webhookUrl")]
     public string? WebhookUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdRef
@@ -80,7 +87,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachin
     [JsonPropertyName("policy")]
     public V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelector
@@ -110,7 +121,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachin
     [JsonPropertyName("policy")]
     public V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecForProvider
@@ -151,7 +164,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecForProvider
     [JsonPropertyName("virtualMachineIdSelector")]
     public V1beta1GlobalVMShutdownScheduleSpecForProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderNotificationSettings
@@ -172,7 +187,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderNotification
     [JsonPropertyName("webhookUrl")]
     public string? WebhookUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdRefPolicy
@@ -185,7 +202,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdRef
@@ -198,7 +217,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachi
     [JsonPropertyName("policy")]
     public V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelectorPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelector
@@ -228,7 +251,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachi
     [JsonPropertyName("policy")]
     public V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecInitProvider
@@ -269,7 +294,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecInitProvider
     [JsonPropertyName("virtualMachineIdSelector")]
     public V1beta1GlobalVMShutdownScheduleSpecInitProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecProviderConfigRefPolicy
@@ -282,7 +309,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecProviderConfigRef
@@ -295,7 +324,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GlobalVMShutdownScheduleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpecWriteConnectionSecretToRef
@@ -308,7 +339,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalVMShutdownScheduleSpec defines the desired state of GlobalVMShutdownSchedule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleSpec
@@ -337,7 +370,9 @@ public partial class V1beta1GlobalVMShutdownScheduleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GlobalVMShutdownScheduleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleStatusAtProviderNotificationSettings
@@ -358,7 +393,9 @@ public partial class V1beta1GlobalVMShutdownScheduleStatusAtProviderNotification
     [JsonPropertyName("webhookUrl")]
     public string? WebhookUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleStatusAtProvider
@@ -395,7 +432,9 @@ public partial class V1beta1GlobalVMShutdownScheduleStatusAtProvider
     [JsonPropertyName("virtualMachineId")]
     public string? VirtualMachineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleStatusConditions
@@ -424,7 +463,9 @@ public partial class V1beta1GlobalVMShutdownScheduleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalVMShutdownScheduleStatus defines the observed state of GlobalVMShutdownSchedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalVMShutdownScheduleStatus
@@ -441,7 +482,9 @@ public partial class V1beta1GlobalVMShutdownScheduleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GlobalVMShutdownSchedule is the Schema for the GlobalVMShutdownSchedules API. Manages automated shutdown schedules for Azure Resource Manager VMs outside of Dev Test Labs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -471,3 +514,4 @@ public partial class V1beta1GlobalVMShutdownSchedule : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1GlobalVMShutdownScheduleStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+#nullable enable
 /// <summary>LakehouseMonitor is the Schema for the LakehouseMonitors API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1LakehouseMonitorList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1alpha1LakehouseMonitor> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderCustomMetrics
@@ -58,7 +61,9 @@ public partial class V1alpha1LakehouseMonitorSpecForProviderCustomMetrics
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderDataClassificationConfig
@@ -67,7 +72,9 @@ public partial class V1alpha1LakehouseMonitorSpecForProviderDataClassificationCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderInferenceLog
@@ -100,7 +107,9 @@ public partial class V1alpha1LakehouseMonitorSpecForProviderInferenceLog
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderNotificationsOnFailure
@@ -109,7 +118,9 @@ public partial class V1alpha1LakehouseMonitorSpecForProviderNotificationsOnFailu
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderNotificationsOnNewClassificationTagDetected
@@ -118,7 +129,9 @@ public partial class V1alpha1LakehouseMonitorSpecForProviderNotificationsOnNewCl
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderNotifications
@@ -131,7 +144,9 @@ public partial class V1alpha1LakehouseMonitorSpecForProviderNotifications
     [JsonPropertyName("onNewClassificationTagDetected")]
     public IList<V1alpha1LakehouseMonitorSpecForProviderNotificationsOnNewClassificationTagDetected>? OnNewClassificationTagDetected { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderSchedule
@@ -144,13 +159,17 @@ public partial class V1alpha1LakehouseMonitorSpecForProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderSnapshot
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProviderTimeSeries
@@ -163,7 +182,9 @@ public partial class V1alpha1LakehouseMonitorSpecForProviderTimeSeries
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecForProvider
@@ -228,7 +249,9 @@ public partial class V1alpha1LakehouseMonitorSpecForProvider
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderCustomMetrics
@@ -253,7 +276,9 @@ public partial class V1alpha1LakehouseMonitorSpecInitProviderCustomMetrics
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderDataClassificationConfig
@@ -262,7 +287,9 @@ public partial class V1alpha1LakehouseMonitorSpecInitProviderDataClassificationC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderInferenceLog
@@ -295,7 +322,9 @@ public partial class V1alpha1LakehouseMonitorSpecInitProviderInferenceLog
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderNotificationsOnFailure
@@ -304,7 +333,9 @@ public partial class V1alpha1LakehouseMonitorSpecInitProviderNotificationsOnFail
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderNotificationsOnNewClassificationTagDetected
@@ -313,7 +344,9 @@ public partial class V1alpha1LakehouseMonitorSpecInitProviderNotificationsOnNewC
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderNotifications
@@ -326,7 +359,9 @@ public partial class V1alpha1LakehouseMonitorSpecInitProviderNotifications
     [JsonPropertyName("onNewClassificationTagDetected")]
     public IList<V1alpha1LakehouseMonitorSpecInitProviderNotificationsOnNewClassificationTagDetected>? OnNewClassificationTagDetected { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderSchedule
@@ -339,13 +374,17 @@ public partial class V1alpha1LakehouseMonitorSpecInitProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderSnapshot
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProviderTimeSeries
@@ -358,7 +397,9 @@ public partial class V1alpha1LakehouseMonitorSpecInitProviderTimeSeries
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecInitProvider
@@ -423,7 +464,9 @@ public partial class V1alpha1LakehouseMonitorSpecInitProvider
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecProviderConfigRefPolicy
@@ -436,7 +479,9 @@ public partial class V1alpha1LakehouseMonitorSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecProviderConfigRef
@@ -449,7 +494,9 @@ public partial class V1alpha1LakehouseMonitorSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1LakehouseMonitorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecPublishConnectionDetailsToConfigRefPolicy
@@ -462,7 +509,9 @@ public partial class V1alpha1LakehouseMonitorSpecPublishConnectionDetailsToConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecPublishConnectionDetailsToConfigRef
@@ -475,7 +524,9 @@ public partial class V1alpha1LakehouseMonitorSpecPublishConnectionDetailsToConfi
     [JsonPropertyName("policy")]
     public V1alpha1LakehouseMonitorSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecPublishConnectionDetailsToMetadata
@@ -492,7 +543,9 @@ public partial class V1alpha1LakehouseMonitorSpecPublishConnectionDetailsToMetad
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecPublishConnectionDetailsTo
@@ -509,7 +562,9 @@ public partial class V1alpha1LakehouseMonitorSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpecWriteConnectionSecretToRef
@@ -522,7 +577,9 @@ public partial class V1alpha1LakehouseMonitorSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LakehouseMonitorSpec defines the desired state of LakehouseMonitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorSpec
@@ -555,7 +612,9 @@ public partial class V1alpha1LakehouseMonitorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1LakehouseMonitorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderCustomMetrics
@@ -580,7 +639,9 @@ public partial class V1alpha1LakehouseMonitorStatusAtProviderCustomMetrics
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderDataClassificationConfig
@@ -589,7 +650,9 @@ public partial class V1alpha1LakehouseMonitorStatusAtProviderDataClassificationC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderInferenceLog
@@ -622,7 +685,9 @@ public partial class V1alpha1LakehouseMonitorStatusAtProviderInferenceLog
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderNotificationsOnFailure
@@ -631,7 +696,9 @@ public partial class V1alpha1LakehouseMonitorStatusAtProviderNotificationsOnFail
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderNotificationsOnNewClassificationTagDetected
@@ -640,7 +707,9 @@ public partial class V1alpha1LakehouseMonitorStatusAtProviderNotificationsOnNewC
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderNotifications
@@ -653,7 +722,9 @@ public partial class V1alpha1LakehouseMonitorStatusAtProviderNotifications
     [JsonPropertyName("onNewClassificationTagDetected")]
     public IList<V1alpha1LakehouseMonitorStatusAtProviderNotificationsOnNewClassificationTagDetected>? OnNewClassificationTagDetected { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderSchedule
@@ -670,13 +741,17 @@ public partial class V1alpha1LakehouseMonitorStatusAtProviderSchedule
     [JsonPropertyName("timezoneId")]
     public string? TimezoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderSnapshot
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProviderTimeSeries
@@ -689,7 +764,9 @@ public partial class V1alpha1LakehouseMonitorStatusAtProviderTimeSeries
     [JsonPropertyName("timestampCol")]
     public string? TimestampCol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusAtProvider
@@ -778,7 +855,9 @@ public partial class V1alpha1LakehouseMonitorStatusAtProvider
     [JsonPropertyName("warehouseId")]
     public string? WarehouseId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatusConditions
@@ -807,7 +886,9 @@ public partial class V1alpha1LakehouseMonitorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LakehouseMonitorStatus defines the observed state of LakehouseMonitor.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LakehouseMonitorStatus
@@ -824,7 +905,9 @@ public partial class V1alpha1LakehouseMonitorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LakehouseMonitor is the Schema for the LakehouseMonitors API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -854,3 +937,4 @@ public partial class V1alpha1LakehouseMonitor : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1alpha1LakehouseMonitorStatus? Status { get; set; }
 }
+#nullable disable

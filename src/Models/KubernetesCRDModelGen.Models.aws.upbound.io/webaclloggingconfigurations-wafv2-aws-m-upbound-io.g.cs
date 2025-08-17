@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafv2.aws.m.upbound.io;
+#nullable enable
 /// <summary>WebACLLoggingConfiguration is the Schema for the WebACLLoggingConfigurations API. Create a resource for WAFv2 Web ACL Logging Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WebACLLoggingConfigurationList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1WebACLLoggingConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinationConfigsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinationConfigsRefs
@@ -63,7 +68,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinat
     [JsonPropertyName("policy")]
     public V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinationConfigsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinationConfigsSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of DeliveryStream in firehose to populate logDestinationConfigs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinationConfigsSelector
@@ -97,7 +106,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinat
     [JsonPropertyName("policy")]
     public V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinationConfigsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for a single action condition. See Action Condition below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilterFilterConditionActionCondition
@@ -106,7 +117,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilt
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition for a single label name. See Label Name Condition below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilterFilterConditionLabelNameCondition
@@ -115,7 +128,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilt
     [JsonPropertyName("labelName")]
     public string? LabelName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilterFilterCondition
@@ -128,7 +143,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilt
     [JsonPropertyName("labelNameCondition")]
     public V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilterFilterConditionLabelNameCondition? LabelNameCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilterFilter
@@ -145,7 +162,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilt
     [JsonPropertyName("requirement")]
     public string? Requirement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that specifies which web requests are kept in the logs and which are dropped. It allows filtering based on the rule action and the web request labels applied by matching rules during web ACL evaluation. For more details, refer to the Logging Filter section below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilter
@@ -158,19 +177,25 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilt
     [JsonPropertyName("filter")]
     public IList<V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilterFilter>? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP method to be redacted. It must be specified as an empty configuration block {}. The method indicates the type of operation that the request is asking the origin to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFieldsMethod
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether to redact the query string. It must be specified as an empty configuration block {}. The query string is the part of a URL that appears after a ? character, if any.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFieldsQueryString
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>"single_header" refers to the redaction of a single header. For more information, please see the details below under Single Header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFieldsSingleHeader
@@ -179,13 +204,17 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFie
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that redacts the request URI path. It should be specified as an empty configuration block {}. The URI path is the part of a web request that identifies a resource, such as /images/daily-ad.jpg.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFieldsUriPath
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFields
@@ -206,7 +235,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFie
     [JsonPropertyName("uriPath")]
     public V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFieldsUriPath? UriPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderResourceArnRefPolicy
@@ -219,7 +250,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderResourceArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a WebACL in wafv2 to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderResourceArnRef
@@ -236,7 +269,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderResourceArn
     [JsonPropertyName("policy")]
     public V1beta1WebACLLoggingConfigurationSpecForProviderResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderResourceArnSelectorPolicy
@@ -249,7 +284,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderResourceArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a WebACL in wafv2 to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderResourceArnSelector
@@ -270,7 +307,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderResourceArn
     [JsonPropertyName("policy")]
     public V1beta1WebACLLoggingConfigurationSpecForProviderResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProvider
@@ -311,7 +350,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProvider
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1WebACLLoggingConfigurationSpecForProviderResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestinationConfigsRefsPolicy
@@ -324,7 +365,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestina
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestinationConfigsRefs
@@ -341,7 +384,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestina
     [JsonPropertyName("policy")]
     public V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestinationConfigsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestinationConfigsSelectorPolicy
@@ -354,7 +399,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestina
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of DeliveryStream in firehose to populate logDestinationConfigs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestinationConfigsSelector
@@ -375,7 +422,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestina
     [JsonPropertyName("policy")]
     public V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestinationConfigsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for a single action condition. See Action Condition below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFilterFilterConditionActionCondition
@@ -384,7 +433,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFil
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition for a single label name. See Label Name Condition below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFilterFilterConditionLabelNameCondition
@@ -393,7 +444,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFil
     [JsonPropertyName("labelName")]
     public string? LabelName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFilterFilterCondition
@@ -406,7 +459,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFil
     [JsonPropertyName("labelNameCondition")]
     public V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFilterFilterConditionLabelNameCondition? LabelNameCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFilterFilter
@@ -423,7 +478,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFil
     [JsonPropertyName("requirement")]
     public string? Requirement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that specifies which web requests are kept in the logs and which are dropped. It allows filtering based on the rule action and the web request labels applied by matching rules during web ACL evaluation. For more details, refer to the Logging Filter section below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFilter
@@ -436,19 +493,25 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFil
     [JsonPropertyName("filter")]
     public IList<V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFilterFilter>? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP method to be redacted. It must be specified as an empty configuration block {}. The method indicates the type of operation that the request is asking the origin to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFieldsMethod
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether to redact the query string. It must be specified as an empty configuration block {}. The query string is the part of a URL that appears after a ? character, if any.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFieldsQueryString
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>"single_header" refers to the redaction of a single header. For more information, please see the details below under Single Header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFieldsSingleHeader
@@ -457,13 +520,17 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that redacts the request URI path. It should be specified as an empty configuration block {}. The URI path is the part of a web request that identifies a resource, such as /images/daily-ad.jpg.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFieldsUriPath
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFields
@@ -484,7 +551,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFi
     [JsonPropertyName("uriPath")]
     public V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFieldsUriPath? UriPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProvider
@@ -509,7 +578,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProvider
     [JsonPropertyName("redactedFields")]
     public IList<V1beta1WebACLLoggingConfigurationSpecInitProviderRedactedFields>? RedactedFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecProviderConfigRef
@@ -522,7 +593,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecWriteConnectionSecretToRef
@@ -531,7 +604,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACLLoggingConfigurationSpec defines the desired state of WebACLLoggingConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpec
@@ -556,7 +631,9 @@ public partial class V1beta1WebACLLoggingConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WebACLLoggingConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for a single action condition. See Action Condition below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFilterFilterConditionActionCondition
@@ -565,7 +642,9 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFil
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition for a single label name. See Label Name Condition below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFilterFilterConditionLabelNameCondition
@@ -574,7 +653,9 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFil
     [JsonPropertyName("labelName")]
     public string? LabelName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFilterFilterCondition
@@ -587,7 +668,9 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFil
     [JsonPropertyName("labelNameCondition")]
     public V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFilterFilterConditionLabelNameCondition? LabelNameCondition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFilterFilter
@@ -604,7 +687,9 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFil
     [JsonPropertyName("requirement")]
     public string? Requirement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that specifies which web requests are kept in the logs and which are dropped. It allows filtering based on the rule action and the web request labels applied by matching rules during web ACL evaluation. For more details, refer to the Logging Filter section below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFilter
@@ -617,19 +702,25 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFil
     [JsonPropertyName("filter")]
     public IList<V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFilterFilter>? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTP method to be redacted. It must be specified as an empty configuration block {}. The method indicates the type of operation that the request is asking the origin to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFieldsMethod
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Whether to redact the query string. It must be specified as an empty configuration block {}. The query string is the part of a URL that appears after a ? character, if any.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFieldsQueryString
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>"single_header" refers to the redaction of a single header. For more information, please see the details below under Single Header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFieldsSingleHeader
@@ -638,13 +729,17 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that redacts the request URI path. It should be specified as an empty configuration block {}. The URI path is the part of a web request that identifies a resource, such as /images/daily-ad.jpg.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFieldsUriPath
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFields
@@ -665,7 +760,9 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFi
     [JsonPropertyName("uriPath")]
     public V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFieldsUriPath? UriPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProvider
@@ -694,7 +791,9 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProvider
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusConditions
@@ -723,7 +822,9 @@ public partial class V1beta1WebACLLoggingConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACLLoggingConfigurationStatus defines the observed state of WebACLLoggingConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatus
@@ -740,7 +841,9 @@ public partial class V1beta1WebACLLoggingConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACLLoggingConfiguration is the Schema for the WebACLLoggingConfigurations API. Create a resource for WAFv2 Web ACL Logging Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -770,3 +873,4 @@ public partial class V1beta1WebACLLoggingConfiguration : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1WebACLLoggingConfigurationStatus? Status { get; set; }
 }
+#nullable disable

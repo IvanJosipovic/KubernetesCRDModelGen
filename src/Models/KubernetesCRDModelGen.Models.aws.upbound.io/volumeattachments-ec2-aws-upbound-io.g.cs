@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>VolumeAttachment is the Schema for the VolumeAttachments API. Provides an AWS EBS Volume Attachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VolumeAttachmentList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1VolumeAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in ec2 to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in ec2 to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EBSVolume in ec2 to populate volumeId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EBSVolume in ec2 to populate volumeId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1VolumeAttachmentSpecForProvider
     [JsonPropertyName("volumeIdSelector")]
     public V1beta1VolumeAttachmentSpecForProviderVolumeIdSelector? VolumeIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in ec2 to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in ec2 to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelector
@@ -250,7 +277,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EBSVolume in ec2 to populate volumeId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdRef
@@ -276,7 +307,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EBSVolume in ec2 to populate volumeId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelector
@@ -306,7 +341,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecInitProvider
@@ -351,7 +388,9 @@ public partial class V1beta1VolumeAttachmentSpecInitProvider
     [JsonPropertyName("volumeIdSelector")]
     public V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelector? VolumeIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecProviderConfigRefPolicy
@@ -364,7 +403,9 @@ public partial class V1beta1VolumeAttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecProviderConfigRef
@@ -377,7 +418,9 @@ public partial class V1beta1VolumeAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpecWriteConnectionSecretToRef
@@ -390,7 +433,9 @@ public partial class V1beta1VolumeAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeAttachmentSpec defines the desired state of VolumeAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentSpec
@@ -419,7 +464,9 @@ public partial class V1beta1VolumeAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VolumeAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentStatusAtProvider
@@ -456,7 +503,9 @@ public partial class V1beta1VolumeAttachmentStatusAtProvider
     [JsonPropertyName("volumeId")]
     public string? VolumeId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentStatusConditions
@@ -485,7 +534,9 @@ public partial class V1beta1VolumeAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeAttachmentStatus defines the observed state of VolumeAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeAttachmentStatus
@@ -502,7 +553,9 @@ public partial class V1beta1VolumeAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeAttachment is the Schema for the VolumeAttachments API. Provides an AWS EBS Volume Attachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -532,3 +585,4 @@ public partial class V1beta1VolumeAttachment : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1VolumeAttachmentStatus? Status { get; set; }
 }
+#nullable disable

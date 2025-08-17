@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>ApigeeInstanceAttachment is the Schema for the ApigeeInstanceAttachment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApigeeInstanceAttachmentList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1ApigeeInstanceAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ID of the attached environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceAttachmentSpecEnvironmentRef
@@ -50,7 +53,9 @@ public partial class V1beta1ApigeeInstanceAttachmentSpecEnvironmentRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to parent Apigee Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceAttachmentSpecInstanceRef
@@ -67,7 +72,9 @@ public partial class V1beta1ApigeeInstanceAttachmentSpecInstanceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApigeeInstanceAttachmentSpec defines the desired state of ApigeeInstanceAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceAttachmentSpec
@@ -84,7 +91,9 @@ public partial class V1beta1ApigeeInstanceAttachmentSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceAttachmentStatusConditions
@@ -109,7 +118,9 @@ public partial class V1beta1ApigeeInstanceAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceAttachmentStatusObservedState
@@ -118,7 +129,9 @@ public partial class V1beta1ApigeeInstanceAttachmentStatusObservedState
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApigeeInstanceAttachmentStatus defines the config connector machine state of ApigeeInstanceAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceAttachmentStatus
@@ -139,7 +152,9 @@ public partial class V1beta1ApigeeInstanceAttachmentStatus
     [JsonPropertyName("observedState")]
     public V1beta1ApigeeInstanceAttachmentStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApigeeInstanceAttachment is the Schema for the ApigeeInstanceAttachment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -169,3 +184,4 @@ public partial class V1beta1ApigeeInstanceAttachment : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1ApigeeInstanceAttachmentStatus? Status { get; set; }
 }
+#nullable disable

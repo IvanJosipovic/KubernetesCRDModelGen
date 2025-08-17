@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.m.upbound.io;
+#nullable enable
 /// <summary>SQLStoredProcedure is the Schema for the SQLStoredProcedures API. Manages a SQL Stored Procedure within a Cosmos DB Account SQL Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SQLStoredProcedureList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1SQLStoredProcedure> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderAccountNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderAccountNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLStoredProcedureSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderAccountNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderAccountNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderAccountNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLStoredProcedureSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderContainerNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderContainerNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLContainer in cosmosdb to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderContainerNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderContainerNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLStoredProcedureSpecForProviderContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderContainerNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderContainerNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLContainer in cosmosdb to populate containerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderContainerNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderContainerNameSelect
     [JsonPropertyName("policy")]
     public V1beta1SQLStoredProcedureSpecForProviderContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderDatabaseNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderDatabaseNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLDatabase in cosmosdb to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderDatabaseNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLStoredProcedureSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderDatabaseNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderDatabaseNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLDatabase in cosmosdb to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderDatabaseNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderDatabaseNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1SQLStoredProcedureSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameRef
@@ -255,7 +284,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameSelector
@@ -289,7 +322,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecForProvider
@@ -346,7 +381,9 @@ public partial class V1beta1SQLStoredProcedureSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1SQLStoredProcedureSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1SQLStoredProcedureSpecInitProvider
     [JsonPropertyName("body")]
     public string? Body { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1SQLStoredProcedureSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1SQLStoredProcedureSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLStoredProcedureSpec defines the desired state of SQLStoredProcedure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureSpec
@@ -402,7 +445,9 @@ public partial class V1beta1SQLStoredProcedureSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SQLStoredProcedureSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureStatusAtProvider
@@ -431,7 +476,9 @@ public partial class V1beta1SQLStoredProcedureStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureStatusConditions
@@ -460,7 +507,9 @@ public partial class V1beta1SQLStoredProcedureStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLStoredProcedureStatus defines the observed state of SQLStoredProcedure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLStoredProcedureStatus
@@ -477,7 +526,9 @@ public partial class V1beta1SQLStoredProcedureStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLStoredProcedure is the Schema for the SQLStoredProcedures API. Manages a SQL Stored Procedure within a Cosmos DB Account SQL Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -507,3 +558,4 @@ public partial class V1beta1SQLStoredProcedure : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1SQLStoredProcedureStatus? Status { get; set; }
 }
+#nullable disable

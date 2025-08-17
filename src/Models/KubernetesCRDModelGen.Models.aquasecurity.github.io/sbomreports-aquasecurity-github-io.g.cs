@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aquasecurity.github.io;
+#nullable enable
 /// <summary>SbomReport summarizes components and dependencies found in container image</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1SbomReportList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1alpha1SbomReport> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Artifact represents a standalone, executable package of software that includes everything needed to run an application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportArtifact
@@ -54,7 +57,9 @@ public partial class V1alpha1SbomReportReportArtifact
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsComponentsHashes
@@ -67,7 +72,9 @@ public partial class V1alpha1SbomReportReportComponentsComponentsHashes
     [JsonPropertyName("content")]
     public string? Content { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsComponentsLicensesLicense
@@ -84,7 +91,9 @@ public partial class V1alpha1SbomReportReportComponentsComponentsLicensesLicense
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsComponentsLicenses
@@ -97,7 +106,9 @@ public partial class V1alpha1SbomReportReportComponentsComponentsLicenses
     [JsonPropertyName("license")]
     public V1alpha1SbomReportReportComponentsComponentsLicensesLicense? License { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsComponentsProperties
@@ -110,7 +121,9 @@ public partial class V1alpha1SbomReportReportComponentsComponentsProperties
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsComponentsSupplierContact
@@ -127,7 +140,9 @@ public partial class V1alpha1SbomReportReportComponentsComponentsSupplierContact
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsComponentsSupplier
@@ -144,7 +159,9 @@ public partial class V1alpha1SbomReportReportComponentsComponentsSupplier
     [JsonPropertyName("url")]
     public IList<string>? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsComponents
@@ -189,7 +206,9 @@ public partial class V1alpha1SbomReportReportComponentsComponents
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsDependencies
@@ -202,7 +221,9 @@ public partial class V1alpha1SbomReportReportComponentsDependencies
     [JsonPropertyName("ref")]
     public string? Ref { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataComponentHashes
@@ -215,7 +236,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataComponentHashes
     [JsonPropertyName("content")]
     public string? Content { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataComponentLicensesLicense
@@ -232,7 +255,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataComponentLicenses
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataComponentLicenses
@@ -245,7 +270,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataComponentLicenses
     [JsonPropertyName("license")]
     public V1alpha1SbomReportReportComponentsMetadataComponentLicensesLicense? License { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataComponentProperties
@@ -258,7 +285,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataComponentProperti
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataComponentSupplierContact
@@ -275,7 +304,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataComponentSupplier
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataComponentSupplier
@@ -292,7 +323,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataComponentSupplier
     [JsonPropertyName("url")]
     public IList<string>? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataComponent
@@ -337,7 +370,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataComponent
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsHashes
@@ -350,7 +385,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsHa
     [JsonPropertyName("content")]
     public string? Content { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsLicensesLicense
@@ -367,7 +404,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsLi
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsLicenses
@@ -380,7 +419,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsLi
     [JsonPropertyName("license")]
     public V1alpha1SbomReportReportComponentsMetadataToolsComponentsLicensesLicense? License { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsProperties
@@ -393,7 +434,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsPr
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsSupplierContact
@@ -410,7 +453,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsSu
     [JsonPropertyName("phone")]
     public string? Phone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsSupplier
@@ -427,7 +472,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponentsSu
     [JsonPropertyName("url")]
     public IList<string>? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponents
@@ -472,7 +519,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataToolsComponents
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadataTools
@@ -481,7 +530,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadataTools
     [JsonPropertyName("components")]
     public IList<V1alpha1SbomReportReportComponentsMetadataToolsComponents>? Components { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponentsMetadata
@@ -498,7 +549,9 @@ public partial class V1alpha1SbomReportReportComponentsMetadata
     [JsonPropertyName("tools")]
     public V1alpha1SbomReportReportComponentsMetadataTools? Tools { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Bom is artifact bill of materials.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportComponents
@@ -531,7 +584,9 @@ public partial class V1alpha1SbomReportReportComponents
     [JsonPropertyName("version")]
     public int? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Registry is the registry the Artifact was pulled from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportRegistry
@@ -540,7 +595,9 @@ public partial class V1alpha1SbomReportReportRegistry
     [JsonPropertyName("server")]
     public string? Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scanner is the scanner that generated this report.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportScanner
@@ -557,7 +614,9 @@ public partial class V1alpha1SbomReportReportScanner
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Summary is a summary of sbom report.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReportSummary
@@ -570,7 +629,9 @@ public partial class V1alpha1SbomReportReportSummary
     [JsonPropertyName("dependenciesCount")]
     public int DependenciesCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Report is the actual sbom report data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SbomReportReport
@@ -599,7 +660,9 @@ public partial class V1alpha1SbomReportReport
     [JsonPropertyName("updateTimestamp")]
     public string UpdateTimestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SbomReport summarizes components and dependencies found in container image</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -628,3 +691,4 @@ public partial class V1alpha1SbomReport : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("report")]
     public V1alpha1SbomReportReport Report { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.guardduty.aws.upbound.io;
+#nullable enable
 /// <summary>Detector is the Schema for the Detectors API. Provides a resource to manage an Amazon GuardDuty detector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DetectorList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Detector> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecForProviderDatasourcesKubernetesAuditLogs
@@ -42,7 +45,9 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesKubernetesAuditLog
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecForProviderDatasourcesKubernetes
@@ -51,7 +56,9 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesKubernetes
     [JsonPropertyName("auditLogs")]
     public IList<V1beta1DetectorSpecForProviderDatasourcesKubernetesAuditLogs>? AuditLogs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes
@@ -60,7 +67,9 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionS
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings
@@ -69,7 +78,9 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionS
     [JsonPropertyName("ebsVolumes")]
     public IList<V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes>? EbsVolumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtection
@@ -78,7 +89,9 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesMalwareProtection
     [JsonPropertyName("scanEc2InstanceWithFindings")]
     public IList<V1beta1DetectorSpecForProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings>? ScanEc2InstanceWithFindings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecForProviderDatasourcesS3Logs
@@ -87,7 +100,9 @@ public partial class V1beta1DetectorSpecForProviderDatasourcesS3Logs
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecForProviderDatasources
@@ -104,7 +119,9 @@ public partial class V1beta1DetectorSpecForProviderDatasources
     [JsonPropertyName("s3Logs")]
     public IList<V1beta1DetectorSpecForProviderDatasourcesS3Logs>? S3Logs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecForProvider
@@ -129,7 +146,9 @@ public partial class V1beta1DetectorSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecInitProviderDatasourcesKubernetesAuditLogs
@@ -138,7 +157,9 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesKubernetesAuditLo
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecInitProviderDatasourcesKubernetes
@@ -147,7 +168,9 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesKubernetes
     [JsonPropertyName("auditLogs")]
     public IList<V1beta1DetectorSpecInitProviderDatasourcesKubernetesAuditLogs>? AuditLogs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes
@@ -156,7 +179,9 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtection
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings
@@ -165,7 +190,9 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtection
     [JsonPropertyName("ebsVolumes")]
     public IList<V1beta1DetectorSpecInitProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes>? EbsVolumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtection
@@ -174,7 +201,9 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesMalwareProtection
     [JsonPropertyName("scanEc2InstanceWithFindings")]
     public IList<V1beta1DetectorSpecInitProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings>? ScanEc2InstanceWithFindings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecInitProviderDatasourcesS3Logs
@@ -183,7 +212,9 @@ public partial class V1beta1DetectorSpecInitProviderDatasourcesS3Logs
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecInitProviderDatasources
@@ -200,7 +231,9 @@ public partial class V1beta1DetectorSpecInitProviderDatasources
     [JsonPropertyName("s3Logs")]
     public IList<V1beta1DetectorSpecInitProviderDatasourcesS3Logs>? S3Logs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecInitProvider
@@ -221,7 +254,9 @@ public partial class V1beta1DetectorSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecProviderConfigRefPolicy
@@ -234,7 +269,9 @@ public partial class V1beta1DetectorSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecProviderConfigRef
@@ -247,7 +284,9 @@ public partial class V1beta1DetectorSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DetectorSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpecWriteConnectionSecretToRef
@@ -260,7 +299,9 @@ public partial class V1beta1DetectorSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DetectorSpec defines the desired state of Detector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorSpec
@@ -289,7 +330,9 @@ public partial class V1beta1DetectorSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DetectorSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusAtProviderDatasourcesKubernetesAuditLogs
@@ -298,7 +341,9 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesKubernetesAuditLo
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusAtProviderDatasourcesKubernetes
@@ -307,7 +352,9 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesKubernetes
     [JsonPropertyName("auditLogs")]
     public IList<V1beta1DetectorStatusAtProviderDatasourcesKubernetesAuditLogs>? AuditLogs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes
@@ -316,7 +363,9 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtection
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings
@@ -325,7 +374,9 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtection
     [JsonPropertyName("ebsVolumes")]
     public IList<V1beta1DetectorStatusAtProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes>? EbsVolumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtection
@@ -334,7 +385,9 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesMalwareProtection
     [JsonPropertyName("scanEc2InstanceWithFindings")]
     public IList<V1beta1DetectorStatusAtProviderDatasourcesMalwareProtectionScanEc2InstanceWithFindings>? ScanEc2InstanceWithFindings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusAtProviderDatasourcesS3Logs
@@ -343,7 +396,9 @@ public partial class V1beta1DetectorStatusAtProviderDatasourcesS3Logs
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusAtProviderDatasources
@@ -360,7 +415,9 @@ public partial class V1beta1DetectorStatusAtProviderDatasources
     [JsonPropertyName("s3Logs")]
     public IList<V1beta1DetectorStatusAtProviderDatasourcesS3Logs>? S3Logs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusAtProvider
@@ -401,7 +458,9 @@ public partial class V1beta1DetectorStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatusConditions
@@ -430,7 +489,9 @@ public partial class V1beta1DetectorStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DetectorStatus defines the observed state of Detector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DetectorStatus
@@ -447,7 +508,9 @@ public partial class V1beta1DetectorStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Detector is the Schema for the Detectors API. Provides a resource to manage an Amazon GuardDuty detector</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -477,3 +540,4 @@ public partial class V1beta1Detector : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1DetectorStatus? Status { get; set; }
 }
+#nullable disable

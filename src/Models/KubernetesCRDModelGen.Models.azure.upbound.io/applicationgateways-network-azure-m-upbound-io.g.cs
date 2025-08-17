@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>ApplicationGateway is the Schema for the ApplicationGateways API. Manages an Application Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ApplicationGatewayList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1ApplicationGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The contents of the Authentication Certificate which should be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderAuthenticationCertificateDataSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderAuthenticationCerti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderAuthenticationCertificate
@@ -59,7 +64,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderAuthenticationCerti
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderAutoscaleConfiguration
@@ -72,7 +79,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderAutoscaleConfigurat
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderBackendAddressPool
@@ -89,7 +98,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderBackendAddressPool
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettingsAuthenticationCertificate
@@ -98,7 +109,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettings
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A connection_draining block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettingsConnectionDraining
@@ -111,7 +124,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettings
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettings
@@ -168,7 +183,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderBackendHttpSettings
     [JsonPropertyName("trustedRootCertificateNames")]
     public IList<string>? TrustedRootCertificateNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderCustomErrorConfiguration
@@ -181,7 +198,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderCustomErrorConfigur
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdRefPolicy
@@ -194,7 +213,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdRef
@@ -211,7 +232,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicy
@@ -224,7 +247,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdSelector
@@ -245,7 +270,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdRefPolicy
@@ -258,7 +285,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdRef
@@ -275,7 +304,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelectorPolicy
@@ -288,7 +319,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelector
@@ -309,7 +342,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfiguration
@@ -354,7 +389,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigura
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ApplicationGatewaySpecForProviderFrontendIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderFrontendPort
@@ -367,7 +404,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderFrontendPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdRefPolicy
@@ -380,7 +419,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdRef
@@ -397,7 +438,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelectorPolicy
@@ -410,7 +453,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelector
@@ -431,7 +476,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfiguration
@@ -452,7 +499,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurat
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ApplicationGatewaySpecForProviderGatewayIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A global block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderGlobal
@@ -465,7 +514,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderGlobal
     [JsonPropertyName("responseBufferingEnabled")]
     public bool? ResponseBufferingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderHttpListenerCustomErrorConfiguration
@@ -478,7 +529,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderHttpListenerCustomE
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderHttpListener
@@ -527,7 +580,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderHttpListener
     [JsonPropertyName("sslProfileName")]
     public string? SslProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderIdentity
@@ -540,7 +595,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy
@@ -553,7 +610,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef
@@ -570,7 +629,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy
@@ -583,7 +644,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector
@@ -604,7 +667,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfiguration
@@ -637,7 +702,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfiguration
@@ -650,7 +717,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderPrivateLinkConfigur
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderProbeMatch
@@ -663,7 +732,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderProbeMatch
     [JsonPropertyName("statusCode")]
     public IList<string>? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderProbe
@@ -712,7 +783,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderProbe
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderRedirectConfiguration
@@ -741,7 +814,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRedirectConfigurati
     [JsonPropertyName("targetUrl")]
     public string? TargetUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderRequestRoutingRule
@@ -782,7 +857,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRequestRoutingRule
     [JsonPropertyName("urlPathMapName")]
     public string? UrlPathMapName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRefPolicy
@@ -795,7 +872,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRef
@@ -812,7 +891,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSelectorPolicy
@@ -825,7 +906,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSelector
@@ -846,7 +929,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleCondition
@@ -867,7 +952,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     [JsonPropertyName("variable")]
     public string? Variable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleRequestHeaderConfiguration
@@ -880,7 +967,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleResponseHeaderConfiguration
@@ -893,7 +982,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One url block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleUrl
@@ -914,7 +1005,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     [JsonPropertyName("reroute")]
     public bool? Reroute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRule
@@ -943,7 +1036,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewri
     [JsonPropertyName("url")]
     public V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRuleUrl? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSet
@@ -956,7 +1051,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderRewriteRuleSet
     [JsonPropertyName("rewriteRule")]
     public IList<V1beta1ApplicationGatewaySpecForProviderRewriteRuleSetRewriteRule>? RewriteRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sku block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderSku
@@ -973,7 +1070,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base64-encoded PFX certificate data. Required if key_vault_secret_id is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificateDataSecretRef
@@ -986,7 +1085,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificateDataS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password for the pfx file specified in data. Required if data is set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificatePasswordSecretRef
@@ -999,7 +1100,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificatePassw
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificate
@@ -1020,7 +1123,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslCertificate
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1ApplicationGatewaySpecForProviderSslCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a ssl_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderSslPolicy
@@ -1045,7 +1150,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslPolicy
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a ssl_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderSslProfileSslPolicy
@@ -1070,7 +1177,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslProfileSslPolicy
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderSslProfile
@@ -1095,7 +1204,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderSslProfile
     [JsonPropertyName("verifyClientCertificateRevocation")]
     public string? VerifyClientCertificateRevocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base-64 encoded certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderTrustedClientCertificateDataSecretRef
@@ -1108,7 +1219,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderTrustedClientCertif
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderTrustedClientCertificate
@@ -1121,7 +1234,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderTrustedClientCertif
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The contents of the Trusted Root Certificate which should be used. Required if key_vault_secret_id is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderTrustedRootCertificateDataSecretRef
@@ -1134,7 +1249,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderTrustedRootCertific
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderTrustedRootCertificate
@@ -1151,7 +1268,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderTrustedRootCertific
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderUrlPathMapPathRule
@@ -1184,7 +1303,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderUrlPathMapPathRule
     [JsonPropertyName("rewriteRuleSetName")]
     public string? RewriteRuleSetName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderUrlPathMap
@@ -1213,7 +1334,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderUrlPathMap
     [JsonPropertyName("pathRule")]
     public IList<V1beta1ApplicationGatewaySpecForProviderUrlPathMapPathRule>? PathRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderWafConfigurationDisabledRuleGroup
@@ -1226,7 +1349,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderWafConfigurationDis
     [JsonPropertyName("rules")]
     public IList<double>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderWafConfigurationExclusion
@@ -1243,7 +1368,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderWafConfigurationExc
     [JsonPropertyName("selectorMatchOperator")]
     public string? SelectorMatchOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A waf_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProviderWafConfiguration
@@ -1284,7 +1411,9 @@ public partial class V1beta1ApplicationGatewaySpecForProviderWafConfiguration
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecForProvider
@@ -1425,7 +1554,9 @@ public partial class V1beta1ApplicationGatewaySpecForProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The contents of the Authentication Certificate which should be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderAuthenticationCertificateDataSecretRef
@@ -1438,7 +1569,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderAuthenticationCert
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderAuthenticationCertificate
@@ -1451,7 +1584,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderAuthenticationCert
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderAutoscaleConfiguration
@@ -1464,7 +1599,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderAutoscaleConfigura
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderBackendAddressPool
@@ -1481,7 +1618,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderBackendAddressPool
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSettingsAuthenticationCertificate
@@ -1490,7 +1629,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSetting
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A connection_draining block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSettingsConnectionDraining
@@ -1503,7 +1644,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSetting
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSettings
@@ -1560,7 +1703,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderBackendHttpSetting
     [JsonPropertyName("trustedRootCertificateNames")]
     public IList<string>? TrustedRootCertificateNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderCustomErrorConfiguration
@@ -1573,7 +1718,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderCustomErrorConfigu
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdRefPolicy
@@ -1586,7 +1733,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdRef
@@ -1603,7 +1752,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicy
@@ -1616,7 +1767,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIP in network to populate publicIpAddressId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelector
@@ -1637,7 +1790,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationPublicIpAddressIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdRefPolicy
@@ -1650,7 +1805,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdRef
@@ -1667,7 +1824,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelectorPolicy
@@ -1680,7 +1839,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelector
@@ -1701,7 +1862,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfiguration
@@ -1746,7 +1909,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigur
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ApplicationGatewaySpecInitProviderFrontendIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendPort
@@ -1759,7 +1924,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderFrontendPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdRefPolicy
@@ -1772,7 +1939,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdRef
@@ -1789,7 +1958,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelectorPolicy
@@ -1802,7 +1973,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelector
@@ -1823,7 +1996,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfiguration
@@ -1844,7 +2019,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigura
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ApplicationGatewaySpecInitProviderGatewayIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A global block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderGlobal
@@ -1857,7 +2034,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderGlobal
     [JsonPropertyName("responseBufferingEnabled")]
     public bool? ResponseBufferingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderHttpListenerCustomErrorConfiguration
@@ -1870,7 +2049,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderHttpListenerCustom
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderHttpListener
@@ -1919,7 +2100,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderHttpListener
     [JsonPropertyName("sslProfileName")]
     public string? SslProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderIdentity
@@ -1932,7 +2115,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy
@@ -1945,7 +2130,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef
@@ -1962,7 +2149,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy
@@ -1975,7 +2164,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector
@@ -1996,7 +2187,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     [JsonPropertyName("policy")]
     public V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfiguration
@@ -2029,7 +2222,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfiguration
@@ -2042,7 +2237,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderPrivateLinkConfigu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderProbeMatch
@@ -2055,7 +2252,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderProbeMatch
     [JsonPropertyName("statusCode")]
     public IList<string>? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderProbe
@@ -2104,7 +2303,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderProbe
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderRedirectConfiguration
@@ -2133,7 +2334,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRedirectConfigurat
     [JsonPropertyName("targetUrl")]
     public string? TargetUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderRequestRoutingRule
@@ -2174,7 +2377,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRequestRoutingRule
     [JsonPropertyName("urlPathMapName")]
     public string? UrlPathMapName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleCondition
@@ -2195,7 +2400,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     [JsonPropertyName("variable")]
     public string? Variable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleRequestHeaderConfiguration
@@ -2208,7 +2415,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleResponseHeaderConfiguration
@@ -2221,7 +2430,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One url block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleUrl
@@ -2242,7 +2453,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     [JsonPropertyName("reroute")]
     public bool? Reroute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRule
@@ -2271,7 +2484,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewr
     [JsonPropertyName("url")]
     public V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRuleUrl? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSet
@@ -2284,7 +2499,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSet
     [JsonPropertyName("rewriteRule")]
     public IList<V1beta1ApplicationGatewaySpecInitProviderRewriteRuleSetRewriteRule>? RewriteRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sku block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderSku
@@ -2301,7 +2518,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base64-encoded PFX certificate data. Required if key_vault_secret_id is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificateDataSecretRef
@@ -2314,7 +2533,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificateData
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password for the pfx file specified in data. Required if data is set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificatePasswordSecretRef
@@ -2327,7 +2548,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificatePass
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificate
@@ -2348,7 +2571,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificate
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1ApplicationGatewaySpecInitProviderSslCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a ssl_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslPolicy
@@ -2373,7 +2598,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslPolicy
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a ssl_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslProfileSslPolicy
@@ -2398,7 +2625,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslProfileSslPolic
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslProfile
@@ -2423,7 +2652,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslProfile
     [JsonPropertyName("verifyClientCertificateRevocation")]
     public string? VerifyClientCertificateRevocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base-64 encoded certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedClientCertificateDataSecretRef
@@ -2436,7 +2667,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedClientCerti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedClientCertificate
@@ -2449,7 +2682,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedClientCerti
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The contents of the Trusted Root Certificate which should be used. Required if key_vault_secret_id is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertificateDataSecretRef
@@ -2462,7 +2697,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertifi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertificate
@@ -2479,7 +2716,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertifi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderUrlPathMapPathRule
@@ -2512,7 +2751,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderUrlPathMapPathRule
     [JsonPropertyName("rewriteRuleSetName")]
     public string? RewriteRuleSetName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderUrlPathMap
@@ -2541,7 +2782,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderUrlPathMap
     [JsonPropertyName("pathRule")]
     public IList<V1beta1ApplicationGatewaySpecInitProviderUrlPathMapPathRule>? PathRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfigurationDisabledRuleGroup
@@ -2554,7 +2797,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfigurationDi
     [JsonPropertyName("rules")]
     public IList<double>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfigurationExclusion
@@ -2571,7 +2816,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfigurationEx
     [JsonPropertyName("selectorMatchOperator")]
     public string? SelectorMatchOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A waf_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfiguration
@@ -2612,7 +2859,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderWafConfiguration
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProvider
@@ -2741,7 +2990,9 @@ public partial class V1beta1ApplicationGatewaySpecInitProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecProviderConfigRef
@@ -2754,7 +3005,9 @@ public partial class V1beta1ApplicationGatewaySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecWriteConnectionSecretToRef
@@ -2763,7 +3016,9 @@ public partial class V1beta1ApplicationGatewaySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationGatewaySpec defines the desired state of ApplicationGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpec
@@ -2788,7 +3043,9 @@ public partial class V1beta1ApplicationGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ApplicationGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderAuthenticationCertificate
@@ -2801,7 +3058,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderAuthenticationCert
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderAutoscaleConfiguration
@@ -2814,7 +3073,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderAutoscaleConfigura
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderBackendAddressPool
@@ -2835,7 +3096,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderBackendAddressPool
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSettingsAuthenticationCertificate
@@ -2848,7 +3111,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSetting
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A connection_draining block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSettingsConnectionDraining
@@ -2861,7 +3126,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSetting
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSettings
@@ -2926,7 +3193,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderBackendHttpSetting
     [JsonPropertyName("trustedRootCertificateNames")]
     public IList<string>? TrustedRootCertificateNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderCustomErrorConfiguration
@@ -2943,7 +3212,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderCustomErrorConfigu
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderFrontendIpConfiguration
@@ -2980,7 +3251,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderFrontendIpConfigur
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderFrontendPort
@@ -2997,7 +3270,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderFrontendPort
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderGatewayIpConfiguration
@@ -3014,7 +3289,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderGatewayIpConfigura
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A global block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderGlobal
@@ -3027,7 +3304,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderGlobal
     [JsonPropertyName("responseBufferingEnabled")]
     public bool? ResponseBufferingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderHttpListenerCustomErrorConfiguration
@@ -3044,7 +3323,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderHttpListenerCustom
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderHttpListener
@@ -3113,7 +3394,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderHttpListener
     [JsonPropertyName("sslProfileName")]
     public string? SslProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderIdentity
@@ -3134,7 +3417,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateEndpointConnection
@@ -3147,7 +3432,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateEndpointCon
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateLinkConfigurationIpConfiguration
@@ -3172,7 +3459,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateLinkConfigu
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateLinkConfiguration
@@ -3189,7 +3478,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderPrivateLinkConfigu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A match block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderProbeMatch
@@ -3202,7 +3493,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderProbeMatch
     [JsonPropertyName("statusCode")]
     public IList<string>? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderProbe
@@ -3255,7 +3548,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderProbe
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderRedirectConfiguration
@@ -3292,7 +3587,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRedirectConfigurat
     [JsonPropertyName("targetUrl")]
     public string? TargetUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderRequestRoutingRule
@@ -3361,7 +3658,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRequestRoutingRule
     [JsonPropertyName("urlPathMapName")]
     public string? UrlPathMapName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleCondition
@@ -3382,7 +3681,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     [JsonPropertyName("variable")]
     public string? Variable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleRequestHeaderConfiguration
@@ -3395,7 +3696,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleResponseHeaderConfiguration
@@ -3408,7 +3711,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     [JsonPropertyName("headerValue")]
     public string? HeaderValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>One url block as defined below</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleUrl
@@ -3429,7 +3734,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     [JsonPropertyName("reroute")]
     public bool? Reroute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRule
@@ -3458,7 +3765,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewr
     [JsonPropertyName("url")]
     public V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRuleUrl? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSet
@@ -3475,7 +3784,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSet
     [JsonPropertyName("rewriteRule")]
     public IList<V1beta1ApplicationGatewayStatusAtProviderRewriteRuleSetRewriteRule>? RewriteRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sku block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderSku
@@ -3492,7 +3803,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderSslCertificate
@@ -3513,7 +3826,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSslCertificate
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a ssl_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderSslPolicy
@@ -3538,7 +3853,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSslPolicy
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>a ssl_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderSslProfileSslPolicy
@@ -3563,7 +3880,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSslProfileSslPolic
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderSslProfile
@@ -3592,7 +3911,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderSslProfile
     [JsonPropertyName("verifyClientCertificateRevocation")]
     public string? VerifyClientCertificateRevocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderTrustedClientCertificate
@@ -3605,7 +3926,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderTrustedClientCerti
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderTrustedRootCertificate
@@ -3622,7 +3945,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderTrustedRootCertifi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderUrlPathMapPathRule
@@ -3675,7 +4000,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderUrlPathMapPathRule
     [JsonPropertyName("rewriteRuleSetName")]
     public string? RewriteRuleSetName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderUrlPathMap
@@ -3724,7 +4051,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderUrlPathMap
     [JsonPropertyName("pathRule")]
     public IList<V1beta1ApplicationGatewayStatusAtProviderUrlPathMapPathRule>? PathRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfigurationDisabledRuleGroup
@@ -3737,7 +4066,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfigurationDi
     [JsonPropertyName("rules")]
     public IList<double>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfigurationExclusion
@@ -3754,7 +4085,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfigurationEx
     [JsonPropertyName("selectorMatchOperator")]
     public string? SelectorMatchOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A waf_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfiguration
@@ -3795,7 +4128,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderWafConfiguration
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusAtProvider
@@ -3936,7 +4271,9 @@ public partial class V1beta1ApplicationGatewayStatusAtProvider
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatusConditions
@@ -3965,7 +4302,9 @@ public partial class V1beta1ApplicationGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationGatewayStatus defines the observed state of ApplicationGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewayStatus
@@ -3982,7 +4321,9 @@ public partial class V1beta1ApplicationGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationGateway is the Schema for the ApplicationGateways API. Manages an Application Gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -4012,3 +4353,4 @@ public partial class V1beta1ApplicationGateway : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1ApplicationGatewayStatus? Status { get; set; }
 }
+#nullable disable

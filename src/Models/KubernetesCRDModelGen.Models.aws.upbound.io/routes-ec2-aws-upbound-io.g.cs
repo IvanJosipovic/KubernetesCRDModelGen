@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>Route is the Schema for the Routes API. Provides a resource to create a routing entry in a VPC routing table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta2RouteList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta2Route> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderDestinationPrefixListIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta2RouteSpecForProviderDestinationPrefixListIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedPrefixList in ec2 to populate destinationPrefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderDestinationPrefixListIdRef
@@ -59,7 +64,9 @@ public partial class V1beta2RouteSpecForProviderDestinationPrefixListIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderDestinationPrefixListIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderDestinationPrefixListIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta2RouteSpecForProviderDestinationPrefixListIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedPrefixList in ec2 to populate destinationPrefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderDestinationPrefixListIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta2RouteSpecForProviderDestinationPrefixListIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderDestinationPrefixListIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderEgressOnlyGatewayIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta2RouteSpecForProviderEgressOnlyGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderEgressOnlyGatewayIdRef
@@ -115,7 +128,9 @@ public partial class V1beta2RouteSpecForProviderEgressOnlyGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderEgressOnlyGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderEgressOnlyGatewayIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta2RouteSpecForProviderEgressOnlyGatewayIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderEgressOnlyGatewayIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta2RouteSpecForProviderEgressOnlyGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderEgressOnlyGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderGatewayIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta2RouteSpecForProviderGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InternetGateway in ec2 to populate gatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderGatewayIdRef
@@ -171,7 +192,9 @@ public partial class V1beta2RouteSpecForProviderGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderGatewayIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta2RouteSpecForProviderGatewayIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InternetGateway in ec2 to populate gatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderGatewayIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta2RouteSpecForProviderGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderNatGatewayIdRefPolicy
@@ -214,7 +241,9 @@ public partial class V1beta2RouteSpecForProviderNatGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NATGateway in ec2 to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderNatGatewayIdRef
@@ -227,7 +256,9 @@ public partial class V1beta2RouteSpecForProviderNatGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderNatGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderNatGatewayIdSelectorPolicy
@@ -240,7 +271,9 @@ public partial class V1beta2RouteSpecForProviderNatGatewayIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NATGateway in ec2 to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderNatGatewayIdSelector
@@ -257,7 +290,9 @@ public partial class V1beta2RouteSpecForProviderNatGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderNatGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderNetworkInterfaceIdRefPolicy
@@ -270,7 +305,9 @@ public partial class V1beta2RouteSpecForProviderNetworkInterfaceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderNetworkInterfaceIdRef
@@ -283,7 +320,9 @@ public partial class V1beta2RouteSpecForProviderNetworkInterfaceIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderNetworkInterfaceIdSelectorPolicy
@@ -296,7 +335,9 @@ public partial class V1beta2RouteSpecForProviderNetworkInterfaceIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderNetworkInterfaceIdSelector
@@ -313,7 +354,9 @@ public partial class V1beta2RouteSpecForProviderNetworkInterfaceIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderRouteTableIdRefPolicy
@@ -326,7 +369,9 @@ public partial class V1beta2RouteSpecForProviderRouteTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RouteTable in ec2 to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderRouteTableIdRef
@@ -339,7 +384,9 @@ public partial class V1beta2RouteSpecForProviderRouteTableIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderRouteTableIdSelectorPolicy
@@ -352,7 +399,9 @@ public partial class V1beta2RouteSpecForProviderRouteTableIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RouteTable in ec2 to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderRouteTableIdSelector
@@ -369,7 +418,9 @@ public partial class V1beta2RouteSpecForProviderRouteTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderTransitGatewayIdRefPolicy
@@ -382,7 +433,9 @@ public partial class V1beta2RouteSpecForProviderTransitGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderTransitGatewayIdRef
@@ -395,7 +448,9 @@ public partial class V1beta2RouteSpecForProviderTransitGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderTransitGatewayIdSelectorPolicy
@@ -408,7 +463,9 @@ public partial class V1beta2RouteSpecForProviderTransitGatewayIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderTransitGatewayIdSelector
@@ -425,7 +482,9 @@ public partial class V1beta2RouteSpecForProviderTransitGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderVpcEndpointIdRefPolicy
@@ -438,7 +497,9 @@ public partial class V1beta2RouteSpecForProviderVpcEndpointIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderVpcEndpointIdRef
@@ -451,7 +512,9 @@ public partial class V1beta2RouteSpecForProviderVpcEndpointIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderVpcEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderVpcEndpointIdSelectorPolicy
@@ -464,7 +527,9 @@ public partial class V1beta2RouteSpecForProviderVpcEndpointIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderVpcEndpointIdSelector
@@ -481,7 +546,9 @@ public partial class V1beta2RouteSpecForProviderVpcEndpointIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderVpcEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderVpcPeeringConnectionIdRefPolicy
@@ -494,7 +561,9 @@ public partial class V1beta2RouteSpecForProviderVpcPeeringConnectionIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCPeeringConnection in ec2 to populate vpcPeeringConnectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderVpcPeeringConnectionIdRef
@@ -507,7 +576,9 @@ public partial class V1beta2RouteSpecForProviderVpcPeeringConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderVpcPeeringConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderVpcPeeringConnectionIdSelectorPolicy
@@ -520,7 +591,9 @@ public partial class V1beta2RouteSpecForProviderVpcPeeringConnectionIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCPeeringConnection in ec2 to populate vpcPeeringConnectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProviderVpcPeeringConnectionIdSelector
@@ -537,7 +610,9 @@ public partial class V1beta2RouteSpecForProviderVpcPeeringConnectionIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecForProviderVpcPeeringConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecForProvider
@@ -674,7 +749,9 @@ public partial class V1beta2RouteSpecForProvider
     [JsonPropertyName("vpcPeeringConnectionIdSelector")]
     public V1beta2RouteSpecForProviderVpcPeeringConnectionIdSelector? VpcPeeringConnectionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderDestinationPrefixListIdRefPolicy
@@ -687,7 +764,9 @@ public partial class V1beta2RouteSpecInitProviderDestinationPrefixListIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedPrefixList in ec2 to populate destinationPrefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderDestinationPrefixListIdRef
@@ -700,7 +779,9 @@ public partial class V1beta2RouteSpecInitProviderDestinationPrefixListIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderDestinationPrefixListIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderDestinationPrefixListIdSelectorPolicy
@@ -713,7 +794,9 @@ public partial class V1beta2RouteSpecInitProviderDestinationPrefixListIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedPrefixList in ec2 to populate destinationPrefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderDestinationPrefixListIdSelector
@@ -730,7 +813,9 @@ public partial class V1beta2RouteSpecInitProviderDestinationPrefixListIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderDestinationPrefixListIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderEgressOnlyGatewayIdRefPolicy
@@ -743,7 +828,9 @@ public partial class V1beta2RouteSpecInitProviderEgressOnlyGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderEgressOnlyGatewayIdRef
@@ -756,7 +843,9 @@ public partial class V1beta2RouteSpecInitProviderEgressOnlyGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderEgressOnlyGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderEgressOnlyGatewayIdSelectorPolicy
@@ -769,7 +858,9 @@ public partial class V1beta2RouteSpecInitProviderEgressOnlyGatewayIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EgressOnlyInternetGateway in ec2 to populate egressOnlyGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderEgressOnlyGatewayIdSelector
@@ -786,7 +877,9 @@ public partial class V1beta2RouteSpecInitProviderEgressOnlyGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderEgressOnlyGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderGatewayIdRefPolicy
@@ -799,7 +892,9 @@ public partial class V1beta2RouteSpecInitProviderGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a InternetGateway in ec2 to populate gatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderGatewayIdRef
@@ -812,7 +907,9 @@ public partial class V1beta2RouteSpecInitProviderGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderGatewayIdSelectorPolicy
@@ -825,7 +922,9 @@ public partial class V1beta2RouteSpecInitProviderGatewayIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a InternetGateway in ec2 to populate gatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderGatewayIdSelector
@@ -842,7 +941,9 @@ public partial class V1beta2RouteSpecInitProviderGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderNatGatewayIdRefPolicy
@@ -855,7 +956,9 @@ public partial class V1beta2RouteSpecInitProviderNatGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NATGateway in ec2 to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderNatGatewayIdRef
@@ -868,7 +971,9 @@ public partial class V1beta2RouteSpecInitProviderNatGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderNatGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderNatGatewayIdSelectorPolicy
@@ -881,7 +986,9 @@ public partial class V1beta2RouteSpecInitProviderNatGatewayIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NATGateway in ec2 to populate natGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderNatGatewayIdSelector
@@ -898,7 +1005,9 @@ public partial class V1beta2RouteSpecInitProviderNatGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderNatGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderNetworkInterfaceIdRefPolicy
@@ -911,7 +1020,9 @@ public partial class V1beta2RouteSpecInitProviderNetworkInterfaceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderNetworkInterfaceIdRef
@@ -924,7 +1035,9 @@ public partial class V1beta2RouteSpecInitProviderNetworkInterfaceIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderNetworkInterfaceIdSelectorPolicy
@@ -937,7 +1050,9 @@ public partial class V1beta2RouteSpecInitProviderNetworkInterfaceIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkInterface in ec2 to populate networkInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderNetworkInterfaceIdSelector
@@ -954,7 +1069,9 @@ public partial class V1beta2RouteSpecInitProviderNetworkInterfaceIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderRouteTableIdRefPolicy
@@ -967,7 +1084,9 @@ public partial class V1beta2RouteSpecInitProviderRouteTableIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RouteTable in ec2 to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderRouteTableIdRef
@@ -980,7 +1099,9 @@ public partial class V1beta2RouteSpecInitProviderRouteTableIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderRouteTableIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderRouteTableIdSelectorPolicy
@@ -993,7 +1114,9 @@ public partial class V1beta2RouteSpecInitProviderRouteTableIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RouteTable in ec2 to populate routeTableId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderRouteTableIdSelector
@@ -1010,7 +1133,9 @@ public partial class V1beta2RouteSpecInitProviderRouteTableIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderRouteTableIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderTransitGatewayIdRefPolicy
@@ -1023,7 +1148,9 @@ public partial class V1beta2RouteSpecInitProviderTransitGatewayIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderTransitGatewayIdRef
@@ -1036,7 +1163,9 @@ public partial class V1beta2RouteSpecInitProviderTransitGatewayIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderTransitGatewayIdSelectorPolicy
@@ -1049,7 +1178,9 @@ public partial class V1beta2RouteSpecInitProviderTransitGatewayIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderTransitGatewayIdSelector
@@ -1066,7 +1197,9 @@ public partial class V1beta2RouteSpecInitProviderTransitGatewayIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderVpcEndpointIdRefPolicy
@@ -1079,7 +1212,9 @@ public partial class V1beta2RouteSpecInitProviderVpcEndpointIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderVpcEndpointIdRef
@@ -1092,7 +1227,9 @@ public partial class V1beta2RouteSpecInitProviderVpcEndpointIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderVpcEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderVpcEndpointIdSelectorPolicy
@@ -1105,7 +1242,9 @@ public partial class V1beta2RouteSpecInitProviderVpcEndpointIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderVpcEndpointIdSelector
@@ -1122,7 +1261,9 @@ public partial class V1beta2RouteSpecInitProviderVpcEndpointIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderVpcEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderVpcPeeringConnectionIdRefPolicy
@@ -1135,7 +1276,9 @@ public partial class V1beta2RouteSpecInitProviderVpcPeeringConnectionIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCPeeringConnection in ec2 to populate vpcPeeringConnectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderVpcPeeringConnectionIdRef
@@ -1148,7 +1291,9 @@ public partial class V1beta2RouteSpecInitProviderVpcPeeringConnectionIdRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderVpcPeeringConnectionIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderVpcPeeringConnectionIdSelectorPolicy
@@ -1161,7 +1306,9 @@ public partial class V1beta2RouteSpecInitProviderVpcPeeringConnectionIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCPeeringConnection in ec2 to populate vpcPeeringConnectionId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProviderVpcPeeringConnectionIdSelector
@@ -1178,7 +1325,9 @@ public partial class V1beta2RouteSpecInitProviderVpcPeeringConnectionIdSelector
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecInitProviderVpcPeeringConnectionIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecInitProvider
@@ -1311,7 +1460,9 @@ public partial class V1beta2RouteSpecInitProvider
     [JsonPropertyName("vpcPeeringConnectionIdSelector")]
     public V1beta2RouteSpecInitProviderVpcPeeringConnectionIdSelector? VpcPeeringConnectionIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecProviderConfigRefPolicy
@@ -1324,7 +1475,9 @@ public partial class V1beta2RouteSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecProviderConfigRef
@@ -1337,7 +1490,9 @@ public partial class V1beta2RouteSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta2RouteSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpecWriteConnectionSecretToRef
@@ -1350,7 +1505,9 @@ public partial class V1beta2RouteSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteSpec defines the desired state of Route</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteSpec
@@ -1379,7 +1536,9 @@ public partial class V1beta2RouteSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta2RouteSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteStatusAtProvider
@@ -1464,7 +1623,9 @@ public partial class V1beta2RouteStatusAtProvider
     [JsonPropertyName("vpcPeeringConnectionId")]
     public string? VpcPeeringConnectionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteStatusConditions
@@ -1493,7 +1654,9 @@ public partial class V1beta2RouteStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteStatus defines the observed state of Route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2RouteStatus
@@ -1510,7 +1673,9 @@ public partial class V1beta2RouteStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Route is the Schema for the Routes API. Provides a resource to create a routing entry in a VPC routing table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1540,3 +1705,4 @@ public partial class V1beta2Route : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta2RouteStatus? Status { get; set; }
 }
+#nullable disable

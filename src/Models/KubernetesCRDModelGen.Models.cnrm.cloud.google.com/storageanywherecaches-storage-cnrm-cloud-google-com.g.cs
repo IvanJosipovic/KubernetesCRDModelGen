@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>StorageAnywhereCache is the Schema for the StorageAnywhereCache API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StorageAnywhereCacheList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1StorageAnywhereCache> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The reference to bucket where cache needs to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageAnywhereCacheSpecBucketRef
@@ -50,7 +53,9 @@ public partial class V1beta1StorageAnywhereCacheSpecBucketRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageAnywhereCacheSpec defines the desired state of StorageAnywhereCache</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageAnywhereCacheSpec
@@ -79,7 +84,9 @@ public partial class V1beta1StorageAnywhereCacheSpec
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageAnywhereCacheStatusConditions
@@ -104,7 +111,9 @@ public partial class V1beta1StorageAnywhereCacheStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageAnywhereCacheStatusObservedState
@@ -125,7 +134,9 @@ public partial class V1beta1StorageAnywhereCacheStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageAnywhereCacheStatus defines the config connector machine state of StorageAnywhereCache</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageAnywhereCacheStatus
@@ -146,7 +157,9 @@ public partial class V1beta1StorageAnywhereCacheStatus
     [JsonPropertyName("observedState")]
     public V1beta1StorageAnywhereCacheStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StorageAnywhereCache is the Schema for the StorageAnywhereCache API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -176,3 +189,4 @@ public partial class V1beta1StorageAnywhereCache : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1StorageAnywhereCacheStatus? Status { get; set; }
 }
+#nullable disable

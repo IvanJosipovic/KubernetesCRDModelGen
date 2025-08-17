@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workflows.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>Workflow is the Schema for the Workflow API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1WorkflowsWorkflowList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1alpha1WorkflowsWorkflow> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated with the workflow. If not provided, data associated with the workflow will not be CMEK-encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowSpecKmsCryptoKeyRef
@@ -50,7 +53,9 @@ public partial class V1alpha1WorkflowsWorkflowSpecKmsCryptoKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowSpecProjectRef
@@ -71,7 +76,9 @@ public partial class V1alpha1WorkflowsWorkflowSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service account associated with the latest workflow version. This service account represents the identity of the workflow and determines what permissions the workflow has. If not provided, workflow will use the project's default service account. Modifying this field for an existing workflow results in a new workflow revision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowSpecServiceAccountRef
@@ -88,7 +95,9 @@ public partial class V1alpha1WorkflowsWorkflowSpecServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkflowsWorkflowSpec defines the desired state of Workflow</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowSpec
@@ -133,7 +142,9 @@ public partial class V1alpha1WorkflowsWorkflowSpec
     [JsonPropertyName("userEnvVars")]
     public IDictionary<string, string>? UserEnvVars { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowStatusConditions
@@ -158,7 +169,9 @@ public partial class V1alpha1WorkflowsWorkflowStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Error regarding the state of the workflow. For example, this field will have error details if the execution data is unavailable due to revoked KMS key permissions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowStatusObservedStateStateError
@@ -171,7 +184,9 @@ public partial class V1alpha1WorkflowsWorkflowStatusObservedStateStateError
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowStatusObservedState
@@ -200,7 +215,9 @@ public partial class V1alpha1WorkflowsWorkflowStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkflowsWorkflowStatus defines the config connector machine state of Workflow</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowStatus
@@ -221,7 +238,9 @@ public partial class V1alpha1WorkflowsWorkflowStatus
     [JsonPropertyName("observedState")]
     public V1alpha1WorkflowsWorkflowStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Workflow is the Schema for the Workflow API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -251,3 +270,4 @@ public partial class V1alpha1WorkflowsWorkflow : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1alpha1WorkflowsWorkflowStatus? Status { get; set; }
 }
+#nullable disable

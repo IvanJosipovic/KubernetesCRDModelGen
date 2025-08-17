@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+#nullable enable
 /// <summary>MetastoreDataAccess is the Schema for the MetastoreDataAccesss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MetastoreDataAccessList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1MetastoreDataAccess> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderAwsIamRole
@@ -50,7 +53,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderAzureManagedIdentity
@@ -67,7 +72,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderAzureManagedIdent
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderAzureServicePrincipalClientSecretSecretRef
@@ -84,7 +91,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderAzureServicePrinc
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderAzureServicePrincipal
@@ -101,7 +110,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderAzureServicePrinc
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderCloudflareApiTokenSecretAccessKeySecretRef
@@ -118,7 +129,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderCloudflareApiToke
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderCloudflareApiToken
@@ -135,7 +148,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderCloudflareApiToke
     [JsonPropertyName("secretAccessKeySecretRef")]
     public V1alpha1MetastoreDataAccessSpecForProviderCloudflareApiTokenSecretAccessKeySecretRef? SecretAccessKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderDatabricksGcpServiceAccount
@@ -148,7 +163,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderDatabricksGcpServ
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderGcpServiceAccountKeyPrivateKeySecretRef
@@ -165,7 +182,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderGcpServiceAccount
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProviderGcpServiceAccountKey
@@ -182,7 +201,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProviderGcpServiceAccount
     [JsonPropertyName("privateKeySecretRef")]
     public V1alpha1MetastoreDataAccessSpecForProviderGcpServiceAccountKeyPrivateKeySecretRef? PrivateKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecForProvider
@@ -251,7 +272,9 @@ public partial class V1alpha1MetastoreDataAccessSpecForProvider
     [JsonPropertyName("skipValidation")]
     public bool? SkipValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderAwsIamRole
@@ -268,7 +291,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderAzureManagedIdentity
@@ -285,7 +310,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderAzureManagedIden
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderAzureServicePrincipalClientSecretSecretRef
@@ -302,7 +329,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderAzureServicePrin
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderAzureServicePrincipal
@@ -319,7 +348,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderAzureServicePrin
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderCloudflareApiTokenSecretAccessKeySecretRef
@@ -336,7 +367,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderCloudflareApiTok
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderCloudflareApiToken
@@ -353,7 +386,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderCloudflareApiTok
     [JsonPropertyName("secretAccessKeySecretRef")]
     public V1alpha1MetastoreDataAccessSpecInitProviderCloudflareApiTokenSecretAccessKeySecretRef SecretAccessKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderDatabricksGcpServiceAccount
@@ -366,7 +401,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderDatabricksGcpSer
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderGcpServiceAccountKeyPrivateKeySecretRef
@@ -383,7 +420,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderGcpServiceAccoun
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProviderGcpServiceAccountKey
@@ -400,7 +439,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProviderGcpServiceAccoun
     [JsonPropertyName("privateKeySecretRef")]
     public V1alpha1MetastoreDataAccessSpecInitProviderGcpServiceAccountKeyPrivateKeySecretRef PrivateKeySecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecInitProvider
@@ -469,7 +510,9 @@ public partial class V1alpha1MetastoreDataAccessSpecInitProvider
     [JsonPropertyName("skipValidation")]
     public bool? SkipValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecProviderConfigRefPolicy
@@ -482,7 +525,9 @@ public partial class V1alpha1MetastoreDataAccessSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecProviderConfigRef
@@ -495,7 +540,9 @@ public partial class V1alpha1MetastoreDataAccessSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1MetastoreDataAccessSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsToConfigRefPolicy
@@ -508,7 +555,9 @@ public partial class V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsToCo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsToConfigRef
@@ -521,7 +570,9 @@ public partial class V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsToCo
     [JsonPropertyName("policy")]
     public V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsToMetadata
@@ -538,7 +589,9 @@ public partial class V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsToMe
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsTo
@@ -555,7 +608,9 @@ public partial class V1alpha1MetastoreDataAccessSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpecWriteConnectionSecretToRef
@@ -568,7 +623,9 @@ public partial class V1alpha1MetastoreDataAccessSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreDataAccessSpec defines the desired state of MetastoreDataAccess</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessSpec
@@ -601,7 +658,9 @@ public partial class V1alpha1MetastoreDataAccessSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1MetastoreDataAccessSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatusAtProviderAwsIamRole
@@ -618,7 +677,9 @@ public partial class V1alpha1MetastoreDataAccessStatusAtProviderAwsIamRole
     [JsonPropertyName("unityCatalogIamArn")]
     public string? UnityCatalogIamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatusAtProviderAzureManagedIdentity
@@ -635,7 +696,9 @@ public partial class V1alpha1MetastoreDataAccessStatusAtProviderAzureManagedIden
     [JsonPropertyName("managedIdentityId")]
     public string? ManagedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatusAtProviderAzureServicePrincipal
@@ -648,7 +711,9 @@ public partial class V1alpha1MetastoreDataAccessStatusAtProviderAzureServicePrin
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatusAtProviderCloudflareApiToken
@@ -661,7 +726,9 @@ public partial class V1alpha1MetastoreDataAccessStatusAtProviderCloudflareApiTok
     [JsonPropertyName("accountId")]
     public string? AccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatusAtProviderDatabricksGcpServiceAccount
@@ -674,7 +741,9 @@ public partial class V1alpha1MetastoreDataAccessStatusAtProviderDatabricksGcpSer
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatusAtProviderGcpServiceAccountKey
@@ -687,7 +756,9 @@ public partial class V1alpha1MetastoreDataAccessStatusAtProviderGcpServiceAccoun
     [JsonPropertyName("privateKeyId")]
     public string? PrivateKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatusAtProvider
@@ -760,7 +831,9 @@ public partial class V1alpha1MetastoreDataAccessStatusAtProvider
     [JsonPropertyName("skipValidation")]
     public bool? SkipValidation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatusConditions
@@ -789,7 +862,9 @@ public partial class V1alpha1MetastoreDataAccessStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreDataAccessStatus defines the observed state of MetastoreDataAccess.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreDataAccessStatus
@@ -806,7 +881,9 @@ public partial class V1alpha1MetastoreDataAccessStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetastoreDataAccess is the Schema for the MetastoreDataAccesss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -836,3 +913,4 @@ public partial class V1alpha1MetastoreDataAccess : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1MetastoreDataAccessStatus? Status { get; set; }
 }
+#nullable disable

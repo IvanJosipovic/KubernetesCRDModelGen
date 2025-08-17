@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.upbound.io;
+#nullable enable
 /// <summary>WorkspaceSQLAADAdmin is the Schema for the WorkspaceSQLAADAdmins API. Manages Synapse Workspace SQL AAD Admin</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkspaceSQLAADAdminList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1WorkspaceSQLAADAdmin> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceI
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceI
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSQLAADAdminSpecForProviderSynapseWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecForProvider
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspaceIdRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspace
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspaceIdRef
@@ -144,7 +159,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspace
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspaceIdSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspace
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspaceIdSelector
@@ -174,7 +193,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspace
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSQLAADAdminSpecInitProviderSynapseWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecInitProvider
@@ -203,7 +224,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecInitProvider
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecProviderConfigRefPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecProviderConfigRef
@@ -229,7 +254,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WorkspaceSQLAADAdminSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpecWriteConnectionSecretToRef
@@ -242,7 +269,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceSQLAADAdminSpec defines the desired state of WorkspaceSQLAADAdmin</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminSpec
@@ -271,7 +300,9 @@ public partial class V1beta1WorkspaceSQLAADAdminSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkspaceSQLAADAdminSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminStatusAtProvider
@@ -296,7 +327,9 @@ public partial class V1beta1WorkspaceSQLAADAdminStatusAtProvider
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminStatusConditions
@@ -325,7 +358,9 @@ public partial class V1beta1WorkspaceSQLAADAdminStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceSQLAADAdminStatus defines the observed state of WorkspaceSQLAADAdmin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSQLAADAdminStatus
@@ -342,7 +377,9 @@ public partial class V1beta1WorkspaceSQLAADAdminStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkspaceSQLAADAdmin is the Schema for the WorkspaceSQLAADAdmins API. Manages Synapse Workspace SQL AAD Admin</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -372,3 +409,4 @@ public partial class V1beta1WorkspaceSQLAADAdmin : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1WorkspaceSQLAADAdminStatus? Status { get; set; }
 }
+#nullable disable

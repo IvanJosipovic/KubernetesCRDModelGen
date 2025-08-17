@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudplatform.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ProjectIAMAuditConfig is the Schema for the ProjectIAMAuditConfigs API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProjectIAMAuditConfigList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ProjectIAMAuditConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecForProviderAuditLogConfig
@@ -46,7 +49,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecForProviderAuditLogConfig
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecForProviderProjectRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecForProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecForProviderProjectRef
@@ -76,7 +83,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecForProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectIAMAuditConfigSpecForProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecForProviderProjectSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecForProviderProjectSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecForProviderProjectSelector
@@ -110,7 +121,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecForProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1ProjectIAMAuditConfigSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecForProvider
@@ -135,7 +148,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecForProvider
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderAuditLogConfig
@@ -148,7 +163,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderAuditLogConfig
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderProjectRefPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderProjectRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderProjectRef
@@ -178,7 +197,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectIAMAuditConfigSpecInitProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderProjectSelectorPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderProjectSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderProjectSelector
@@ -212,7 +235,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecInitProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1ProjectIAMAuditConfigSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecInitProvider
@@ -237,7 +262,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecInitProvider
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecProviderConfigRef
@@ -250,7 +277,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpecWriteConnectionSecretToRef
@@ -259,7 +288,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectIAMAuditConfigSpec defines the desired state of ProjectIAMAuditConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigSpec
@@ -284,7 +315,9 @@ public partial class V1beta1ProjectIAMAuditConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ProjectIAMAuditConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigStatusAtProviderAuditLogConfig
@@ -297,7 +330,9 @@ public partial class V1beta1ProjectIAMAuditConfigStatusAtProviderAuditLogConfig
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigStatusAtProvider
@@ -322,7 +357,9 @@ public partial class V1beta1ProjectIAMAuditConfigStatusAtProvider
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigStatusConditions
@@ -351,7 +388,9 @@ public partial class V1beta1ProjectIAMAuditConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectIAMAuditConfigStatus defines the observed state of ProjectIAMAuditConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectIAMAuditConfigStatus
@@ -368,7 +407,9 @@ public partial class V1beta1ProjectIAMAuditConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectIAMAuditConfig is the Schema for the ProjectIAMAuditConfigs API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -398,3 +439,4 @@ public partial class V1beta1ProjectIAMAuditConfig : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ProjectIAMAuditConfigStatus? Status { get; set; }
 }
+#nullable disable

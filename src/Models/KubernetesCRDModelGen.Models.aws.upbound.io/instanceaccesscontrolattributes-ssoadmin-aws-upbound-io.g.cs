@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssoadmin.aws.upbound.io;
+#nullable enable
 /// <summary>InstanceAccessControlAttributes is the Schema for the InstanceAccessControlAttributess API. Provides a Single Sign-On (SSO) ABAC Resource: https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InstanceAccessControlAttributesList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1InstanceAccessControlAttributes> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecForProviderAttributeValue
@@ -42,7 +45,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecForProviderAttrib
     [JsonPropertyName("source")]
     public IList<string>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecForProviderAttribute
@@ -55,7 +60,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecForProviderAttrib
     [JsonPropertyName("value")]
     public IList<V1beta1InstanceAccessControlAttributesSpecForProviderAttributeValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecForProvider
@@ -72,7 +79,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecInitProviderAttributeValue
@@ -81,7 +90,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecInitProviderAttri
     [JsonPropertyName("source")]
     public IList<string>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecInitProviderAttribute
@@ -94,7 +105,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecInitProviderAttri
     [JsonPropertyName("value")]
     public IList<V1beta1InstanceAccessControlAttributesSpecInitProviderAttributeValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecInitProvider
@@ -103,7 +116,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecInitProvider
     [JsonPropertyName("attribute")]
     public IList<V1beta1InstanceAccessControlAttributesSpecInitProviderAttribute>? Attribute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecProviderConfigRefPolicy
@@ -116,7 +131,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecProviderConfigRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecProviderConfigRef
@@ -129,7 +146,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1InstanceAccessControlAttributesSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpecWriteConnectionSecretToRef
@@ -142,7 +161,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpecWriteConnectionSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceAccessControlAttributesSpec defines the desired state of InstanceAccessControlAttributes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesSpec
@@ -171,7 +192,9 @@ public partial class V1beta1InstanceAccessControlAttributesSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InstanceAccessControlAttributesSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesStatusAtProviderAttributeValue
@@ -180,7 +203,9 @@ public partial class V1beta1InstanceAccessControlAttributesStatusAtProviderAttri
     [JsonPropertyName("source")]
     public IList<string>? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesStatusAtProviderAttribute
@@ -193,7 +218,9 @@ public partial class V1beta1InstanceAccessControlAttributesStatusAtProviderAttri
     [JsonPropertyName("value")]
     public IList<V1beta1InstanceAccessControlAttributesStatusAtProviderAttributeValue>? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesStatusAtProvider
@@ -222,7 +249,9 @@ public partial class V1beta1InstanceAccessControlAttributesStatusAtProvider
     [JsonPropertyName("statusReason")]
     public string? StatusReason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesStatusConditions
@@ -251,7 +280,9 @@ public partial class V1beta1InstanceAccessControlAttributesStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceAccessControlAttributesStatus defines the observed state of InstanceAccessControlAttributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAccessControlAttributesStatus
@@ -268,7 +299,9 @@ public partial class V1beta1InstanceAccessControlAttributesStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceAccessControlAttributes is the Schema for the InstanceAccessControlAttributess API. Provides a Single Sign-On (SSO) ABAC Resource: https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -298,3 +331,4 @@ public partial class V1beta1InstanceAccessControlAttributes : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1InstanceAccessControlAttributesStatus? Status { get; set; }
 }
+#nullable disable

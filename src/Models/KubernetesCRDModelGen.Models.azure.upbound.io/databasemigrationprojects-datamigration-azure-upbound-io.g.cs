@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datamigration.azure.upbound.io;
+#nullable enable
 /// <summary>DatabaseMigrationProject is the Schema for the DatabaseMigrationProjects API. Manage Azure Database Migration Project instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DatabaseMigrationProjectList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1DatabaseMigrationProject> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProviderResourceGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1DatabaseMigrationProjectSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProviderResourceGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProviderResourceGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1DatabaseMigrationProjectSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProviderServiceNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProviderServiceNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DatabaseMigrationService in datamigration to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProviderServiceNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProviderServiceNameRe
     [JsonPropertyName("policy")]
     public V1beta1DatabaseMigrationProjectSpecForProviderServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProviderServiceNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProviderServiceNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DatabaseMigrationService in datamigration to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProviderServiceNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProviderServiceNameSe
     [JsonPropertyName("policy")]
     public V1beta1DatabaseMigrationProjectSpecForProviderServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProvider
     [JsonPropertyName("targetPlatform")]
     public string? TargetPlatform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecInitProvider
@@ -219,7 +240,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecInitProvider
     [JsonPropertyName("targetPlatform")]
     public string? TargetPlatform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecProviderConfigRefPolicy
@@ -232,7 +255,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecProviderConfigRef
@@ -245,7 +270,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DatabaseMigrationProjectSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpecWriteConnectionSecretToRef
@@ -258,7 +285,9 @@ public partial class V1beta1DatabaseMigrationProjectSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseMigrationProjectSpec defines the desired state of DatabaseMigrationProject</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectSpec
@@ -287,7 +316,9 @@ public partial class V1beta1DatabaseMigrationProjectSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DatabaseMigrationProjectSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectStatusAtProvider
@@ -324,7 +355,9 @@ public partial class V1beta1DatabaseMigrationProjectStatusAtProvider
     [JsonPropertyName("targetPlatform")]
     public string? TargetPlatform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectStatusConditions
@@ -353,7 +386,9 @@ public partial class V1beta1DatabaseMigrationProjectStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseMigrationProjectStatus defines the observed state of DatabaseMigrationProject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseMigrationProjectStatus
@@ -370,7 +405,9 @@ public partial class V1beta1DatabaseMigrationProjectStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseMigrationProject is the Schema for the DatabaseMigrationProjects API. Manage Azure Database Migration Project instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -400,3 +437,4 @@ public partial class V1beta1DatabaseMigrationProject : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1DatabaseMigrationProjectStatus? Status { get; set; }
 }
+#nullable disable

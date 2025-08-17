@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workspace.databricks.crossplane.io;
+#nullable enable
 /// <summary>NotificationDestination is the Schema for the NotificationDestinations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1NotificationDestinationList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1alpha1NotificationDestination> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigEmail
@@ -42,7 +45,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigEmail
     [JsonPropertyName("addresses")]
     public IList<string>? Addresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password for basic authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigGenericWebhookPasswordSecretRef
@@ -59,7 +64,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigGeneric
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Slack webhook URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigGenericWebhookUrlSecretRef
@@ -76,7 +83,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigGeneric
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The username for basic authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigGenericWebhookUsernameSecretRef
@@ -93,7 +102,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigGeneric
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigGenericWebhook
@@ -122,7 +133,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigGeneric
     [JsonPropertyName("usernameSet")]
     public bool? UsernameSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Slack webhook URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigMicrosoftTeamsUrlSecretRef
@@ -139,7 +152,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigMicroso
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigMicrosoftTeams
@@ -152,7 +167,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigMicroso
     [JsonPropertyName("urlSet")]
     public bool? UrlSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The PagerDuty integration key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigPagerdutyIntegrationKeySecretRef
@@ -169,7 +186,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigPagerdu
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigPagerduty
@@ -182,7 +201,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigPagerdu
     [JsonPropertyName("integrationKeySet")]
     public bool? IntegrationKeySet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Slack webhook URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigSlackUrlSecretRef
@@ -199,7 +220,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigSlackUr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigSlack
@@ -212,7 +235,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfigSlack
     [JsonPropertyName("urlSet")]
     public bool? UrlSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfig
@@ -237,7 +262,9 @@ public partial class V1alpha1NotificationDestinationSpecForProviderConfig
     [JsonPropertyName("slack")]
     public IList<V1alpha1NotificationDestinationSpecForProviderConfigSlack>? Slack { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProvider
@@ -254,7 +281,9 @@ public partial class V1alpha1NotificationDestinationSpecForProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigEmail
@@ -263,7 +292,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigEmail
     [JsonPropertyName("addresses")]
     public IList<string>? Addresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password for basic authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigGenericWebhookPasswordSecretRef
@@ -280,7 +311,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigGeneri
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Slack webhook URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigGenericWebhookUrlSecretRef
@@ -297,7 +330,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigGeneri
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The username for basic authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigGenericWebhookUsernameSecretRef
@@ -314,7 +349,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigGeneri
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigGenericWebhook
@@ -343,7 +380,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigGeneri
     [JsonPropertyName("usernameSet")]
     public bool? UsernameSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Slack webhook URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigMicrosoftTeamsUrlSecretRef
@@ -360,7 +399,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigMicros
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigMicrosoftTeams
@@ -373,7 +414,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigMicros
     [JsonPropertyName("urlSet")]
     public bool? UrlSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The PagerDuty integration key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigPagerdutyIntegrationKeySecretRef
@@ -390,7 +433,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigPagerd
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigPagerduty
@@ -403,7 +448,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigPagerd
     [JsonPropertyName("integrationKeySet")]
     public bool? IntegrationKeySet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Slack webhook URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigSlackUrlSecretRef
@@ -420,7 +467,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigSlackU
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfigSlack
@@ -433,7 +482,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfigSlack
     [JsonPropertyName("urlSet")]
     public bool? UrlSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProviderConfig
@@ -458,7 +509,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProviderConfig
     [JsonPropertyName("slack")]
     public IList<V1alpha1NotificationDestinationSpecInitProviderConfigSlack>? Slack { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecInitProvider
@@ -475,7 +528,9 @@ public partial class V1alpha1NotificationDestinationSpecInitProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecProviderConfigRefPolicy
@@ -488,7 +543,9 @@ public partial class V1alpha1NotificationDestinationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecProviderConfigRef
@@ -501,7 +558,9 @@ public partial class V1alpha1NotificationDestinationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1NotificationDestinationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecPublishConnectionDetailsToConfigRefPolicy
@@ -514,7 +573,9 @@ public partial class V1alpha1NotificationDestinationSpecPublishConnectionDetails
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecPublishConnectionDetailsToConfigRef
@@ -527,7 +588,9 @@ public partial class V1alpha1NotificationDestinationSpecPublishConnectionDetails
     [JsonPropertyName("policy")]
     public V1alpha1NotificationDestinationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecPublishConnectionDetailsToMetadata
@@ -544,7 +607,9 @@ public partial class V1alpha1NotificationDestinationSpecPublishConnectionDetails
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecPublishConnectionDetailsTo
@@ -561,7 +626,9 @@ public partial class V1alpha1NotificationDestinationSpecPublishConnectionDetails
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecWriteConnectionSecretToRef
@@ -574,7 +641,9 @@ public partial class V1alpha1NotificationDestinationSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationDestinationSpec defines the desired state of NotificationDestination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpec
@@ -607,7 +676,9 @@ public partial class V1alpha1NotificationDestinationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1NotificationDestinationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatusAtProviderConfigEmail
@@ -616,7 +687,9 @@ public partial class V1alpha1NotificationDestinationStatusAtProviderConfigEmail
     [JsonPropertyName("addresses")]
     public IList<string>? Addresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatusAtProviderConfigGenericWebhook
@@ -633,7 +706,9 @@ public partial class V1alpha1NotificationDestinationStatusAtProviderConfigGeneri
     [JsonPropertyName("usernameSet")]
     public bool? UsernameSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatusAtProviderConfigMicrosoftTeams
@@ -642,7 +717,9 @@ public partial class V1alpha1NotificationDestinationStatusAtProviderConfigMicros
     [JsonPropertyName("urlSet")]
     public bool? UrlSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatusAtProviderConfigPagerduty
@@ -651,7 +728,9 @@ public partial class V1alpha1NotificationDestinationStatusAtProviderConfigPagerd
     [JsonPropertyName("integrationKeySet")]
     public bool? IntegrationKeySet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatusAtProviderConfigSlack
@@ -660,7 +739,9 @@ public partial class V1alpha1NotificationDestinationStatusAtProviderConfigSlack
     [JsonPropertyName("urlSet")]
     public bool? UrlSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatusAtProviderConfig
@@ -685,7 +766,9 @@ public partial class V1alpha1NotificationDestinationStatusAtProviderConfig
     [JsonPropertyName("slack")]
     public IList<V1alpha1NotificationDestinationStatusAtProviderConfigSlack>? Slack { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatusAtProvider
@@ -706,7 +789,9 @@ public partial class V1alpha1NotificationDestinationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatusConditions
@@ -735,7 +820,9 @@ public partial class V1alpha1NotificationDestinationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationDestinationStatus defines the observed state of NotificationDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationStatus
@@ -752,7 +839,9 @@ public partial class V1alpha1NotificationDestinationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationDestination is the Schema for the NotificationDestinations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -782,3 +871,4 @@ public partial class V1alpha1NotificationDestination : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1alpha1NotificationDestinationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+#nullable enable
 /// <summary>NotebookInstance is the Schema for the NotebookInstances API. Provides a SageMaker AI Notebook Instance resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NotebookInstanceList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1NotebookInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderDefaultCodeRepositoryRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderDefaultCodeRepository
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CodeRepository in sagemaker to populate defaultCodeRepository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderDefaultCodeRepositoryRef
@@ -59,7 +64,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderDefaultCodeRepository
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecForProviderDefaultCodeRepositoryRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderDefaultCodeRepositorySelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderDefaultCodeRepository
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CodeRepository in sagemaker to populate defaultCodeRepository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderDefaultCodeRepositorySelector
@@ -89,7 +98,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderDefaultCodeRepository
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecForProviderDefaultCodeRepositorySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderInstanceMetadataServiceConfiguration
@@ -98,7 +109,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderInstanceMetadataServi
     [JsonPropertyName("minimumInstanceMetadataServiceVersion")]
     public string? MinimumInstanceMetadataServiceVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderKmsKeyIdRefPolicy
@@ -111,7 +124,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderKmsKeyIdRef
@@ -124,7 +139,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderKmsKeyIdSelectorPolicy
@@ -137,7 +154,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderKmsKeyIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderKmsKeyIdSelector
@@ -154,7 +173,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderRoleArnRefPolicy
@@ -167,7 +188,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderRoleArnRef
@@ -180,7 +203,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderRoleArnSelectorPolicy
@@ -193,7 +218,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderRoleArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderRoleArnSelector
@@ -210,7 +237,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdRefPolicy
@@ -223,7 +252,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdRef
@@ -236,7 +267,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdSelectorPolicy
@@ -249,7 +282,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdSelector
@@ -266,7 +301,9 @@ public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProvider
@@ -363,7 +400,9 @@ public partial class V1beta1NotebookInstanceSpecForProvider
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositoryRefPolicy
@@ -376,7 +415,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CodeRepository in sagemaker to populate defaultCodeRepository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositoryRef
@@ -389,7 +430,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositor
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositoryRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositorySelectorPolicy
@@ -402,7 +445,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositor
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CodeRepository in sagemaker to populate defaultCodeRepository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositorySelector
@@ -419,7 +464,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositor
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositorySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderInstanceMetadataServiceConfiguration
@@ -428,7 +475,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderInstanceMetadataServ
     [JsonPropertyName("minimumInstanceMetadataServiceVersion")]
     public string? MinimumInstanceMetadataServiceVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderKmsKeyIdRefPolicy
@@ -441,7 +490,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderKmsKeyIdRef
@@ -454,7 +505,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderKmsKeyIdSelectorPolicy
@@ -467,7 +520,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderKmsKeyIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderKmsKeyIdSelector
@@ -484,7 +539,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderRoleArnRefPolicy
@@ -497,7 +554,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderRoleArnRef
@@ -510,7 +569,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderRoleArnSelectorPolicy
@@ -523,7 +584,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderRoleArnSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderRoleArnSelector
@@ -540,7 +603,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdRefPolicy
@@ -553,7 +618,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdRef
@@ -566,7 +633,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdSelectorPolicy
@@ -579,7 +648,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdSelector
@@ -596,7 +667,9 @@ public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProvider
@@ -689,7 +762,9 @@ public partial class V1beta1NotebookInstanceSpecInitProvider
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecProviderConfigRefPolicy
@@ -702,7 +777,9 @@ public partial class V1beta1NotebookInstanceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecProviderConfigRef
@@ -715,7 +792,9 @@ public partial class V1beta1NotebookInstanceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NotebookInstanceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecWriteConnectionSecretToRef
@@ -728,7 +807,9 @@ public partial class V1beta1NotebookInstanceSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotebookInstanceSpec defines the desired state of NotebookInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpec
@@ -757,7 +838,9 @@ public partial class V1beta1NotebookInstanceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NotebookInstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceStatusAtProviderInstanceMetadataServiceConfiguration
@@ -766,7 +849,9 @@ public partial class V1beta1NotebookInstanceStatusAtProviderInstanceMetadataServ
     [JsonPropertyName("minimumInstanceMetadataServiceVersion")]
     public string? MinimumInstanceMetadataServiceVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceStatusAtProvider
@@ -851,7 +936,9 @@ public partial class V1beta1NotebookInstanceStatusAtProvider
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceStatusConditions
@@ -880,7 +967,9 @@ public partial class V1beta1NotebookInstanceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotebookInstanceStatus defines the observed state of NotebookInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceStatus
@@ -897,7 +986,9 @@ public partial class V1beta1NotebookInstanceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotebookInstance is the Schema for the NotebookInstances API. Provides a SageMaker AI Notebook Instance resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -927,3 +1018,4 @@ public partial class V1beta1NotebookInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1NotebookInstanceStatus? Status { get; set; }
 }
+#nullable disable

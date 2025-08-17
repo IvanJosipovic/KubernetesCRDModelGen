@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHost Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/bastionHost.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageBastionHostList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1api20240301storageBastionHost> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecIpConfigurationsPublicIPAddressReference
@@ -54,7 +57,9 @@ public partial class V1api20240301storageBastionHostSpecIpConfigurationsPublicIP
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecIpConfigurationsPublicIPAddress
@@ -67,7 +72,9 @@ public partial class V1api20240301storageBastionHostSpecIpConfigurationsPublicIP
     [JsonPropertyName("reference")]
     public V1api20240301storageBastionHostSpecIpConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecIpConfigurationsSubnetReference
@@ -88,7 +95,9 @@ public partial class V1api20240301storageBastionHostSpecIpConfigurationsSubnetRe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecIpConfigurationsSubnet
@@ -101,7 +110,9 @@ public partial class V1api20240301storageBastionHostSpecIpConfigurationsSubnet
     [JsonPropertyName("reference")]
     public V1api20240301storageBastionHostSpecIpConfigurationsSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHostIPConfiguration IP configuration of an Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecIpConfigurations
@@ -126,7 +137,9 @@ public partial class V1api20240301storageBastionHostSpecIpConfigurations
     [JsonPropertyName("subnet")]
     public V1api20240301storageBastionHostSpecIpConfigurationsSubnet? Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IPRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecNetworkAclsIpRules
@@ -139,7 +152,9 @@ public partial class V1api20240301storageBastionHostSpecNetworkAclsIpRules
     [JsonPropertyName("addressPrefix")]
     public string? AddressPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHostPropertiesFormat_NetworkAcls</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecNetworkAcls
@@ -152,7 +167,9 @@ public partial class V1api20240301storageBastionHostSpecNetworkAcls
     [JsonPropertyName("ipRules")]
     public IList<V1api20240301storageBastionHostSpecNetworkAclsIpRules>? IpRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecOperatorSpecConfigMapExpressions
@@ -169,7 +186,9 @@ public partial class V1api20240301storageBastionHostSpecOperatorSpecConfigMapExp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecOperatorSpecSecretExpressions
@@ -186,7 +205,9 @@ public partial class V1api20240301storageBastionHostSpecOperatorSpecSecretExpres
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHostOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecOperatorSpec
@@ -203,7 +224,9 @@ public partial class V1api20240301storageBastionHostSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageBastionHostSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecOwner
@@ -216,7 +239,9 @@ public partial class V1api20240301storageBastionHostSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Sku The sku of this Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecSku
@@ -229,7 +254,9 @@ public partial class V1api20240301storageBastionHostSpecSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecVirtualNetworkReference
@@ -250,7 +277,9 @@ public partial class V1api20240301storageBastionHostSpecVirtualNetworkReference
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpecVirtualNetwork
@@ -263,7 +292,9 @@ public partial class V1api20240301storageBastionHostSpecVirtualNetwork
     [JsonPropertyName("reference")]
     public V1api20240301storageBastionHostSpecVirtualNetworkReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHost_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostSpec
@@ -352,7 +383,9 @@ public partial class V1api20240301storageBastionHostSpec
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostStatusConditions
@@ -385,7 +418,9 @@ public partial class V1api20240301storageBastionHostStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHostIPConfiguration_STATUS IP configuration of an Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostStatusIpConfigurations
@@ -398,7 +433,9 @@ public partial class V1api20240301storageBastionHostStatusIpConfigurations
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IPRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostStatusNetworkAclsIpRules
@@ -411,7 +448,9 @@ public partial class V1api20240301storageBastionHostStatusNetworkAclsIpRules
     [JsonPropertyName("addressPrefix")]
     public string? AddressPrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHostPropertiesFormat_NetworkAcls_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostStatusNetworkAcls
@@ -424,7 +463,9 @@ public partial class V1api20240301storageBastionHostStatusNetworkAcls
     [JsonPropertyName("ipRules")]
     public IList<V1api20240301storageBastionHostStatusNetworkAclsIpRules>? IpRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.Sku_STATUS The sku of this Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostStatusSku
@@ -437,7 +478,9 @@ public partial class V1api20240301storageBastionHostStatusSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostStatusVirtualNetwork
@@ -450,7 +493,9 @@ public partial class V1api20240301storageBastionHostStatusVirtualNetwork
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHost_STATUS Bastion Host resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageBastionHostStatus
@@ -547,7 +592,9 @@ public partial class V1api20240301storageBastionHostStatus
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BastionHost Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/bastionHost.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -577,3 +624,4 @@ public partial class V1api20240301storageBastionHost : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1api20240301storageBastionHostStatus? Status { get; set; }
 }
+#nullable disable

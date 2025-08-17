@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>RegionNetworkEndpointGroup is the Schema for the RegionNetworkEndpointGroups API. A regional NEG that can support Serverless Products, proxying traffic to external backends and providing traffic to the PSC port mapping endpoints.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RegionNetworkEndpointGroupList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1RegionNetworkEndpointGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderAppEngine
@@ -50,7 +53,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderAppEngine
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFuncti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in cloudfunctions to populate function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionRef
@@ -80,7 +87,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFuncti
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFuncti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in cloudfunctions to populate function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionSelector
@@ -114,7 +125,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFuncti
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunctionFunctionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFunction
@@ -135,7 +148,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudFuncti
     [JsonPropertyName("urlMask")]
     public string? UrlMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunSer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Service in cloudrun to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceRef
@@ -165,7 +182,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunSer
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceSelectorPolicy
@@ -178,7 +197,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunSer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Service in cloudrun to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceSelector
@@ -199,7 +220,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunSer
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRunServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRun
@@ -224,7 +247,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderCloudRun
     [JsonPropertyName("urlMask")]
     public string? UrlMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRefPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRef
@@ -254,7 +281,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSelectorPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSelector
@@ -288,7 +319,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSele
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for PSC NEGs. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscData
@@ -297,7 +330,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscData
     [JsonPropertyName("producerPort")]
     public string? ProducerPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceRefPolicy
@@ -310,7 +345,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAttachment in compute to populate pscTargetService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceRef
@@ -327,7 +364,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetSe
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceSelectorPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAttachment in compute to populate pscTargetService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceSelector
@@ -361,7 +402,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetSe
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkRefPolicy
@@ -374,7 +417,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkRef
@@ -391,7 +436,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkR
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelectorPolicy
@@ -404,7 +451,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelector
@@ -425,7 +474,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkS
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProvider
@@ -498,7 +549,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProvider
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1RegionNetworkEndpointGroupSpecForProviderSubnetworkSelector? SubnetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderAppEngine
@@ -515,7 +568,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderAppEngine
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionRefPolicy
@@ -528,7 +583,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunct
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in cloudfunctions to populate function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionRef
@@ -545,7 +602,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunct
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionSelectorPolicy
@@ -558,7 +617,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunct
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in cloudfunctions to populate function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionSelector
@@ -579,7 +640,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunct
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunctionFunctionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunction
@@ -600,7 +663,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudFunct
     [JsonPropertyName("urlMask")]
     public string? UrlMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceRefPolicy
@@ -613,7 +678,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Service in cloudrun to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceRef
@@ -630,7 +697,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunSe
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceSelectorPolicy
@@ -643,7 +712,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Service in cloudrun to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceSelector
@@ -664,7 +735,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunSe
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRunServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRun
@@ -689,7 +762,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderCloudRun
     [JsonPropertyName("urlMask")]
     public string? UrlMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRefPolicy
@@ -702,7 +777,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRef
@@ -719,7 +796,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSelectorPolicy
@@ -732,7 +811,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSelector
@@ -753,7 +834,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSel
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for PSC NEGs. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscData
@@ -762,7 +845,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscData
     [JsonPropertyName("producerPort")]
     public string? ProducerPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceRefPolicy
@@ -775,7 +860,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAttachment in compute to populate pscTargetService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceRef
@@ -792,7 +879,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetS
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceSelectorPolicy
@@ -805,7 +894,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAttachment in compute to populate pscTargetService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceSelector
@@ -826,7 +917,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetS
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkRefPolicy
@@ -839,7 +932,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkRef
@@ -856,7 +951,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetwork
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelectorPolicy
@@ -869,7 +966,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetwork
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelector
@@ -890,7 +989,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetwork
     [JsonPropertyName("policy")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProvider
@@ -959,7 +1060,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProvider
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderSubnetworkSelector? SubnetworkSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecProviderConfigRef
@@ -972,7 +1075,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecWriteConnectionSecretToRef
@@ -981,7 +1086,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionNetworkEndpointGroupSpec defines the desired state of RegionNetworkEndpointGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpec
@@ -1006,7 +1113,9 @@ public partial class V1beta1RegionNetworkEndpointGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RegionNetworkEndpointGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderAppEngine
@@ -1023,7 +1132,9 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderAppEngine
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudFunction
@@ -1036,7 +1147,9 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudFunct
     [JsonPropertyName("urlMask")]
     public string? UrlMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudRun
@@ -1053,7 +1166,9 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudRun
     [JsonPropertyName("urlMask")]
     public string? UrlMask { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field is only used for PSC NEGs. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderPscData
@@ -1062,7 +1177,9 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderPscData
     [JsonPropertyName("producerPort")]
     public string? ProducerPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProvider
@@ -1119,7 +1236,9 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProvider
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupStatusConditions
@@ -1148,7 +1267,9 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionNetworkEndpointGroupStatus defines the observed state of RegionNetworkEndpointGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupStatus
@@ -1165,7 +1286,9 @@ public partial class V1beta1RegionNetworkEndpointGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RegionNetworkEndpointGroup is the Schema for the RegionNetworkEndpointGroups API. A regional NEG that can support Serverless Products, proxying traffic to external backends and providing traffic to the PSC port mapping endpoints.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1195,3 +1318,4 @@ public partial class V1beta1RegionNetworkEndpointGroup : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1RegionNetworkEndpointGroupStatus? Status { get; set; }
 }
+#nullable disable

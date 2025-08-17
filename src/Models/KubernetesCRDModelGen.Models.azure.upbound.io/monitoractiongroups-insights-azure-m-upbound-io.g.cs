@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+#nullable enable
 /// <summary>MonitorActionGroup is the Schema for the MonitorActionGroups API. Manages an Action Group within Azure Monitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MonitorActionGroupList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1MonitorActionGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderArmRoleReceiver
@@ -50,7 +53,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderArmRoleReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderAutomationRunbookReceiver
@@ -83,7 +88,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderAutomationRunbookRe
     [JsonPropertyName("webhookResourceId")]
     public string? WebhookResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderAzureAppPushReceiver
@@ -96,7 +103,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderAzureAppPushReceive
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderAzureFunctionReceiver
@@ -121,7 +130,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderAzureFunctionReceiv
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderEmailReceiver
@@ -138,7 +149,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderEmailReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderEventHubReceiver
@@ -167,7 +180,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderEventHubReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderItsmReceiver
@@ -192,7 +207,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderItsmReceiver
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderLogicAppReceiver
@@ -213,7 +230,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderLogicAppReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRefPolicy
@@ -226,7 +245,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRef
@@ -243,7 +264,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1MonitorActionGroupSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSelectorPolicy
@@ -256,7 +279,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSelector
@@ -277,7 +302,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1MonitorActionGroupSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderSmsReceiver
@@ -294,7 +321,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderSmsReceiver
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderVoiceReceiver
@@ -311,7 +340,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderVoiceReceiver
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The aad_auth block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderWebhookReceiverAadAuth
@@ -328,7 +359,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderWebhookReceiverAadA
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderWebhookReceiver
@@ -349,7 +382,9 @@ public partial class V1beta1MonitorActionGroupSpecForProviderWebhookReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProvider
@@ -426,7 +461,9 @@ public partial class V1beta1MonitorActionGroupSpecForProvider
     [JsonPropertyName("webhookReceiver")]
     public IList<V1beta1MonitorActionGroupSpecForProviderWebhookReceiver>? WebhookReceiver { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderArmRoleReceiver
@@ -443,7 +480,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderArmRoleReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderAutomationRunbookReceiver
@@ -476,7 +515,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderAutomationRunbookR
     [JsonPropertyName("webhookResourceId")]
     public string? WebhookResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderAzureAppPushReceiver
@@ -489,7 +530,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderAzureAppPushReceiv
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderAzureFunctionReceiver
@@ -514,7 +557,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderAzureFunctionRecei
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderEmailReceiver
@@ -531,7 +576,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderEmailReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderEventHubReceiver
@@ -560,7 +607,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderEventHubReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderItsmReceiver
@@ -585,7 +634,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderItsmReceiver
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderLogicAppReceiver
@@ -606,7 +657,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderLogicAppReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderSmsReceiver
@@ -623,7 +676,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderSmsReceiver
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderVoiceReceiver
@@ -640,7 +695,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderVoiceReceiver
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The aad_auth block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderWebhookReceiverAadAuth
@@ -657,7 +714,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderWebhookReceiverAad
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderWebhookReceiver
@@ -678,7 +737,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderWebhookReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProvider
@@ -743,7 +804,9 @@ public partial class V1beta1MonitorActionGroupSpecInitProvider
     [JsonPropertyName("webhookReceiver")]
     public IList<V1beta1MonitorActionGroupSpecInitProviderWebhookReceiver>? WebhookReceiver { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecProviderConfigRef
@@ -756,7 +819,9 @@ public partial class V1beta1MonitorActionGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecWriteConnectionSecretToRef
@@ -765,7 +830,9 @@ public partial class V1beta1MonitorActionGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorActionGroupSpec defines the desired state of MonitorActionGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpec
@@ -790,7 +857,9 @@ public partial class V1beta1MonitorActionGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MonitorActionGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderArmRoleReceiver
@@ -807,7 +876,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderArmRoleReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderAutomationRunbookReceiver
@@ -840,7 +911,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderAutomationRunbookR
     [JsonPropertyName("webhookResourceId")]
     public string? WebhookResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderAzureAppPushReceiver
@@ -853,7 +926,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderAzureAppPushReceiv
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderAzureFunctionReceiver
@@ -878,7 +953,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderAzureFunctionRecei
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderEmailReceiver
@@ -895,7 +972,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderEmailReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderEventHubReceiver
@@ -924,7 +1003,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderEventHubReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderItsmReceiver
@@ -949,7 +1030,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderItsmReceiver
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderLogicAppReceiver
@@ -970,7 +1053,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderLogicAppReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderSmsReceiver
@@ -987,7 +1072,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderSmsReceiver
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderVoiceReceiver
@@ -1004,7 +1091,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderVoiceReceiver
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The aad_auth block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderWebhookReceiverAadAuth
@@ -1021,7 +1110,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderWebhookReceiverAad
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderWebhookReceiver
@@ -1042,7 +1133,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderWebhookReceiver
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProvider
@@ -1115,7 +1208,9 @@ public partial class V1beta1MonitorActionGroupStatusAtProvider
     [JsonPropertyName("webhookReceiver")]
     public IList<V1beta1MonitorActionGroupStatusAtProviderWebhookReceiver>? WebhookReceiver { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusConditions
@@ -1144,7 +1239,9 @@ public partial class V1beta1MonitorActionGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorActionGroupStatus defines the observed state of MonitorActionGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatus
@@ -1161,7 +1258,9 @@ public partial class V1beta1MonitorActionGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MonitorActionGroup is the Schema for the MonitorActionGroups API. Manages an Action Group within Azure Monitor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1191,3 +1290,4 @@ public partial class V1beta1MonitorActionGroup : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1MonitorActionGroupStatus? Status { get; set; }
 }
+#nullable disable

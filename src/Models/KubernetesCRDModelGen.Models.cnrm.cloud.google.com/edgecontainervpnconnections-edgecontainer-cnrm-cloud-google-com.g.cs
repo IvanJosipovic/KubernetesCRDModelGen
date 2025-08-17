@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EdgeContainerVpnConnectionList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1EdgeContainerVpnConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionSpecClusterRef
@@ -50,7 +53,9 @@ public partial class V1beta1EdgeContainerVpnConnectionSpecClusterRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionSpecProjectRef
@@ -67,7 +72,9 @@ public partial class V1beta1EdgeContainerVpnConnectionSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Project detail of the VPC network. Required if VPC is in a different project than the cluster project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionSpecVpcProject
@@ -76,7 +83,9 @@ public partial class V1beta1EdgeContainerVpnConnectionSpecVpcProject
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionSpec
@@ -117,7 +126,9 @@ public partial class V1beta1EdgeContainerVpnConnectionSpec
     [JsonPropertyName("vpcProject")]
     public V1beta1EdgeContainerVpnConnectionSpecVpcProject? VpcProject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionStatusConditions
@@ -142,7 +153,9 @@ public partial class V1beta1EdgeContainerVpnConnectionStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudRouter
@@ -151,7 +164,9 @@ public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudRouter
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudVpns
@@ -160,7 +175,9 @@ public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudVpns
     [JsonPropertyName("gateway")]
     public string? Gateway { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionStatusDetails
@@ -181,7 +198,9 @@ public partial class V1beta1EdgeContainerVpnConnectionStatusDetails
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EdgeContainerVpnConnectionStatus
@@ -206,7 +225,9 @@ public partial class V1beta1EdgeContainerVpnConnectionStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -236,3 +257,4 @@ public partial class V1beta1EdgeContainerVpnConnection : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1EdgeContainerVpnConnectionStatus? Status { get; set; }
 }
+#nullable disable

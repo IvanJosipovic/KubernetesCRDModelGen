@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ResponsePolicy is the Schema for the ResponsePolicys API. A Response Policy is a collection of selectors that apply to queries made against one or more Virtual Private Cloud networks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResponsePolicyList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1ResponsePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in container to populate gkeClusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNa
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in container to populate gkeClusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNa
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderGkeClusters
@@ -114,7 +125,9 @@ public partial class V1beta1ResponsePolicySpecForProviderGkeClusters
     [JsonPropertyName("gkeClusterNameSelector")]
     public V1beta1ResponsePolicySpecForProviderGkeClustersGkeClusterNameSelector? GkeClusterNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlRef
@@ -144,7 +159,9 @@ public partial class V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlRef
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlSelector
@@ -178,7 +197,9 @@ public partial class V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlSelec
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProviderNetworks
@@ -195,7 +216,9 @@ public partial class V1beta1ResponsePolicySpecForProviderNetworks
     [JsonPropertyName("networkUrlSelector")]
     public V1beta1ResponsePolicySpecForProviderNetworksNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecForProvider
@@ -216,7 +239,9 @@ public partial class V1beta1ResponsePolicySpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterNameRefPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in container to populate gkeClusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterNameRef
@@ -246,7 +273,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterN
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterNameSelectorPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterN
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in container to populate gkeClusterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterNameSelector
@@ -280,7 +311,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterN
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderGkeClusters
@@ -297,7 +330,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderGkeClusters
     [JsonPropertyName("gkeClusterNameSelector")]
     public V1beta1ResponsePolicySpecInitProviderGkeClustersGkeClusterNameSelector? GkeClusterNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlRefPolicy
@@ -310,7 +345,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlRef
@@ -327,7 +364,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlRef
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlSelectorPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate networkUrl.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlSelector
@@ -361,7 +402,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlSele
     [JsonPropertyName("policy")]
     public V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProviderNetworks
@@ -378,7 +421,9 @@ public partial class V1beta1ResponsePolicySpecInitProviderNetworks
     [JsonPropertyName("networkUrlSelector")]
     public V1beta1ResponsePolicySpecInitProviderNetworksNetworkUrlSelector? NetworkUrlSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecInitProvider
@@ -399,7 +444,9 @@ public partial class V1beta1ResponsePolicySpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecProviderConfigRef
@@ -412,7 +459,9 @@ public partial class V1beta1ResponsePolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpecWriteConnectionSecretToRef
@@ -421,7 +470,9 @@ public partial class V1beta1ResponsePolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponsePolicySpec defines the desired state of ResponsePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicySpec
@@ -446,7 +497,9 @@ public partial class V1beta1ResponsePolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResponsePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyStatusAtProviderGkeClusters
@@ -455,7 +508,9 @@ public partial class V1beta1ResponsePolicyStatusAtProviderGkeClusters
     [JsonPropertyName("gkeClusterName")]
     public string? GkeClusterName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyStatusAtProviderNetworks
@@ -464,7 +519,9 @@ public partial class V1beta1ResponsePolicyStatusAtProviderNetworks
     [JsonPropertyName("networkUrl")]
     public string? NetworkUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyStatusAtProvider
@@ -489,7 +546,9 @@ public partial class V1beta1ResponsePolicyStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyStatusConditions
@@ -518,7 +577,9 @@ public partial class V1beta1ResponsePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponsePolicyStatus defines the observed state of ResponsePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyStatus
@@ -535,7 +596,9 @@ public partial class V1beta1ResponsePolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponsePolicy is the Schema for the ResponsePolicys API. A Response Policy is a collection of selectors that apply to queries made against one or more Virtual Private Cloud networks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -565,3 +628,4 @@ public partial class V1beta1ResponsePolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1ResponsePolicyStatus? Status { get; set; }
 }
+#nullable disable

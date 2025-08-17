@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.m.upbound.io;
+#nullable enable
 /// <summary>RoleAssignment is the Schema for the RoleAssignments API. Manages a Synapse Role Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RoleAssignmentList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1RoleAssignment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdSelec
     [JsonPropertyName("policy")]
     public V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecForProvider
@@ -130,7 +141,9 @@ public partial class V1beta1RoleAssignmentSpecForProvider
     [JsonPropertyName("synapseWorkspaceIdSelector")]
     public V1beta1RoleAssignmentSpecForProviderSynapseWorkspaceIdSelector? SynapseWorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdRefPolicy
@@ -143,7 +156,9 @@ public partial class V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdRef
@@ -160,7 +175,9 @@ public partial class V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdSelectorPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in synapse to populate synapseWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdSelector
@@ -194,7 +213,9 @@ public partial class V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdSele
     [JsonPropertyName("policy")]
     public V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecInitProvider
@@ -227,7 +248,9 @@ public partial class V1beta1RoleAssignmentSpecInitProvider
     [JsonPropertyName("synapseWorkspaceIdSelector")]
     public V1beta1RoleAssignmentSpecInitProviderSynapseWorkspaceIdSelector? SynapseWorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecProviderConfigRef
@@ -240,7 +263,9 @@ public partial class V1beta1RoleAssignmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpecWriteConnectionSecretToRef
@@ -249,7 +274,9 @@ public partial class V1beta1RoleAssignmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleAssignmentSpec defines the desired state of RoleAssignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentSpec
@@ -274,7 +301,9 @@ public partial class V1beta1RoleAssignmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RoleAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentStatusAtProvider
@@ -303,7 +332,9 @@ public partial class V1beta1RoleAssignmentStatusAtProvider
     [JsonPropertyName("synapseWorkspaceId")]
     public string? SynapseWorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentStatusConditions
@@ -332,7 +363,9 @@ public partial class V1beta1RoleAssignmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleAssignmentStatus defines the observed state of RoleAssignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleAssignmentStatus
@@ -349,7 +382,9 @@ public partial class V1beta1RoleAssignmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RoleAssignment is the Schema for the RoleAssignments API. Manages a Synapse Role Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -379,3 +414,4 @@ public partial class V1beta1RoleAssignment : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1RoleAssignmentStatus? Status { get; set; }
 }
+#nullable disable

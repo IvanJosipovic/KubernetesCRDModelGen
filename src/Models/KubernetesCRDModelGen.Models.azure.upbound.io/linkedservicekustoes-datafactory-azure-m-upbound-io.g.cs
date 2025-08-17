@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+#nullable enable
 /// <summary>LinkedServiceKusto is the Schema for the LinkedServiceKustos API. Manages a Linked Service (connection) between a Kusto Cluster and Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LinkedServiceKustoList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1LinkedServiceKusto> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Factory in datafactory to populate dataFactoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelect
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate kustoDatabaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRe
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate kustoDatabaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSe
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecForProviderKustoDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kusto to populate kustoEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRef
@@ -191,7 +212,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecForProviderKustoEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kusto to populate kustoEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelector
@@ -225,7 +250,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelect
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecForProviderKustoEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service principal key in which to authenticate against the Kusto Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProviderServicePrincipalKeySecretRef
@@ -238,7 +265,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProviderServicePrincipalKey
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecForProvider
@@ -315,7 +344,9 @@ public partial class V1beta1LinkedServiceKustoSpecForProvider
     [JsonPropertyName("useManagedIdentity")]
     public bool? UseManagedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameRefPolicy
@@ -328,7 +359,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate kustoDatabaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameRef
@@ -345,7 +378,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameR
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameSelectorPolicy
@@ -358,7 +393,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate kustoDatabaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameSelector
@@ -379,7 +416,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameS
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecInitProviderKustoDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRefPolicy
@@ -392,7 +431,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kusto to populate kustoEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRef
@@ -409,7 +450,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRef
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelectorPolicy
@@ -422,7 +465,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kusto to populate kustoEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelector
@@ -443,7 +488,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelec
     [JsonPropertyName("policy")]
     public V1beta1LinkedServiceKustoSpecInitProviderKustoEndpointSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The service principal key in which to authenticate against the Kusto Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProviderServicePrincipalKeySecretRef
@@ -456,7 +503,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProviderServicePrincipalKe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecInitProvider
@@ -521,7 +570,9 @@ public partial class V1beta1LinkedServiceKustoSpecInitProvider
     [JsonPropertyName("useManagedIdentity")]
     public bool? UseManagedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecProviderConfigRef
@@ -534,7 +585,9 @@ public partial class V1beta1LinkedServiceKustoSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpecWriteConnectionSecretToRef
@@ -543,7 +596,9 @@ public partial class V1beta1LinkedServiceKustoSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceKustoSpec defines the desired state of LinkedServiceKusto</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoSpec
@@ -568,7 +623,9 @@ public partial class V1beta1LinkedServiceKustoSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LinkedServiceKustoSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoStatusAtProvider
@@ -621,7 +678,9 @@ public partial class V1beta1LinkedServiceKustoStatusAtProvider
     [JsonPropertyName("useManagedIdentity")]
     public bool? UseManagedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoStatusConditions
@@ -650,7 +709,9 @@ public partial class V1beta1LinkedServiceKustoStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceKustoStatus defines the observed state of LinkedServiceKusto.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceKustoStatus
@@ -667,7 +728,9 @@ public partial class V1beta1LinkedServiceKustoStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LinkedServiceKusto is the Schema for the LinkedServiceKustos API. Manages a Linked Service (connection) between a Kusto Cluster and Azure Data Factory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -697,3 +760,4 @@ public partial class V1beta1LinkedServiceKusto : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceKustoStatus? Status { get; set; }
 }
+#nullable disable

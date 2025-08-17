@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>VPCEndpointSubnetAssociation is the Schema for the VPCEndpointSubnetAssociations API. Provides a resource to create an association between a VPC endpoint and a subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1VPCEndpointSubnetAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdR
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdS
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpointIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpoi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpointIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpoi
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpointIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpoi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpointIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpoi
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProvider
     [JsonPropertyName("vpcEndpointIdSelector")]
     public V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpointIdSelector? VpcEndpointIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetId
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetId
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpointIdRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpointIdRef
@@ -260,7 +291,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpo
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpointIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpointIdSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpointIdSelector
@@ -290,7 +325,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpo
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpointIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecInitProvider
     [JsonPropertyName("vpcEndpointIdSelector")]
     public V1beta1VPCEndpointSubnetAssociationSpecInitProviderVpcEndpointIdSelector? VpcEndpointIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecProviderConfigRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSubnetAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecWriteConnectionSecre
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointSubnetAssociationSpec defines the desired state of VPCEndpointSubnetAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpec
@@ -387,7 +432,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPCEndpointSubnetAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationStatusAtProvider
@@ -408,7 +455,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationStatusAtProvider
     [JsonPropertyName("vpcEndpointId")]
     public string? VpcEndpointId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationStatusConditions
@@ -437,7 +486,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointSubnetAssociationStatus defines the observed state of VPCEndpointSubnetAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationStatus
@@ -454,7 +505,9 @@ public partial class V1beta1VPCEndpointSubnetAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointSubnetAssociation is the Schema for the VPCEndpointSubnetAssociations API. Provides a resource to create an association between a VPC endpoint and a subnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -484,3 +537,4 @@ public partial class V1beta1VPCEndpointSubnetAssociation : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1VPCEndpointSubnetAssociationStatus? Status { get; set; }
 }
+#nullable disable

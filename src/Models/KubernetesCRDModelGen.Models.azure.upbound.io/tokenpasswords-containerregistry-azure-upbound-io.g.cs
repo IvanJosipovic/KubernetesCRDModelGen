@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerregistry.azure.upbound.io;
+#nullable enable
 /// <summary>TokenPassword is the Schema for the TokenPasswords API. Manages a Container Registry Token Password.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TokenPasswordList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1TokenPassword> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecForProviderContainerRegistryTokenIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1TokenPasswordSpecForProviderContainerRegistryTokenId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Token in containerregistry to populate containerRegistryTokenId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecForProviderContainerRegistryTokenIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1TokenPasswordSpecForProviderContainerRegistryTokenId
     [JsonPropertyName("policy")]
     public V1beta1TokenPasswordSpecForProviderContainerRegistryTokenIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecForProviderContainerRegistryTokenIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1TokenPasswordSpecForProviderContainerRegistryTokenId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Token in containerregistry to populate containerRegistryTokenId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecForProviderContainerRegistryTokenIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1TokenPasswordSpecForProviderContainerRegistryTokenId
     [JsonPropertyName("policy")]
     public V1beta1TokenPasswordSpecForProviderContainerRegistryTokenIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecForProviderPassword1
@@ -98,7 +109,9 @@ public partial class V1beta1TokenPasswordSpecForProviderPassword1
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecForProviderPassword2
@@ -107,7 +120,9 @@ public partial class V1beta1TokenPasswordSpecForProviderPassword2
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecForProvider
@@ -132,7 +147,9 @@ public partial class V1beta1TokenPasswordSpecForProvider
     [JsonPropertyName("password2")]
     public IList<V1beta1TokenPasswordSpecForProviderPassword2>? Password2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenIdRefPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Token in containerregistry to populate containerRegistryTokenId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenIdRef
@@ -158,7 +177,9 @@ public partial class V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenI
     [JsonPropertyName("policy")]
     public V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenIdSelectorPolicy
@@ -171,7 +192,9 @@ public partial class V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Token in containerregistry to populate containerRegistryTokenId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenIdSelector
@@ -188,7 +211,9 @@ public partial class V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenI
     [JsonPropertyName("policy")]
     public V1beta1TokenPasswordSpecInitProviderContainerRegistryTokenIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecInitProviderPassword1
@@ -197,7 +222,9 @@ public partial class V1beta1TokenPasswordSpecInitProviderPassword1
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecInitProviderPassword2
@@ -206,7 +233,9 @@ public partial class V1beta1TokenPasswordSpecInitProviderPassword2
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecInitProvider
@@ -231,7 +260,9 @@ public partial class V1beta1TokenPasswordSpecInitProvider
     [JsonPropertyName("password2")]
     public IList<V1beta1TokenPasswordSpecInitProviderPassword2>? Password2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecProviderConfigRefPolicy
@@ -244,7 +275,9 @@ public partial class V1beta1TokenPasswordSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecProviderConfigRef
@@ -257,7 +290,9 @@ public partial class V1beta1TokenPasswordSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TokenPasswordSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpecWriteConnectionSecretToRef
@@ -270,7 +305,9 @@ public partial class V1beta1TokenPasswordSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TokenPasswordSpec defines the desired state of TokenPassword</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordSpec
@@ -299,7 +336,9 @@ public partial class V1beta1TokenPasswordSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TokenPasswordSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordStatusAtProviderPassword1
@@ -308,7 +347,9 @@ public partial class V1beta1TokenPasswordStatusAtProviderPassword1
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordStatusAtProviderPassword2
@@ -317,7 +358,9 @@ public partial class V1beta1TokenPasswordStatusAtProviderPassword2
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordStatusAtProvider
@@ -338,7 +381,9 @@ public partial class V1beta1TokenPasswordStatusAtProvider
     [JsonPropertyName("password2")]
     public IList<V1beta1TokenPasswordStatusAtProviderPassword2>? Password2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordStatusConditions
@@ -367,7 +412,9 @@ public partial class V1beta1TokenPasswordStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TokenPasswordStatus defines the observed state of TokenPassword.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TokenPasswordStatus
@@ -384,7 +431,9 @@ public partial class V1beta1TokenPasswordStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TokenPassword is the Schema for the TokenPasswords API. Manages a Container Registry Token Password.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -414,3 +463,4 @@ public partial class V1beta1TokenPassword : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1TokenPasswordStatus? Status { get; set; }
 }
+#nullable disable

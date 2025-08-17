@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.autoscalingplans.aws.upbound.io;
+#nullable enable
 /// <summary>ScalingPlan is the Schema for the ScalingPlans API. Manages an AWS Auto Scaling scaling plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ScalingPlanList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ScalingPlan> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProviderApplicationSourceTagFilter
@@ -46,7 +49,9 @@ public partial class V1beta1ScalingPlanSpecForProviderApplicationSourceTagFilter
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProviderApplicationSource
@@ -59,7 +64,9 @@ public partial class V1beta1ScalingPlanSpecForProviderApplicationSource
     [JsonPropertyName("tagFilter")]
     public IList<V1beta1ScalingPlanSpecForProviderApplicationSourceTagFilter>? TagFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionCustomizedLoadMetricSpecification
@@ -84,7 +91,9 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionCustomiz
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionPredefinedLoadMetricSpecification
@@ -97,7 +106,9 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionPredefin
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification
@@ -122,7 +133,9 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTr
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification
@@ -135,7 +148,9 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTr
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTrackingConfiguration
@@ -168,7 +183,9 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTr
     [JsonPropertyName("targetValue")]
     public double? TargetValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProviderScalingInstruction
@@ -229,7 +246,9 @@ public partial class V1beta1ScalingPlanSpecForProviderScalingInstruction
     [JsonPropertyName("targetTrackingConfiguration")]
     public IList<V1beta1ScalingPlanSpecForProviderScalingInstructionTargetTrackingConfiguration>? TargetTrackingConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecForProvider
@@ -250,7 +269,9 @@ public partial class V1beta1ScalingPlanSpecForProvider
     [JsonPropertyName("scalingInstruction")]
     public IList<V1beta1ScalingPlanSpecForProviderScalingInstruction>? ScalingInstruction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProviderApplicationSourceTagFilter
@@ -263,7 +284,9 @@ public partial class V1beta1ScalingPlanSpecInitProviderApplicationSourceTagFilte
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProviderApplicationSource
@@ -276,7 +299,9 @@ public partial class V1beta1ScalingPlanSpecInitProviderApplicationSource
     [JsonPropertyName("tagFilter")]
     public IList<V1beta1ScalingPlanSpecInitProviderApplicationSourceTagFilter>? TagFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionCustomizedLoadMetricSpecification
@@ -301,7 +326,9 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionCustomi
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionPredefinedLoadMetricSpecification
@@ -314,7 +341,9 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionPredefi
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification
@@ -339,7 +368,9 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetT
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification
@@ -352,7 +383,9 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetT
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetTrackingConfiguration
@@ -385,7 +418,9 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetT
     [JsonPropertyName("targetValue")]
     public double? TargetValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProviderScalingInstruction
@@ -446,7 +481,9 @@ public partial class V1beta1ScalingPlanSpecInitProviderScalingInstruction
     [JsonPropertyName("targetTrackingConfiguration")]
     public IList<V1beta1ScalingPlanSpecInitProviderScalingInstructionTargetTrackingConfiguration>? TargetTrackingConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecInitProvider
@@ -463,7 +500,9 @@ public partial class V1beta1ScalingPlanSpecInitProvider
     [JsonPropertyName("scalingInstruction")]
     public IList<V1beta1ScalingPlanSpecInitProviderScalingInstruction>? ScalingInstruction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecProviderConfigRefPolicy
@@ -476,7 +515,9 @@ public partial class V1beta1ScalingPlanSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecProviderConfigRef
@@ -489,7 +530,9 @@ public partial class V1beta1ScalingPlanSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ScalingPlanSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpecWriteConnectionSecretToRef
@@ -502,7 +545,9 @@ public partial class V1beta1ScalingPlanSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScalingPlanSpec defines the desired state of ScalingPlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanSpec
@@ -531,7 +576,9 @@ public partial class V1beta1ScalingPlanSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ScalingPlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProviderApplicationSourceTagFilter
@@ -544,7 +591,9 @@ public partial class V1beta1ScalingPlanStatusAtProviderApplicationSourceTagFilte
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProviderApplicationSource
@@ -557,7 +606,9 @@ public partial class V1beta1ScalingPlanStatusAtProviderApplicationSource
     [JsonPropertyName("tagFilter")]
     public IList<V1beta1ScalingPlanStatusAtProviderApplicationSourceTagFilter>? TagFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionCustomizedLoadMetricSpecification
@@ -582,7 +633,9 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionCustomi
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionPredefinedLoadMetricSpecification
@@ -595,7 +648,9 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionPredefi
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification
@@ -620,7 +675,9 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetT
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification
@@ -633,7 +690,9 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetT
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetTrackingConfiguration
@@ -666,7 +725,9 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetT
     [JsonPropertyName("targetValue")]
     public double? TargetValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProviderScalingInstruction
@@ -727,7 +788,9 @@ public partial class V1beta1ScalingPlanStatusAtProviderScalingInstruction
     [JsonPropertyName("targetTrackingConfiguration")]
     public IList<V1beta1ScalingPlanStatusAtProviderScalingInstructionTargetTrackingConfiguration>? TargetTrackingConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusAtProvider
@@ -756,7 +819,9 @@ public partial class V1beta1ScalingPlanStatusAtProvider
     [JsonPropertyName("scalingPlanVersion")]
     public double? ScalingPlanVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatusConditions
@@ -785,7 +850,9 @@ public partial class V1beta1ScalingPlanStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScalingPlanStatus defines the observed state of ScalingPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScalingPlanStatus
@@ -802,7 +869,9 @@ public partial class V1beta1ScalingPlanStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScalingPlan is the Schema for the ScalingPlans API. Manages an AWS Auto Scaling scaling plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -832,3 +901,4 @@ public partial class V1beta1ScalingPlan : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ScalingPlanStatus? Status { get; set; }
 }
+#nullable disable

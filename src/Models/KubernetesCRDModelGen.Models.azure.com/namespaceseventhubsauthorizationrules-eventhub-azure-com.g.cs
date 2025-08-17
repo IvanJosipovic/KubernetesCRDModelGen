@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventhub.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/AuthorizationRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/authorizationRules/{authorizationRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleLis
     [JsonPropertyName("items")]
     public IList<V1api20240101storageNamespacesEventhubsAuthorizationRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString
@@ -80,7 +87,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey
@@ -93,7 +102,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString
@@ -106,7 +117,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey
@@ -119,7 +132,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRuleOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecrets
@@ -144,7 +159,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("secondaryKey")]
     public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpec
@@ -165,7 +182,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("secrets")]
     public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecrets? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventhub.azure.com/NamespacesEventhub resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOwner
@@ -178,7 +197,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpec
@@ -207,7 +228,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("rights")]
     public IList<string>? Rights { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleStatusConditions
@@ -240,7 +263,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSta
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleStatusSystemData
@@ -273,7 +298,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSta
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleStatus
@@ -310,7 +337,9 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSta
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/AuthorizationRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/authorizationRules/{authorizationRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -340,3 +369,4 @@ public partial class V1api20240101storageNamespacesEventhubsAuthorizationRule : 
     [JsonPropertyName("status")]
     public V1api20240101storageNamespacesEventhubsAuthorizationRuleStatus? Status { get; set; }
 }
+#nullable disable

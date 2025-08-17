@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
+#nullable enable
 /// <summary>ContainerSource is an event source that starts a container image which generates events under certain situations and sends messages to a sink URI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ContainerSourceList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1ContainerSource> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ContainerSourceSpecCeOverrides
@@ -42,7 +45,9 @@ public partial class V1ContainerSourceSpecCeOverrides
     [JsonPropertyName("extensions")]
     public JsonNode? Extensions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ContainerSourceSpecSinkRef
@@ -63,7 +68,9 @@ public partial class V1ContainerSourceSpecSinkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ContainerSourceSpecSink
@@ -84,7 +91,9 @@ public partial class V1ContainerSourceSpecSink
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ContainerSourceSpec
@@ -101,7 +110,9 @@ public partial class V1ContainerSourceSpec
     [JsonPropertyName("template")]
     public JsonNode? Template { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ContainerSourceStatusAuth
@@ -114,7 +125,9 @@ public partial class V1ContainerSourceStatusAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ContainerSourceStatusCeAttributes
@@ -127,7 +140,9 @@ public partial class V1ContainerSourceStatusCeAttributes
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ContainerSourceStatusConditions
@@ -156,7 +171,9 @@ public partial class V1ContainerSourceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ContainerSourceStatus
@@ -193,7 +210,9 @@ public partial class V1ContainerSourceStatus
     [JsonPropertyName("sinkAudience")]
     public string? SinkAudience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerSource is an event source that starts a container image which generates events under certain situations and sends messages to a sink URI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -223,3 +242,4 @@ public partial class V1ContainerSource : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1ContainerSourceStatus? Status { get; set; }
 }
+#nullable disable

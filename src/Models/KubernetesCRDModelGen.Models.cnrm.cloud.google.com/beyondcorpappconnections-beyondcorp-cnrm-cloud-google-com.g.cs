@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1BeyondCorpAppConnectionList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1alpha1BeyondCorpAppConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectionSpecApplicationEndpoint
@@ -46,7 +49,9 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecApplicationEndpoint
     [JsonPropertyName("port")]
     public int Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Gateway used by the AppConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectionSpecGateway
@@ -67,7 +72,9 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecGateway
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectionSpecProjectRef
@@ -84,7 +91,9 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectionSpec
@@ -121,7 +130,9 @@ public partial class V1alpha1BeyondCorpAppConnectionSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectionStatusConditions
@@ -146,7 +157,9 @@ public partial class V1alpha1BeyondCorpAppConnectionStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BeyondCorpAppConnectionStatus
@@ -159,7 +172,9 @@ public partial class V1alpha1BeyondCorpAppConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -189,3 +204,4 @@ public partial class V1alpha1BeyondCorpAppConnection : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1alpha1BeyondCorpAppConnectionStatus? Status { get; set; }
 }
+#nullable disable

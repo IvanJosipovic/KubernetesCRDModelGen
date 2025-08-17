@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.netapp.azure.upbound.io;
+#nullable enable
 /// <summary>Volume is the Schema for the Volumes API. Manages a NetApp Volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VolumeList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Volume> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VolumeSpecForProviderAccountNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in netapp to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderAccountNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1VolumeSpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderAccountNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VolumeSpecForProviderAccountNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in netapp to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderAccountNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VolumeSpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSel
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionBackupPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionBackupPolicy
     [JsonPropertyName("policyEnabled")]
     public bool? PolicyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicy
@@ -175,7 +196,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemote
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Volume in netapp to populate remoteVolumeResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdRef
@@ -188,7 +211,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemote
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicy
@@ -201,7 +226,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemote
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Volume in netapp to populate remoteVolumeResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdSelector
@@ -218,7 +245,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemote
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplication
@@ -247,7 +276,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionReplication
     [JsonPropertyName("replicationFrequency")]
     public string? ReplicationFrequency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdRefPolicy
@@ -260,7 +291,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySna
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SnapshotPolicy in netapp to populate snapshotPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdRef
@@ -273,7 +306,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySna
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicy
@@ -286,7 +321,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySna
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SnapshotPolicy in netapp to populate snapshotPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelector
@@ -303,7 +340,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySna
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicy
@@ -320,7 +359,9 @@ public partial class V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicy
     [JsonPropertyName("snapshotPolicyIdSelector")]
     public V1beta1VolumeSpecForProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelector? SnapshotPolicyIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderExportPolicyRule
@@ -373,7 +414,9 @@ public partial class V1beta1VolumeSpecForProviderExportPolicyRule
     [JsonPropertyName("unixReadWrite")]
     public bool? UnixReadWrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderPoolNameRefPolicy
@@ -386,7 +429,9 @@ public partial class V1beta1VolumeSpecForProviderPoolNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Pool in netapp to populate poolName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderPoolNameRef
@@ -399,7 +444,9 @@ public partial class V1beta1VolumeSpecForProviderPoolNameRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderPoolNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderPoolNameSelectorPolicy
@@ -412,7 +459,9 @@ public partial class V1beta1VolumeSpecForProviderPoolNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Pool in netapp to populate poolName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderPoolNameSelector
@@ -429,7 +478,9 @@ public partial class V1beta1VolumeSpecForProviderPoolNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderPoolNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderResourceGroupNameRefPolicy
@@ -442,7 +493,9 @@ public partial class V1beta1VolumeSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderResourceGroupNameRef
@@ -455,7 +508,9 @@ public partial class V1beta1VolumeSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderResourceGroupNameSelectorPolicy
@@ -468,7 +523,9 @@ public partial class V1beta1VolumeSpecForProviderResourceGroupNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderResourceGroupNameSelector
@@ -485,7 +542,9 @@ public partial class V1beta1VolumeSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderSubnetIdRefPolicy
@@ -498,7 +557,9 @@ public partial class V1beta1VolumeSpecForProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderSubnetIdRef
@@ -511,7 +572,9 @@ public partial class V1beta1VolumeSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderSubnetIdSelectorPolicy
@@ -524,7 +587,9 @@ public partial class V1beta1VolumeSpecForProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderSubnetIdSelector
@@ -541,7 +606,9 @@ public partial class V1beta1VolumeSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProvider
@@ -702,7 +769,9 @@ public partial class V1beta1VolumeSpecForProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRefPolicy
@@ -715,7 +784,9 @@ public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRef
@@ -728,7 +799,9 @@ public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRe
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelectorPolicy
@@ -741,7 +814,9 @@ public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelector
@@ -758,7 +833,9 @@ public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSe
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionBackupPolicy
@@ -775,7 +852,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionBackupPolicy
     [JsonPropertyName("policyEnabled")]
     public bool? PolicyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicy
@@ -788,7 +867,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemot
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Volume in netapp to populate remoteVolumeResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdRef
@@ -801,7 +882,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemot
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicy
@@ -814,7 +897,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemot
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Volume in netapp to populate remoteVolumeResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdSelector
@@ -831,7 +916,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionReplicationRemot
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderDataProtectionReplicationRemoteVolumeResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionReplication
@@ -860,7 +947,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionReplication
     [JsonPropertyName("replicationFrequency")]
     public string? ReplicationFrequency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdRefPolicy
@@ -873,7 +962,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SnapshotPolicy in netapp to populate snapshotPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdRef
@@ -886,7 +977,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySn
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicy
@@ -899,7 +992,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SnapshotPolicy in netapp to populate snapshotPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelector
@@ -916,7 +1011,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySn
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicy
@@ -933,7 +1030,9 @@ public partial class V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicy
     [JsonPropertyName("snapshotPolicyIdSelector")]
     public V1beta1VolumeSpecInitProviderDataProtectionSnapshotPolicySnapshotPolicyIdSelector? SnapshotPolicyIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderExportPolicyRule
@@ -986,7 +1085,9 @@ public partial class V1beta1VolumeSpecInitProviderExportPolicyRule
     [JsonPropertyName("unixReadWrite")]
     public bool? UnixReadWrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderSubnetIdRefPolicy
@@ -999,7 +1100,9 @@ public partial class V1beta1VolumeSpecInitProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderSubnetIdRef
@@ -1012,7 +1115,9 @@ public partial class V1beta1VolumeSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderSubnetIdSelectorPolicy
@@ -1025,7 +1130,9 @@ public partial class V1beta1VolumeSpecInitProviderSubnetIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProviderSubnetIdSelector
@@ -1042,7 +1149,9 @@ public partial class V1beta1VolumeSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecInitProvider
@@ -1167,7 +1276,9 @@ public partial class V1beta1VolumeSpecInitProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecProviderConfigRefPolicy
@@ -1180,7 +1291,9 @@ public partial class V1beta1VolumeSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecProviderConfigRef
@@ -1193,7 +1306,9 @@ public partial class V1beta1VolumeSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecWriteConnectionSecretToRef
@@ -1206,7 +1321,9 @@ public partial class V1beta1VolumeSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeSpec defines the desired state of Volume</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpec
@@ -1235,7 +1352,9 @@ public partial class V1beta1VolumeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VolumeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeStatusAtProviderDataProtectionBackupPolicy
@@ -1252,7 +1371,9 @@ public partial class V1beta1VolumeStatusAtProviderDataProtectionBackupPolicy
     [JsonPropertyName("policyEnabled")]
     public bool? PolicyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeStatusAtProviderDataProtectionReplication
@@ -1273,7 +1394,9 @@ public partial class V1beta1VolumeStatusAtProviderDataProtectionReplication
     [JsonPropertyName("replicationFrequency")]
     public string? ReplicationFrequency { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeStatusAtProviderDataProtectionSnapshotPolicy
@@ -1282,7 +1405,9 @@ public partial class V1beta1VolumeStatusAtProviderDataProtectionSnapshotPolicy
     [JsonPropertyName("snapshotPolicyId")]
     public string? SnapshotPolicyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeStatusAtProviderExportPolicyRule
@@ -1335,7 +1460,9 @@ public partial class V1beta1VolumeStatusAtProviderExportPolicyRule
     [JsonPropertyName("unixReadWrite")]
     public bool? UnixReadWrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeStatusAtProvider
@@ -1464,7 +1591,9 @@ public partial class V1beta1VolumeStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeStatusConditions
@@ -1493,7 +1622,9 @@ public partial class V1beta1VolumeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeStatus defines the observed state of Volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeStatus
@@ -1510,7 +1641,9 @@ public partial class V1beta1VolumeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Volume is the Schema for the Volumes API. Manages a NetApp Volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1540,3 +1673,4 @@ public partial class V1beta1Volume : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1VolumeStatus? Status { get; set; }
 }
+#nullable disable

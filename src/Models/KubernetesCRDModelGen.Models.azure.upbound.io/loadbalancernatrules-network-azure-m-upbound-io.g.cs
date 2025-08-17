@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>LoadBalancerNatRule is the Schema for the LoadBalancerNatRules API. Manages a Load Balancer NAT Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LoadBalancerNatRuleList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1LoadBalancerNatRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPoolIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPool
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPoolIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPool
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPoolIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPool
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPoolIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPool
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecForProviderBackendAddressPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancer in network to populate loadbalancerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdRef
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancer in network to populate loadbalancerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdSele
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecForProviderLoadbalancerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameR
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameS
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecForProvider
@@ -302,7 +329,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1LoadBalancerNatRuleSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoolIdRefPolicy
@@ -315,7 +344,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoolIdRef
@@ -332,7 +363,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoo
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoolIdSelectorPolicy
@@ -345,7 +378,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LoadBalancerBackendAddressPool in network to populate backendAddressPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoolIdSelector
@@ -366,7 +401,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoo
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecInitProviderBackendAddressPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupNameRefPolicy
@@ -379,7 +416,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupNameRef
@@ -396,7 +435,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupNameSelectorPolicy
@@ -409,7 +450,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupNameSelector
@@ -430,7 +473,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecInitProvider
@@ -495,7 +540,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecInitProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1LoadBalancerNatRuleSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecProviderConfigRef
@@ -508,7 +555,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpecWriteConnectionSecretToRef
@@ -517,7 +566,9 @@ public partial class V1beta1LoadBalancerNatRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerNatRuleSpec defines the desired state of LoadBalancerNatRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleSpec
@@ -542,7 +593,9 @@ public partial class V1beta1LoadBalancerNatRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LoadBalancerNatRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleStatusAtProvider
@@ -607,7 +660,9 @@ public partial class V1beta1LoadBalancerNatRuleStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleStatusConditions
@@ -636,7 +691,9 @@ public partial class V1beta1LoadBalancerNatRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerNatRuleStatus defines the observed state of LoadBalancerNatRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerNatRuleStatus
@@ -653,7 +710,9 @@ public partial class V1beta1LoadBalancerNatRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoadBalancerNatRule is the Schema for the LoadBalancerNatRules API. Manages a Load Balancer NAT Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -683,3 +742,4 @@ public partial class V1beta1LoadBalancerNatRule : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1LoadBalancerNatRuleStatus? Status { get; set; }
 }
+#nullable disable

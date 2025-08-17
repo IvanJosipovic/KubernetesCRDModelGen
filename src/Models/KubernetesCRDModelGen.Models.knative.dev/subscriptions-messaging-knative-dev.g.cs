@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.messaging.knative.dev;
+#nullable enable
 /// <summary>Subscription routes events received on a Channel to a DNS name and corresponds to the subscriptions.channels.knative.dev CRD.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1SubscriptionList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1Subscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionSpecReplyRef
@@ -54,7 +57,9 @@ public partial class V1SubscriptionSpecReplyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reply specifies (optionally) how to handle events returned from the Subscriber target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionSpecReply
@@ -75,7 +80,9 @@ public partial class V1SubscriptionSpecReply
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subscriber is reference to (optional) function for processing events. Events from the Channel will be delivered here and replies are sent to a Destination as specified by the Reply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionSpecSubscriber
@@ -96,7 +103,9 @@ public partial class V1SubscriptionSpecSubscriber
     [JsonPropertyName("audience")]
     public string? Audience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionSpec
@@ -117,7 +126,9 @@ public partial class V1SubscriptionSpec
     [JsonPropertyName("subscriber")]
     public V1SubscriptionSpecSubscriber? Subscriber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionStatusAuth
@@ -130,7 +141,9 @@ public partial class V1SubscriptionStatusAuth
     [JsonPropertyName("serviceAccountNames")]
     public IList<string>? ServiceAccountNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionStatusConditions
@@ -159,7 +172,9 @@ public partial class V1SubscriptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PhysicalSubscription is the fully resolved values that this Subscription represents.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionStatusPhysicalSubscription
@@ -200,7 +215,9 @@ public partial class V1SubscriptionStatusPhysicalSubscription
     [JsonPropertyName("subscriberAudience")]
     public string? SubscriberAudience { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SubscriptionStatus
@@ -225,7 +242,9 @@ public partial class V1SubscriptionStatus
     [JsonPropertyName("physicalSubscription")]
     public V1SubscriptionStatusPhysicalSubscription? PhysicalSubscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subscription routes events received on a Channel to a DNS name and corresponds to the subscriptions.channels.knative.dev CRD.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -255,3 +274,4 @@ public partial class V1Subscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1S
     [JsonPropertyName("status")]
     public V1SubscriptionStatus? Status { get; set; }
 }
+#nullable disable

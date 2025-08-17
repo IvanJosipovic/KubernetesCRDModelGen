@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudAppRedisAssociation is the Schema for the SpringCloudAppRedisAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudAppRedisAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeyRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RedisCache in cache to populate redisAccessKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeyRef
@@ -59,7 +64,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAc
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeySelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RedisCache in cache to populate redisAccessKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeySelector
@@ -89,7 +98,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAc
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RedisCache in cache to populate redisCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCa
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RedisCache in cache to populate redisCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCa
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringC
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringC
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecForProvider
@@ -246,7 +273,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProvider
     [JsonPropertyName("sslEnabled")]
     public bool? SslEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeyRefPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RedisCache in cache to populate redisAccessKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeyRef
@@ -272,7 +303,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisA
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeySelectorPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RedisCache in cache to populate redisAccessKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeySelector
@@ -302,7 +337,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisA
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdRefPolicy
@@ -315,7 +352,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RedisCache in cache to populate redisCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdRef
@@ -328,7 +367,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisC
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdSelectorPolicy
@@ -341,7 +382,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RedisCache in cache to populate redisCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdSelector
@@ -358,7 +401,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisC
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProvider
@@ -391,7 +436,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProvider
     [JsonPropertyName("sslEnabled")]
     public bool? SslEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRefPolicy
@@ -404,7 +451,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRef
@@ -417,7 +466,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpecWriteConnectionSecretToRef
@@ -430,7 +481,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecWriteConnectionSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppRedisAssociationSpec defines the desired state of SpringCloudAppRedisAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationSpec
@@ -459,7 +512,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudAppRedisAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationStatusAtProvider
@@ -484,7 +539,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationStatusAtProvider
     [JsonPropertyName("sslEnabled")]
     public bool? SslEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationStatusConditions
@@ -513,7 +570,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppRedisAssociationStatus defines the observed state of SpringCloudAppRedisAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppRedisAssociationStatus
@@ -530,7 +589,9 @@ public partial class V1beta1SpringCloudAppRedisAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppRedisAssociation is the Schema for the SpringCloudAppRedisAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -560,3 +621,4 @@ public partial class V1beta1SpringCloudAppRedisAssociation : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1SpringCloudAppRedisAssociationStatus? Status { get; set; }
 }
+#nullable disable

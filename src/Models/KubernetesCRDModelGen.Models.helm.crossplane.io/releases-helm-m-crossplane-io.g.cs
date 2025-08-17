@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.helm.m.crossplane.io;
+#nullable enable
 /// <summary>A Release is an example API type</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ReleaseList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Release> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConnectionDetail todo</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecConnectionDetails
@@ -74,7 +77,9 @@ public partial class V1beta1ReleaseSpecConnectionDetails
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PullSecretRef is reference to the secret containing credentials to helm repository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderChartPullSecretRef
@@ -83,7 +88,9 @@ public partial class V1beta1ReleaseSpecForProviderChartPullSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ChartSpec defines the chart spec for a Release</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderChart
@@ -108,7 +115,9 @@ public partial class V1beta1ReleaseSpecForProviderChart
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderPatchesFromConfigMapKeyRef
@@ -125,7 +134,9 @@ public partial class V1beta1ReleaseSpecForProviderPatchesFromConfigMapKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderPatchesFromSecretKeyRef
@@ -142,7 +153,9 @@ public partial class V1beta1ReleaseSpecForProviderPatchesFromSecretKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ValueFromSource represents source of a value</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderPatchesFrom
@@ -155,7 +168,9 @@ public partial class V1beta1ReleaseSpecForProviderPatchesFrom
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ReleaseSpecForProviderPatchesFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderSetValueFromConfigMapKeyRef
@@ -172,7 +187,9 @@ public partial class V1beta1ReleaseSpecForProviderSetValueFromConfigMapKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderSetValueFromSecretKeyRef
@@ -189,7 +206,9 @@ public partial class V1beta1ReleaseSpecForProviderSetValueFromSecretKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ValueFromSource represents source of a value</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderSetValueFrom
@@ -202,7 +221,9 @@ public partial class V1beta1ReleaseSpecForProviderSetValueFrom
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ReleaseSpecForProviderSetValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SetVal represents a "set" value override in a Release</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderSet
@@ -219,7 +240,9 @@ public partial class V1beta1ReleaseSpecForProviderSet
     [JsonPropertyName("valueFrom")]
     public V1beta1ReleaseSpecForProviderSetValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderValuesFromConfigMapKeyRef
@@ -236,7 +259,9 @@ public partial class V1beta1ReleaseSpecForProviderValuesFromConfigMapKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataKeySelector defines required spec to access a key of a configmap or secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderValuesFromSecretKeyRef
@@ -253,7 +278,9 @@ public partial class V1beta1ReleaseSpecForProviderValuesFromSecretKeyRef
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ValueFromSource represents source of a value</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProviderValuesFrom
@@ -266,7 +293,9 @@ public partial class V1beta1ReleaseSpecForProviderValuesFrom
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ReleaseSpecForProviderValuesFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReleaseParameters are the configurable fields of a Release.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecForProvider
@@ -307,7 +336,9 @@ public partial class V1beta1ReleaseSpecForProvider
     [JsonPropertyName("waitTimeout")]
     public string? WaitTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecProviderConfigRef
@@ -320,7 +351,9 @@ public partial class V1beta1ReleaseSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpecWriteConnectionSecretToRef
@@ -329,7 +362,9 @@ public partial class V1beta1ReleaseSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ReleaseSpec defines the desired state of a Release.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseSpec
@@ -358,7 +393,9 @@ public partial class V1beta1ReleaseSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ReleaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReleaseObservation are the observable fields of a Release.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseStatusAtProvider
@@ -375,7 +412,9 @@ public partial class V1beta1ReleaseStatusAtProvider
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseStatusConditions
@@ -404,7 +443,9 @@ public partial class V1beta1ReleaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ReleaseStatus represents the observed state of a Release.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReleaseStatus
@@ -433,7 +474,9 @@ public partial class V1beta1ReleaseStatus
     [JsonPropertyName("synced")]
     public bool? Synced { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Release is an example API type</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -463,3 +506,4 @@ public partial class V1beta1Release : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ReleaseStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+#nullable enable
 /// <summary>EventDestination is the Schema for the EventDestinations API. Provides an SES event destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EventDestinationList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1EventDestination> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderCloudwatchDestination
@@ -50,7 +53,9 @@ public partial class V1beta1EventDestinationSpecForProviderCloudwatchDestination
     [JsonPropertyName("valueSource")]
     public string? ValueSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConfigurationSet in ses to populate configurationSetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameRef
@@ -80,7 +87,9 @@ public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameR
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecForProviderConfigurationSetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConfigurationSet in ses to populate configurationSetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameSelector
@@ -114,7 +125,9 @@ public partial class V1beta1EventDestinationSpecForProviderConfigurationSetNameS
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecForProviderConfigurationSetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnRef
@@ -144,7 +159,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRol
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnSelector
@@ -178,7 +197,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationRol
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecForProviderKinesisDestinationRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnRef
@@ -208,7 +231,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStr
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSelector
@@ -242,7 +269,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestinationStr
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Send the events to a kinesis firehose destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderKinesisDestination
@@ -271,7 +300,9 @@ public partial class V1beta1EventDestinationSpecForProviderKinesisDestination
     [JsonPropertyName("streamArnSelector")]
     public V1beta1EventDestinationSpecForProviderKinesisDestinationStreamArnSelector? StreamArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnRefPolicy
@@ -284,7 +315,9 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnRef
@@ -301,7 +334,9 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicAr
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelectorPolicy
@@ -314,7 +349,9 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelector
@@ -335,7 +372,9 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestinationTopicAr
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Send the events to an SNS Topic destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProviderSnsDestination
@@ -352,7 +391,9 @@ public partial class V1beta1EventDestinationSpecForProviderSnsDestination
     [JsonPropertyName("topicArnSelector")]
     public V1beta1EventDestinationSpecForProviderSnsDestinationTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecForProvider
@@ -393,7 +434,9 @@ public partial class V1beta1EventDestinationSpecForProvider
     [JsonPropertyName("snsDestination")]
     public V1beta1EventDestinationSpecForProviderSnsDestination? SnsDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderCloudwatchDestination
@@ -410,7 +453,9 @@ public partial class V1beta1EventDestinationSpecInitProviderCloudwatchDestinatio
     [JsonPropertyName("valueSource")]
     public string? ValueSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetNameRefPolicy
@@ -423,7 +468,9 @@ public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConfigurationSet in ses to populate configurationSetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetNameRef
@@ -440,7 +487,9 @@ public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetName
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecInitProviderConfigurationSetNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetNameSelectorPolicy
@@ -453,7 +502,9 @@ public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConfigurationSet in ses to populate configurationSetName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetNameSelector
@@ -474,7 +525,9 @@ public partial class V1beta1EventDestinationSpecInitProviderConfigurationSetName
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecInitProviderConfigurationSetNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnRefPolicy
@@ -487,7 +540,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnRef
@@ -504,7 +559,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRo
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnSelectorPolicy
@@ -517,7 +574,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnSelector
@@ -538,7 +597,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationRo
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnRefPolicy
@@ -551,7 +612,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationSt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnRef
@@ -568,7 +631,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationSt
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSelectorPolicy
@@ -581,7 +646,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationSt
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSelector
@@ -602,7 +669,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestinationSt
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Send the events to a kinesis firehose destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderKinesisDestination
@@ -631,7 +700,9 @@ public partial class V1beta1EventDestinationSpecInitProviderKinesisDestination
     [JsonPropertyName("streamArnSelector")]
     public V1beta1EventDestinationSpecInitProviderKinesisDestinationStreamArnSelector? StreamArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnRefPolicy
@@ -644,7 +715,9 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnRef
@@ -661,7 +734,9 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicA
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelectorPolicy
@@ -674,7 +749,9 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelector
@@ -695,7 +772,9 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestinationTopicA
     [JsonPropertyName("policy")]
     public V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Send the events to an SNS Topic destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProviderSnsDestination
@@ -712,7 +791,9 @@ public partial class V1beta1EventDestinationSpecInitProviderSnsDestination
     [JsonPropertyName("topicArnSelector")]
     public V1beta1EventDestinationSpecInitProviderSnsDestinationTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecInitProvider
@@ -749,7 +830,9 @@ public partial class V1beta1EventDestinationSpecInitProvider
     [JsonPropertyName("snsDestination")]
     public V1beta1EventDestinationSpecInitProviderSnsDestination? SnsDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecProviderConfigRef
@@ -762,7 +845,9 @@ public partial class V1beta1EventDestinationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpecWriteConnectionSecretToRef
@@ -771,7 +856,9 @@ public partial class V1beta1EventDestinationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventDestinationSpec defines the desired state of EventDestination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationSpec
@@ -796,7 +883,9 @@ public partial class V1beta1EventDestinationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EventDestinationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationStatusAtProviderCloudwatchDestination
@@ -813,7 +902,9 @@ public partial class V1beta1EventDestinationStatusAtProviderCloudwatchDestinatio
     [JsonPropertyName("valueSource")]
     public string? ValueSource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Send the events to a kinesis firehose destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationStatusAtProviderKinesisDestination
@@ -826,7 +917,9 @@ public partial class V1beta1EventDestinationStatusAtProviderKinesisDestination
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Send the events to an SNS Topic destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationStatusAtProviderSnsDestination
@@ -835,7 +928,9 @@ public partial class V1beta1EventDestinationStatusAtProviderSnsDestination
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationStatusAtProvider
@@ -876,7 +971,9 @@ public partial class V1beta1EventDestinationStatusAtProvider
     [JsonPropertyName("snsDestination")]
     public V1beta1EventDestinationStatusAtProviderSnsDestination? SnsDestination { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationStatusConditions
@@ -905,7 +1002,9 @@ public partial class V1beta1EventDestinationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventDestinationStatus defines the observed state of EventDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventDestinationStatus
@@ -922,7 +1021,9 @@ public partial class V1beta1EventDestinationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventDestination is the Schema for the EventDestinations API. Provides an SES event destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -952,3 +1053,4 @@ public partial class V1beta1EventDestination : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1EventDestinationStatus? Status { get; set; }
 }
+#nullable disable

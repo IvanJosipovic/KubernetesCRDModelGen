@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>NetworkServicesServiceBinding is the Schema for the NetworkServicesServiceBinding API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1NetworkServicesServiceBindingList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1alpha1NetworkServicesServiceBinding> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesServiceBindingSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1NetworkServicesServiceBindingSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The full service directory service name of the format /projects/*/locations/*/namespaces/*/services/*</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesServiceBindingSpecServiceRef
@@ -71,7 +76,9 @@ public partial class V1alpha1NetworkServicesServiceBindingSpecServiceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkServicesServiceBindingSpec defines the desired state of NetworkServicesServiceBinding</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesServiceBindingSpec
@@ -100,7 +107,9 @@ public partial class V1alpha1NetworkServicesServiceBindingSpec
     [JsonPropertyName("serviceRef")]
     public V1alpha1NetworkServicesServiceBindingSpecServiceRef? ServiceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesServiceBindingStatusConditions
@@ -125,7 +134,9 @@ public partial class V1alpha1NetworkServicesServiceBindingStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesServiceBindingStatusObservedState
@@ -138,7 +149,9 @@ public partial class V1alpha1NetworkServicesServiceBindingStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkServicesServiceBindingStatus defines the config connector machine state of NetworkServicesServiceBinding</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkServicesServiceBindingStatus
@@ -159,7 +172,9 @@ public partial class V1alpha1NetworkServicesServiceBindingStatus
     [JsonPropertyName("observedState")]
     public V1alpha1NetworkServicesServiceBindingStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkServicesServiceBinding is the Schema for the NetworkServicesServiceBinding API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -189,3 +204,4 @@ public partial class V1alpha1NetworkServicesServiceBinding : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1alpha1NetworkServicesServiceBindingStatus? Status { get; set; }
 }
+#nullable disable

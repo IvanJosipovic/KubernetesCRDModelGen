@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComputeMachineImageList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1ComputeMachineImage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Encrypts the machine image using a customer-supplied encryption key.  After you encrypt a machine image with a customer-supplied key, you must provide the same key if you use the machine image later (e.g. to create a instance from the image).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeMachineImageSpecMachineImageEncryptionKey
@@ -54,7 +57,9 @@ public partial class V1alpha1ComputeMachineImageSpecMachineImageEncryptionKey
     [JsonPropertyName("sha256")]
     public string? Sha256 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeMachineImageSpecProjectRef
@@ -71,7 +76,9 @@ public partial class V1alpha1ComputeMachineImageSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeMachineImageSpecSourceInstanceRef
@@ -88,7 +95,9 @@ public partial class V1alpha1ComputeMachineImageSpecSourceInstanceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeMachineImageSpec
@@ -117,7 +126,9 @@ public partial class V1alpha1ComputeMachineImageSpec
     [JsonPropertyName("sourceInstanceRef")]
     public V1alpha1ComputeMachineImageSpecSourceInstanceRef SourceInstanceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeMachineImageStatusConditions
@@ -142,7 +153,9 @@ public partial class V1alpha1ComputeMachineImageStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeMachineImageStatus
@@ -163,7 +176,9 @@ public partial class V1alpha1ComputeMachineImageStatus
     [JsonPropertyName("storageLocations")]
     public IList<string>? StorageLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -193,3 +208,4 @@ public partial class V1alpha1ComputeMachineImage : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1ComputeMachineImageStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.upbound.io;
+#nullable enable
 /// <summary>BackupProtectedFileShare is the Schema for the BackupProtectedFileShares API. Manages an Azure Backup Protected File Share.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupProtectedFileShareList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1BackupProtectedFileShare> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupPolicyFileShare in recoveryservices to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyI
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupPolicyFileShare in recoveryservices to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyI
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVault
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVault
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVault
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderRecoveryVault
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameRefPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileSha
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Share in storage to populate sourceFileShareName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameRef
@@ -227,7 +256,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileSha
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameSelectorPolicy
@@ -240,7 +271,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileSha
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Share in storage to populate sourceFileShareName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameSelector
@@ -257,7 +290,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceFileSha
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderSourceFileShareNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdRefPolicy
@@ -270,7 +305,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorage
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupContainerStorageAccount in recoveryservices to populate sourceStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdRef
@@ -283,7 +320,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorage
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdSelectorPolicy
@@ -296,7 +335,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorage
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupContainerStorageAccount in recoveryservices to populate sourceStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdSelector
@@ -313,7 +354,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProviderSourceStorage
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecForProvider
@@ -378,7 +421,9 @@ public partial class V1beta1BackupProtectedFileShareSpecForProvider
     [JsonPropertyName("sourceStorageAccountIdSelector")]
     public V1beta1BackupProtectedFileShareSpecForProviderSourceStorageAccountIdSelector? SourceStorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdRefPolicy
@@ -391,7 +436,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupPolicyFileShare in recoveryservices to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdRef
@@ -404,7 +451,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicy
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdSelectorPolicy
@@ -417,7 +466,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupPolicyFileShare in recoveryservices to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdSelector
@@ -434,7 +485,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicy
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameRefPolicy
@@ -447,7 +500,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaul
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameRef
@@ -460,7 +515,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaul
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameSelectorPolicy
@@ -473,7 +530,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaul
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameSelector
@@ -490,7 +549,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaul
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameRefPolicy
@@ -503,7 +564,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameRef
@@ -516,7 +579,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameSelectorPolicy
@@ -529,7 +594,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameSelector
@@ -546,7 +613,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameRefPolicy
@@ -559,7 +628,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileSh
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Share in storage to populate sourceFileShareName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameRef
@@ -572,7 +643,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileSh
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameSelectorPolicy
@@ -585,7 +658,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileSh
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Share in storage to populate sourceFileShareName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameSelector
@@ -602,7 +677,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceFileSh
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceFileShareNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdRefPolicy
@@ -615,7 +692,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorag
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupContainerStorageAccount in recoveryservices to populate sourceStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdRef
@@ -628,7 +707,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorag
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdSelectorPolicy
@@ -641,7 +722,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorag
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupContainerStorageAccount in recoveryservices to populate sourceStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdSelector
@@ -658,7 +741,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProviderSourceStorag
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecInitProvider
@@ -723,7 +808,9 @@ public partial class V1beta1BackupProtectedFileShareSpecInitProvider
     [JsonPropertyName("sourceStorageAccountIdSelector")]
     public V1beta1BackupProtectedFileShareSpecInitProviderSourceStorageAccountIdSelector? SourceStorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecProviderConfigRefPolicy
@@ -736,7 +823,9 @@ public partial class V1beta1BackupProtectedFileShareSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecProviderConfigRef
@@ -749,7 +838,9 @@ public partial class V1beta1BackupProtectedFileShareSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedFileShareSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpecWriteConnectionSecretToRef
@@ -762,7 +853,9 @@ public partial class V1beta1BackupProtectedFileShareSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupProtectedFileShareSpec defines the desired state of BackupProtectedFileShare</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareSpec
@@ -791,7 +884,9 @@ public partial class V1beta1BackupProtectedFileShareSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupProtectedFileShareSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareStatusAtProvider
@@ -820,7 +915,9 @@ public partial class V1beta1BackupProtectedFileShareStatusAtProvider
     [JsonPropertyName("sourceStorageAccountId")]
     public string? SourceStorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareStatusConditions
@@ -849,7 +946,9 @@ public partial class V1beta1BackupProtectedFileShareStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupProtectedFileShareStatus defines the observed state of BackupProtectedFileShare.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedFileShareStatus
@@ -866,7 +965,9 @@ public partial class V1beta1BackupProtectedFileShareStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupProtectedFileShare is the Schema for the BackupProtectedFileShares API. Manages an Azure Backup Protected File Share.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -896,3 +997,4 @@ public partial class V1beta1BackupProtectedFileShare : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1BackupProtectedFileShareStatus? Status { get; set; }
 }
+#nullable disable

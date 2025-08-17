@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>TrafficManagerAzureEndpoint is the Schema for the TrafficManagerAzureEndpoints API. Manages an Azure Endpoint within a Traffic Manager Profile..</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TrafficManagerAzureEndpointList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1TrafficManagerAzureEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderCustomHeader
@@ -46,7 +49,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderCustomHead
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TrafficManagerProfile in network to populate profileId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdR
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TrafficManagerProfile in network to populate profileId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdSelector
@@ -102,7 +113,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdS
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerAzureEndpointSpecForProviderProfileIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderSubnet
@@ -119,7 +132,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderSubnet
     [JsonPropertyName("scope")]
     public double? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdRefPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIP in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdRef
@@ -145,7 +162,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetReso
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdSelectorPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetReso
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIP in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdSelector
@@ -175,7 +196,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProviderTargetReso
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerAzureEndpointSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecForProvider
@@ -232,7 +255,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecForProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderCustomHeader
@@ -245,7 +270,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderCustomHea
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderSubnet
@@ -262,7 +289,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderSubnet
     [JsonPropertyName("scope")]
     public double? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdRefPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PublicIP in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdRef
@@ -288,7 +319,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetRes
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PublicIP in network to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdSelector
@@ -318,7 +353,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetRes
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerAzureEndpointSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecInitProvider
@@ -363,7 +400,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecInitProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecProviderConfigRefPolicy
@@ -376,7 +415,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecProviderConfigRef
@@ -389,7 +430,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TrafficManagerAzureEndpointSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpecWriteConnectionSecretToRef
@@ -402,7 +445,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficManagerAzureEndpointSpec defines the desired state of TrafficManagerAzureEndpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointSpec
@@ -431,7 +476,9 @@ public partial class V1beta1TrafficManagerAzureEndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TrafficManagerAzureEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointStatusAtProviderCustomHeader
@@ -444,7 +491,9 @@ public partial class V1beta1TrafficManagerAzureEndpointStatusAtProviderCustomHea
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointStatusAtProviderSubnet
@@ -461,7 +510,9 @@ public partial class V1beta1TrafficManagerAzureEndpointStatusAtProviderSubnet
     [JsonPropertyName("scope")]
     public double? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointStatusAtProvider
@@ -506,7 +557,9 @@ public partial class V1beta1TrafficManagerAzureEndpointStatusAtProvider
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointStatusConditions
@@ -535,7 +588,9 @@ public partial class V1beta1TrafficManagerAzureEndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficManagerAzureEndpointStatus defines the observed state of TrafficManagerAzureEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerAzureEndpointStatus
@@ -552,7 +607,9 @@ public partial class V1beta1TrafficManagerAzureEndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TrafficManagerAzureEndpoint is the Schema for the TrafficManagerAzureEndpoints API. Manages an Azure Endpoint within a Traffic Manager Profile..</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -582,3 +639,4 @@ public partial class V1beta1TrafficManagerAzureEndpoint : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1TrafficManagerAzureEndpointStatus? Status { get; set; }
 }
+#nullable disable

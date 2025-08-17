@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.m.upbound.io;
+#nullable enable
 /// <summary>GatewayAssociationProposal is the Schema for the GatewayAssociationProposals API. Manages a Direct Connect Gateway Association Proposal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GatewayAssociationProposalList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1GatewayAssociationProposal> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderAssociatedGatewayIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderAssociatedG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNGateway in ec2 to populate associatedGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderAssociatedGatewayIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderAssociatedG
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecForProviderAssociatedGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderAssociatedGatewayIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderAssociatedG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNGateway in ec2 to populate associatedGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderAssociatedGatewayIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderAssociatedG
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecForProviderAssociatedGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Gateway in directconnect to populate dxGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayId
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecForProviderDxGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Gateway in directconnect to populate dxGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayId
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecForProviderDxGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOwnerAccountIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Gateway in directconnect to populate dxGatewayOwnerAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOwnerAccountIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOw
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOwnerAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOwnerAccountIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOw
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Gateway in directconnect to populate dxGatewayOwnerAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOwnerAccountIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOw
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecForProviderDxGatewayOwnerAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecForProvider
@@ -274,7 +301,9 @@ public partial class V1beta1GatewayAssociationProposalSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderAssociatedGatewayIdRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderAssociated
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNGateway in ec2 to populate associatedGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderAssociatedGatewayIdRef
@@ -304,7 +335,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderAssociated
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecInitProviderAssociatedGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderAssociatedGatewayIdSelectorPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderAssociated
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNGateway in ec2 to populate associatedGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderAssociatedGatewayIdSelector
@@ -338,7 +373,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderAssociated
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecInitProviderAssociatedGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayIdRefPolicy
@@ -351,7 +388,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Gateway in directconnect to populate dxGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayIdRef
@@ -368,7 +407,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayI
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayIdSelectorPolicy
@@ -381,7 +422,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Gateway in directconnect to populate dxGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayIdSelector
@@ -402,7 +445,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayI
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayOwnerAccountIdRefPolicy
@@ -415,7 +460,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayO
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Gateway in directconnect to populate dxGatewayOwnerAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayOwnerAccountIdRef
@@ -432,7 +479,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayO
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayOwnerAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayOwnerAccountIdSelectorPolicy
@@ -445,7 +494,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayO
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Gateway in directconnect to populate dxGatewayOwnerAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayOwnerAccountIdSelector
@@ -466,7 +517,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayO
     [JsonPropertyName("policy")]
     public V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayOwnerAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecInitProvider
@@ -511,7 +564,9 @@ public partial class V1beta1GatewayAssociationProposalSpecInitProvider
     [JsonPropertyName("dxGatewayOwnerAccountIdSelector")]
     public V1beta1GatewayAssociationProposalSpecInitProviderDxGatewayOwnerAccountIdSelector? DxGatewayOwnerAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecProviderConfigRef
@@ -524,7 +579,9 @@ public partial class V1beta1GatewayAssociationProposalSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpecWriteConnectionSecretToRef
@@ -533,7 +590,9 @@ public partial class V1beta1GatewayAssociationProposalSpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GatewayAssociationProposalSpec defines the desired state of GatewayAssociationProposal</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalSpec
@@ -558,7 +617,9 @@ public partial class V1beta1GatewayAssociationProposalSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GatewayAssociationProposalSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalStatusAtProvider
@@ -595,7 +656,9 @@ public partial class V1beta1GatewayAssociationProposalStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalStatusConditions
@@ -624,7 +687,9 @@ public partial class V1beta1GatewayAssociationProposalStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GatewayAssociationProposalStatus defines the observed state of GatewayAssociationProposal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayAssociationProposalStatus
@@ -641,7 +706,9 @@ public partial class V1beta1GatewayAssociationProposalStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GatewayAssociationProposal is the Schema for the GatewayAssociationProposals API. Manages a Direct Connect Gateway Association Proposal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -671,3 +738,4 @@ public partial class V1beta1GatewayAssociationProposal : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1GatewayAssociationProposalStatus? Status { get; set; }
 }
+#nullable disable

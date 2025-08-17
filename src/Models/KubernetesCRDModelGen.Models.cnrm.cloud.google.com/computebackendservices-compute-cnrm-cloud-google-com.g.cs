@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeBackendServiceList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeBackendService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecBackendGroupInstanceGroupRef
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeBackendServiceSpecBackendGroupInstanceGroupRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecBackendGroupNetworkEndpointGroupRef
@@ -67,7 +72,9 @@ public partial class V1beta1ComputeBackendServiceSpecBackendGroupNetworkEndpoint
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ComputeInstanceGroup or ComputeNetworkEndpointGroup resource. In case of instance group this defines the list of instances that serve traffic. Member virtual machine instances from each instance group must live in the same zone as the instance group itself. No two backends in a backend service are allowed to use same Instance Group resource.  For Network Endpoint Groups this defines list of endpoints. All endpoints of Network Endpoint Group must be hosted on instances located in the same zone as the Network Endpoint Group.  Backend services cannot mix Instance Group and Network Endpoint Group backends.  When the 'load_balancing_scheme' is INTERNAL, only instance groups are supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecBackendGroup
@@ -80,7 +87,9 @@ public partial class V1beta1ComputeBackendServiceSpecBackendGroup
     [JsonPropertyName("networkEndpointGroupRef")]
     public V1beta1ComputeBackendServiceSpecBackendGroupNetworkEndpointGroupRef? NetworkEndpointGroupRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecBackend
@@ -133,7 +142,9 @@ public partial class V1beta1ComputeBackendServiceSpecBackend
     [JsonPropertyName("maxUtilization")]
     public double? MaxUtilization { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecCdnPolicyBypassCacheOnRequestHeaders
@@ -142,7 +153,9 @@ public partial class V1beta1ComputeBackendServiceSpecCdnPolicyBypassCacheOnReque
     [JsonPropertyName("headerName")]
     public string HeaderName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CacheKeyPolicy for this CdnPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecCdnPolicyCacheKeyPolicy
@@ -175,7 +188,9 @@ public partial class V1beta1ComputeBackendServiceSpecCdnPolicyCacheKeyPolicy
     [JsonPropertyName("queryStringWhitelist")]
     public IList<string>? QueryStringWhitelist { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecCdnPolicyNegativeCachingPolicy
@@ -188,7 +203,9 @@ public partial class V1beta1ComputeBackendServiceSpecCdnPolicyNegativeCachingPol
     [JsonPropertyName("ttl")]
     public int? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud CDN configuration for this BackendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecCdnPolicy
@@ -233,7 +250,9 @@ public partial class V1beta1ComputeBackendServiceSpecCdnPolicy
     [JsonPropertyName("signedUrlCacheMaxAgeSec")]
     public int? SignedUrlCacheMaxAgeSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The timeout for new network connections to hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecCircuitBreakersConnectTimeout
@@ -246,7 +265,9 @@ public partial class V1beta1ComputeBackendServiceSpecCircuitBreakersConnectTimeo
     [JsonPropertyName("seconds")]
     public int Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings controlling the volume of connections to a backend service. This field is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecCircuitBreakers
@@ -275,7 +296,9 @@ public partial class V1beta1ComputeBackendServiceSpecCircuitBreakers
     [JsonPropertyName("maxRetries")]
     public int? MaxRetries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Connection Tracking configuration for this BackendService. This is available only for Layer 4 Internal Load Balancing and Network Load Balancing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecConnectionTrackingPolicy
@@ -296,7 +319,9 @@ public partial class V1beta1ComputeBackendServiceSpecConnectionTrackingPolicy
     [JsonPropertyName("trackingMode")]
     public string? TrackingMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lifetime of the cookie.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecConsistentHashHttpCookieTtl
@@ -309,7 +334,9 @@ public partial class V1beta1ComputeBackendServiceSpecConsistentHashHttpCookieTtl
     [JsonPropertyName("seconds")]
     public int Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecConsistentHashHttpCookie
@@ -326,7 +353,9 @@ public partial class V1beta1ComputeBackendServiceSpecConsistentHashHttpCookie
     [JsonPropertyName("ttl")]
     public V1beta1ComputeBackendServiceSpecConsistentHashHttpCookieTtl? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field only applies if the load_balancing_scheme is set to INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is set to MAGLEV or RING_HASH.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecConsistentHash
@@ -343,7 +372,9 @@ public partial class V1beta1ComputeBackendServiceSpecConsistentHash
     [JsonPropertyName("minimumRingSize")]
     public int? MinimumRingSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The resource URL for the edge security policy associated with this backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecEdgeSecurityPolicyRef
@@ -360,7 +391,9 @@ public partial class V1beta1ComputeBackendServiceSpecEdgeSecurityPolicyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy for failovers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecFailoverPolicy
@@ -377,7 +410,9 @@ public partial class V1beta1ComputeBackendServiceSpecFailoverPolicy
     [JsonPropertyName("failoverRatio")]
     public double? FailoverRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecHealthChecksHealthCheckRef
@@ -394,7 +429,9 @@ public partial class V1beta1ComputeBackendServiceSpecHealthChecksHealthCheckRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecHealthChecksHttpHealthCheckRef
@@ -411,7 +448,9 @@ public partial class V1beta1ComputeBackendServiceSpecHealthChecksHttpHealthCheck
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The health check resources for health checking this ComputeBackendService. Currently at most one health check can be specified, and a health check is required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecHealthChecks
@@ -424,7 +463,9 @@ public partial class V1beta1ComputeBackendServiceSpecHealthChecks
     [JsonPropertyName("httpHealthCheckRef")]
     public V1beta1ComputeBackendServiceSpecHealthChecksHttpHealthCheckRef? HttpHealthCheckRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth2 Client ID for IAP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecIapOauth2ClientIdRef
@@ -441,7 +482,9 @@ public partial class V1beta1ComputeBackendServiceSpecIapOauth2ClientIdRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecIapOauth2ClientSecretValueFromSecretKeyRef
@@ -454,7 +497,9 @@ public partial class V1beta1ComputeBackendServiceSpecIapOauth2ClientSecretValueF
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecIapOauth2ClientSecretValueFrom
@@ -463,7 +508,9 @@ public partial class V1beta1ComputeBackendServiceSpecIapOauth2ClientSecretValueF
     [JsonPropertyName("secretKeyRef")]
     public V1beta1ComputeBackendServiceSpecIapOauth2ClientSecretValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth2 Client Secret for IAP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecIapOauth2ClientSecret
@@ -476,7 +523,9 @@ public partial class V1beta1ComputeBackendServiceSpecIapOauth2ClientSecret
     [JsonPropertyName("valueFrom")]
     public V1beta1ComputeBackendServiceSpecIapOauth2ClientSecretValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings for enabling Cloud Identity Aware Proxy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecIap
@@ -497,7 +546,9 @@ public partial class V1beta1ComputeBackendServiceSpecIap
     [JsonPropertyName("oauth2ClientSecretSha256")]
     public string? Oauth2ClientSecretSha256 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for a custom policy implemented by the user and deployed with the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecLocalityLbPoliciesCustomPolicy
@@ -510,7 +561,9 @@ public partial class V1beta1ComputeBackendServiceSpecLocalityLbPoliciesCustomPol
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for a built-in load balancing policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecLocalityLbPoliciesPolicy
@@ -519,7 +572,9 @@ public partial class V1beta1ComputeBackendServiceSpecLocalityLbPoliciesPolicy
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecLocalityLbPolicies
@@ -532,7 +587,9 @@ public partial class V1beta1ComputeBackendServiceSpecLocalityLbPolicies
     [JsonPropertyName("policy")]
     public V1beta1ComputeBackendServiceSpecLocalityLbPoliciesPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecLogConfig
@@ -545,7 +602,9 @@ public partial class V1beta1ComputeBackendServiceSpecLogConfig
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The network to which this backend service belongs.  This field can only be specified when the load balancing scheme is set to INTERNAL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecNetworkRef
@@ -562,7 +621,9 @@ public partial class V1beta1ComputeBackendServiceSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base time that a host is ejected for. The real time is equal to the base time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecOutlierDetectionBaseEjectionTime
@@ -575,7 +636,9 @@ public partial class V1beta1ComputeBackendServiceSpecOutlierDetectionBaseEjectio
     [JsonPropertyName("seconds")]
     public int Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time interval between ejection sweep analysis. This can result in both new ejections as well as hosts being returned to service. Defaults to 10 seconds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecOutlierDetectionInterval
@@ -588,7 +651,9 @@ public partial class V1beta1ComputeBackendServiceSpecOutlierDetectionInterval
     [JsonPropertyName("seconds")]
     public int Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Settings controlling eviction of unhealthy hosts from the load balancing pool. This field is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecOutlierDetection
@@ -637,7 +702,9 @@ public partial class V1beta1ComputeBackendServiceSpecOutlierDetection
     [JsonPropertyName("successRateStdevFactor")]
     public int? SuccessRateStdevFactor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The security policy associated with this backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecSecurityPolicyRef
@@ -654,7 +721,9 @@ public partial class V1beta1ComputeBackendServiceSpecSecurityPolicyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClientTlsPolicy is a resource that specifies how a client should authenticate connections to backends of a service. This resource itself does not affect configuration unless it is attached to a backend service resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecSecuritySettingsClientTLSPolicyRef
@@ -671,7 +740,9 @@ public partial class V1beta1ComputeBackendServiceSpecSecuritySettingsClientTLSPo
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The security settings that apply to this backend service. This field is applicable to either a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecSecuritySettings
@@ -684,7 +755,9 @@ public partial class V1beta1ComputeBackendServiceSpecSecuritySettings
     [JsonPropertyName("subjectAltNames")]
     public IList<string> SubjectAltNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing and Internal HTTP(S) load balancing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecSubsetting
@@ -693,7 +766,9 @@ public partial class V1beta1ComputeBackendServiceSpecSubsetting
     [JsonPropertyName("policy")]
     public string Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpec
@@ -826,7 +901,9 @@ public partial class V1beta1ComputeBackendServiceSpec
     [JsonPropertyName("timeoutSec")]
     public int? TimeoutSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceStatusConditions
@@ -851,7 +928,9 @@ public partial class V1beta1ComputeBackendServiceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceStatus
@@ -880,7 +959,9 @@ public partial class V1beta1ComputeBackendServiceStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -910,3 +991,4 @@ public partial class V1beta1ComputeBackendService : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ComputeBackendServiceStatus? Status { get; set; }
 }
+#nullable disable

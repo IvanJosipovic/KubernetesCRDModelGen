@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsub.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Subscription is the Schema for the Subscriptions API. A named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SubscriptionList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1Subscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAccountEmailRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAcco
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAccountEmailRef
@@ -63,7 +68,9 @@ public partial class V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAcco
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAccountEmailSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAcco
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAccountEmailSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAcco
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecForProviderBigqueryConfigServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If delivery to BigQuery is used with this subscription, this field is used to configure it. Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined. If all three are empty, then the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderBigqueryConfig
@@ -134,7 +145,9 @@ public partial class V1beta1SubscriptionSpecForProviderBigqueryConfig
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set, message data will be written to Cloud Storage in Avro format. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigAvroConfig
@@ -147,7 +160,9 @@ public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigAvroCon
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailRefPolicy
@@ -160,7 +175,9 @@ public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigService
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailRef
@@ -177,7 +194,9 @@ public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigService
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailSelectorPolicy
@@ -190,7 +209,9 @@ public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigService
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailSelector
@@ -211,7 +232,9 @@ public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigService
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If delivery to Cloud Storage is used with this subscription, this field is used to configure it. Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined. If all three are empty, then the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfig
@@ -260,7 +283,9 @@ public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfig
     [JsonPropertyName("serviceAccountEmailSelector")]
     public V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicRefPolicy
@@ -273,7 +298,9 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLette
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate deadLetterTopic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicRef
@@ -290,7 +317,9 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLette
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicSelectorPolicy
@@ -303,7 +332,9 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLette
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate deadLetterTopic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicSelector
@@ -324,7 +355,9 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLette
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecForProviderDeadLetterPolicyDeadLetterTopicSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicy
@@ -345,7 +378,9 @@ public partial class V1beta1SubscriptionSpecForProviderDeadLetterPolicy
     [JsonPropertyName("maxDeliveryAttempts")]
     public double? MaxDeliveryAttempts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used.  If it is set but ttl is "", the resource never expires.  The minimum allowed value for expirationPolicy.ttl is 1 day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderExpirationPolicy
@@ -354,7 +389,9 @@ public partial class V1beta1SubscriptionSpecForProviderExpirationPolicy
     [JsonPropertyName("ttl")]
     public string? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderMessageTransformsJavascriptUdf
@@ -367,7 +404,9 @@ public partial class V1beta1SubscriptionSpecForProviderMessageTransformsJavascri
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderMessageTransforms
@@ -380,7 +419,9 @@ public partial class V1beta1SubscriptionSpecForProviderMessageTransforms
     [JsonPropertyName("javascriptUdf")]
     public V1beta1SubscriptionSpecForProviderMessageTransformsJavascriptUdf? JavascriptUdf { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When set, the payload to the push endpoint is not wrapped.Sets the data field as the HTTP body for delivery. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderPushConfigNoWrapper
@@ -389,7 +430,9 @@ public partial class V1beta1SubscriptionSpecForProviderPushConfigNoWrapper
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, Pub/Sub will generate and attach an OIDC JWT token as an Authorization header in the HTTP request for every pushed message. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderPushConfigOidcToken
@@ -402,7 +445,9 @@ public partial class V1beta1SubscriptionSpecForProviderPushConfigOidcToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderPushConfig
@@ -423,7 +468,9 @@ public partial class V1beta1SubscriptionSpecForProviderPushConfig
     [JsonPropertyName("pushEndpoint")]
     public string? PushEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderRetryPolicy
@@ -436,7 +483,9 @@ public partial class V1beta1SubscriptionSpecForProviderRetryPolicy
     [JsonPropertyName("minimumBackoff")]
     public string? MinimumBackoff { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderTopicRefPolicy
@@ -449,7 +498,9 @@ public partial class V1beta1SubscriptionSpecForProviderTopicRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderTopicRef
@@ -466,7 +517,9 @@ public partial class V1beta1SubscriptionSpecForProviderTopicRef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecForProviderTopicRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderTopicSelectorPolicy
@@ -479,7 +532,9 @@ public partial class V1beta1SubscriptionSpecForProviderTopicSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderTopicSelector
@@ -500,7 +555,9 @@ public partial class V1beta1SubscriptionSpecForProviderTopicSelector
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecForProviderTopicSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProvider
@@ -577,7 +634,9 @@ public partial class V1beta1SubscriptionSpecForProvider
     [JsonPropertyName("topicSelector")]
     public V1beta1SubscriptionSpecForProviderTopicSelector? TopicSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAccountEmailRefPolicy
@@ -590,7 +649,9 @@ public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAcc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAccountEmailRef
@@ -607,7 +668,9 @@ public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAcc
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAccountEmailSelectorPolicy
@@ -620,7 +683,9 @@ public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAcc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAccountEmailSelector
@@ -641,7 +706,9 @@ public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAcc
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecInitProviderBigqueryConfigServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If delivery to BigQuery is used with this subscription, this field is used to configure it. Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined. If all three are empty, then the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfig
@@ -678,7 +745,9 @@ public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfig
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set, message data will be written to Cloud Storage in Avro format. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigAvroConfig
@@ -691,7 +760,9 @@ public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigAvroCo
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailRefPolicy
@@ -704,7 +775,9 @@ public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailRef
@@ -721,7 +794,9 @@ public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServic
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailSelectorPolicy
@@ -734,7 +809,9 @@ public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailSelector
@@ -755,7 +832,9 @@ public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServic
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If delivery to Cloud Storage is used with this subscription, this field is used to configure it. Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined. If all three are empty, then the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfig
@@ -804,7 +883,9 @@ public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfig
     [JsonPropertyName("serviceAccountEmailSelector")]
     public V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicRefPolicy
@@ -817,7 +898,9 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLett
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate deadLetterTopic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicRef
@@ -834,7 +917,9 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLett
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicSelectorPolicy
@@ -847,7 +932,9 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLett
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate deadLetterTopic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicSelector
@@ -868,7 +955,9 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLett
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecInitProviderDeadLetterPolicyDeadLetterTopicSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicy
@@ -889,7 +978,9 @@ public partial class V1beta1SubscriptionSpecInitProviderDeadLetterPolicy
     [JsonPropertyName("maxDeliveryAttempts")]
     public double? MaxDeliveryAttempts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used.  If it is set but ttl is "", the resource never expires.  The minimum allowed value for expirationPolicy.ttl is 1 day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderExpirationPolicy
@@ -898,7 +989,9 @@ public partial class V1beta1SubscriptionSpecInitProviderExpirationPolicy
     [JsonPropertyName("ttl")]
     public string? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderMessageTransformsJavascriptUdf
@@ -911,7 +1004,9 @@ public partial class V1beta1SubscriptionSpecInitProviderMessageTransformsJavascr
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderMessageTransforms
@@ -924,7 +1019,9 @@ public partial class V1beta1SubscriptionSpecInitProviderMessageTransforms
     [JsonPropertyName("javascriptUdf")]
     public V1beta1SubscriptionSpecInitProviderMessageTransformsJavascriptUdf? JavascriptUdf { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When set, the payload to the push endpoint is not wrapped.Sets the data field as the HTTP body for delivery. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderPushConfigNoWrapper
@@ -933,7 +1030,9 @@ public partial class V1beta1SubscriptionSpecInitProviderPushConfigNoWrapper
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, Pub/Sub will generate and attach an OIDC JWT token as an Authorization header in the HTTP request for every pushed message. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderPushConfigOidcToken
@@ -946,7 +1045,9 @@ public partial class V1beta1SubscriptionSpecInitProviderPushConfigOidcToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderPushConfig
@@ -967,7 +1068,9 @@ public partial class V1beta1SubscriptionSpecInitProviderPushConfig
     [JsonPropertyName("pushEndpoint")]
     public string? PushEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderRetryPolicy
@@ -980,7 +1083,9 @@ public partial class V1beta1SubscriptionSpecInitProviderRetryPolicy
     [JsonPropertyName("minimumBackoff")]
     public string? MinimumBackoff { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderTopicRefPolicy
@@ -993,7 +1098,9 @@ public partial class V1beta1SubscriptionSpecInitProviderTopicRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderTopicRef
@@ -1010,7 +1117,9 @@ public partial class V1beta1SubscriptionSpecInitProviderTopicRef
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecInitProviderTopicRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderTopicSelectorPolicy
@@ -1023,7 +1132,9 @@ public partial class V1beta1SubscriptionSpecInitProviderTopicSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in pubsub to populate topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderTopicSelector
@@ -1044,7 +1155,9 @@ public partial class V1beta1SubscriptionSpecInitProviderTopicSelector
     [JsonPropertyName("policy")]
     public V1beta1SubscriptionSpecInitProviderTopicSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProvider
@@ -1121,7 +1234,9 @@ public partial class V1beta1SubscriptionSpecInitProvider
     [JsonPropertyName("topicSelector")]
     public V1beta1SubscriptionSpecInitProviderTopicSelector? TopicSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecProviderConfigRef
@@ -1134,7 +1249,9 @@ public partial class V1beta1SubscriptionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecWriteConnectionSecretToRef
@@ -1143,7 +1260,9 @@ public partial class V1beta1SubscriptionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionSpec defines the desired state of Subscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpec
@@ -1168,7 +1287,9 @@ public partial class V1beta1SubscriptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If delivery to BigQuery is used with this subscription, this field is used to configure it. Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined. If all three are empty, then the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderBigqueryConfig
@@ -1197,7 +1318,9 @@ public partial class V1beta1SubscriptionStatusAtProviderBigqueryConfig
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If set, message data will be written to Cloud Storage in Avro format. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfigAvroConfig
@@ -1210,7 +1333,9 @@ public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfigAvroCo
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If delivery to Cloud Storage is used with this subscription, this field is used to configure it. Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined. If all three are empty, then the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfig
@@ -1255,7 +1380,9 @@ public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfig
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderDeadLetterPolicy
@@ -1268,7 +1395,9 @@ public partial class V1beta1SubscriptionStatusAtProviderDeadLetterPolicy
     [JsonPropertyName("maxDeliveryAttempts")]
     public double? MaxDeliveryAttempts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used.  If it is set but ttl is "", the resource never expires.  The minimum allowed value for expirationPolicy.ttl is 1 day. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderExpirationPolicy
@@ -1277,7 +1406,9 @@ public partial class V1beta1SubscriptionStatusAtProviderExpirationPolicy
     [JsonPropertyName("ttl")]
     public string? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderMessageTransformsJavascriptUdf
@@ -1290,7 +1421,9 @@ public partial class V1beta1SubscriptionStatusAtProviderMessageTransformsJavascr
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderMessageTransforms
@@ -1303,7 +1436,9 @@ public partial class V1beta1SubscriptionStatusAtProviderMessageTransforms
     [JsonPropertyName("javascriptUdf")]
     public V1beta1SubscriptionStatusAtProviderMessageTransformsJavascriptUdf? JavascriptUdf { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>When set, the payload to the push endpoint is not wrapped.Sets the data field as the HTTP body for delivery. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderPushConfigNoWrapper
@@ -1312,7 +1447,9 @@ public partial class V1beta1SubscriptionStatusAtProviderPushConfigNoWrapper
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, Pub/Sub will generate and attach an OIDC JWT token as an Authorization header in the HTTP request for every pushed message. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderPushConfigOidcToken
@@ -1325,7 +1462,9 @@ public partial class V1beta1SubscriptionStatusAtProviderPushConfigOidcToken
     [JsonPropertyName("serviceAccountEmail")]
     public string? ServiceAccountEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If push delivery is used with this subscription, this field is used to configure it. An empty pushConfig signifies that the subscriber will pull and ack messages using API methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderPushConfig
@@ -1346,7 +1485,9 @@ public partial class V1beta1SubscriptionStatusAtProviderPushConfig
     [JsonPropertyName("pushEndpoint")]
     public string? PushEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderRetryPolicy
@@ -1359,7 +1500,9 @@ public partial class V1beta1SubscriptionStatusAtProviderRetryPolicy
     [JsonPropertyName("minimumBackoff")]
     public string? MinimumBackoff { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProvider
@@ -1440,7 +1583,9 @@ public partial class V1beta1SubscriptionStatusAtProvider
     [JsonPropertyName("topic")]
     public string? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusConditions
@@ -1469,7 +1614,9 @@ public partial class V1beta1SubscriptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SubscriptionStatus defines the observed state of Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatus
@@ -1486,7 +1633,9 @@ public partial class V1beta1SubscriptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subscription is the Schema for the Subscriptions API. A named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1516,3 +1665,4 @@ public partial class V1beta1Subscription : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1SubscriptionStatus? Status { get; set; }
 }
+#nullable disable

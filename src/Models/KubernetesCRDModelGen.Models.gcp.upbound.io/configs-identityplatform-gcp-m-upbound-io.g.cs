@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Config is the Schema for the Configs API. Identity Platform configuration for a Cloud project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConfigList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Config> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The user credentials to include in the JWT payload that is sent to the registered Blocking Functions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderBlockingFunctionsForwardInboundCredentials
@@ -50,7 +53,9 @@ public partial class V1beta1ConfigSpecForProviderBlockingFunctionsForwardInbound
     [JsonPropertyName("refreshToken")]
     public bool? RefreshToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderBlockingFunctionsTriggers
@@ -63,7 +68,9 @@ public partial class V1beta1ConfigSpecForProviderBlockingFunctionsTriggers
     [JsonPropertyName("functionUri")]
     public string? FunctionUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to blocking functions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderBlockingFunctions
@@ -76,7 +83,9 @@ public partial class V1beta1ConfigSpecForProviderBlockingFunctions
     [JsonPropertyName("triggers")]
     public IList<V1beta1ConfigSpecForProviderBlockingFunctionsTriggers>? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderClientPermissions
@@ -89,7 +98,9 @@ public partial class V1beta1ConfigSpecForProviderClientPermissions
     [JsonPropertyName("disabledUserSignup")]
     public bool? DisabledUserSignup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options related to how clients making requests on behalf of a project should be configured. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderClient
@@ -98,7 +109,9 @@ public partial class V1beta1ConfigSpecForProviderClient
     [JsonPropertyName("permissions")]
     public V1beta1ConfigSpecForProviderClientPermissions? Permissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TOTP MFA provider config for this project. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderMfaProviderConfigsTotpProviderConfig
@@ -107,7 +120,9 @@ public partial class V1beta1ConfigSpecForProviderMfaProviderConfigsTotpProviderC
     [JsonPropertyName("adjacentIntervals")]
     public double? AdjacentIntervals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderMfaProviderConfigs
@@ -120,7 +135,9 @@ public partial class V1beta1ConfigSpecForProviderMfaProviderConfigs
     [JsonPropertyName("totpProviderConfig")]
     public V1beta1ConfigSpecForProviderMfaProviderConfigsTotpProviderConfig? TotpProviderConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options related to how clients making requests on behalf of a project should be configured. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderMfa
@@ -137,7 +154,9 @@ public partial class V1beta1ConfigSpecForProviderMfa
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for logging requests made to this project to Stackdriver Logging Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderMonitoringRequestLogging
@@ -146,7 +165,9 @@ public partial class V1beta1ConfigSpecForProviderMonitoringRequestLogging
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to monitoring project activity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderMonitoring
@@ -155,7 +176,9 @@ public partial class V1beta1ConfigSpecForProviderMonitoring
     [JsonPropertyName("requestLogging")]
     public V1beta1ConfigSpecForProviderMonitoringRequestLogging? RequestLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to multi-tenant functionality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderMultiTenant
@@ -168,7 +191,9 @@ public partial class V1beta1ConfigSpecForProviderMultiTenant
     [JsonPropertyName("defaultTenantLocation")]
     public string? DefaultTenantLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderProjectRefPolicy
@@ -181,7 +206,9 @@ public partial class V1beta1ConfigSpecForProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderProjectRef
@@ -198,7 +225,9 @@ public partial class V1beta1ConfigSpecForProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigSpecForProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderProjectSelectorPolicy
@@ -211,7 +240,9 @@ public partial class V1beta1ConfigSpecForProviderProjectSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderProjectSelector
@@ -232,7 +263,9 @@ public partial class V1beta1ConfigSpecForProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1ConfigSpecForProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP. None of quota, startTime, or quotaDuration can be skipped. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderQuotaSignUpQuotaConfig
@@ -249,7 +282,9 @@ public partial class V1beta1ConfigSpecForProviderQuotaSignUpQuotaConfig
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to quotas. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderQuota
@@ -258,7 +293,9 @@ public partial class V1beta1ConfigSpecForProviderQuota
     [JsonPropertyName("signUpQuotaConfig")]
     public V1beta1ConfigSpecForProviderQuotaSignUpQuotaConfig? SignUpQuotaConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating an anonymous user. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderSignInAnonymous
@@ -267,7 +304,9 @@ public partial class V1beta1ConfigSpecForProviderSignInAnonymous
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating a user by their email address. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderSignInEmail
@@ -280,7 +319,9 @@ public partial class V1beta1ConfigSpecForProviderSignInEmail
     [JsonPropertyName("passwordRequired")]
     public bool? PasswordRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticated a user by their phone number. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderSignInPhoneNumber
@@ -293,7 +334,9 @@ public partial class V1beta1ConfigSpecForProviderSignInPhoneNumber
     [JsonPropertyName("testPhoneNumbers")]
     public IDictionary<string, string>? TestPhoneNumbers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to local sign in methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderSignIn
@@ -314,7 +357,9 @@ public partial class V1beta1ConfigSpecForProviderSignIn
     [JsonPropertyName("phoneNumber")]
     public V1beta1ConfigSpecForProviderSignInPhoneNumber? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy of allowing SMS to every region by default and adding disallowed regions to a disallow list. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderSmsRegionConfigAllowByDefault
@@ -323,7 +368,9 @@ public partial class V1beta1ConfigSpecForProviderSmsRegionConfigAllowByDefault
     [JsonPropertyName("disallowedRegions")]
     public IList<string>? DisallowedRegions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy of only allowing regions by explicitly adding them to an allowlist. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderSmsRegionConfigAllowlistOnly
@@ -332,7 +379,9 @@ public partial class V1beta1ConfigSpecForProviderSmsRegionConfigAllowlistOnly
     [JsonPropertyName("allowedRegions")]
     public IList<string>? AllowedRegions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderSmsRegionConfig
@@ -345,7 +394,9 @@ public partial class V1beta1ConfigSpecForProviderSmsRegionConfig
     [JsonPropertyName("allowlistOnly")]
     public V1beta1ConfigSpecForProviderSmsRegionConfigAllowlistOnly? AllowlistOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProvider
@@ -402,7 +453,9 @@ public partial class V1beta1ConfigSpecForProvider
     [JsonPropertyName("smsRegionConfig")]
     public V1beta1ConfigSpecForProviderSmsRegionConfig? SmsRegionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The user credentials to include in the JWT payload that is sent to the registered Blocking Functions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderBlockingFunctionsForwardInboundCredentials
@@ -419,7 +472,9 @@ public partial class V1beta1ConfigSpecInitProviderBlockingFunctionsForwardInboun
     [JsonPropertyName("refreshToken")]
     public bool? RefreshToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderBlockingFunctionsTriggers
@@ -432,7 +487,9 @@ public partial class V1beta1ConfigSpecInitProviderBlockingFunctionsTriggers
     [JsonPropertyName("functionUri")]
     public string? FunctionUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to blocking functions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderBlockingFunctions
@@ -445,7 +502,9 @@ public partial class V1beta1ConfigSpecInitProviderBlockingFunctions
     [JsonPropertyName("triggers")]
     public IList<V1beta1ConfigSpecInitProviderBlockingFunctionsTriggers>? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderClientPermissions
@@ -458,7 +517,9 @@ public partial class V1beta1ConfigSpecInitProviderClientPermissions
     [JsonPropertyName("disabledUserSignup")]
     public bool? DisabledUserSignup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options related to how clients making requests on behalf of a project should be configured. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderClient
@@ -467,7 +528,9 @@ public partial class V1beta1ConfigSpecInitProviderClient
     [JsonPropertyName("permissions")]
     public V1beta1ConfigSpecInitProviderClientPermissions? Permissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TOTP MFA provider config for this project. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderMfaProviderConfigsTotpProviderConfig
@@ -476,7 +539,9 @@ public partial class V1beta1ConfigSpecInitProviderMfaProviderConfigsTotpProvider
     [JsonPropertyName("adjacentIntervals")]
     public double? AdjacentIntervals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderMfaProviderConfigs
@@ -489,7 +554,9 @@ public partial class V1beta1ConfigSpecInitProviderMfaProviderConfigs
     [JsonPropertyName("totpProviderConfig")]
     public V1beta1ConfigSpecInitProviderMfaProviderConfigsTotpProviderConfig? TotpProviderConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options related to how clients making requests on behalf of a project should be configured. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderMfa
@@ -506,7 +573,9 @@ public partial class V1beta1ConfigSpecInitProviderMfa
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for logging requests made to this project to Stackdriver Logging Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderMonitoringRequestLogging
@@ -515,7 +584,9 @@ public partial class V1beta1ConfigSpecInitProviderMonitoringRequestLogging
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to monitoring project activity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderMonitoring
@@ -524,7 +595,9 @@ public partial class V1beta1ConfigSpecInitProviderMonitoring
     [JsonPropertyName("requestLogging")]
     public V1beta1ConfigSpecInitProviderMonitoringRequestLogging? RequestLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to multi-tenant functionality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderMultiTenant
@@ -537,7 +610,9 @@ public partial class V1beta1ConfigSpecInitProviderMultiTenant
     [JsonPropertyName("defaultTenantLocation")]
     public string? DefaultTenantLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderProjectRefPolicy
@@ -550,7 +625,9 @@ public partial class V1beta1ConfigSpecInitProviderProjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderProjectRef
@@ -567,7 +644,9 @@ public partial class V1beta1ConfigSpecInitProviderProjectRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigSpecInitProviderProjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderProjectSelectorPolicy
@@ -580,7 +659,9 @@ public partial class V1beta1ConfigSpecInitProviderProjectSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Project in cloudplatform to populate project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderProjectSelector
@@ -601,7 +682,9 @@ public partial class V1beta1ConfigSpecInitProviderProjectSelector
     [JsonPropertyName("policy")]
     public V1beta1ConfigSpecInitProviderProjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP. None of quota, startTime, or quotaDuration can be skipped. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderQuotaSignUpQuotaConfig
@@ -618,7 +701,9 @@ public partial class V1beta1ConfigSpecInitProviderQuotaSignUpQuotaConfig
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to quotas. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderQuota
@@ -627,7 +712,9 @@ public partial class V1beta1ConfigSpecInitProviderQuota
     [JsonPropertyName("signUpQuotaConfig")]
     public V1beta1ConfigSpecInitProviderQuotaSignUpQuotaConfig? SignUpQuotaConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating an anonymous user. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderSignInAnonymous
@@ -636,7 +723,9 @@ public partial class V1beta1ConfigSpecInitProviderSignInAnonymous
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating a user by their email address. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderSignInEmail
@@ -649,7 +738,9 @@ public partial class V1beta1ConfigSpecInitProviderSignInEmail
     [JsonPropertyName("passwordRequired")]
     public bool? PasswordRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticated a user by their phone number. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderSignInPhoneNumber
@@ -662,7 +753,9 @@ public partial class V1beta1ConfigSpecInitProviderSignInPhoneNumber
     [JsonPropertyName("testPhoneNumbers")]
     public IDictionary<string, string>? TestPhoneNumbers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to local sign in methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderSignIn
@@ -683,7 +776,9 @@ public partial class V1beta1ConfigSpecInitProviderSignIn
     [JsonPropertyName("phoneNumber")]
     public V1beta1ConfigSpecInitProviderSignInPhoneNumber? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy of allowing SMS to every region by default and adding disallowed regions to a disallow list. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderSmsRegionConfigAllowByDefault
@@ -692,7 +787,9 @@ public partial class V1beta1ConfigSpecInitProviderSmsRegionConfigAllowByDefault
     [JsonPropertyName("disallowedRegions")]
     public IList<string>? DisallowedRegions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy of only allowing regions by explicitly adding them to an allowlist. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderSmsRegionConfigAllowlistOnly
@@ -701,7 +798,9 @@ public partial class V1beta1ConfigSpecInitProviderSmsRegionConfigAllowlistOnly
     [JsonPropertyName("allowedRegions")]
     public IList<string>? AllowedRegions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProviderSmsRegionConfig
@@ -714,7 +813,9 @@ public partial class V1beta1ConfigSpecInitProviderSmsRegionConfig
     [JsonPropertyName("allowlistOnly")]
     public V1beta1ConfigSpecInitProviderSmsRegionConfigAllowlistOnly? AllowlistOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecInitProvider
@@ -771,7 +872,9 @@ public partial class V1beta1ConfigSpecInitProvider
     [JsonPropertyName("smsRegionConfig")]
     public V1beta1ConfigSpecInitProviderSmsRegionConfig? SmsRegionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecProviderConfigRef
@@ -784,7 +887,9 @@ public partial class V1beta1ConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecWriteConnectionSecretToRef
@@ -793,7 +898,9 @@ public partial class V1beta1ConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigSpec defines the desired state of Config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpec
@@ -818,7 +925,9 @@ public partial class V1beta1ConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The user credentials to include in the JWT payload that is sent to the registered Blocking Functions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderBlockingFunctionsForwardInboundCredentials
@@ -835,7 +944,9 @@ public partial class V1beta1ConfigStatusAtProviderBlockingFunctionsForwardInboun
     [JsonPropertyName("refreshToken")]
     public bool? RefreshToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderBlockingFunctionsTriggers
@@ -852,7 +963,9 @@ public partial class V1beta1ConfigStatusAtProviderBlockingFunctionsTriggers
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to blocking functions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderBlockingFunctions
@@ -865,7 +978,9 @@ public partial class V1beta1ConfigStatusAtProviderBlockingFunctions
     [JsonPropertyName("triggers")]
     public IList<V1beta1ConfigStatusAtProviderBlockingFunctionsTriggers>? Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderClientPermissions
@@ -878,7 +993,9 @@ public partial class V1beta1ConfigStatusAtProviderClientPermissions
     [JsonPropertyName("disabledUserSignup")]
     public bool? DisabledUserSignup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options related to how clients making requests on behalf of a project should be configured. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderClient
@@ -891,7 +1008,9 @@ public partial class V1beta1ConfigStatusAtProviderClient
     [JsonPropertyName("permissions")]
     public V1beta1ConfigStatusAtProviderClientPermissions? Permissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TOTP MFA provider config for this project. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderMfaProviderConfigsTotpProviderConfig
@@ -900,7 +1019,9 @@ public partial class V1beta1ConfigStatusAtProviderMfaProviderConfigsTotpProvider
     [JsonPropertyName("adjacentIntervals")]
     public double? AdjacentIntervals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderMfaProviderConfigs
@@ -913,7 +1034,9 @@ public partial class V1beta1ConfigStatusAtProviderMfaProviderConfigs
     [JsonPropertyName("totpProviderConfig")]
     public V1beta1ConfigStatusAtProviderMfaProviderConfigsTotpProviderConfig? TotpProviderConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options related to how clients making requests on behalf of a project should be configured. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderMfa
@@ -930,7 +1053,9 @@ public partial class V1beta1ConfigStatusAtProviderMfa
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for logging requests made to this project to Stackdriver Logging Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderMonitoringRequestLogging
@@ -939,7 +1064,9 @@ public partial class V1beta1ConfigStatusAtProviderMonitoringRequestLogging
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to monitoring project activity. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderMonitoring
@@ -948,7 +1075,9 @@ public partial class V1beta1ConfigStatusAtProviderMonitoring
     [JsonPropertyName("requestLogging")]
     public V1beta1ConfigStatusAtProviderMonitoringRequestLogging? RequestLogging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to multi-tenant functionality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderMultiTenant
@@ -961,7 +1090,9 @@ public partial class V1beta1ConfigStatusAtProviderMultiTenant
     [JsonPropertyName("defaultTenantLocation")]
     public string? DefaultTenantLocation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP. None of quota, startTime, or quotaDuration can be skipped. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderQuotaSignUpQuotaConfig
@@ -978,7 +1109,9 @@ public partial class V1beta1ConfigStatusAtProviderQuotaSignUpQuotaConfig
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to quotas. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderQuota
@@ -987,7 +1120,9 @@ public partial class V1beta1ConfigStatusAtProviderQuota
     [JsonPropertyName("signUpQuotaConfig")]
     public V1beta1ConfigStatusAtProviderQuotaSignUpQuotaConfig? SignUpQuotaConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating an anonymous user. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderSignInAnonymous
@@ -996,7 +1131,9 @@ public partial class V1beta1ConfigStatusAtProviderSignInAnonymous
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating a user by their email address. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderSignInEmail
@@ -1009,7 +1146,9 @@ public partial class V1beta1ConfigStatusAtProviderSignInEmail
     [JsonPropertyName("passwordRequired")]
     public bool? PasswordRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderSignInHashConfig
@@ -1034,7 +1173,9 @@ public partial class V1beta1ConfigStatusAtProviderSignInHashConfig
     [JsonPropertyName("signerKey")]
     public string? SignerKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticated a user by their phone number. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderSignInPhoneNumber
@@ -1047,7 +1188,9 @@ public partial class V1beta1ConfigStatusAtProviderSignInPhoneNumber
     [JsonPropertyName("testPhoneNumbers")]
     public IDictionary<string, string>? TestPhoneNumbers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to local sign in methods. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderSignIn
@@ -1072,7 +1215,9 @@ public partial class V1beta1ConfigStatusAtProviderSignIn
     [JsonPropertyName("phoneNumber")]
     public V1beta1ConfigStatusAtProviderSignInPhoneNumber? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy of allowing SMS to every region by default and adding disallowed regions to a disallow list. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderSmsRegionConfigAllowByDefault
@@ -1081,7 +1226,9 @@ public partial class V1beta1ConfigStatusAtProviderSmsRegionConfigAllowByDefault
     [JsonPropertyName("disallowedRegions")]
     public IList<string>? DisallowedRegions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A policy of only allowing regions by explicitly adding them to an allowlist. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderSmsRegionConfigAllowlistOnly
@@ -1090,7 +1237,9 @@ public partial class V1beta1ConfigStatusAtProviderSmsRegionConfigAllowlistOnly
     [JsonPropertyName("allowedRegions")]
     public IList<string>? AllowedRegions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProviderSmsRegionConfig
@@ -1103,7 +1252,9 @@ public partial class V1beta1ConfigStatusAtProviderSmsRegionConfig
     [JsonPropertyName("allowlistOnly")]
     public V1beta1ConfigStatusAtProviderSmsRegionConfigAllowlistOnly? AllowlistOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusAtProvider
@@ -1160,7 +1311,9 @@ public partial class V1beta1ConfigStatusAtProvider
     [JsonPropertyName("smsRegionConfig")]
     public V1beta1ConfigStatusAtProviderSmsRegionConfig? SmsRegionConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatusConditions
@@ -1189,7 +1342,9 @@ public partial class V1beta1ConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigStatus defines the observed state of Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigStatus
@@ -1206,7 +1361,9 @@ public partial class V1beta1ConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config is the Schema for the Configs API. Identity Platform configuration for a Cloud project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1236,3 +1393,4 @@ public partial class V1beta1Config : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1ConfigStatus? Status { get; set; }
 }
+#nullable disable

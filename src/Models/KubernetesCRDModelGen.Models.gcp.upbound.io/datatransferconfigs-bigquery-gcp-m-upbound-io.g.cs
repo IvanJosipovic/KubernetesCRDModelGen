@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.m.upbound.io;
+#nullable enable
 /// <summary>DataTransferConfig is the Schema for the DataTransferConfigs API. Represents a data transfer configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataTransferConfigList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1DataTransferConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate destinationDatasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetI
     [JsonPropertyName("policy")]
     public V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate destinationDatasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderDestinationDatasetI
     [JsonPropertyName("policy")]
     public V1beta1DataTransferConfigSpecForProviderDestinationDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderEmailPreferences
@@ -106,7 +117,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderEmailPreferences
     [JsonPropertyName("enableFailureEmail")]
     public bool? EnableFailureEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameRef
@@ -136,7 +151,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigura
     [JsonPropertyName("policy")]
     public V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigura
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameSelector
@@ -170,7 +189,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigura
     [JsonPropertyName("policy")]
     public V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the encryption configuration for a transfer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfiguration
@@ -187,7 +208,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigura
     [JsonPropertyName("kmsKeyNameSelector")]
     public V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options customizing the data transfer schedule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderScheduleOptions
@@ -204,7 +227,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderScheduleOptions
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A LocalSecretKeySelector is a reference to a secret key in the same namespace with the referencing object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecretAccessKeySecretRef
@@ -217,7 +242,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Different parameters are configured primarily using the the params field on this resource. This block contains the parameters which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key in the params map in the api request. Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParams
@@ -234,7 +261,9 @@ public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParams
     [JsonPropertyName("secretAccessKeyWoVersion")]
     public double? SecretAccessKeyWoVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProvider
@@ -307,7 +336,9 @@ public partial class V1beta1DataTransferConfigSpecForProvider
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdRefPolicy
@@ -320,7 +351,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDataset
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Dataset in bigquery to populate destinationDatasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdRef
@@ -337,7 +370,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDataset
     [JsonPropertyName("policy")]
     public V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdSelectorPolicy
@@ -350,7 +385,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDataset
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Dataset in bigquery to populate destinationDatasetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdSelector
@@ -371,7 +408,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderDestinationDataset
     [JsonPropertyName("policy")]
     public V1beta1DataTransferConfigSpecInitProviderDestinationDatasetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderEmailPreferences
@@ -380,7 +419,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderEmailPreferences
     [JsonPropertyName("enableFailureEmail")]
     public bool? EnableFailureEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameRefPolicy
@@ -393,7 +434,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameRef
@@ -410,7 +453,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigur
     [JsonPropertyName("policy")]
     public V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameSelectorPolicy
@@ -423,7 +468,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigur
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameSelector
@@ -444,7 +491,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigur
     [JsonPropertyName("policy")]
     public V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the encryption configuration for a transfer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfiguration
@@ -461,7 +510,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigur
     [JsonPropertyName("kmsKeyNameSelector")]
     public V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options customizing the data transfer schedule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderScheduleOptions
@@ -478,7 +529,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderScheduleOptions
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A LocalSecretKeySelector is a reference to a secret key in the same namespace with the referencing object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderSensitiveParamsSecretAccessKeySecretRef
@@ -491,7 +544,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderSensitiveParamsSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Different parameters are configured primarily using the the params field on this resource. This block contains the parameters which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key in the params map in the api request. Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderSensitiveParams
@@ -508,7 +563,9 @@ public partial class V1beta1DataTransferConfigSpecInitProviderSensitiveParams
     [JsonPropertyName("secretAccessKeyWoVersion")]
     public double? SecretAccessKeyWoVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProvider
@@ -581,7 +638,9 @@ public partial class V1beta1DataTransferConfigSpecInitProvider
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecProviderConfigRef
@@ -594,7 +653,9 @@ public partial class V1beta1DataTransferConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecWriteConnectionSecretToRef
@@ -603,7 +664,9 @@ public partial class V1beta1DataTransferConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataTransferConfigSpec defines the desired state of DataTransferConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpec
@@ -628,7 +691,9 @@ public partial class V1beta1DataTransferConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataTransferConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatusAtProviderEmailPreferences
@@ -637,7 +702,9 @@ public partial class V1beta1DataTransferConfigStatusAtProviderEmailPreferences
     [JsonPropertyName("enableFailureEmail")]
     public bool? EnableFailureEmail { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the encryption configuration for a transfer. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatusAtProviderEncryptionConfiguration
@@ -646,7 +713,9 @@ public partial class V1beta1DataTransferConfigStatusAtProviderEncryptionConfigur
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Options customizing the data transfer schedule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatusAtProviderScheduleOptions
@@ -663,7 +732,9 @@ public partial class V1beta1DataTransferConfigStatusAtProviderScheduleOptions
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Different parameters are configured primarily using the the params field on this resource. This block contains the parameters which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key in the params map in the api request. Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatusAtProviderSensitiveParams
@@ -676,7 +747,9 @@ public partial class V1beta1DataTransferConfigStatusAtProviderSensitiveParams
     [JsonPropertyName("secretAccessKeyWoVersion")]
     public double? SecretAccessKeyWoVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatusAtProvider
@@ -749,7 +822,9 @@ public partial class V1beta1DataTransferConfigStatusAtProvider
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatusConditions
@@ -778,7 +853,9 @@ public partial class V1beta1DataTransferConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataTransferConfigStatus defines the observed state of DataTransferConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatus
@@ -795,7 +872,9 @@ public partial class V1beta1DataTransferConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataTransferConfig is the Schema for the DataTransferConfigs API. Represents a data transfer configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -825,3 +904,4 @@ public partial class V1beta1DataTransferConfig : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1DataTransferConfigStatus? Status { get; set; }
 }
+#nullable disable

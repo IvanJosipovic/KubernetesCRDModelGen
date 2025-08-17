@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.m.upbound.io;
+#nullable enable
 /// <summary>BGPPeer is the Schema for the BGPPeers API. Provides a Direct Connect BGP peer resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BGPPeerList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1BGPPeer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1BGPPeerSpecForProviderVirtualInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecForProvider
@@ -138,7 +149,9 @@ public partial class V1beta1BGPPeerSpecForProvider
     [JsonPropertyName("virtualInterfaceIdSelector")]
     public V1beta1BGPPeerSpecForProviderVirtualInterfaceIdSelector? VirtualInterfaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRefPolicy
@@ -151,7 +164,9 @@ public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRef
@@ -168,7 +183,9 @@ public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelectorPolicy
@@ -181,7 +198,9 @@ public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateVirtualInterface in directconnect to populate virtualInterfaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelector
@@ -202,7 +221,9 @@ public partial class V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecInitProvider
@@ -239,7 +260,9 @@ public partial class V1beta1BGPPeerSpecInitProvider
     [JsonPropertyName("virtualInterfaceIdSelector")]
     public V1beta1BGPPeerSpecInitProviderVirtualInterfaceIdSelector? VirtualInterfaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecProviderConfigRef
@@ -252,7 +275,9 @@ public partial class V1beta1BGPPeerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpecWriteConnectionSecretToRef
@@ -261,7 +286,9 @@ public partial class V1beta1BGPPeerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BGPPeerSpec defines the desired state of BGPPeer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerSpec
@@ -286,7 +313,9 @@ public partial class V1beta1BGPPeerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BGPPeerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerStatusAtProvider
@@ -335,7 +364,9 @@ public partial class V1beta1BGPPeerStatusAtProvider
     [JsonPropertyName("virtualInterfaceId")]
     public string? VirtualInterfaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerStatusConditions
@@ -364,7 +395,9 @@ public partial class V1beta1BGPPeerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BGPPeerStatus defines the observed state of BGPPeer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BGPPeerStatus
@@ -381,7 +414,9 @@ public partial class V1beta1BGPPeerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BGPPeer is the Schema for the BGPPeers API. Provides a Direct Connect BGP peer resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -411,3 +446,4 @@ public partial class V1beta1BGPPeer : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1BGPPeerStatus? Status { get; set; }
 }
+#nullable disable

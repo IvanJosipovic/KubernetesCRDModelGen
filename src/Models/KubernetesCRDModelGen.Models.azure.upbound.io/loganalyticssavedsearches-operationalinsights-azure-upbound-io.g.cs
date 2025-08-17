@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.operationalinsights.azure.upbound.io;
+#nullable enable
 /// <summary>LogAnalyticsSavedSearch is the Schema for the LogAnalyticsSavedSearchs API. Manages a Log Analytics (formally Operational Insights) Saved Search.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LogAnalyticsSavedSearchList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1LogAnalyticsSavedSearch> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWorkspaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate logAnalyticsWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWorkspaceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWo
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWorkspaceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate logAnalyticsWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWorkspaceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWo
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsSavedSearchSpecForProviderLogAnalyticsWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecForProvider
@@ -130,7 +141,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecInitProvider
@@ -159,7 +172,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecProviderConfigRefPolicy
@@ -172,7 +187,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecProviderConfigRef
@@ -185,7 +202,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LogAnalyticsSavedSearchSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpecWriteConnectionSecretToRef
@@ -198,7 +217,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsSavedSearchSpec defines the desired state of LogAnalyticsSavedSearch</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchSpec
@@ -227,7 +248,9 @@ public partial class V1beta1LogAnalyticsSavedSearchSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LogAnalyticsSavedSearchSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchStatusAtProvider
@@ -264,7 +287,9 @@ public partial class V1beta1LogAnalyticsSavedSearchStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchStatusConditions
@@ -293,7 +318,9 @@ public partial class V1beta1LogAnalyticsSavedSearchStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsSavedSearchStatus defines the observed state of LogAnalyticsSavedSearch.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogAnalyticsSavedSearchStatus
@@ -310,7 +337,9 @@ public partial class V1beta1LogAnalyticsSavedSearchStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LogAnalyticsSavedSearch is the Schema for the LogAnalyticsSavedSearchs API. Manages a Log Analytics (formally Operational Insights) Saved Search.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -340,3 +369,4 @@ public partial class V1beta1LogAnalyticsSavedSearch : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1LogAnalyticsSavedSearchStatus? Status { get; set; }
 }
+#nullable disable

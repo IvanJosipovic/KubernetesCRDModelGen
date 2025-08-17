@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.chime.aws.upbound.io;
+#nullable enable
 /// <summary>VoiceConnectorGroup is the Schema for the VoiceConnectorGroups API. Creates an Amazon Chime Voice Connector group under the administrator's AWS account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VoiceConnectorGroupList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1VoiceConnectorGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConnectorIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConnectorIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConn
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConnectorIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConnectorIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConnectorIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConn
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecForProviderConnector
@@ -110,7 +121,9 @@ public partial class V1beta1VoiceConnectorGroupSpecForProviderConnector
     [JsonPropertyName("voiceConnectorIdSelector")]
     public V1beta1VoiceConnectorGroupSpecForProviderConnectorVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecForProvider
@@ -123,7 +136,9 @@ public partial class V1beta1VoiceConnectorGroupSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceConnectorIdRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceConnectorIdRef
@@ -149,7 +166,9 @@ public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceCon
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceConnectorIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceConnectorIdSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceConnectorIdSelector
@@ -179,7 +200,9 @@ public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceCon
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceConnectorIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnector
@@ -200,7 +223,9 @@ public partial class V1beta1VoiceConnectorGroupSpecInitProviderConnector
     [JsonPropertyName("voiceConnectorIdSelector")]
     public V1beta1VoiceConnectorGroupSpecInitProviderConnectorVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecInitProvider
@@ -209,7 +234,9 @@ public partial class V1beta1VoiceConnectorGroupSpecInitProvider
     [JsonPropertyName("connector")]
     public IList<V1beta1VoiceConnectorGroupSpecInitProviderConnector>? Connector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecProviderConfigRefPolicy
@@ -222,7 +249,9 @@ public partial class V1beta1VoiceConnectorGroupSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecProviderConfigRef
@@ -235,7 +264,9 @@ public partial class V1beta1VoiceConnectorGroupSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VoiceConnectorGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpecWriteConnectionSecretToRef
@@ -248,7 +279,9 @@ public partial class V1beta1VoiceConnectorGroupSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorGroupSpec defines the desired state of VoiceConnectorGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupSpec
@@ -277,7 +310,9 @@ public partial class V1beta1VoiceConnectorGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VoiceConnectorGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupStatusAtProviderConnector
@@ -290,7 +325,9 @@ public partial class V1beta1VoiceConnectorGroupStatusAtProviderConnector
     [JsonPropertyName("voiceConnectorId")]
     public string? VoiceConnectorId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupStatusAtProvider
@@ -307,7 +344,9 @@ public partial class V1beta1VoiceConnectorGroupStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupStatusConditions
@@ -336,7 +375,9 @@ public partial class V1beta1VoiceConnectorGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorGroupStatus defines the observed state of VoiceConnectorGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorGroupStatus
@@ -353,7 +394,9 @@ public partial class V1beta1VoiceConnectorGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VoiceConnectorGroup is the Schema for the VoiceConnectorGroups API. Creates an Amazon Chime Voice Connector group under the administrator's AWS account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -383,3 +426,4 @@ public partial class V1beta1VoiceConnectorGroup : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorGroupStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>SpotInstanceRequest is the Schema for the SpotInstanceRequests API. Provides a Spot Instance Request resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpotInstanceRequestList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1SpotInstanceRequest> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -46,7 +49,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderCapacityReservatio
     [JsonPropertyName("capacityReservationResourceGroupArn")]
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderCapacityReservationSpecification
@@ -59,7 +64,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderCapacityReservatio
     [JsonPropertyName("capacityReservationTarget")]
     public V1beta1SpotInstanceRequestSpecForProviderCapacityReservationSpecificationCapacityReservationTarget? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderCpuOptions
@@ -76,7 +83,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderCpuOptions
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderCreditSpecification
@@ -85,7 +94,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderCreditSpecificatio
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderEbsBlockDevice
@@ -134,7 +145,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderEbsBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderEnclaveOptions
@@ -143,7 +156,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderEnclaveOptions
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderEphemeralBlockDevice
@@ -160,7 +175,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderEphemeralBlockDevi
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderLaunchTemplate
@@ -177,7 +194,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderLaunchTemplate
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderMaintenanceOptions
@@ -186,7 +205,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderMaintenanceOptions
     [JsonPropertyName("autoRecovery")]
     public string? AutoRecovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderMetadataOptions
@@ -211,7 +232,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderMetadataOptions
     [JsonPropertyName("instanceMetadataTags")]
     public string? InstanceMetadataTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderNetworkInterface
@@ -232,7 +255,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderNetworkInterface
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderPrivateDnsNameOptions
@@ -249,7 +274,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderPrivateDnsNameOpti
     [JsonPropertyName("hostnameType")]
     public string? HostnameType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderRootBlockDevice
@@ -290,7 +317,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderRootBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdRefPolicy
@@ -303,7 +332,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdRef
@@ -320,7 +351,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1SpotInstanceRequestSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelectorPolicy
@@ -333,7 +366,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelector
@@ -354,7 +389,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1SpotInstanceRequestSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdRefsPolicy
@@ -367,7 +404,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdRefs
@@ -384,7 +423,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupId
     [JsonPropertyName("policy")]
     public V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdSelectorPolicy
@@ -397,7 +438,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdSelector
@@ -418,7 +461,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupId
     [JsonPropertyName("policy")]
     public V1beta1SpotInstanceRequestSpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecForProvider
@@ -647,7 +692,9 @@ public partial class V1beta1SpotInstanceRequestSpecForProvider
     [JsonPropertyName("waitForFulfillment")]
     public bool? WaitForFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -660,7 +707,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderCapacityReservati
     [JsonPropertyName("capacityReservationResourceGroupArn")]
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderCapacityReservationSpecification
@@ -673,7 +722,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderCapacityReservati
     [JsonPropertyName("capacityReservationTarget")]
     public V1beta1SpotInstanceRequestSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderCpuOptions
@@ -690,7 +741,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderCpuOptions
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderCreditSpecification
@@ -699,7 +752,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderCreditSpecificati
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderEbsBlockDevice
@@ -748,7 +803,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderEbsBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderEnclaveOptions
@@ -757,7 +814,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderEnclaveOptions
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderEphemeralBlockDevice
@@ -774,7 +833,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderEphemeralBlockDev
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderLaunchTemplate
@@ -791,7 +852,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderLaunchTemplate
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderMaintenanceOptions
@@ -800,7 +863,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderMaintenanceOption
     [JsonPropertyName("autoRecovery")]
     public string? AutoRecovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderMetadataOptions
@@ -825,7 +890,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderMetadataOptions
     [JsonPropertyName("instanceMetadataTags")]
     public string? InstanceMetadataTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderNetworkInterface
@@ -846,7 +913,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderNetworkInterface
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderPrivateDnsNameOptions
@@ -863,7 +932,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderPrivateDnsNameOpt
     [JsonPropertyName("hostnameType")]
     public string? HostnameType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderRootBlockDevice
@@ -904,7 +975,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderRootBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRefPolicy
@@ -917,7 +990,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRef
@@ -934,7 +1009,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1SpotInstanceRequestSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelectorPolicy
@@ -947,7 +1024,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelector
@@ -968,7 +1047,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1SpotInstanceRequestSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdRefsPolicy
@@ -981,7 +1062,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdRefs
@@ -998,7 +1081,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupI
     [JsonPropertyName("policy")]
     public V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdSelectorPolicy
@@ -1011,7 +1096,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdSelector
@@ -1032,7 +1119,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupI
     [JsonPropertyName("policy")]
     public V1beta1SpotInstanceRequestSpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecInitProvider
@@ -1257,7 +1346,9 @@ public partial class V1beta1SpotInstanceRequestSpecInitProvider
     [JsonPropertyName("waitForFulfillment")]
     public bool? WaitForFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecProviderConfigRef
@@ -1270,7 +1361,9 @@ public partial class V1beta1SpotInstanceRequestSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpecWriteConnectionSecretToRef
@@ -1279,7 +1372,9 @@ public partial class V1beta1SpotInstanceRequestSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpotInstanceRequestSpec defines the desired state of SpotInstanceRequest</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestSpec
@@ -1304,7 +1399,9 @@ public partial class V1beta1SpotInstanceRequestSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpotInstanceRequestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget
@@ -1317,7 +1414,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderCapacityReservati
     [JsonPropertyName("capacityReservationResourceGroupArn")]
     public string? CapacityReservationResourceGroupArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderCapacityReservationSpecification
@@ -1330,7 +1429,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderCapacityReservati
     [JsonPropertyName("capacityReservationTarget")]
     public V1beta1SpotInstanceRequestStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget? CapacityReservationTarget { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderCpuOptions
@@ -1347,7 +1448,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderCpuOptions
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderCreditSpecification
@@ -1356,7 +1459,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderCreditSpecificati
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderEbsBlockDevice
@@ -1409,7 +1514,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderEbsBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderEnclaveOptions
@@ -1418,7 +1525,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderEnclaveOptions
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderEphemeralBlockDevice
@@ -1435,7 +1544,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderEphemeralBlockDev
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderLaunchTemplate
@@ -1452,7 +1563,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderLaunchTemplate
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderMaintenanceOptions
@@ -1461,7 +1574,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderMaintenanceOption
     [JsonPropertyName("autoRecovery")]
     public string? AutoRecovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderMetadataOptions
@@ -1486,7 +1601,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderMetadataOptions
     [JsonPropertyName("instanceMetadataTags")]
     public string? InstanceMetadataTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderNetworkInterface
@@ -1507,7 +1624,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderNetworkInterface
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderPrivateDnsNameOptions
@@ -1524,7 +1643,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderPrivateDnsNameOpt
     [JsonPropertyName("hostnameType")]
     public string? HostnameType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProviderRootBlockDevice
@@ -1573,7 +1694,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProviderRootBlockDevice
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusAtProvider
@@ -1838,7 +1961,9 @@ public partial class V1beta1SpotInstanceRequestStatusAtProvider
     [JsonPropertyName("waitForFulfillment")]
     public bool? WaitForFulfillment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatusConditions
@@ -1867,7 +1992,9 @@ public partial class V1beta1SpotInstanceRequestStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpotInstanceRequestStatus defines the observed state of SpotInstanceRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpotInstanceRequestStatus
@@ -1884,7 +2011,9 @@ public partial class V1beta1SpotInstanceRequestStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpotInstanceRequest is the Schema for the SpotInstanceRequests API. Provides a Spot Instance Request resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1914,3 +2043,4 @@ public partial class V1beta1SpotInstanceRequest : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1SpotInstanceRequestStatus? Status { get; set; }
 }
+#nullable disable

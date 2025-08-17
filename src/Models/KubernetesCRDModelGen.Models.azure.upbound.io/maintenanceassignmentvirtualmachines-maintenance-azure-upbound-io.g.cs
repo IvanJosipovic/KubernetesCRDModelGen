@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.maintenance.azure.upbound.io;
+#nullable enable
 /// <summary>MaintenanceAssignmentVirtualMachine is the Schema for the MaintenanceAssignmentVirtualMachines API. Manages a Maintenance Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1beta1MaintenanceAssignmentVirtualMachine> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MaintenanceConfiguration in maintenance to populate maintenanceConfigurationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MaintenanceConfiguration in maintenance to populate maintenanceConfigurationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMa
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVi
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVi
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProvider
     [JsonPropertyName("virtualMachineIdSelector")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderM
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MaintenanceConfiguration in maintenance to populate maintenanceConfigurationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderM
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderM
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MaintenanceConfiguration in maintenance to populate maintenanceConfigurationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderM
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProvider
@@ -255,7 +284,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProvider
     [JsonPropertyName("maintenanceConfigurationIdSelector")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdSelector? MaintenanceConfigurationIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfigRefPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfigRef
@@ -281,7 +314,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfi
     [JsonPropertyName("policy")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecWriteConnectionSecretToRef
@@ -294,7 +329,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecWriteConnecti
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceAssignmentVirtualMachineSpec defines the desired state of MaintenanceAssignmentVirtualMachine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineSpec
@@ -323,7 +360,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MaintenanceAssignmentVirtualMachineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineStatusAtProvider
@@ -344,7 +383,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineStatusAtProvider
     [JsonPropertyName("virtualMachineId")]
     public string? VirtualMachineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineStatusConditions
@@ -373,7 +414,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceAssignmentVirtualMachineStatus defines the observed state of MaintenanceAssignmentVirtualMachine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceAssignmentVirtualMachineStatus
@@ -390,7 +433,9 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MaintenanceAssignmentVirtualMachine is the Schema for the MaintenanceAssignmentVirtualMachines API. Manages a Maintenance Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -420,3 +465,4 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachine : IKubernetesObj
     [JsonPropertyName("status")]
     public V1beta1MaintenanceAssignmentVirtualMachineStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityinsights.azure.m.upbound.io;
+#nullable enable
 /// <summary>SentinelAlertRuleMSSecurityIncident is the Schema for the SentinelAlertRuleMSSecurityIncidents API. Manages a Sentinel MS Security Incident Alert Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentList : IKubernete
     [JsonPropertyName("items")]
     public IList<V1beta1SentinelAlertRuleMSSecurityIncident> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLogAnalyticsWorkspaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLogAnalyticsWorkspaceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLo
     [JsonPropertyName("policy")]
     public V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLogAnalyticsWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLogAnalyticsWorkspaceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLogAnalyticsWorkspaceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLo
     [JsonPropertyName("policy")]
     public V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProviderLogAnalyticsWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProvider
@@ -146,7 +157,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecForProvider
     [JsonPropertyName("severityFilter")]
     public IList<string>? SeverityFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecInitProvider
@@ -183,7 +196,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecInitProvider
     [JsonPropertyName("severityFilter")]
     public IList<string>? SeverityFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecProviderConfigRef
@@ -196,7 +211,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecProviderConfi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecWriteConnectionSecretToRef
@@ -205,7 +222,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpecWriteConnecti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SentinelAlertRuleMSSecurityIncidentSpec defines the desired state of SentinelAlertRuleMSSecurityIncident</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpec
@@ -230,7 +249,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SentinelAlertRuleMSSecurityIncidentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentStatusAtProvider
@@ -275,7 +296,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentStatusAtProvider
     [JsonPropertyName("severityFilter")]
     public IList<string>? SeverityFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentStatusConditions
@@ -304,7 +327,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SentinelAlertRuleMSSecurityIncidentStatus defines the observed state of SentinelAlertRuleMSSecurityIncident.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMSSecurityIncidentStatus
@@ -321,7 +346,9 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncidentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SentinelAlertRuleMSSecurityIncident is the Schema for the SentinelAlertRuleMSSecurityIncidents API. Manages a Sentinel MS Security Incident Alert Rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -351,3 +378,4 @@ public partial class V1beta1SentinelAlertRuleMSSecurityIncident : IKubernetesObj
     [JsonPropertyName("status")]
     public V1beta1SentinelAlertRuleMSSecurityIncidentStatus? Status { get; set; }
 }
+#nullable disable

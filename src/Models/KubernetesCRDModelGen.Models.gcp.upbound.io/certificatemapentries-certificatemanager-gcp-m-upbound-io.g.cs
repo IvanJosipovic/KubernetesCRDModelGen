@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certificatemanager.gcp.m.upbound.io;
+#nullable enable
 /// <summary>CertificateMapEntry is the Schema for the CertificateMapEntrys API. CertificateMapEntry is a list of certificate configurations, that have been issued for a particular hostname</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateMapEntryList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1CertificateMapEntry> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProviderCertificatesRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CertificateMapEntrySpecForProviderCertificatesRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProviderCertificatesRefs
@@ -63,7 +68,9 @@ public partial class V1beta1CertificateMapEntrySpecForProviderCertificatesRefs
     [JsonPropertyName("policy")]
     public V1beta1CertificateMapEntrySpecForProviderCertificatesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProviderCertificatesSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CertificateMapEntrySpecForProviderCertificatesSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Certificate in certificatemanager to populate certificates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProviderCertificatesSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CertificateMapEntrySpecForProviderCertificatesSelect
     [JsonPropertyName("policy")]
     public V1beta1CertificateMapEntrySpecForProviderCertificatesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProviderMapRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1CertificateMapEntrySpecForProviderMapRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CertificateMap in certificatemanager to populate map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProviderMapRef
@@ -127,7 +140,9 @@ public partial class V1beta1CertificateMapEntrySpecForProviderMapRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateMapEntrySpecForProviderMapRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProviderMapSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1CertificateMapEntrySpecForProviderMapSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CertificateMap in certificatemanager to populate map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProviderMapSelector
@@ -161,7 +178,9 @@ public partial class V1beta1CertificateMapEntrySpecForProviderMapSelector
     [JsonPropertyName("policy")]
     public V1beta1CertificateMapEntrySpecForProviderMapSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecForProvider
@@ -210,7 +229,9 @@ public partial class V1beta1CertificateMapEntrySpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecInitProviderCertificatesRefsPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1CertificateMapEntrySpecInitProviderCertificatesRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecInitProviderCertificatesRefs
@@ -240,7 +263,9 @@ public partial class V1beta1CertificateMapEntrySpecInitProviderCertificatesRefs
     [JsonPropertyName("policy")]
     public V1beta1CertificateMapEntrySpecInitProviderCertificatesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecInitProviderCertificatesSelectorPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1CertificateMapEntrySpecInitProviderCertificatesSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Certificate in certificatemanager to populate certificates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecInitProviderCertificatesSelector
@@ -274,7 +301,9 @@ public partial class V1beta1CertificateMapEntrySpecInitProviderCertificatesSelec
     [JsonPropertyName("policy")]
     public V1beta1CertificateMapEntrySpecInitProviderCertificatesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecInitProvider
@@ -311,7 +340,9 @@ public partial class V1beta1CertificateMapEntrySpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecProviderConfigRef
@@ -324,7 +355,9 @@ public partial class V1beta1CertificateMapEntrySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpecWriteConnectionSecretToRef
@@ -333,7 +366,9 @@ public partial class V1beta1CertificateMapEntrySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateMapEntrySpec defines the desired state of CertificateMapEntry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntrySpec
@@ -358,7 +393,9 @@ public partial class V1beta1CertificateMapEntrySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateMapEntrySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntryStatusAtProvider
@@ -415,7 +452,9 @@ public partial class V1beta1CertificateMapEntryStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntryStatusConditions
@@ -444,7 +483,9 @@ public partial class V1beta1CertificateMapEntryStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateMapEntryStatus defines the observed state of CertificateMapEntry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateMapEntryStatus
@@ -461,7 +502,9 @@ public partial class V1beta1CertificateMapEntryStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateMapEntry is the Schema for the CertificateMapEntrys API. CertificateMapEntry is a list of certificate configurations, that have been issued for a particular hostname</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -491,3 +534,4 @@ public partial class V1beta1CertificateMapEntry : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1CertificateMapEntryStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sesv2.aws.upbound.io;
+#nullable enable
 /// <summary>ConfigurationSet is the Schema for the ConfigurationSets API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ConfigurationSetList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1ConfigurationSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProviderDeliveryOptions
@@ -50,7 +53,9 @@ public partial class V1beta1ConfigurationSetSpecForProviderDeliveryOptions
     [JsonPropertyName("tlsPolicy")]
     public string? TlsPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProviderReputationOptions
@@ -59,7 +64,9 @@ public partial class V1beta1ConfigurationSetSpecForProviderReputationOptions
     [JsonPropertyName("reputationMetricsEnabled")]
     public bool? ReputationMetricsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProviderSendingOptions
@@ -68,7 +75,9 @@ public partial class V1beta1ConfigurationSetSpecForProviderSendingOptions
     [JsonPropertyName("sendingEnabled")]
     public bool? SendingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProviderSuppressionOptions
@@ -77,7 +86,9 @@ public partial class V1beta1ConfigurationSetSpecForProviderSuppressionOptions
     [JsonPropertyName("suppressedReasons")]
     public IList<string>? SuppressedReasons { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProviderTrackingOptions
@@ -90,7 +101,9 @@ public partial class V1beta1ConfigurationSetSpecForProviderTrackingOptions
     [JsonPropertyName("httpsPolicy")]
     public string? HttpsPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProviderVdmOptionsDashboardOptions
@@ -99,7 +112,9 @@ public partial class V1beta1ConfigurationSetSpecForProviderVdmOptionsDashboardOp
     [JsonPropertyName("engagementMetrics")]
     public string? EngagementMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProviderVdmOptionsGuardianOptions
@@ -108,7 +123,9 @@ public partial class V1beta1ConfigurationSetSpecForProviderVdmOptionsGuardianOpt
     [JsonPropertyName("optimizedSharedDelivery")]
     public string? OptimizedSharedDelivery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProviderVdmOptions
@@ -121,7 +138,9 @@ public partial class V1beta1ConfigurationSetSpecForProviderVdmOptions
     [JsonPropertyName("guardianOptions")]
     public IList<V1beta1ConfigurationSetSpecForProviderVdmOptionsGuardianOptions>? GuardianOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecForProvider
@@ -158,7 +177,9 @@ public partial class V1beta1ConfigurationSetSpecForProvider
     [JsonPropertyName("vdmOptions")]
     public IList<V1beta1ConfigurationSetSpecForProviderVdmOptions>? VdmOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProviderDeliveryOptions
@@ -175,7 +196,9 @@ public partial class V1beta1ConfigurationSetSpecInitProviderDeliveryOptions
     [JsonPropertyName("tlsPolicy")]
     public string? TlsPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProviderReputationOptions
@@ -184,7 +207,9 @@ public partial class V1beta1ConfigurationSetSpecInitProviderReputationOptions
     [JsonPropertyName("reputationMetricsEnabled")]
     public bool? ReputationMetricsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProviderSendingOptions
@@ -193,7 +218,9 @@ public partial class V1beta1ConfigurationSetSpecInitProviderSendingOptions
     [JsonPropertyName("sendingEnabled")]
     public bool? SendingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProviderSuppressionOptions
@@ -202,7 +229,9 @@ public partial class V1beta1ConfigurationSetSpecInitProviderSuppressionOptions
     [JsonPropertyName("suppressedReasons")]
     public IList<string>? SuppressedReasons { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProviderTrackingOptions
@@ -215,7 +244,9 @@ public partial class V1beta1ConfigurationSetSpecInitProviderTrackingOptions
     [JsonPropertyName("httpsPolicy")]
     public string? HttpsPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProviderVdmOptionsDashboardOptions
@@ -224,7 +255,9 @@ public partial class V1beta1ConfigurationSetSpecInitProviderVdmOptionsDashboardO
     [JsonPropertyName("engagementMetrics")]
     public string? EngagementMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProviderVdmOptionsGuardianOptions
@@ -233,7 +266,9 @@ public partial class V1beta1ConfigurationSetSpecInitProviderVdmOptionsGuardianOp
     [JsonPropertyName("optimizedSharedDelivery")]
     public string? OptimizedSharedDelivery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProviderVdmOptions
@@ -246,7 +281,9 @@ public partial class V1beta1ConfigurationSetSpecInitProviderVdmOptions
     [JsonPropertyName("guardianOptions")]
     public IList<V1beta1ConfigurationSetSpecInitProviderVdmOptionsGuardianOptions>? GuardianOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecInitProvider
@@ -279,7 +316,9 @@ public partial class V1beta1ConfigurationSetSpecInitProvider
     [JsonPropertyName("vdmOptions")]
     public IList<V1beta1ConfigurationSetSpecInitProviderVdmOptions>? VdmOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecProviderConfigRefPolicy
@@ -292,7 +331,9 @@ public partial class V1beta1ConfigurationSetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecProviderConfigRef
@@ -305,7 +346,9 @@ public partial class V1beta1ConfigurationSetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ConfigurationSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpecWriteConnectionSecretToRef
@@ -318,7 +361,9 @@ public partial class V1beta1ConfigurationSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationSetSpec defines the desired state of ConfigurationSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetSpec
@@ -347,7 +392,9 @@ public partial class V1beta1ConfigurationSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ConfigurationSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProviderDeliveryOptions
@@ -364,7 +411,9 @@ public partial class V1beta1ConfigurationSetStatusAtProviderDeliveryOptions
     [JsonPropertyName("tlsPolicy")]
     public string? TlsPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProviderReputationOptions
@@ -377,7 +426,9 @@ public partial class V1beta1ConfigurationSetStatusAtProviderReputationOptions
     [JsonPropertyName("reputationMetricsEnabled")]
     public bool? ReputationMetricsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProviderSendingOptions
@@ -386,7 +437,9 @@ public partial class V1beta1ConfigurationSetStatusAtProviderSendingOptions
     [JsonPropertyName("sendingEnabled")]
     public bool? SendingEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProviderSuppressionOptions
@@ -395,7 +448,9 @@ public partial class V1beta1ConfigurationSetStatusAtProviderSuppressionOptions
     [JsonPropertyName("suppressedReasons")]
     public IList<string>? SuppressedReasons { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProviderTrackingOptions
@@ -408,7 +463,9 @@ public partial class V1beta1ConfigurationSetStatusAtProviderTrackingOptions
     [JsonPropertyName("httpsPolicy")]
     public string? HttpsPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProviderVdmOptionsDashboardOptions
@@ -417,7 +474,9 @@ public partial class V1beta1ConfigurationSetStatusAtProviderVdmOptionsDashboardO
     [JsonPropertyName("engagementMetrics")]
     public string? EngagementMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProviderVdmOptionsGuardianOptions
@@ -426,7 +485,9 @@ public partial class V1beta1ConfigurationSetStatusAtProviderVdmOptionsGuardianOp
     [JsonPropertyName("optimizedSharedDelivery")]
     public string? OptimizedSharedDelivery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProviderVdmOptions
@@ -439,7 +500,9 @@ public partial class V1beta1ConfigurationSetStatusAtProviderVdmOptions
     [JsonPropertyName("guardianOptions")]
     public IList<V1beta1ConfigurationSetStatusAtProviderVdmOptionsGuardianOptions>? GuardianOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusAtProvider
@@ -488,7 +551,9 @@ public partial class V1beta1ConfigurationSetStatusAtProvider
     [JsonPropertyName("vdmOptions")]
     public IList<V1beta1ConfigurationSetStatusAtProviderVdmOptions>? VdmOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatusConditions
@@ -517,7 +582,9 @@ public partial class V1beta1ConfigurationSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationSetStatus defines the observed state of ConfigurationSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetStatus
@@ -534,7 +601,9 @@ public partial class V1beta1ConfigurationSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigurationSet is the Schema for the ConfigurationSets API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -564,3 +633,4 @@ public partial class V1beta1ConfigurationSet : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ConfigurationSetStatus? Status { get; set; }
 }
+#nullable disable

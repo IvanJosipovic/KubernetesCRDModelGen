@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notification.toolkit.fluxcd.io;
+#nullable enable
 /// <summary>Receiver is the Schema for the receivers API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ReceiverList : IKubernetesObject<V1ListMeta>, IItems<V1Re
     [JsonPropertyName("items")]
     public IList<V1Receiver> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CrossNamespaceObjectReference contains enough information to let you locate the typed referenced object at cluster level</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ReceiverSpecResources
@@ -58,7 +61,9 @@ public partial class V1ReceiverSpecResources
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef specifies the Secret containing the token used to validate the payload authenticity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ReceiverSpecSecretRef
@@ -67,7 +72,9 @@ public partial class V1ReceiverSpecSecretRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReceiverSpec defines the desired state of the Receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ReceiverSpec
@@ -100,7 +107,9 @@ public partial class V1ReceiverSpec
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ReceiverStatusConditions
@@ -129,7 +138,9 @@ public partial class V1ReceiverStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReceiverStatus defines the observed state of the Receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ReceiverStatus
@@ -150,7 +161,9 @@ public partial class V1ReceiverStatus
     [JsonPropertyName("webhookPath")]
     public string? WebhookPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Receiver is the Schema for the receivers API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -180,3 +193,4 @@ public partial class V1Receiver : IKubernetesObject<V1ObjectMeta>, ISpec<V1Recei
     [JsonPropertyName("status")]
     public V1ReceiverStatus? Status { get; set; }
 }
+#nullable disable

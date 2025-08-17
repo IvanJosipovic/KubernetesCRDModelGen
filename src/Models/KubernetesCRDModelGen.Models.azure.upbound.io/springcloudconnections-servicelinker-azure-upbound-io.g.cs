@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicelinker.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudConnection is the Schema for the SpringCloudConnections API. Manages a service connector for spring cloud app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudConnectionList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service principal certificate for servicePrincipal auth. Should be specified when type is set to servicePrincipalCertificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderAuthenticationCertificateSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderAuthenticationCe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Password or account key for secret auth. secret and name should be either both specified or both not specified when type is set to secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderAuthenticationSecretSecretRef
@@ -67,7 +72,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderAuthenticationSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderAuthentication
@@ -100,7 +107,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderAuthentication
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderSecretStore
@@ -109,7 +118,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderSecretStore
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdRefPolicy
@@ -122,7 +133,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudJavaDeployment in appplatform to populate springCloudId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdRef
@@ -135,7 +148,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdSelectorPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudJavaDeployment in appplatform to populate springCloudId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdSelector
@@ -165,7 +182,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdSel
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecForProviderSpringCloudIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderTargetResourceIdRefPolicy
@@ -178,7 +197,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderTargetResourceId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLDatabase in cosmosdb to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderTargetResourceIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderTargetResourceId
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecForProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderTargetResourceIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderTargetResourceId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLDatabase in cosmosdb to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderTargetResourceIdSelector
@@ -221,7 +246,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProviderTargetResourceId
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProvider
@@ -270,7 +297,9 @@ public partial class V1beta1SpringCloudConnectionSpecForProvider
     [JsonPropertyName("vnetSolution")]
     public string? VnetSolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderAuthentication
@@ -295,7 +324,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderAuthentication
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderSecretStore
@@ -304,7 +335,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderSecretStore
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdRefPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudJavaDeployment in appplatform to populate springCloudId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdRef
@@ -330,7 +365,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdRe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdSelectorPolicy
@@ -343,7 +380,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudJavaDeployment in appplatform to populate springCloudId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdSelector
@@ -360,7 +399,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdSe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecInitProviderSpringCloudIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderTargetResourceIdRefPolicy
@@ -373,7 +414,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderTargetResourceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLDatabase in cosmosdb to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderTargetResourceIdRef
@@ -386,7 +429,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderTargetResourceI
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecInitProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderTargetResourceIdSelectorPolicy
@@ -399,7 +444,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderTargetResourceI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLDatabase in cosmosdb to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProviderTargetResourceIdSelector
@@ -416,7 +463,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProviderTargetResourceI
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecInitProvider
@@ -465,7 +514,9 @@ public partial class V1beta1SpringCloudConnectionSpecInitProvider
     [JsonPropertyName("vnetSolution")]
     public string? VnetSolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecProviderConfigRefPolicy
@@ -478,7 +529,9 @@ public partial class V1beta1SpringCloudConnectionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecProviderConfigRef
@@ -491,7 +544,9 @@ public partial class V1beta1SpringCloudConnectionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecWriteConnectionSecretToRef
@@ -504,7 +559,9 @@ public partial class V1beta1SpringCloudConnectionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudConnectionSpec defines the desired state of SpringCloudConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpec
@@ -533,7 +590,9 @@ public partial class V1beta1SpringCloudConnectionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudConnectionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionStatusAtProviderAuthentication
@@ -558,7 +617,9 @@ public partial class V1beta1SpringCloudConnectionStatusAtProviderAuthentication
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionStatusAtProviderSecretStore
@@ -567,7 +628,9 @@ public partial class V1beta1SpringCloudConnectionStatusAtProviderSecretStore
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionStatusAtProvider
@@ -604,7 +667,9 @@ public partial class V1beta1SpringCloudConnectionStatusAtProvider
     [JsonPropertyName("vnetSolution")]
     public string? VnetSolution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionStatusConditions
@@ -633,7 +698,9 @@ public partial class V1beta1SpringCloudConnectionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudConnectionStatus defines the observed state of SpringCloudConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionStatus
@@ -650,7 +717,9 @@ public partial class V1beta1SpringCloudConnectionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudConnection is the Schema for the SpringCloudConnections API. Manages a service connector for spring cloud app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -680,3 +749,4 @@ public partial class V1beta1SpringCloudConnection : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1SpringCloudConnectionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.speech.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>SpeechRecognizer is the Schema for the SpeechRecognizer API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpeechRecognizerList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1SpeechRecognizer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Default configuration to use for requests with this Recognizer. This can be overwritten by inline configuration in the [RecognizeRequest.config][google.cloud.speech.v2.RecognizeRequest.config] field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerSpecDefaultRecognitionConfig
@@ -46,7 +49,9 @@ public partial class V1beta1SpeechRecognizerSpecDefaultRecognitionConfig
     [JsonPropertyName("model")]
     public string? Model { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerSpecProjectRef
@@ -67,7 +72,9 @@ public partial class V1beta1SpeechRecognizerSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpeechRecognizerSpec defines the desired state of SpeechRecognizer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerSpec
@@ -96,7 +103,9 @@ public partial class V1beta1SpeechRecognizerSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerStatusConditions
@@ -121,7 +130,9 @@ public partial class V1beta1SpeechRecognizerStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitionConfigAdaptationCustomClasses
@@ -170,7 +181,9 @@ public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitio
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An inline defined PhraseSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitionConfigAdaptationPhraseSetsInlinePhraseSet
@@ -219,7 +232,9 @@ public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitio
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitionConfigAdaptationPhraseSets
@@ -228,7 +243,9 @@ public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitio
     [JsonPropertyName("inlinePhraseSet")]
     public V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitionConfigAdaptationPhraseSetsInlinePhraseSet? InlinePhraseSet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Speech adaptation context that weights recognizer predictions for specific words and phrases.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitionConfigAdaptation
@@ -241,7 +258,9 @@ public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitio
     [JsonPropertyName("phraseSets")]
     public IList<V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitionConfigAdaptationPhraseSets>? PhraseSets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Default configuration to use for requests with this Recognizer. This can be overwritten by inline configuration in the [RecognizeRequest.config][google.cloud.speech.v2.RecognizeRequest.config] field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitionConfig
@@ -250,7 +269,9 @@ public partial class V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitio
     [JsonPropertyName("adaptation")]
     public V1beta1SpeechRecognizerStatusObservedStateDefaultRecognitionConfigAdaptation? Adaptation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerStatusObservedState
@@ -299,7 +320,9 @@ public partial class V1beta1SpeechRecognizerStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpeechRecognizerStatus defines the config connector machine state of SpeechRecognizer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerStatus
@@ -320,7 +343,9 @@ public partial class V1beta1SpeechRecognizerStatus
     [JsonPropertyName("observedState")]
     public V1beta1SpeechRecognizerStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpeechRecognizer is the Schema for the SpeechRecognizer API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -350,3 +375,4 @@ public partial class V1beta1SpeechRecognizer : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1SpeechRecognizerStatus? Status { get; set; }
 }
+#nullable disable

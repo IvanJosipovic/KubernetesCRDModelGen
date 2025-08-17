@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.upbound.io;
+#nullable enable
 /// <summary>IOTHubEnrichment is the Schema for the IOTHubEnrichments API. Manages an IotHub Enrichment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IOTHubEnrichmentList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1IOTHubEnrichment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesRefsPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesRefs
@@ -59,7 +64,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesRefs
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of IOTHubEndpointStorageContainer in devices to populate endpointNames.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesSelector
@@ -89,7 +98,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecForProviderEndpointNamesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderIothubNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderIothubNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderIothubNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderIothubNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecForProviderIothubNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderIothubNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderIothubNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderIothubNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderIothubNameSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecForProviderIothubNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameSele
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1IOTHubEnrichmentSpecForProvider
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesRefsPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesRefsPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesRefs
@@ -276,7 +307,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesRefs
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of IOTHubEndpointStorageContainer in devices to populate endpointNames.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesSelector
@@ -306,7 +341,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesSelecto
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecInitProviderEndpointNamesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderIothubNameRefPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderIothubNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderIothubNameRef
@@ -332,7 +371,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderIothubNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecInitProviderIothubNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderIothubNameSelectorPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderIothubNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderIothubNameSelector
@@ -362,7 +405,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderIothubNameSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecInitProviderIothubNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameRefPolicy
@@ -375,7 +420,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameRef
@@ -388,7 +435,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameSelectorPolicy
@@ -401,7 +450,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameSelector
@@ -418,7 +469,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameSel
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecInitProvider
@@ -467,7 +520,9 @@ public partial class V1beta1IOTHubEnrichmentSpecInitProvider
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecProviderConfigRefPolicy
@@ -480,7 +535,9 @@ public partial class V1beta1IOTHubEnrichmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecProviderConfigRef
@@ -493,7 +550,9 @@ public partial class V1beta1IOTHubEnrichmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubEnrichmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpecWriteConnectionSecretToRef
@@ -506,7 +565,9 @@ public partial class V1beta1IOTHubEnrichmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubEnrichmentSpec defines the desired state of IOTHubEnrichment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentSpec
@@ -535,7 +596,9 @@ public partial class V1beta1IOTHubEnrichmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IOTHubEnrichmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentStatusAtProvider
@@ -564,7 +627,9 @@ public partial class V1beta1IOTHubEnrichmentStatusAtProvider
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentStatusConditions
@@ -593,7 +658,9 @@ public partial class V1beta1IOTHubEnrichmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubEnrichmentStatus defines the observed state of IOTHubEnrichment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEnrichmentStatus
@@ -610,7 +677,9 @@ public partial class V1beta1IOTHubEnrichmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubEnrichment is the Schema for the IOTHubEnrichments API. Manages an IotHub Enrichment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -640,3 +709,4 @@ public partial class V1beta1IOTHubEnrichment : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1IOTHubEnrichmentStatus? Status { get; set; }
 }
+#nullable disable

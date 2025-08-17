@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>InterconnectAttachment is the Schema for the InterconnectAttachments API. Represents an InterconnectAttachment (VLAN attachment) resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1InterconnectAttachmentList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1InterconnectAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAddressesRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAddressesRefs
@@ -63,7 +68,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAd
     [JsonPropertyName("policy")]
     public V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAddressesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAddressesSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Address in compute to populate ipsecInternalAddresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAddressesSelector
@@ -97,7 +106,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAd
     [JsonPropertyName("policy")]
     public V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAddressesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProviderRouterRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProviderRouterRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProviderRouterRef
@@ -127,7 +140,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProviderRouterRef
     [JsonPropertyName("policy")]
     public V1beta1InterconnectAttachmentSpecForProviderRouterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProviderRouterSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProviderRouterSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProviderRouterSelector
@@ -161,7 +178,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProviderRouterSelector
     [JsonPropertyName("policy")]
     public V1beta1InterconnectAttachmentSpecForProviderRouterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecForProvider
@@ -250,7 +269,9 @@ public partial class V1beta1InterconnectAttachmentSpecForProvider
     [JsonPropertyName("vlanTag8021Q")]
     public double? VlanTag8021Q { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalAddressesRefsPolicy
@@ -263,7 +284,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalAddressesRefs
@@ -280,7 +303,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalA
     [JsonPropertyName("policy")]
     public V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalAddressesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalAddressesSelectorPolicy
@@ -293,7 +318,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Address in compute to populate ipsecInternalAddresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalAddressesSelector
@@ -314,7 +341,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalA
     [JsonPropertyName("policy")]
     public V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalAddressesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProviderRouterRefPolicy
@@ -327,7 +356,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProviderRouterRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProviderRouterRef
@@ -344,7 +375,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProviderRouterRef
     [JsonPropertyName("policy")]
     public V1beta1InterconnectAttachmentSpecInitProviderRouterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProviderRouterSelectorPolicy
@@ -357,7 +390,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProviderRouterSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProviderRouterSelector
@@ -378,7 +413,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProviderRouterSelector
     [JsonPropertyName("policy")]
     public V1beta1InterconnectAttachmentSpecInitProviderRouterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecInitProvider
@@ -463,7 +500,9 @@ public partial class V1beta1InterconnectAttachmentSpecInitProvider
     [JsonPropertyName("vlanTag8021Q")]
     public double? VlanTag8021Q { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecProviderConfigRef
@@ -476,7 +515,9 @@ public partial class V1beta1InterconnectAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpecWriteConnectionSecretToRef
@@ -485,7 +526,9 @@ public partial class V1beta1InterconnectAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InterconnectAttachmentSpec defines the desired state of InterconnectAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentSpec
@@ -510,7 +553,9 @@ public partial class V1beta1InterconnectAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1InterconnectAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentStatusAtProviderPrivateInterconnectInfo
@@ -519,7 +564,9 @@ public partial class V1beta1InterconnectAttachmentStatusAtProviderPrivateInterco
     [JsonPropertyName("tag8021q")]
     public double? Tag8021q { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentStatusAtProvider
@@ -656,7 +703,9 @@ public partial class V1beta1InterconnectAttachmentStatusAtProvider
     [JsonPropertyName("vlanTag8021Q")]
     public double? VlanTag8021Q { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentStatusConditions
@@ -685,7 +734,9 @@ public partial class V1beta1InterconnectAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InterconnectAttachmentStatus defines the observed state of InterconnectAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InterconnectAttachmentStatus
@@ -702,7 +753,9 @@ public partial class V1beta1InterconnectAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InterconnectAttachment is the Schema for the InterconnectAttachments API. Represents an InterconnectAttachment (VLAN attachment) resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -732,3 +785,4 @@ public partial class V1beta1InterconnectAttachment : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1InterconnectAttachmentStatus? Status { get; set; }
 }
+#nullable disable

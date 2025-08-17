@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.gcp.upbound.io;
+#nullable enable
 /// <summary>GarbageCollectionPolicy is the Schema for the GarbageCollectionPolicys API. Creates a Google Cloud Bigtable GC Policy inside a family.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GarbageCollectionPolicyList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1GarbageCollectionPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in bigtable to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRe
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in bigtable to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSe
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecForProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderMaxAge
@@ -102,7 +113,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderMaxAge
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderMaxVersion
@@ -111,7 +124,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderMaxVersion
     [JsonPropertyName("number")]
     public double? Number { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderTableRefPolicy
@@ -124,7 +139,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderTableRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigtable to populate table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderTableRef
@@ -137,7 +154,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderTableRef
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecForProviderTableRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderTableSelectorPolicy
@@ -150,7 +169,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderTableSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigtable to populate table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderTableSelector
@@ -167,7 +188,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProviderTableSelector
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecForProviderTableSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProvider
@@ -228,7 +251,9 @@ public partial class V1beta1GarbageCollectionPolicySpecForProvider
     [JsonPropertyName("tableSelector")]
     public V1beta1GarbageCollectionPolicySpecForProviderTableSelector? TableSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameRefPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in bigtable to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameRef
@@ -254,7 +281,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameR
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameSelectorPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in bigtable to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameSelector
@@ -284,7 +315,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameS
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecInitProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderMaxAge
@@ -297,7 +330,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderMaxAge
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderMaxVersion
@@ -306,7 +341,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderMaxVersion
     [JsonPropertyName("number")]
     public double? Number { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableRefPolicy
@@ -319,7 +356,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in bigtable to populate table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableRef
@@ -332,7 +371,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableRef
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecInitProviderTableRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableSelectorPolicy
@@ -345,7 +386,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in bigtable to populate table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableSelector
@@ -362,7 +405,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProviderTableSelector
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecInitProviderTableSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecInitProvider
@@ -423,7 +468,9 @@ public partial class V1beta1GarbageCollectionPolicySpecInitProvider
     [JsonPropertyName("tableSelector")]
     public V1beta1GarbageCollectionPolicySpecInitProviderTableSelector? TableSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecProviderConfigRefPolicy
@@ -436,7 +483,9 @@ public partial class V1beta1GarbageCollectionPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecProviderConfigRef
@@ -449,7 +498,9 @@ public partial class V1beta1GarbageCollectionPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GarbageCollectionPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecWriteConnectionSecretToRef
@@ -462,7 +513,9 @@ public partial class V1beta1GarbageCollectionPolicySpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GarbageCollectionPolicySpec defines the desired state of GarbageCollectionPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpec
@@ -491,7 +544,9 @@ public partial class V1beta1GarbageCollectionPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GarbageCollectionPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicyStatusAtProviderMaxAge
@@ -504,7 +559,9 @@ public partial class V1beta1GarbageCollectionPolicyStatusAtProviderMaxAge
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicyStatusAtProviderMaxVersion
@@ -513,7 +570,9 @@ public partial class V1beta1GarbageCollectionPolicyStatusAtProviderMaxVersion
     [JsonPropertyName("number")]
     public double? Number { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicyStatusAtProvider
@@ -562,7 +621,9 @@ public partial class V1beta1GarbageCollectionPolicyStatusAtProvider
     [JsonPropertyName("table")]
     public string? Table { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicyStatusConditions
@@ -591,7 +652,9 @@ public partial class V1beta1GarbageCollectionPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GarbageCollectionPolicyStatus defines the observed state of GarbageCollectionPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicyStatus
@@ -608,7 +671,9 @@ public partial class V1beta1GarbageCollectionPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GarbageCollectionPolicy is the Schema for the GarbageCollectionPolicys API. Creates a Google Cloud Bigtable GC Policy inside a family.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -638,3 +703,4 @@ public partial class V1beta1GarbageCollectionPolicy : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1GarbageCollectionPolicyStatus? Status { get; set; }
 }
+#nullable disable

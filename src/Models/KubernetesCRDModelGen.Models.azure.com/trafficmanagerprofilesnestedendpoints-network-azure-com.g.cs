@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/NestedEndpoints/{endpointName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointLis
     [JsonPropertyName("items")]
     public IList<V1api20220401storageTrafficManagerProfilesNestedEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.EndpointProperties_CustomHeaders</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpecCustomHeaders
@@ -50,7 +53,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpecOperatorSpecConfigMapExpressions
@@ -67,7 +72,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpecOperatorSpecSecretExpressions
@@ -84,7 +91,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpointOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpecOperatorSpec
@@ -101,7 +110,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20220401storageTrafficManagerProfilesNestedEndpointSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/TrafficManagerProfile resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpecOwner
@@ -114,7 +125,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.EndpointProperties_Subnets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpecSubnets
@@ -135,7 +148,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     [JsonPropertyName("scope")]
     public int? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TargetResourceReference: The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpecTargetResourceReference
@@ -156,7 +171,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpec
@@ -241,7 +258,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointStatusConditions
@@ -274,7 +293,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSta
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.EndpointProperties_CustomHeaders_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointStatusCustomHeaders
@@ -291,7 +312,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSta
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.EndpointProperties_Subnets_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointStatusSubnets
@@ -312,7 +335,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSta
     [JsonPropertyName("scope")]
     public int? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointStatus
@@ -393,7 +418,9 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSta
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/NestedEndpoints/{endpointName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -423,3 +450,4 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpoint : 
     [JsonPropertyName("status")]
     public V1api20220401storageTrafficManagerProfilesNestedEndpointStatus? Status { get; set; }
 }
+#nullable disable

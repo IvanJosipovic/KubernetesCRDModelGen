@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.m.upbound.io;
+#nullable enable
 /// <summary>ClusterRoleAssociation is the Schema for the ClusterRoleAssociations API. Manages a RDS DB Cluster association with an IAM Role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterRoleAssociationList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1ClusterRoleAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdenti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in rds to populate dbClusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierRef
@@ -63,7 +68,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdenti
     [JsonPropertyName("policy")]
     public V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdenti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in rds to populate dbClusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdenti
     [JsonPropertyName("policy")]
     public V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterRoleAssociationSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1ClusterRoleAssociationSpecForProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ClusterRoleAssociationSpecForProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierRefPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdent
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in rds to populate dbClusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierRef
@@ -228,7 +251,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdent
     [JsonPropertyName("policy")]
     public V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierSelectorPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdent
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in rds to populate dbClusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierSelector
@@ -262,7 +289,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdent
     [JsonPropertyName("policy")]
     public V1beta1ClusterRoleAssociationSpecInitProviderDbClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRefPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRef
@@ -292,7 +323,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterRoleAssociationSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelectorPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelector
@@ -326,7 +361,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecInitProvider
@@ -359,7 +396,9 @@ public partial class V1beta1ClusterRoleAssociationSpecInitProvider
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ClusterRoleAssociationSpecInitProviderRoleArnSelector? RoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecProviderConfigRef
@@ -372,7 +411,9 @@ public partial class V1beta1ClusterRoleAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecWriteConnectionSecretToRef
@@ -381,7 +422,9 @@ public partial class V1beta1ClusterRoleAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterRoleAssociationSpec defines the desired state of ClusterRoleAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpec
@@ -406,7 +449,9 @@ public partial class V1beta1ClusterRoleAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClusterRoleAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationStatusAtProvider
@@ -431,7 +476,9 @@ public partial class V1beta1ClusterRoleAssociationStatusAtProvider
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationStatusConditions
@@ -460,7 +507,9 @@ public partial class V1beta1ClusterRoleAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterRoleAssociationStatus defines the observed state of ClusterRoleAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationStatus
@@ -477,7 +526,9 @@ public partial class V1beta1ClusterRoleAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterRoleAssociation is the Schema for the ClusterRoleAssociations API. Manages a RDS DB Cluster association with an IAM Role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -507,3 +558,4 @@ public partial class V1beta1ClusterRoleAssociation : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1ClusterRoleAssociationStatus? Status { get; set; }
 }
+#nullable disable

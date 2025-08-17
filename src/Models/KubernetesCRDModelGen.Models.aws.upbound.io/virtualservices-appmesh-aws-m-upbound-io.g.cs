@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appmesh.aws.m.upbound.io;
+#nullable enable
 /// <summary>VirtualService is the Schema for the VirtualServices API. Provides an AWS App Mesh virtual service resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualServiceList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualServiceSpecForProviderMeshNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1VirtualServiceSpecForProviderMeshNameRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecForProviderMeshNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VirtualServiceSpecForProviderMeshNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VirtualServiceSpecForProviderMeshNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecForProviderMeshNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNode in appmesh to populate virtualNodeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNode in appmesh to populate virtualNodeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual node associated with a virtual service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
@@ -178,7 +197,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNode
     [JsonPropertyName("virtualNodeNameSelector")]
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualNodeVirtualNodeNameSelector? VirtualNodeNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameRef
@@ -208,7 +231,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelector
@@ -242,7 +269,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual router associated with a virtual service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouter
@@ -259,7 +288,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRout
     [JsonPropertyName("virtualRouterNameSelector")]
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouterVirtualRouterNameSelector? VirtualRouterNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpecProvider
@@ -272,7 +303,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpecProvider
     [JsonPropertyName("virtualRouter")]
     public V1beta1VirtualServiceSpecForProviderSpecProviderVirtualRouter? VirtualRouter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual service specification to apply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderSpec
@@ -281,7 +314,9 @@ public partial class V1beta1VirtualServiceSpecForProviderSpec
     [JsonPropertyName("provider")]
     public V1beta1VirtualServiceSpecForProviderSpecProvider? Provider { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProvider
@@ -318,7 +353,9 @@ public partial class V1beta1VirtualServiceSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderMeshNameRefPolicy
@@ -331,7 +368,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderMeshNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderMeshNameRef
@@ -348,7 +387,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderMeshNameRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecInitProviderMeshNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderMeshNameSelectorPolicy
@@ -361,7 +402,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderMeshNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderMeshNameSelector
@@ -382,7 +425,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderMeshNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecInitProviderMeshNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameRefPolicy
@@ -395,7 +440,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNod
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNode in appmesh to populate virtualNodeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameRef
@@ -412,7 +459,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNod
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicy
@@ -425,7 +474,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNod
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNode in appmesh to populate virtualNodeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameSelector
@@ -446,7 +497,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNod
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual node associated with a virtual service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNode
@@ -463,7 +516,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNod
     [JsonPropertyName("virtualNodeNameSelector")]
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualNodeVirtualNodeNameSelector? VirtualNodeNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameRefPolicy
@@ -476,7 +531,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameRef
@@ -493,7 +550,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicy
@@ -506,7 +565,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualRouter in appmesh to populate virtualRouterName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelector
@@ -527,7 +588,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     [JsonPropertyName("policy")]
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual router associated with a virtual service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouter
@@ -544,7 +607,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRou
     [JsonPropertyName("virtualRouterNameSelector")]
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouterVirtualRouterNameSelector? VirtualRouterNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpecProvider
@@ -557,7 +622,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpecProvider
     [JsonPropertyName("virtualRouter")]
     public V1beta1VirtualServiceSpecInitProviderSpecProviderVirtualRouter? VirtualRouter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual service specification to apply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProviderSpec
@@ -566,7 +633,9 @@ public partial class V1beta1VirtualServiceSpecInitProviderSpec
     [JsonPropertyName("provider")]
     public V1beta1VirtualServiceSpecInitProviderSpecProvider? Provider { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecInitProvider
@@ -599,7 +668,9 @@ public partial class V1beta1VirtualServiceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecProviderConfigRef
@@ -612,7 +683,9 @@ public partial class V1beta1VirtualServiceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecWriteConnectionSecretToRef
@@ -621,7 +694,9 @@ public partial class V1beta1VirtualServiceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualServiceSpec defines the desired state of VirtualService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpec
@@ -646,7 +721,9 @@ public partial class V1beta1VirtualServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual node associated with a virtual service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualNode
@@ -655,7 +732,9 @@ public partial class V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualNod
     [JsonPropertyName("virtualNodeName")]
     public string? VirtualNodeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual router associated with a virtual service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualRouter
@@ -664,7 +743,9 @@ public partial class V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualRou
     [JsonPropertyName("virtualRouterName")]
     public string? VirtualRouterName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceStatusAtProviderSpecProvider
@@ -677,7 +758,9 @@ public partial class V1beta1VirtualServiceStatusAtProviderSpecProvider
     [JsonPropertyName("virtualRouter")]
     public V1beta1VirtualServiceStatusAtProviderSpecProviderVirtualRouter? VirtualRouter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Virtual service specification to apply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceStatusAtProviderSpec
@@ -686,7 +769,9 @@ public partial class V1beta1VirtualServiceStatusAtProviderSpec
     [JsonPropertyName("provider")]
     public V1beta1VirtualServiceStatusAtProviderSpecProvider? Provider { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceStatusAtProvider
@@ -739,7 +824,9 @@ public partial class V1beta1VirtualServiceStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceStatusConditions
@@ -768,7 +855,9 @@ public partial class V1beta1VirtualServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualServiceStatus defines the observed state of VirtualService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceStatus
@@ -785,7 +874,9 @@ public partial class V1beta1VirtualServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualService is the Schema for the VirtualServices API. Provides an AWS App Mesh virtual service resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -815,3 +906,4 @@ public partial class V1beta1VirtualService : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1VirtualServiceStatus? Status { get; set; }
 }
+#nullable disable

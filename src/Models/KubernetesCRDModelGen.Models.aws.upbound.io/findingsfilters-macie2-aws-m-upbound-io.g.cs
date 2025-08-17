@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.macie2.aws.m.upbound.io;
+#nullable enable
 /// <summary>FindingsFilter is the Schema for the FindingsFilters API. Provides a resource to manage an Amazon Macie Findings Filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FindingsFilterList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1FindingsFilter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpecForProviderFindingCriteriaCriterion
@@ -70,7 +73,9 @@ public partial class V1beta1FindingsFilterSpecForProviderFindingCriteriaCriterio
     [JsonPropertyName("neq")]
     public IList<string>? Neq { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The criteria to use to filter findings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpecForProviderFindingCriteria
@@ -79,7 +84,9 @@ public partial class V1beta1FindingsFilterSpecForProviderFindingCriteria
     [JsonPropertyName("criterion")]
     public IList<V1beta1FindingsFilterSpecForProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpecForProvider
@@ -112,7 +119,9 @@ public partial class V1beta1FindingsFilterSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpecInitProviderFindingCriteriaCriterion
@@ -149,7 +158,9 @@ public partial class V1beta1FindingsFilterSpecInitProviderFindingCriteriaCriteri
     [JsonPropertyName("neq")]
     public IList<string>? Neq { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The criteria to use to filter findings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpecInitProviderFindingCriteria
@@ -158,7 +169,9 @@ public partial class V1beta1FindingsFilterSpecInitProviderFindingCriteria
     [JsonPropertyName("criterion")]
     public IList<V1beta1FindingsFilterSpecInitProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpecInitProvider
@@ -187,7 +200,9 @@ public partial class V1beta1FindingsFilterSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpecProviderConfigRef
@@ -200,7 +215,9 @@ public partial class V1beta1FindingsFilterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpecWriteConnectionSecretToRef
@@ -209,7 +226,9 @@ public partial class V1beta1FindingsFilterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FindingsFilterSpec defines the desired state of FindingsFilter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterSpec
@@ -234,7 +253,9 @@ public partial class V1beta1FindingsFilterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FindingsFilterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterStatusAtProviderFindingCriteriaCriterion
@@ -271,7 +292,9 @@ public partial class V1beta1FindingsFilterStatusAtProviderFindingCriteriaCriteri
     [JsonPropertyName("neq")]
     public IList<string>? Neq { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The criteria to use to filter findings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterStatusAtProviderFindingCriteria
@@ -280,7 +303,9 @@ public partial class V1beta1FindingsFilterStatusAtProviderFindingCriteria
     [JsonPropertyName("criterion")]
     public IList<V1beta1FindingsFilterStatusAtProviderFindingCriteriaCriterion>? Criterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterStatusAtProvider
@@ -325,7 +350,9 @@ public partial class V1beta1FindingsFilterStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterStatusConditions
@@ -354,7 +381,9 @@ public partial class V1beta1FindingsFilterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FindingsFilterStatus defines the observed state of FindingsFilter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FindingsFilterStatus
@@ -371,7 +400,9 @@ public partial class V1beta1FindingsFilterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FindingsFilter is the Schema for the FindingsFilters API. Provides a resource to manage an Amazon Macie Findings Filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -401,3 +432,4 @@ public partial class V1beta1FindingsFilter : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1FindingsFilterStatus? Status { get; set; }
 }
+#nullable disable

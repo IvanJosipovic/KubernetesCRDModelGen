@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>RouteMap is the Schema for the RouteMaps API. Manages a Route Map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RouteMapList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1RouteMap> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderRuleActionParameter
@@ -50,7 +53,9 @@ public partial class V1beta1RouteMapSpecForProviderRuleActionParameter
     [JsonPropertyName("routePrefix")]
     public IList<string>? RoutePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderRuleAction
@@ -63,7 +68,9 @@ public partial class V1beta1RouteMapSpecForProviderRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderRuleMatchCriterion
@@ -84,7 +91,9 @@ public partial class V1beta1RouteMapSpecForProviderRuleMatchCriterion
     [JsonPropertyName("routePrefix")]
     public IList<string>? RoutePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderRule
@@ -105,7 +114,9 @@ public partial class V1beta1RouteMapSpecForProviderRule
     [JsonPropertyName("nextStepIfMatched")]
     public string? NextStepIfMatched { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderVirtualHubIdRefPolicy
@@ -118,7 +129,9 @@ public partial class V1beta1RouteMapSpecForProviderVirtualHubIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderVirtualHubIdRef
@@ -135,7 +148,9 @@ public partial class V1beta1RouteMapSpecForProviderVirtualHubIdRef
     [JsonPropertyName("policy")]
     public V1beta1RouteMapSpecForProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderVirtualHubIdSelectorPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1RouteMapSpecForProviderVirtualHubIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderVirtualHubIdSelector
@@ -169,7 +186,9 @@ public partial class V1beta1RouteMapSpecForProviderVirtualHubIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RouteMapSpecForProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1RouteMapSpecForProvider
     [JsonPropertyName("virtualHubIdSelector")]
     public V1beta1RouteMapSpecForProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecInitProviderRuleActionParameter
@@ -207,7 +228,9 @@ public partial class V1beta1RouteMapSpecInitProviderRuleActionParameter
     [JsonPropertyName("routePrefix")]
     public IList<string>? RoutePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecInitProviderRuleAction
@@ -220,7 +243,9 @@ public partial class V1beta1RouteMapSpecInitProviderRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecInitProviderRuleMatchCriterion
@@ -241,7 +266,9 @@ public partial class V1beta1RouteMapSpecInitProviderRuleMatchCriterion
     [JsonPropertyName("routePrefix")]
     public IList<string>? RoutePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecInitProviderRule
@@ -262,7 +289,9 @@ public partial class V1beta1RouteMapSpecInitProviderRule
     [JsonPropertyName("nextStepIfMatched")]
     public string? NextStepIfMatched { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecInitProvider
@@ -271,7 +300,9 @@ public partial class V1beta1RouteMapSpecInitProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1RouteMapSpecInitProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecProviderConfigRef
@@ -284,7 +315,9 @@ public partial class V1beta1RouteMapSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecWriteConnectionSecretToRef
@@ -293,7 +326,9 @@ public partial class V1beta1RouteMapSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteMapSpec defines the desired state of RouteMap</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpec
@@ -318,7 +353,9 @@ public partial class V1beta1RouteMapSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RouteMapSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapStatusAtProviderRuleActionParameter
@@ -335,7 +372,9 @@ public partial class V1beta1RouteMapStatusAtProviderRuleActionParameter
     [JsonPropertyName("routePrefix")]
     public IList<string>? RoutePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapStatusAtProviderRuleAction
@@ -348,7 +387,9 @@ public partial class V1beta1RouteMapStatusAtProviderRuleAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapStatusAtProviderRuleMatchCriterion
@@ -369,7 +410,9 @@ public partial class V1beta1RouteMapStatusAtProviderRuleMatchCriterion
     [JsonPropertyName("routePrefix")]
     public IList<string>? RoutePrefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapStatusAtProviderRule
@@ -390,7 +433,9 @@ public partial class V1beta1RouteMapStatusAtProviderRule
     [JsonPropertyName("nextStepIfMatched")]
     public string? NextStepIfMatched { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapStatusAtProvider
@@ -407,7 +452,9 @@ public partial class V1beta1RouteMapStatusAtProvider
     [JsonPropertyName("virtualHubId")]
     public string? VirtualHubId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapStatusConditions
@@ -436,7 +483,9 @@ public partial class V1beta1RouteMapStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteMapStatus defines the observed state of RouteMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapStatus
@@ -453,7 +502,9 @@ public partial class V1beta1RouteMapStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouteMap is the Schema for the RouteMaps API. Manages a Route Map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -483,3 +534,4 @@ public partial class V1beta1RouteMap : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1RouteMapStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventarc.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EventarcTriggerList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1EventarcTrigger> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecChannelRef
@@ -50,7 +53,9 @@ public partial class V1beta1EventarcTriggerSpecChannelRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationCloudFunctionRef
@@ -67,7 +72,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationCloudFunctionRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationCloudRunServiceServiceRef
@@ -84,7 +91,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationCloudRunServiceService
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationCloudRunService
@@ -101,7 +110,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationCloudRunService
     [JsonPropertyName("serviceRef")]
     public V1beta1EventarcTriggerSpecDestinationCloudRunServiceServiceRef ServiceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationGkeClusterRef
@@ -118,7 +129,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationGkeClusterRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A GKE service capable of receiving events. The service should be running in the same project as the trigger.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationGke
@@ -143,7 +156,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationGke
     [JsonPropertyName("service")]
     public string Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An HTTP endpoint destination described by an URI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationHttpEndpoint
@@ -152,7 +167,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationHttpEndpoint
     [JsonPropertyName("uri")]
     public string Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationNetworkConfigNetworkAttachmentRef
@@ -169,7 +186,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationNetworkConfigNetworkAt
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Network config is used to configure how Eventarc resolves and connect to a destination. This should only be used with HttpEndpoint destination type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationNetworkConfig
@@ -178,7 +197,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationNetworkConfig
     [JsonPropertyName("networkAttachmentRef")]
     public V1beta1EventarcTriggerSpecDestinationNetworkConfigNetworkAttachmentRef NetworkAttachmentRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestinationWorkflowRef
@@ -195,7 +216,9 @@ public partial class V1beta1EventarcTriggerSpecDestinationWorkflowRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Destination specifies where the events should be sent to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecDestination
@@ -224,7 +247,9 @@ public partial class V1beta1EventarcTriggerSpecDestination
     [JsonPropertyName("workflowRef")]
     public V1beta1EventarcTriggerSpecDestinationWorkflowRef? WorkflowRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecMatchingCriteria
@@ -241,7 +266,9 @@ public partial class V1beta1EventarcTriggerSpecMatchingCriteria
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecProjectRef
@@ -258,7 +285,9 @@ public partial class V1beta1EventarcTriggerSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecServiceAccountRef
@@ -275,7 +304,9 @@ public partial class V1beta1EventarcTriggerSpecServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecTransportPubsubTopicRef
@@ -292,7 +323,9 @@ public partial class V1beta1EventarcTriggerSpecTransportPubsubTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecTransportPubsub
@@ -301,7 +334,9 @@ public partial class V1beta1EventarcTriggerSpecTransportPubsub
     [JsonPropertyName("topicRef")]
     public V1beta1EventarcTriggerSpecTransportPubsubTopicRef? TopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpecTransport
@@ -310,7 +345,9 @@ public partial class V1beta1EventarcTriggerSpecTransport
     [JsonPropertyName("pubsub")]
     public V1beta1EventarcTriggerSpecTransportPubsub? Pubsub { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerSpec
@@ -351,7 +388,9 @@ public partial class V1beta1EventarcTriggerSpec
     [JsonPropertyName("transport")]
     public V1beta1EventarcTriggerSpecTransport? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerStatusConditions
@@ -376,7 +415,9 @@ public partial class V1beta1EventarcTriggerStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerStatusTransportPubsub
@@ -385,7 +426,9 @@ public partial class V1beta1EventarcTriggerStatusTransportPubsub
     [JsonPropertyName("subscription")]
     public string? Subscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerStatusTransport
@@ -394,7 +437,9 @@ public partial class V1beta1EventarcTriggerStatusTransport
     [JsonPropertyName("pubsub")]
     public V1beta1EventarcTriggerStatusTransportPubsub? Pubsub { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventarcTriggerStatus
@@ -431,7 +476,9 @@ public partial class V1beta1EventarcTriggerStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -461,3 +508,4 @@ public partial class V1beta1EventarcTrigger : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1EventarcTriggerStatus? Status { get; set; }
 }
+#nullable disable

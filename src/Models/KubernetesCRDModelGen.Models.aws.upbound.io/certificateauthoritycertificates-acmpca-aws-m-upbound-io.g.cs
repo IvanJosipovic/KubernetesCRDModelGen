@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acmpca.aws.m.upbound.io;
+#nullable enable
 /// <summary>CertificateAuthorityCertificate is the Schema for the CertificateAuthorityCertificates API. Associates a certificate with an AWS Certificate Manager Private Certificate Authority</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateAuthorityCertificateList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1CertificateAuthorityCertificate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertificateAuthorityArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertif
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CertificateAuthority in acmpca to populate certificateAuthorityArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertificateAuthorityArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertif
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthorityCertificateSpecForProviderCertificateAuthorityArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertificateAuthorityArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertif
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CertificateAuthority in acmpca to populate certificateAuthorityArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertificateAuthorityArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertif
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthorityCertificateSpecForProviderCertificateAuthorityArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA. Required for subordinate Certificate Authorities. Not allowed for root Certificate Authorities.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertificateChainSecretRef
@@ -110,7 +121,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertif
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PEM-encoded certificate for the Certificate Authority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertificateSecretRef
@@ -123,7 +136,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecForProviderCertif
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecForProvider
@@ -152,7 +167,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateAuthorityArnRefPolicy
@@ -165,7 +182,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCerti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CertificateAuthority in acmpca to populate certificateAuthorityArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateAuthorityArnRef
@@ -182,7 +201,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCerti
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateAuthorityArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateAuthorityArnSelectorPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCerti
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CertificateAuthority in acmpca to populate certificateAuthorityArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateAuthorityArnSelector
@@ -216,7 +239,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCerti
     [JsonPropertyName("policy")]
     public V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateAuthorityArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA. Required for subordinate Certificate Authorities. Not allowed for root Certificate Authorities.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateChainSecretRef
@@ -229,7 +254,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCerti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PEM-encoded certificate for the Certificate Authority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateSecretRef
@@ -242,7 +269,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecInitProviderCerti
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecInitProvider
@@ -267,7 +296,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecInitProvider
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CertificateAuthorityCertificateSpecInitProviderCertificateSecretRef CertificateSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecProviderConfigRef
@@ -280,7 +311,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpecWriteConnectionSecretToRef
@@ -289,7 +322,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpecWriteConnectionSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthorityCertificateSpec defines the desired state of CertificateAuthorityCertificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateSpec
@@ -314,7 +349,9 @@ public partial class V1beta1CertificateAuthorityCertificateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateAuthorityCertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateStatusAtProvider
@@ -331,7 +368,9 @@ public partial class V1beta1CertificateAuthorityCertificateStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateStatusConditions
@@ -360,7 +399,9 @@ public partial class V1beta1CertificateAuthorityCertificateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthorityCertificateStatus defines the observed state of CertificateAuthorityCertificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityCertificateStatus
@@ -377,7 +418,9 @@ public partial class V1beta1CertificateAuthorityCertificateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateAuthorityCertificate is the Schema for the CertificateAuthorityCertificates API. Associates a certificate with an AWS Certificate Manager Private Certificate Authority</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -407,3 +450,4 @@ public partial class V1beta1CertificateAuthorityCertificate : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1CertificateAuthorityCertificateStatus? Status { get; set; }
 }
+#nullable disable

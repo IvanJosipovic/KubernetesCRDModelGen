@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rum.aws.m.upbound.io;
+#nullable enable
 /// <summary>MetricsDestination is the Schema for the MetricsDestinations API. Provides a CloudWatch RUM Metrics Destination resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MetricsDestinationList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1MetricsDestination> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AppMonitor in rum to populate appMonitorName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameRef
     [JsonPropertyName("policy")]
     public V1beta1MetricsDestinationSpecForProviderAppMonitorNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AppMonitor in rum to populate appMonitorName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelec
     [JsonPropertyName("policy")]
     public V1beta1MetricsDestinationSpecForProviderAppMonitorNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1MetricsDestinationSpecForProviderIamRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1MetricsDestinationSpecForProviderIamRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1MetricsDestinationSpecForProviderIamRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecForProvider
@@ -202,7 +221,9 @@ public partial class V1beta1MetricsDestinationSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRefPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AppMonitor in rum to populate appMonitorName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRef
@@ -232,7 +255,9 @@ public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRef
     [JsonPropertyName("policy")]
     public V1beta1MetricsDestinationSpecInitProviderAppMonitorNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AppMonitor in rum to populate appMonitorName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSelector
@@ -266,7 +293,9 @@ public partial class V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSele
     [JsonPropertyName("policy")]
     public V1beta1MetricsDestinationSpecInitProviderAppMonitorNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnRef
@@ -296,7 +327,9 @@ public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1MetricsDestinationSpecInitProviderIamRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelectorPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate iamRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelector
@@ -330,7 +365,9 @@ public partial class V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecInitProvider
@@ -367,7 +404,9 @@ public partial class V1beta1MetricsDestinationSpecInitProvider
     [JsonPropertyName("iamRoleArnSelector")]
     public V1beta1MetricsDestinationSpecInitProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecProviderConfigRef
@@ -380,7 +419,9 @@ public partial class V1beta1MetricsDestinationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpecWriteConnectionSecretToRef
@@ -389,7 +430,9 @@ public partial class V1beta1MetricsDestinationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetricsDestinationSpec defines the desired state of MetricsDestination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationSpec
@@ -414,7 +457,9 @@ public partial class V1beta1MetricsDestinationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MetricsDestinationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationStatusAtProvider
@@ -443,7 +488,9 @@ public partial class V1beta1MetricsDestinationStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationStatusConditions
@@ -472,7 +519,9 @@ public partial class V1beta1MetricsDestinationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetricsDestinationStatus defines the observed state of MetricsDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricsDestinationStatus
@@ -489,7 +538,9 @@ public partial class V1beta1MetricsDestinationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetricsDestination is the Schema for the MetricsDestinations API. Provides a CloudWatch RUM Metrics Destination resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -519,3 +570,4 @@ public partial class V1beta1MetricsDestination : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1MetricsDestinationStatus? Status { get; set; }
 }
+#nullable disable

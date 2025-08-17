@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.m.upbound.io;
+#nullable enable
 /// <summary>Association is the Schema for the Associations API. Associates an SSM Document to an instance or EC2 tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AssociationList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1Association> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AssociationSpecForProviderNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Document in ssm to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1AssociationSpecForProviderNameRef
     [JsonPropertyName("policy")]
     public V1beta1AssociationSpecForProviderNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1AssociationSpecForProviderNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Document in ssm to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1AssociationSpecForProviderNameSelector
     [JsonPropertyName("policy")]
     public V1beta1AssociationSpecForProviderNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output location block. Output Location is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderOutputLocation
@@ -114,7 +125,9 @@ public partial class V1beta1AssociationSpecForProviderOutputLocation
     [JsonPropertyName("s3Region")]
     public string? S3Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderTargetsValuesRefsPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1AssociationSpecForProviderTargetsValuesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderTargetsValuesRefs
@@ -144,7 +159,9 @@ public partial class V1beta1AssociationSpecForProviderTargetsValuesRefs
     [JsonPropertyName("policy")]
     public V1beta1AssociationSpecForProviderTargetsValuesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderTargetsValuesSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1AssociationSpecForProviderTargetsValuesSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderTargetsValuesSelector
@@ -178,7 +197,9 @@ public partial class V1beta1AssociationSpecForProviderTargetsValuesSelector
     [JsonPropertyName("policy")]
     public V1beta1AssociationSpecForProviderTargetsValuesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProviderTargets
@@ -199,7 +220,9 @@ public partial class V1beta1AssociationSpecForProviderTargets
     [JsonPropertyName("valuesSelector")]
     public V1beta1AssociationSpecForProviderTargetsValuesSelector? ValuesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecForProvider
@@ -276,7 +299,9 @@ public partial class V1beta1AssociationSpecForProvider
     [JsonPropertyName("waitForSuccessTimeoutSeconds")]
     public double? WaitForSuccessTimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderNameRefPolicy
@@ -289,7 +314,9 @@ public partial class V1beta1AssociationSpecInitProviderNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Document in ssm to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderNameRef
@@ -306,7 +333,9 @@ public partial class V1beta1AssociationSpecInitProviderNameRef
     [JsonPropertyName("policy")]
     public V1beta1AssociationSpecInitProviderNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderNameSelectorPolicy
@@ -319,7 +348,9 @@ public partial class V1beta1AssociationSpecInitProviderNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Document in ssm to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderNameSelector
@@ -340,7 +371,9 @@ public partial class V1beta1AssociationSpecInitProviderNameSelector
     [JsonPropertyName("policy")]
     public V1beta1AssociationSpecInitProviderNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output location block. Output Location is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderOutputLocation
@@ -357,7 +390,9 @@ public partial class V1beta1AssociationSpecInitProviderOutputLocation
     [JsonPropertyName("s3Region")]
     public string? S3Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderTargetsValuesRefsPolicy
@@ -370,7 +405,9 @@ public partial class V1beta1AssociationSpecInitProviderTargetsValuesRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderTargetsValuesRefs
@@ -387,7 +424,9 @@ public partial class V1beta1AssociationSpecInitProviderTargetsValuesRefs
     [JsonPropertyName("policy")]
     public V1beta1AssociationSpecInitProviderTargetsValuesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderTargetsValuesSelectorPolicy
@@ -400,7 +439,9 @@ public partial class V1beta1AssociationSpecInitProviderTargetsValuesSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderTargetsValuesSelector
@@ -421,7 +462,9 @@ public partial class V1beta1AssociationSpecInitProviderTargetsValuesSelector
     [JsonPropertyName("policy")]
     public V1beta1AssociationSpecInitProviderTargetsValuesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProviderTargets
@@ -442,7 +485,9 @@ public partial class V1beta1AssociationSpecInitProviderTargets
     [JsonPropertyName("valuesSelector")]
     public V1beta1AssociationSpecInitProviderTargetsValuesSelector? ValuesSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecInitProvider
@@ -515,7 +560,9 @@ public partial class V1beta1AssociationSpecInitProvider
     [JsonPropertyName("waitForSuccessTimeoutSeconds")]
     public double? WaitForSuccessTimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecProviderConfigRef
@@ -528,7 +575,9 @@ public partial class V1beta1AssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpecWriteConnectionSecretToRef
@@ -537,7 +586,9 @@ public partial class V1beta1AssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssociationSpec defines the desired state of Association</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationSpec
@@ -562,7 +613,9 @@ public partial class V1beta1AssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output location block. Output Location is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationStatusAtProviderOutputLocation
@@ -579,7 +632,9 @@ public partial class V1beta1AssociationStatusAtProviderOutputLocation
     [JsonPropertyName("s3Region")]
     public string? S3Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationStatusAtProviderTargets
@@ -592,7 +647,9 @@ public partial class V1beta1AssociationStatusAtProviderTargets
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationStatusAtProvider
@@ -677,7 +734,9 @@ public partial class V1beta1AssociationStatusAtProvider
     [JsonPropertyName("waitForSuccessTimeoutSeconds")]
     public double? WaitForSuccessTimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationStatusConditions
@@ -706,7 +765,9 @@ public partial class V1beta1AssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AssociationStatus defines the observed state of Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssociationStatus
@@ -723,7 +784,9 @@ public partial class V1beta1AssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Association is the Schema for the Associations API. Associates an SSM Document to an instance or EC2 tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -753,3 +816,4 @@ public partial class V1beta1Association : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1AssociationStatus? Status { get; set; }
 }
+#nullable disable

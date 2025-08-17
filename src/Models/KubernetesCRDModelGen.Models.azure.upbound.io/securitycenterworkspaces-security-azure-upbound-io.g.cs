@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.azure.upbound.io;
+#nullable enable
 /// <summary>SecurityCenterWorkspace is the Schema for the SecurityCenterWorkspaces API. Manages the subscription's Security Center Workspace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecurityCenterWorkspaceList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1SecurityCenterWorkspace> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdSel
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecForProvider
@@ -110,7 +121,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecForProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1SecurityCenterWorkspaceSpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdRef
@@ -136,7 +151,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdRe
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdSelector
@@ -166,7 +185,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdSe
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecInitProvider
@@ -187,7 +208,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecInitProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1SecurityCenterWorkspaceSpecInitProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecProviderConfigRefPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecProviderConfigRef
@@ -213,7 +238,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterWorkspaceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpecWriteConnectionSecretToRef
@@ -226,7 +253,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterWorkspaceSpec defines the desired state of SecurityCenterWorkspace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceSpec
@@ -255,7 +284,9 @@ public partial class V1beta1SecurityCenterWorkspaceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SecurityCenterWorkspaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceStatusAtProvider
@@ -272,7 +303,9 @@ public partial class V1beta1SecurityCenterWorkspaceStatusAtProvider
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceStatusConditions
@@ -301,7 +334,9 @@ public partial class V1beta1SecurityCenterWorkspaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterWorkspaceStatus defines the observed state of SecurityCenterWorkspace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterWorkspaceStatus
@@ -318,7 +353,9 @@ public partial class V1beta1SecurityCenterWorkspaceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterWorkspace is the Schema for the SecurityCenterWorkspaces API. Manages the subscription's Security Center Workspace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -348,3 +385,4 @@ public partial class V1beta1SecurityCenterWorkspace : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1SecurityCenterWorkspaceStatus? Status { get; set; }
 }
+#nullable disable

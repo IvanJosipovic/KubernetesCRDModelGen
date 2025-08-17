@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+#nullable enable
 /// <summary>ExternalLocation is the Schema for the ExternalLocations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ExternalLocationList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1alpha1ExternalLocation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderEncryptionDetailsSseEncryptionDetails
@@ -46,7 +49,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderEncryptionDetailsSse
     [JsonPropertyName("awsKmsKeyArn")]
     public string? AwsKmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderEncryptionDetails
@@ -55,7 +60,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderEncryptionDetails
     [JsonPropertyName("sseEncryptionDetails")]
     public IList<V1alpha1ExternalLocationSpecForProviderEncryptionDetailsSseEncryptionDetails>? SseEncryptionDetails { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueManagedAqs
@@ -72,7 +79,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueManage
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueManagedPubsub
@@ -81,7 +90,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueManage
     [JsonPropertyName("subscriptionName")]
     public string? SubscriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueManagedSqs
@@ -90,7 +101,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueManage
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueProvidedAqs
@@ -107,7 +120,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueProvid
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueProvidedPubsub
@@ -116,7 +131,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueProvid
     [JsonPropertyName("subscriptionName")]
     public string? SubscriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueProvidedSqs
@@ -125,7 +142,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueueProvid
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueue
@@ -154,7 +173,9 @@ public partial class V1alpha1ExternalLocationSpecForProviderFileEventQueue
     [JsonPropertyName("providedSqs")]
     public IList<V1alpha1ExternalLocationSpecForProviderFileEventQueueProvidedSqs>? ProvidedSqs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecForProvider
@@ -219,7 +240,9 @@ public partial class V1alpha1ExternalLocationSpecForProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderEncryptionDetailsSseEncryptionDetails
@@ -232,7 +255,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderEncryptionDetailsSs
     [JsonPropertyName("awsKmsKeyArn")]
     public string? AwsKmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderEncryptionDetails
@@ -241,7 +266,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderEncryptionDetails
     [JsonPropertyName("sseEncryptionDetails")]
     public IList<V1alpha1ExternalLocationSpecInitProviderEncryptionDetailsSseEncryptionDetails>? SseEncryptionDetails { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueManagedAqs
@@ -258,7 +285,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueManag
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueManagedPubsub
@@ -267,7 +296,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueManag
     [JsonPropertyName("subscriptionName")]
     public string? SubscriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueManagedSqs
@@ -276,7 +307,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueManag
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueProvidedAqs
@@ -293,7 +326,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueProvi
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueProvidedPubsub
@@ -302,7 +337,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueProvi
     [JsonPropertyName("subscriptionName")]
     public string? SubscriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueProvidedSqs
@@ -311,7 +348,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueueProvi
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueue
@@ -340,7 +379,9 @@ public partial class V1alpha1ExternalLocationSpecInitProviderFileEventQueue
     [JsonPropertyName("providedSqs")]
     public IList<V1alpha1ExternalLocationSpecInitProviderFileEventQueueProvidedSqs>? ProvidedSqs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecInitProvider
@@ -405,7 +446,9 @@ public partial class V1alpha1ExternalLocationSpecInitProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecProviderConfigRefPolicy
@@ -418,7 +461,9 @@ public partial class V1alpha1ExternalLocationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecProviderConfigRef
@@ -431,7 +476,9 @@ public partial class V1alpha1ExternalLocationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1ExternalLocationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecPublishConnectionDetailsToConfigRefPolicy
@@ -444,7 +491,9 @@ public partial class V1alpha1ExternalLocationSpecPublishConnectionDetailsToConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecPublishConnectionDetailsToConfigRef
@@ -457,7 +506,9 @@ public partial class V1alpha1ExternalLocationSpecPublishConnectionDetailsToConfi
     [JsonPropertyName("policy")]
     public V1alpha1ExternalLocationSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecPublishConnectionDetailsToMetadata
@@ -474,7 +525,9 @@ public partial class V1alpha1ExternalLocationSpecPublishConnectionDetailsToMetad
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecPublishConnectionDetailsTo
@@ -491,7 +544,9 @@ public partial class V1alpha1ExternalLocationSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpecWriteConnectionSecretToRef
@@ -504,7 +559,9 @@ public partial class V1alpha1ExternalLocationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExternalLocationSpec defines the desired state of ExternalLocation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationSpec
@@ -537,7 +594,9 @@ public partial class V1alpha1ExternalLocationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1ExternalLocationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderEncryptionDetailsSseEncryptionDetails
@@ -550,7 +609,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderEncryptionDetailsSs
     [JsonPropertyName("awsKmsKeyArn")]
     public string? AwsKmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderEncryptionDetails
@@ -559,7 +620,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderEncryptionDetails
     [JsonPropertyName("sseEncryptionDetails")]
     public IList<V1alpha1ExternalLocationStatusAtProviderEncryptionDetailsSseEncryptionDetails>? SseEncryptionDetails { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueManagedAqs
@@ -580,7 +643,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueManag
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueManagedPubsub
@@ -593,7 +658,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueManag
     [JsonPropertyName("subscriptionName")]
     public string? SubscriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueManagedSqs
@@ -606,7 +673,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueManag
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueProvidedAqs
@@ -627,7 +696,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueProvi
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueProvidedPubsub
@@ -640,7 +711,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueProvi
     [JsonPropertyName("subscriptionName")]
     public string? SubscriptionName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueProvidedSqs
@@ -653,7 +726,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueueProvi
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueue
@@ -682,7 +757,9 @@ public partial class V1alpha1ExternalLocationStatusAtProviderFileEventQueue
     [JsonPropertyName("providedSqs")]
     public IList<V1alpha1ExternalLocationStatusAtProviderFileEventQueueProvidedSqs>? ProvidedSqs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusAtProvider
@@ -775,7 +852,9 @@ public partial class V1alpha1ExternalLocationStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatusConditions
@@ -804,7 +883,9 @@ public partial class V1alpha1ExternalLocationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExternalLocationStatus defines the observed state of ExternalLocation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExternalLocationStatus
@@ -821,7 +902,9 @@ public partial class V1alpha1ExternalLocationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExternalLocation is the Schema for the ExternalLocations API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -851,3 +934,4 @@ public partial class V1alpha1ExternalLocation : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1alpha1ExternalLocationStatus? Status { get; set; }
 }
+#nullable disable

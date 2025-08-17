@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancersInboundNatRule Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleList : IKube
     [JsonPropertyName("items")]
     public IList<V1api20240301storageLoadBalancersInboundNatRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecBackendAddressPoolReference
@@ -54,7 +57,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecBackendA
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecBackendAddressPool
@@ -67,7 +72,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecBackendA
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancersInboundNatRuleSpecBackendAddressPoolReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecFrontendIPConfigurationReference
@@ -88,7 +95,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecFrontend
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecFrontendIPConfiguration
@@ -101,7 +110,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecFrontend
     [JsonPropertyName("reference")]
     public V1api20240301storageLoadBalancersInboundNatRuleSpecFrontendIPConfigurationReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecOperatorSpecConfigMapExpressions
@@ -118,7 +129,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecOperator
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecOperatorSpecSecretExpressions
@@ -135,7 +148,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecOperator
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancersInboundNatRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecOperatorSpec
@@ -152,7 +167,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecOperator
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageLoadBalancersInboundNatRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/LoadBalancer resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecOwner
@@ -165,7 +182,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancersInboundNatRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleSpec
@@ -230,7 +249,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleSpec
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleStatusBackendAddressPool
@@ -243,7 +264,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleStatusBacken
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfiguration_STATUS_LoadBalancers_InboundNatRule_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleStatusBackendIPConfiguration
@@ -256,7 +279,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleStatusBacken
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleStatusConditions
@@ -289,7 +314,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleStatusCondit
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleStatusFrontendIPConfiguration
@@ -302,7 +329,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleStatusFronte
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancersInboundNatRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageLoadBalancersInboundNatRuleStatus
@@ -379,7 +408,9 @@ public partial class V1api20240301storageLoadBalancersInboundNatRuleStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.LoadBalancersInboundNatRule Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/inboundNatRules/{inboundNatRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -409,3 +440,4 @@ public partial class V1api20240301storageLoadBalancersInboundNatRule : IKubernet
     [JsonPropertyName("status")]
     public V1api20240301storageLoadBalancersInboundNatRuleStatus? Status { get; set; }
 }
+#nullable disable

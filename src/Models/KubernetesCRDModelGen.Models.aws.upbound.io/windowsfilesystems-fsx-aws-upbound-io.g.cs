@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.fsx.aws.upbound.io;
+#nullable enable
 /// <summary>WindowsFileSystem is the Schema for the WindowsFileSystems API. Manages a FSx Windows File System.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WindowsFileSystemList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1WindowsFileSystem> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Directory in ds to populate activeDirectoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRef
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Directory in ds to populate activeDirectoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSel
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecForProviderActiveDirectoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderAuditLogConfiguration
@@ -106,7 +117,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderAuditLogConfiguratio
     [JsonPropertyName("fileShareAccessAuditLogLevel")]
     public string? FileShareAccessAuditLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderDiskIopsConfiguration
@@ -119,7 +132,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderDiskIopsConfiguratio
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRefPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRef
@@ -145,7 +162,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelectorPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelector
@@ -175,7 +196,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefsPolicy
@@ -188,7 +211,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefs
@@ -201,7 +226,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelectorPolicy
@@ -214,7 +241,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelector
@@ -231,7 +260,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelec
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSelfManagedActiveDirectoryPasswordSecretRef
@@ -248,7 +279,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSelfManagedActiveDir
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSelfManagedActiveDirectory
@@ -277,7 +310,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSelfManagedActiveDir
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdRefsPolicy
@@ -290,7 +325,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdRefs
@@ -303,7 +340,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdSelectorPolicy
@@ -316,7 +355,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdSelector
@@ -333,7 +374,9 @@ public partial class V1beta1WindowsFileSystemSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProvider
@@ -458,7 +501,9 @@ public partial class V1beta1WindowsFileSystemSpecForProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRefPolicy
@@ -471,7 +516,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Directory in ds to populate activeDirectoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRef
@@ -484,7 +531,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRe
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSelectorPolicy
@@ -497,7 +546,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Directory in ds to populate activeDirectoryId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSelector
@@ -514,7 +565,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSe
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecInitProviderActiveDirectoryIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderAuditLogConfiguration
@@ -531,7 +584,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderAuditLogConfigurati
     [JsonPropertyName("fileShareAccessAuditLogLevel")]
     public string? FileShareAccessAuditLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderDiskIopsConfiguration
@@ -544,7 +599,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderDiskIopsConfigurati
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRefPolicy
@@ -557,7 +614,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRef
@@ -570,7 +629,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelectorPolicy
@@ -583,7 +644,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelector
@@ -600,7 +663,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefsPolicy
@@ -613,7 +678,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefs
@@ -626,7 +693,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy
@@ -639,7 +708,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSelector
@@ -656,7 +727,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSele
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSelfManagedActiveDirectoryPasswordSecretRef
@@ -673,7 +746,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSelfManagedActiveDi
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSelfManagedActiveDirectory
@@ -702,7 +777,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSelfManagedActiveDi
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefsPolicy
@@ -715,7 +792,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefs
@@ -728,7 +807,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelectorPolicy
@@ -741,7 +822,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelector
@@ -758,7 +841,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProvider
@@ -879,7 +964,9 @@ public partial class V1beta1WindowsFileSystemSpecInitProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecProviderConfigRefPolicy
@@ -892,7 +979,9 @@ public partial class V1beta1WindowsFileSystemSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecProviderConfigRef
@@ -905,7 +994,9 @@ public partial class V1beta1WindowsFileSystemSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WindowsFileSystemSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecWriteConnectionSecretToRef
@@ -918,7 +1009,9 @@ public partial class V1beta1WindowsFileSystemSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WindowsFileSystemSpec defines the desired state of WindowsFileSystem</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpec
@@ -947,7 +1040,9 @@ public partial class V1beta1WindowsFileSystemSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WindowsFileSystemSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemStatusAtProviderAuditLogConfiguration
@@ -964,7 +1059,9 @@ public partial class V1beta1WindowsFileSystemStatusAtProviderAuditLogConfigurati
     [JsonPropertyName("fileShareAccessAuditLogLevel")]
     public string? FileShareAccessAuditLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemStatusAtProviderDiskIopsConfiguration
@@ -977,7 +1074,9 @@ public partial class V1beta1WindowsFileSystemStatusAtProviderDiskIopsConfigurati
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemStatusAtProviderSelfManagedActiveDirectory
@@ -1002,7 +1101,9 @@ public partial class V1beta1WindowsFileSystemStatusAtProviderSelfManagedActiveDi
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemStatusAtProvider
@@ -1131,7 +1232,9 @@ public partial class V1beta1WindowsFileSystemStatusAtProvider
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemStatusConditions
@@ -1160,7 +1263,9 @@ public partial class V1beta1WindowsFileSystemStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WindowsFileSystemStatus defines the observed state of WindowsFileSystem.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemStatus
@@ -1177,7 +1282,9 @@ public partial class V1beta1WindowsFileSystemStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WindowsFileSystem is the Schema for the WindowsFileSystems API. Manages a FSx Windows File System.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1207,3 +1314,4 @@ public partial class V1beta1WindowsFileSystem : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1WindowsFileSystemStatus? Status { get; set; }
 }
+#nullable disable

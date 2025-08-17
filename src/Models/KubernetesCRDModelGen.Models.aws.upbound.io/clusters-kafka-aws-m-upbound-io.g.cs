@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kafka.aws.m.upbound.io;
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Cluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubnetsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubnetsRefs
@@ -63,7 +68,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubne
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubnetsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubnetsSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubne
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate clientSubnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubnetsSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubne
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderBrokerNodeGroupInfoClientSubnetsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Access control settings for brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivityInfoPublicAccess
@@ -106,7 +117,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivit
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SASL authentication type details for VPC connectivity. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSasl
@@ -119,7 +132,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivit
     [JsonPropertyName("scram")]
     public bool? Scram { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a client authentication. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication
@@ -132,7 +147,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivit
     [JsonPropertyName("tls")]
     public bool? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPC connectivity access control for brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivity
@@ -141,7 +158,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivit
     [JsonPropertyName("clientAuthentication")]
     public V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication? ClientAuthentication { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the cluster access configuration. See below. For security reasons, you can't turn on public access while creating an MSK cluster. However, you can update an existing cluster to make it publicly accessible. You can also create a new cluster and then update it to make it publicly accessible (documentation).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivityInfo
@@ -154,7 +173,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivit
     [JsonPropertyName("vpcConnectivity")]
     public V1beta1ClusterSpecForProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivity? VpcConnectivity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGroupsRefsPolicy
@@ -167,7 +188,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGroupsRefs
@@ -184,7 +207,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGro
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGroupsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGroupsSelectorPolicy
@@ -197,7 +222,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGroupsSelector
@@ -218,7 +245,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGro
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderBrokerNodeGroupInfoSecurityGroupsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains EBS volume provisioned throughput information. To provision storage throughput, you must choose broker type kafka.m5.4xlarge or larger. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfoProvisionedThroughput
@@ -231,7 +260,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoStorageInfo
     [JsonPropertyName("volumeThroughput")]
     public double? VolumeThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains EBS volume information. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfo
@@ -244,7 +275,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoStorageInfo
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains information about storage volumes attached to MSK broker nodes. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoStorageInfo
@@ -253,7 +286,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfoStorageInfo
     [JsonPropertyName("ebsStorageInfo")]
     public V1beta1ClusterSpecForProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfo? EbsStorageInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the broker nodes of the Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfo
@@ -298,7 +333,9 @@ public partial class V1beta1ClusterSpecForProviderBrokerNodeGroupInfo
     [JsonPropertyName("storageInfo")]
     public V1beta1ClusterSpecForProviderBrokerNodeGroupInfoStorageInfo? StorageInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SASL authentication type details for VPC connectivity. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClientAuthenticationSasl
@@ -311,7 +348,9 @@ public partial class V1beta1ClusterSpecForProviderClientAuthenticationSasl
     [JsonPropertyName("scram")]
     public bool? Scram { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enables TLS authentication for VPC connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClientAuthenticationTls
@@ -320,7 +359,9 @@ public partial class V1beta1ClusterSpecForProviderClientAuthenticationTls
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a client authentication. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClientAuthentication
@@ -337,7 +378,9 @@ public partial class V1beta1ClusterSpecForProviderClientAuthentication
     [JsonPropertyName("unauthenticated")]
     public bool? Unauthenticated { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfigurationInfoArnRefPolicy
@@ -350,7 +393,9 @@ public partial class V1beta1ClusterSpecForProviderConfigurationInfoArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Configuration in kafka to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfigurationInfoArnRef
@@ -367,7 +412,9 @@ public partial class V1beta1ClusterSpecForProviderConfigurationInfoArnRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderConfigurationInfoArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfigurationInfoArnSelectorPolicy
@@ -380,7 +427,9 @@ public partial class V1beta1ClusterSpecForProviderConfigurationInfoArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Configuration in kafka to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfigurationInfoArnSelector
@@ -401,7 +450,9 @@ public partial class V1beta1ClusterSpecForProviderConfigurationInfoArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderConfigurationInfoArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfigurationInfo
@@ -422,7 +473,9 @@ public partial class V1beta1ClusterSpecForProviderConfigurationInfo
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRestKmsKeyArnRefPolicy
@@ -435,7 +488,9 @@ public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRest
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate encryptionAtRestKmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRestKmsKeyArnRef
@@ -452,7 +507,9 @@ public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRest
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRestKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRestKmsKeyArnSelectorPolicy
@@ -465,7 +522,9 @@ public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRest
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate encryptionAtRestKmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRestKmsKeyArnSelector
@@ -486,7 +545,9 @@ public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRest
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderEncryptionInfoEncryptionAtRestKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to specify encryption in transit. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionInTransit
@@ -499,7 +560,9 @@ public partial class V1beta1ClusterSpecForProviderEncryptionInfoEncryptionInTran
     [JsonPropertyName("inCluster")]
     public bool? InCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying encryption. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionInfo
@@ -520,7 +583,9 @@ public partial class V1beta1ClusterSpecForProviderEncryptionInfo
     [JsonPropertyName("encryptionInTransit")]
     public V1beta1ClusterSpecForProviderEncryptionInfoEncryptionInTransit? EncryptionInTransit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupRefPolicy
@@ -533,7 +598,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate logGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupRef
@@ -550,7 +617,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatc
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupSelectorPolicy
@@ -563,7 +632,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate logGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupSelector
@@ -584,7 +655,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatc
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatchLogs
@@ -605,7 +678,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatc
     [JsonPropertyName("logGroupSelector")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupSelector? LogGroupSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamRefPolicy
@@ -618,7 +693,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate deliveryStream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamRef
@@ -635,7 +712,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseD
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamSelectorPolicy
@@ -648,7 +727,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseD
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate deliveryStream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamSelector
@@ -669,7 +750,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseD
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehose
@@ -690,7 +773,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsFirehose
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketRefPolicy
@@ -703,7 +788,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketRef
@@ -720,7 +807,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketR
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketSelectorPolicy
@@ -733,7 +822,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketSelector
@@ -754,7 +845,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketS
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3BucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3
@@ -779,7 +872,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Broker Logs settings for logging info. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogs
@@ -796,7 +891,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfoBrokerLogs
     [JsonPropertyName("s3")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogsS3? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingInfo
@@ -805,7 +902,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingInfo
     [JsonPropertyName("brokerLogs")]
     public V1beta1ClusterSpecForProviderLoggingInfoBrokerLogs? BrokerLogs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for JMX Exporter. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderOpenMonitoringPrometheusJmxExporter
@@ -814,7 +913,9 @@ public partial class V1beta1ClusterSpecForProviderOpenMonitoringPrometheusJmxExp
     [JsonPropertyName("enabledInBroker")]
     public bool? EnabledInBroker { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Node Exporter. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderOpenMonitoringPrometheusNodeExporter
@@ -823,7 +924,9 @@ public partial class V1beta1ClusterSpecForProviderOpenMonitoringPrometheusNodeEx
     [JsonPropertyName("enabledInBroker")]
     public bool? EnabledInBroker { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Prometheus settings for open monitoring. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderOpenMonitoringPrometheus
@@ -836,7 +939,9 @@ public partial class V1beta1ClusterSpecForProviderOpenMonitoringPrometheus
     [JsonPropertyName("nodeExporter")]
     public V1beta1ClusterSpecForProviderOpenMonitoringPrometheusNodeExporter? NodeExporter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for JMX and Node monitoring for the MSK cluster. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderOpenMonitoring
@@ -845,7 +950,9 @@ public partial class V1beta1ClusterSpecForProviderOpenMonitoring
     [JsonPropertyName("prometheus")]
     public V1beta1ClusterSpecForProviderOpenMonitoringPrometheus? Prometheus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
@@ -902,7 +1009,9 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubnetsRefsPolicy
@@ -915,7 +1024,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubnetsRefs
@@ -932,7 +1043,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubn
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubnetsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubnetsSelectorPolicy
@@ -945,7 +1058,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate clientSubnets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubnetsSelector
@@ -966,7 +1081,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubn
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoClientSubnetsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Access control settings for brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivityInfoPublicAccess
@@ -975,7 +1092,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SASL authentication type details for VPC connectivity. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSasl
@@ -988,7 +1107,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("scram")]
     public bool? Scram { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a client authentication. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication
@@ -1001,7 +1122,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("tls")]
     public bool? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPC connectivity access control for brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivity
@@ -1010,7 +1133,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("clientAuthentication")]
     public V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication? ClientAuthentication { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the cluster access configuration. See below. For security reasons, you can't turn on public access while creating an MSK cluster. However, you can update an existing cluster to make it publicly accessible. You can also create a new cluster and then update it to make it publicly accessible (documentation).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivityInfo
@@ -1023,7 +1148,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("vpcConnectivity")]
     public V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivity? VpcConnectivity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGroupsRefsPolicy
@@ -1036,7 +1163,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGroupsRefs
@@ -1053,7 +1182,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGr
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGroupsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGroupsSelectorPolicy
@@ -1066,7 +1197,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGroupsSelector
@@ -1087,7 +1220,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGr
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoSecurityGroupsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains EBS volume provisioned throughput information. To provision storage throughput, you must choose broker type kafka.m5.4xlarge or larger. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfoProvisionedThroughput
@@ -1100,7 +1235,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoStorageInf
     [JsonPropertyName("volumeThroughput")]
     public double? VolumeThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains EBS volume information. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfo
@@ -1113,7 +1250,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoStorageInf
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains information about storage volumes attached to MSK broker nodes. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoStorageInfo
@@ -1122,7 +1261,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoStorageInf
     [JsonPropertyName("ebsStorageInfo")]
     public V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfo? EbsStorageInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the broker nodes of the Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfo
@@ -1167,7 +1308,9 @@ public partial class V1beta1ClusterSpecInitProviderBrokerNodeGroupInfo
     [JsonPropertyName("storageInfo")]
     public V1beta1ClusterSpecInitProviderBrokerNodeGroupInfoStorageInfo? StorageInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SASL authentication type details for VPC connectivity. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClientAuthenticationSasl
@@ -1180,7 +1323,9 @@ public partial class V1beta1ClusterSpecInitProviderClientAuthenticationSasl
     [JsonPropertyName("scram")]
     public bool? Scram { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enables TLS authentication for VPC connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClientAuthenticationTls
@@ -1189,7 +1334,9 @@ public partial class V1beta1ClusterSpecInitProviderClientAuthenticationTls
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a client authentication. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClientAuthentication
@@ -1206,7 +1353,9 @@ public partial class V1beta1ClusterSpecInitProviderClientAuthentication
     [JsonPropertyName("unauthenticated")]
     public bool? Unauthenticated { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfigurationInfoArnRefPolicy
@@ -1219,7 +1368,9 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationInfoArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Configuration in kafka to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfigurationInfoArnRef
@@ -1236,7 +1387,9 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationInfoArnRef
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderConfigurationInfoArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfigurationInfoArnSelectorPolicy
@@ -1249,7 +1402,9 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationInfoArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Configuration in kafka to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfigurationInfoArnSelector
@@ -1270,7 +1425,9 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationInfoArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderConfigurationInfoArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfigurationInfo
@@ -1291,7 +1448,9 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationInfo
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRestKmsKeyArnRefPolicy
@@ -1304,7 +1463,9 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate encryptionAtRestKmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRestKmsKeyArnRef
@@ -1321,7 +1482,9 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRes
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRestKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRestKmsKeyArnSelectorPolicy
@@ -1334,7 +1497,9 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRes
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate encryptionAtRestKmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRestKmsKeyArnSelector
@@ -1355,7 +1520,9 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRes
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionAtRestKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to specify encryption in transit. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionInTransit
@@ -1368,7 +1535,9 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionInTra
     [JsonPropertyName("inCluster")]
     public bool? InCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying encryption. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionInfo
@@ -1389,7 +1558,9 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionInfo
     [JsonPropertyName("encryptionInTransit")]
     public V1beta1ClusterSpecInitProviderEncryptionInfoEncryptionInTransit? EncryptionInTransit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupRefPolicy
@@ -1402,7 +1573,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Group in cloudwatchlogs to populate logGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupRef
@@ -1419,7 +1592,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwat
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupSelectorPolicy
@@ -1432,7 +1607,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Group in cloudwatchlogs to populate logGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupSelector
@@ -1453,7 +1630,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwat
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwatchLogs
@@ -1474,7 +1653,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwat
     [JsonPropertyName("logGroupSelector")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsCloudwatchLogsLogGroupSelector? LogGroupSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamRefPolicy
@@ -1487,7 +1668,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehose
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DeliveryStream in firehose to populate deliveryStream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamRef
@@ -1504,7 +1687,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehose
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamSelectorPolicy
@@ -1517,7 +1702,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehose
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DeliveryStream in firehose to populate deliveryStream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamSelector
@@ -1538,7 +1725,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehose
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehoseDeliveryStreamSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehose
@@ -1559,7 +1748,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsFirehose
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3BucketRefPolicy
@@ -1572,7 +1763,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3Bucket
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3BucketRef
@@ -1589,7 +1782,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3Bucket
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3BucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3BucketSelectorPolicy
@@ -1602,7 +1797,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3Bucket
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3BucketSelector
@@ -1623,7 +1820,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3Bucket
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3BucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3
@@ -1648,7 +1847,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Broker Logs settings for logging info. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogs
@@ -1665,7 +1866,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogs
     [JsonPropertyName("s3")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogsS3? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingInfo
@@ -1674,7 +1877,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingInfo
     [JsonPropertyName("brokerLogs")]
     public V1beta1ClusterSpecInitProviderLoggingInfoBrokerLogs? BrokerLogs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for JMX Exporter. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderOpenMonitoringPrometheusJmxExporter
@@ -1683,7 +1888,9 @@ public partial class V1beta1ClusterSpecInitProviderOpenMonitoringPrometheusJmxEx
     [JsonPropertyName("enabledInBroker")]
     public bool? EnabledInBroker { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Node Exporter. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderOpenMonitoringPrometheusNodeExporter
@@ -1692,7 +1899,9 @@ public partial class V1beta1ClusterSpecInitProviderOpenMonitoringPrometheusNodeE
     [JsonPropertyName("enabledInBroker")]
     public bool? EnabledInBroker { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Prometheus settings for open monitoring. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderOpenMonitoringPrometheus
@@ -1705,7 +1914,9 @@ public partial class V1beta1ClusterSpecInitProviderOpenMonitoringPrometheus
     [JsonPropertyName("nodeExporter")]
     public V1beta1ClusterSpecInitProviderOpenMonitoringPrometheusNodeExporter? NodeExporter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for JMX and Node monitoring for the MSK cluster. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderOpenMonitoring
@@ -1714,7 +1925,9 @@ public partial class V1beta1ClusterSpecInitProviderOpenMonitoring
     [JsonPropertyName("prometheus")]
     public V1beta1ClusterSpecInitProviderOpenMonitoringPrometheus? Prometheus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
@@ -1767,7 +1980,9 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRef
@@ -1780,7 +1995,9 @@ public partial class V1beta1ClusterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
@@ -1789,7 +2006,9 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterSpec defines the desired state of Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpec
@@ -1814,7 +2033,9 @@ public partial class V1beta1ClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Access control settings for brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivityInfoPublicAccess
@@ -1823,7 +2044,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SASL authentication type details for VPC connectivity. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSasl
@@ -1836,7 +2059,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("scram")]
     public bool? Scram { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a client authentication. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication
@@ -1849,7 +2074,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("tls")]
     public bool? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPC connectivity access control for brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivity
@@ -1858,7 +2085,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("clientAuthentication")]
     public V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication? ClientAuthentication { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information about the cluster access configuration. See below. For security reasons, you can't turn on public access while creating an MSK cluster. However, you can update an existing cluster to make it publicly accessible. You can also create a new cluster and then update it to make it publicly accessible (documentation).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivityInfo
@@ -1871,7 +2100,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivi
     [JsonPropertyName("vpcConnectivity")]
     public V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoConnectivityInfoVpcConnectivity? VpcConnectivity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains EBS volume provisioned throughput information. To provision storage throughput, you must choose broker type kafka.m5.4xlarge or larger. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfoProvisionedThroughput
@@ -1884,7 +2115,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoStorageInf
     [JsonPropertyName("volumeThroughput")]
     public double? VolumeThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains EBS volume information. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfo
@@ -1897,7 +2130,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoStorageInf
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A block that contains information about storage volumes attached to MSK broker nodes. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoStorageInfo
@@ -1906,7 +2141,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoStorageInf
     [JsonPropertyName("ebsStorageInfo")]
     public V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoStorageInfoEbsStorageInfo? EbsStorageInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for the broker nodes of the Kafka cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfo
@@ -1935,7 +2172,9 @@ public partial class V1beta1ClusterStatusAtProviderBrokerNodeGroupInfo
     [JsonPropertyName("storageInfo")]
     public V1beta1ClusterStatusAtProviderBrokerNodeGroupInfoStorageInfo? StorageInfo { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SASL authentication type details for VPC connectivity. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClientAuthenticationSasl
@@ -1948,7 +2187,9 @@ public partial class V1beta1ClusterStatusAtProviderClientAuthenticationSasl
     [JsonPropertyName("scram")]
     public bool? Scram { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enables TLS authentication for VPC connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClientAuthenticationTls
@@ -1957,7 +2198,9 @@ public partial class V1beta1ClusterStatusAtProviderClientAuthenticationTls
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a client authentication. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClientAuthentication
@@ -1974,7 +2217,9 @@ public partial class V1beta1ClusterStatusAtProviderClientAuthentication
     [JsonPropertyName("unauthenticated")]
     public bool? Unauthenticated { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderConfigurationInfo
@@ -1987,7 +2232,9 @@ public partial class V1beta1ClusterStatusAtProviderConfigurationInfo
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block to specify encryption in transit. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderEncryptionInfoEncryptionInTransit
@@ -2000,7 +2247,9 @@ public partial class V1beta1ClusterStatusAtProviderEncryptionInfoEncryptionInTra
     [JsonPropertyName("inCluster")]
     public bool? InCluster { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for specifying encryption. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderEncryptionInfo
@@ -2013,7 +2262,9 @@ public partial class V1beta1ClusterStatusAtProviderEncryptionInfo
     [JsonPropertyName("encryptionInTransit")]
     public V1beta1ClusterStatusAtProviderEncryptionInfoEncryptionInTransit? EncryptionInTransit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogsCloudwatchLogs
@@ -2026,7 +2277,9 @@ public partial class V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogsCloudwat
     [JsonPropertyName("logGroup")]
     public string? LogGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogsFirehose
@@ -2039,7 +2292,9 @@ public partial class V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogsFirehose
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogsS3
@@ -2056,7 +2311,9 @@ public partial class V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogsS3
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Broker Logs settings for logging info. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogs
@@ -2073,7 +2330,9 @@ public partial class V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogs
     [JsonPropertyName("s3")]
     public V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogsS3? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderLoggingInfo
@@ -2082,7 +2341,9 @@ public partial class V1beta1ClusterStatusAtProviderLoggingInfo
     [JsonPropertyName("brokerLogs")]
     public V1beta1ClusterStatusAtProviderLoggingInfoBrokerLogs? BrokerLogs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for JMX Exporter. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderOpenMonitoringPrometheusJmxExporter
@@ -2091,7 +2352,9 @@ public partial class V1beta1ClusterStatusAtProviderOpenMonitoringPrometheusJmxEx
     [JsonPropertyName("enabledInBroker")]
     public bool? EnabledInBroker { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Node Exporter. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderOpenMonitoringPrometheusNodeExporter
@@ -2100,7 +2363,9 @@ public partial class V1beta1ClusterStatusAtProviderOpenMonitoringPrometheusNodeE
     [JsonPropertyName("enabledInBroker")]
     public bool? EnabledInBroker { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for Prometheus settings for open monitoring. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderOpenMonitoringPrometheus
@@ -2113,7 +2378,9 @@ public partial class V1beta1ClusterStatusAtProviderOpenMonitoringPrometheus
     [JsonPropertyName("nodeExporter")]
     public V1beta1ClusterStatusAtProviderOpenMonitoringPrometheusNodeExporter? NodeExporter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for JMX and Node monitoring for the MSK cluster. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderOpenMonitoring
@@ -2122,7 +2389,9 @@ public partial class V1beta1ClusterStatusAtProviderOpenMonitoring
     [JsonPropertyName("prometheus")]
     public V1beta1ClusterStatusAtProviderOpenMonitoringPrometheus? Prometheus { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
@@ -2247,7 +2516,9 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("zookeeperConnectStringTls")]
     public string? ZookeeperConnectStringTls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusConditions
@@ -2276,7 +2547,9 @@ public partial class V1beta1ClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatus
@@ -2293,7 +2566,9 @@ public partial class V1beta1ClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2323,3 +2598,4 @@ public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ClusterStatus? Status { get; set; }
 }
+#nullable disable

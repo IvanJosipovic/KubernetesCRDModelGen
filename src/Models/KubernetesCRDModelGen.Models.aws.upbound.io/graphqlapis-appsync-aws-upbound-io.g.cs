@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appsync.aws.upbound.io;
+#nullable enable
 /// <summary>GraphQLAPI is the Schema for the GraphQLAPIs API. Provides an AppSync GraphQL API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GraphQLAPIList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1GraphQLAPI> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig
@@ -50,7 +53,9 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     [JsonPropertyName("identityValidationExpression")]
     public string? IdentityValidationExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderOpenidConnectConfig
@@ -71,7 +76,9 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderUserPoolConfig
@@ -88,7 +95,9 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     [JsonPropertyName("userPoolId")]
     public string? UserPoolId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProvider
@@ -109,7 +118,9 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderEnhancedMetricsConfig
@@ -126,7 +137,9 @@ public partial class V1beta1GraphQLAPISpecForProviderEnhancedMetricsConfig
     [JsonPropertyName("resolverLevelMetricsBehavior")]
     public string? ResolverLevelMetricsBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderLambdaAuthorizerConfig
@@ -143,7 +156,9 @@ public partial class V1beta1GraphQLAPISpecForProviderLambdaAuthorizerConfig
     [JsonPropertyName("identityValidationExpression")]
     public string? IdentityValidationExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnRefPolicy
@@ -156,7 +171,9 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRole
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate cloudwatchLogsRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnRef
@@ -169,7 +186,9 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRole
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnSelectorPolicy
@@ -182,7 +201,9 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRole
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate cloudwatchLogsRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnSelector
@@ -199,7 +220,9 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRole
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecForProviderLogConfigCloudwatchLogsRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderLogConfig
@@ -224,7 +247,9 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfig
     [JsonPropertyName("fieldLogLevel")]
     public string? FieldLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRefPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate mergedApiExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRef
@@ -250,7 +277,9 @@ public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRe
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSelectorPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate mergedApiExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSelector
@@ -280,7 +311,9 @@ public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSe
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderOpenidConnectConfig
@@ -301,7 +334,9 @@ public partial class V1beta1GraphQLAPISpecForProviderOpenidConnectConfig
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRefPolicy
@@ -314,7 +349,9 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRef
@@ -327,7 +364,9 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRef
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelectorPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelector
@@ -357,7 +398,9 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSel
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfig
@@ -386,7 +429,9 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfig
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1GraphQLAPISpecForProviderUserPoolConfigUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProvider
@@ -471,7 +516,9 @@ public partial class V1beta1GraphQLAPISpecForProvider
     [JsonPropertyName("xrayEnabled")]
     public bool? XrayEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig
@@ -488,7 +535,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     [JsonPropertyName("identityValidationExpression")]
     public string? IdentityValidationExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderOpenidConnectConfig
@@ -509,7 +558,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderUserPoolConfig
@@ -526,7 +577,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     [JsonPropertyName("userPoolId")]
     public string? UserPoolId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProvider
@@ -547,7 +600,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderEnhancedMetricsConfig
@@ -564,7 +619,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderEnhancedMetricsConfig
     [JsonPropertyName("resolverLevelMetricsBehavior")]
     public string? ResolverLevelMetricsBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderLambdaAuthorizerConfig
@@ -581,7 +638,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderLambdaAuthorizerConfig
     [JsonPropertyName("identityValidationExpression")]
     public string? IdentityValidationExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnRefPolicy
@@ -594,7 +653,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate cloudwatchLogsRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnRef
@@ -607,7 +668,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRol
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnSelectorPolicy
@@ -620,7 +683,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate cloudwatchLogsRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnSelector
@@ -637,7 +702,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRol
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecInitProviderLogConfigCloudwatchLogsRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderLogConfig
@@ -662,7 +729,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfig
     [JsonPropertyName("fieldLogLevel")]
     public string? FieldLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnRefPolicy
@@ -675,7 +744,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate mergedApiExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnRef
@@ -688,7 +759,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnR
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnSelectorPolicy
@@ -701,7 +774,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate mergedApiExecutionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnSelector
@@ -718,7 +793,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnS
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderOpenidConnectConfig
@@ -739,7 +816,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderOpenidConnectConfig
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRefPolicy
@@ -752,7 +831,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRef
@@ -765,7 +846,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRe
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelectorPolicy
@@ -778,7 +861,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPool in cognitoidp to populate userPoolId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelector
@@ -795,7 +880,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSe
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfig
@@ -824,7 +911,9 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfig
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1GraphQLAPISpecInitProviderUserPoolConfigUserPoolIdSelector? UserPoolIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProvider
@@ -905,7 +994,9 @@ public partial class V1beta1GraphQLAPISpecInitProvider
     [JsonPropertyName("xrayEnabled")]
     public bool? XrayEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecProviderConfigRefPolicy
@@ -918,7 +1009,9 @@ public partial class V1beta1GraphQLAPISpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecProviderConfigRef
@@ -931,7 +1024,9 @@ public partial class V1beta1GraphQLAPISpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GraphQLAPISpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecWriteConnectionSecretToRef
@@ -944,7 +1039,9 @@ public partial class V1beta1GraphQLAPISpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GraphQLAPISpec defines the desired state of GraphQLAPI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpec
@@ -973,7 +1070,9 @@ public partial class V1beta1GraphQLAPISpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GraphQLAPISpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig
@@ -990,7 +1089,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     [JsonPropertyName("identityValidationExpression")]
     public string? IdentityValidationExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderOpenidConnectConfig
@@ -1011,7 +1112,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderUserPoolConfig
@@ -1028,7 +1131,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     [JsonPropertyName("userPoolId")]
     public string? UserPoolId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProvider
@@ -1049,7 +1154,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderEnhancedMetricsConfig
@@ -1066,7 +1173,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderEnhancedMetricsConfig
     [JsonPropertyName("resolverLevelMetricsBehavior")]
     public string? ResolverLevelMetricsBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderLambdaAuthorizerConfig
@@ -1083,7 +1192,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderLambdaAuthorizerConfig
     [JsonPropertyName("identityValidationExpression")]
     public string? IdentityValidationExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderLogConfig
@@ -1100,7 +1211,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderLogConfig
     [JsonPropertyName("fieldLogLevel")]
     public string? FieldLogLevel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderOpenidConnectConfig
@@ -1121,7 +1234,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderOpenidConnectConfig
     [JsonPropertyName("issuer")]
     public string? Issuer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderUserPoolConfig
@@ -1142,7 +1257,9 @@ public partial class V1beta1GraphQLAPIStatusAtProviderUserPoolConfig
     [JsonPropertyName("userPoolId")]
     public string? UserPoolId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProvider
@@ -1235,7 +1352,9 @@ public partial class V1beta1GraphQLAPIStatusAtProvider
     [JsonPropertyName("xrayEnabled")]
     public bool? XrayEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusConditions
@@ -1264,7 +1383,9 @@ public partial class V1beta1GraphQLAPIStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GraphQLAPIStatus defines the observed state of GraphQLAPI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatus
@@ -1281,7 +1402,9 @@ public partial class V1beta1GraphQLAPIStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GraphQLAPI is the Schema for the GraphQLAPIs API. Provides an AppSync GraphQL API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1311,3 +1434,4 @@ public partial class V1beta1GraphQLAPI : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1GraphQLAPIStatus? Status { get; set; }
 }
+#nullable disable

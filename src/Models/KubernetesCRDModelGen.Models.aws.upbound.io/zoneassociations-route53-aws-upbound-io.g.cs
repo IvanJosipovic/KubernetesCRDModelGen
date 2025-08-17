@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53.aws.upbound.io;
+#nullable enable
 /// <summary>ZoneAssociation is the Schema for the ZoneAssociations API. Manages a Route53 Hosted Zone VPC association</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ZoneAssociationList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ZoneAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProviderVpcIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ZoneAssociationSpecForProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProviderVpcIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ZoneAssociationSpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProviderVpcIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ZoneAssociationSpecForProviderVpcIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProviderVpcIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ZoneAssociationSpecForProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProviderZoneIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1ZoneAssociationSpecForProviderZoneIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProviderZoneIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1ZoneAssociationSpecForProviderZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecForProviderZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProviderZoneIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1ZoneAssociationSpecForProviderZoneIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProviderZoneIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1ZoneAssociationSpecForProviderZoneIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecForProviderZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1ZoneAssociationSpecForProvider
     [JsonPropertyName("zoneIdSelector")]
     public V1beta1ZoneAssociationSpecForProviderZoneIdSelector? ZoneIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProviderVpcIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1ZoneAssociationSpecInitProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProviderVpcIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1ZoneAssociationSpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProviderVpcIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1ZoneAssociationSpecInitProviderVpcIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProviderVpcIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1ZoneAssociationSpecInitProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProviderZoneIdRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1ZoneAssociationSpecInitProviderZoneIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProviderZoneIdRef
@@ -260,7 +291,9 @@ public partial class V1beta1ZoneAssociationSpecInitProviderZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecInitProviderZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProviderZoneIdSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1ZoneAssociationSpecInitProviderZoneIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Zone in route53 to populate zoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProviderZoneIdSelector
@@ -290,7 +325,9 @@ public partial class V1beta1ZoneAssociationSpecInitProviderZoneIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecInitProviderZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecInitProvider
@@ -323,7 +360,9 @@ public partial class V1beta1ZoneAssociationSpecInitProvider
     [JsonPropertyName("zoneIdSelector")]
     public V1beta1ZoneAssociationSpecInitProviderZoneIdSelector? ZoneIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecProviderConfigRefPolicy
@@ -336,7 +375,9 @@ public partial class V1beta1ZoneAssociationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecProviderConfigRef
@@ -349,7 +390,9 @@ public partial class V1beta1ZoneAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ZoneAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecWriteConnectionSecretToRef
@@ -362,7 +405,9 @@ public partial class V1beta1ZoneAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ZoneAssociationSpec defines the desired state of ZoneAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpec
@@ -391,7 +436,9 @@ public partial class V1beta1ZoneAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ZoneAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationStatusAtProvider
@@ -416,7 +463,9 @@ public partial class V1beta1ZoneAssociationStatusAtProvider
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationStatusConditions
@@ -445,7 +494,9 @@ public partial class V1beta1ZoneAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ZoneAssociationStatus defines the observed state of ZoneAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationStatus
@@ -462,7 +513,9 @@ public partial class V1beta1ZoneAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ZoneAssociation is the Schema for the ZoneAssociations API. Manages a Route53 Hosted Zone VPC association</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -492,3 +545,4 @@ public partial class V1beta1ZoneAssociation : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ZoneAssociationStatus? Status { get; set; }
 }
+#nullable disable

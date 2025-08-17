@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aquasecurity.github.io;
+#nullable enable
 /// <summary>ClusterConfigAuditReport is a specification for the ClusterConfigAuditReport resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ClusterConfigAuditReportList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1alpha1ClusterConfigAuditReport> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scope indicates the section of config that was audited.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterConfigAuditReportReportChecksScope
@@ -46,7 +49,9 @@ public partial class V1alpha1ClusterConfigAuditReportReportChecksScope
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Check provides the result of conducting a single audit step.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterConfigAuditReportReportChecks
@@ -87,7 +92,9 @@ public partial class V1alpha1ClusterConfigAuditReportReportChecks
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Scanner is the spec for a scanner generating a security assessment report.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterConfigAuditReportReportScanner
@@ -104,7 +111,9 @@ public partial class V1alpha1ClusterConfigAuditReportReportScanner
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigAuditSummary counts failed checks by severity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterConfigAuditReportReportSummary
@@ -125,7 +134,9 @@ public partial class V1alpha1ClusterConfigAuditReportReportSummary
     [JsonPropertyName("mediumCount")]
     public int MediumCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterConfigAuditReportReport
@@ -146,7 +157,9 @@ public partial class V1alpha1ClusterConfigAuditReportReport
     [JsonPropertyName("updateTimestamp")]
     public string? UpdateTimestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterConfigAuditReport is a specification for the ClusterConfigAuditReport resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -175,3 +188,4 @@ public partial class V1alpha1ClusterConfigAuditReport : IKubernetesObject<V1Obje
     [JsonPropertyName("report")]
     public V1alpha1ClusterConfigAuditReportReport Report { get; set; }
 }
+#nullable disable

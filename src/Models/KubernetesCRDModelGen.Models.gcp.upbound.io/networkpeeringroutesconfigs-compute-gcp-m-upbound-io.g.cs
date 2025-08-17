@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>NetworkPeeringRoutesConfig is the Schema for the NetworkPeeringRoutesConfigs API. Manage a network peering's route settings without managing the peering as a whole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkPeeringRoutesConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkRef
@@ -63,7 +68,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkSelector
@@ -97,7 +106,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkSele
     [JsonPropertyName("policy")]
     public V1beta1NetworkPeeringRoutesConfigSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkPeering in compute to populate peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringRef
@@ -127,7 +140,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkPeering in compute to populate peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringSelector
@@ -161,7 +178,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringSele
     [JsonPropertyName("policy")]
     public V1beta1NetworkPeeringRoutesConfigSpecForProviderPeeringSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecForProvider
@@ -210,7 +229,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkRefPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkRef
@@ -240,7 +263,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkSelectorPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Network in compute to populate network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkSelector
@@ -274,7 +301,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkSel
     [JsonPropertyName("policy")]
     public V1beta1NetworkPeeringRoutesConfigSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a NetworkPeering in compute to populate peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringRef
@@ -304,7 +335,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringRef
     [JsonPropertyName("policy")]
     public V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringSelectorPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a NetworkPeering in compute to populate peering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringSelector
@@ -338,7 +373,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringSel
     [JsonPropertyName("policy")]
     public V1beta1NetworkPeeringRoutesConfigSpecInitProviderPeeringSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProvider
@@ -387,7 +424,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecProviderConfigRef
@@ -400,7 +439,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpecWriteConnectionSecretToRef
@@ -409,7 +450,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkPeeringRoutesConfigSpec defines the desired state of NetworkPeeringRoutesConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigSpec
@@ -434,7 +477,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NetworkPeeringRoutesConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigStatusAtProvider
@@ -471,7 +516,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigStatusConditions
@@ -500,7 +547,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkPeeringRoutesConfigStatus defines the observed state of NetworkPeeringRoutesConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkPeeringRoutesConfigStatus
@@ -517,7 +566,9 @@ public partial class V1beta1NetworkPeeringRoutesConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NetworkPeeringRoutesConfig is the Schema for the NetworkPeeringRoutesConfigs API. Manage a network peering's route settings without managing the peering as a whole.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -547,3 +598,4 @@ public partial class V1beta1NetworkPeeringRoutesConfig : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1NetworkPeeringRoutesConfigStatus? Status { get; set; }
 }
+#nullable disable

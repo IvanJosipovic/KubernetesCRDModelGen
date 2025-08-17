@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/file.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default/shares/{shareName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareList : 
     [JsonPropertyName("items")]
     public IList<V1api20230101storageStorageAccountsFileServicesShare> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOpe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShareOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOpe
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230101storageStorageAccountsFileServicesShareSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsFileService resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecOwn
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.AccessPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiersAccessPolicy
@@ -118,7 +129,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSig
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: An unique identifier of the stored access policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiersReference
@@ -139,7 +152,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSig
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.SignedIdentifier</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiers
@@ -156,7 +171,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSig
     [JsonPropertyName("reference")]
     public V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiersReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpec
@@ -205,7 +222,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpec
     [JsonPropertyName("signedIdentifiers")]
     public IList<V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiers>? SignedIdentifiers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatusConditions
@@ -238,7 +257,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatusC
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.AccessPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatusSignedIdentifiersAccessPolicy
@@ -259,7 +280,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatusS
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.SignedIdentifier_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatusSignedIdentifiers
@@ -276,7 +299,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatusS
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatus
@@ -377,7 +402,9 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/file.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/fileServices/default/shares/{shareName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -407,3 +434,4 @@ public partial class V1api20230101storageStorageAccountsFileServicesShare : IKub
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsFileServicesShareStatus? Status { get; set; }
 }
+#nullable disable

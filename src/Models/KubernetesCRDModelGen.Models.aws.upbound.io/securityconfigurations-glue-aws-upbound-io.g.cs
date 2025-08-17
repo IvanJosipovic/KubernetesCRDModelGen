@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.upbound.io;
+#nullable enable
 /// <summary>SecurityConfiguration is the Schema for the SecurityConfigurations API. Manages a Glue Security Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecurityConfigurationList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1SecurityConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationCloudwatchEncryption
@@ -110,7 +121,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnRef
@@ -136,7 +151,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnSelector
@@ -166,7 +185,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationJobBookmarksEncryption
@@ -187,7 +208,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationS3EncryptionKmsKeyArnRefPolicy
@@ -200,7 +223,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationS3EncryptionKmsKeyArnRef
@@ -213,7 +238,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationS3EncryptionKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationS3EncryptionKmsKeyArnSelectorPolicy
@@ -226,7 +253,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationS3EncryptionKmsKeyArnSelector
@@ -243,7 +272,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationS3EncryptionKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationS3Encryption
@@ -264,7 +295,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("s3EncryptionMode")]
     public string? S3EncryptionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfiguration
@@ -281,7 +314,9 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
     [JsonPropertyName("s3Encryption")]
     public IList<V1beta1SecurityConfigurationSpecForProviderEncryptionConfigurationS3Encryption>? S3Encryption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProvider
@@ -294,7 +329,9 @@ public partial class V1beta1SecurityConfigurationSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnRefPolicy
@@ -307,7 +344,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnRef
@@ -320,7 +359,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnSelectorPolicy
@@ -333,7 +374,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnSelector
@@ -350,7 +393,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationCloudwatchEncryption
@@ -371,7 +416,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationCloudwatchEncryptionKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnRefPolicy
@@ -384,7 +431,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnRef
@@ -397,7 +446,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnSelectorPolicy
@@ -410,7 +461,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnSelector
@@ -427,7 +480,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationJobBookmarksEncryption
@@ -448,7 +503,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationJobBookmarksEncryptionKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationS3EncryptionKmsKeyArnRefPolicy
@@ -461,7 +518,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationS3EncryptionKmsKeyArnRef
@@ -474,7 +533,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationS3EncryptionKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationS3EncryptionKmsKeyArnSelectorPolicy
@@ -487,7 +548,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationS3EncryptionKmsKeyArnSelector
@@ -504,7 +567,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationS3EncryptionKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationS3Encryption
@@ -525,7 +590,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("s3EncryptionMode")]
     public string? S3EncryptionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfiguration
@@ -542,7 +609,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
     [JsonPropertyName("s3Encryption")]
     public IList<V1beta1SecurityConfigurationSpecInitProviderEncryptionConfigurationS3Encryption>? S3Encryption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProvider
@@ -551,7 +620,9 @@ public partial class V1beta1SecurityConfigurationSpecInitProvider
     [JsonPropertyName("encryptionConfiguration")]
     public IList<V1beta1SecurityConfigurationSpecInitProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecProviderConfigRefPolicy
@@ -564,7 +635,9 @@ public partial class V1beta1SecurityConfigurationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecProviderConfigRef
@@ -577,7 +650,9 @@ public partial class V1beta1SecurityConfigurationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SecurityConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecWriteConnectionSecretToRef
@@ -590,7 +665,9 @@ public partial class V1beta1SecurityConfigurationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityConfigurationSpec defines the desired state of SecurityConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpec
@@ -619,7 +696,9 @@ public partial class V1beta1SecurityConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SecurityConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfigurationCloudwatchEncryption
@@ -632,7 +711,9 @@ public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfi
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfigurationJobBookmarksEncryption
@@ -645,7 +726,9 @@ public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfi
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfigurationS3Encryption
@@ -658,7 +741,9 @@ public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfi
     [JsonPropertyName("s3EncryptionMode")]
     public string? S3EncryptionMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfiguration
@@ -675,7 +760,9 @@ public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfi
     [JsonPropertyName("s3Encryption")]
     public IList<V1beta1SecurityConfigurationStatusAtProviderEncryptionConfigurationS3Encryption>? S3Encryption { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationStatusAtProvider
@@ -692,7 +779,9 @@ public partial class V1beta1SecurityConfigurationStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationStatusConditions
@@ -721,7 +810,9 @@ public partial class V1beta1SecurityConfigurationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityConfigurationStatus defines the observed state of SecurityConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationStatus
@@ -738,7 +829,9 @@ public partial class V1beta1SecurityConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityConfiguration is the Schema for the SecurityConfigurations API. Manages a Glue Security Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -768,3 +861,4 @@ public partial class V1beta1SecurityConfiguration : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1SecurityConfigurationStatus? Status { get; set; }
 }
+#nullable disable

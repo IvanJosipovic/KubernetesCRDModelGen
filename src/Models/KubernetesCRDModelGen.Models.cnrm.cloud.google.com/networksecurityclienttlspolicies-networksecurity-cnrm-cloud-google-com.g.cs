@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networksecurity.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicyList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkSecurityClientTLSPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateCertificateProviderInstance
@@ -42,7 +45,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateC
     [JsonPropertyName("pluginInstance")]
     public string PluginInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>gRPC specific configuration to access the gRPC server to obtain the cert and private key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateGrpcEndpoint
@@ -51,7 +56,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateG
     [JsonPropertyName("targetUri")]
     public string TargetUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificate
@@ -64,7 +71,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecClientCertificate
     [JsonPropertyName("grpcEndpoint")]
     public V1beta1NetworkSecurityClientTLSPolicySpecClientCertificateGrpcEndpoint? GrpcEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecProjectRef
@@ -81,7 +90,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCaCertificateProviderInstance
@@ -90,7 +101,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCa
     [JsonPropertyName("pluginInstance")]
     public string PluginInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>gRPC specific configuration to access the gRPC server to obtain the CA certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCaGrpcEndpoint
@@ -99,7 +112,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCa
     [JsonPropertyName("targetUri")]
     public string TargetUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCa
@@ -112,7 +127,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCa
     [JsonPropertyName("grpcEndpoint")]
     public V1beta1NetworkSecurityClientTLSPolicySpecServerValidationCaGrpcEndpoint? GrpcEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicySpec
@@ -145,7 +162,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicySpec
     [JsonPropertyName("sni")]
     public string? Sni { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicyStatusConditions
@@ -170,7 +189,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityClientTLSPolicyStatus
@@ -191,7 +212,9 @@ public partial class V1beta1NetworkSecurityClientTLSPolicyStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -221,3 +244,4 @@ public partial class V1beta1NetworkSecurityClientTLSPolicy : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1NetworkSecurityClientTLSPolicyStatus? Status { get; set; }
 }
+#nullable disable

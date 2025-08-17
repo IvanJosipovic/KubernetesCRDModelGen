@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.m.upbound.io;
+#nullable enable
 /// <summary>SQLDedicatedGateway is the Schema for the SQLDedicatedGateways API. Manages a SQL Dedicated Gateway within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SQLDedicatedGatewayList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1SQLDedicatedGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate cosmosdbAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdR
     [JsonPropertyName("policy")]
     public V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate cosmosdbAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdS
     [JsonPropertyName("policy")]
     public V1beta1SQLDedicatedGatewaySpecForProviderCosmosdbAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpecForProvider
@@ -122,7 +133,9 @@ public partial class V1beta1SQLDedicatedGatewaySpecForProvider
     [JsonPropertyName("instanceSize")]
     public string? InstanceSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpecInitProvider
@@ -135,7 +148,9 @@ public partial class V1beta1SQLDedicatedGatewaySpecInitProvider
     [JsonPropertyName("instanceSize")]
     public string? InstanceSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpecProviderConfigRef
@@ -148,7 +163,9 @@ public partial class V1beta1SQLDedicatedGatewaySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpecWriteConnectionSecretToRef
@@ -157,7 +174,9 @@ public partial class V1beta1SQLDedicatedGatewaySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLDedicatedGatewaySpec defines the desired state of SQLDedicatedGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewaySpec
@@ -182,7 +201,9 @@ public partial class V1beta1SQLDedicatedGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SQLDedicatedGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewayStatusAtProvider
@@ -203,7 +224,9 @@ public partial class V1beta1SQLDedicatedGatewayStatusAtProvider
     [JsonPropertyName("instanceSize")]
     public string? InstanceSize { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewayStatusConditions
@@ -232,7 +255,9 @@ public partial class V1beta1SQLDedicatedGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLDedicatedGatewayStatus defines the observed state of SQLDedicatedGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLDedicatedGatewayStatus
@@ -249,7 +274,9 @@ public partial class V1beta1SQLDedicatedGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLDedicatedGateway is the Schema for the SQLDedicatedGateways API. Manages a SQL Dedicated Gateway within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -279,3 +306,4 @@ public partial class V1beta1SQLDedicatedGateway : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1SQLDedicatedGatewayStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.m.upbound.io;
+#nullable enable
 /// <summary>ProxyDefaultTargetGroup is the Schema for the ProxyDefaultTargetGroups API. Manage an RDS DB proxy default target group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProxyDefaultTargetGroupList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1ProxyDefaultTargetGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings that determine the size and behavior of the connection pool for the target group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderConnectionPoolConfig
@@ -58,7 +61,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderConnectionPool
     [JsonPropertyName("sessionPinningFilters")]
     public IList<string>? SessionPinningFilters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameRefPolicy
@@ -71,7 +76,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Proxy in rds to populate dbProxyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameRef
@@ -88,7 +95,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameRef
     [JsonPropertyName("policy")]
     public V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameSelectorPolicy
@@ -101,7 +110,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Proxy in rds to populate dbProxyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameSelector
@@ -122,7 +133,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameSel
     [JsonPropertyName("policy")]
     public V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecForProvider
@@ -147,7 +160,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings that determine the size and behavior of the connection pool for the target group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderConnectionPoolConfig
@@ -172,7 +187,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderConnectionPoo
     [JsonPropertyName("sessionPinningFilters")]
     public IList<string>? SessionPinningFilters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameRefPolicy
@@ -185,7 +202,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Proxy in rds to populate dbProxyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameRef
@@ -202,7 +221,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameRe
     [JsonPropertyName("policy")]
     public V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameSelectorPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Proxy in rds to populate dbProxyName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameSelector
@@ -236,7 +259,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameSe
     [JsonPropertyName("policy")]
     public V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecInitProvider
@@ -257,7 +282,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecInitProvider
     [JsonPropertyName("dbProxyNameSelector")]
     public V1beta1ProxyDefaultTargetGroupSpecInitProviderDbProxyNameSelector? DbProxyNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecProviderConfigRef
@@ -270,7 +297,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecWriteConnectionSecretToRef
@@ -279,7 +308,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxyDefaultTargetGroupSpec defines the desired state of ProxyDefaultTargetGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpec
@@ -304,7 +335,9 @@ public partial class V1beta1ProxyDefaultTargetGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ProxyDefaultTargetGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The settings that determine the size and behavior of the connection pool for the target group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupStatusAtProviderConnectionPoolConfig
@@ -329,7 +362,9 @@ public partial class V1beta1ProxyDefaultTargetGroupStatusAtProviderConnectionPoo
     [JsonPropertyName("sessionPinningFilters")]
     public IList<string>? SessionPinningFilters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupStatusAtProvider
@@ -358,7 +393,9 @@ public partial class V1beta1ProxyDefaultTargetGroupStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupStatusConditions
@@ -387,7 +424,9 @@ public partial class V1beta1ProxyDefaultTargetGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxyDefaultTargetGroupStatus defines the observed state of ProxyDefaultTargetGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupStatus
@@ -404,7 +443,9 @@ public partial class V1beta1ProxyDefaultTargetGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProxyDefaultTargetGroup is the Schema for the ProxyDefaultTargetGroups API. Manage an RDS DB proxy default target group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -434,3 +475,4 @@ public partial class V1beta1ProxyDefaultTargetGroup : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1ProxyDefaultTargetGroupStatus? Status { get; set; }
 }
+#nullable disable

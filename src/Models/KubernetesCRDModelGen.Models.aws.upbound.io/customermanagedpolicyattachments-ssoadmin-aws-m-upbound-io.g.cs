@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssoadmin.aws.m.upbound.io;
+#nullable enable
 /// <summary>CustomerManagedPolicyAttachment is the Schema for the CustomerManagedPolicyAttachments API. Manages a customer managed policy for a Single Sign-On (SSO) Permission Set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1CustomerManagedPolicyAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustom
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Policy in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustom
     [JsonPropertyName("policy")]
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustom
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Policy in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustom
     [JsonPropertyName("policy")]
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReference
@@ -118,7 +129,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustom
     [JsonPropertyName("policyNameSelector")]
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameSelector? PolicyNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermis
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PermissionSet in ssoadmin to populate permissionSetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnRef
@@ -148,7 +163,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermis
     [JsonPropertyName("policy")]
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermis
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PermissionSet in ssoadmin to populate permissionSetArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnSelector
@@ -182,7 +201,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermis
     [JsonPropertyName("policy")]
     public V1beta1CustomerManagedPolicyAttachmentSpecForProviderPermissionSetArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProvider
@@ -211,7 +232,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameRefPolicy
@@ -224,7 +247,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Policy in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameRef
@@ -241,7 +266,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     [JsonPropertyName("policy")]
     public V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Policy in iam to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelector
@@ -275,7 +304,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     [JsonPropertyName("policy")]
     public V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReference
@@ -296,7 +327,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCusto
     [JsonPropertyName("policyNameSelector")]
     public V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReferencePolicyNameSelector? PolicyNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProvider
@@ -305,7 +338,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecInitProvider
     [JsonPropertyName("customerManagedPolicyReference")]
     public V1beta1CustomerManagedPolicyAttachmentSpecInitProviderCustomerManagedPolicyReference? CustomerManagedPolicyReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecProviderConfigRef
@@ -318,7 +353,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecWriteConnectionSecretToRef
@@ -327,7 +364,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpecWriteConnectionSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomerManagedPolicyAttachmentSpec defines the desired state of CustomerManagedPolicyAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpec
@@ -352,7 +391,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CustomerManagedPolicyAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the name and path of a customer managed policy. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentStatusAtProviderCustomerManagedPolicyReference
@@ -365,7 +406,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentStatusAtProviderCusto
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentStatusAtProvider
@@ -390,7 +433,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentStatusConditions
@@ -419,7 +464,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomerManagedPolicyAttachmentStatus defines the observed state of CustomerManagedPolicyAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentStatus
@@ -436,7 +483,9 @@ public partial class V1beta1CustomerManagedPolicyAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomerManagedPolicyAttachment is the Schema for the CustomerManagedPolicyAttachments API. Manages a customer managed policy for a Single Sign-On (SSO) Permission Set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -466,3 +515,4 @@ public partial class V1beta1CustomerManagedPolicyAttachment : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1CustomerManagedPolicyAttachmentStatus? Status { get; set; }
 }
+#nullable disable

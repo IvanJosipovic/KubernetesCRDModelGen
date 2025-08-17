@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.conditionalaccess.azuread.upbound.io;
+#nullable enable
 /// <summary>AccessPolicy is the Schema for the AccessPolicys API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AccessPolicyList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1AccessPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsApplications
@@ -50,7 +53,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsApplications
     [JsonPropertyName("includedUserActions")]
     public IList<string>? IncludedUserActions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsClientApplications
@@ -63,7 +68,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsClientApplicati
     [JsonPropertyName("includedServicePrincipals")]
     public IList<string>? IncludedServicePrincipals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsDevicesFilter
@@ -76,7 +83,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsDevicesFilter
     [JsonPropertyName("rule")]
     public string? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsDevices
@@ -85,7 +94,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsDevices
     [JsonPropertyName("filter")]
     public IList<V1beta1AccessPolicySpecForProviderConditionsDevicesFilter>? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsLocations
@@ -98,7 +109,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsLocations
     [JsonPropertyName("includedLocations")]
     public IList<string>? IncludedLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsPlatforms
@@ -111,7 +124,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsPlatforms
     [JsonPropertyName("includedPlatforms")]
     public IList<string>? IncludedPlatforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
@@ -124,7 +139,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGu
     [JsonPropertyName("membershipKind")]
     public string? MembershipKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGuestsOrExternalUsers
@@ -137,7 +154,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersExcludedGu
     [JsonPropertyName("guestOrExternalUserTypes")]
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
@@ -150,7 +169,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGu
     [JsonPropertyName("membershipKind")]
     public string? MembershipKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGuestsOrExternalUsers
@@ -163,7 +184,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsersIncludedGu
     [JsonPropertyName("guestOrExternalUserTypes")]
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditionsUsers
@@ -200,7 +223,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditionsUsers
     [JsonPropertyName("includedUsers")]
     public IList<string>? IncludedUsers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderConditions
@@ -249,7 +274,9 @@ public partial class V1beta1AccessPolicySpecForProviderConditions
     [JsonPropertyName("users")]
     public IList<V1beta1AccessPolicySpecForProviderConditionsUsers>? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderGrantControls
@@ -274,7 +301,9 @@ public partial class V1beta1AccessPolicySpecForProviderGrantControls
     [JsonPropertyName("termsOfUse")]
     public IList<string>? TermsOfUse { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderSessionControls
@@ -311,7 +340,9 @@ public partial class V1beta1AccessPolicySpecForProviderSessionControls
     [JsonPropertyName("signInFrequencyPeriod")]
     public string? SignInFrequencyPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProvider
@@ -336,7 +367,9 @@ public partial class V1beta1AccessPolicySpecForProvider
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsApplications
@@ -353,7 +386,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsApplications
     [JsonPropertyName("includedUserActions")]
     public IList<string>? IncludedUserActions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsClientApplications
@@ -366,7 +401,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsClientApplicat
     [JsonPropertyName("includedServicePrincipals")]
     public IList<string>? IncludedServicePrincipals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsDevicesFilter
@@ -379,7 +416,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsDevicesFilter
     [JsonPropertyName("rule")]
     public string? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsDevices
@@ -388,7 +427,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsDevices
     [JsonPropertyName("filter")]
     public IList<V1beta1AccessPolicySpecInitProviderConditionsDevicesFilter>? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsLocations
@@ -401,7 +442,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsLocations
     [JsonPropertyName("includedLocations")]
     public IList<string>? IncludedLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsPlatforms
@@ -414,7 +457,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsPlatforms
     [JsonPropertyName("includedPlatforms")]
     public IList<string>? IncludedPlatforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
@@ -427,7 +472,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedG
     [JsonPropertyName("membershipKind")]
     public string? MembershipKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedGuestsOrExternalUsers
@@ -440,7 +487,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersExcludedG
     [JsonPropertyName("guestOrExternalUserTypes")]
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
@@ -453,7 +502,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedG
     [JsonPropertyName("membershipKind")]
     public string? MembershipKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedGuestsOrExternalUsers
@@ -466,7 +517,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsersIncludedG
     [JsonPropertyName("guestOrExternalUserTypes")]
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditionsUsers
@@ -503,7 +556,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditionsUsers
     [JsonPropertyName("includedUsers")]
     public IList<string>? IncludedUsers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderConditions
@@ -552,7 +607,9 @@ public partial class V1beta1AccessPolicySpecInitProviderConditions
     [JsonPropertyName("users")]
     public IList<V1beta1AccessPolicySpecInitProviderConditionsUsers>? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderGrantControls
@@ -577,7 +634,9 @@ public partial class V1beta1AccessPolicySpecInitProviderGrantControls
     [JsonPropertyName("termsOfUse")]
     public IList<string>? TermsOfUse { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderSessionControls
@@ -614,7 +673,9 @@ public partial class V1beta1AccessPolicySpecInitProviderSessionControls
     [JsonPropertyName("signInFrequencyPeriod")]
     public string? SignInFrequencyPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProvider
@@ -639,7 +700,9 @@ public partial class V1beta1AccessPolicySpecInitProvider
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecProviderConfigRefPolicy
@@ -652,7 +715,9 @@ public partial class V1beta1AccessPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecProviderConfigRef
@@ -665,7 +730,9 @@ public partial class V1beta1AccessPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AccessPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecWriteConnectionSecretToRef
@@ -678,7 +745,9 @@ public partial class V1beta1AccessPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessPolicySpec defines the desired state of AccessPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpec
@@ -707,7 +776,9 @@ public partial class V1beta1AccessPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AccessPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsApplications
@@ -724,7 +795,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsApplications
     [JsonPropertyName("includedUserActions")]
     public IList<string>? IncludedUserActions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsClientApplications
@@ -737,7 +810,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsClientApplicat
     [JsonPropertyName("includedServicePrincipals")]
     public IList<string>? IncludedServicePrincipals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevicesFilter
@@ -750,7 +825,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevicesFilter
     [JsonPropertyName("rule")]
     public string? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevices
@@ -759,7 +836,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsDevices
     [JsonPropertyName("filter")]
     public IList<V1beta1AccessPolicyStatusAtProviderConditionsDevicesFilter>? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsLocations
@@ -772,7 +851,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsLocations
     [JsonPropertyName("includedLocations")]
     public IList<string>? IncludedLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsPlatforms
@@ -785,7 +866,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsPlatforms
     [JsonPropertyName("includedPlatforms")]
     public IList<string>? IncludedPlatforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedGuestsOrExternalUsersExternalTenants
@@ -798,7 +881,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedG
     [JsonPropertyName("membershipKind")]
     public string? MembershipKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedGuestsOrExternalUsers
@@ -811,7 +896,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersExcludedG
     [JsonPropertyName("guestOrExternalUserTypes")]
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedGuestsOrExternalUsersExternalTenants
@@ -824,7 +911,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedG
     [JsonPropertyName("membershipKind")]
     public string? MembershipKind { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedGuestsOrExternalUsers
@@ -837,7 +926,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsersIncludedG
     [JsonPropertyName("guestOrExternalUserTypes")]
     public IList<string>? GuestOrExternalUserTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsers
@@ -874,7 +965,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditionsUsers
     [JsonPropertyName("includedUsers")]
     public IList<string>? IncludedUsers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderConditions
@@ -923,7 +1016,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditions
     [JsonPropertyName("users")]
     public IList<V1beta1AccessPolicyStatusAtProviderConditionsUsers>? Users { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderGrantControls
@@ -948,7 +1043,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderGrantControls
     [JsonPropertyName("termsOfUse")]
     public IList<string>? TermsOfUse { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderSessionControls
@@ -985,7 +1082,9 @@ public partial class V1beta1AccessPolicyStatusAtProviderSessionControls
     [JsonPropertyName("signInFrequencyPeriod")]
     public string? SignInFrequencyPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProvider
@@ -1018,7 +1117,9 @@ public partial class V1beta1AccessPolicyStatusAtProvider
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusConditions
@@ -1047,7 +1148,9 @@ public partial class V1beta1AccessPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessPolicyStatus defines the observed state of AccessPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatus
@@ -1064,7 +1167,9 @@ public partial class V1beta1AccessPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccessPolicy is the Schema for the AccessPolicys API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1094,3 +1199,4 @@ public partial class V1beta1AccessPolicy : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1AccessPolicyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigateway.aws.upbound.io;
+#nullable enable
 /// <summary>BasePathMapping is the Schema for the BasePathMappings API. Connects a custom domain with a deployed API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BasePathMappingList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1BasePathMapping> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderApiIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BasePathMappingSpecForProviderApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RestAPI in apigateway to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderApiIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1BasePathMappingSpecForProviderApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecForProviderApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderApiIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BasePathMappingSpecForProviderApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RestAPI in apigateway to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderApiIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BasePathMappingSpecForProviderApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecForProviderApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderDomainNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1BasePathMappingSpecForProviderDomainNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DomainName in apigateway to populate domainName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderDomainNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1BasePathMappingSpecForProviderDomainNameRef
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecForProviderDomainNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderDomainNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1BasePathMappingSpecForProviderDomainNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DomainName in apigateway to populate domainName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderDomainNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1BasePathMappingSpecForProviderDomainNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecForProviderDomainNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderStageNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1BasePathMappingSpecForProviderStageNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stage in apigateway to populate stageName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderStageNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1BasePathMappingSpecForProviderStageNameRef
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecForProviderStageNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderStageNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1BasePathMappingSpecForProviderStageNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stage in apigateway to populate stageName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProviderStageNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1BasePathMappingSpecForProviderStageNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecForProviderStageNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecForProvider
@@ -254,7 +281,9 @@ public partial class V1beta1BasePathMappingSpecForProvider
     [JsonPropertyName("stageNameSelector")]
     public V1beta1BasePathMappingSpecForProviderStageNameSelector? StageNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderApiIdRefPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RestAPI in apigateway to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderApiIdRef
@@ -280,7 +311,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecInitProviderApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderApiIdSelectorPolicy
@@ -293,7 +326,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RestAPI in apigateway to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderApiIdSelector
@@ -310,7 +345,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecInitProviderApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderDomainNameRefPolicy
@@ -323,7 +360,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderDomainNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DomainName in apigateway to populate domainName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderDomainNameRef
@@ -336,7 +375,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderDomainNameRef
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecInitProviderDomainNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderDomainNameSelectorPolicy
@@ -349,7 +390,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderDomainNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DomainName in apigateway to populate domainName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderDomainNameSelector
@@ -366,7 +409,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderDomainNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecInitProviderDomainNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderStageNameRefPolicy
@@ -379,7 +424,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderStageNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stage in apigateway to populate stageName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderStageNameRef
@@ -392,7 +439,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderStageNameRef
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecInitProviderStageNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderStageNameSelectorPolicy
@@ -405,7 +454,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderStageNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stage in apigateway to populate stageName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProviderStageNameSelector
@@ -422,7 +473,9 @@ public partial class V1beta1BasePathMappingSpecInitProviderStageNameSelector
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecInitProviderStageNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecInitProvider
@@ -471,7 +524,9 @@ public partial class V1beta1BasePathMappingSpecInitProvider
     [JsonPropertyName("stageNameSelector")]
     public V1beta1BasePathMappingSpecInitProviderStageNameSelector? StageNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecProviderConfigRefPolicy
@@ -484,7 +539,9 @@ public partial class V1beta1BasePathMappingSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecProviderConfigRef
@@ -497,7 +554,9 @@ public partial class V1beta1BasePathMappingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BasePathMappingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpecWriteConnectionSecretToRef
@@ -510,7 +569,9 @@ public partial class V1beta1BasePathMappingSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BasePathMappingSpec defines the desired state of BasePathMapping</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingSpec
@@ -539,7 +600,9 @@ public partial class V1beta1BasePathMappingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BasePathMappingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingStatusAtProvider
@@ -572,7 +635,9 @@ public partial class V1beta1BasePathMappingStatusAtProvider
     [JsonPropertyName("stageName")]
     public string? StageName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingStatusConditions
@@ -601,7 +666,9 @@ public partial class V1beta1BasePathMappingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BasePathMappingStatus defines the observed state of BasePathMapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BasePathMappingStatus
@@ -618,7 +685,9 @@ public partial class V1beta1BasePathMappingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BasePathMapping is the Schema for the BasePathMappings API. Connects a custom domain with a deployed API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -648,3 +717,4 @@ public partial class V1beta1BasePathMapping : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1BasePathMappingStatus? Status { get; set; }
 }
+#nullable disable

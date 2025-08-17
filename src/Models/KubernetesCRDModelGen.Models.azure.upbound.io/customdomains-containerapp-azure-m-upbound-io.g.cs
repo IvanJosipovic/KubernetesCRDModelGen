@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerapp.azure.m.upbound.io;
+#nullable enable
 /// <summary>CustomDomain is the Schema for the CustomDomains API. Manages a Container App Custom Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CustomDomainList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1CustomDomain> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCertificateIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EnvironmentCertificate in containerapp to populate containerAppEnvironmentCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCertificateIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCe
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCertificateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCertificateIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EnvironmentCertificate in containerapp to populate containerAppEnvironmentCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCertificateIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCe
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderContainerAppEnvironmentCertificateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderContainerAppIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1CustomDomainSpecForProviderContainerAppIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ContainerApp in containerapp to populate containerAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderContainerAppIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1CustomDomainSpecForProviderContainerAppIdRef
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderContainerAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderContainerAppIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1CustomDomainSpecForProviderContainerAppIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ContainerApp in containerapp to populate containerAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderContainerAppIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1CustomDomainSpecForProviderContainerAppIdSelector
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecForProviderContainerAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1CustomDomainSpecForProvider
     [JsonPropertyName("containerAppIdSelector")]
     public V1beta1CustomDomainSpecForProviderContainerAppIdSelector? ContainerAppIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentCertificateIdRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EnvironmentCertificate in containerapp to populate containerAppEnvironmentCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentCertificateIdRef
@@ -224,7 +247,9 @@ public partial class V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentC
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentCertificateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentCertificateIdSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EnvironmentCertificate in containerapp to populate containerAppEnvironmentCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentCertificateIdSelector
@@ -258,7 +285,9 @@ public partial class V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentC
     [JsonPropertyName("policy")]
     public V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentCertificateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProvider
@@ -279,7 +308,9 @@ public partial class V1beta1CustomDomainSpecInitProvider
     [JsonPropertyName("containerAppEnvironmentCertificateIdSelector")]
     public V1beta1CustomDomainSpecInitProviderContainerAppEnvironmentCertificateIdSelector? ContainerAppEnvironmentCertificateIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecProviderConfigRef
@@ -292,7 +323,9 @@ public partial class V1beta1CustomDomainSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecWriteConnectionSecretToRef
@@ -301,7 +334,9 @@ public partial class V1beta1CustomDomainSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomDomainSpec defines the desired state of CustomDomain</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpec
@@ -326,7 +361,9 @@ public partial class V1beta1CustomDomainSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CustomDomainSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusAtProvider
@@ -351,7 +388,9 @@ public partial class V1beta1CustomDomainStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatusConditions
@@ -380,7 +419,9 @@ public partial class V1beta1CustomDomainStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomDomainStatus defines the observed state of CustomDomain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainStatus
@@ -397,7 +438,9 @@ public partial class V1beta1CustomDomainStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomDomain is the Schema for the CustomDomains API. Manages a Container App Custom Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -427,3 +470,4 @@ public partial class V1beta1CustomDomain : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1CustomDomainStatus? Status { get; set; }
 }
+#nullable disable

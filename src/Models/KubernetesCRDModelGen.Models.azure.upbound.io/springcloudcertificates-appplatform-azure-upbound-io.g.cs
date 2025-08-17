@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudCertificate is the Schema for the SpringCloudCertificates API. Manages an Azure Spring Cloud Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudCertificateList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudCertificate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertificateIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertifi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertificateIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertifi
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertificateIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertifi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertificateIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertifi
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecForProviderKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderServiceNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderServiceNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudService in appplatform to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderServiceNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecForProviderServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderServiceNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderServiceNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudService in appplatform to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProviderServiceNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProviderServiceNameSele
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecForProviderServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecForProvider
@@ -250,7 +277,9 @@ public partial class V1beta1SpringCloudCertificateSpecForProvider
     [JsonPropertyName("serviceNameSelector")]
     public V1beta1SpringCloudCertificateSpecForProviderServiceNameSelector? ServiceNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertificateIdRefPolicy
@@ -263,7 +292,9 @@ public partial class V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertif
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertificateIdRef
@@ -276,7 +307,9 @@ public partial class V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertif
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertificateIdSelectorPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertif
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertificateIdSelector
@@ -306,7 +341,9 @@ public partial class V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertif
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecInitProvider
@@ -331,7 +368,9 @@ public partial class V1beta1SpringCloudCertificateSpecInitProvider
     [JsonPropertyName("keyVaultCertificateIdSelector")]
     public V1beta1SpringCloudCertificateSpecInitProviderKeyVaultCertificateIdSelector? KeyVaultCertificateIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecProviderConfigRefPolicy
@@ -344,7 +383,9 @@ public partial class V1beta1SpringCloudCertificateSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecProviderConfigRef
@@ -357,7 +398,9 @@ public partial class V1beta1SpringCloudCertificateSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudCertificateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpecWriteConnectionSecretToRef
@@ -370,7 +413,9 @@ public partial class V1beta1SpringCloudCertificateSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudCertificateSpec defines the desired state of SpringCloudCertificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateSpec
@@ -399,7 +444,9 @@ public partial class V1beta1SpringCloudCertificateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudCertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateStatusAtProvider
@@ -432,7 +479,9 @@ public partial class V1beta1SpringCloudCertificateStatusAtProvider
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateStatusConditions
@@ -461,7 +510,9 @@ public partial class V1beta1SpringCloudCertificateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudCertificateStatus defines the observed state of SpringCloudCertificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCertificateStatus
@@ -478,7 +529,9 @@ public partial class V1beta1SpringCloudCertificateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudCertificate is the Schema for the SpringCloudCertificates API. Manages an Azure Spring Cloud Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -508,3 +561,4 @@ public partial class V1beta1SpringCloudCertificate : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1SpringCloudCertificateStatus? Status { get; set; }
 }
+#nullable disable

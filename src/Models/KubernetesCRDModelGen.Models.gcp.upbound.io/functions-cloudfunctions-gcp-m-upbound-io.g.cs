@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfunctions.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Function is the Schema for the Functions API. Creates a new Cloud Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FunctionList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Function> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies policy for failed executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderEventTriggerFailurePolicy
@@ -42,7 +45,9 @@ public partial class V1beta1FunctionSpecForProviderEventTriggerFailurePolicy
     [JsonPropertyName("retry")]
     public bool? Retry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with trigger_http.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderEventTrigger
@@ -59,7 +64,9 @@ public partial class V1beta1FunctionSpecForProviderEventTrigger
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSecretEnvironmentVariables
@@ -80,7 +87,9 @@ public partial class V1beta1FunctionSpecForProviderSecretEnvironmentVariables
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSecretVolumesVersions
@@ -93,7 +102,9 @@ public partial class V1beta1FunctionSpecForProviderSecretVolumesVersions
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSecretVolumes
@@ -114,7 +125,9 @@ public partial class V1beta1FunctionSpecForProviderSecretVolumes
     [JsonPropertyName("versions")]
     public IList<V1beta1FunctionSpecForProviderSecretVolumesVersions>? Versions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in storage to populate sourceArchiveBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketRef
@@ -144,7 +159,9 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicy
@@ -157,7 +174,9 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in storage to populate sourceArchiveBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketSelector
@@ -178,7 +197,9 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BucketObject in storage to populate sourceArchiveObject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectRef
@@ -208,7 +231,9 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BucketObject in storage to populate sourceArchiveObject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectSelector
@@ -242,7 +269,9 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents parameters related to source repository where a function is hosted. Cannot be set alongside source_archive_bucket or source_archive_object. Structure is documented below. It must match the pattern projects/{project}/locations/{location}/repositories/{repository}.*</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceRepository
@@ -251,7 +280,9 @@ public partial class V1beta1FunctionSpecForProviderSourceRepository
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProvider
@@ -392,7 +423,9 @@ public partial class V1beta1FunctionSpecForProvider
     [JsonPropertyName("vpcConnectorEgressSettings")]
     public string? VpcConnectorEgressSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies policy for failed executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderEventTriggerFailurePolicy
@@ -401,7 +434,9 @@ public partial class V1beta1FunctionSpecInitProviderEventTriggerFailurePolicy
     [JsonPropertyName("retry")]
     public bool? Retry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with trigger_http.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderEventTrigger
@@ -418,7 +453,9 @@ public partial class V1beta1FunctionSpecInitProviderEventTrigger
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSecretEnvironmentVariables
@@ -439,7 +476,9 @@ public partial class V1beta1FunctionSpecInitProviderSecretEnvironmentVariables
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSecretVolumesVersions
@@ -452,7 +491,9 @@ public partial class V1beta1FunctionSpecInitProviderSecretVolumesVersions
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSecretVolumes
@@ -473,7 +514,9 @@ public partial class V1beta1FunctionSpecInitProviderSecretVolumes
     [JsonPropertyName("versions")]
     public IList<V1beta1FunctionSpecInitProviderSecretVolumesVersions>? Versions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicy
@@ -486,7 +529,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in storage to populate sourceArchiveBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketRef
@@ -503,7 +548,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicy
@@ -516,7 +563,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in storage to populate sourceArchiveBucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketSelector
@@ -537,7 +586,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicy
@@ -550,7 +601,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BucketObject in storage to populate sourceArchiveObject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectRef
@@ -567,7 +620,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectRef
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicy
@@ -580,7 +635,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BucketObject in storage to populate sourceArchiveObject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectSelector
@@ -601,7 +658,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectSelector
     [JsonPropertyName("policy")]
     public V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents parameters related to source repository where a function is hosted. Cannot be set alongside source_archive_bucket or source_archive_object. Structure is documented below. It must match the pattern projects/{project}/locations/{location}/repositories/{repository}.*</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceRepository
@@ -610,7 +669,9 @@ public partial class V1beta1FunctionSpecInitProviderSourceRepository
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProvider
@@ -747,7 +808,9 @@ public partial class V1beta1FunctionSpecInitProvider
     [JsonPropertyName("vpcConnectorEgressSettings")]
     public string? VpcConnectorEgressSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecProviderConfigRef
@@ -760,7 +823,9 @@ public partial class V1beta1FunctionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecWriteConnectionSecretToRef
@@ -769,7 +834,9 @@ public partial class V1beta1FunctionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionSpec defines the desired state of Function</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpec
@@ -794,7 +861,9 @@ public partial class V1beta1FunctionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FunctionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies policy for failed executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderEventTriggerFailurePolicy
@@ -803,7 +872,9 @@ public partial class V1beta1FunctionStatusAtProviderEventTriggerFailurePolicy
     [JsonPropertyName("retry")]
     public bool? Retry { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with trigger_http.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderEventTrigger
@@ -820,7 +891,9 @@ public partial class V1beta1FunctionStatusAtProviderEventTrigger
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderSecretEnvironmentVariables
@@ -841,7 +914,9 @@ public partial class V1beta1FunctionStatusAtProviderSecretEnvironmentVariables
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderSecretVolumesVersions
@@ -854,7 +929,9 @@ public partial class V1beta1FunctionStatusAtProviderSecretVolumesVersions
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderSecretVolumes
@@ -875,7 +952,9 @@ public partial class V1beta1FunctionStatusAtProviderSecretVolumes
     [JsonPropertyName("versions")]
     public IList<V1beta1FunctionStatusAtProviderSecretVolumesVersions>? Versions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents parameters related to source repository where a function is hosted. Cannot be set alongside source_archive_bucket or source_archive_object. Structure is documented below. It must match the pattern projects/{project}/locations/{location}/repositories/{repository}.*</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderSourceRepository
@@ -888,7 +967,9 @@ public partial class V1beta1FunctionStatusAtProviderSourceRepository
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProvider
@@ -1033,7 +1114,9 @@ public partial class V1beta1FunctionStatusAtProvider
     [JsonPropertyName("vpcConnectorEgressSettings")]
     public string? VpcConnectorEgressSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusConditions
@@ -1062,7 +1145,9 @@ public partial class V1beta1FunctionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionStatus defines the observed state of Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatus
@@ -1079,7 +1164,9 @@ public partial class V1beta1FunctionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Function is the Schema for the Functions API. Creates a new Cloud Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1109,3 +1196,4 @@ public partial class V1beta1Function : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1FunctionStatus? Status { get; set; }
 }
+#nullable disable

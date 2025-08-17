@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.upbound.io;
+#nullable enable
 /// <summary>ProjectSink is the Schema for the ProjectSinks API. Manages a project-level logging sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProjectSinkList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ProjectSink> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecForProviderBigqueryOptions
@@ -42,7 +45,9 @@ public partial class V1beta1ProjectSinkSpecForProviderBigqueryOptions
     [JsonPropertyName("usePartitionedTables")]
     public bool? UsePartitionedTables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecForProviderCustomWriterIdentityRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1ProjectSinkSpecForProviderCustomWriterIdentityRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate customWriterIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecForProviderCustomWriterIdentityRef
@@ -68,7 +75,9 @@ public partial class V1beta1ProjectSinkSpecForProviderCustomWriterIdentityRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectSinkSpecForProviderCustomWriterIdentityRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecForProviderCustomWriterIdentitySelectorPolicy
@@ -81,7 +90,9 @@ public partial class V1beta1ProjectSinkSpecForProviderCustomWriterIdentitySelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate customWriterIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecForProviderCustomWriterIdentitySelector
@@ -98,7 +109,9 @@ public partial class V1beta1ProjectSinkSpecForProviderCustomWriterIdentitySelect
     [JsonPropertyName("policy")]
     public V1beta1ProjectSinkSpecForProviderCustomWriterIdentitySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecForProviderExclusions
@@ -119,7 +132,9 @@ public partial class V1beta1ProjectSinkSpecForProviderExclusions
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecForProvider
@@ -168,7 +183,9 @@ public partial class V1beta1ProjectSinkSpecForProvider
     [JsonPropertyName("uniqueWriterIdentity")]
     public bool? UniqueWriterIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecInitProviderBigqueryOptions
@@ -177,7 +194,9 @@ public partial class V1beta1ProjectSinkSpecInitProviderBigqueryOptions
     [JsonPropertyName("usePartitionedTables")]
     public bool? UsePartitionedTables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecInitProviderCustomWriterIdentityRefPolicy
@@ -190,7 +209,9 @@ public partial class V1beta1ProjectSinkSpecInitProviderCustomWriterIdentityRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate customWriterIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecInitProviderCustomWriterIdentityRef
@@ -203,7 +224,9 @@ public partial class V1beta1ProjectSinkSpecInitProviderCustomWriterIdentityRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectSinkSpecInitProviderCustomWriterIdentityRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecInitProviderCustomWriterIdentitySelectorPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1ProjectSinkSpecInitProviderCustomWriterIdentitySelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate customWriterIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecInitProviderCustomWriterIdentitySelector
@@ -233,7 +258,9 @@ public partial class V1beta1ProjectSinkSpecInitProviderCustomWriterIdentitySelec
     [JsonPropertyName("policy")]
     public V1beta1ProjectSinkSpecInitProviderCustomWriterIdentitySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecInitProviderExclusions
@@ -254,7 +281,9 @@ public partial class V1beta1ProjectSinkSpecInitProviderExclusions
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecInitProvider
@@ -303,7 +332,9 @@ public partial class V1beta1ProjectSinkSpecInitProvider
     [JsonPropertyName("uniqueWriterIdentity")]
     public bool? UniqueWriterIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecProviderConfigRefPolicy
@@ -316,7 +347,9 @@ public partial class V1beta1ProjectSinkSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecProviderConfigRef
@@ -329,7 +362,9 @@ public partial class V1beta1ProjectSinkSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ProjectSinkSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpecWriteConnectionSecretToRef
@@ -342,7 +377,9 @@ public partial class V1beta1ProjectSinkSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectSinkSpec defines the desired state of ProjectSink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkSpec
@@ -371,7 +408,9 @@ public partial class V1beta1ProjectSinkSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ProjectSinkSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkStatusAtProviderBigqueryOptions
@@ -380,7 +419,9 @@ public partial class V1beta1ProjectSinkStatusAtProviderBigqueryOptions
     [JsonPropertyName("usePartitionedTables")]
     public bool? UsePartitionedTables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkStatusAtProviderExclusions
@@ -401,7 +442,9 @@ public partial class V1beta1ProjectSinkStatusAtProviderExclusions
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkStatusAtProvider
@@ -450,7 +493,9 @@ public partial class V1beta1ProjectSinkStatusAtProvider
     [JsonPropertyName("writerIdentity")]
     public string? WriterIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkStatusConditions
@@ -479,7 +524,9 @@ public partial class V1beta1ProjectSinkStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectSinkStatus defines the observed state of ProjectSink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectSinkStatus
@@ -496,7 +543,9 @@ public partial class V1beta1ProjectSinkStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProjectSink is the Schema for the ProjectSinks API. Manages a project-level logging sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -526,3 +575,4 @@ public partial class V1beta1ProjectSink : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ProjectSinkStatus? Status { get; set; }
 }
+#nullable disable

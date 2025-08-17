@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.waf.aws.m.upbound.io;
+#nullable enable
 /// <summary>SizeConstraintSet is the Schema for the SizeConstraintSets API. The</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SizeConstraintSetList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1SizeConstraintSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameter that specifies where in a web request to look for the size constraint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraintsFieldToMatch
@@ -46,7 +49,9 @@ public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraintsField
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraints
@@ -67,7 +72,9 @@ public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraints
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecForProvider
@@ -80,7 +87,9 @@ public partial class V1beta1SizeConstraintSetSpecForProvider
     [JsonPropertyName("sizeConstraints")]
     public IList<V1beta1SizeConstraintSetSpecForProviderSizeConstraints>? SizeConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameter that specifies where in a web request to look for the size constraint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecInitProviderSizeConstraintsFieldToMatch
@@ -93,7 +102,9 @@ public partial class V1beta1SizeConstraintSetSpecInitProviderSizeConstraintsFiel
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecInitProviderSizeConstraints
@@ -114,7 +125,9 @@ public partial class V1beta1SizeConstraintSetSpecInitProviderSizeConstraints
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecInitProvider
@@ -127,7 +140,9 @@ public partial class V1beta1SizeConstraintSetSpecInitProvider
     [JsonPropertyName("sizeConstraints")]
     public IList<V1beta1SizeConstraintSetSpecInitProviderSizeConstraints>? SizeConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecProviderConfigRef
@@ -140,7 +155,9 @@ public partial class V1beta1SizeConstraintSetSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecWriteConnectionSecretToRef
@@ -149,7 +166,9 @@ public partial class V1beta1SizeConstraintSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SizeConstraintSetSpec defines the desired state of SizeConstraintSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpec
@@ -174,7 +193,9 @@ public partial class V1beta1SizeConstraintSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SizeConstraintSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameter that specifies where in a web request to look for the size constraint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetStatusAtProviderSizeConstraintsFieldToMatch
@@ -187,7 +208,9 @@ public partial class V1beta1SizeConstraintSetStatusAtProviderSizeConstraintsFiel
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetStatusAtProviderSizeConstraints
@@ -208,7 +231,9 @@ public partial class V1beta1SizeConstraintSetStatusAtProviderSizeConstraints
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetStatusAtProvider
@@ -229,7 +254,9 @@ public partial class V1beta1SizeConstraintSetStatusAtProvider
     [JsonPropertyName("sizeConstraints")]
     public IList<V1beta1SizeConstraintSetStatusAtProviderSizeConstraints>? SizeConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetStatusConditions
@@ -258,7 +285,9 @@ public partial class V1beta1SizeConstraintSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SizeConstraintSetStatus defines the observed state of SizeConstraintSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetStatus
@@ -275,7 +304,9 @@ public partial class V1beta1SizeConstraintSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SizeConstraintSet is the Schema for the SizeConstraintSets API. The</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -305,3 +336,4 @@ public partial class V1beta1SizeConstraintSet : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1SizeConstraintSetStatus? Status { get; set; }
 }
+#nullable disable

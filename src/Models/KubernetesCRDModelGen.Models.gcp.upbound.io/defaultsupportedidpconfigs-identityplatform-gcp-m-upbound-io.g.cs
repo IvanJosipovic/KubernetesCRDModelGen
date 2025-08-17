@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.m.upbound.io;
+#nullable enable
 /// <summary>DefaultSupportedIdPConfig is the Schema for the DefaultSupportedIdPConfigs API. Configurations options for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DefaultSupportedIdPConfigList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1DefaultSupportedIdPConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth client ID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpecForProviderClientIdSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpecForProviderClientIdSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth client secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpecForProviderClientSecretSecretRef
@@ -59,7 +64,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpecForProviderClientSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpecForProvider
@@ -84,7 +91,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth client ID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpecInitProviderClientIdSecretRef
@@ -97,7 +106,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpecInitProviderClientIdSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth client secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpecInitProviderClientSecretSecretRef
@@ -110,7 +121,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpecInitProviderClientSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpecInitProvider
@@ -135,7 +148,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpecProviderConfigRef
@@ -148,7 +163,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpecWriteConnectionSecretToRef
@@ -157,7 +174,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultSupportedIdPConfigSpec defines the desired state of DefaultSupportedIdPConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigSpec
@@ -182,7 +201,9 @@ public partial class V1beta1DefaultSupportedIdPConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DefaultSupportedIdPConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigStatusAtProvider
@@ -207,7 +228,9 @@ public partial class V1beta1DefaultSupportedIdPConfigStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigStatusConditions
@@ -236,7 +259,9 @@ public partial class V1beta1DefaultSupportedIdPConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultSupportedIdPConfigStatus defines the observed state of DefaultSupportedIdPConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultSupportedIdPConfigStatus
@@ -253,7 +278,9 @@ public partial class V1beta1DefaultSupportedIdPConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultSupportedIdPConfig is the Schema for the DefaultSupportedIdPConfigs API. Configurations options for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -283,3 +310,4 @@ public partial class V1beta1DefaultSupportedIdPConfig : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1DefaultSupportedIdPConfigStatus? Status { get; set; }
 }
+#nullable disable

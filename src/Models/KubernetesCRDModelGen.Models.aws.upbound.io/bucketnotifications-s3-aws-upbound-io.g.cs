@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+#nullable enable
 /// <summary>BucketNotification is the Schema for the BucketNotifications API. Manages a S3 Bucket Notification Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketNotificationList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1BucketNotification> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketNotificationSpecForProviderBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderBucketRef
@@ -59,7 +64,9 @@ public partial class V1beta1BucketNotificationSpecForProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderBucketSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BucketNotificationSpecForProviderBucketSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderBucketSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BucketNotificationSpecForProviderBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderLambdaFunction
@@ -114,7 +125,9 @@ public partial class V1beta1BucketNotificationSpecForProviderLambdaFunction
     [JsonPropertyName("lambdaFunctionArn")]
     public string? LambdaFunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate queueArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnRef
@@ -140,7 +155,9 @@ public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnRef
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecForProviderQueueQueueArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate queueArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnSelector
@@ -170,7 +189,9 @@ public partial class V1beta1BucketNotificationSpecForProviderQueueQueueArnSelect
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecForProviderQueueQueueArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderQueue
@@ -203,7 +224,9 @@ public partial class V1beta1BucketNotificationSpecForProviderQueue
     [JsonPropertyName("queueArnSelector")]
     public V1beta1BucketNotificationSpecForProviderQueueQueueArnSelector? QueueArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnRefPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnRef
@@ -229,7 +254,9 @@ public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnRef
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecForProviderTopicTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnSelectorPolicy
@@ -242,7 +269,9 @@ public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnSelector
@@ -259,7 +288,9 @@ public partial class V1beta1BucketNotificationSpecForProviderTopicTopicArnSelect
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecForProviderTopicTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProviderTopic
@@ -292,7 +323,9 @@ public partial class V1beta1BucketNotificationSpecForProviderTopic
     [JsonPropertyName("topicArnSelector")]
     public V1beta1BucketNotificationSpecForProviderTopicTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecForProvider
@@ -329,7 +362,9 @@ public partial class V1beta1BucketNotificationSpecForProvider
     [JsonPropertyName("topic")]
     public IList<V1beta1BucketNotificationSpecForProviderTopic>? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderBucketRefPolicy
@@ -342,7 +377,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderBucketRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderBucketRef
@@ -355,7 +392,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderBucketRef
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderBucketSelectorPolicy
@@ -368,7 +407,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderBucketSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderBucketSelector
@@ -385,7 +426,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderBucketSelector
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderLambdaFunction
@@ -410,7 +453,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderLambdaFunction
     [JsonPropertyName("lambdaFunctionArn")]
     public string? LambdaFunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnRefPolicy
@@ -423,7 +468,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in sqs to populate queueArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnRef
@@ -436,7 +483,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnRef
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecInitProviderQueueQueueArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelectorPolicy
@@ -449,7 +498,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in sqs to populate queueArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelector
@@ -466,7 +517,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelec
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderQueue
@@ -499,7 +552,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderQueue
     [JsonPropertyName("queueArnSelector")]
     public V1beta1BucketNotificationSpecInitProviderQueueQueueArnSelector? QueueArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnRefPolicy
@@ -512,7 +567,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnRef
@@ -525,7 +582,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnRef
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecInitProviderTopicTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelectorPolicy
@@ -538,7 +597,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate topicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelector
@@ -555,7 +616,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelec
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProviderTopic
@@ -588,7 +651,9 @@ public partial class V1beta1BucketNotificationSpecInitProviderTopic
     [JsonPropertyName("topicArnSelector")]
     public V1beta1BucketNotificationSpecInitProviderTopicTopicArnSelector? TopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecInitProvider
@@ -621,7 +686,9 @@ public partial class V1beta1BucketNotificationSpecInitProvider
     [JsonPropertyName("topic")]
     public IList<V1beta1BucketNotificationSpecInitProviderTopic>? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecProviderConfigRefPolicy
@@ -634,7 +701,9 @@ public partial class V1beta1BucketNotificationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecProviderConfigRef
@@ -647,7 +716,9 @@ public partial class V1beta1BucketNotificationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1BucketNotificationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpecWriteConnectionSecretToRef
@@ -660,7 +731,9 @@ public partial class V1beta1BucketNotificationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketNotificationSpec defines the desired state of BucketNotification</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationSpec
@@ -689,7 +762,9 @@ public partial class V1beta1BucketNotificationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketNotificationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationStatusAtProviderLambdaFunction
@@ -714,7 +789,9 @@ public partial class V1beta1BucketNotificationStatusAtProviderLambdaFunction
     [JsonPropertyName("lambdaFunctionArn")]
     public string? LambdaFunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationStatusAtProviderQueue
@@ -739,7 +816,9 @@ public partial class V1beta1BucketNotificationStatusAtProviderQueue
     [JsonPropertyName("queueArn")]
     public string? QueueArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationStatusAtProviderTopic
@@ -764,7 +843,9 @@ public partial class V1beta1BucketNotificationStatusAtProviderTopic
     [JsonPropertyName("topicArn")]
     public string? TopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationStatusAtProvider
@@ -797,7 +878,9 @@ public partial class V1beta1BucketNotificationStatusAtProvider
     [JsonPropertyName("topic")]
     public IList<V1beta1BucketNotificationStatusAtProviderTopic>? Topic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationStatusConditions
@@ -826,7 +909,9 @@ public partial class V1beta1BucketNotificationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketNotificationStatus defines the observed state of BucketNotification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketNotificationStatus
@@ -843,7 +928,9 @@ public partial class V1beta1BucketNotificationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketNotification is the Schema for the BucketNotifications API. Manages a S3 Bucket Notification Configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -873,3 +960,4 @@ public partial class V1beta1BucketNotification : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1BucketNotificationStatus? Status { get; set; }
 }
+#nullable disable

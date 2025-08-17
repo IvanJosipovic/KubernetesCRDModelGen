@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keda.sh;
+#nullable enable
 /// <summary>ScaledJob is the Schema for the scaledjobs API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ScaledJobList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1alpha1ScaledJob> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the requirement on the container exit codes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnExitCodes
@@ -50,7 +53,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnExi
     [JsonPropertyName("values")]
     public IList<int> Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodFailurePolicyOnPodConditionsPattern describes a pattern for matching an actual pod condition type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnPodConditions
@@ -63,7 +68,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnPod
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodFailurePolicyRule describes how a pod failure is handled when the requirements are met. One of onExitCodes and onPodConditions, but not both, can be used in each rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRules
@@ -80,7 +87,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRules
     [JsonPropertyName("onPodConditions")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRulesOnPodConditions>? OnPodConditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the policy of handling failed pods. In particular, it allows to specify the set of actions and conditions which need to be satisfied to take the associated action. If empty, the default behaviour applies - the counter of failed pods, represented by the jobs's .status.failed field, is incremented and it is checked against the backoffLimit. This field cannot be used in combination with restartPolicy=OnFailure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicy
@@ -89,7 +98,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicy
     [JsonPropertyName("rules")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefPodFailurePolicyRules> Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefSelectorMatchExpressions
@@ -106,7 +117,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefSelectorMatchExpressions
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over pods that should match the pod count. Normally, the system sets this field for you. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefSelector
@@ -119,7 +132,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SuccessPolicyRule describes rule for declaring a Job as succeeded. Each rule must have at least one of the "succeededIndexes" or "succeededCount" specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefSuccessPolicyRules
@@ -132,7 +147,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefSuccessPolicyRules
     [JsonPropertyName("succeededIndexes")]
     public string? SucceededIndexes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>successPolicy specifies the policy when the Job can be declared as succeeded. If empty, the default behavior applies - the Job is declared as succeeded only when the number of succeeded pods equals to the completions. When the field is specified, it must be immutable and works only for the Indexed Jobs. Once the Job meets the SuccessPolicy, the lingering pods are terminated.  This field is beta-level. To use this field, you must enable the `JobSuccessPolicy` feature gate (enabled by default).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefSuccessPolicy
@@ -141,7 +158,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefSuccessPolicy
     [JsonPropertyName("rules")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefSuccessPolicyRules> Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
@@ -158,7 +177,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
@@ -175,7 +196,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
@@ -188,7 +211,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("matchFields")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -201,7 +226,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
@@ -218,7 +245,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
@@ -235,7 +264,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
@@ -248,7 +279,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("matchFields")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -257,7 +290,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("nodeSelectorTerms")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes node affinity scheduling rules for the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinity
@@ -270,7 +305,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAf
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
@@ -287,7 +324,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
@@ -300,7 +339,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
@@ -317,7 +358,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
@@ -330,7 +373,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
@@ -359,7 +404,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -372,7 +419,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
@@ -389,7 +438,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
@@ -402,7 +453,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
@@ -419,7 +472,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
@@ -432,7 +487,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -461,7 +518,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinity
@@ -474,7 +533,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAff
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
@@ -491,7 +552,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
@@ -504,7 +567,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
@@ -521,7 +586,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
@@ -534,7 +601,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
@@ -563,7 +632,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
@@ -576,7 +647,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("weight")]
     public int Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
@@ -593,7 +666,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
@@ -606,7 +681,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
@@ -623,7 +700,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
@@ -636,7 +715,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
@@ -665,7 +746,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("topologyKey")]
     public string TopologyKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinity
@@ -678,7 +761,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAnt
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If specified, the pod's scheduling constraints</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinity
@@ -695,7 +780,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinity
     [JsonPropertyName("podAntiAffinity")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a ConfigMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromConfigMapKeyRef
@@ -712,7 +799,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromFieldRef
@@ -725,7 +814,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromResourceFieldRef
@@ -742,7 +833,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a secret in the pod's namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromSecretKeyRef
@@ -759,7 +852,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFrom
@@ -780,7 +875,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvV
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvVar represents an environment variable present in a Container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnv
@@ -797,7 +894,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnv
     [JsonPropertyName("valueFrom")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ConfigMap to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvFromConfigMapRef
@@ -810,7 +909,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvF
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvFromSecretRef
@@ -823,7 +924,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvF
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvFrom
@@ -840,7 +943,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvF
     [JsonPropertyName("secretRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartExec
@@ -849,7 +954,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartHttpGetHttpHeaders
@@ -862,7 +969,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartHttpGet
@@ -887,7 +996,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartSleep
@@ -896,7 +1007,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartTcpSocket
@@ -909,7 +1022,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStart
@@ -930,7 +1045,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("tcpSocket")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopExec
@@ -939,7 +1056,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopHttpGetHttpHeaders
@@ -952,7 +1071,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopHttpGet
@@ -977,7 +1098,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopSleep
@@ -986,7 +1109,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopTcpSocket
@@ -999,7 +1124,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStop
@@ -1020,7 +1147,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("tcpSocket")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions that the management system should take in response to container lifecycle events. Cannot be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecycle
@@ -1033,7 +1162,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
     [JsonPropertyName("preStop")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLifecyclePreStop? PreStop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeExec
@@ -1042,7 +1173,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeGrpc
@@ -1055,7 +1188,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeHttpGetHttpHeaders
@@ -1068,7 +1203,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeHttpGet
@@ -1093,7 +1230,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbeTcpSocket
@@ -1106,7 +1245,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLivenessProbe
@@ -1151,7 +1292,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPort represents a network port in a single container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersPorts
@@ -1176,7 +1319,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersPort
     [JsonPropertyName("protocol")]
     public string Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeExec
@@ -1185,7 +1330,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeGrpc
@@ -1198,7 +1345,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeHttpGetHttpHeaders
@@ -1211,7 +1360,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeHttpGet
@@ -1236,7 +1387,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbeTcpSocket
@@ -1249,7 +1402,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReadinessProbe
@@ -1294,7 +1449,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersResizePolicy
@@ -1307,7 +1464,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersResi
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersResourcesClaims
@@ -1320,7 +1479,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReso
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersResources
@@ -1337,7 +1498,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersReso
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>appArmorProfile is the AppArmor options to use by this container. If set, this profile overrides the pod's appArmorProfile. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextAppArmorProfile
@@ -1350,7 +1513,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextCapabilities
@@ -1363,7 +1528,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextSeLinuxOptions
@@ -1384,7 +1551,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextSeccompProfile
@@ -1397,7 +1566,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextWindowsOptions
@@ -1418,7 +1589,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContext
@@ -1471,7 +1644,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecu
     [JsonPropertyName("windowsOptions")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeExec
@@ -1480,7 +1655,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeGrpc
@@ -1493,7 +1670,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeHttpGetHttpHeaders
@@ -1506,7 +1685,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeHttpGet
@@ -1531,7 +1712,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbeTcpSocket
@@ -1544,7 +1727,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStartupProbe
@@ -1589,7 +1774,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersVolumeDevices
@@ -1602,7 +1789,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersVolu
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersVolumeMounts
@@ -1635,7 +1824,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersVolu
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A single application container that you want to run within a pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainers
@@ -1736,7 +1927,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainers
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodDNSConfigOption defines DNS resolver options of a pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecDnsConfigOptions
@@ -1749,7 +1942,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecDnsConfigOptio
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecDnsConfig
@@ -1766,7 +1961,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecDnsConfig
     [JsonPropertyName("searches")]
     public IList<string>? Searches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a ConfigMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromConfigMapKeyRef
@@ -1783,7 +1980,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromFieldRef
@@ -1796,7 +1995,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromResourceFieldRef
@@ -1813,7 +2014,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a secret in the pod's namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef
@@ -1830,7 +2033,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFrom
@@ -1851,7 +2056,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvVar represents an environment variable present in a Container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnv
@@ -1868,7 +2075,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("valueFrom")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ConfigMap to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvFromConfigMapRef
@@ -1881,7 +2090,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvFromSecretRef
@@ -1894,7 +2105,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvFrom
@@ -1911,7 +2124,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("secretRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartExec
@@ -1920,7 +2135,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartHttpGetHttpHeaders
@@ -1933,7 +2150,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartHttpGet
@@ -1958,7 +2177,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartSleep
@@ -1967,7 +2188,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket
@@ -1980,7 +2203,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStart
@@ -2001,7 +2226,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("tcpSocket")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopExec
@@ -2010,7 +2237,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopHttpGetHttpHeaders
@@ -2023,7 +2252,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopHttpGet
@@ -2048,7 +2279,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopSleep
@@ -2057,7 +2290,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket
@@ -2070,7 +2305,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStop
@@ -2091,7 +2328,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("tcpSocket")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lifecycle is not allowed for ephemeral containers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecycle
@@ -2104,7 +2343,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("preStop")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLifecyclePreStop? PreStop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeExec
@@ -2113,7 +2354,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeGrpc
@@ -2126,7 +2369,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeHttpGetHttpHeaders
@@ -2139,7 +2384,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeHttpGet
@@ -2164,7 +2411,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbeTcpSocket
@@ -2177,7 +2426,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Probes are not allowed for ephemeral containers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersLivenessProbe
@@ -2222,7 +2473,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPort represents a network port in a single container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersPorts
@@ -2247,7 +2500,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("protocol")]
     public string Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeExec
@@ -2256,7 +2511,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeGrpc
@@ -2269,7 +2526,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeHttpGetHttpHeaders
@@ -2282,7 +2541,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeHttpGet
@@ -2307,7 +2568,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbeTcpSocket
@@ -2320,7 +2583,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Probes are not allowed for ephemeral containers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersReadinessProbe
@@ -2365,7 +2630,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersResizePolicy
@@ -2378,7 +2645,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersResourcesClaims
@@ -2391,7 +2660,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersResources
@@ -2408,7 +2679,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>appArmorProfile is the AppArmor options to use by this container. If set, this profile overrides the pod's appArmorProfile. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextAppArmorProfile
@@ -2421,7 +2694,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextCapabilities
@@ -2434,7 +2709,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextSeLinuxOptions
@@ -2455,7 +2732,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextSeccompProfile
@@ -2468,7 +2747,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextWindowsOptions
@@ -2489,7 +2770,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContext
@@ -2542,7 +2825,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("windowsOptions")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeExec
@@ -2551,7 +2836,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeGrpc
@@ -2564,7 +2851,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeHttpGetHttpHeaders
@@ -2577,7 +2866,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeHttpGet
@@ -2602,7 +2893,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbeTcpSocket
@@ -2615,7 +2908,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Probes are not allowed for ephemeral containers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersStartupProbe
@@ -2660,7 +2955,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersVolumeDevices
@@ -2673,7 +2970,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainersVolumeMounts
@@ -2706,7 +3005,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An EphemeralContainer is a temporary container that you may add to an existing Pod for user-initiated activities such as debugging. Ephemeral containers have no resource or scheduling guarantees, and they will not be restarted when they exit or when a Pod is removed or restarted. The kubelet may evict a Pod if an ephemeral container causes the Pod to exceed its resource allocation.  To add an ephemeral container, use the ephemeralcontainers subresource of an existing Pod. Ephemeral containers may not be removed or restarted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralContainers
@@ -2811,7 +3112,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecHostAliases
@@ -2824,7 +3127,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecHostAliases
     [JsonPropertyName("ip")]
     public string Ip { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecImagePullSecrets
@@ -2833,7 +3138,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecImagePullSecre
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a ConfigMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromConfigMapKeyRef
@@ -2850,7 +3157,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['&lt;KEY&gt;']`, `metadata.annotations['&lt;KEY&gt;']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromFieldRef
@@ -2863,7 +3172,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromResourceFieldRef
@@ -2880,7 +3191,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a key of a secret in the pod's namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromSecretKeyRef
@@ -2897,7 +3210,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the environment variable's value. Cannot be used if value is not empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFrom
@@ -2918,7 +3233,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("secretKeyRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvVar represents an environment variable present in a Container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnv
@@ -2935,7 +3252,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("valueFrom")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ConfigMap to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvFromConfigMapRef
@@ -2948,7 +3267,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Secret to select from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvFromSecretRef
@@ -2961,7 +3282,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvFrom
@@ -2978,7 +3301,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("secretRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersEnvFromSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartExec
@@ -2987,7 +3312,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartHttpGetHttpHeaders
@@ -3000,7 +3327,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartHttpGet
@@ -3025,7 +3354,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartSleep
@@ -3034,7 +3365,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartTcpSocket
@@ -3047,7 +3380,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStart
@@ -3068,7 +3403,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("tcpSocket")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopExec
@@ -3077,7 +3414,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopHttpGetHttpHeaders
@@ -3090,7 +3429,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopHttpGet
@@ -3115,7 +3456,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopSleep
@@ -3124,7 +3467,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("seconds")]
     public long Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopTcpSocket
@@ -3137,7 +3482,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStop
@@ -3158,7 +3505,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("tcpSocket")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Actions that the management system should take in response to container lifecycle events. Cannot be updated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecycle
@@ -3171,7 +3520,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("preStop")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLifecyclePreStop? PreStop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeExec
@@ -3180,7 +3531,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeGrpc
@@ -3193,7 +3546,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeHttpGetHttpHeaders
@@ -3206,7 +3561,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeHttpGet
@@ -3231,7 +3588,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbeTcpSocket
@@ -3244,7 +3603,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersLivenessProbe
@@ -3289,7 +3650,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerPort represents a network port in a single container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersPorts
@@ -3314,7 +3677,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("protocol")]
     public string Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeExec
@@ -3323,7 +3688,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeGrpc
@@ -3336,7 +3703,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeHttpGetHttpHeaders
@@ -3349,7 +3718,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeHttpGet
@@ -3374,7 +3745,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbeTcpSocket
@@ -3387,7 +3760,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersReadinessProbe
@@ -3432,7 +3807,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerResizePolicy represents resource resize policy for the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersResizePolicy
@@ -3445,7 +3822,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("restartPolicy")]
     public string RestartPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersResourcesClaims
@@ -3458,7 +3837,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("request")]
     public string? Request { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersResources
@@ -3475,7 +3856,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>appArmorProfile is the AppArmor options to use by this container. If set, this profile overrides the pod's appArmorProfile. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextAppArmorProfile
@@ -3488,7 +3871,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextCapabilities
@@ -3501,7 +3886,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("drop")]
     public IList<string>? Drop { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextSeLinuxOptions
@@ -3522,7 +3909,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The seccomp options to use by this container. If seccomp options are provided at both the pod &amp; container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextSeccompProfile
@@ -3535,7 +3924,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextWindowsOptions
@@ -3556,7 +3947,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContext
@@ -3609,7 +4002,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("windowsOptions")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Exec specifies the action to take.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeExec
@@ -3618,7 +4013,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC specifies an action involving a GRPC port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeGrpc
@@ -3631,7 +4028,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPHeader describes a custom header to be used in HTTP probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeHttpGetHttpHeaders
@@ -3644,7 +4043,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HTTPGet specifies the http request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeHttpGet
@@ -3669,7 +4070,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbeTcpSocket
@@ -3682,7 +4085,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("port")]
     public IntstrIntOrString Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersStartupProbe
@@ -3727,7 +4132,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>volumeDevice describes a mapping of a raw block device within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersVolumeDevices
@@ -3740,7 +4147,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VolumeMount describes a mounting of a Volume within a container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainersVolumeMounts
@@ -3773,7 +4182,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("subPathExpr")]
     public string? SubPathExpr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A single application container that you want to run within a pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
@@ -3874,7 +4285,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
     [JsonPropertyName("workingDir")]
     public string? WorkingDir { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.  If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions  If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers - spec.securityContext.appArmorProfile - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.securityContext.supplementalGroupsPolicy - spec.containers[*].securityContext.appArmorProfile - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecOs
@@ -3883,7 +4296,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecOs
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodReadinessGate contains the reference to a pod condition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecReadinessGates
@@ -3892,7 +4307,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecReadinessGates
     [JsonPropertyName("conditionType")]
     public string ConditionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodResourceClaim references exactly one ResourceClaim, either directly or by naming a ResourceClaimTemplate which is then turned into a ResourceClaim for the pod.  It adds a name to it that uniquely identifies the ResourceClaim inside the Pod. Containers that need access to the ResourceClaim reference it with this name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecResourceClaims
@@ -3909,7 +4326,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecResourceClaims
     [JsonPropertyName("resourceClaimTemplateName")]
     public string? ResourceClaimTemplateName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PodSchedulingGate is associated to a Pod to guard its scheduling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSchedulingGates
@@ -3918,7 +4337,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSchedulingGate
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>appArmorProfile is the AppArmor options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextAppArmorProfile
@@ -3931,7 +4352,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextSeLinuxOptions
@@ -3952,7 +4375,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The seccomp options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextSeccompProfile
@@ -3965,7 +4390,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sysctl defines a kernel parameter to be set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextSysctls
@@ -3978,7 +4405,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextWindowsOptions
@@ -3999,7 +4428,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     [JsonPropertyName("runAsUserName")]
     public string? RunAsUserName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContext
@@ -4052,7 +4483,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContex
     [JsonPropertyName("windowsOptions")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTolerations
@@ -4077,7 +4510,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTolerations
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpreadConstraintsLabelSelectorMatchExpressions
@@ -4094,7 +4529,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpread
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpreadConstraintsLabelSelector
@@ -4107,7 +4544,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpread
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TopologySpreadConstraint specifies how to spread matching pods among the given topology.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpreadConstraints
@@ -4144,7 +4583,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecTopologySpread
     [JsonPropertyName("whenUnsatisfiable")]
     public string WhenUnsatisfiable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAwsElasticBlockStore
@@ -4165,7 +4606,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAwsElas
     [JsonPropertyName("volumeID")]
     public string VolumeID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAzureDisk
@@ -4194,7 +4637,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAzureDi
     [JsonPropertyName("readOnly")]
     public bool? ReadOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>azureFile represents an Azure File Service mount on the host and bind mount to the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAzureFile
@@ -4211,7 +4656,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesAzureFi
     [JsonPropertyName("shareName")]
     public string ShareName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCephfsSecretRef
@@ -4220,7 +4667,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCephfsS
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>cephFS represents a Ceph FS mount on the host that shares a pod's lifetime</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCephfs
@@ -4249,7 +4698,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCephfs
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is optional: points to a secret object containing parameters used to connect to OpenStack.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCinderSecretRef
@@ -4258,7 +4709,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCinderS
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCinder
@@ -4279,7 +4732,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCinder
     [JsonPropertyName("volumeID")]
     public string VolumeID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesConfigMapItems
@@ -4296,7 +4751,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesConfigM
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>configMap represents a configMap that should populate this volume</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesConfigMap
@@ -4317,7 +4774,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesConfigM
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCsiNodePublishSecretRef
@@ -4326,7 +4785,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCsiNode
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCsi
@@ -4351,7 +4812,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesCsi
     [JsonPropertyName("volumeAttributes")]
     public IDictionary<string, string>? VolumeAttributes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItemsFieldRef
@@ -4364,7 +4827,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwar
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItemsResourceFieldRef
@@ -4381,7 +4846,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwar
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItems
@@ -4402,7 +4869,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwar
     [JsonPropertyName("resourceFieldRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>downwardAPI represents downward API about the pod that should populate this volume</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPI
@@ -4415,7 +4884,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwar
     [JsonPropertyName("items")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesDownwardAPIItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>emptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEmptyDir
@@ -4428,7 +4899,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEmptyDi
     [JsonPropertyName("sizeLimit")]
     public IntstrIntOrString? SizeLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateMetadata
@@ -4453,7 +4926,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecDataSource
@@ -4470,7 +4945,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef   allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef   preserves all values, and generates an error if a disallowed value is   specified. * While dataSource only allows local objects, dataSourceRef allows objects   in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecDataSourceRef
@@ -4491,7 +4968,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecResources
@@ -4504,7 +4983,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("requests")]
     public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecSelectorMatchExpressions
@@ -4521,7 +5002,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>selector is a label query over volumes to consider for binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpecSelector
@@ -4534,7 +5017,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpec
@@ -4575,7 +5060,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `&lt;pod name&gt;-&lt;volume name&gt;` where `&lt;volume name&gt;` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long).  An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster.  This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created.  Required, must not be nil.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplate
@@ -4588,7 +5075,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("spec")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplateSpec Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.  Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity    tracking are needed, c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through    a PersistentVolumeClaim (see EphemeralVolumeSource for more    information on the connection between this volume type    and PersistentVolumeClaim).  Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.  Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.  A pod can use both types of ephemeral volumes and persistent volumes at the same time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeral
@@ -4597,7 +5086,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemer
     [JsonPropertyName("volumeClaimTemplate")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesEphemeralVolumeClaimTemplate? VolumeClaimTemplate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>fc represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFc
@@ -4622,7 +5113,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFc
     [JsonPropertyName("wwids")]
     public IList<string>? Wwids { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVolumeSecretRef
@@ -4631,7 +5124,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVol
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVolume
@@ -4656,7 +5151,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVol
     [JsonPropertyName("secretRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlexVolumeSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlocker
@@ -4669,7 +5166,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesFlocker
     [JsonPropertyName("datasetUUID")]
     public string? DatasetUUID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGcePersistentDisk
@@ -4690,7 +5189,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGcePers
     [JsonPropertyName("readOnly")]
     public bool? ReadOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGitRepo
@@ -4707,7 +5208,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGitRepo
     [JsonPropertyName("revision")]
     public string? Revision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGlusterfs
@@ -4724,7 +5227,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesGluster
     [JsonPropertyName("readOnly")]
     public bool? ReadOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesHostPath
@@ -4737,7 +5242,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesHostPat
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>image represents an OCI object (a container image or artifact) pulled and mounted on the kubelet's host machine. The volume is resolved at pod startup depending on which PullPolicy value is provided:  - Always: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails. - Never: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present. - IfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails.  The volume gets re-resolved if the pod gets deleted and recreated, which means that new remote content will become available on pod recreation. A failure to resolve or pull the image during pod startup will block containers from starting and may add significant latency. Failures will be retried using normal volume backoff and will be reported on the pod reason and message. The types of objects that may be mounted by this volume are defined by the container runtime implementation on a host machine and at minimum must include all valid types supported by the container image field. The OCI object gets mounted in a single directory (spec.containers[*].volumeMounts.mountPath) by merging the manifest layers in the same way as for container images. The volume will be mounted read-only (ro) and non-executable files (noexec). Sub path mounts for containers are not supported (spec.containers[*].volumeMounts.subpath). The field spec.securityContext.fsGroupChangePolicy has no effect on this volume type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesImage
@@ -4750,7 +5257,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesImage
     [JsonPropertyName("reference")]
     public string? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is the CHAP Secret for iSCSI target and initiator authentication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesIscsiSecretRef
@@ -4759,7 +5268,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesIscsiSe
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesIscsi
@@ -4808,7 +5319,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesIscsi
     [JsonPropertyName("targetPortal")]
     public string TargetPortal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>nfs represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesNfs
@@ -4825,7 +5338,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesNfs
     [JsonPropertyName("server")]
     public string Server { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPersistentVolumeClaim
@@ -4838,7 +5353,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPersist
     [JsonPropertyName("readOnly")]
     public bool? ReadOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPhotonPersistentDisk
@@ -4851,7 +5368,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPhotonP
     [JsonPropertyName("pdID")]
     public string PdID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>portworxVolume represents a portworx volume attached and mounted on kubelets host machine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPortworxVolume
@@ -4868,7 +5387,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesPortwor
     [JsonPropertyName("volumeID")]
     public string VolumeID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesClusterTrustBundleLabelSelectorMatchExpressions
@@ -4885,7 +5406,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Select all ClusterTrustBundles that match this label selector.  Only has effect if signerName is set.  Mutually-exclusive with name.  If unset, interpreted as "match nothing".  If set but empty, interpreted as "match everything".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesClusterTrustBundleLabelSelector
@@ -4898,7 +5421,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field of ClusterTrustBundle objects in an auto-updating file.  Alpha, gated by the ClusterTrustBundleProjection feature gate.  ClusterTrustBundle objects can either be selected by name, or by the combination of signer name and a label selector.  Kubelet performs aggressive normalization of the PEM contents written into the pod filesystem.  Esoteric PEM features such as inter-block comments and block headers are stripped.  Certificates are deduplicated. The ordering of certificates within the file is arbitrary, and Kubelet may change the order over time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesClusterTrustBundle
@@ -4923,7 +5448,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("signerName")]
     public string? SignerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesConfigMapItems
@@ -4940,7 +5467,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>configMap information about the configMap data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesConfigMap
@@ -4957,7 +5486,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItemsFieldRef
@@ -4970,7 +5501,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("fieldPath")]
     public string FieldPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef
@@ -4987,7 +5520,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("resource")]
     public string Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DownwardAPIVolumeFile represents information to create the file containing the pod field</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItems
@@ -5008,7 +5543,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("resourceFieldRef")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItemsResourceFieldRef? ResourceFieldRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>downwardAPI information about the downwardAPI data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPI
@@ -5017,7 +5554,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("items")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesDownwardAPIItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesSecretItems
@@ -5034,7 +5573,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secret information about the secret data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesSecret
@@ -5051,7 +5592,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>serviceAccountToken is information about the serviceAccountToken data to project</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesServiceAccountToken
@@ -5068,7 +5611,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Projection that may be projected along with other supported volume types. Exactly one of these fields must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSources
@@ -5093,7 +5638,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("serviceAccountToken")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSourcesServiceAccountToken? ServiceAccountToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>projected items for all in one resources secrets, configmaps, and downward API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjected
@@ -5106,7 +5653,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProject
     [JsonPropertyName("sources")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesProjectedSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>quobyte represents a Quobyte mount on the host that shares a pod's lifetime</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesQuobyte
@@ -5135,7 +5684,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesQuobyte
     [JsonPropertyName("volume")]
     public string Volume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesRbdSecretRef
@@ -5144,7 +5695,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesRbdSecr
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesRbd
@@ -5181,7 +5734,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesRbd
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesScaleIOSecretRef
@@ -5190,7 +5745,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesScaleIO
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesScaleIO
@@ -5235,7 +5792,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesScaleIO
     [JsonPropertyName("volumeName")]
     public string? VolumeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maps a string key to a path within a volume.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesSecretItems
@@ -5252,7 +5811,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesSecretI
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesSecret
@@ -5273,7 +5834,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesSecret
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesStorageosSecretRef
@@ -5282,7 +5845,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesStorage
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesStorageos
@@ -5307,7 +5872,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesStorage
     [JsonPropertyName("volumeNamespace")]
     public string? VolumeNamespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesVsphereVolume
@@ -5328,7 +5895,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesVsphere
     [JsonPropertyName("volumePath")]
     public string VolumePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Volume represents a named volume in a pod that may be accessed by any container in the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumes
@@ -5457,7 +6026,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumes
     [JsonPropertyName("vsphereVolume")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumesVsphereVolume? VsphereVolume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpec
@@ -5618,7 +6189,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpec
     [JsonPropertyName("volumes")]
     public IList<V1alpha1ScaledJobSpecJobTargetRefTemplateSpecVolumes>? Volumes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes the pod that will be created when executing a job. The only allowed template.spec.restartPolicy values are "Never" or "OnFailure". More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRefTemplate
@@ -5631,7 +6204,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplate
     [JsonPropertyName("spec")]
     public V1alpha1ScaledJobSpecJobTargetRefTemplateSpec? Spec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobSpec describes how the job execution will look like.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecJobTargetRef
@@ -5700,7 +6275,9 @@ public partial class V1alpha1ScaledJobSpecJobTargetRef
     [JsonPropertyName("ttlSecondsAfterFinished")]
     public int? TtlSecondsAfterFinished { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rollout defines the strategy for job rollouts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecRollout
@@ -5713,7 +6290,9 @@ public partial class V1alpha1ScaledJobSpecRollout
     [JsonPropertyName("strategy")]
     public string? Strategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScalingStrategy defines the strategy of Scaling</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecScalingStrategy
@@ -5738,7 +6317,9 @@ public partial class V1alpha1ScaledJobSpecScalingStrategy
     [JsonPropertyName("strategy")]
     public string? Strategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecTriggersAuthenticationRef
@@ -5751,7 +6332,9 @@ public partial class V1alpha1ScaledJobSpecTriggersAuthenticationRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaleTriggers reference the scaler that will be used</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpecTriggers
@@ -5776,7 +6359,9 @@ public partial class V1alpha1ScaledJobSpecTriggers
     [JsonPropertyName("useCachedMetrics")]
     public bool? UseCachedMetrics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaledJobSpec defines the desired state of ScaledJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobSpec
@@ -5825,7 +6410,9 @@ public partial class V1alpha1ScaledJobSpec
     [JsonPropertyName("triggers")]
     public IList<V1alpha1ScaledJobSpecTriggers> Triggers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition to store the condition state</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobStatusConditions
@@ -5846,7 +6433,9 @@ public partial class V1alpha1ScaledJobStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaledJobStatus defines the observed state of ScaledJob</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ScaledJobStatus
@@ -5871,7 +6460,9 @@ public partial class V1alpha1ScaledJobStatus
     [JsonPropertyName("triggersTypes")]
     public string? TriggersTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScaledJob is the Schema for the scaledjobs API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -5901,3 +6492,4 @@ public partial class V1alpha1ScaledJob : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1alpha1ScaledJobStatus? Status { get; set; }
 }
+#nullable disable

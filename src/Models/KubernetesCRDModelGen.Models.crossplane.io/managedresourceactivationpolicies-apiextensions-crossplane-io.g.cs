@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+#nullable enable
 /// <summary>A ManagedResourceActivationPolicy defines the activation policy for ManagedResourceDefinitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ManagedResourceActivationPolicyList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1alpha1ManagedResourceActivationPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedResourceActivationPolicySpec specifies the desired activation state of ManagedResourceDefinitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedResourceActivationPolicySpec
@@ -42,7 +45,9 @@ public partial class V1alpha1ManagedResourceActivationPolicySpec
     [JsonPropertyName("activate")]
     public IList<string> Activate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedResourceActivationPolicyStatusConditions
@@ -71,7 +76,9 @@ public partial class V1alpha1ManagedResourceActivationPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedResourceActivationPolicyStatus shows the observed state of the policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedResourceActivationPolicyStatus
@@ -84,7 +91,9 @@ public partial class V1alpha1ManagedResourceActivationPolicyStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1ManagedResourceActivationPolicyStatusConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ManagedResourceActivationPolicy defines the activation policy for ManagedResourceDefinitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -114,3 +123,4 @@ public partial class V1alpha1ManagedResourceActivationPolicy : IKubernetesObject
     [JsonPropertyName("status")]
     public V1alpha1ManagedResourceActivationPolicyStatus? Status { get; set; }
 }
+#nullable disable

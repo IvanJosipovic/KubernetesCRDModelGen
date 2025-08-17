@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryconnection.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigQueryConnectionConnection is the Schema for the BigQueryConnectionConnection API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BigQueryConnectionConnectionList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1beta1BigQueryConnectionConnection> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authentication using Google owned service account to assume into customer's AWS IAM Role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecAwsAccessRole
@@ -42,7 +45,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecAwsAccessRole
     [JsonPropertyName("iamRoleID")]
     public string IamRoleID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Amazon Web Services (AWS) properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecAws
@@ -51,7 +56,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecAws
     [JsonPropertyName("accessRole")]
     public V1beta1BigQueryConnectionConnectionSpecAwsAccessRole AccessRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Azure properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecAzure
@@ -64,13 +71,17 @@ public partial class V1beta1BigQueryConnectionConnectionSpecAzure
     [JsonPropertyName("federatedApplicationClientID")]
     public string? FederatedApplicationClientID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use Cloud Resource properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudResource
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret object that stores the "username" and "password" information. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQLCredentialSecretRef
@@ -83,7 +94,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQLCredentialSe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud SQL credential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQLCredential
@@ -92,7 +105,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQLCredential
     [JsonPropertyName("secretRef")]
     public V1beta1BigQueryConnectionConnectionSpecCloudSQLCredentialSecretRef? SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to the SQL Database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQLDatabaseRef
@@ -109,7 +124,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQLDatabaseRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to the Cloud SQL instance ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQLInstanceRef
@@ -126,7 +143,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQLInstanceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud SQL properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQL
@@ -147,7 +166,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQL
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a spanner database ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudSpannerDatabaseRef
@@ -164,7 +185,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecCloudSpannerDatabase
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cloud Spanner properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudSpanner
@@ -193,7 +216,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecCloudSpanner
     [JsonPropertyName("useServerlessAnalytics")]
     public bool? UseServerlessAnalytics { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecProjectRef
@@ -214,7 +239,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Resource name of an existing Dataproc Metastore service.   Example:   * `projects/[project_id]/locations/[region]/services/[service_id]`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecSparkMetastoreServiceMetastoreServiceRef
@@ -231,7 +258,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecSparkMetastoreServic
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Dataproc Metastore Service configuration for the connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecSparkMetastoreService
@@ -240,7 +269,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecSparkMetastoreServic
     [JsonPropertyName("metastoreServiceRef")]
     public V1beta1BigQueryConnectionConnectionSpecSparkMetastoreServiceMetastoreServiceRef? MetastoreServiceRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Resource name of an existing Dataproc Cluster to act as a Spark  History Server for the connection.   Example:   * `projects/[project_id]/regions/[region]/clusters/[cluster_name]`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecSparkSparkHistoryServerDataprocClusterRef
@@ -257,7 +288,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecSparkSparkHistorySer
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Spark History Server configuration for the connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecSparkSparkHistoryServer
@@ -266,7 +299,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecSparkSparkHistorySer
     [JsonPropertyName("dataprocClusterRef")]
     public V1beta1BigQueryConnectionConnectionSpecSparkSparkHistoryServerDataprocClusterRef? DataprocClusterRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Spark properties.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecSpark
@@ -279,7 +314,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpecSpark
     [JsonPropertyName("sparkHistoryServer")]
     public V1beta1BigQueryConnectionConnectionSpecSparkSparkHistoryServer? SparkHistoryServer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryConnectionConnectionSpec defines the desired state to connect BigQuery to external resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpec
@@ -328,7 +365,9 @@ public partial class V1beta1BigQueryConnectionConnectionSpec
     [JsonPropertyName("spark")]
     public V1beta1BigQueryConnectionConnectionSpecSpark? Spark { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatusConditions
@@ -353,7 +392,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateAwsAccessRole
@@ -362,7 +403,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateAwsAc
     [JsonPropertyName("identity")]
     public string? Identity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateAws
@@ -371,7 +414,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateAws
     [JsonPropertyName("accessRole")]
     public V1beta1BigQueryConnectionConnectionStatusObservedStateAwsAccessRole? AccessRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateAzure
@@ -396,7 +441,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateAzure
     [JsonPropertyName("redirectUri")]
     public string? RedirectUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateCloudResource
@@ -405,7 +452,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateCloud
     [JsonPropertyName("serviceAccountID")]
     public string? ServiceAccountID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateCloudSQL
@@ -414,7 +463,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateCloud
     [JsonPropertyName("serviceAccountID")]
     public string? ServiceAccountID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateSpark
@@ -423,7 +474,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatusObservedStateSpark
     [JsonPropertyName("serviceAccountID")]
     public string? ServiceAccountID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatusObservedState
@@ -460,7 +513,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatusObservedState
     [JsonPropertyName("spark")]
     public V1beta1BigQueryConnectionConnectionStatusObservedStateSpark? Spark { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryConnectionConnectionStatus defines the config connector machine state of BigQueryConnectionConnection</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionStatus
@@ -481,7 +536,9 @@ public partial class V1beta1BigQueryConnectionConnectionStatus
     [JsonPropertyName("observedState")]
     public V1beta1BigQueryConnectionConnectionStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigQueryConnectionConnection is the Schema for the BigQueryConnectionConnection API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -511,3 +568,4 @@ public partial class V1beta1BigQueryConnectionConnection : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1BigQueryConnectionConnectionStatus? Status { get; set; }
 }
+#nullable disable

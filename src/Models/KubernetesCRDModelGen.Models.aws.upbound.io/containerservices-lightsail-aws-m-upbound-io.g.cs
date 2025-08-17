@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lightsail.aws.m.upbound.io;
+#nullable enable
 /// <summary>ContainerService is the Schema for the ContainerServices API. Manages a Lightsail container service for running containerized applications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerServiceList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1ContainerService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccessEcrImagePullerRole
@@ -42,7 +45,9 @@ public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccess
     [JsonPropertyName("isActive")]
     public bool? IsActive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccess
@@ -51,7 +56,9 @@ public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccess
     [JsonPropertyName("ecrImagePullerRole")]
     public V1beta1ContainerServiceSpecForProviderPrivateRegistryAccessEcrImagePullerRole? EcrImagePullerRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPublicDomainNamesCertificate
@@ -64,7 +71,9 @@ public partial class V1beta1ContainerServiceSpecForProviderPublicDomainNamesCert
     [JsonPropertyName("domainNames")]
     public IList<string>? DomainNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPublicDomainNames
@@ -73,7 +82,9 @@ public partial class V1beta1ContainerServiceSpecForProviderPublicDomainNames
     [JsonPropertyName("certificate")]
     public IList<V1beta1ContainerServiceSpecForProviderPublicDomainNamesCertificate>? Certificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProvider
@@ -106,7 +117,9 @@ public partial class V1beta1ContainerServiceSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProviderPrivateRegistryAccessEcrImagePullerRole
@@ -115,7 +128,9 @@ public partial class V1beta1ContainerServiceSpecInitProviderPrivateRegistryAcces
     [JsonPropertyName("isActive")]
     public bool? IsActive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProviderPrivateRegistryAccess
@@ -124,7 +139,9 @@ public partial class V1beta1ContainerServiceSpecInitProviderPrivateRegistryAcces
     [JsonPropertyName("ecrImagePullerRole")]
     public V1beta1ContainerServiceSpecInitProviderPrivateRegistryAccessEcrImagePullerRole? EcrImagePullerRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProviderPublicDomainNamesCertificate
@@ -137,7 +154,9 @@ public partial class V1beta1ContainerServiceSpecInitProviderPublicDomainNamesCer
     [JsonPropertyName("domainNames")]
     public IList<string>? DomainNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProviderPublicDomainNames
@@ -146,7 +165,9 @@ public partial class V1beta1ContainerServiceSpecInitProviderPublicDomainNames
     [JsonPropertyName("certificate")]
     public IList<V1beta1ContainerServiceSpecInitProviderPublicDomainNamesCertificate>? Certificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProvider
@@ -175,7 +196,9 @@ public partial class V1beta1ContainerServiceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecProviderConfigRef
@@ -188,7 +211,9 @@ public partial class V1beta1ContainerServiceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecWriteConnectionSecretToRef
@@ -197,7 +222,9 @@ public partial class V1beta1ContainerServiceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerServiceSpec defines the desired state of ContainerService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpec
@@ -222,7 +249,9 @@ public partial class V1beta1ContainerServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ContainerServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProviderPrivateRegistryAccessEcrImagePullerRole
@@ -235,7 +264,9 @@ public partial class V1beta1ContainerServiceStatusAtProviderPrivateRegistryAcces
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProviderPrivateRegistryAccess
@@ -244,7 +275,9 @@ public partial class V1beta1ContainerServiceStatusAtProviderPrivateRegistryAcces
     [JsonPropertyName("ecrImagePullerRole")]
     public V1beta1ContainerServiceStatusAtProviderPrivateRegistryAccessEcrImagePullerRole? EcrImagePullerRole { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProviderPublicDomainNamesCertificate
@@ -257,7 +290,9 @@ public partial class V1beta1ContainerServiceStatusAtProviderPublicDomainNamesCer
     [JsonPropertyName("domainNames")]
     public IList<string>? DomainNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProviderPublicDomainNames
@@ -266,7 +301,9 @@ public partial class V1beta1ContainerServiceStatusAtProviderPublicDomainNames
     [JsonPropertyName("certificate")]
     public IList<V1beta1ContainerServiceStatusAtProviderPublicDomainNamesCertificate>? Certificate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProvider
@@ -343,7 +380,9 @@ public partial class V1beta1ContainerServiceStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusConditions
@@ -372,7 +411,9 @@ public partial class V1beta1ContainerServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerServiceStatus defines the observed state of ContainerService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatus
@@ -389,7 +430,9 @@ public partial class V1beta1ContainerServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerService is the Schema for the ContainerServices API. Manages a Lightsail container service for running containerized applications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -419,3 +462,4 @@ public partial class V1beta1ContainerService : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ContainerServiceStatus? Status { get; set; }
 }
+#nullable disable

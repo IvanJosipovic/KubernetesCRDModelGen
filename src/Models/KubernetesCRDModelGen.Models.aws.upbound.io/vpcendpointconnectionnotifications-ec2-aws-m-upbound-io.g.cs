@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>VPCEndpointConnectionNotification is the Schema for the VPCEndpointConnectionNotifications API. Provides a VPC Endpoint connection notification resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1beta1VPCEndpointConnectionNotification> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderConnectionNotificationArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderConn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate connectionNotificationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderConnectionNotificationArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderConn
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointConnectionNotificationSpecForProviderConnectionNotificationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderConnectionNotificationArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderConn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate connectionNotificationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderConnectionNotificationArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderConn
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointConnectionNotificationSpecForProviderConnectionNotificationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcEndpointServiceIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcE
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpointService in ec2 to populate vpcEndpointServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcEndpointServiceIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcE
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcEndpointServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcEndpointServiceIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcE
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpointService in ec2 to populate vpcEndpointServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcEndpointServiceIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcE
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcEndpointServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecForProvider
@@ -202,7 +221,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProvider
     [JsonPropertyName("vpcEndpointServiceIdSelector")]
     public V1beta1VPCEndpointConnectionNotificationSpecForProviderVpcEndpointServiceIdSelector? VpcEndpointServiceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderConnectionNotificationArnRefPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate connectionNotificationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderConnectionNotificationArnRef
@@ -232,7 +255,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderCon
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointConnectionNotificationSpecInitProviderConnectionNotificationArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderConnectionNotificationArnSelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate connectionNotificationArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderConnectionNotificationArnSelector
@@ -266,7 +293,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderCon
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointConnectionNotificationSpecInitProviderConnectionNotificationArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpcEndpointServiceIdRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpointService in ec2 to populate vpcEndpointServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpcEndpointServiceIdRef
@@ -296,7 +327,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpc
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpcEndpointServiceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpcEndpointServiceIdSelectorPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpointService in ec2 to populate vpcEndpointServiceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpcEndpointServiceIdSelector
@@ -330,7 +365,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpc
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpcEndpointServiceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProvider
@@ -367,7 +404,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecInitProvider
     [JsonPropertyName("vpcEndpointServiceIdSelector")]
     public V1beta1VPCEndpointConnectionNotificationSpecInitProviderVpcEndpointServiceIdSelector? VpcEndpointServiceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecProviderConfigRef
@@ -380,7 +419,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecProviderConfigR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpecWriteConnectionSecretToRef
@@ -389,7 +430,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecWriteConnection
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointConnectionNotificationSpec defines the desired state of VPCEndpointConnectionNotification</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationSpec
@@ -414,7 +457,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPCEndpointConnectionNotificationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationStatusAtProvider
@@ -451,7 +496,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationStatusAtProvider
     [JsonPropertyName("vpcEndpointServiceId")]
     public string? VpcEndpointServiceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationStatusConditions
@@ -480,7 +527,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointConnectionNotificationStatus defines the observed state of VPCEndpointConnectionNotification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointConnectionNotificationStatus
@@ -497,7 +546,9 @@ public partial class V1beta1VPCEndpointConnectionNotificationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointConnectionNotification is the Schema for the VPCEndpointConnectionNotifications API. Provides a VPC Endpoint connection notification resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -527,3 +578,4 @@ public partial class V1beta1VPCEndpointConnectionNotification : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1VPCEndpointConnectionNotificationStatus? Status { get; set; }
 }
+#nullable disable

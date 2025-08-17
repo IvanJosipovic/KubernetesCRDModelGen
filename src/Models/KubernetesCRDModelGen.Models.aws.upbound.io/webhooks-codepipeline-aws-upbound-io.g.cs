@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codepipeline.aws.upbound.io;
+#nullable enable
 /// <summary>Webhook is the Schema for the Webhooks API. Provides a CodePipeline Webhook</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WebhookList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Webhook> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared secret for the GitHub repository webhook. Set this as secret in your github_repository_webhook's configuration block. Required for GITHUB_HMAC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProviderAuthenticationConfigurationSecretTokenSecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1WebhookSpecForProviderAuthenticationConfigurationSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProviderAuthenticationConfiguration
@@ -63,7 +68,9 @@ public partial class V1beta1WebhookSpecForProviderAuthenticationConfiguration
     [JsonPropertyName("secretTokenSecretRef")]
     public V1beta1WebhookSpecForProviderAuthenticationConfigurationSecretTokenSecretRef? SecretTokenSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProviderFilter
@@ -76,7 +83,9 @@ public partial class V1beta1WebhookSpecForProviderFilter
     [JsonPropertyName("matchEquals")]
     public string? MatchEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProviderTargetPipelineRefPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1WebhookSpecForProviderTargetPipelineRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Codepipeline in codepipeline to populate targetPipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProviderTargetPipelineRef
@@ -102,7 +113,9 @@ public partial class V1beta1WebhookSpecForProviderTargetPipelineRef
     [JsonPropertyName("policy")]
     public V1beta1WebhookSpecForProviderTargetPipelineRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProviderTargetPipelineSelectorPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1WebhookSpecForProviderTargetPipelineSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Codepipeline in codepipeline to populate targetPipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProviderTargetPipelineSelector
@@ -132,7 +147,9 @@ public partial class V1beta1WebhookSpecForProviderTargetPipelineSelector
     [JsonPropertyName("policy")]
     public V1beta1WebhookSpecForProviderTargetPipelineSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProvider
@@ -173,7 +190,9 @@ public partial class V1beta1WebhookSpecForProvider
     [JsonPropertyName("targetPipelineSelector")]
     public V1beta1WebhookSpecForProviderTargetPipelineSelector? TargetPipelineSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The shared secret for the GitHub repository webhook. Set this as secret in your github_repository_webhook's configuration block. Required for GITHUB_HMAC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecInitProviderAuthenticationConfigurationSecretTokenSecretRef
@@ -190,7 +209,9 @@ public partial class V1beta1WebhookSpecInitProviderAuthenticationConfigurationSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecInitProviderAuthenticationConfiguration
@@ -203,7 +224,9 @@ public partial class V1beta1WebhookSpecInitProviderAuthenticationConfiguration
     [JsonPropertyName("secretTokenSecretRef")]
     public V1beta1WebhookSpecInitProviderAuthenticationConfigurationSecretTokenSecretRef? SecretTokenSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecInitProviderFilter
@@ -216,7 +239,9 @@ public partial class V1beta1WebhookSpecInitProviderFilter
     [JsonPropertyName("matchEquals")]
     public string? MatchEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecInitProviderTargetPipelineRefPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1WebhookSpecInitProviderTargetPipelineRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Codepipeline in codepipeline to populate targetPipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecInitProviderTargetPipelineRef
@@ -242,7 +269,9 @@ public partial class V1beta1WebhookSpecInitProviderTargetPipelineRef
     [JsonPropertyName("policy")]
     public V1beta1WebhookSpecInitProviderTargetPipelineRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecInitProviderTargetPipelineSelectorPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1WebhookSpecInitProviderTargetPipelineSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Codepipeline in codepipeline to populate targetPipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecInitProviderTargetPipelineSelector
@@ -272,7 +303,9 @@ public partial class V1beta1WebhookSpecInitProviderTargetPipelineSelector
     [JsonPropertyName("policy")]
     public V1beta1WebhookSpecInitProviderTargetPipelineSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecInitProvider
@@ -309,7 +342,9 @@ public partial class V1beta1WebhookSpecInitProvider
     [JsonPropertyName("targetPipelineSelector")]
     public V1beta1WebhookSpecInitProviderTargetPipelineSelector? TargetPipelineSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecProviderConfigRefPolicy
@@ -322,7 +357,9 @@ public partial class V1beta1WebhookSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecProviderConfigRef
@@ -335,7 +372,9 @@ public partial class V1beta1WebhookSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1WebhookSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecWriteConnectionSecretToRef
@@ -348,7 +387,9 @@ public partial class V1beta1WebhookSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebhookSpec defines the desired state of Webhook</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpec
@@ -377,7 +418,9 @@ public partial class V1beta1WebhookSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WebhookSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookStatusAtProviderAuthenticationConfiguration
@@ -386,7 +429,9 @@ public partial class V1beta1WebhookStatusAtProviderAuthenticationConfiguration
     [JsonPropertyName("allowedIpRange")]
     public string? AllowedIpRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookStatusAtProviderFilter
@@ -399,7 +444,9 @@ public partial class V1beta1WebhookStatusAtProviderFilter
     [JsonPropertyName("matchEquals")]
     public string? MatchEquals { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookStatusAtProvider
@@ -448,7 +495,9 @@ public partial class V1beta1WebhookStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookStatusConditions
@@ -477,7 +526,9 @@ public partial class V1beta1WebhookStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebhookStatus defines the observed state of Webhook.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookStatus
@@ -494,7 +545,9 @@ public partial class V1beta1WebhookStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Webhook is the Schema for the Webhooks API. Provides a CodePipeline Webhook</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -524,3 +577,4 @@ public partial class V1beta1Webhook : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1WebhookStatus? Status { get; set; }
 }
+#nullable disable

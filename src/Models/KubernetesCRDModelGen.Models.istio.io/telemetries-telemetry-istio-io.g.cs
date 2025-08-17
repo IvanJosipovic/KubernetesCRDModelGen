@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.telemetry.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1TelemetryList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1alpha1Telemetry> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLoggingFilter
@@ -42,7 +45,9 @@ public partial class V1alpha1TelemetrySpecAccessLoggingFilter
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows tailoring of logging behavior to specific conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLoggingMatch
@@ -51,7 +56,9 @@ public partial class V1alpha1TelemetrySpecAccessLoggingMatch
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLoggingProviders
@@ -60,7 +67,9 @@ public partial class V1alpha1TelemetrySpecAccessLoggingProviders
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLogging
@@ -81,7 +90,9 @@ public partial class V1alpha1TelemetrySpecAccessLogging
     [JsonPropertyName("providers")]
     public IList<V1alpha1TelemetrySpecAccessLoggingProviders>? Providers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Match allows providing the scope of the override.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsOverridesMatch
@@ -98,7 +109,9 @@ public partial class V1alpha1TelemetrySpecMetricsOverridesMatch
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsOverridesTagOverrides
@@ -111,7 +124,9 @@ public partial class V1alpha1TelemetrySpecMetricsOverridesTagOverrides
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsOverrides
@@ -128,7 +143,9 @@ public partial class V1alpha1TelemetrySpecMetricsOverrides
     [JsonPropertyName("tagOverrides")]
     public IDictionary<string, V1alpha1TelemetrySpecMetricsOverridesTagOverrides>? TagOverrides { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsProviders
@@ -137,7 +154,9 @@ public partial class V1alpha1TelemetrySpecMetricsProviders
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetrics
@@ -154,7 +173,9 @@ public partial class V1alpha1TelemetrySpecMetrics
     [JsonPropertyName("reportingInterval")]
     public string? ReportingInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecSelector
@@ -163,7 +184,9 @@ public partial class V1alpha1TelemetrySpecSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTargetRef
@@ -184,7 +207,9 @@ public partial class V1alpha1TelemetrySpecTargetRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTargetRefs
@@ -205,7 +230,9 @@ public partial class V1alpha1TelemetrySpecTargetRefs
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Environment adds the value of an environment variable to each span.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingCustomTagsEnvironment
@@ -218,7 +245,9 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsEnvironment
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RequestHeader adds the value of an header from the request to each span.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingCustomTagsHeader
@@ -231,7 +260,9 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsHeader
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Literal adds the same, hard-coded value to each span.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingCustomTagsLiteral
@@ -240,7 +271,9 @@ public partial class V1alpha1TelemetrySpecTracingCustomTagsLiteral
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingCustomTags
@@ -257,7 +290,9 @@ public partial class V1alpha1TelemetrySpecTracingCustomTags
     [JsonPropertyName("literal")]
     public V1alpha1TelemetrySpecTracingCustomTagsLiteral? Literal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows tailoring of behavior to specific conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingMatch
@@ -266,7 +301,9 @@ public partial class V1alpha1TelemetrySpecTracingMatch
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingProviders
@@ -275,7 +312,9 @@ public partial class V1alpha1TelemetrySpecTracingProviders
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracing
@@ -308,7 +347,9 @@ public partial class V1alpha1TelemetrySpecTracing
     [JsonPropertyName("useRequestIdForTraceSampling")]
     public bool? UseRequestIdForTraceSampling { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Telemetry configuration for workloads. See more details at: https://istio.io/docs/reference/config/telemetry.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpec
@@ -337,7 +378,9 @@ public partial class V1alpha1TelemetrySpec
     [JsonPropertyName("tracing")]
     public IList<V1alpha1TelemetrySpecTracing>? Tracing { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -367,3 +410,4 @@ public partial class V1alpha1Telemetry : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

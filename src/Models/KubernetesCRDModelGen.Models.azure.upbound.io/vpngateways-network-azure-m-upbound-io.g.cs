@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>VPNGateway is the Schema for the VPNGateways API. Manages a VPN Gateway within a Virtual Hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPNGatewayList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1VPNGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An instance_bgp_peering_address block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderBgpSettingsInstance0BgpPeeringAddress
@@ -42,7 +45,9 @@ public partial class V1beta1VPNGatewaySpecForProviderBgpSettingsInstance0BgpPeer
     [JsonPropertyName("customIps")]
     public IList<string>? CustomIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An instance_bgp_peering_address block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderBgpSettingsInstance1BgpPeeringAddress
@@ -51,7 +56,9 @@ public partial class V1beta1VPNGatewaySpecForProviderBgpSettingsInstance1BgpPeer
     [JsonPropertyName("customIps")]
     public IList<string>? CustomIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A bgp_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderBgpSettings
@@ -72,7 +79,9 @@ public partial class V1beta1VPNGatewaySpecForProviderBgpSettings
     [JsonPropertyName("peerWeight")]
     public double? PeerWeight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderResourceGroupNameRefPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1VPNGatewaySpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderResourceGroupNameRef
@@ -102,7 +113,9 @@ public partial class V1beta1VPNGatewaySpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewaySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderResourceGroupNameSelectorPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1VPNGatewaySpecForProviderResourceGroupNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderResourceGroupNameSelector
@@ -136,7 +151,9 @@ public partial class V1beta1VPNGatewaySpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewaySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderVirtualHubIdRefPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1VPNGatewaySpecForProviderVirtualHubIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderVirtualHubIdRef
@@ -166,7 +185,9 @@ public partial class V1beta1VPNGatewaySpecForProviderVirtualHubIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewaySpecForProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderVirtualHubIdSelectorPolicy
@@ -179,7 +200,9 @@ public partial class V1beta1VPNGatewaySpecForProviderVirtualHubIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProviderVirtualHubIdSelector
@@ -200,7 +223,9 @@ public partial class V1beta1VPNGatewaySpecForProviderVirtualHubIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewaySpecForProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecForProvider
@@ -253,7 +278,9 @@ public partial class V1beta1VPNGatewaySpecForProvider
     [JsonPropertyName("virtualHubIdSelector")]
     public V1beta1VPNGatewaySpecForProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An instance_bgp_peering_address block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecInitProviderBgpSettingsInstance0BgpPeeringAddress
@@ -262,7 +289,9 @@ public partial class V1beta1VPNGatewaySpecInitProviderBgpSettingsInstance0BgpPee
     [JsonPropertyName("customIps")]
     public IList<string>? CustomIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An instance_bgp_peering_address block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecInitProviderBgpSettingsInstance1BgpPeeringAddress
@@ -271,7 +300,9 @@ public partial class V1beta1VPNGatewaySpecInitProviderBgpSettingsInstance1BgpPee
     [JsonPropertyName("customIps")]
     public IList<string>? CustomIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A bgp_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecInitProviderBgpSettings
@@ -292,7 +323,9 @@ public partial class V1beta1VPNGatewaySpecInitProviderBgpSettings
     [JsonPropertyName("peerWeight")]
     public double? PeerWeight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecInitProviderVirtualHubIdRefPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1VPNGatewaySpecInitProviderVirtualHubIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecInitProviderVirtualHubIdRef
@@ -322,7 +357,9 @@ public partial class V1beta1VPNGatewaySpecInitProviderVirtualHubIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewaySpecInitProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecInitProviderVirtualHubIdSelectorPolicy
@@ -335,7 +372,9 @@ public partial class V1beta1VPNGatewaySpecInitProviderVirtualHubIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecInitProviderVirtualHubIdSelector
@@ -356,7 +395,9 @@ public partial class V1beta1VPNGatewaySpecInitProviderVirtualHubIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPNGatewaySpecInitProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecInitProvider
@@ -397,7 +438,9 @@ public partial class V1beta1VPNGatewaySpecInitProvider
     [JsonPropertyName("virtualHubIdSelector")]
     public V1beta1VPNGatewaySpecInitProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecProviderConfigRef
@@ -410,7 +453,9 @@ public partial class V1beta1VPNGatewaySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpecWriteConnectionSecretToRef
@@ -419,7 +464,9 @@ public partial class V1beta1VPNGatewaySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNGatewaySpec defines the desired state of VPNGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewaySpec
@@ -444,7 +491,9 @@ public partial class V1beta1VPNGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPNGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An instance_bgp_peering_address block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayStatusAtProviderBgpSettingsInstance0BgpPeeringAddress
@@ -465,7 +514,9 @@ public partial class V1beta1VPNGatewayStatusAtProviderBgpSettingsInstance0BgpPee
     [JsonPropertyName("tunnelIps")]
     public IList<string>? TunnelIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An instance_bgp_peering_address block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayStatusAtProviderBgpSettingsInstance1BgpPeeringAddress
@@ -486,7 +537,9 @@ public partial class V1beta1VPNGatewayStatusAtProviderBgpSettingsInstance1BgpPee
     [JsonPropertyName("tunnelIps")]
     public IList<string>? TunnelIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A bgp_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayStatusAtProviderBgpSettings
@@ -511,7 +564,9 @@ public partial class V1beta1VPNGatewayStatusAtProviderBgpSettings
     [JsonPropertyName("peerWeight")]
     public double? PeerWeight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayStatusAtProviderIpConfiguration
@@ -528,7 +583,9 @@ public partial class V1beta1VPNGatewayStatusAtProviderIpConfiguration
     [JsonPropertyName("publicIpAddress")]
     public string? PublicIpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayStatusAtProvider
@@ -573,7 +630,9 @@ public partial class V1beta1VPNGatewayStatusAtProvider
     [JsonPropertyName("virtualHubId")]
     public string? VirtualHubId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayStatusConditions
@@ -602,7 +661,9 @@ public partial class V1beta1VPNGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNGatewayStatus defines the observed state of VPNGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayStatus
@@ -619,7 +680,9 @@ public partial class V1beta1VPNGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPNGateway is the Schema for the VPNGateways API. Manages a VPN Gateway within a Virtual Hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -649,3 +712,4 @@ public partial class V1beta1VPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1VPNGatewayStatus? Status { get; set; }
 }
+#nullable disable

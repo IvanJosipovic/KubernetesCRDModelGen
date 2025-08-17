@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+#nullable enable
 /// <summary>BucketServerSideEncryptionConfiguration is the Schema for the BucketServerSideEncryptionConfigurations API. Provides a S3 bucket server-side encryption configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationList : IKuber
     [JsonPropertyName("items")]
     public IList<V1beta1BucketServerSideEncryptionConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRef
@@ -59,7 +64,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelector
@@ -89,7 +98,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsMasterKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsMasterKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefault
@@ -166,7 +185,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("sseAlgorithm")]
     public string? SseAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRule
@@ -179,7 +200,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("bucketKeyEnabled")]
     public bool? BucketKeyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvider
@@ -208,7 +231,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRefPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRef
@@ -234,7 +261,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelectorPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelector
@@ -264,7 +295,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsMasterKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRef
@@ -290,7 +325,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicy
@@ -303,7 +340,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsMasterKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelector
@@ -320,7 +359,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefault
@@ -341,7 +382,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("sseAlgorithm")]
     public string? SseAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRule
@@ -354,7 +397,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("bucketKeyEnabled")]
     public bool? BucketKeyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvider
@@ -379,7 +424,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefPolicy
@@ -392,7 +439,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecProviderC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRef
@@ -405,7 +454,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecProviderC
     [JsonPropertyName("policy")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpecWriteConnectionSecretToRef
@@ -418,7 +469,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecWriteConn
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketServerSideEncryptionConfigurationSpec defines the desired state of BucketServerSideEncryptionConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationSpec
@@ -447,7 +500,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BucketServerSideEncryptionConfigurationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProviderRuleApplyServerSideEncryptionByDefault
@@ -460,7 +515,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvi
     [JsonPropertyName("sseAlgorithm")]
     public string? SseAlgorithm { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProviderRule
@@ -473,7 +530,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvi
     [JsonPropertyName("bucketKeyEnabled")]
     public bool? BucketKeyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvider
@@ -498,7 +557,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvi
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketServerSideEncryptionConfigurationStatusAtProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatusConditions
@@ -527,7 +588,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusConditi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketServerSideEncryptionConfigurationStatus defines the observed state of BucketServerSideEncryptionConfiguration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketServerSideEncryptionConfigurationStatus
@@ -544,7 +607,9 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BucketServerSideEncryptionConfiguration is the Schema for the BucketServerSideEncryptionConfigurations API. Provides a S3 bucket server-side encryption configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -574,3 +639,4 @@ public partial class V1beta1BucketServerSideEncryptionConfiguration : IKubernete
     [JsonPropertyName("status")]
     public V1beta1BucketServerSideEncryptionConfigurationStatus? Status { get; set; }
 }
+#nullable disable

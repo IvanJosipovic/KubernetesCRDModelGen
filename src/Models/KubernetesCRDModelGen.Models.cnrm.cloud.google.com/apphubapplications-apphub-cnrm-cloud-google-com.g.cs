@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apphub.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>AppHubApplication is the Schema for the AppHubApplication API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AppHubApplicationList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1alpha1AppHubApplication> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpecAttributesBusinessOwners
@@ -46,7 +49,9 @@ public partial class V1alpha1AppHubApplicationSpecAttributesBusinessOwners
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. User-defined criticality information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpecAttributesCriticality
@@ -55,7 +60,9 @@ public partial class V1alpha1AppHubApplicationSpecAttributesCriticality
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpecAttributesDeveloperOwners
@@ -68,7 +75,9 @@ public partial class V1alpha1AppHubApplicationSpecAttributesDeveloperOwners
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. User-defined environment information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpecAttributesEnvironment
@@ -77,7 +86,9 @@ public partial class V1alpha1AppHubApplicationSpecAttributesEnvironment
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpecAttributesOperatorOwners
@@ -90,7 +101,9 @@ public partial class V1alpha1AppHubApplicationSpecAttributesOperatorOwners
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Consumer provided attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpecAttributes
@@ -115,7 +128,9 @@ public partial class V1alpha1AppHubApplicationSpecAttributes
     [JsonPropertyName("operatorOwners")]
     public IList<V1alpha1AppHubApplicationSpecAttributesOperatorOwners>? OperatorOwners { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpecProjectRef
@@ -136,7 +151,9 @@ public partial class V1alpha1AppHubApplicationSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Immutable. Defines what data can be included into this Application. Limits which Services and Workloads can be registered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpecScope
@@ -145,7 +162,9 @@ public partial class V1alpha1AppHubApplicationSpecScope
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubApplicationSpec defines the desired state of AppHubApplication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationSpec
@@ -178,7 +197,9 @@ public partial class V1alpha1AppHubApplicationSpec
     [JsonPropertyName("scope")]
     public V1alpha1AppHubApplicationSpecScope? Scope { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationStatusConditions
@@ -203,7 +224,9 @@ public partial class V1alpha1AppHubApplicationStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationStatusObservedState
@@ -224,7 +247,9 @@ public partial class V1alpha1AppHubApplicationStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubApplicationStatus defines the config connector machine state of AppHubApplication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubApplicationStatus
@@ -245,7 +270,9 @@ public partial class V1alpha1AppHubApplicationStatus
     [JsonPropertyName("observedState")]
     public V1alpha1AppHubApplicationStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubApplication is the Schema for the AppHubApplication API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -275,3 +302,4 @@ public partial class V1alpha1AppHubApplication : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1alpha1AppHubApplicationStatus? Status { get; set; }
 }
+#nullable disable

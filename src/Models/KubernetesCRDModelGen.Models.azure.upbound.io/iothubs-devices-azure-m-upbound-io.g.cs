@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.m.upbound.io;
+#nullable enable
 /// <summary>IOTHub is the Schema for the IOTHubs API. Manages an IotHub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IOTHubList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1IOTHub> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderCloudToDeviceFeedback
@@ -50,7 +53,9 @@ public partial class V1beta1IOTHubSpecForProviderCloudToDeviceFeedback
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cloud_to_device block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderCloudToDevice
@@ -67,7 +72,9 @@ public partial class V1beta1IOTHubSpecForProviderCloudToDevice
     [JsonPropertyName("maxDeliveryCount")]
     public double? MaxDeliveryCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string for the Azure Storage account to which files are uploaded.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderFileUploadConnectionStringSecretRef
@@ -80,7 +87,9 @@ public partial class V1beta1IOTHubSpecForProviderFileUploadConnectionStringSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A file_upload block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderFileUpload
@@ -121,7 +130,9 @@ public partial class V1beta1IOTHubSpecForProviderFileUpload
     [JsonPropertyName("sasTtl")]
     public string? SasTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderIdentity
@@ -134,7 +145,9 @@ public partial class V1beta1IOTHubSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderNetworkRuleSetIpRule
@@ -151,7 +164,9 @@ public partial class V1beta1IOTHubSpecForProviderNetworkRuleSetIpRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderNetworkRuleSet
@@ -168,7 +183,9 @@ public partial class V1beta1IOTHubSpecForProviderNetworkRuleSet
     [JsonPropertyName("ipRule")]
     public IList<V1beta1IOTHubSpecForProviderNetworkRuleSetIpRule>? IpRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderResourceGroupNameRefPolicy
@@ -181,7 +198,9 @@ public partial class V1beta1IOTHubSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderResourceGroupNameRef
@@ -198,7 +217,9 @@ public partial class V1beta1IOTHubSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderResourceGroupNameSelectorPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1IOTHubSpecForProviderResourceGroupNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderResourceGroupNameSelector
@@ -232,7 +255,9 @@ public partial class V1beta1IOTHubSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1IOTHubSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sku block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProviderSku
@@ -245,7 +270,9 @@ public partial class V1beta1IOTHubSpecForProviderSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecForProvider
@@ -310,7 +337,9 @@ public partial class V1beta1IOTHubSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProviderCloudToDeviceFeedback
@@ -327,7 +356,9 @@ public partial class V1beta1IOTHubSpecInitProviderCloudToDeviceFeedback
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cloud_to_device block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProviderCloudToDevice
@@ -344,7 +375,9 @@ public partial class V1beta1IOTHubSpecInitProviderCloudToDevice
     [JsonPropertyName("maxDeliveryCount")]
     public double? MaxDeliveryCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string for the Azure Storage account to which files are uploaded.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProviderFileUploadConnectionStringSecretRef
@@ -357,7 +390,9 @@ public partial class V1beta1IOTHubSpecInitProviderFileUploadConnectionStringSecr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A file_upload block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProviderFileUpload
@@ -398,7 +433,9 @@ public partial class V1beta1IOTHubSpecInitProviderFileUpload
     [JsonPropertyName("sasTtl")]
     public string? SasTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProviderIdentity
@@ -411,7 +448,9 @@ public partial class V1beta1IOTHubSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProviderNetworkRuleSetIpRule
@@ -428,7 +467,9 @@ public partial class V1beta1IOTHubSpecInitProviderNetworkRuleSetIpRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProviderNetworkRuleSet
@@ -445,7 +486,9 @@ public partial class V1beta1IOTHubSpecInitProviderNetworkRuleSet
     [JsonPropertyName("ipRule")]
     public IList<V1beta1IOTHubSpecInitProviderNetworkRuleSetIpRule>? IpRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sku block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProviderSku
@@ -458,7 +501,9 @@ public partial class V1beta1IOTHubSpecInitProviderSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecInitProvider
@@ -511,7 +556,9 @@ public partial class V1beta1IOTHubSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecProviderConfigRef
@@ -524,7 +571,9 @@ public partial class V1beta1IOTHubSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpecWriteConnectionSecretToRef
@@ -533,7 +582,9 @@ public partial class V1beta1IOTHubSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubSpec defines the desired state of IOTHub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSpec
@@ -558,7 +609,9 @@ public partial class V1beta1IOTHubSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IOTHubSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderCloudToDeviceFeedback
@@ -575,7 +628,9 @@ public partial class V1beta1IOTHubStatusAtProviderCloudToDeviceFeedback
     [JsonPropertyName("timeToLive")]
     public string? TimeToLive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cloud_to_device block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderCloudToDevice
@@ -592,7 +647,9 @@ public partial class V1beta1IOTHubStatusAtProviderCloudToDevice
     [JsonPropertyName("maxDeliveryCount")]
     public double? MaxDeliveryCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderEndpoint
@@ -645,7 +702,9 @@ public partial class V1beta1IOTHubStatusAtProviderEndpoint
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderEnrichment
@@ -662,7 +721,9 @@ public partial class V1beta1IOTHubStatusAtProviderEnrichment
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A fallback_route block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderFallbackRoute
@@ -683,7 +744,9 @@ public partial class V1beta1IOTHubStatusAtProviderFallbackRoute
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A file_upload block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderFileUpload
@@ -720,7 +783,9 @@ public partial class V1beta1IOTHubStatusAtProviderFileUpload
     [JsonPropertyName("sasTtl")]
     public string? SasTtl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderIdentity
@@ -741,7 +806,9 @@ public partial class V1beta1IOTHubStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderNetworkRuleSetIpRule
@@ -758,7 +825,9 @@ public partial class V1beta1IOTHubStatusAtProviderNetworkRuleSetIpRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderNetworkRuleSet
@@ -775,7 +844,9 @@ public partial class V1beta1IOTHubStatusAtProviderNetworkRuleSet
     [JsonPropertyName("ipRule")]
     public IList<V1beta1IOTHubStatusAtProviderNetworkRuleSetIpRule>? IpRule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderRoute
@@ -800,7 +871,9 @@ public partial class V1beta1IOTHubStatusAtProviderRoute
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderSharedAccessPolicy
@@ -813,7 +886,9 @@ public partial class V1beta1IOTHubStatusAtProviderSharedAccessPolicy
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A sku block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProviderSku
@@ -826,7 +901,9 @@ public partial class V1beta1IOTHubStatusAtProviderSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusAtProvider
@@ -935,7 +1012,9 @@ public partial class V1beta1IOTHubStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatusConditions
@@ -964,7 +1043,9 @@ public partial class V1beta1IOTHubStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubStatus defines the observed state of IOTHub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubStatus
@@ -981,7 +1062,9 @@ public partial class V1beta1IOTHubStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHub is the Schema for the IOTHubs API. Manages an IotHub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1011,3 +1094,4 @@ public partial class V1beta1IOTHub : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1IOTHubStatus? Status { get; set; }
 }
+#nullable disable

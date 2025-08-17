@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containeranalysis.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ContainerAnalysisOccurrenceList : IKubernetesObject
     [JsonPropertyName("items")]
     public IList<V1alpha1ContainerAnalysisOccurrence> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignatures
@@ -46,7 +49,9 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignature
     [JsonPropertyName("signature")]
     public string? Signature { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Occurrence that represents a single "attestation". The authenticity of an attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the authority to which this attestation is attached is primarily useful for lookup (how to find this attestation if you already know the authority and artifact to be verified) and intent (for which authority this attestation was intended to sign.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestation
@@ -59,7 +64,9 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestation
     [JsonPropertyName("signatures")]
     public IList<V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignatures> Signatures { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ContainerAnalysisOccurrenceSpecProjectRef
@@ -76,7 +83,9 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ContainerAnalysisOccurrenceSpec
@@ -105,7 +114,9 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpec
     [JsonPropertyName("resourceUri")]
     public string ResourceUri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ContainerAnalysisOccurrenceStatusConditions
@@ -130,7 +141,9 @@ public partial class V1alpha1ContainerAnalysisOccurrenceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ContainerAnalysisOccurrenceStatus
@@ -159,7 +172,9 @@ public partial class V1alpha1ContainerAnalysisOccurrenceStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -189,3 +204,4 @@ public partial class V1alpha1ContainerAnalysisOccurrence : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1alpha1ContainerAnalysisOccurrenceStatus? Status { get; set; }
 }
+#nullable disable

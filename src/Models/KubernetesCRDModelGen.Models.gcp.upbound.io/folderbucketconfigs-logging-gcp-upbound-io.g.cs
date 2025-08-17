@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.upbound.io;
+#nullable enable
 /// <summary>FolderBucketConfig is the Schema for the FolderBucketConfigs API. Manages a folder-level logging bucket config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FolderBucketConfigList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1FolderBucketConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecForProviderCmekSettings
@@ -42,7 +45,9 @@ public partial class V1beta1FolderBucketConfigSpecForProviderCmekSettings
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecForProviderFolderRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1FolderBucketConfigSpecForProviderFolderRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Folder in cloudplatform to populate folder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecForProviderFolderRef
@@ -68,7 +75,9 @@ public partial class V1beta1FolderBucketConfigSpecForProviderFolderRef
     [JsonPropertyName("policy")]
     public V1beta1FolderBucketConfigSpecForProviderFolderRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecForProviderFolderSelectorPolicy
@@ -81,7 +90,9 @@ public partial class V1beta1FolderBucketConfigSpecForProviderFolderSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Folder in cloudplatform to populate folder.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecForProviderFolderSelector
@@ -98,7 +109,9 @@ public partial class V1beta1FolderBucketConfigSpecForProviderFolderSelector
     [JsonPropertyName("policy")]
     public V1beta1FolderBucketConfigSpecForProviderFolderSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecForProviderIndexConfigs
@@ -111,7 +124,9 @@ public partial class V1beta1FolderBucketConfigSpecForProviderIndexConfigs
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecForProvider
@@ -152,7 +167,9 @@ public partial class V1beta1FolderBucketConfigSpecForProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecInitProviderCmekSettings
@@ -161,7 +178,9 @@ public partial class V1beta1FolderBucketConfigSpecInitProviderCmekSettings
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecInitProviderIndexConfigs
@@ -174,7 +193,9 @@ public partial class V1beta1FolderBucketConfigSpecInitProviderIndexConfigs
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecInitProvider
@@ -195,7 +216,9 @@ public partial class V1beta1FolderBucketConfigSpecInitProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecProviderConfigRefPolicy
@@ -208,7 +231,9 @@ public partial class V1beta1FolderBucketConfigSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecProviderConfigRef
@@ -221,7 +246,9 @@ public partial class V1beta1FolderBucketConfigSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1FolderBucketConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpecWriteConnectionSecretToRef
@@ -234,7 +261,9 @@ public partial class V1beta1FolderBucketConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderBucketConfigSpec defines the desired state of FolderBucketConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigSpec
@@ -263,7 +292,9 @@ public partial class V1beta1FolderBucketConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FolderBucketConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigStatusAtProviderCmekSettings
@@ -284,7 +315,9 @@ public partial class V1beta1FolderBucketConfigStatusAtProviderCmekSettings
     [JsonPropertyName("serviceAccountId")]
     public string? ServiceAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigStatusAtProviderIndexConfigs
@@ -297,7 +330,9 @@ public partial class V1beta1FolderBucketConfigStatusAtProviderIndexConfigs
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigStatusAtProvider
@@ -342,7 +377,9 @@ public partial class V1beta1FolderBucketConfigStatusAtProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigStatusConditions
@@ -371,7 +408,9 @@ public partial class V1beta1FolderBucketConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderBucketConfigStatus defines the observed state of FolderBucketConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderBucketConfigStatus
@@ -388,7 +427,9 @@ public partial class V1beta1FolderBucketConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FolderBucketConfig is the Schema for the FolderBucketConfigs API. Manages a folder-level logging bucket config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -418,3 +459,4 @@ public partial class V1beta1FolderBucketConfig : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1FolderBucketConfigStatus? Status { get; set; }
 }
+#nullable disable

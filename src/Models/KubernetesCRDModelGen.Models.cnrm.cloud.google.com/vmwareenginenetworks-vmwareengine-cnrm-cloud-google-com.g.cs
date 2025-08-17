@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vmwareengine.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>VMwareEngineNetwork is the Schema for the VMwareEngineNetwork API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1VMwareEngineNetworkList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1VMwareEngineNetwork> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1VMwareEngineNetworkSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineNetworkSpec defines the desired state of VMwareEngineNetwork</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkSpec
@@ -83,7 +88,9 @@ public partial class V1alpha1VMwareEngineNetworkSpec
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkStatusConditions
@@ -108,7 +115,9 @@ public partial class V1alpha1VMwareEngineNetworkStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkStatusObservedStateVpcNetworks
@@ -121,7 +130,9 @@ public partial class V1alpha1VMwareEngineNetworkStatusObservedStateVpcNetworks
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkStatusObservedState
@@ -146,7 +157,9 @@ public partial class V1alpha1VMwareEngineNetworkStatusObservedState
     [JsonPropertyName("vpcNetworks")]
     public IList<V1alpha1VMwareEngineNetworkStatusObservedStateVpcNetworks>? VpcNetworks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineNetworkStatus defines the config connector machine state of VMwareEngineNetwork</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkStatus
@@ -167,7 +180,9 @@ public partial class V1alpha1VMwareEngineNetworkStatus
     [JsonPropertyName("observedState")]
     public V1alpha1VMwareEngineNetworkStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VMwareEngineNetwork is the Schema for the VMwareEngineNetwork API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -197,3 +212,4 @@ public partial class V1alpha1VMwareEngineNetwork : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1VMwareEngineNetworkStatus? Status { get; set; }
 }
+#nullable disable

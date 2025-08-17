@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>APIOperationPolicy is the Schema for the APIOperationPolicys API. Manages an API Management API Operation Policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1APIOperationPolicyList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1APIOperationPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderApiManagementNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderApiManagementNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a APIOperation in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderApiManagementNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderApiManagementNameRe
     [JsonPropertyName("policy")]
     public V1beta1APIOperationPolicySpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderApiManagementNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderApiManagementNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a APIOperation in apimanagement to populate apiManagementName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderApiManagementNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderApiManagementNameSe
     [JsonPropertyName("policy")]
     public V1beta1APIOperationPolicySpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderApiNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderApiNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a APIOperation in apimanagement to populate apiName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderApiNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderApiNameRef
     [JsonPropertyName("policy")]
     public V1beta1APIOperationPolicySpecForProviderApiNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderApiNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderApiNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a APIOperation in apimanagement to populate apiName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderApiNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderApiNameSelector
     [JsonPropertyName("policy")]
     public V1beta1APIOperationPolicySpecForProviderApiNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderOperationIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderOperationIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a APIOperation in apimanagement to populate operationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderOperationIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderOperationIdRef
     [JsonPropertyName("policy")]
     public V1beta1APIOperationPolicySpecForProviderOperationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderOperationIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderOperationIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a APIOperation in apimanagement to populate operationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderOperationIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderOperationIdSelector
     [JsonPropertyName("policy")]
     public V1beta1APIOperationPolicySpecForProviderOperationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderResourceGroupNameRefPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderResourceGroupNameRef
@@ -255,7 +284,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1APIOperationPolicySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderResourceGroupNameSelectorPolicy
@@ -268,7 +299,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProviderResourceGroupNameSelector
@@ -289,7 +322,9 @@ public partial class V1beta1APIOperationPolicySpecForProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1APIOperationPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecForProvider
@@ -350,7 +385,9 @@ public partial class V1beta1APIOperationPolicySpecForProvider
     [JsonPropertyName("xmlLink")]
     public string? XmlLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecInitProvider
@@ -363,7 +400,9 @@ public partial class V1beta1APIOperationPolicySpecInitProvider
     [JsonPropertyName("xmlLink")]
     public string? XmlLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecProviderConfigRef
@@ -376,7 +415,9 @@ public partial class V1beta1APIOperationPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpecWriteConnectionSecretToRef
@@ -385,7 +426,9 @@ public partial class V1beta1APIOperationPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIOperationPolicySpec defines the desired state of APIOperationPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicySpec
@@ -410,7 +453,9 @@ public partial class V1beta1APIOperationPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1APIOperationPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicyStatusAtProvider
@@ -443,7 +488,9 @@ public partial class V1beta1APIOperationPolicyStatusAtProvider
     [JsonPropertyName("xmlLink")]
     public string? XmlLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicyStatusConditions
@@ -472,7 +519,9 @@ public partial class V1beta1APIOperationPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIOperationPolicyStatus defines the observed state of APIOperationPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APIOperationPolicyStatus
@@ -489,7 +538,9 @@ public partial class V1beta1APIOperationPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIOperationPolicy is the Schema for the APIOperationPolicys API. Manages an API Management API Operation Policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -519,3 +570,4 @@ public partial class V1beta1APIOperationPolicy : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1APIOperationPolicyStatus? Status { get; set; }
 }
+#nullable disable

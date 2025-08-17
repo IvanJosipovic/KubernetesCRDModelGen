@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logic.azure.upbound.io;
+#nullable enable
 /// <summary>AppTriggerHTTPRequest is the Schema for the AppTriggerHTTPRequests API. Manages a HTTP Request Trigger within a Logic App Workflow</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AppTriggerHTTPRequestList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1AppTriggerHTTPRequest> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AppWorkflow in logic to populate logicAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdRef
     [JsonPropertyName("policy")]
     public V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AppWorkflow in logic to populate logicAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdSelect
     [JsonPropertyName("policy")]
     public V1beta1AppTriggerHTTPRequestSpecForProviderLogicAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecForProvider
@@ -118,7 +129,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecForProvider
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecInitProvider
@@ -135,7 +148,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecInitProvider
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecProviderConfigRefPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecProviderConfigRef
@@ -161,7 +178,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AppTriggerHTTPRequestSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpecWriteConnectionSecretToRef
@@ -174,7 +193,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppTriggerHTTPRequestSpec defines the desired state of AppTriggerHTTPRequest</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestSpec
@@ -203,7 +224,9 @@ public partial class V1beta1AppTriggerHTTPRequestSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AppTriggerHTTPRequestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestStatusAtProvider
@@ -232,7 +255,9 @@ public partial class V1beta1AppTriggerHTTPRequestStatusAtProvider
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestStatusConditions
@@ -261,7 +286,9 @@ public partial class V1beta1AppTriggerHTTPRequestStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppTriggerHTTPRequestStatus defines the observed state of AppTriggerHTTPRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestStatus
@@ -278,7 +305,9 @@ public partial class V1beta1AppTriggerHTTPRequestStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppTriggerHTTPRequest is the Schema for the AppTriggerHTTPRequests API. Manages a HTTP Request Trigger within a Logic App Workflow</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -308,3 +337,4 @@ public partial class V1beta1AppTriggerHTTPRequest : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1AppTriggerHTTPRequestStatus? Status { get; set; }
 }
+#nullable disable

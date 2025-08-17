@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230815.Database Generator information: - Generated from: /azure-kusto/resource-manager/Microsoft.Kusto/stable/2023-08-15/kusto.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/databases/{databaseName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230815storageDatabaseList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1api20230815storageDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20230815storageDatabaseSpecOperatorSpecConfigMapExpres
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20230815storageDatabaseSpecOperatorSpecSecretExpressio
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.DatabaseOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20230815storageDatabaseSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230815storageDatabaseSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a kusto.azure.com/Cluster resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseSpecOwner
@@ -97,7 +106,9 @@ public partial class V1api20230815storageDatabaseSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UserIdentityReference: The user assigned identity (ARM resource id) that has access to the key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseSpecReadWriteDatabaseKeyVaultPropertiesUserIdentityReference
@@ -118,7 +129,9 @@ public partial class V1api20230815storageDatabaseSpecReadWriteDatabaseKeyVaultPr
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.KeyVaultProperties Properties of the key vault.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseSpecReadWriteDatabaseKeyVaultProperties
@@ -143,7 +156,9 @@ public partial class V1api20230815storageDatabaseSpecReadWriteDatabaseKeyVaultPr
     [JsonPropertyName("userIdentityReference")]
     public V1api20230815storageDatabaseSpecReadWriteDatabaseKeyVaultPropertiesUserIdentityReference? UserIdentityReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.ReadWriteDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseSpecReadWriteDatabase
@@ -172,7 +187,9 @@ public partial class V1api20230815storageDatabaseSpecReadWriteDatabase
     [JsonPropertyName("softDeletePeriod")]
     public string? SoftDeletePeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.Database_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseSpec
@@ -201,7 +218,9 @@ public partial class V1api20230815storageDatabaseSpec
     [JsonPropertyName("readWriteDatabase")]
     public V1api20230815storageDatabaseSpecReadWriteDatabase? ReadWriteDatabase { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseStatusConditions
@@ -234,7 +253,9 @@ public partial class V1api20230815storageDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.KeyVaultProperties_STATUS Properties of the key vault.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseStatusReadWriteKeyVaultProperties
@@ -259,7 +280,9 @@ public partial class V1api20230815storageDatabaseStatusReadWriteKeyVaultProperti
     [JsonPropertyName("userIdentity")]
     public string? UserIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.DatabaseStatistics_STATUS A class that contains database statistics information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseStatusReadWriteStatistics
@@ -272,7 +295,9 @@ public partial class V1api20230815storageDatabaseStatusReadWriteStatistics
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.SuspensionDetails_STATUS The database suspension details. If the database is suspended, this object contains information related to the database's suspension state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseStatusReadWriteSuspensionDetails
@@ -285,7 +310,9 @@ public partial class V1api20230815storageDatabaseStatusReadWriteSuspensionDetail
     [JsonPropertyName("suspensionStartDate")]
     public string? SuspensionStartDate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.ReadWriteDatabase_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseStatusReadWrite
@@ -338,7 +365,9 @@ public partial class V1api20230815storageDatabaseStatusReadWrite
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.Database_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageDatabaseStatus
@@ -359,7 +388,9 @@ public partial class V1api20230815storageDatabaseStatus
     [JsonPropertyName("readWrite")]
     public V1api20230815storageDatabaseStatusReadWrite? ReadWrite { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230815.Database Generator information: - Generated from: /azure-kusto/resource-manager/Microsoft.Kusto/stable/2023-08-15/kusto.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}/databases/{databaseName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -389,3 +420,4 @@ public partial class V1api20230815storageDatabase : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1api20230815storageDatabaseStatus? Status { get; set; }
 }
+#nullable disable

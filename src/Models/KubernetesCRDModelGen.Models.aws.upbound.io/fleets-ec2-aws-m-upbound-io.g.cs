@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+#nullable enable
 /// <summary>Fleet is the Schema for the Fleets API. Provides a resource to manage EC2 Fleets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FleetList : IKubernetesObject<V1ListMeta>, IItems<V1
     [JsonPropertyName("items")]
     public IList<V1beta1Fleet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderFleetInstanceSet
@@ -54,7 +57,9 @@ public partial class V1beta1FleetSpecForProviderFleetInstanceSet
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRef
@@ -84,7 +91,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
@@ -97,7 +106,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelector
@@ -118,7 +129,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy
@@ -131,7 +144,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRef
@@ -148,7 +163,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector
@@ -182,7 +201,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecification
@@ -215,7 +236,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTempla
     [JsonPropertyName("versionSelector")]
     public V1beta1FleetSpecForProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector? VersionSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorCount
@@ -228,7 +251,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorTotalMemoryMib
@@ -241,7 +266,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsBaselineEbsBandwidthMbps
@@ -254,7 +281,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryGibPerVcpu
@@ -267,7 +296,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The minimum and maximum amount of memory per vCPU, in GiB. Default is no minimum or maximum limits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryMib
@@ -280,7 +311,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is No minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkBandwidthGbps
@@ -293,7 +326,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkInterfaceCount
@@ -306,7 +341,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsTotalLocalStorageGb
@@ -319,7 +356,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount
@@ -332,7 +371,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirements
@@ -433,7 +474,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInst
     [JsonPropertyName("vcpuCount")]
     public V1beta1FleetSpecForProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverride
@@ -466,7 +509,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfigOverride
     [JsonPropertyName("weightedCapacity")]
     public double? WeightedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderLaunchTemplateConfig
@@ -479,7 +524,9 @@ public partial class V1beta1FleetSpecForProviderLaunchTemplateConfig
     [JsonPropertyName("override")]
     public IList<V1beta1FleetSpecForProviderLaunchTemplateConfigOverride>? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Demand capacity. Supported only for fleets of type instant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderOnDemandOptionsCapacityReservationOptions
@@ -488,7 +535,9 @@ public partial class V1beta1FleetSpecForProviderOnDemandOptionsCapacityReservati
     [JsonPropertyName("usageStrategy")]
     public string? UsageStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing On-Demand configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderOnDemandOptions
@@ -517,7 +566,9 @@ public partial class V1beta1FleetSpecForProviderOnDemandOptions
     [JsonPropertyName("singleInstanceType")]
     public bool? SingleInstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategiesCapacityRebalance
@@ -530,7 +581,9 @@ public partial class V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategies
     [JsonPropertyName("terminationDelay")]
     public double? TerminationDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategies
@@ -539,7 +592,9 @@ public partial class V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategies
     [JsonPropertyName("capacityRebalance")]
     public V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategiesCapacityRebalance? CapacityRebalance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing Spot configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderSpotOptions
@@ -576,7 +631,9 @@ public partial class V1beta1FleetSpecForProviderSpotOptions
     [JsonPropertyName("singleInstanceType")]
     public bool? SingleInstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProviderTargetCapacitySpecification
@@ -601,7 +658,9 @@ public partial class V1beta1FleetSpecForProviderTargetCapacitySpecification
     [JsonPropertyName("totalTargetCapacity")]
     public double? TotalTargetCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecForProvider
@@ -678,7 +737,9 @@ public partial class V1beta1FleetSpecForProvider
     [JsonPropertyName("validUntil")]
     public string? ValidUntil { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderFleetInstanceSet
@@ -699,7 +760,9 @@ public partial class V1beta1FleetSpecInitProviderFleetInstanceSet
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRefPolicy
@@ -712,7 +775,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRef
@@ -729,7 +794,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy
@@ -742,7 +809,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate launchTemplateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelector
@@ -763,7 +832,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationLaunchTemplateIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy
@@ -776,7 +847,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LaunchTemplate in ec2 to populate version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRef
@@ -793,7 +866,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy
@@ -806,7 +881,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LaunchTemplate in ec2 to populate version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector
@@ -827,7 +904,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("policy")]
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecification
@@ -860,7 +939,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("versionSelector")]
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigLaunchTemplateSpecificationVersionSelector? VersionSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorCount
@@ -873,7 +954,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorTotalMemoryMib
@@ -886,7 +969,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsBaselineEbsBandwidthMbps
@@ -899,7 +984,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryGibPerVcpu
@@ -912,7 +999,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The minimum and maximum amount of memory per vCPU, in GiB. Default is no minimum or maximum limits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryMib
@@ -925,7 +1014,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is No minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkBandwidthGbps
@@ -938,7 +1029,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkInterfaceCount
@@ -951,7 +1044,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsTotalLocalStorageGb
@@ -964,7 +1059,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount
@@ -977,7 +1074,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirements
@@ -1078,7 +1177,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("vcpuCount")]
     public V1beta1FleetSpecInitProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverride
@@ -1111,7 +1212,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfigOverride
     [JsonPropertyName("weightedCapacity")]
     public double? WeightedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfig
@@ -1124,7 +1227,9 @@ public partial class V1beta1FleetSpecInitProviderLaunchTemplateConfig
     [JsonPropertyName("override")]
     public IList<V1beta1FleetSpecInitProviderLaunchTemplateConfigOverride>? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Demand capacity. Supported only for fleets of type instant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderOnDemandOptionsCapacityReservationOptions
@@ -1133,7 +1238,9 @@ public partial class V1beta1FleetSpecInitProviderOnDemandOptionsCapacityReservat
     [JsonPropertyName("usageStrategy")]
     public string? UsageStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing On-Demand configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderOnDemandOptions
@@ -1162,7 +1269,9 @@ public partial class V1beta1FleetSpecInitProviderOnDemandOptions
     [JsonPropertyName("singleInstanceType")]
     public bool? SingleInstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategiesCapacityRebalance
@@ -1175,7 +1284,9 @@ public partial class V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategie
     [JsonPropertyName("terminationDelay")]
     public double? TerminationDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategies
@@ -1184,7 +1295,9 @@ public partial class V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategie
     [JsonPropertyName("capacityRebalance")]
     public V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategiesCapacityRebalance? CapacityRebalance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing Spot configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderSpotOptions
@@ -1221,7 +1334,9 @@ public partial class V1beta1FleetSpecInitProviderSpotOptions
     [JsonPropertyName("singleInstanceType")]
     public bool? SingleInstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProviderTargetCapacitySpecification
@@ -1246,7 +1361,9 @@ public partial class V1beta1FleetSpecInitProviderTargetCapacitySpecification
     [JsonPropertyName("totalTargetCapacity")]
     public double? TotalTargetCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecInitProvider
@@ -1319,7 +1436,9 @@ public partial class V1beta1FleetSpecInitProvider
     [JsonPropertyName("validUntil")]
     public string? ValidUntil { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecProviderConfigRef
@@ -1332,7 +1451,9 @@ public partial class V1beta1FleetSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpecWriteConnectionSecretToRef
@@ -1341,7 +1462,9 @@ public partial class V1beta1FleetSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FleetSpec defines the desired state of Fleet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetSpec
@@ -1366,7 +1489,9 @@ public partial class V1beta1FleetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FleetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderFleetInstanceSet
@@ -1387,7 +1512,9 @@ public partial class V1beta1FleetStatusAtProviderFleetInstanceSet
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing EC2 Launch Template to use. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigLaunchTemplateSpecification
@@ -1404,7 +1531,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigLaunchTempl
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips). Default is no minimum or maximum limits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorCount
@@ -1417,7 +1546,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsAcceleratorTotalMemoryMib
@@ -1430,7 +1561,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum baseline EBS bandwidth, in Mbps. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsBaselineEbsBandwidthMbps
@@ -1443,7 +1576,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryGibPerVcpu
@@ -1456,7 +1591,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The minimum and maximum amount of memory per vCPU, in GiB. Default is no minimum or maximum limits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsMemoryMib
@@ -1469,7 +1606,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The minimum and maximum amount of network bandwidth, in gigabits per second (Gbps). Default is No minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkBandwidthGbps
@@ -1482,7 +1621,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of network interfaces. Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsNetworkInterfaceCount
@@ -1495,7 +1636,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum total local storage (GB). Default is no minimum or maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsTotalLocalStorageGb
@@ -1508,7 +1651,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Block describing the minimum and maximum number of vCPUs. Default is no maximum.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount
@@ -1521,7 +1666,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Override the instance type in the Launch Template with instance types that satisfy the requirements.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirements
@@ -1622,7 +1769,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideIns
     [JsonPropertyName("vcpuCount")]
     public V1beta1FleetStatusAtProviderLaunchTemplateConfigOverrideInstanceRequirementsVcpuCount? VcpuCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverride
@@ -1655,7 +1804,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfigOverride
     [JsonPropertyName("weightedCapacity")]
     public double? WeightedCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfig
@@ -1668,7 +1819,9 @@ public partial class V1beta1FleetStatusAtProviderLaunchTemplateConfig
     [JsonPropertyName("override")]
     public IList<V1beta1FleetStatusAtProviderLaunchTemplateConfigOverride>? Override { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Demand capacity. Supported only for fleets of type instant.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderOnDemandOptionsCapacityReservationOptions
@@ -1677,7 +1830,9 @@ public partial class V1beta1FleetStatusAtProviderOnDemandOptionsCapacityReservat
     [JsonPropertyName("usageStrategy")]
     public string? UsageStrategy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing On-Demand configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderOnDemandOptions
@@ -1706,7 +1861,9 @@ public partial class V1beta1FleetStatusAtProviderOnDemandOptions
     [JsonPropertyName("singleInstanceType")]
     public bool? SingleInstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing the capacity rebalance for your fleet request. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategiesCapacityRebalance
@@ -1719,7 +1876,9 @@ public partial class V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategie
     [JsonPropertyName("terminationDelay")]
     public double? TerminationDelay { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategies
@@ -1728,7 +1887,9 @@ public partial class V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategie
     [JsonPropertyName("capacityRebalance")]
     public V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategiesCapacityRebalance? CapacityRebalance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing Spot configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderSpotOptions
@@ -1765,7 +1926,9 @@ public partial class V1beta1FleetStatusAtProviderSpotOptions
     [JsonPropertyName("singleInstanceType")]
     public bool? SingleInstanceType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProviderTargetCapacitySpecification
@@ -1790,7 +1953,9 @@ public partial class V1beta1FleetStatusAtProviderTargetCapacitySpecification
     [JsonPropertyName("totalTargetCapacity")]
     public double? TotalTargetCapacity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusAtProvider
@@ -1879,7 +2044,9 @@ public partial class V1beta1FleetStatusAtProvider
     [JsonPropertyName("validUntil")]
     public string? ValidUntil { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatusConditions
@@ -1908,7 +2075,9 @@ public partial class V1beta1FleetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FleetStatus defines the observed state of Fleet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FleetStatus
@@ -1925,7 +2094,9 @@ public partial class V1beta1FleetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fleet is the Schema for the Fleets API. Provides a resource to manage EC2 Fleets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1955,3 +2126,4 @@ public partial class V1beta1Fleet : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1FleetStatus? Status { get; set; }
 }
+#nullable disable

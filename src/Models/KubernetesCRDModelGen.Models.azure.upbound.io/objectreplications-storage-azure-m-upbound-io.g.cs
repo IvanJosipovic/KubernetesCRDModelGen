@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.m.upbound.io;
+#nullable enable
 /// <summary>ObjectReplication is the Schema for the ObjectReplications API. Copy Block Blobs between a source storage account and a destination account</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ObjectReplicationList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1ObjectReplication> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAccountIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate destinationStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAccountIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAc
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecForProviderDestinationStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAccountIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate destinationStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAccountIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAc
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecForProviderDestinationStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRulesDestinationContainerNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRulesDestinationCont
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate destinationContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRulesDestinationContainerNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRulesDestinationCont
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecForProviderRulesDestinationContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRulesDestinationContainerNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRulesDestinationCont
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate destinationContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRulesDestinationContainerNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRulesDestinationCont
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecForProviderRulesDestinationContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRulesSourceContainerNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRulesSourceContainer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate sourceContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRulesSourceContainerNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRulesSourceContainer
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecForProviderRulesSourceContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRulesSourceContainerNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRulesSourceContainer
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate sourceContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRulesSourceContainerNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRulesSourceContainer
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecForProviderRulesSourceContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderRules
@@ -262,7 +289,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderRules
     [JsonPropertyName("sourceContainerNameSelector")]
     public V1beta1ObjectReplicationSpecForProviderRulesSourceContainerNameSelector? SourceContainerNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderSourceStorageAccountIdRefPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderSourceStorageAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate sourceStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderSourceStorageAccountIdRef
@@ -292,7 +323,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderSourceStorageAccount
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecForProviderSourceStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderSourceStorageAccountIdSelectorPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderSourceStorageAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate sourceStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderSourceStorageAccountIdSelector
@@ -326,7 +361,9 @@ public partial class V1beta1ObjectReplicationSpecForProviderSourceStorageAccount
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecForProviderSourceStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProvider
@@ -359,7 +396,9 @@ public partial class V1beta1ObjectReplicationSpecForProvider
     [JsonPropertyName("sourceStorageAccountIdSelector")]
     public V1beta1ObjectReplicationSpecForProviderSourceStorageAccountIdSelector? SourceStorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderDestinationStorageAccountIdRefPolicy
@@ -372,7 +411,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderDestinationStorageA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate destinationStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderDestinationStorageAccountIdRef
@@ -389,7 +430,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderDestinationStorageA
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecInitProviderDestinationStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderDestinationStorageAccountIdSelectorPolicy
@@ -402,7 +445,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderDestinationStorageA
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate destinationStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderDestinationStorageAccountIdSelector
@@ -423,7 +468,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderDestinationStorageA
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecInitProviderDestinationStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRulesDestinationContainerNameRefPolicy
@@ -436,7 +483,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRulesDestinationCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate destinationContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRulesDestinationContainerNameRef
@@ -453,7 +502,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRulesDestinationCon
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecInitProviderRulesDestinationContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRulesDestinationContainerNameSelectorPolicy
@@ -466,7 +517,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRulesDestinationCon
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate destinationContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRulesDestinationContainerNameSelector
@@ -487,7 +540,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRulesDestinationCon
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecInitProviderRulesDestinationContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRulesSourceContainerNameRefPolicy
@@ -500,7 +555,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRulesSourceContaine
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Container in storage to populate sourceContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRulesSourceContainerNameRef
@@ -517,7 +574,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRulesSourceContaine
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecInitProviderRulesSourceContainerNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRulesSourceContainerNameSelectorPolicy
@@ -530,7 +589,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRulesSourceContaine
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Container in storage to populate sourceContainerName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRulesSourceContainerNameSelector
@@ -551,7 +612,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRulesSourceContaine
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecInitProviderRulesSourceContainerNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderRules
@@ -588,7 +651,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRules
     [JsonPropertyName("sourceContainerNameSelector")]
     public V1beta1ObjectReplicationSpecInitProviderRulesSourceContainerNameSelector? SourceContainerNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderSourceStorageAccountIdRefPolicy
@@ -601,7 +666,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderSourceStorageAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate sourceStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderSourceStorageAccountIdRef
@@ -618,7 +685,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderSourceStorageAccoun
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecInitProviderSourceStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderSourceStorageAccountIdSelectorPolicy
@@ -631,7 +700,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderSourceStorageAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate sourceStorageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProviderSourceStorageAccountIdSelector
@@ -652,7 +723,9 @@ public partial class V1beta1ObjectReplicationSpecInitProviderSourceStorageAccoun
     [JsonPropertyName("policy")]
     public V1beta1ObjectReplicationSpecInitProviderSourceStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecInitProvider
@@ -685,7 +758,9 @@ public partial class V1beta1ObjectReplicationSpecInitProvider
     [JsonPropertyName("sourceStorageAccountIdSelector")]
     public V1beta1ObjectReplicationSpecInitProviderSourceStorageAccountIdSelector? SourceStorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecProviderConfigRef
@@ -698,7 +773,9 @@ public partial class V1beta1ObjectReplicationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecWriteConnectionSecretToRef
@@ -707,7 +784,9 @@ public partial class V1beta1ObjectReplicationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObjectReplicationSpec defines the desired state of ObjectReplication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpec
@@ -732,7 +811,9 @@ public partial class V1beta1ObjectReplicationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ObjectReplicationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationStatusAtProviderRules
@@ -757,7 +838,9 @@ public partial class V1beta1ObjectReplicationStatusAtProviderRules
     [JsonPropertyName("sourceContainerName")]
     public string? SourceContainerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationStatusAtProvider
@@ -786,7 +869,9 @@ public partial class V1beta1ObjectReplicationStatusAtProvider
     [JsonPropertyName("sourceStorageAccountId")]
     public string? SourceStorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationStatusConditions
@@ -815,7 +900,9 @@ public partial class V1beta1ObjectReplicationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObjectReplicationStatus defines the observed state of ObjectReplication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationStatus
@@ -832,7 +919,9 @@ public partial class V1beta1ObjectReplicationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObjectReplication is the Schema for the ObjectReplications API. Copy Block Blobs between a source storage account and a destination account</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -862,3 +951,4 @@ public partial class V1beta1ObjectReplication : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1ObjectReplicationStatus? Status { get; set; }
 }
+#nullable disable

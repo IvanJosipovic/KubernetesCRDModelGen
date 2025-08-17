@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.m.upbound.io;
+#nullable enable
 /// <summary>AccountNetworkRules is the Schema for the AccountNetworkRuless API. Manages network rules inside of a Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AccountNetworkRulesList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1AccountNetworkRules> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderPrivateLinkAccess
@@ -46,7 +49,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderPrivateLinkAccess
     [JsonPropertyName("endpointTenantId")]
     public string? EndpointTenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdRef
@@ -76,7 +83,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdRe
     [JsonPropertyName("policy")]
     public V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdSelector
@@ -110,7 +121,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdSe
     [JsonPropertyName("policy")]
     public V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubnetIdsRefsPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubnetIdsRefs
@@ -140,7 +155,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubn
     [JsonPropertyName("policy")]
     public V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubnetIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubnetIdsSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in network to populate virtualNetworkSubnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubnetIdsSelector
@@ -174,7 +193,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubn
     [JsonPropertyName("policy")]
     public V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubnetIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProvider
@@ -219,7 +240,9 @@ public partial class V1beta1AccountNetworkRulesSpecForProvider
     [JsonPropertyName("virtualNetworkSubnetIdsSelector")]
     public V1beta1AccountNetworkRulesSpecForProviderVirtualNetworkSubnetIdsSelector? VirtualNetworkSubnetIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderPrivateLinkAccess
@@ -232,7 +255,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderPrivateLinkAccess
     [JsonPropertyName("endpointTenantId")]
     public string? EndpointTenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdRefPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdRef
@@ -262,7 +289,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdR
     [JsonPropertyName("policy")]
     public V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdSelectorPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdSelector
@@ -296,7 +327,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdS
     [JsonPropertyName("policy")]
     public V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSubnetIdsRefsPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSub
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSubnetIdsRefs
@@ -326,7 +361,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSub
     [JsonPropertyName("policy")]
     public V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSubnetIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSubnetIdsSelectorPolicy
@@ -339,7 +376,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSub
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in network to populate virtualNetworkSubnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSubnetIdsSelector
@@ -360,7 +399,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSub
     [JsonPropertyName("policy")]
     public V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSubnetIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProvider
@@ -405,7 +446,9 @@ public partial class V1beta1AccountNetworkRulesSpecInitProvider
     [JsonPropertyName("virtualNetworkSubnetIdsSelector")]
     public V1beta1AccountNetworkRulesSpecInitProviderVirtualNetworkSubnetIdsSelector? VirtualNetworkSubnetIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecProviderConfigRef
@@ -418,7 +461,9 @@ public partial class V1beta1AccountNetworkRulesSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecWriteConnectionSecretToRef
@@ -427,7 +472,9 @@ public partial class V1beta1AccountNetworkRulesSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccountNetworkRulesSpec defines the desired state of AccountNetworkRules</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpec
@@ -452,7 +499,9 @@ public partial class V1beta1AccountNetworkRulesSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AccountNetworkRulesSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesStatusAtProviderPrivateLinkAccess
@@ -465,7 +514,9 @@ public partial class V1beta1AccountNetworkRulesStatusAtProviderPrivateLinkAccess
     [JsonPropertyName("endpointTenantId")]
     public string? EndpointTenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesStatusAtProvider
@@ -498,7 +549,9 @@ public partial class V1beta1AccountNetworkRulesStatusAtProvider
     [JsonPropertyName("virtualNetworkSubnetIds")]
     public IList<string>? VirtualNetworkSubnetIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesStatusConditions
@@ -527,7 +580,9 @@ public partial class V1beta1AccountNetworkRulesStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccountNetworkRulesStatus defines the observed state of AccountNetworkRules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesStatus
@@ -544,7 +599,9 @@ public partial class V1beta1AccountNetworkRulesStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AccountNetworkRules is the Schema for the AccountNetworkRuless API. Manages network rules inside of a Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -574,3 +631,4 @@ public partial class V1beta1AccountNetworkRules : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1AccountNetworkRulesStatus? Status { get; set; }
 }
+#nullable disable

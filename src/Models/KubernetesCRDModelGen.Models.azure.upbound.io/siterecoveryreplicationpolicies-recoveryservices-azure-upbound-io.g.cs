@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.upbound.io;
+#nullable enable
 /// <summary>SiteRecoveryReplicationPolicy is the Schema for the SiteRecoveryReplicationPolicys API. Manages an Azure Site Recovery replication policy on Azure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicyList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1SiteRecoveryReplicationPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecovery
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecovery
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecovery
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderRecovery
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResource
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProviderResource
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1SiteRecoveryReplicationPolicySpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecInitProvider
@@ -195,7 +216,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecInitProvider
     [JsonPropertyName("recoveryPointRetentionInMinutes")]
     public double? RecoveryPointRetentionInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRefPolicy
@@ -208,7 +231,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRef
@@ -221,7 +246,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SiteRecoveryReplicationPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpecWriteConnectionSecretToRef
@@ -234,7 +261,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpecWriteConnectionSecr
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SiteRecoveryReplicationPolicySpec defines the desired state of SiteRecoveryReplicationPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicySpec
@@ -263,7 +292,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SiteRecoveryReplicationPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicyStatusAtProvider
@@ -288,7 +319,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicyStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicyStatusConditions
@@ -317,7 +350,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SiteRecoveryReplicationPolicyStatus defines the observed state of SiteRecoveryReplicationPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryReplicationPolicyStatus
@@ -334,7 +369,9 @@ public partial class V1beta1SiteRecoveryReplicationPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SiteRecoveryReplicationPolicy is the Schema for the SiteRecoveryReplicationPolicys API. Manages an Azure Site Recovery replication policy on Azure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -364,3 +401,4 @@ public partial class V1beta1SiteRecoveryReplicationPolicy : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1SiteRecoveryReplicationPolicyStatus? Status { get; set; }
 }
+#nullable disable

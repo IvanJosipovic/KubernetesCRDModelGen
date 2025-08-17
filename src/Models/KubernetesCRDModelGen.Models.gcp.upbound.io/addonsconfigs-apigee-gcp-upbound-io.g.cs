@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.upbound.io;
+#nullable enable
 /// <summary>AddonsConfig is the Schema for the AddonsConfigs API. Configures the add-ons for the Apigee organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AddonsConfigList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1AddonsConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigAdvancedApiOpsConfig
@@ -42,7 +45,9 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigAdvancedApiOp
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityConfig
@@ -51,7 +56,9 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigConnectorsPlatformConfig
@@ -60,7 +67,9 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigConnectorsPla
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationConfig
@@ -69,7 +78,9 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationCo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationConfig
@@ -78,7 +89,9 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfig
@@ -103,7 +116,9 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfig
     [JsonPropertyName("monetizationConfig")]
     public V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderOrgRefPolicy
@@ -116,7 +131,9 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Organization in apigee to populate org.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderOrgRef
@@ -129,7 +146,9 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgRef
     [JsonPropertyName("policy")]
     public V1beta1AddonsConfigSpecForProviderOrgRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderOrgSelectorPolicy
@@ -142,7 +161,9 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Organization in apigee to populate org.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderOrgSelector
@@ -159,7 +180,9 @@ public partial class V1beta1AddonsConfigSpecForProviderOrgSelector
     [JsonPropertyName("policy")]
     public V1beta1AddonsConfigSpecForProviderOrgSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProvider
@@ -180,7 +203,9 @@ public partial class V1beta1AddonsConfigSpecForProvider
     [JsonPropertyName("orgSelector")]
     public V1beta1AddonsConfigSpecForProviderOrgSelector? OrgSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigAdvancedApiOpsConfig
@@ -189,7 +214,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigAdvancedApiO
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityConfig
@@ -198,7 +225,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigConnectorsPlatformConfig
@@ -207,7 +236,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigConnectorsPl
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationConfig
@@ -216,7 +247,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetizationConfig
@@ -225,7 +258,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetization
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfig
@@ -250,7 +285,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfig
     [JsonPropertyName("monetizationConfig")]
     public V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderOrgRefPolicy
@@ -263,7 +300,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Organization in apigee to populate org.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderOrgRef
@@ -276,7 +315,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgRef
     [JsonPropertyName("policy")]
     public V1beta1AddonsConfigSpecInitProviderOrgRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicy
@@ -289,7 +330,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Organization in apigee to populate org.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderOrgSelector
@@ -306,7 +349,9 @@ public partial class V1beta1AddonsConfigSpecInitProviderOrgSelector
     [JsonPropertyName("policy")]
     public V1beta1AddonsConfigSpecInitProviderOrgSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProvider
@@ -327,7 +372,9 @@ public partial class V1beta1AddonsConfigSpecInitProvider
     [JsonPropertyName("orgSelector")]
     public V1beta1AddonsConfigSpecInitProviderOrgSelector? OrgSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecProviderConfigRefPolicy
@@ -340,7 +387,9 @@ public partial class V1beta1AddonsConfigSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecProviderConfigRef
@@ -353,7 +402,9 @@ public partial class V1beta1AddonsConfigSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AddonsConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecWriteConnectionSecretToRef
@@ -366,7 +417,9 @@ public partial class V1beta1AddonsConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AddonsConfigSpec defines the desired state of AddonsConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpec
@@ -395,7 +448,9 @@ public partial class V1beta1AddonsConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AddonsConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigAdvancedApiOpsConfig
@@ -404,7 +459,9 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigAdvancedApiO
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityConfig
@@ -417,7 +474,9 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityC
     [JsonPropertyName("expiresAt")]
     public string? ExpiresAt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigConnectorsPlatformConfig
@@ -430,7 +489,9 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigConnectorsPl
     [JsonPropertyName("expiresAt")]
     public string? ExpiresAt { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationConfig
@@ -439,7 +500,9 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetizationConfig
@@ -448,7 +511,9 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetization
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Addon configurations of the Apigee organization. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfig
@@ -473,7 +538,9 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfig
     [JsonPropertyName("monetizationConfig")]
     public V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProvider
@@ -490,7 +557,9 @@ public partial class V1beta1AddonsConfigStatusAtProvider
     [JsonPropertyName("org")]
     public string? Org { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusConditions
@@ -519,7 +588,9 @@ public partial class V1beta1AddonsConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AddonsConfigStatus defines the observed state of AddonsConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatus
@@ -536,7 +607,9 @@ public partial class V1beta1AddonsConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AddonsConfig is the Schema for the AddonsConfigs API. Configures the add-ons for the Apigee organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -566,3 +639,4 @@ public partial class V1beta1AddonsConfig : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1AddonsConfigStatus? Status { get; set; }
 }
+#nullable disable

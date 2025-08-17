@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.m.upbound.io;
+#nullable enable
 /// <summary>ContainerRecipe is the Schema for the ContainerRecipes API. Manage an Image Builder Container Recipe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerRecipeList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1ContainerRecipe> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Component in imagebuilder to populate componentArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnR
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecForProviderComponentComponentArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Component in imagebuilder to populate componentArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentComponentArnS
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecForProviderComponentComponentArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderComponentParameter
@@ -110,7 +121,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponentParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderComponent
@@ -131,7 +144,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderComponent
     [JsonPropertyName("parameter")]
     public IList<V1beta1ContainerRecipeSpecForProviderComponentParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfigurationBlockDeviceMappingEbs
@@ -168,7 +183,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfigurationB
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfigurationBlockDeviceMapping
@@ -189,7 +206,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfigurationB
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block used to configure an instance for building and testing container images. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfiguration
@@ -202,7 +221,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderInstanceConfiguration
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdRefPolicy
@@ -215,7 +236,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdRef
@@ -232,7 +255,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelectorPolicy
@@ -245,7 +270,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelector
@@ -266,7 +293,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameRefPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryReposi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Repository in ecr to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameRef
@@ -296,7 +327,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryReposi
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameSelectorPolicy
@@ -309,7 +342,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryReposi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Repository in ecr to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameSelector
@@ -330,7 +365,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepositoryReposi
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecForProviderTargetRepositoryRepositoryNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination repository for the container image. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProviderTargetRepository
@@ -351,7 +388,9 @@ public partial class V1beta1ContainerRecipeSpecForProviderTargetRepository
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecForProvider
@@ -424,7 +463,9 @@ public partial class V1beta1ContainerRecipeSpecForProvider
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArnRefPolicy
@@ -437,7 +478,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Component in imagebuilder to populate componentArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArnRef
@@ -454,7 +497,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArn
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecInitProviderComponentComponentArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArnSelectorPolicy
@@ -467,7 +512,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Component in imagebuilder to populate componentArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArnSelector
@@ -488,7 +535,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentComponentArn
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecInitProviderComponentComponentArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderComponentParameter
@@ -501,7 +550,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponentParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderComponent
@@ -522,7 +573,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderComponent
     [JsonPropertyName("parameter")]
     public IList<V1beta1ContainerRecipeSpecInitProviderComponentParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfigurationBlockDeviceMappingEbs
@@ -559,7 +612,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfiguration
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfigurationBlockDeviceMapping
@@ -580,7 +635,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfiguration
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block used to configure an instance for building and testing container images. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfiguration
@@ -593,7 +650,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderInstanceConfiguration
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRefPolicy
@@ -606,7 +665,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRef
@@ -623,7 +684,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelectorPolicy
@@ -636,7 +699,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelector
@@ -657,7 +722,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameRefPolicy
@@ -670,7 +737,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepos
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Repository in ecr to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameRef
@@ -687,7 +756,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepos
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameSelectorPolicy
@@ -700,7 +771,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepos
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Repository in ecr to populate repositoryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameSelector
@@ -721,7 +794,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepos
     [JsonPropertyName("policy")]
     public V1beta1ContainerRecipeSpecInitProviderTargetRepositoryRepositoryNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination repository for the container image. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepository
@@ -742,7 +817,9 @@ public partial class V1beta1ContainerRecipeSpecInitProviderTargetRepository
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecInitProvider
@@ -811,7 +888,9 @@ public partial class V1beta1ContainerRecipeSpecInitProvider
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecProviderConfigRef
@@ -824,7 +903,9 @@ public partial class V1beta1ContainerRecipeSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpecWriteConnectionSecretToRef
@@ -833,7 +914,9 @@ public partial class V1beta1ContainerRecipeSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerRecipeSpec defines the desired state of ContainerRecipe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeSpec
@@ -858,7 +941,9 @@ public partial class V1beta1ContainerRecipeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ContainerRecipeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatusAtProviderComponentParameter
@@ -871,7 +956,9 @@ public partial class V1beta1ContainerRecipeStatusAtProviderComponentParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatusAtProviderComponent
@@ -884,7 +971,9 @@ public partial class V1beta1ContainerRecipeStatusAtProviderComponent
     [JsonPropertyName("parameter")]
     public IList<V1beta1ContainerRecipeStatusAtProviderComponentParameter>? Parameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with Elastic Block Storage (EBS) block device mapping settings. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfigurationBlockDeviceMappingEbs
@@ -921,7 +1010,9 @@ public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfiguration
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfigurationBlockDeviceMapping
@@ -942,7 +1033,9 @@ public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfiguration
     [JsonPropertyName("virtualName")]
     public string? VirtualName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block used to configure an instance for building and testing container images. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfiguration
@@ -955,7 +1048,9 @@ public partial class V1beta1ContainerRecipeStatusAtProviderInstanceConfiguration
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination repository for the container image. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatusAtProviderTargetRepository
@@ -968,7 +1063,9 @@ public partial class V1beta1ContainerRecipeStatusAtProviderTargetRepository
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatusAtProvider
@@ -1061,7 +1158,9 @@ public partial class V1beta1ContainerRecipeStatusAtProvider
     [JsonPropertyName("workingDirectory")]
     public string? WorkingDirectory { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatusConditions
@@ -1090,7 +1189,9 @@ public partial class V1beta1ContainerRecipeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerRecipeStatus defines the observed state of ContainerRecipe.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerRecipeStatus
@@ -1107,7 +1208,9 @@ public partial class V1beta1ContainerRecipeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerRecipe is the Schema for the ContainerRecipes API. Manage an Image Builder Container Recipe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1137,3 +1240,4 @@ public partial class V1beta1ContainerRecipe : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1ContainerRecipeStatus? Status { get; set; }
 }
+#nullable disable

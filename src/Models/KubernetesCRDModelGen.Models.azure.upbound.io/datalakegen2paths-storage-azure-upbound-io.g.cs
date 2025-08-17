@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
+#nullable enable
 /// <summary>DataLakeGen2Path is the Schema for the DataLakeGen2Paths API. Manages a Data Lake Gen2 Path in a File System within an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataLakeGen2PathList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1DataLakeGen2Path> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderAce
@@ -54,7 +57,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderAce
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderFilesystemNameRefPolicy
@@ -67,7 +72,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderFilesystemNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataLakeGen2FileSystem in storage to populate filesystemName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderFilesystemNameRef
@@ -80,7 +87,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderFilesystemNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecForProviderFilesystemNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderFilesystemNameSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderFilesystemNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataLakeGen2FileSystem in storage to populate filesystemName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderFilesystemNameSelector
@@ -110,7 +121,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderFilesystemNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecForProviderFilesystemNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdRef
@@ -136,7 +151,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdSelector
@@ -166,7 +185,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdSelec
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecForProvider
@@ -215,7 +236,9 @@ public partial class V1beta1DataLakeGen2PathSpecForProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1DataLakeGen2PathSpecForProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderAce
@@ -236,7 +259,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderAce
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameRefPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataLakeGen2FileSystem in storage to populate filesystemName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameRef
@@ -262,7 +289,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameRef
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameSelectorPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataLakeGen2FileSystem in storage to populate filesystemName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameSelector
@@ -292,7 +323,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameSelect
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecInitProviderFilesystemNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdRefPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdRef
@@ -318,7 +353,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdSelectorPolicy
@@ -331,7 +368,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdSelector
@@ -348,7 +387,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdSele
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecInitProvider
@@ -397,7 +438,9 @@ public partial class V1beta1DataLakeGen2PathSpecInitProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1DataLakeGen2PathSpecInitProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecProviderConfigRefPolicy
@@ -410,7 +453,9 @@ public partial class V1beta1DataLakeGen2PathSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecProviderConfigRef
@@ -423,7 +468,9 @@ public partial class V1beta1DataLakeGen2PathSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DataLakeGen2PathSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpecWriteConnectionSecretToRef
@@ -436,7 +483,9 @@ public partial class V1beta1DataLakeGen2PathSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataLakeGen2PathSpec defines the desired state of DataLakeGen2Path</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathSpec
@@ -465,7 +514,9 @@ public partial class V1beta1DataLakeGen2PathSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataLakeGen2PathSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathStatusAtProviderAce
@@ -486,7 +537,9 @@ public partial class V1beta1DataLakeGen2PathStatusAtProviderAce
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathStatusAtProvider
@@ -523,7 +576,9 @@ public partial class V1beta1DataLakeGen2PathStatusAtProvider
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathStatusConditions
@@ -552,7 +607,9 @@ public partial class V1beta1DataLakeGen2PathStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataLakeGen2PathStatus defines the observed state of DataLakeGen2Path.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2PathStatus
@@ -569,7 +626,9 @@ public partial class V1beta1DataLakeGen2PathStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataLakeGen2Path is the Schema for the DataLakeGen2Paths API. Manages a Data Lake Gen2 Path in a File System within an Azure Storage Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -599,3 +658,4 @@ public partial class V1beta1DataLakeGen2Path : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1DataLakeGen2PathStatus? Status { get; set; }
 }
+#nullable disable

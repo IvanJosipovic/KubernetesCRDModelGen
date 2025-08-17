@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+#nullable enable
 /// <summary>RedisCache is the Schema for the RedisCaches API. Manages a API Management Redis Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RedisCacheList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1RedisCache> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderApiManagementIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RedisCacheSpecForProviderApiManagementIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderApiManagementIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1RedisCacheSpecForProviderApiManagementIdRef
     [JsonPropertyName("policy")]
     public V1beta1RedisCacheSpecForProviderApiManagementIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderApiManagementIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1RedisCacheSpecForProviderApiManagementIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderApiManagementIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1RedisCacheSpecForProviderApiManagementIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RedisCacheSpecForProviderApiManagementIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string to the Cache for Redis.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderConnectionStringSecretRef
@@ -106,7 +117,9 @@ public partial class V1beta1RedisCacheSpecForProviderConnectionStringSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderRedisCacheIdRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1RedisCacheSpecForProviderRedisCacheIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RedisCache in cache to populate redisCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderRedisCacheIdRef
@@ -132,7 +147,9 @@ public partial class V1beta1RedisCacheSpecForProviderRedisCacheIdRef
     [JsonPropertyName("policy")]
     public V1beta1RedisCacheSpecForProviderRedisCacheIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderRedisCacheIdSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1RedisCacheSpecForProviderRedisCacheIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RedisCache in cache to populate redisCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProviderRedisCacheIdSelector
@@ -162,7 +181,9 @@ public partial class V1beta1RedisCacheSpecForProviderRedisCacheIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RedisCacheSpecForProviderRedisCacheIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProvider
@@ -203,7 +224,9 @@ public partial class V1beta1RedisCacheSpecForProvider
     [JsonPropertyName("redisCacheIdSelector")]
     public V1beta1RedisCacheSpecForProviderRedisCacheIdSelector? RedisCacheIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string to the Cache for Redis.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecInitProviderConnectionStringSecretRef
@@ -220,7 +243,9 @@ public partial class V1beta1RedisCacheSpecInitProviderConnectionStringSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecInitProviderRedisCacheIdRefPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1RedisCacheSpecInitProviderRedisCacheIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RedisCache in cache to populate redisCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecInitProviderRedisCacheIdRef
@@ -246,7 +273,9 @@ public partial class V1beta1RedisCacheSpecInitProviderRedisCacheIdRef
     [JsonPropertyName("policy")]
     public V1beta1RedisCacheSpecInitProviderRedisCacheIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecInitProviderRedisCacheIdSelectorPolicy
@@ -259,7 +288,9 @@ public partial class V1beta1RedisCacheSpecInitProviderRedisCacheIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RedisCache in cache to populate redisCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecInitProviderRedisCacheIdSelector
@@ -276,7 +307,9 @@ public partial class V1beta1RedisCacheSpecInitProviderRedisCacheIdSelector
     [JsonPropertyName("policy")]
     public V1beta1RedisCacheSpecInitProviderRedisCacheIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecInitProvider
@@ -305,7 +338,9 @@ public partial class V1beta1RedisCacheSpecInitProvider
     [JsonPropertyName("redisCacheIdSelector")]
     public V1beta1RedisCacheSpecInitProviderRedisCacheIdSelector? RedisCacheIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecProviderConfigRefPolicy
@@ -318,7 +353,9 @@ public partial class V1beta1RedisCacheSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecProviderConfigRef
@@ -331,7 +368,9 @@ public partial class V1beta1RedisCacheSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RedisCacheSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecWriteConnectionSecretToRef
@@ -344,7 +383,9 @@ public partial class V1beta1RedisCacheSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisCacheSpec defines the desired state of RedisCache</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpec
@@ -373,7 +414,9 @@ public partial class V1beta1RedisCacheSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RedisCacheSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheStatusAtProvider
@@ -398,7 +441,9 @@ public partial class V1beta1RedisCacheStatusAtProvider
     [JsonPropertyName("redisCacheId")]
     public string? RedisCacheId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheStatusConditions
@@ -427,7 +472,9 @@ public partial class V1beta1RedisCacheStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisCacheStatus defines the observed state of RedisCache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheStatus
@@ -444,7 +491,9 @@ public partial class V1beta1RedisCacheStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedisCache is the Schema for the RedisCaches API. Manages a API Management Redis Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -474,3 +523,4 @@ public partial class V1beta1RedisCache : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1RedisCacheStatus? Status { get; set; }
 }
+#nullable disable

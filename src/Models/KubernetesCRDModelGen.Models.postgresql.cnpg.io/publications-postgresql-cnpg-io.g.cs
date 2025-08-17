@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>Publication is the Schema for the publications API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1PublicationList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1Publication> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the PostgreSQL cluster that identifies the "publisher"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PublicationSpecCluster
@@ -42,7 +45,9 @@ public partial class V1PublicationSpecCluster
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies a list of tables to add to the publication. Corresponding to `FOR TABLE` in PostgreSQL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PublicationSpecTargetObjectsTable
@@ -63,7 +68,9 @@ public partial class V1PublicationSpecTargetObjectsTable
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublicationTargetObject is an object to publish</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PublicationSpecTargetObjects
@@ -76,7 +83,9 @@ public partial class V1PublicationSpecTargetObjects
     [JsonPropertyName("tablesInSchema")]
     public string? TablesInSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target of the publication as expected by PostgreSQL `CREATE PUBLICATION` command</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PublicationSpecTarget
@@ -89,7 +98,9 @@ public partial class V1PublicationSpecTarget
     [JsonPropertyName("objects")]
     public IList<V1PublicationSpecTargetObjects>? Objects { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublicationSpec defines the desired state of Publication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PublicationSpec
@@ -118,7 +129,9 @@ public partial class V1PublicationSpec
     [JsonPropertyName("target")]
     public V1PublicationSpecTarget Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublicationStatus defines the observed state of Publication</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PublicationStatus
@@ -135,7 +148,9 @@ public partial class V1PublicationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Publication is the Schema for the publications API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -165,3 +180,4 @@ public partial class V1Publication : IKubernetesObject<V1ObjectMeta>, ISpec<V1Pu
     [JsonPropertyName("status")]
     public V1PublicationStatus? Status { get; set; }
 }
+#nullable disable

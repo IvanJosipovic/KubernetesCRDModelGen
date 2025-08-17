@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appautoscaling.aws.m.upbound.io;
+#nullable enable
 /// <summary>Policy is the Schema for the Policys API. Provides an Application AutoScaling Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PolicyList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Policy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderResourceIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PolicySpecForProviderResourceIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderResourceIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1PolicySpecForProviderResourceIdRef
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderResourceIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PolicySpecForProviderResourceIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate resourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderResourceIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PolicySpecForProviderResourceIdSelector
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderScalableDimensionRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1PolicySpecForProviderScalableDimensionRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate scalableDimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderScalableDimensionRef
@@ -127,7 +140,9 @@ public partial class V1beta1PolicySpecForProviderScalableDimensionRef
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderScalableDimensionRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderScalableDimensionSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1PolicySpecForProviderScalableDimensionSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate scalableDimension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderScalableDimensionSelector
@@ -161,7 +178,9 @@ public partial class V1beta1PolicySpecForProviderScalableDimensionSelector
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderScalableDimensionSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderServiceNamespaceRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1PolicySpecForProviderServiceNamespaceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Target in appautoscaling to populate serviceNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderServiceNamespaceRef
@@ -191,7 +212,9 @@ public partial class V1beta1PolicySpecForProviderServiceNamespaceRef
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderServiceNamespaceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderServiceNamespaceSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1PolicySpecForProviderServiceNamespaceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Target in appautoscaling to populate serviceNamespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderServiceNamespaceSelector
@@ -225,7 +250,9 @@ public partial class V1beta1PolicySpecForProviderServiceNamespaceSelector
     [JsonPropertyName("policy")]
     public V1beta1PolicySpecForProviderServiceNamespaceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderStepScalingPolicyConfigurationStepAdjustment
@@ -242,7 +269,9 @@ public partial class V1beta1PolicySpecForProviderStepScalingPolicyConfigurationS
     [JsonPropertyName("scalingAdjustment")]
     public double? ScalingAdjustment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Step scaling policy configuration, requires policy_type = "StepScaling" (default). See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderStepScalingPolicyConfiguration
@@ -267,7 +296,9 @@ public partial class V1beta1PolicySpecForProviderStepScalingPolicyConfiguration
     [JsonPropertyName("stepAdjustment")]
     public IList<V1beta1PolicySpecForProviderStepScalingPolicyConfigurationStepAdjustment>? StepAdjustment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensions
@@ -280,7 +311,9 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConf
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensions
@@ -293,7 +326,9 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConf
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Structure that defines the CloudWatch metric to return, including the metric name, namespace, and dimensions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStatMetric
@@ -310,7 +345,9 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConf
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStat
@@ -327,7 +364,9 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConf
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetrics
@@ -352,7 +391,9 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConf
     [JsonPropertyName("returnData")]
     public bool? ReturnData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom CloudWatch metric. Documentation can be found  at: AWS Customized Metric Specification. See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification
@@ -381,7 +422,9 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConf
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Predefined metric. See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification
@@ -394,7 +437,9 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConf
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target tracking policy, requires policy_type = "TargetTrackingScaling". See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfiguration
@@ -423,7 +468,9 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConf
     [JsonPropertyName("targetValue")]
     public double? TargetValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProvider
@@ -480,7 +527,9 @@ public partial class V1beta1PolicySpecForProvider
     [JsonPropertyName("targetTrackingScalingPolicyConfiguration")]
     public V1beta1PolicySpecForProviderTargetTrackingScalingPolicyConfiguration? TargetTrackingScalingPolicyConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderStepScalingPolicyConfigurationStepAdjustment
@@ -497,7 +546,9 @@ public partial class V1beta1PolicySpecInitProviderStepScalingPolicyConfiguration
     [JsonPropertyName("scalingAdjustment")]
     public double? ScalingAdjustment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Step scaling policy configuration, requires policy_type = "StepScaling" (default). See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderStepScalingPolicyConfiguration
@@ -522,7 +573,9 @@ public partial class V1beta1PolicySpecInitProviderStepScalingPolicyConfiguration
     [JsonPropertyName("stepAdjustment")]
     public IList<V1beta1PolicySpecInitProviderStepScalingPolicyConfigurationStepAdjustment>? StepAdjustment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensions
@@ -535,7 +588,9 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensions
@@ -548,7 +603,9 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Structure that defines the CloudWatch metric to return, including the metric name, namespace, and dimensions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStatMetric
@@ -565,7 +622,9 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStat
@@ -582,7 +641,9 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetrics
@@ -607,7 +668,9 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("returnData")]
     public bool? ReturnData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom CloudWatch metric. Documentation can be found  at: AWS Customized Metric Specification. See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification
@@ -636,7 +699,9 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Predefined metric. See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification
@@ -649,7 +714,9 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target tracking policy, requires policy_type = "TargetTrackingScaling". See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfiguration
@@ -678,7 +745,9 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("targetValue")]
     public double? TargetValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProvider
@@ -695,7 +764,9 @@ public partial class V1beta1PolicySpecInitProvider
     [JsonPropertyName("targetTrackingScalingPolicyConfiguration")]
     public V1beta1PolicySpecInitProviderTargetTrackingScalingPolicyConfiguration? TargetTrackingScalingPolicyConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecProviderConfigRef
@@ -708,7 +779,9 @@ public partial class V1beta1PolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecWriteConnectionSecretToRef
@@ -717,7 +790,9 @@ public partial class V1beta1PolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicySpec defines the desired state of Policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpec
@@ -742,7 +817,9 @@ public partial class V1beta1PolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderStepScalingPolicyConfigurationStepAdjustment
@@ -759,7 +836,9 @@ public partial class V1beta1PolicyStatusAtProviderStepScalingPolicyConfiguration
     [JsonPropertyName("scalingAdjustment")]
     public double? ScalingAdjustment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Step scaling policy configuration, requires policy_type = "StepScaling" (default). See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderStepScalingPolicyConfiguration
@@ -784,7 +863,9 @@ public partial class V1beta1PolicyStatusAtProviderStepScalingPolicyConfiguration
     [JsonPropertyName("stepAdjustment")]
     public IList<V1beta1PolicyStatusAtProviderStepScalingPolicyConfigurationStepAdjustment>? StepAdjustment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensions
@@ -797,7 +878,9 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStatMetricDimensions
@@ -810,7 +893,9 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Structure that defines the CloudWatch metric to return, including the metric name, namespace, and dimensions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStatMetric
@@ -827,7 +912,9 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetricsMetricStat
@@ -844,7 +931,9 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationMetrics
@@ -869,7 +958,9 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("returnData")]
     public bool? ReturnData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom CloudWatch metric. Documentation can be found  at: AWS Customized Metric Specification. See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification
@@ -898,7 +989,9 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("unit")]
     public string? Unit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Predefined metric. See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification
@@ -911,7 +1004,9 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Target tracking policy, requires policy_type = "TargetTrackingScaling". See supported fields below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfiguration
@@ -940,7 +1035,9 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyCon
     [JsonPropertyName("targetValue")]
     public double? TargetValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProvider
@@ -985,7 +1082,9 @@ public partial class V1beta1PolicyStatusAtProvider
     [JsonPropertyName("targetTrackingScalingPolicyConfiguration")]
     public V1beta1PolicyStatusAtProviderTargetTrackingScalingPolicyConfiguration? TargetTrackingScalingPolicyConfiguration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusConditions
@@ -1014,7 +1113,9 @@ public partial class V1beta1PolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PolicyStatus defines the observed state of Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatus
@@ -1031,7 +1132,9 @@ public partial class V1beta1PolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy is the Schema for the Policys API. Provides an Application AutoScaling Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1061,3 +1164,4 @@ public partial class V1beta1Policy : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1PolicyStatus? Status { get; set; }
 }
+#nullable disable

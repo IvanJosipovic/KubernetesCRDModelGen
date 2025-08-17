@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>TransitGatewayPeeringAttachment is the Schema for the TransitGatewayPeeringAttachments API. Manages an EC2 Transit Gateway Peering Attachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1TransitGatewayPeeringAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderOptions
@@ -42,7 +45,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderOption
     [JsonPropertyName("dynamicRouting")]
     public string? DynamicRouting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRefPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate peerTransitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRef
@@ -68,7 +75,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTr
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelectorPolicy
@@ -81,7 +90,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate peerTransitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelector
@@ -98,7 +109,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTr
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRefPolicy
@@ -111,7 +124,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRef
@@ -124,7 +139,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransi
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelectorPolicy
@@ -137,7 +154,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelector
@@ -154,7 +173,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransi
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProvider
@@ -203,7 +224,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProvider
     [JsonPropertyName("transitGatewayIdSelector")]
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelector? TransitGatewayIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderOptions
@@ -212,7 +235,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderOptio
     [JsonPropertyName("dynamicRouting")]
     public string? DynamicRouting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRefPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate peerTransitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRef
@@ -238,7 +265,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerT
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelectorPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerT
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate peerTransitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelector
@@ -268,7 +299,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerT
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRefPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTrans
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRef
@@ -294,7 +329,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTrans
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelectorPolicy
@@ -307,7 +344,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTrans
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a TransitGateway in ec2 to populate transitGatewayId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelector
@@ -324,7 +363,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTrans
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProvider
@@ -369,7 +410,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProvider
     [JsonPropertyName("transitGatewayIdSelector")]
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelector? TransitGatewayIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicy
@@ -382,7 +425,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRef
@@ -395,7 +440,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpecWriteConnectionSecretToRef
@@ -408,7 +455,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecWriteConnectionSe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayPeeringAttachmentSpec defines the desired state of TransitGatewayPeeringAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentSpec
@@ -437,7 +486,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TransitGatewayPeeringAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProviderOptions
@@ -446,7 +497,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProviderOptio
     [JsonPropertyName("dynamicRouting")]
     public string? DynamicRouting { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProvider
@@ -495,7 +548,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProvider
     [JsonPropertyName("transitGatewayId")]
     public string? TransitGatewayId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentStatusConditions
@@ -524,7 +579,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayPeeringAttachmentStatus defines the observed state of TransitGatewayPeeringAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentStatus
@@ -541,7 +598,9 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TransitGatewayPeeringAttachment is the Schema for the TransitGatewayPeeringAttachments API. Manages an EC2 Transit Gateway Peering Attachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -571,3 +630,4 @@ public partial class V1beta1TransitGatewayPeeringAttachment : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1TransitGatewayPeeringAttachmentStatus? Status { get; set; }
 }
+#nullable disable

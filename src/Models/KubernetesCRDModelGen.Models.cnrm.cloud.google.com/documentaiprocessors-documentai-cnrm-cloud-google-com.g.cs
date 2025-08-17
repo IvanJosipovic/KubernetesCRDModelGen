@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentai.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DocumentAIProcessor is the Schema for the DocumentAIProcessor API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DocumentAIProcessorList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1DocumentAIProcessor> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The [KMS key](https://cloud.google.com/security-key-management) used for encryption and decryption in CMEK scenarios.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorSpecKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1alpha1DocumentAIProcessorSpecKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorSpecProjectRef
@@ -71,7 +76,9 @@ public partial class V1alpha1DocumentAIProcessorSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DocumentAIProcessorSpec defines the desired state of DocumentAIProcessor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorSpec
@@ -100,7 +107,9 @@ public partial class V1alpha1DocumentAIProcessorSpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorStatusConditions
@@ -125,7 +134,9 @@ public partial class V1alpha1DocumentAIProcessorStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorStatusObservedStateProcessorVersionAliases
@@ -138,7 +149,9 @@ public partial class V1alpha1DocumentAIProcessorStatusObservedStateProcessorVers
     [JsonPropertyName("processorVersion")]
     public string? ProcessorVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorStatusObservedState
@@ -167,7 +180,9 @@ public partial class V1alpha1DocumentAIProcessorStatusObservedState
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DocumentAIProcessorStatus defines the config connector machine state of DocumentAIProcessor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DocumentAIProcessorStatus
@@ -188,7 +203,9 @@ public partial class V1alpha1DocumentAIProcessorStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DocumentAIProcessorStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DocumentAIProcessor is the Schema for the DocumentAIProcessor API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -218,3 +235,4 @@ public partial class V1alpha1DocumentAIProcessor : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1DocumentAIProcessorStatus? Status { get; set; }
 }
+#nullable disable

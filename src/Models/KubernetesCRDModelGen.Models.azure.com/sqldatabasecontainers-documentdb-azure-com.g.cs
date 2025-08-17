@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseContainer Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240815storageSqlDatabaseContainerList : IKubernetesO
     [JsonPropertyName("items")]
     public IList<V1api20240815storageSqlDatabaseContainer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecOperatorSpecConfigMapExpressions
@@ -50,7 +53,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecOperatorSpecCon
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecOperatorSpecSecretExpressions
@@ -67,7 +72,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecOperatorSpecSec
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseContainerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecOperatorSpec
@@ -84,7 +91,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240815storageSqlDatabaseContainerSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecOptionsAutoscaleSettings
@@ -97,7 +106,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecOptionsAutoscal
     [JsonPropertyName("maxThroughput")]
     public int? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecOptions
@@ -114,7 +125,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecOptions
     [JsonPropertyName("throughput")]
     public int? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabase resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecOwner
@@ -127,7 +140,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ClientEncryptionIncludedPath .</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceClientEncryptionPolicyIncludedPaths
@@ -152,7 +167,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceClientE
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ClientEncryptionPolicy Cosmos DB client encryption policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceClientEncryptionPolicy
@@ -169,7 +186,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceClientE
     [JsonPropertyName("policyFormatVersion")]
     public int? PolicyFormatVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ComputedProperty The definition of a computed property</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceComputedProperties
@@ -186,7 +205,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceCompute
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ConflictResolutionPolicy The conflict resolution policy for the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceConflictResolutionPolicy
@@ -207,7 +228,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceConflic
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.CompositePath</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexingPolicyCompositeIndexes
@@ -224,7 +247,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexin
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ExcludedPath</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexingPolicyExcludedPaths
@@ -237,7 +262,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexin
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.Indexes The indexes for the path.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexingPolicyIncludedPathsIndexes
@@ -258,7 +285,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexin
     [JsonPropertyName("precision")]
     public int? Precision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.IncludedPath The paths that are included in indexing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexingPolicyIncludedPaths
@@ -275,7 +304,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexin
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SpatialSpec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexingPolicySpatialIndexes
@@ -292,7 +323,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexin
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.IndexingPolicy Cosmos DB indexing policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexingPolicy
@@ -325,7 +358,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceIndexin
     [JsonPropertyName("spatialIndexes")]
     public IList<V1api20240815storageSqlDatabaseContainerSpecResourceIndexingPolicySpatialIndexes>? SpatialIndexes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ContainerPartitionKey The configuration of the partition key to be used for partitioning data into multiple partitions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourcePartitionKey
@@ -346,7 +381,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourcePartiti
     [JsonPropertyName("version")]
     public int? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceRestoreParameters
@@ -367,7 +404,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceRestore
     [JsonPropertyName("restoreWithTtlDisabled")]
     public bool? RestoreWithTtlDisabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.UniqueKey The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceUniqueKeyPolicyUniqueKeys
@@ -380,7 +419,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceUniqueK
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.UniqueKeyPolicy The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResourceUniqueKeyPolicy
@@ -393,7 +434,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResourceUniqueK
     [JsonPropertyName("uniqueKeys")]
     public IList<V1api20240815storageSqlDatabaseContainerSpecResourceUniqueKeyPolicyUniqueKeys>? UniqueKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlContainerResource Cosmos DB SQL container resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpecResource
@@ -446,7 +489,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpecResource
     [JsonPropertyName("uniqueKeyPolicy")]
     public V1api20240815storageSqlDatabaseContainerSpecResourceUniqueKeyPolicy? UniqueKeyPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseContainer_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerSpec
@@ -487,7 +532,9 @@ public partial class V1api20240815storageSqlDatabaseContainerSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusConditions
@@ -520,7 +567,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.AutoscaleSettings_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusOptionsAutoscaleSettings
@@ -533,7 +582,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusOptionsAutosc
     [JsonPropertyName("maxThroughput")]
     public int? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.OptionsResource_STATUS Cosmos DB options resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusOptions
@@ -550,7 +601,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusOptions
     [JsonPropertyName("throughput")]
     public int? Throughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ClientEncryptionIncludedPath_STATUS .</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceClientEncryptionPolicyIncludedPaths
@@ -575,7 +628,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceClien
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ClientEncryptionPolicy_STATUS Cosmos DB client encryption policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceClientEncryptionPolicy
@@ -592,7 +647,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceClien
     [JsonPropertyName("policyFormatVersion")]
     public int? PolicyFormatVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ComputedProperty_STATUS The definition of a computed property</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceComputedProperties
@@ -609,7 +666,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceCompu
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ConflictResolutionPolicy_STATUS The conflict resolution policy for the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceConflictResolutionPolicy
@@ -630,7 +689,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceConfl
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.CompositePath_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndexingPolicyCompositeIndexes
@@ -647,7 +708,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndex
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ExcludedPath_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndexingPolicyExcludedPaths
@@ -660,7 +723,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndex
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.Indexes_STATUS The indexes for the path.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndexingPolicyIncludedPathsIndexes
@@ -681,7 +746,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndex
     [JsonPropertyName("precision")]
     public int? Precision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.IncludedPath_STATUS The paths that are included in indexing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndexingPolicyIncludedPaths
@@ -698,7 +765,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndex
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SpatialSpec_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndexingPolicySpatialIndexes
@@ -715,7 +784,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndex
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.IndexingPolicy_STATUS Cosmos DB indexing policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndexingPolicy
@@ -748,7 +819,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceIndex
     [JsonPropertyName("spatialIndexes")]
     public IList<V1api20240815storageSqlDatabaseContainerStatusResourceIndexingPolicySpatialIndexes>? SpatialIndexes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.ContainerPartitionKey_STATUS The configuration of the partition key to be used for partitioning data into multiple partitions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourcePartitionKey
@@ -773,7 +846,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceParti
     [JsonPropertyName("version")]
     public int? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceRestoreParameters
@@ -794,7 +869,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceResto
     [JsonPropertyName("restoreWithTtlDisabled")]
     public bool? RestoreWithTtlDisabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.UniqueKey_STATUS The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceUniqueKeyPolicyUniqueKeys
@@ -807,7 +884,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceUniqu
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.UniqueKeyPolicy_STATUS The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResourceUniqueKeyPolicy
@@ -820,7 +899,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResourceUniqu
     [JsonPropertyName("uniqueKeys")]
     public IList<V1api20240815storageSqlDatabaseContainerStatusResourceUniqueKeyPolicyUniqueKeys>? UniqueKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlContainerGetProperties_Resource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatusResource
@@ -885,7 +966,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatusResource
     [JsonPropertyName("uniqueKeyPolicy")]
     public V1api20240815storageSqlDatabaseContainerStatusResourceUniqueKeyPolicy? UniqueKeyPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseContainer_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlDatabaseContainerStatus
@@ -926,7 +1009,9 @@ public partial class V1api20240815storageSqlDatabaseContainerStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240815.SqlDatabaseContainer Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -956,3 +1041,4 @@ public partial class V1api20240815storageSqlDatabaseContainer : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1api20240815storageSqlDatabaseContainerStatus? Status { get; set; }
 }
+#nullable disable

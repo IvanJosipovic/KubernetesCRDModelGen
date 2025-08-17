@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.upbound.io;
+#nullable enable
 /// <summary>GremlinGraph is the Schema for the GremlinGraphs API. Manages a Gremlin Graph within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1GremlinGraphList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1GremlinGraph> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1GremlinGraphSpecForProviderAccountNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1GremlinGraphSpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1GremlinGraphSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1GremlinGraphSpecForProviderAccountNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1GremlinGraphSpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1GremlinGraphSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderAutoscaleSettings
@@ -98,7 +109,9 @@ public partial class V1beta1GremlinGraphSpecForProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderConflictResolutionPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1GremlinGraphSpecForProviderConflictResolutionPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameRefPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GremlinDatabase in cosmosdb to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameRef
@@ -141,7 +158,9 @@ public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1GremlinGraphSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameSelectorPolicy
@@ -154,7 +173,9 @@ public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GremlinDatabase in cosmosdb to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameSelector
@@ -171,7 +192,9 @@ public partial class V1beta1GremlinGraphSpecForProviderDatabaseNameSelector
     [JsonPropertyName("policy")]
     public V1beta1GremlinGraphSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndexIndex
@@ -184,7 +207,9 @@ public partial class V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndex
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndex
@@ -193,7 +218,9 @@ public partial class V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndex
     [JsonPropertyName("index")]
     public IList<V1beta1GremlinGraphSpecForProviderIndexPolicyCompositeIndexIndex>? Index { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderIndexPolicySpatialIndex
@@ -202,7 +229,9 @@ public partial class V1beta1GremlinGraphSpecForProviderIndexPolicySpatialIndex
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderIndexPolicy
@@ -231,7 +260,9 @@ public partial class V1beta1GremlinGraphSpecForProviderIndexPolicy
     [JsonPropertyName("spatialIndex")]
     public IList<V1beta1GremlinGraphSpecForProviderIndexPolicySpatialIndex>? SpatialIndex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameRefPolicy
@@ -244,7 +275,9 @@ public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameRef
@@ -257,7 +290,9 @@ public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1GremlinGraphSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameSelectorPolicy
@@ -270,7 +305,9 @@ public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameSelector
@@ -287,7 +324,9 @@ public partial class V1beta1GremlinGraphSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1GremlinGraphSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderUniqueKey
@@ -296,7 +335,9 @@ public partial class V1beta1GremlinGraphSpecForProviderUniqueKey
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProvider
@@ -373,7 +414,9 @@ public partial class V1beta1GremlinGraphSpecForProvider
     [JsonPropertyName("uniqueKey")]
     public IList<V1beta1GremlinGraphSpecForProviderUniqueKey>? UniqueKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecInitProviderAutoscaleSettings
@@ -382,7 +425,9 @@ public partial class V1beta1GremlinGraphSpecInitProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecInitProviderConflictResolutionPolicy
@@ -399,7 +444,9 @@ public partial class V1beta1GremlinGraphSpecInitProviderConflictResolutionPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeIndexIndex
@@ -412,7 +459,9 @@ public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeInde
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeIndex
@@ -421,7 +470,9 @@ public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeInde
     [JsonPropertyName("index")]
     public IList<V1beta1GremlinGraphSpecInitProviderIndexPolicyCompositeIndexIndex>? Index { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicySpatialIndex
@@ -430,7 +481,9 @@ public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicySpatialIndex
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicy
@@ -459,7 +512,9 @@ public partial class V1beta1GremlinGraphSpecInitProviderIndexPolicy
     [JsonPropertyName("spatialIndex")]
     public IList<V1beta1GremlinGraphSpecInitProviderIndexPolicySpatialIndex>? SpatialIndex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecInitProviderUniqueKey
@@ -468,7 +523,9 @@ public partial class V1beta1GremlinGraphSpecInitProviderUniqueKey
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecInitProvider
@@ -509,7 +566,9 @@ public partial class V1beta1GremlinGraphSpecInitProvider
     [JsonPropertyName("uniqueKey")]
     public IList<V1beta1GremlinGraphSpecInitProviderUniqueKey>? UniqueKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecProviderConfigRefPolicy
@@ -522,7 +581,9 @@ public partial class V1beta1GremlinGraphSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecProviderConfigRef
@@ -535,7 +596,9 @@ public partial class V1beta1GremlinGraphSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1GremlinGraphSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecWriteConnectionSecretToRef
@@ -548,7 +611,9 @@ public partial class V1beta1GremlinGraphSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GremlinGraphSpec defines the desired state of GremlinGraph</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpec
@@ -577,7 +642,9 @@ public partial class V1beta1GremlinGraphSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1GremlinGraphSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusAtProviderAutoscaleSettings
@@ -586,7 +653,9 @@ public partial class V1beta1GremlinGraphStatusAtProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusAtProviderConflictResolutionPolicy
@@ -603,7 +672,9 @@ public partial class V1beta1GremlinGraphStatusAtProviderConflictResolutionPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeIndexIndex
@@ -616,7 +687,9 @@ public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeInde
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeIndex
@@ -625,7 +698,9 @@ public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeInde
     [JsonPropertyName("index")]
     public IList<V1beta1GremlinGraphStatusAtProviderIndexPolicyCompositeIndexIndex>? Index { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicySpatialIndex
@@ -638,7 +713,9 @@ public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicySpatialIndex
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicy
@@ -667,7 +744,9 @@ public partial class V1beta1GremlinGraphStatusAtProviderIndexPolicy
     [JsonPropertyName("spatialIndex")]
     public IList<V1beta1GremlinGraphStatusAtProviderIndexPolicySpatialIndex>? SpatialIndex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusAtProviderUniqueKey
@@ -676,7 +755,9 @@ public partial class V1beta1GremlinGraphStatusAtProviderUniqueKey
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusAtProvider
@@ -733,7 +814,9 @@ public partial class V1beta1GremlinGraphStatusAtProvider
     [JsonPropertyName("uniqueKey")]
     public IList<V1beta1GremlinGraphStatusAtProviderUniqueKey>? UniqueKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatusConditions
@@ -762,7 +845,9 @@ public partial class V1beta1GremlinGraphStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GremlinGraphStatus defines the observed state of GremlinGraph.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphStatus
@@ -779,7 +864,9 @@ public partial class V1beta1GremlinGraphStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GremlinGraph is the Schema for the GremlinGraphs API. Manages a Gremlin Graph within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -809,3 +896,4 @@ public partial class V1beta1GremlinGraph : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1GremlinGraphStatus? Status { get; set; }
 }
+#nullable disable

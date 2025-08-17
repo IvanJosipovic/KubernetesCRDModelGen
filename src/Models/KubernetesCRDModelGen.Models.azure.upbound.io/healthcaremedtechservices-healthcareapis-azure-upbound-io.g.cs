@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.upbound.io;
+#nullable enable
 /// <summary>HealthcareMedtechService is the Schema for the HealthcareMedtechServices API. Manages a Healthcare MedTech (Internet of Medical Things) devices Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HealthcareMedtechServiceList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1HealthcareMedtechService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsumerGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsumerGroupNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsu
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsumerGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsumerGroupNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsumerGroupNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsu
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsumerGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameR
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameS
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecForProviderEventhubNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNamespaceNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNames
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNamespaceNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNames
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecForProviderEventhubNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNamespaceNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNames
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNamespaceNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubNames
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecForProviderEventhubNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderIdentity
@@ -214,7 +241,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdRefPolicy
@@ -227,7 +256,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthcareWorkspace in healthcareapis to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdRef
@@ -240,7 +271,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdRe
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdSelectorPolicy
@@ -253,7 +286,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthcareWorkspace in healthcareapis to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdSelector
@@ -270,7 +305,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdSe
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProvider
@@ -339,7 +376,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecForProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1HealthcareMedtechServiceSpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubConsumerGroupNameRefPolicy
@@ -352,7 +391,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubCons
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubConsumerGroupNameRef
@@ -365,7 +406,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubCons
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecInitProviderEventhubConsumerGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubConsumerGroupNameSelectorPolicy
@@ -378,7 +421,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubCons
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ConsumerGroup in eventhub to populate eventhubConsumerGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubConsumerGroupNameSelector
@@ -395,7 +440,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubCons
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecInitProviderEventhubConsumerGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNameRefPolicy
@@ -408,7 +455,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHub in eventhub to populate eventhubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNameRef
@@ -421,7 +470,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubName
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNameSelectorPolicy
@@ -434,7 +485,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHub in eventhub to populate eventhubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNameSelector
@@ -451,7 +504,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubName
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNamespaceNameRefPolicy
@@ -464,7 +519,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNamespaceNameRef
@@ -477,7 +534,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubName
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNamespaceNameSelectorPolicy
@@ -490,7 +549,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EventHubNamespace in eventhub to populate eventhubNamespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNamespaceNameSelector
@@ -507,7 +568,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderEventhubName
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecInitProviderEventhubNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProviderIdentity
@@ -520,7 +583,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecInitProvider
@@ -577,7 +642,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecProviderConfigRefPolicy
@@ -590,7 +657,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecProviderConfigRef
@@ -603,7 +672,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1HealthcareMedtechServiceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecWriteConnectionSecretToRef
@@ -616,7 +687,9 @@ public partial class V1beta1HealthcareMedtechServiceSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareMedtechServiceSpec defines the desired state of HealthcareMedtechService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpec
@@ -645,7 +718,9 @@ public partial class V1beta1HealthcareMedtechServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HealthcareMedtechServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceStatusAtProviderIdentity
@@ -666,7 +741,9 @@ public partial class V1beta1HealthcareMedtechServiceStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceStatusAtProvider
@@ -707,7 +784,9 @@ public partial class V1beta1HealthcareMedtechServiceStatusAtProvider
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceStatusConditions
@@ -736,7 +815,9 @@ public partial class V1beta1HealthcareMedtechServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareMedtechServiceStatus defines the observed state of HealthcareMedtechService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceStatus
@@ -753,7 +834,9 @@ public partial class V1beta1HealthcareMedtechServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareMedtechService is the Schema for the HealthcareMedtechServices API. Manages a Healthcare MedTech (Internet of Medical Things) devices Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -783,3 +866,4 @@ public partial class V1beta1HealthcareMedtechService : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1HealthcareMedtechServiceStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshift.aws.m.upbound.io;
+#nullable enable
 /// <summary>EndpointAccess is the Schema for the EndpointAccesss API. Provides a Redshift Endpoint Access resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EndpointAccessList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1EndpointAccess> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderClusterIdentifierRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EndpointAccessSpecForProviderClusterIdentifierRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in redshift to populate clusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderClusterIdentifierRef
@@ -63,7 +68,9 @@ public partial class V1beta1EndpointAccessSpecForProviderClusterIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecForProviderClusterIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderClusterIdentifierSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1EndpointAccessSpecForProviderClusterIdentifierSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in redshift to populate clusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderClusterIdentifierSelector
@@ -97,7 +106,9 @@ public partial class V1beta1EndpointAccessSpecForProviderClusterIdentifierSelect
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecForProviderClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderSubnetGroupNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1EndpointAccessSpecForProviderSubnetGroupNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SubnetGroup in redshift to populate subnetGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderSubnetGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1EndpointAccessSpecForProviderSubnetGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecForProviderSubnetGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderSubnetGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1EndpointAccessSpecForProviderSubnetGroupNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SubnetGroup in redshift to populate subnetGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderSubnetGroupNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1EndpointAccessSpecForProviderSubnetGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecForProviderSubnetGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdRefsPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdRefs
@@ -191,7 +212,9 @@ public partial class V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdSelec
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecForProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecForProvider
@@ -274,7 +301,9 @@ public partial class V1beta1EndpointAccessSpecForProvider
     [JsonPropertyName("vpcSecurityGroupIds")]
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderClusterIdentifierRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderClusterIdentifierRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in redshift to populate clusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderClusterIdentifierRef
@@ -304,7 +335,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderClusterIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecInitProviderClusterIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderClusterIdentifierSelectorPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderClusterIdentifierSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in redshift to populate clusterIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderClusterIdentifierSelector
@@ -338,7 +373,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderClusterIdentifierSelec
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecInitProviderClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderSubnetGroupNameRefPolicy
@@ -351,7 +388,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderSubnetGroupNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SubnetGroup in redshift to populate subnetGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderSubnetGroupNameRef
@@ -368,7 +407,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderSubnetGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecInitProviderSubnetGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderSubnetGroupNameSelectorPolicy
@@ -381,7 +422,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderSubnetGroupNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SubnetGroup in redshift to populate subnetGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderSubnetGroupNameSelector
@@ -402,7 +445,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderSubnetGroupNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecInitProviderSubnetGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdRefsPolicy
@@ -415,7 +460,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdRefs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdRefs
@@ -432,7 +479,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdRefs
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdSelectorPolicy
@@ -445,7 +494,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of SecurityGroup in ec2 to populate vpcSecurityGroupIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdSelector
@@ -466,7 +517,9 @@ public partial class V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdSele
     [JsonPropertyName("policy")]
     public V1beta1EndpointAccessSpecInitProviderVpcSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecInitProvider
@@ -511,7 +564,9 @@ public partial class V1beta1EndpointAccessSpecInitProvider
     [JsonPropertyName("vpcSecurityGroupIds")]
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecProviderConfigRef
@@ -524,7 +579,9 @@ public partial class V1beta1EndpointAccessSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpecWriteConnectionSecretToRef
@@ -533,7 +590,9 @@ public partial class V1beta1EndpointAccessSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointAccessSpec defines the desired state of EndpointAccess</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessSpec
@@ -558,7 +617,9 @@ public partial class V1beta1EndpointAccessSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EndpointAccessSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessStatusAtProviderVpcEndpointNetworkInterface
@@ -579,7 +640,9 @@ public partial class V1beta1EndpointAccessStatusAtProviderVpcEndpointNetworkInte
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessStatusAtProviderVpcEndpoint
@@ -596,7 +659,9 @@ public partial class V1beta1EndpointAccessStatusAtProviderVpcEndpoint
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessStatusAtProvider
@@ -637,7 +702,9 @@ public partial class V1beta1EndpointAccessStatusAtProvider
     [JsonPropertyName("vpcSecurityGroupIds")]
     public IList<string>? VpcSecurityGroupIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessStatusConditions
@@ -666,7 +733,9 @@ public partial class V1beta1EndpointAccessStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointAccessStatus defines the observed state of EndpointAccess.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAccessStatus
@@ -683,7 +752,9 @@ public partial class V1beta1EndpointAccessStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointAccess is the Schema for the EndpointAccesss API. Provides a Redshift Endpoint Access resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -713,3 +784,4 @@ public partial class V1beta1EndpointAccess : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1EndpointAccessStatus? Status { get; set; }
 }
+#nullable disable

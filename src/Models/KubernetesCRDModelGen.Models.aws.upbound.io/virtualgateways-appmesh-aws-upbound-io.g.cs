@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appmesh.aws.upbound.io;
+#nullable enable
 /// <summary>VirtualGateway is the Schema for the VirtualGateways API. Provides an AWS App Mesh virtual gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualGatewayList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
@@ -55,7 +60,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsCertificate
@@ -68,7 +75,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -77,7 +86,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
@@ -86,7 +97,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
@@ -95,7 +108,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
@@ -104,7 +119,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
@@ -113,7 +130,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
@@ -130,7 +149,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidation
@@ -143,7 +164,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTls
@@ -164,7 +187,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicy
@@ -173,7 +198,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClie
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaults
@@ -182,7 +209,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecBackendDefaults
     [JsonPropertyName("clientPolicy")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPoolGrpc
@@ -191,7 +220,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionP
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPoolHttp
@@ -204,7 +235,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionP
     [JsonPropertyName("maxPendingRequests")]
     public double? MaxPendingRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPoolHttp2
@@ -213,7 +246,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionP
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPool
@@ -230,7 +265,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionP
     [JsonPropertyName("http2")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerConnectionPoolHttp2>? Http2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerHealthCheck
@@ -263,7 +300,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerPortMapping
@@ -276,7 +315,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerPortMapping
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnRefPolicy
@@ -289,7 +330,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnRef
@@ -302,7 +345,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     [JsonPropertyName("policy")]
     public V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicy
@@ -315,7 +360,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelector
@@ -332,7 +379,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     [JsonPropertyName("policy")]
     public V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcm
@@ -349,7 +398,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     [JsonPropertyName("certificateArnSelector")]
     public V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateAcmCertificateArnSelector? CertificateArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateFile
@@ -362,7 +413,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateSds
@@ -371,7 +424,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificate
@@ -388,7 +443,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertific
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
@@ -397,7 +454,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationSubjectAlternativeNames
@@ -406,7 +465,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrustFile
@@ -415,7 +476,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrustSds
@@ -424,7 +487,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrust
@@ -437,7 +502,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidation
@@ -450,7 +517,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidati
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTls
@@ -467,7 +536,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListenerTls
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecListener
@@ -488,7 +559,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecListener
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecListenerTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFileFormatJson
@@ -501,7 +574,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFil
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFileFormat
@@ -514,7 +589,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFil
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFile
@@ -527,7 +604,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFil
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLog
@@ -536,7 +615,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLog
     [JsonPropertyName("file")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpecLogging
@@ -545,7 +626,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpecLogging
     [JsonPropertyName("accessLog")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProviderSpec
@@ -562,7 +645,9 @@ public partial class V1beta1VirtualGatewaySpecForProviderSpec
     [JsonPropertyName("logging")]
     public IList<V1beta1VirtualGatewaySpecForProviderSpecLogging>? Logging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecForProvider
@@ -591,7 +676,9 @@ public partial class V1beta1VirtualGatewaySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
@@ -604,7 +691,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
@@ -613,7 +702,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificate
@@ -626,7 +717,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -635,7 +728,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
@@ -644,7 +739,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
@@ -653,7 +750,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
@@ -662,7 +761,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
@@ -671,7 +772,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
@@ -688,7 +791,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidation
@@ -701,7 +806,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTls
@@ -722,7 +829,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicy
@@ -731,7 +840,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsCli
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaults
@@ -740,7 +851,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaults
     [JsonPropertyName("clientPolicy")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPoolGrpc
@@ -749,7 +862,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnection
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPoolHttp
@@ -762,7 +877,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnection
     [JsonPropertyName("maxPendingRequests")]
     public double? MaxPendingRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPoolHttp2
@@ -771,7 +888,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnection
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPool
@@ -788,7 +907,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerConnection
     [JsonPropertyName("http2")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerConnectionPoolHttp2>? Http2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerHealthCheck
@@ -821,7 +942,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerHealthChec
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerPortMapping
@@ -834,7 +957,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerPortMappin
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnRefPolicy
@@ -847,7 +972,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnRef
@@ -860,7 +987,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     [JsonPropertyName("policy")]
     public V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicy
@@ -873,7 +1002,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Certificate in acm to populate certificateArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelector
@@ -890,7 +1021,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     [JsonPropertyName("policy")]
     public V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcm
@@ -907,7 +1040,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     [JsonPropertyName("certificateArnSelector")]
     public V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateAcmCertificateArnSelector? CertificateArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateFile
@@ -920,7 +1055,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateSds
@@ -929,7 +1066,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificate
@@ -946,7 +1085,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertifi
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
@@ -955,7 +1096,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationSubjectAlternativeNames
@@ -964,7 +1107,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrustFile
@@ -973,7 +1118,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrustSds
@@ -982,7 +1129,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrust
@@ -995,7 +1144,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidation
@@ -1008,7 +1159,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidat
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTls
@@ -1025,7 +1178,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListenerTls
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecListener
@@ -1046,7 +1201,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecListener
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecListenerTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFileFormatJson
@@ -1059,7 +1216,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFi
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFileFormat
@@ -1072,7 +1231,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFi
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFile
@@ -1085,7 +1246,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFi
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLog
@@ -1094,7 +1257,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLog
     [JsonPropertyName("file")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpecLogging
@@ -1103,7 +1268,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpecLogging
     [JsonPropertyName("accessLog")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProviderSpec
@@ -1120,7 +1287,9 @@ public partial class V1beta1VirtualGatewaySpecInitProviderSpec
     [JsonPropertyName("logging")]
     public IList<V1beta1VirtualGatewaySpecInitProviderSpecLogging>? Logging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecInitProvider
@@ -1145,7 +1314,9 @@ public partial class V1beta1VirtualGatewaySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecProviderConfigRefPolicy
@@ -1158,7 +1329,9 @@ public partial class V1beta1VirtualGatewaySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecProviderConfigRef
@@ -1171,7 +1344,9 @@ public partial class V1beta1VirtualGatewaySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualGatewaySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpecWriteConnectionSecretToRef
@@ -1184,7 +1359,9 @@ public partial class V1beta1VirtualGatewaySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualGatewaySpec defines the desired state of VirtualGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewaySpec
@@ -1213,7 +1390,9 @@ public partial class V1beta1VirtualGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
@@ -1226,7 +1405,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
@@ -1235,7 +1416,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificate
@@ -1248,7 +1431,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -1257,7 +1442,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
@@ -1266,7 +1453,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
@@ -1275,7 +1464,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
@@ -1284,7 +1475,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
@@ -1293,7 +1486,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
@@ -1310,7 +1505,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidation
@@ -1323,7 +1520,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTls
@@ -1344,7 +1543,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicy
@@ -1353,7 +1554,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsCli
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaults
@@ -1362,7 +1565,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaults
     [JsonPropertyName("clientPolicy")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPoolGrpc
@@ -1371,7 +1576,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnection
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPoolHttp
@@ -1384,7 +1591,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnection
     [JsonPropertyName("maxPendingRequests")]
     public double? MaxPendingRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPoolHttp2
@@ -1393,7 +1602,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnection
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPool
@@ -1410,7 +1621,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerConnection
     [JsonPropertyName("http2")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerConnectionPoolHttp2>? Http2 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerHealthCheck
@@ -1443,7 +1656,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerHealthChec
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerPortMapping
@@ -1456,7 +1671,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerPortMappin
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificateAcm
@@ -1465,7 +1682,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertifi
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificateFile
@@ -1478,7 +1697,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertifi
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificateSds
@@ -1487,7 +1708,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertifi
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificate
@@ -1504,7 +1727,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertifi
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
@@ -1513,7 +1738,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNames
@@ -1522,7 +1749,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrustFile
@@ -1531,7 +1760,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrustSds
@@ -1540,7 +1771,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrust
@@ -1553,7 +1786,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidation
@@ -1566,7 +1801,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidat
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTls
@@ -1583,7 +1820,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListenerTls
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecListener
@@ -1604,7 +1843,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecListener
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecListenerTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFileFormatJson
@@ -1617,7 +1858,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFi
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFileFormat
@@ -1630,7 +1873,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFi
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFile
@@ -1643,7 +1888,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFi
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLog
@@ -1652,7 +1899,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLog
     [JsonPropertyName("file")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpecLogging
@@ -1661,7 +1910,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpecLogging
     [JsonPropertyName("accessLog")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProviderSpec
@@ -1678,7 +1929,9 @@ public partial class V1beta1VirtualGatewayStatusAtProviderSpec
     [JsonPropertyName("logging")]
     public IList<V1beta1VirtualGatewayStatusAtProviderSpecLogging>? Logging { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusAtProvider
@@ -1731,7 +1984,9 @@ public partial class V1beta1VirtualGatewayStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatusConditions
@@ -1760,7 +2015,9 @@ public partial class V1beta1VirtualGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualGatewayStatus defines the observed state of VirtualGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualGatewayStatus
@@ -1777,7 +2034,9 @@ public partial class V1beta1VirtualGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualGateway is the Schema for the VirtualGateways API. Provides an AWS App Mesh virtual gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1807,3 +2066,4 @@ public partial class V1beta1VirtualGateway : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1VirtualGatewayStatus? Status { get; set; }
 }
+#nullable disable

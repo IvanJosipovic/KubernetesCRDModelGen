@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformysql.azure.m.upbound.io;
+#nullable enable
 /// <summary>FlexibleServer is the Schema for the FlexibleServers API. Manages a MySQL Flexible Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FlexibleServerList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1FlexibleServer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderAdministratorPasswordSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1FlexibleServerSpecForProviderAdministratorPasswordSe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A customer_managed_key block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderCustomerManagedKey
@@ -67,7 +72,9 @@ public partial class V1beta1FlexibleServerSpecForProviderCustomerManagedKey
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRefPolicy
@@ -80,7 +87,9 @@ public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate delegatedSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRef
@@ -97,7 +106,9 @@ public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelectorPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate delegatedSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelector
@@ -131,7 +144,9 @@ public partial class V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelect
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecForProviderDelegatedSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A high_availability block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderHighAvailability
@@ -144,7 +159,9 @@ public partial class V1beta1FlexibleServerSpecForProviderHighAvailability
     [JsonPropertyName("standbyAvailabilityZone")]
     public string? StandbyAvailabilityZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderIdentity
@@ -157,7 +174,9 @@ public partial class V1beta1FlexibleServerSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A maintenance_window block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderMaintenanceWindow
@@ -174,7 +193,9 @@ public partial class V1beta1FlexibleServerSpecForProviderMaintenanceWindow
     [JsonPropertyName("startMinute")]
     public double? StartMinute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelector
@@ -238,7 +265,9 @@ public partial class V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameRef
@@ -268,7 +299,9 @@ public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameSelector
@@ -302,7 +337,9 @@ public partial class V1beta1FlexibleServerSpecForProviderResourceGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A storage block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderStorage
@@ -327,7 +364,9 @@ public partial class V1beta1FlexibleServerSpecForProviderStorage
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProvider
@@ -452,7 +491,9 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderAdministratorPasswordSecretRef
@@ -465,7 +506,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderAdministratorPasswordS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A customer_managed_key block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderCustomerManagedKey
@@ -486,7 +529,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderCustomerManagedKey
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRefPolicy
@@ -499,7 +544,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate delegatedSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRef
@@ -516,7 +563,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelectorPolicy
@@ -529,7 +578,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate delegatedSubnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelector
@@ -550,7 +601,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelec
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecInitProviderDelegatedSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A high_availability block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderHighAvailability
@@ -563,7 +616,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderHighAvailability
     [JsonPropertyName("standbyAvailabilityZone")]
     public string? StandbyAvailabilityZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderIdentity
@@ -576,7 +631,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A maintenance_window block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderMaintenanceWindow
@@ -593,7 +650,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderMaintenanceWindow
     [JsonPropertyName("startMinute")]
     public double? StartMinute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRefPolicy
@@ -606,7 +665,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRef
@@ -623,7 +684,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRef
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelectorPolicy
@@ -636,7 +699,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelector
@@ -657,7 +722,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelect
     [JsonPropertyName("policy")]
     public V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A storage block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderStorage
@@ -682,7 +749,9 @@ public partial class V1beta1FlexibleServerSpecInitProviderStorage
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProvider
@@ -795,7 +864,9 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecProviderConfigRef
@@ -808,7 +879,9 @@ public partial class V1beta1FlexibleServerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecWriteConnectionSecretToRef
@@ -817,7 +890,9 @@ public partial class V1beta1FlexibleServerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlexibleServerSpec defines the desired state of FlexibleServer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpec
@@ -842,7 +917,9 @@ public partial class V1beta1FlexibleServerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FlexibleServerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A customer_managed_key block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusAtProviderCustomerManagedKey
@@ -863,7 +940,9 @@ public partial class V1beta1FlexibleServerStatusAtProviderCustomerManagedKey
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A high_availability block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusAtProviderHighAvailability
@@ -876,7 +955,9 @@ public partial class V1beta1FlexibleServerStatusAtProviderHighAvailability
     [JsonPropertyName("standbyAvailabilityZone")]
     public string? StandbyAvailabilityZone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusAtProviderIdentity
@@ -889,7 +970,9 @@ public partial class V1beta1FlexibleServerStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A maintenance_window block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusAtProviderMaintenanceWindow
@@ -906,7 +989,9 @@ public partial class V1beta1FlexibleServerStatusAtProviderMaintenanceWindow
     [JsonPropertyName("startMinute")]
     public double? StartMinute { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A storage block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusAtProviderStorage
@@ -931,7 +1016,9 @@ public partial class V1beta1FlexibleServerStatusAtProviderStorage
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusAtProvider
@@ -1044,7 +1131,9 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusConditions
@@ -1073,7 +1162,9 @@ public partial class V1beta1FlexibleServerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlexibleServerStatus defines the observed state of FlexibleServer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatus
@@ -1090,7 +1181,9 @@ public partial class V1beta1FlexibleServerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FlexibleServer is the Schema for the FlexibleServers API. Manages a MySQL Flexible Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1120,3 +1213,4 @@ public partial class V1beta1FlexibleServer : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1FlexibleServerStatus? Status { get; set; }
 }
+#nullable disable

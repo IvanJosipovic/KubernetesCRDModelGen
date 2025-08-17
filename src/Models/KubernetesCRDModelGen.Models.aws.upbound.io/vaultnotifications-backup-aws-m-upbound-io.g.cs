@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backup.aws.m.upbound.io;
+#nullable enable
 /// <summary>VaultNotifications is the Schema for the VaultNotificationss API. Provides an AWS Backup vault notifications resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VaultNotificationsList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1VaultNotifications> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in backup to populate backupVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameRef
     [JsonPropertyName("policy")]
     public V1beta1VaultNotificationsSpecForProviderBackupVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in backup to populate backupVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1VaultNotificationsSpecForProviderBackupVaultNameSele
     [JsonPropertyName("policy")]
     public V1beta1VaultNotificationsSpecForProviderBackupVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate snsTopicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnRef
     [JsonPropertyName("policy")]
     public V1beta1VaultNotificationsSpecForProviderSnsTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate snsTopicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelector
     [JsonPropertyName("policy")]
     public V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1VaultNotificationsSpecForProvider
     [JsonPropertyName("snsTopicArnSelector")]
     public V1beta1VaultNotificationsSpecForProviderSnsTopicArnSelector? SnsTopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRefPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in backup to populate backupVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRef
@@ -228,7 +251,9 @@ public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRef
     [JsonPropertyName("policy")]
     public V1beta1VaultNotificationsSpecInitProviderBackupVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSelectorPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in backup to populate backupVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSelector
@@ -262,7 +289,9 @@ public partial class V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSel
     [JsonPropertyName("policy")]
     public V1beta1VaultNotificationsSpecInitProviderBackupVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRefPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate snsTopicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRef
@@ -292,7 +323,9 @@ public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRef
     [JsonPropertyName("policy")]
     public V1beta1VaultNotificationsSpecInitProviderSnsTopicArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelectorPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate snsTopicArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelector
@@ -326,7 +361,9 @@ public partial class V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecInitProvider
@@ -359,7 +396,9 @@ public partial class V1beta1VaultNotificationsSpecInitProvider
     [JsonPropertyName("snsTopicArnSelector")]
     public V1beta1VaultNotificationsSpecInitProviderSnsTopicArnSelector? SnsTopicArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecProviderConfigRef
@@ -372,7 +411,9 @@ public partial class V1beta1VaultNotificationsSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpecWriteConnectionSecretToRef
@@ -381,7 +422,9 @@ public partial class V1beta1VaultNotificationsSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VaultNotificationsSpec defines the desired state of VaultNotifications</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsSpec
@@ -406,7 +449,9 @@ public partial class V1beta1VaultNotificationsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VaultNotificationsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsStatusAtProvider
@@ -435,7 +480,9 @@ public partial class V1beta1VaultNotificationsStatusAtProvider
     [JsonPropertyName("snsTopicArn")]
     public string? SnsTopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsStatusConditions
@@ -464,7 +511,9 @@ public partial class V1beta1VaultNotificationsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VaultNotificationsStatus defines the observed state of VaultNotifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultNotificationsStatus
@@ -481,7 +530,9 @@ public partial class V1beta1VaultNotificationsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VaultNotifications is the Schema for the VaultNotificationss API. Provides an AWS Backup vault notifications resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -511,3 +562,4 @@ public partial class V1beta1VaultNotifications : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1VaultNotificationsStatus? Status { get; set; }
 }
+#nullable disable

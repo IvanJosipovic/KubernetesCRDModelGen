@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deployment.databricks.crossplane.io;
+#nullable enable
 /// <summary>MwsVPCEndpoint is the Schema for the MwsVPCEndpoints API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MwsVPCEndpointList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1alpha1MwsVPCEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecForProviderGcpVpcEndpointInfo
@@ -58,7 +61,9 @@ public partial class V1alpha1MwsVPCEndpointSpecForProviderGcpVpcEndpointInfo
     [JsonPropertyName("serviceAttachmentId")]
     public string? ServiceAttachmentId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecForProvider
@@ -103,7 +108,9 @@ public partial class V1alpha1MwsVPCEndpointSpecForProvider
     [JsonPropertyName("vpcEndpointName")]
     public string? VpcEndpointName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecInitProviderGcpVpcEndpointInfo
@@ -128,7 +135,9 @@ public partial class V1alpha1MwsVPCEndpointSpecInitProviderGcpVpcEndpointInfo
     [JsonPropertyName("serviceAttachmentId")]
     public string? ServiceAttachmentId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecInitProvider
@@ -173,7 +182,9 @@ public partial class V1alpha1MwsVPCEndpointSpecInitProvider
     [JsonPropertyName("vpcEndpointName")]
     public string? VpcEndpointName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecProviderConfigRefPolicy
@@ -186,7 +197,9 @@ public partial class V1alpha1MwsVPCEndpointSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecProviderConfigRef
@@ -199,7 +212,9 @@ public partial class V1alpha1MwsVPCEndpointSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1alpha1MwsVPCEndpointSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsToConfigRefPolicy
@@ -212,7 +227,9 @@ public partial class V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsToConfigR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsToConfigRef
@@ -225,7 +242,9 @@ public partial class V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsToConfigR
     [JsonPropertyName("policy")]
     public V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsToMetadata
@@ -242,7 +261,9 @@ public partial class V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsToMetadat
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsTo
@@ -259,7 +280,9 @@ public partial class V1alpha1MwsVPCEndpointSpecPublishConnectionDetailsTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpecWriteConnectionSecretToRef
@@ -272,7 +295,9 @@ public partial class V1alpha1MwsVPCEndpointSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsVPCEndpointSpec defines the desired state of MwsVPCEndpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointSpec
@@ -305,7 +330,9 @@ public partial class V1alpha1MwsVPCEndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1alpha1MwsVPCEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointStatusAtProviderGcpVpcEndpointInfo
@@ -330,7 +357,9 @@ public partial class V1alpha1MwsVPCEndpointStatusAtProviderGcpVpcEndpointInfo
     [JsonPropertyName("serviceAttachmentId")]
     public string? ServiceAttachmentId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointStatusAtProvider
@@ -379,7 +408,9 @@ public partial class V1alpha1MwsVPCEndpointStatusAtProvider
     [JsonPropertyName("vpcEndpointName")]
     public string? VpcEndpointName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointStatusConditions
@@ -408,7 +439,9 @@ public partial class V1alpha1MwsVPCEndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsVPCEndpointStatus defines the observed state of MwsVPCEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsVPCEndpointStatus
@@ -425,7 +458,9 @@ public partial class V1alpha1MwsVPCEndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MwsVPCEndpoint is the Schema for the MwsVPCEndpoints API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -455,3 +490,4 @@ public partial class V1alpha1MwsVPCEndpoint : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1alpha1MwsVPCEndpointStatus? Status { get; set; }
 }
+#nullable disable

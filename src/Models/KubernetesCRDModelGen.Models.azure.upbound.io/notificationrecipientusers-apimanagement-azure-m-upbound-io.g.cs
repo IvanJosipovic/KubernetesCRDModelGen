@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+#nullable enable
 /// <summary>NotificationRecipientUser is the Schema for the NotificationRecipientUsers API. Manages a API Management Notification Recipient User.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NotificationRecipientUserList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1NotificationRecipientUser> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProviderApiManagementIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProviderApiManagemen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProviderApiManagementIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProviderApiManagemen
     [JsonPropertyName("policy")]
     public V1beta1NotificationRecipientUserSpecForProviderApiManagementIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProviderApiManagementIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProviderApiManagemen
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProviderApiManagementIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProviderApiManagemen
     [JsonPropertyName("policy")]
     public V1beta1NotificationRecipientUserSpecForProviderApiManagementIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProviderUserIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProviderUserIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in apimanagement to populate userId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProviderUserIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProviderUserIdRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationRecipientUserSpecForProviderUserIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProviderUserIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProviderUserIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in apimanagement to populate userId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProviderUserIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProviderUserIdSelect
     [JsonPropertyName("policy")]
     public V1beta1NotificationRecipientUserSpecForProviderUserIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1NotificationRecipientUserSpecForProvider
     [JsonPropertyName("userIdSelector")]
     public V1beta1NotificationRecipientUserSpecForProviderUserIdSelector? UserIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProviderApiManagementIdRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProviderApiManageme
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Management in apimanagement to populate apiManagementId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProviderApiManagementIdRef
@@ -224,7 +247,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProviderApiManageme
     [JsonPropertyName("policy")]
     public V1beta1NotificationRecipientUserSpecInitProviderApiManagementIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProviderApiManagementIdSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProviderApiManageme
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Management in apimanagement to populate apiManagementId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProviderApiManagementIdSelector
@@ -258,7 +285,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProviderApiManageme
     [JsonPropertyName("policy")]
     public V1beta1NotificationRecipientUserSpecInitProviderApiManagementIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProviderUserIdRefPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProviderUserIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a User in apimanagement to populate userId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProviderUserIdRef
@@ -288,7 +319,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProviderUserIdRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationRecipientUserSpecInitProviderUserIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProviderUserIdSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProviderUserIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a User in apimanagement to populate userId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProviderUserIdSelector
@@ -322,7 +357,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProviderUserIdSelec
     [JsonPropertyName("policy")]
     public V1beta1NotificationRecipientUserSpecInitProviderUserIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1NotificationRecipientUserSpecInitProvider
     [JsonPropertyName("userIdSelector")]
     public V1beta1NotificationRecipientUserSpecInitProviderUserIdSelector? UserIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1NotificationRecipientUserSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1NotificationRecipientUserSpecWriteConnectionSecretTo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationRecipientUserSpec defines the desired state of NotificationRecipientUser</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserSpec
@@ -402,7 +445,9 @@ public partial class V1beta1NotificationRecipientUserSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NotificationRecipientUserSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserStatusAtProvider
@@ -423,7 +468,9 @@ public partial class V1beta1NotificationRecipientUserStatusAtProvider
     [JsonPropertyName("userId")]
     public string? UserId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserStatusConditions
@@ -452,7 +499,9 @@ public partial class V1beta1NotificationRecipientUserStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationRecipientUserStatus defines the observed state of NotificationRecipientUser.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientUserStatus
@@ -469,7 +518,9 @@ public partial class V1beta1NotificationRecipientUserStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationRecipientUser is the Schema for the NotificationRecipientUsers API. Manages a API Management Notification Recipient User.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -499,3 +550,4 @@ public partial class V1beta1NotificationRecipientUser : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1NotificationRecipientUserStatus? Status { get; set; }
 }
+#nullable disable

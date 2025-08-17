@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+#nullable enable
 /// <summary>ManagedSubscription defines a Subscription managed by the API manager as the result of a pre-negotiation with its API consumers. This subscription grant consuming access to a set of APIs to a set of Applications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ManagedSubscriptionList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1ManagedSubscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIBundleReference references an APIBundle.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecApiBundles
@@ -42,7 +45,9 @@ public partial class V1alpha1ManagedSubscriptionSpecApiBundles
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIPlan defines which APIPlan will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecApiPlan
@@ -51,7 +56,9 @@ public partial class V1alpha1ManagedSubscriptionSpecApiPlan
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecApiSelectorMatchExpressions
@@ -68,7 +75,9 @@ public partial class V1alpha1ManagedSubscriptionSpecApiSelectorMatchExpressions
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APISelector selects the APIs that will be accessible. Multiple ManagedSubscriptions can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecApiSelector
@@ -81,7 +90,9 @@ public partial class V1alpha1ManagedSubscriptionSpecApiSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIReference references an API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecApis
@@ -90,7 +101,9 @@ public partial class V1alpha1ManagedSubscriptionSpecApis
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ApplicationReference references an Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecApplications
@@ -99,7 +112,9 @@ public partial class V1alpha1ManagedSubscriptionSpecApplications
     [JsonPropertyName("appId")]
     public string AppId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedApplicationReference references a ManagedApplication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecManagedApplications
@@ -108,7 +123,9 @@ public partial class V1alpha1ManagedSubscriptionSpecManagedApplications
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OperationFilter specifies the allowed operations on APIs and APIVersions. If not set, all operations are available. An empty OperationFilter prohibits all operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecOperationFilter
@@ -117,7 +134,9 @@ public partial class V1alpha1ManagedSubscriptionSpecOperationFilter
     [JsonPropertyName("include")]
     public IList<string>? Include { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The desired behavior of this ManagedSubscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpec
@@ -158,7 +177,9 @@ public partial class V1alpha1ManagedSubscriptionSpec
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The current status of this ManagedSubscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionStatus
@@ -175,7 +196,9 @@ public partial class V1alpha1ManagedSubscriptionStatus
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ManagedSubscription defines a Subscription managed by the API manager as the result of a pre-negotiation with its API consumers. This subscription grant consuming access to a set of APIs to a set of Applications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -205,3 +228,4 @@ public partial class V1alpha1ManagedSubscription : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1ManagedSubscriptionStatus? Status { get; set; }
 }
+#nullable disable

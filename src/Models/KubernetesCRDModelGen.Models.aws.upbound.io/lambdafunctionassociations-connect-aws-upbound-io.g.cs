@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+#nullable enable
 /// <summary>LambdaFunctionAssociation is the Schema for the LambdaFunctionAssociations API. Provides details about a specific Connect Lambda Function Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LambdaFunctionAssociationList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1LambdaFunctionAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate functionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnR
     [JsonPropertyName("policy")]
     public V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate functionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnS
     [JsonPropertyName("policy")]
     public V1beta1LambdaFunctionAssociationSpecForProviderFunctionArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdRe
     [JsonPropertyName("policy")]
     public V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in connect to populate instanceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdSe
     [JsonPropertyName("policy")]
     public V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecForProvider
@@ -178,13 +197,17 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecInitProvider
 {
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecProviderConfigRefPolicy
@@ -197,7 +220,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecProviderConfigRef
@@ -210,7 +235,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LambdaFunctionAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpecWriteConnectionSecretToRef
@@ -223,7 +250,9 @@ public partial class V1beta1LambdaFunctionAssociationSpecWriteConnectionSecretTo
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LambdaFunctionAssociationSpec defines the desired state of LambdaFunctionAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationSpec
@@ -252,7 +281,9 @@ public partial class V1beta1LambdaFunctionAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LambdaFunctionAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationStatusAtProvider
@@ -273,7 +304,9 @@ public partial class V1beta1LambdaFunctionAssociationStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationStatusConditions
@@ -302,7 +335,9 @@ public partial class V1beta1LambdaFunctionAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LambdaFunctionAssociationStatus defines the observed state of LambdaFunctionAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LambdaFunctionAssociationStatus
@@ -319,7 +354,9 @@ public partial class V1beta1LambdaFunctionAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LambdaFunctionAssociation is the Schema for the LambdaFunctionAssociations API. Provides details about a specific Connect Lambda Function Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -349,3 +386,4 @@ public partial class V1beta1LambdaFunctionAssociation : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1LambdaFunctionAssociationStatus? Status { get; set; }
 }
+#nullable disable

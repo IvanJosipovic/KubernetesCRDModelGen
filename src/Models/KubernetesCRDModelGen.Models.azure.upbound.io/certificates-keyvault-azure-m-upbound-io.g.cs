@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.m.upbound.io;
+#nullable enable
 /// <summary>Certificate is the Schema for the Certificates API. Manages a Key Vault Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CertificateList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1Certificate> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base64-encoded certificate contents.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificateContentsSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1CertificateSpecForProviderCertificateContentsSecretR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePasswordSecretRef
@@ -59,7 +64,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePasswordSecretR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate block as defined below, used to Import an existing certificate. Changing this will create a new version of the Key Vault Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificate
@@ -72,7 +79,9 @@ public partial class V1beta1CertificateSpecForProviderCertificate
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1CertificateSpecForProviderCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A issuer_parameters block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyIssuerParameters
@@ -81,7 +90,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyIssuerPar
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A key_properties block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyKeyProperties
@@ -106,7 +117,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyKeyProper
     [JsonPropertyName("reuseKey")]
     public bool? ReuseKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeActionAction
@@ -115,7 +128,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeA
     [JsonPropertyName("actionType")]
     public string? ActionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A trigger block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeActionTrigger
@@ -128,7 +143,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeA
     [JsonPropertyName("lifetimePercentage")]
     public double? LifetimePercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeAction
@@ -141,7 +158,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyLifetimeA
     [JsonPropertyName("trigger")]
     public V1beta1CertificateSpecForProviderCertificatePolicyLifetimeActionTrigger? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A secret_properties block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicySecretProperties
@@ -150,7 +169,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicySecretPro
     [JsonPropertyName("contentType")]
     public string? ContentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A subject_alternative_names block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames
@@ -167,7 +188,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyX509Certi
     [JsonPropertyName("upns")]
     public IList<string>? Upns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A x509_certificate_properties block as defined below. Required when certificate block is not specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicyX509CertificateProperties
@@ -192,7 +215,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicyX509Certi
     [JsonPropertyName("validityInMonths")]
     public double? ValidityInMonths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate_policy block as defined below. Changing this (except the lifetime_action field) will create a new version of the Key Vault Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderCertificatePolicy
@@ -217,7 +242,9 @@ public partial class V1beta1CertificateSpecForProviderCertificatePolicy
     [JsonPropertyName("x509CertificateProperties")]
     public V1beta1CertificateSpecForProviderCertificatePolicyX509CertificateProperties? X509CertificateProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderKeyVaultIdRefPolicy
@@ -230,7 +257,9 @@ public partial class V1beta1CertificateSpecForProviderKeyVaultIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderKeyVaultIdRef
@@ -247,7 +276,9 @@ public partial class V1beta1CertificateSpecForProviderKeyVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateSpecForProviderKeyVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderKeyVaultIdSelectorPolicy
@@ -260,7 +291,9 @@ public partial class V1beta1CertificateSpecForProviderKeyVaultIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderKeyVaultIdSelector
@@ -281,7 +314,9 @@ public partial class V1beta1CertificateSpecForProviderKeyVaultIdSelector
     [JsonPropertyName("policy")]
     public V1beta1CertificateSpecForProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProvider
@@ -314,7 +349,9 @@ public partial class V1beta1CertificateSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base64-encoded certificate contents.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificateContentsSecretRef
@@ -327,7 +364,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificateContentsSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePasswordSecretRef
@@ -340,7 +379,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePasswordSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate block as defined below, used to Import an existing certificate. Changing this will create a new version of the Key Vault Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificate
@@ -353,7 +394,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificate
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1CertificateSpecInitProviderCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A issuer_parameters block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyIssuerParameters
@@ -362,7 +405,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyIssuerPa
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A key_properties block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyKeyProperties
@@ -387,7 +432,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyKeyPrope
     [JsonPropertyName("reuseKey")]
     public bool? ReuseKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetimeActionAction
@@ -396,7 +443,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetime
     [JsonPropertyName("actionType")]
     public string? ActionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A trigger block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetimeActionTrigger
@@ -409,7 +458,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetime
     [JsonPropertyName("lifetimePercentage")]
     public double? LifetimePercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetimeAction
@@ -422,7 +473,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyLifetime
     [JsonPropertyName("trigger")]
     public V1beta1CertificateSpecInitProviderCertificatePolicyLifetimeActionTrigger? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A secret_properties block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicySecretProperties
@@ -431,7 +484,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicySecretPr
     [JsonPropertyName("contentType")]
     public string? ContentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A subject_alternative_names block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames
@@ -448,7 +503,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyX509Cert
     [JsonPropertyName("upns")]
     public IList<string>? Upns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A x509_certificate_properties block as defined below. Required when certificate block is not specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicyX509CertificateProperties
@@ -473,7 +530,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicyX509Cert
     [JsonPropertyName("validityInMonths")]
     public double? ValidityInMonths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate_policy block as defined below. Changing this (except the lifetime_action field) will create a new version of the Key Vault Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderCertificatePolicy
@@ -498,7 +557,9 @@ public partial class V1beta1CertificateSpecInitProviderCertificatePolicy
     [JsonPropertyName("x509CertificateProperties")]
     public V1beta1CertificateSpecInitProviderCertificatePolicyX509CertificateProperties? X509CertificateProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderKeyVaultIdRefPolicy
@@ -511,7 +572,9 @@ public partial class V1beta1CertificateSpecInitProviderKeyVaultIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderKeyVaultIdRef
@@ -528,7 +591,9 @@ public partial class V1beta1CertificateSpecInitProviderKeyVaultIdRef
     [JsonPropertyName("policy")]
     public V1beta1CertificateSpecInitProviderKeyVaultIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderKeyVaultIdSelectorPolicy
@@ -541,7 +606,9 @@ public partial class V1beta1CertificateSpecInitProviderKeyVaultIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in keyvault to populate keyVaultId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderKeyVaultIdSelector
@@ -562,7 +629,9 @@ public partial class V1beta1CertificateSpecInitProviderKeyVaultIdSelector
     [JsonPropertyName("policy")]
     public V1beta1CertificateSpecInitProviderKeyVaultIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProvider
@@ -595,7 +664,9 @@ public partial class V1beta1CertificateSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecProviderConfigRef
@@ -608,7 +679,9 @@ public partial class V1beta1CertificateSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecWriteConnectionSecretToRef
@@ -617,7 +690,9 @@ public partial class V1beta1CertificateSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateSpec defines the desired state of Certificate</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpec
@@ -642,7 +717,9 @@ public partial class V1beta1CertificateSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CertificateSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The base64-encoded certificate contents.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificateContentsSecretRef
@@ -655,7 +732,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificateContentsSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePasswordSecretRef
@@ -668,7 +747,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePasswordSecret
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate block as defined below, used to Import an existing certificate. Changing this will create a new version of the Key Vault Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificate
@@ -681,7 +762,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificate
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1CertificateStatusAtProviderCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificateAttribute
@@ -710,7 +793,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificateAttribute
     [JsonPropertyName("updated")]
     public string? Updated { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A issuer_parameters block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyIssuerParameters
@@ -719,7 +804,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyIssuerPa
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A key_properties block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyKeyProperties
@@ -744,7 +831,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyKeyPrope
     [JsonPropertyName("reuseKey")]
     public bool? ReuseKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetimeActionAction
@@ -753,7 +842,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetime
     [JsonPropertyName("actionType")]
     public string? ActionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A trigger block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetimeActionTrigger
@@ -766,7 +857,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetime
     [JsonPropertyName("lifetimePercentage")]
     public double? LifetimePercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetimeAction
@@ -779,7 +872,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyLifetime
     [JsonPropertyName("trigger")]
     public V1beta1CertificateStatusAtProviderCertificatePolicyLifetimeActionTrigger? Trigger { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A secret_properties block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicySecretProperties
@@ -788,7 +883,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicySecretPr
     [JsonPropertyName("contentType")]
     public string? ContentType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A subject_alternative_names block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames
@@ -805,7 +902,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyX509Cert
     [JsonPropertyName("upns")]
     public IList<string>? Upns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A x509_certificate_properties block as defined below. Required when certificate block is not specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicyX509CertificateProperties
@@ -830,7 +929,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicyX509Cert
     [JsonPropertyName("validityInMonths")]
     public double? ValidityInMonths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A certificate_policy block as defined below. Changing this (except the lifetime_action field) will create a new version of the Key Vault Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProviderCertificatePolicy
@@ -855,7 +956,9 @@ public partial class V1beta1CertificateStatusAtProviderCertificatePolicy
     [JsonPropertyName("x509CertificateProperties")]
     public V1beta1CertificateStatusAtProviderCertificatePolicyX509CertificateProperties? X509CertificateProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusAtProvider
@@ -924,7 +1027,9 @@ public partial class V1beta1CertificateStatusAtProvider
     [JsonPropertyName("versionlessSecretId")]
     public string? VersionlessSecretId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatusConditions
@@ -953,7 +1058,9 @@ public partial class V1beta1CertificateStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CertificateStatus defines the observed state of Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateStatus
@@ -970,7 +1077,9 @@ public partial class V1beta1CertificateStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Certificate is the Schema for the Certificates API. Manages a Key Vault Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1000,3 +1109,4 @@ public partial class V1beta1Certificate : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1CertificateStatus? Status { get; set; }
 }
+#nullable disable

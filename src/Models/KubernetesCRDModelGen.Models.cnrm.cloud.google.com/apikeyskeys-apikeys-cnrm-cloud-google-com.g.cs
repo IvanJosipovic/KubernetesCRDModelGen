@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apikeys.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>APIKeysKey is the Schema for the APIKeys Key resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1APIKeysKeyList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1alpha1APIKeysKey> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1APIKeysKeySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictionsAllowedApplications
@@ -67,7 +72,9 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictionsAll
     [JsonPropertyName("sha1Fingerprint")]
     public string Sha1Fingerprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Android apps that are allowed to use the key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictions
@@ -76,7 +83,9 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictions
     [JsonPropertyName("allowedApplications")]
     public IList<V1alpha1APIKeysKeySpecRestrictionsAndroidKeyRestrictionsAllowedApplications> AllowedApplications { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsApiTargets
@@ -89,7 +98,9 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsApiTargets
     [JsonPropertyName("service")]
     public string Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The HTTP referrers (websites) that are allowed to use the key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsBrowserKeyRestrictions
@@ -98,7 +109,9 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsBrowserKeyRestrictions
     [JsonPropertyName("allowedReferrers")]
     public IList<string> AllowedReferrers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The iOS apps that are allowed to use the key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsIosKeyRestrictions
@@ -107,7 +120,9 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsIosKeyRestrictions
     [JsonPropertyName("allowedBundleIds")]
     public IList<string> AllowedBundleIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The IP addresses of callers that are allowed to use the key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictionsServerKeyRestrictions
@@ -116,7 +131,9 @@ public partial class V1alpha1APIKeysKeySpecRestrictionsServerKeyRestrictions
     [JsonPropertyName("allowedIps")]
     public IList<string> AllowedIps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Key restrictions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpecRestrictions
@@ -141,7 +158,9 @@ public partial class V1alpha1APIKeysKeySpecRestrictions
     [JsonPropertyName("serverKeyRestrictions")]
     public V1alpha1APIKeysKeySpecRestrictionsServerKeyRestrictions? ServerKeyRestrictions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeySpec
@@ -162,7 +181,9 @@ public partial class V1alpha1APIKeysKeySpec
     [JsonPropertyName("restrictions")]
     public V1alpha1APIKeysKeySpecRestrictions? Restrictions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeyStatusConditions
@@ -187,7 +208,9 @@ public partial class V1alpha1APIKeysKeyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeyStatusObservedState
@@ -196,7 +219,9 @@ public partial class V1alpha1APIKeysKeyStatusObservedState
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIKeysKeyStatus
@@ -213,7 +238,9 @@ public partial class V1alpha1APIKeysKeyStatus
     [JsonPropertyName("observedState")]
     public V1alpha1APIKeysKeyStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>APIKeysKey is the Schema for the APIKeys Key resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -243,3 +270,4 @@ public partial class V1alpha1APIKeysKey : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1alpha1APIKeysKeyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1KubeControllersConfigurationList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1KubeControllersConfiguration> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersLoadBalancer
@@ -42,7 +45,9 @@ public partial class V1KubeControllersConfigurationSpecControllersLoadBalancer
     [JsonPropertyName("assignIPs")]
     public string? AssignIPs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNamespace
@@ -51,7 +56,9 @@ public partial class V1KubeControllersConfigurationSpecControllersNamespace
     [JsonPropertyName("reconcilerPeriod")]
     public string? ReconcilerPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpointTemplates
@@ -76,7 +83,9 @@ public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoi
     [JsonPropertyName("nodeSelector")]
     public string? NodeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoint
@@ -93,7 +102,9 @@ public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoi
     [JsonPropertyName("templates")]
     public IList<V1KubeControllersConfigurationSpecControllersNodeHostEndpointTemplates>? Templates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNode
@@ -114,7 +125,9 @@ public partial class V1KubeControllersConfigurationSpecControllersNode
     [JsonPropertyName("syncLabels")]
     public string? SyncLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersPolicy
@@ -123,7 +136,9 @@ public partial class V1KubeControllersConfigurationSpecControllersPolicy
     [JsonPropertyName("reconcilerPeriod")]
     public string? ReconcilerPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersServiceAccount
@@ -132,7 +147,9 @@ public partial class V1KubeControllersConfigurationSpecControllersServiceAccount
     [JsonPropertyName("reconcilerPeriod")]
     public string? ReconcilerPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersWorkloadEndpoint
@@ -141,7 +158,9 @@ public partial class V1KubeControllersConfigurationSpecControllersWorkloadEndpoi
     [JsonPropertyName("reconcilerPeriod")]
     public string? ReconcilerPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllers
@@ -170,7 +189,9 @@ public partial class V1KubeControllersConfigurationSpecControllers
     [JsonPropertyName("workloadEndpoint")]
     public V1KubeControllersConfigurationSpecControllersWorkloadEndpoint? WorkloadEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpec
@@ -199,7 +220,9 @@ public partial class V1KubeControllersConfigurationSpec
     [JsonPropertyName("prometheusMetricsPort")]
     public int? PrometheusMetricsPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersLoadBalancer
@@ -208,7 +231,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("assignIPs")]
     public string? AssignIPs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNamespace
@@ -217,7 +242,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("reconcilerPeriod")]
     public string? ReconcilerPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNodeHostEndpointTemplates
@@ -242,7 +269,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("nodeSelector")]
     public string? NodeSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNodeHostEndpoint
@@ -259,7 +288,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("templates")]
     public IList<V1KubeControllersConfigurationStatusRunningConfigControllersNodeHostEndpointTemplates>? Templates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNode
@@ -280,7 +311,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("syncLabels")]
     public string? SyncLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersPolicy
@@ -289,7 +322,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("reconcilerPeriod")]
     public string? ReconcilerPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersServiceAccount
@@ -298,7 +333,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("reconcilerPeriod")]
     public string? ReconcilerPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersWorkloadEndpoint
@@ -307,7 +344,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("reconcilerPeriod")]
     public string? ReconcilerPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllers
@@ -336,7 +375,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     [JsonPropertyName("workloadEndpoint")]
     public V1KubeControllersConfigurationStatusRunningConfigControllersWorkloadEndpoint? WorkloadEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfig
@@ -365,7 +406,9 @@ public partial class V1KubeControllersConfigurationStatusRunningConfig
     [JsonPropertyName("prometheusMetricsPort")]
     public int? PrometheusMetricsPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatus
@@ -378,7 +421,9 @@ public partial class V1KubeControllersConfigurationStatus
     [JsonPropertyName("runningConfig")]
     public V1KubeControllersConfigurationStatusRunningConfig? RunningConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -408,3 +453,4 @@ public partial class V1KubeControllersConfiguration : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1KubeControllersConfigurationStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dlm.aws.m.upbound.io;
+#nullable enable
 /// <summary>LifecyclePolicy is the Schema for the LifecyclePolicys API. Provides a Data Lifecycle Manager (DLM) lifecycle policy for managing snapshots.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LifecyclePolicyList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1LifecyclePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1LifecyclePolicySpecForProviderExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelect
     [JsonPropertyName("policy")]
     public V1beta1LifecyclePolicySpecForProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption settings for the copied snapshot. See the encryption_configuration block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCrossRegionCopyEncryptionConfiguration
@@ -110,7 +121,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCro
     [JsonPropertyName("encrypted")]
     public bool? Encrypted { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCrossRegionCopyRetainRule
@@ -123,7 +136,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCro
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCrossRegionCopy
@@ -140,7 +155,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsActionCro
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the action configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsAction
@@ -153,7 +170,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsAction
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsEventSourceParameters
@@ -170,7 +189,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsEventSour
     [JsonPropertyName("snapshotOwner")]
     public IList<string>? SnapshotOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The event that triggers the event-based policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the event_source configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsEventSource
@@ -183,7 +204,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsEventSour
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsParameters
@@ -196,7 +219,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsParameter
     [JsonPropertyName("noReboot")]
     public bool? NoReboot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the create_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCreateRule
@@ -221,7 +246,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     [JsonPropertyName("times")]
     public IList<string>? Times { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRefPolicy
@@ -234,7 +261,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate cmkArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRef
@@ -251,7 +280,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     [JsonPropertyName("policy")]
     public V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicy
@@ -264,7 +295,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate cmkArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelector
@@ -285,7 +318,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     [JsonPropertyName("policy")]
     public V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the deprecate_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule
@@ -298,7 +333,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRuleRetainRule
@@ -311,7 +348,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleCrossRegionCopyRule
@@ -348,7 +387,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleC
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the deprecate_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleDeprecateRule
@@ -365,7 +406,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleD
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the fast_restore_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleFastRestoreRule
@@ -386,7 +429,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleF
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleRetainRule
@@ -403,7 +448,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleR
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the share_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleShareRule
@@ -420,7 +467,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleS
     [JsonPropertyName("unshareIntervalUnit")]
     public string? UnshareIntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsSchedule
@@ -465,7 +514,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsSchedule
     [JsonPropertyName("variableTags")]
     public IDictionary<string, string>? VariableTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the policy_details configuration block. Max of 1.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetails
@@ -502,7 +553,9 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetails
     [JsonPropertyName("targetTags")]
     public IDictionary<string, string>? TargetTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecForProvider
@@ -539,7 +592,9 @@ public partial class V1beta1LifecyclePolicySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRefPolicy
@@ -552,7 +607,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRef
@@ -569,7 +626,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelectorPolicy
@@ -582,7 +641,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate executionRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelector
@@ -603,7 +664,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelec
     [JsonPropertyName("policy")]
     public V1beta1LifecyclePolicySpecInitProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption settings for the copied snapshot. See the encryption_configuration block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCrossRegionCopyEncryptionConfiguration
@@ -616,7 +679,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCr
     [JsonPropertyName("encrypted")]
     public bool? Encrypted { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCrossRegionCopyRetainRule
@@ -629,7 +694,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCr
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCrossRegionCopy
@@ -646,7 +713,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsActionCr
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the action configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsAction
@@ -659,7 +728,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsAction
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsEventSourceParameters
@@ -676,7 +747,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsEventSou
     [JsonPropertyName("snapshotOwner")]
     public IList<string>? SnapshotOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The event that triggers the event-based policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the event_source configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsEventSource
@@ -689,7 +762,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsEventSou
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsParameters
@@ -702,7 +777,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsParamete
     [JsonPropertyName("noReboot")]
     public bool? NoReboot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the create_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCreateRule
@@ -727,7 +804,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("times")]
     public IList<string>? Times { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRefPolicy
@@ -740,7 +819,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate cmkArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRef
@@ -757,7 +838,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("policy")]
     public V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicy
@@ -770,7 +853,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate cmkArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelector
@@ -791,7 +876,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("policy")]
     public V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleCmkArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the deprecate_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule
@@ -804,7 +891,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRuleRetainRule
@@ -817,7 +906,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleCrossRegionCopyRule
@@ -854,7 +945,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the deprecate_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleDeprecateRule
@@ -871,7 +964,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the fast_restore_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleFastRestoreRule
@@ -892,7 +987,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleRetainRule
@@ -909,7 +1006,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the share_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsScheduleShareRule
@@ -926,7 +1025,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("unshareIntervalUnit")]
     public string? UnshareIntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
@@ -971,7 +1072,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("variableTags")]
     public IDictionary<string, string>? VariableTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the policy_details configuration block. Max of 1.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetails
@@ -1008,7 +1111,9 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetails
     [JsonPropertyName("targetTags")]
     public IDictionary<string, string>? TargetTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecInitProvider
@@ -1041,7 +1146,9 @@ public partial class V1beta1LifecyclePolicySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecProviderConfigRef
@@ -1054,7 +1161,9 @@ public partial class V1beta1LifecyclePolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpecWriteConnectionSecretToRef
@@ -1063,7 +1172,9 @@ public partial class V1beta1LifecyclePolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LifecyclePolicySpec defines the desired state of LifecyclePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicySpec
@@ -1088,7 +1199,9 @@ public partial class V1beta1LifecyclePolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LifecyclePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The encryption settings for the copied snapshot. See the encryption_configuration block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCrossRegionCopyEncryptionConfiguration
@@ -1101,7 +1214,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCr
     [JsonPropertyName("encrypted")]
     public bool? Encrypted { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCrossRegionCopyRetainRule
@@ -1114,7 +1229,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCr
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCrossRegionCopy
@@ -1131,7 +1248,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsActionCr
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The actions to be performed when the event-based policy is triggered. You can specify only one action per policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the action configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsAction
@@ -1144,7 +1263,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsAction
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsEventSourceParameters
@@ -1161,7 +1282,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsEventSou
     [JsonPropertyName("snapshotOwner")]
     public IList<string>? SnapshotOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The event that triggers the event-based policy. This parameter is required for event-based policies only. If you are creating a snapshot or AMI policy, omit this parameter. See the event_source configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsEventSource
@@ -1174,7 +1297,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsEventSou
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of optional parameters for snapshot and AMI lifecycle policies. See the parameters configuration block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsParameters
@@ -1187,7 +1312,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsParamete
     [JsonPropertyName("noReboot")]
     public bool? NoReboot { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the create_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleCreateRule
@@ -1212,7 +1339,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("times")]
     public IList<string>? Times { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the deprecate_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule
@@ -1225,7 +1354,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleCrossRegionCopyRuleRetainRule
@@ -1238,7 +1369,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleCrossRegionCopyRule
@@ -1267,7 +1400,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the deprecate_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleDeprecateRule
@@ -1284,7 +1419,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the fast_restore_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleFastRestoreRule
@@ -1305,7 +1442,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the retention rule for cross-Region snapshot copies. See the retain_rule block. Max of 1 per action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleRetainRule
@@ -1322,7 +1461,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("intervalUnit")]
     public string? IntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the share_rule block. Max of 1 per schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsScheduleShareRule
@@ -1339,7 +1480,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("unshareIntervalUnit")]
     public string? UnshareIntervalUnit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
@@ -1384,7 +1527,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("variableTags")]
     public IDictionary<string, string>? VariableTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>See the policy_details configuration block. Max of 1.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetails
@@ -1421,7 +1566,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetails
     [JsonPropertyName("targetTags")]
     public IDictionary<string, string>? TargetTags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusAtProvider
@@ -1462,7 +1609,9 @@ public partial class V1beta1LifecyclePolicyStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatusConditions
@@ -1491,7 +1640,9 @@ public partial class V1beta1LifecyclePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LifecyclePolicyStatus defines the observed state of LifecyclePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LifecyclePolicyStatus
@@ -1508,7 +1659,9 @@ public partial class V1beta1LifecyclePolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LifecyclePolicy is the Schema for the LifecyclePolicys API. Provides a Data Lifecycle Manager (DLM) lifecycle policy for managing snapshots.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1538,3 +1691,4 @@ public partial class V1beta1LifecyclePolicy : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1LifecyclePolicyStatus? Status { get; set; }
 }
+#nullable disable

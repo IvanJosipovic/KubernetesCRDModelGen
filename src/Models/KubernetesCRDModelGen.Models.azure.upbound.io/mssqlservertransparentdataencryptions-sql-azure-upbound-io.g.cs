@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+#nullable enable
 /// <summary>MSSQLServerTransparentDataEncryption is the Schema for the MSSQLServerTransparentDataEncryptions API. Manages the transparent data encryption configuration for a MSSQL Server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionList : IKubernet
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLServerTransparentDataEncryption> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in keyvault to populate keyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderK
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderK
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in keyvault to populate keyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderK
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderS
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLServer in sql to populate serverId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderS
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProvider
     [JsonPropertyName("serverIdSelector")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderServerIdSelector? ServerIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in keyvault to populate keyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdRef
@@ -208,7 +231,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in keyvault to populate keyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelector
@@ -238,7 +265,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
@@ -263,7 +292,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     [JsonPropertyName("managedHsmKeyId")]
     public string? ManagedHsmKeyId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConfigRefPolicy
@@ -276,7 +307,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConf
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConfigRef
@@ -289,7 +322,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConf
     [JsonPropertyName("policy")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecWriteConnectionSecretToRef
@@ -302,7 +337,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecWriteConnect
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerTransparentDataEncryptionSpec defines the desired state of MSSQLServerTransparentDataEncryption</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionSpec
@@ -331,7 +368,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusAtProvider
@@ -356,7 +395,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusAtProvider
     [JsonPropertyName("serverId")]
     public string? ServerId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusConditions
@@ -385,7 +426,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerTransparentDataEncryptionStatus defines the observed state of MSSQLServerTransparentDataEncryption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerTransparentDataEncryptionStatus
@@ -402,7 +445,9 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLServerTransparentDataEncryption is the Schema for the MSSQLServerTransparentDataEncryptions API. Manages the transparent data encryption configuration for a MSSQL Server</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -432,3 +477,4 @@ public partial class V1beta1MSSQLServerTransparentDataEncryption : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1MSSQLServerTransparentDataEncryptionStatus? Status { get; set; }
 }
+#nullable disable

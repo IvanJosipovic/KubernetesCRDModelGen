@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storagecache.azure.upbound.io;
+#nullable enable
 /// <summary>HPCCacheAccessPolicy is the Schema for the HPCCacheAccessPolicys API. Manages a HPC Cache Access Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HPCCacheAccessPolicyList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1HPCCacheAccessPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderAccessRule
@@ -70,7 +73,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProviderAccessRule
     [JsonPropertyName("suidEnabled")]
     public bool? SuidEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRefPolicy
@@ -83,7 +88,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HPCCache in storagecache to populate hpcCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRef
@@ -96,7 +103,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelectorPolicy
@@ -109,7 +118,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HPCCache in storagecache to populate hpcCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelector
@@ -126,7 +137,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecForProvider
@@ -147,7 +160,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecForProvider
     [JsonPropertyName("hpcCacheIdSelector")]
     public V1beta1HPCCacheAccessPolicySpecForProviderHpcCacheIdSelector? HpcCacheIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderAccessRule
@@ -184,7 +199,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProviderAccessRule
     [JsonPropertyName("suidEnabled")]
     public bool? SuidEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRefPolicy
@@ -197,7 +214,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HPCCache in storagecache to populate hpcCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRef
@@ -210,7 +229,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelectorPolicy
@@ -223,7 +244,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HPCCache in storagecache to populate hpcCacheId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelector
@@ -240,7 +263,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelect
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecInitProvider
@@ -261,7 +286,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecInitProvider
     [JsonPropertyName("hpcCacheIdSelector")]
     public V1beta1HPCCacheAccessPolicySpecInitProviderHpcCacheIdSelector? HpcCacheIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecProviderConfigRefPolicy
@@ -274,7 +301,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecProviderConfigRef
@@ -287,7 +316,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1HPCCacheAccessPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecWriteConnectionSecretToRef
@@ -300,7 +331,9 @@ public partial class V1beta1HPCCacheAccessPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheAccessPolicySpec defines the desired state of HPCCacheAccessPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpec
@@ -329,7 +362,9 @@ public partial class V1beta1HPCCacheAccessPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HPCCacheAccessPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicyStatusAtProviderAccessRule
@@ -366,7 +401,9 @@ public partial class V1beta1HPCCacheAccessPolicyStatusAtProviderAccessRule
     [JsonPropertyName("suidEnabled")]
     public bool? SuidEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicyStatusAtProvider
@@ -383,7 +420,9 @@ public partial class V1beta1HPCCacheAccessPolicyStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicyStatusConditions
@@ -412,7 +451,9 @@ public partial class V1beta1HPCCacheAccessPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheAccessPolicyStatus defines the observed state of HPCCacheAccessPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicyStatus
@@ -429,7 +470,9 @@ public partial class V1beta1HPCCacheAccessPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HPCCacheAccessPolicy is the Schema for the HPCCacheAccessPolicys API. Manages a HPC Cache Access Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -459,3 +502,4 @@ public partial class V1beta1HPCCacheAccessPolicy : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1HPCCacheAccessPolicyStatus? Status { get; set; }
 }
+#nullable disable

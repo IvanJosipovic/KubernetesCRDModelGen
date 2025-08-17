@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sourcerepo.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SourceRepoRepositoryList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1SourceRepoRepository> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service account used for publishing Cloud Pub/Sub messages. This service account needs to be in the same project as the pubsubConfig. When added, the caller needs to have iam.serviceAccounts.actAs permission on this service account. If unspecified, it defaults to the compute engine default service account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsServiceAccountRef
@@ -50,7 +53,9 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsServiceAccountR
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsTopicRef
@@ -67,7 +72,9 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsTopicRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositorySpecPubsubConfigs
@@ -84,7 +91,9 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigs
     [JsonPropertyName("topicRef")]
     public V1beta1SourceRepoRepositorySpecPubsubConfigsTopicRef TopicRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositorySpec
@@ -97,7 +106,9 @@ public partial class V1beta1SourceRepoRepositorySpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositoryStatusConditions
@@ -122,7 +133,9 @@ public partial class V1beta1SourceRepoRepositoryStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceRepoRepositoryStatus
@@ -143,7 +156,9 @@ public partial class V1beta1SourceRepoRepositoryStatus
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -173,3 +188,4 @@ public partial class V1beta1SourceRepoRepository : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1SourceRepoRepositoryStatus? Status { get; set; }
 }
+#nullable disable

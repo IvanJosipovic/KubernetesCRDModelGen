@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.m.upbound.io;
+#nullable enable
 /// <summary>MSSQLManagedInstance is the Schema for the MSSQLManagedInstances API. Manages a Microsoft SQL Azure Managed Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MSSQLManagedInstanceList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1MSSQLManagedInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderAdministratorLoginPasswordSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderAdministratorLogi
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_active_directory_administrator block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderAzureActiveDirectoryAdministrator
@@ -71,7 +76,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderAzureActiveDirect
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdRefPolicy
@@ -84,7 +91,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLManagedInstance in sql to populate dnsZonePartnerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdRef
@@ -101,7 +110,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdR
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdSelectorPolicy
@@ -114,7 +125,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLManagedInstance in sql to populate dnsZonePartnerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdSelector
@@ -135,7 +148,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdS
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderIdentity
@@ -148,7 +163,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupNameRefPolicy
@@ -161,7 +178,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupNameRef
@@ -178,7 +197,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupNameSelectorPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupNameSelector
@@ -212,7 +235,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdRefPolicy
@@ -225,7 +250,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdRef
@@ -242,7 +269,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdSelectorPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdSelector
@@ -276,7 +307,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProvider
@@ -401,7 +434,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProvider
     [JsonPropertyName("zoneRedundantEnabled")]
     public bool? ZoneRedundantEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderAdministratorLoginPasswordSecretRef
@@ -414,7 +449,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderAdministratorLog
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_active_directory_administrator block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderAzureActiveDirectoryAdministrator
@@ -439,7 +476,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderAzureActiveDirec
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerIdRefPolicy
@@ -452,7 +491,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MSSQLManagedInstance in sql to populate dnsZonePartnerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerIdRef
@@ -469,7 +510,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerId
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerIdSelectorPolicy
@@ -482,7 +525,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MSSQLManagedInstance in sql to populate dnsZonePartnerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerIdSelector
@@ -503,7 +548,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerId
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderIdentity
@@ -516,7 +563,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdRefPolicy
@@ -529,7 +578,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdRef
@@ -546,7 +597,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdRef
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdSelectorPolicy
@@ -559,7 +612,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdSelector
@@ -580,7 +635,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1MSSQLManagedInstanceSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProvider
@@ -693,7 +750,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProvider
     [JsonPropertyName("zoneRedundantEnabled")]
     public bool? ZoneRedundantEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecProviderConfigRef
@@ -706,7 +765,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecWriteConnectionSecretToRef
@@ -715,7 +776,9 @@ public partial class V1beta1MSSQLManagedInstanceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLManagedInstanceSpec defines the desired state of MSSQLManagedInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpec
@@ -740,7 +803,9 @@ public partial class V1beta1MSSQLManagedInstanceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MSSQLManagedInstanceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An azure_active_directory_administrator block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceStatusAtProviderAzureActiveDirectoryAdministrator
@@ -765,7 +830,9 @@ public partial class V1beta1MSSQLManagedInstanceStatusAtProviderAzureActiveDirec
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceStatusAtProviderIdentity
@@ -786,7 +853,9 @@ public partial class V1beta1MSSQLManagedInstanceStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceStatusAtProvider
@@ -895,7 +964,9 @@ public partial class V1beta1MSSQLManagedInstanceStatusAtProvider
     [JsonPropertyName("zoneRedundantEnabled")]
     public bool? ZoneRedundantEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceStatusConditions
@@ -924,7 +995,9 @@ public partial class V1beta1MSSQLManagedInstanceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLManagedInstanceStatus defines the observed state of MSSQLManagedInstance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceStatus
@@ -941,7 +1014,9 @@ public partial class V1beta1MSSQLManagedInstanceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MSSQLManagedInstance is the Schema for the MSSQLManagedInstances API. Manages a Microsoft SQL Azure Managed Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -971,3 +1046,4 @@ public partial class V1beta1MSSQLManagedInstance : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1MSSQLManagedInstanceStatus? Status { get; set; }
 }
+#nullable disable

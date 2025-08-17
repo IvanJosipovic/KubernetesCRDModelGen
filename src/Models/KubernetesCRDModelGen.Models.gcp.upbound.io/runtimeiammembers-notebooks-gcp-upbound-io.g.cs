@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notebooks.gcp.upbound.io;
+#nullable enable
 /// <summary>RuntimeIAMMember is the Schema for the RuntimeIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RuntimeIAMMemberList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1RuntimeIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecForProviderCondition
@@ -50,7 +53,9 @@ public partial class V1beta1RuntimeIAMMemberSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Runtime in notebooks to populate runtimeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameRef
@@ -76,7 +83,9 @@ public partial class V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameRef
     [JsonPropertyName("policy")]
     public V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Runtime in notebooks to populate runtimeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameSelector
@@ -106,7 +117,9 @@ public partial class V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameSelector
     [JsonPropertyName("policy")]
     public V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecForProvider
@@ -143,7 +156,9 @@ public partial class V1beta1RuntimeIAMMemberSpecForProvider
     [JsonPropertyName("runtimeNameSelector")]
     public V1beta1RuntimeIAMMemberSpecForProviderRuntimeNameSelector? RuntimeNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecInitProviderCondition
@@ -160,7 +175,9 @@ public partial class V1beta1RuntimeIAMMemberSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameRefPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Runtime in notebooks to populate runtimeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameRef
@@ -186,7 +205,9 @@ public partial class V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameRef
     [JsonPropertyName("policy")]
     public V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameSelectorPolicy
@@ -199,7 +220,9 @@ public partial class V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Runtime in notebooks to populate runtimeName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameSelector
@@ -216,7 +239,9 @@ public partial class V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameSelector
     [JsonPropertyName("policy")]
     public V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecInitProvider
@@ -253,7 +278,9 @@ public partial class V1beta1RuntimeIAMMemberSpecInitProvider
     [JsonPropertyName("runtimeNameSelector")]
     public V1beta1RuntimeIAMMemberSpecInitProviderRuntimeNameSelector? RuntimeNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecProviderConfigRefPolicy
@@ -266,7 +293,9 @@ public partial class V1beta1RuntimeIAMMemberSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecProviderConfigRef
@@ -279,7 +308,9 @@ public partial class V1beta1RuntimeIAMMemberSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RuntimeIAMMemberSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpecWriteConnectionSecretToRef
@@ -292,7 +323,9 @@ public partial class V1beta1RuntimeIAMMemberSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuntimeIAMMemberSpec defines the desired state of RuntimeIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberSpec
@@ -321,7 +354,9 @@ public partial class V1beta1RuntimeIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RuntimeIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberStatusAtProviderCondition
@@ -338,7 +373,9 @@ public partial class V1beta1RuntimeIAMMemberStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberStatusAtProvider
@@ -375,7 +412,9 @@ public partial class V1beta1RuntimeIAMMemberStatusAtProvider
     [JsonPropertyName("runtimeName")]
     public string? RuntimeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberStatusConditions
@@ -404,7 +443,9 @@ public partial class V1beta1RuntimeIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuntimeIAMMemberStatus defines the observed state of RuntimeIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeIAMMemberStatus
@@ -421,7 +462,9 @@ public partial class V1beta1RuntimeIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuntimeIAMMember is the Schema for the RuntimeIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -451,3 +494,4 @@ public partial class V1beta1RuntimeIAMMember : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1RuntimeIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

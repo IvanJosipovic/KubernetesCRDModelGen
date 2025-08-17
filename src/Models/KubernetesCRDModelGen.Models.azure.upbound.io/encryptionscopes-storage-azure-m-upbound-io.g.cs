@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.m.upbound.io;
+#nullable enable
 /// <summary>EncryptionScope is the Schema for the EncryptionScopes API. Manages a Storage Encryption Scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EncryptionScopeList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1EncryptionScope> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecForProviderStorageAccountIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1EncryptionScopeSpecForProviderStorageAccountIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecForProviderStorageAccountIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1EncryptionScopeSpecForProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1EncryptionScopeSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecForProviderStorageAccountIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1EncryptionScopeSpecForProviderStorageAccountIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecForProviderStorageAccountIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1EncryptionScopeSpecForProviderStorageAccountIdSelect
     [JsonPropertyName("policy")]
     public V1beta1EncryptionScopeSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecForProvider
@@ -126,7 +137,9 @@ public partial class V1beta1EncryptionScopeSpecForProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1EncryptionScopeSpecForProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecInitProviderStorageAccountIdRefPolicy
@@ -139,7 +152,9 @@ public partial class V1beta1EncryptionScopeSpecInitProviderStorageAccountIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecInitProviderStorageAccountIdRef
@@ -156,7 +171,9 @@ public partial class V1beta1EncryptionScopeSpecInitProviderStorageAccountIdRef
     [JsonPropertyName("policy")]
     public V1beta1EncryptionScopeSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecInitProviderStorageAccountIdSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1EncryptionScopeSpecInitProviderStorageAccountIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecInitProviderStorageAccountIdSelector
@@ -190,7 +209,9 @@ public partial class V1beta1EncryptionScopeSpecInitProviderStorageAccountIdSelec
     [JsonPropertyName("policy")]
     public V1beta1EncryptionScopeSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecInitProvider
@@ -219,7 +240,9 @@ public partial class V1beta1EncryptionScopeSpecInitProvider
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1EncryptionScopeSpecInitProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecProviderConfigRef
@@ -232,7 +255,9 @@ public partial class V1beta1EncryptionScopeSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpecWriteConnectionSecretToRef
@@ -241,7 +266,9 @@ public partial class V1beta1EncryptionScopeSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EncryptionScopeSpec defines the desired state of EncryptionScope</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeSpec
@@ -266,7 +293,9 @@ public partial class V1beta1EncryptionScopeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EncryptionScopeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeStatusAtProvider
@@ -291,7 +320,9 @@ public partial class V1beta1EncryptionScopeStatusAtProvider
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeStatusConditions
@@ -320,7 +351,9 @@ public partial class V1beta1EncryptionScopeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EncryptionScopeStatus defines the observed state of EncryptionScope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EncryptionScopeStatus
@@ -337,7 +370,9 @@ public partial class V1beta1EncryptionScopeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EncryptionScope is the Schema for the EncryptionScopes API. Manages a Storage Encryption Scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -367,3 +402,4 @@ public partial class V1beta1EncryptionScope : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1EncryptionScopeStatus? Status { get; set; }
 }
+#nullable disable

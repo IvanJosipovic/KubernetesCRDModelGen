@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apphub.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>AppHubDiscoveredWorkload is the Schema for the AppHubDiscoveredWorkload API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1AppHubDiscoveredWorkloadList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1alpha1AppHubDiscoveredWorkload> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredWorkloadSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1AppHubDiscoveredWorkloadSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubDiscoveredWorkloadSpec defines the desired state of AppHubDiscoveredWorkload</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredWorkloadSpec
@@ -71,7 +76,9 @@ public partial class V1alpha1AppHubDiscoveredWorkloadSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredWorkloadStatusConditions
@@ -96,7 +103,9 @@ public partial class V1alpha1AppHubDiscoveredWorkloadStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Properties of an underlying compute resource represented by the Workload. These are immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredWorkloadStatusObservedStateWorkloadProperties
@@ -113,7 +122,9 @@ public partial class V1alpha1AppHubDiscoveredWorkloadStatusObservedStateWorkload
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Reference of an underlying compute resource represented by the Workload. These are immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredWorkloadStatusObservedStateWorkloadReference
@@ -122,7 +133,9 @@ public partial class V1alpha1AppHubDiscoveredWorkloadStatusObservedStateWorkload
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredWorkloadStatusObservedState
@@ -135,7 +148,9 @@ public partial class V1alpha1AppHubDiscoveredWorkloadStatusObservedState
     [JsonPropertyName("workloadReference")]
     public V1alpha1AppHubDiscoveredWorkloadStatusObservedStateWorkloadReference? WorkloadReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubDiscoveredWorkloadStatus defines the config connector machine state of AppHubDiscoveredWorkload</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppHubDiscoveredWorkloadStatus
@@ -156,7 +171,9 @@ public partial class V1alpha1AppHubDiscoveredWorkloadStatus
     [JsonPropertyName("observedState")]
     public V1alpha1AppHubDiscoveredWorkloadStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppHubDiscoveredWorkload is the Schema for the AppHubDiscoveredWorkload API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -186,3 +203,4 @@ public partial class V1alpha1AppHubDiscoveredWorkload : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1alpha1AppHubDiscoveredWorkloadStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appsync.aws.m.upbound.io;
+#nullable enable
 /// <summary>Resolver is the Schema for the Resolvers API. Provides an AppSync Resolver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResolverList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Resolver> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderApiIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ResolverSpecForProviderApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GraphQLAPI in appsync to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderApiIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1ResolverSpecForProviderApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecForProviderApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderApiIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ResolverSpecForProviderApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GraphQLAPI in appsync to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderApiIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ResolverSpecForProviderApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecForProviderApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Caching Config. See Caching Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderCachingConfig
@@ -110,7 +121,9 @@ public partial class V1beta1ResolverSpecForProviderCachingConfig
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderDataSourceRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1ResolverSpecForProviderDataSourceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Datasource in appsync to populate dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderDataSourceRef
@@ -140,7 +155,9 @@ public partial class V1beta1ResolverSpecForProviderDataSourceRef
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecForProviderDataSourceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderDataSourceSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1ResolverSpecForProviderDataSourceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Datasource in appsync to populate dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderDataSourceSelector
@@ -174,7 +193,9 @@ public partial class V1beta1ResolverSpecForProviderDataSourceSelector
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecForProviderDataSourceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderPipelineConfigFunctionsRefsPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1ResolverSpecForProviderPipelineConfigFunctionsRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderPipelineConfigFunctionsRefs
@@ -204,7 +227,9 @@ public partial class V1beta1ResolverSpecForProviderPipelineConfigFunctionsRefs
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecForProviderPipelineConfigFunctionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderPipelineConfigFunctionsSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1ResolverSpecForProviderPipelineConfigFunctionsSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Function in appsync to populate functions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderPipelineConfigFunctionsSelector
@@ -238,7 +265,9 @@ public partial class V1beta1ResolverSpecForProviderPipelineConfigFunctionsSelect
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecForProviderPipelineConfigFunctionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The caching configuration for the resolver. See Pipeline Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderPipelineConfig
@@ -255,7 +284,9 @@ public partial class V1beta1ResolverSpecForProviderPipelineConfig
     [JsonPropertyName("functionsSelector")]
     public V1beta1ResolverSpecForProviderPipelineConfigFunctionsSelector? FunctionsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderRuntime
@@ -268,7 +299,9 @@ public partial class V1beta1ResolverSpecForProviderRuntime
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderSyncConfigLambdaConflictHandlerConfig
@@ -277,7 +310,9 @@ public partial class V1beta1ResolverSpecForProviderSyncConfigLambdaConflictHandl
     [JsonPropertyName("lambdaConflictHandlerArn")]
     public string? LambdaConflictHandlerArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes a Sync configuration for a resolver. See Sync Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProviderSyncConfig
@@ -294,7 +329,9 @@ public partial class V1beta1ResolverSpecForProviderSyncConfig
     [JsonPropertyName("lambdaConflictHandlerConfig")]
     public V1beta1ResolverSpecForProviderSyncConfigLambdaConflictHandlerConfig? LambdaConflictHandlerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecForProvider
@@ -371,7 +408,9 @@ public partial class V1beta1ResolverSpecForProvider
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Caching Config. See Caching Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderCachingConfig
@@ -384,7 +423,9 @@ public partial class V1beta1ResolverSpecInitProviderCachingConfig
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderDataSourceRefPolicy
@@ -397,7 +438,9 @@ public partial class V1beta1ResolverSpecInitProviderDataSourceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Datasource in appsync to populate dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderDataSourceRef
@@ -414,7 +457,9 @@ public partial class V1beta1ResolverSpecInitProviderDataSourceRef
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecInitProviderDataSourceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderDataSourceSelectorPolicy
@@ -427,7 +472,9 @@ public partial class V1beta1ResolverSpecInitProviderDataSourceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Datasource in appsync to populate dataSource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderDataSourceSelector
@@ -448,7 +495,9 @@ public partial class V1beta1ResolverSpecInitProviderDataSourceSelector
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecInitProviderDataSourceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderPipelineConfigFunctionsRefsPolicy
@@ -461,7 +510,9 @@ public partial class V1beta1ResolverSpecInitProviderPipelineConfigFunctionsRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderPipelineConfigFunctionsRefs
@@ -478,7 +529,9 @@ public partial class V1beta1ResolverSpecInitProviderPipelineConfigFunctionsRefs
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecInitProviderPipelineConfigFunctionsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderPipelineConfigFunctionsSelectorPolicy
@@ -491,7 +544,9 @@ public partial class V1beta1ResolverSpecInitProviderPipelineConfigFunctionsSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Function in appsync to populate functions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderPipelineConfigFunctionsSelector
@@ -512,7 +567,9 @@ public partial class V1beta1ResolverSpecInitProviderPipelineConfigFunctionsSelec
     [JsonPropertyName("policy")]
     public V1beta1ResolverSpecInitProviderPipelineConfigFunctionsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The caching configuration for the resolver. See Pipeline Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderPipelineConfig
@@ -529,7 +586,9 @@ public partial class V1beta1ResolverSpecInitProviderPipelineConfig
     [JsonPropertyName("functionsSelector")]
     public V1beta1ResolverSpecInitProviderPipelineConfigFunctionsSelector? FunctionsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderRuntime
@@ -542,7 +601,9 @@ public partial class V1beta1ResolverSpecInitProviderRuntime
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderSyncConfigLambdaConflictHandlerConfig
@@ -551,7 +612,9 @@ public partial class V1beta1ResolverSpecInitProviderSyncConfigLambdaConflictHand
     [JsonPropertyName("lambdaConflictHandlerArn")]
     public string? LambdaConflictHandlerArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes a Sync configuration for a resolver. See Sync Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProviderSyncConfig
@@ -568,7 +631,9 @@ public partial class V1beta1ResolverSpecInitProviderSyncConfig
     [JsonPropertyName("lambdaConflictHandlerConfig")]
     public V1beta1ResolverSpecInitProviderSyncConfigLambdaConflictHandlerConfig? LambdaConflictHandlerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecInitProvider
@@ -621,7 +686,9 @@ public partial class V1beta1ResolverSpecInitProvider
     [JsonPropertyName("syncConfig")]
     public V1beta1ResolverSpecInitProviderSyncConfig? SyncConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecProviderConfigRef
@@ -634,7 +701,9 @@ public partial class V1beta1ResolverSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpecWriteConnectionSecretToRef
@@ -643,7 +712,9 @@ public partial class V1beta1ResolverSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResolverSpec defines the desired state of Resolver</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverSpec
@@ -668,7 +739,9 @@ public partial class V1beta1ResolverSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResolverSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Caching Config. See Caching Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverStatusAtProviderCachingConfig
@@ -681,7 +754,9 @@ public partial class V1beta1ResolverStatusAtProviderCachingConfig
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The caching configuration for the resolver. See Pipeline Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverStatusAtProviderPipelineConfig
@@ -690,7 +765,9 @@ public partial class V1beta1ResolverStatusAtProviderPipelineConfig
     [JsonPropertyName("functions")]
     public IList<string>? Functions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverStatusAtProviderRuntime
@@ -703,7 +780,9 @@ public partial class V1beta1ResolverStatusAtProviderRuntime
     [JsonPropertyName("runtimeVersion")]
     public string? RuntimeVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverStatusAtProviderSyncConfigLambdaConflictHandlerConfig
@@ -712,7 +791,9 @@ public partial class V1beta1ResolverStatusAtProviderSyncConfigLambdaConflictHand
     [JsonPropertyName("lambdaConflictHandlerArn")]
     public string? LambdaConflictHandlerArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes a Sync configuration for a resolver. See Sync Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverStatusAtProviderSyncConfig
@@ -729,7 +810,9 @@ public partial class V1beta1ResolverStatusAtProviderSyncConfig
     [JsonPropertyName("lambdaConflictHandlerConfig")]
     public V1beta1ResolverStatusAtProviderSyncConfigLambdaConflictHandlerConfig? LambdaConflictHandlerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverStatusAtProvider
@@ -798,7 +881,9 @@ public partial class V1beta1ResolverStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverStatusConditions
@@ -827,7 +912,9 @@ public partial class V1beta1ResolverStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResolverStatus defines the observed state of Resolver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResolverStatus
@@ -844,7 +931,9 @@ public partial class V1beta1ResolverStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resolver is the Schema for the Resolvers API. Provides an AppSync Resolver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -874,3 +963,4 @@ public partial class V1beta1Resolver : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1ResolverStatus? Status { get; set; }
 }
+#nullable disable

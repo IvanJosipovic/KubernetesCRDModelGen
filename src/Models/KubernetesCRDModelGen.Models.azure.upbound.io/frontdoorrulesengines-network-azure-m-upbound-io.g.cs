@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>FrontdoorRulesEngine is the Schema for the FrontdoorRulesEngines API. Manages an Azure Front Door (classic) Rules Engine configuration and rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FrontdoorRulesEngineList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1FrontdoorRulesEngine> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FrontDoor in network to populate frontdoorName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRef
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FrontDoor in network to populate frontdoorName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSele
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRulesEngineSpecForProviderFrontdoorNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupName
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorRulesEngineSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleActionRequestHeader
@@ -178,7 +197,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleActionRequest
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleActionResponseHeader
@@ -195,7 +216,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleActionRespons
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleAction
@@ -208,7 +231,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleAction
     [JsonPropertyName("responseHeader")]
     public IList<V1beta1FrontdoorRulesEngineSpecForProviderRuleActionResponseHeader>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleMatchCondition
@@ -237,7 +262,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRuleMatchConditio
     [JsonPropertyName("variable")]
     public string? Variable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProviderRule
@@ -258,7 +285,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProviderRule
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecForProvider
@@ -295,7 +324,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecForProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1FrontdoorRulesEngineSpecForProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionRequestHeader
@@ -312,7 +343,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionReques
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionResponseHeader
@@ -329,7 +362,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionRespon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleAction
@@ -342,7 +377,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleAction
     [JsonPropertyName("responseHeader")]
     public IList<V1beta1FrontdoorRulesEngineSpecInitProviderRuleActionResponseHeader>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleMatchCondition
@@ -371,7 +408,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRuleMatchConditi
     [JsonPropertyName("variable")]
     public string? Variable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRule
@@ -392,7 +431,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProviderRule
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecInitProvider
@@ -405,7 +446,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecInitProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1FrontdoorRulesEngineSpecInitProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecProviderConfigRef
@@ -418,7 +461,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpecWriteConnectionSecretToRef
@@ -427,7 +472,9 @@ public partial class V1beta1FrontdoorRulesEngineSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorRulesEngineSpec defines the desired state of FrontdoorRulesEngine</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineSpec
@@ -452,7 +499,9 @@ public partial class V1beta1FrontdoorRulesEngineSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FrontdoorRulesEngineSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionRequestHeader
@@ -469,7 +518,9 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionReques
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionResponseHeader
@@ -486,7 +537,9 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionRespon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An action block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleAction
@@ -499,7 +552,9 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleAction
     [JsonPropertyName("responseHeader")]
     public IList<V1beta1FrontdoorRulesEngineStatusAtProviderRuleActionResponseHeader>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleMatchCondition
@@ -528,7 +583,9 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRuleMatchConditi
     [JsonPropertyName("variable")]
     public string? Variable { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRule
@@ -549,7 +606,9 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProviderRule
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineStatusAtProvider
@@ -578,7 +637,9 @@ public partial class V1beta1FrontdoorRulesEngineStatusAtProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1FrontdoorRulesEngineStatusAtProviderRule>? Rule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineStatusConditions
@@ -607,7 +668,9 @@ public partial class V1beta1FrontdoorRulesEngineStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorRulesEngineStatus defines the observed state of FrontdoorRulesEngine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRulesEngineStatus
@@ -624,7 +687,9 @@ public partial class V1beta1FrontdoorRulesEngineStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorRulesEngine is the Schema for the FrontdoorRulesEngines API. Manages an Azure Front Door (classic) Rules Engine configuration and rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -654,3 +719,4 @@ public partial class V1beta1FrontdoorRulesEngine : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1FrontdoorRulesEngineStatus? Status { get; set; }
 }
+#nullable disable

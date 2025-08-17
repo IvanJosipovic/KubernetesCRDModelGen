@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appmesh.aws.upbound.io;
+#nullable enable
 /// <summary>VirtualNode is the Schema for the VirtualNodes API. Provides an AWS App Mesh virtual node resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualNodeList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualNode> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderMeshNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualNodeSpecForProviderMeshNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderMeshNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1VirtualNodeSpecForProviderMeshNameRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecForProviderMeshNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderMeshNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VirtualNodeSpecForProviderMeshNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderMeshNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VirtualNodeSpecForProviderMeshNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecForProviderMeshNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsCertificateFile
@@ -102,7 +113,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds
@@ -111,7 +124,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsCertificate
@@ -124,7 +139,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -133,7 +150,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames
@@ -142,7 +161,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm
@@ -151,7 +172,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile
@@ -160,7 +183,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds
@@ -169,7 +194,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust
@@ -186,7 +213,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidation
@@ -199,7 +228,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTls
@@ -220,7 +251,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicy
@@ -229,7 +262,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceC
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualServiceClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualService
@@ -242,7 +277,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendVirtualService
     [JsonPropertyName("virtualServiceName")]
     public string? VirtualServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackend
@@ -251,7 +288,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackend
     [JsonPropertyName("virtualService")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendVirtualService>? VirtualService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
@@ -264,7 +303,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
@@ -273,7 +314,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsCertificate
@@ -286,7 +329,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -295,7 +340,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
@@ -304,7 +351,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
@@ -313,7 +362,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
@@ -322,7 +373,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
@@ -331,7 +384,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
@@ -348,7 +403,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidation
@@ -361,7 +418,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTls
@@ -382,7 +441,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicy
@@ -391,7 +452,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientP
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaults
@@ -400,7 +463,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecBackendDefaults
     [JsonPropertyName("clientPolicy")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolGrpc
@@ -409,7 +474,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolHttp
@@ -422,7 +489,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     [JsonPropertyName("maxPendingRequests")]
     public double? MaxPendingRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolHttp2
@@ -431,7 +500,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolTcp
@@ -440,7 +511,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     [JsonPropertyName("maxConnections")]
     public double? MaxConnections { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
@@ -461,7 +534,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPool
     [JsonPropertyName("tcp")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerConnectionPoolTcp>? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerHealthCheck
@@ -494,7 +569,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetectionBaseEjectionDuration
@@ -507,7 +584,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetecti
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetectionInterval
@@ -520,7 +599,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetecti
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetection
@@ -541,7 +622,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerOutlierDetecti
     [JsonPropertyName("maxServerErrors")]
     public double? MaxServerErrors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerPortMapping
@@ -554,7 +637,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerPortMapping
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcIdle
@@ -567,7 +652,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcIdl
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcPerRequest
@@ -580,7 +667,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcPer
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpc
@@ -593,7 +682,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpc
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutGrpcPerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpIdle
@@ -606,7 +697,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpIdl
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpPerRequest
@@ -619,7 +712,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpPer
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp
@@ -632,7 +727,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttpPerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2Idle
@@ -645,7 +742,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2Id
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2PerRequest
@@ -658,7 +757,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2Pe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2
@@ -671,7 +772,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutHttp2PerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcpIdle
@@ -684,7 +787,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcpIdle
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcp
@@ -693,7 +798,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcp
     [JsonPropertyName("idle")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcpIdle>? Idle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeout
@@ -714,7 +821,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTimeout
     [JsonPropertyName("tcp")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTimeoutTcp>? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificateAcm
@@ -723,7 +832,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificateFile
@@ -736,7 +847,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificateSds
@@ -745,7 +858,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
@@ -762,7 +877,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificate
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
@@ -771,7 +888,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationS
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationSubjectAlternativeNames
@@ -780,7 +899,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationS
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrustFile
@@ -789,7 +910,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationT
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrustSds
@@ -798,7 +921,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationT
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrust
@@ -811,7 +936,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationT
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidation
@@ -824,7 +951,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidation
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTls
@@ -841,7 +970,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListenerTls
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecListener
@@ -870,7 +1001,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecListener
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecListenerTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFileFormatJson
@@ -883,7 +1016,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFileFo
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFileFormat
@@ -896,7 +1031,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFileFo
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFile
@@ -909,7 +1046,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFile
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLog
@@ -918,7 +1057,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLog
     [JsonPropertyName("file")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecLogging
@@ -927,7 +1068,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecLogging
     [JsonPropertyName("accessLog")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRefPolicy
@@ -940,7 +1083,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HTTPNamespace in servicediscovery to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRef
@@ -953,7 +1098,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicy
@@ -966,7 +1113,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HTTPNamespace in servicediscovery to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelector
@@ -983,7 +1132,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsCloudMap
@@ -1008,7 +1159,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryAwsClo
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryDns
@@ -1025,7 +1178,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryDns
     [JsonPropertyName("responseType")]
     public string? ResponseType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscovery
@@ -1038,7 +1193,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpecServiceDiscovery
     [JsonPropertyName("dns")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecServiceDiscoveryDns>? Dns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProviderSpec
@@ -1063,7 +1220,9 @@ public partial class V1beta1VirtualNodeSpecForProviderSpec
     [JsonPropertyName("serviceDiscovery")]
     public IList<V1beta1VirtualNodeSpecForProviderSpecServiceDiscovery>? ServiceDiscovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecForProvider
@@ -1100,7 +1259,9 @@ public partial class V1beta1VirtualNodeSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderMeshNameRefPolicy
@@ -1113,7 +1274,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderMeshNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Mesh in appmesh to populate meshName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderMeshNameRef
@@ -1126,7 +1289,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderMeshNameRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecInitProviderMeshNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderMeshNameSelectorPolicy
@@ -1139,7 +1304,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderMeshNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Mesh in appmesh to populate meshName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderMeshNameSelector
@@ -1156,7 +1323,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderMeshNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecInitProviderMeshNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsCertificateFile
@@ -1169,7 +1338,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds
@@ -1178,7 +1349,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsCertificate
@@ -1191,7 +1364,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -1200,7 +1375,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames
@@ -1209,7 +1386,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm
@@ -1218,7 +1397,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile
@@ -1227,7 +1408,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds
@@ -1236,7 +1419,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust
@@ -1253,7 +1438,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidation
@@ -1266,7 +1453,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTls
@@ -1287,7 +1476,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicy
@@ -1296,7 +1487,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualServiceClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
@@ -1309,7 +1502,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService
     [JsonPropertyName("virtualServiceName")]
     public string? VirtualServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackend
@@ -1318,7 +1513,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackend
     [JsonPropertyName("virtualService")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendVirtualService>? VirtualService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
@@ -1331,7 +1528,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
@@ -1340,7 +1539,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificate
@@ -1353,7 +1554,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -1362,7 +1565,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
@@ -1371,7 +1576,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
@@ -1380,7 +1587,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
@@ -1389,7 +1598,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
@@ -1398,7 +1609,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
@@ -1415,7 +1628,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidation
@@ -1428,7 +1643,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTls
@@ -1449,7 +1666,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicy
@@ -1458,7 +1677,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClient
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaults
@@ -1467,7 +1688,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecBackendDefaults
     [JsonPropertyName("clientPolicy")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolGrpc
@@ -1476,7 +1699,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolHttp
@@ -1489,7 +1714,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     [JsonPropertyName("maxPendingRequests")]
     public double? MaxPendingRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolHttp2
@@ -1498,7 +1725,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolTcp
@@ -1507,7 +1736,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     [JsonPropertyName("maxConnections")]
     public double? MaxConnections { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPool
@@ -1528,7 +1759,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoo
     [JsonPropertyName("tcp")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerConnectionPoolTcp>? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerHealthCheck
@@ -1561,7 +1794,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetectionBaseEjectionDuration
@@ -1574,7 +1809,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetect
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetectionInterval
@@ -1587,7 +1824,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetect
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetection
@@ -1608,7 +1847,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerOutlierDetect
     [JsonPropertyName("maxServerErrors")]
     public double? MaxServerErrors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerPortMapping
@@ -1621,7 +1862,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerPortMapping
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcIdle
@@ -1634,7 +1877,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcId
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcPerRequest
@@ -1647,7 +1892,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcPe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpc
@@ -1660,7 +1907,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpc
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutGrpcPerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpIdle
@@ -1673,7 +1922,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpId
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpPerRequest
@@ -1686,7 +1937,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpPe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp
@@ -1699,7 +1952,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttpPerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2Idle
@@ -1712,7 +1967,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2I
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2PerRequest
@@ -1725,7 +1982,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2P
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2
@@ -1738,7 +1997,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutHttp2PerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcpIdle
@@ -1751,7 +2012,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcpIdl
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcp
@@ -1760,7 +2023,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcp
     [JsonPropertyName("idle")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcpIdle>? Idle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeout
@@ -1781,7 +2046,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTimeout
     [JsonPropertyName("tcp")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTimeoutTcp>? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificateAcm
@@ -1790,7 +2057,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificat
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificateFile
@@ -1803,7 +2072,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificat
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificateSds
@@ -1812,7 +2083,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificat
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificate
@@ -1829,7 +2102,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificat
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
@@ -1838,7 +2113,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationSubjectAlternativeNames
@@ -1847,7 +2124,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrustFile
@@ -1856,7 +2135,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrustSds
@@ -1865,7 +2146,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrust
@@ -1878,7 +2161,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
@@ -1891,7 +2176,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTls
@@ -1908,7 +2195,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListenerTls
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecListener
@@ -1937,7 +2226,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecListener
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecListenerTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFileFormatJson
@@ -1950,7 +2241,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFileF
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFileFormat
@@ -1963,7 +2256,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFileF
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFile
@@ -1976,7 +2271,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFile
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLog
@@ -1985,7 +2282,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLog
     [JsonPropertyName("file")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecLogging
@@ -1994,7 +2293,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecLogging
     [JsonPropertyName("accessLog")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRefPolicy
@@ -2007,7 +2308,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HTTPNamespace in servicediscovery to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRef
@@ -2020,7 +2323,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicy
@@ -2033,7 +2338,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HTTPNamespace in servicediscovery to populate namespaceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelector
@@ -2050,7 +2357,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMapNamespaceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCloudMap
@@ -2075,7 +2384,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryAwsCl
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryDns
@@ -2092,7 +2403,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryDns
     [JsonPropertyName("responseType")]
     public string? ResponseType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscovery
@@ -2105,7 +2418,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpecServiceDiscovery
     [JsonPropertyName("dns")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecServiceDiscoveryDns>? Dns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProviderSpec
@@ -2130,7 +2445,9 @@ public partial class V1beta1VirtualNodeSpecInitProviderSpec
     [JsonPropertyName("serviceDiscovery")]
     public IList<V1beta1VirtualNodeSpecInitProviderSpecServiceDiscovery>? ServiceDiscovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecInitProvider
@@ -2163,7 +2480,9 @@ public partial class V1beta1VirtualNodeSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecProviderConfigRefPolicy
@@ -2176,7 +2495,9 @@ public partial class V1beta1VirtualNodeSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecProviderConfigRef
@@ -2189,7 +2510,9 @@ public partial class V1beta1VirtualNodeSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualNodeSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpecWriteConnectionSecretToRef
@@ -2202,7 +2525,9 @@ public partial class V1beta1VirtualNodeSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNodeSpec defines the desired state of VirtualNode</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeSpec
@@ -2231,7 +2556,9 @@ public partial class V1beta1VirtualNodeSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualNodeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsCertificateFile
@@ -2244,7 +2571,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds
@@ -2253,7 +2582,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsCertificate
@@ -2266,7 +2597,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -2275,7 +2608,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames
@@ -2284,7 +2619,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm
@@ -2293,7 +2630,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile
@@ -2302,7 +2641,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds
@@ -2311,7 +2652,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust
@@ -2328,7 +2671,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidation
@@ -2341,7 +2686,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTls
@@ -2362,7 +2709,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicy
@@ -2371,7 +2720,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualServiceClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
@@ -2384,7 +2735,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService
     [JsonPropertyName("virtualServiceName")]
     public string? VirtualServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackend
@@ -2393,7 +2746,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackend
     [JsonPropertyName("virtualService")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendVirtualService>? VirtualService { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateFile
@@ -2406,7 +2761,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateSds
@@ -2415,7 +2772,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificate
@@ -2428,7 +2787,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch
@@ -2437,7 +2798,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames
@@ -2446,7 +2809,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustAcm
@@ -2455,7 +2820,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("certificateAuthorityArns")]
     public IList<string>? CertificateAuthorityArns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustFile
@@ -2464,7 +2831,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds
@@ -2473,7 +2842,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrust
@@ -2490,7 +2861,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidation
@@ -2503,7 +2876,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTls
@@ -2524,7 +2899,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicy
@@ -2533,7 +2910,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClient
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicyTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaults
@@ -2542,7 +2921,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecBackendDefaults
     [JsonPropertyName("clientPolicy")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecBackendDefaultsClientPolicy>? ClientPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolGrpc
@@ -2551,7 +2932,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolHttp
@@ -2564,7 +2947,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     [JsonPropertyName("maxPendingRequests")]
     public double? MaxPendingRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolHttp2
@@ -2573,7 +2958,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     [JsonPropertyName("maxRequests")]
     public double? MaxRequests { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolTcp
@@ -2582,7 +2969,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     [JsonPropertyName("maxConnections")]
     public double? MaxConnections { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPool
@@ -2603,7 +2992,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoo
     [JsonPropertyName("tcp")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerConnectionPoolTcp>? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerHealthCheck
@@ -2636,7 +3027,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerHealthCheck
     [JsonPropertyName("unhealthyThreshold")]
     public double? UnhealthyThreshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetectionBaseEjectionDuration
@@ -2649,7 +3042,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetect
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetectionInterval
@@ -2662,7 +3057,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetect
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetection
@@ -2683,7 +3080,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerOutlierDetect
     [JsonPropertyName("maxServerErrors")]
     public double? MaxServerErrors { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerPortMapping
@@ -2696,7 +3095,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerPortMapping
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcIdle
@@ -2709,7 +3110,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcId
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcPerRequest
@@ -2722,7 +3125,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcPe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpc
@@ -2735,7 +3140,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpc
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutGrpcPerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpIdle
@@ -2748,7 +3155,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpId
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpPerRequest
@@ -2761,7 +3170,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpPe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp
@@ -2774,7 +3185,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttpPerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2Idle
@@ -2787,7 +3200,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2I
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2PerRequest
@@ -2800,7 +3215,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2P
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2
@@ -2813,7 +3230,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2
     [JsonPropertyName("perRequest")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutHttp2PerRequest>? PerRequest { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcpIdle
@@ -2826,7 +3245,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcpIdl
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcp
@@ -2835,7 +3256,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcp
     [JsonPropertyName("idle")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcpIdle>? Idle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeout
@@ -2856,7 +3279,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTimeout
     [JsonPropertyName("tcp")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTimeoutTcp>? Tcp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificateAcm
@@ -2865,7 +3290,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificat
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificateFile
@@ -2878,7 +3305,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificat
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificateSds
@@ -2887,7 +3316,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificat
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificate
@@ -2904,7 +3335,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificat
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsCertificateSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch
@@ -2913,7 +3346,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     [JsonPropertyName("exact")]
     public IList<string>? Exact { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNames
@@ -2922,7 +3357,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     [JsonPropertyName("match")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationSubjectAlternativeNamesMatch>? Match { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrustFile
@@ -2931,7 +3368,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrustSds
@@ -2940,7 +3379,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrust
@@ -2953,7 +3394,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     [JsonPropertyName("sds")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrustSds>? Sds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
@@ -2966,7 +3409,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation
     [JsonPropertyName("trust")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidationTrust>? Trust { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTls
@@ -2983,7 +3428,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListenerTls
     [JsonPropertyName("validation")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTlsValidation>? Validation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecListener
@@ -3012,7 +3459,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecListener
     [JsonPropertyName("tls")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecListenerTls>? Tls { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFileFormatJson
@@ -3025,7 +3474,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFileF
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFileFormat
@@ -3038,7 +3489,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFileF
     [JsonPropertyName("text")]
     public string? Text { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFile
@@ -3051,7 +3504,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFile
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLog
@@ -3060,7 +3515,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLog
     [JsonPropertyName("file")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLogFile>? File { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecLogging
@@ -3069,7 +3526,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecLogging
     [JsonPropertyName("accessLog")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecLoggingAccessLog>? AccessLog { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryAwsCloudMap
@@ -3086,7 +3545,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryAwsCl
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryDns
@@ -3103,7 +3564,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryDns
     [JsonPropertyName("responseType")]
     public string? ResponseType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscovery
@@ -3116,7 +3579,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpecServiceDiscovery
     [JsonPropertyName("dns")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecServiceDiscoveryDns>? Dns { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProviderSpec
@@ -3141,7 +3606,9 @@ public partial class V1beta1VirtualNodeStatusAtProviderSpec
     [JsonPropertyName("serviceDiscovery")]
     public IList<V1beta1VirtualNodeStatusAtProviderSpecServiceDiscovery>? ServiceDiscovery { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusAtProvider
@@ -3194,7 +3661,9 @@ public partial class V1beta1VirtualNodeStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatusConditions
@@ -3223,7 +3692,9 @@ public partial class V1beta1VirtualNodeStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNodeStatus defines the observed state of VirtualNode.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNodeStatus
@@ -3240,7 +3711,9 @@ public partial class V1beta1VirtualNodeStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNode is the Schema for the VirtualNodes API. Provides an AWS App Mesh virtual node resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -3270,3 +3743,4 @@ public partial class V1beta1VirtualNode : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1VirtualNodeStatus? Status { get; set; }
 }
+#nullable disable

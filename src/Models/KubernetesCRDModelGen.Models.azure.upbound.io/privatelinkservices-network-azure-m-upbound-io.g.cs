@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>PrivateLinkService is the Schema for the PrivateLinkServices API. Manages a Private Link Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PrivateLinkServiceList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1PrivateLinkService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationS
     [JsonPropertyName("policy")]
     public V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfiguration
@@ -130,7 +141,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfiguration
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRefPolicy
@@ -143,7 +156,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRef
@@ -160,7 +175,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSelectorPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSelector
@@ -194,7 +213,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1PrivateLinkServiceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProvider
@@ -247,7 +268,9 @@ public partial class V1beta1PrivateLinkServiceSpecForProvider
     [JsonPropertyName("visibilitySubscriptionIds")]
     public IList<string>? VisibilitySubscriptionIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdRefPolicy
@@ -260,7 +283,9 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdRef
@@ -277,7 +302,9 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     [JsonPropertyName("policy")]
     public V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelectorPolicy
@@ -290,7 +317,9 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelector
@@ -311,7 +340,9 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     [JsonPropertyName("policy")]
     public V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
@@ -344,7 +375,9 @@ public partial class V1beta1PrivateLinkServiceSpecInitProviderNatIpConfiguration
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1PrivateLinkServiceSpecInitProviderNatIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecInitProvider
@@ -385,7 +418,9 @@ public partial class V1beta1PrivateLinkServiceSpecInitProvider
     [JsonPropertyName("visibilitySubscriptionIds")]
     public IList<string>? VisibilitySubscriptionIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecProviderConfigRef
@@ -398,7 +433,9 @@ public partial class V1beta1PrivateLinkServiceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecWriteConnectionSecretToRef
@@ -407,7 +444,9 @@ public partial class V1beta1PrivateLinkServiceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateLinkServiceSpec defines the desired state of PrivateLinkService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpec
@@ -432,7 +471,9 @@ public partial class V1beta1PrivateLinkServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PrivateLinkServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceStatusAtProviderNatIpConfiguration
@@ -457,7 +498,9 @@ public partial class V1beta1PrivateLinkServiceStatusAtProviderNatIpConfiguration
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceStatusAtProvider
@@ -510,7 +553,9 @@ public partial class V1beta1PrivateLinkServiceStatusAtProvider
     [JsonPropertyName("visibilitySubscriptionIds")]
     public IList<string>? VisibilitySubscriptionIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceStatusConditions
@@ -539,7 +584,9 @@ public partial class V1beta1PrivateLinkServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateLinkServiceStatus defines the observed state of PrivateLinkService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceStatus
@@ -556,7 +603,9 @@ public partial class V1beta1PrivateLinkServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateLinkService is the Schema for the PrivateLinkServices API. Manages a Private Link Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -586,3 +635,4 @@ public partial class V1beta1PrivateLinkService : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1PrivateLinkServiceStatus? Status { get; set; }
 }
+#nullable disable

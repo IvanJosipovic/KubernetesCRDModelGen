@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kafkaconnect.aws.upbound.io;
+#nullable enable
 /// <summary>CustomPlugin is the Schema for the CustomPlugins API. Provides an Amazon MSK Connect custom plugin resource. This resource can be Created, Observed and Deleted, but not Updated. AWS does not currently provide update APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CustomPluginList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1CustomPlugin> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnRef
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecForProviderLocationS3BucketArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelect
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecForProviderLocationS3BucketArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeyRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeyRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Object in s3 to populate fileKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeyRef
@@ -115,7 +128,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeyRef
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecForProviderLocationS3FileKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeySelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeySelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Object in s3 to populate fileKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeySelector
@@ -145,7 +162,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3FileKeySelector
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecForProviderLocationS3FileKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocationS3
@@ -178,7 +197,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3
     [JsonPropertyName("objectVersion")]
     public string? ObjectVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocation
@@ -187,7 +208,9 @@ public partial class V1beta1CustomPluginSpecForProviderLocation
     [JsonPropertyName("s3")]
     public IList<V1beta1CustomPluginSpecForProviderLocationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProvider
@@ -216,7 +239,9 @@ public partial class V1beta1CustomPluginSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRefPolicy
@@ -229,7 +254,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRef
@@ -242,7 +269,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRef
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecInitProviderLocationS3BucketArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelectorPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelector
@@ -272,7 +303,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelec
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecInitProviderLocationS3BucketArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRefPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Object in s3 to populate fileKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRef
@@ -298,7 +333,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRef
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecInitProviderLocationS3FileKeyRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelectorPolicy
@@ -311,7 +348,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Object in s3 to populate fileKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelector
@@ -328,7 +367,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelecto
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecInitProviderLocationS3FileKeySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocationS3
@@ -361,7 +402,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3
     [JsonPropertyName("objectVersion")]
     public string? ObjectVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocation
@@ -370,7 +413,9 @@ public partial class V1beta1CustomPluginSpecInitProviderLocation
     [JsonPropertyName("s3")]
     public IList<V1beta1CustomPluginSpecInitProviderLocationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProvider
@@ -391,7 +436,9 @@ public partial class V1beta1CustomPluginSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecProviderConfigRefPolicy
@@ -404,7 +451,9 @@ public partial class V1beta1CustomPluginSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecProviderConfigRef
@@ -417,7 +466,9 @@ public partial class V1beta1CustomPluginSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1CustomPluginSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecWriteConnectionSecretToRef
@@ -430,7 +481,9 @@ public partial class V1beta1CustomPluginSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomPluginSpec defines the desired state of CustomPlugin</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpec
@@ -459,7 +512,9 @@ public partial class V1beta1CustomPluginSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CustomPluginSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginStatusAtProviderLocationS3
@@ -476,7 +531,9 @@ public partial class V1beta1CustomPluginStatusAtProviderLocationS3
     [JsonPropertyName("objectVersion")]
     public string? ObjectVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginStatusAtProviderLocation
@@ -485,7 +542,9 @@ public partial class V1beta1CustomPluginStatusAtProviderLocation
     [JsonPropertyName("s3")]
     public IList<V1beta1CustomPluginStatusAtProviderLocationS3>? S3 { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginStatusAtProvider
@@ -534,7 +593,9 @@ public partial class V1beta1CustomPluginStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginStatusConditions
@@ -563,7 +624,9 @@ public partial class V1beta1CustomPluginStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomPluginStatus defines the observed state of CustomPlugin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginStatus
@@ -580,7 +643,9 @@ public partial class V1beta1CustomPluginStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomPlugin is the Schema for the CustomPlugins API. Provides an Amazon MSK Connect custom plugin resource. This resource can be Created, Observed and Deleted, but not Updated. AWS does not currently provide update APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -610,3 +675,4 @@ public partial class V1beta1CustomPlugin : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1CustomPluginStatus? Status { get; set; }
 }
+#nullable disable

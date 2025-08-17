@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigList : IKuberne
     [JsonPropertyName("items")]
     public IList<V1alpha1IdentityPlatformProjectDefaultConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecProjectRef
@@ -50,7 +53,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating an anonymous user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInAnonymous
@@ -59,7 +64,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInAnony
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticating a user by their email address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInEmail
@@ -72,7 +79,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInEmail
     [JsonPropertyName("passwordRequired")]
     public bool? PasswordRequired { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInHashConfig
@@ -97,7 +106,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInHashC
     [JsonPropertyName("signerKey")]
     public string? SignerKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration options related to authenticated a user by their phone number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber
@@ -110,7 +121,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhone
     [JsonPropertyName("testPhoneNumbers")]
     public IDictionary<string, string>? TestPhoneNumbers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to local sign in methods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignIn
@@ -135,7 +148,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignIn
     [JsonPropertyName("phoneNumber")]
     public V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpec
@@ -152,7 +167,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpec
     [JsonPropertyName("signIn")]
     public V1alpha1IdentityPlatformProjectDefaultConfigSpecSignIn? SignIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatusConditions
@@ -177,7 +194,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatusCondition
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatus
@@ -194,7 +213,9 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -224,3 +245,4 @@ public partial class V1alpha1IdentityPlatformProjectDefaultConfig : IKubernetesO
     [JsonPropertyName("status")]
     public V1alpha1IdentityPlatformProjectDefaultConfigStatus? Status { get; set; }
 }
+#nullable disable

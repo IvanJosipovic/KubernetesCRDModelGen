@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20231101.BackupVault Generator information: - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-11-01/dataprotection.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20231101storageBackupVaultList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1api20231101storageBackupVault> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentitiesReference
@@ -54,7 +57,9 @@ public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIden
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentities
@@ -67,7 +72,9 @@ public partial class V1api20231101storageBackupVaultSpecIdentityUserAssignedIden
     [JsonPropertyName("reference")]
     public V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.DppIdentityDetails Identity details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecIdentity
@@ -84,7 +91,9 @@ public partial class V1api20231101storageBackupVaultSpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapExpressions
@@ -101,7 +110,9 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapExp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPrincipalId
@@ -114,7 +125,9 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPr
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.BackupVaultOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMaps
@@ -127,7 +140,9 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMaps
     [JsonPropertyName("principalId")]
     public V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPrincipalId? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecSecretExpressions
@@ -144,7 +159,9 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecSecretExpres
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.BackupVaultOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpec
@@ -165,7 +182,9 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20231101storageBackupVaultSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOwner
@@ -178,7 +197,9 @@ public partial class V1api20231101storageBackupVaultSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.CrossRegionRestoreSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettingsCrossRegionRestoreSettings
@@ -191,7 +212,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.CrossSubscriptionRestoreSettings CrossSubscriptionRestore Settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettingsCrossSubscriptionRestoreSettings
@@ -204,7 +227,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.FeatureSettings Class containing feature settings of vault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSettings
@@ -221,7 +246,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesFeatureSetting
     [JsonPropertyName("crossSubscriptionRestoreSettings")]
     public V1api20231101storageBackupVaultSpecPropertiesFeatureSettingsCrossSubscriptionRestoreSettings? CrossSubscriptionRestoreSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.AzureMonitorAlertSettings Settings for Azure Monitor based alerts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSettingsAzureMonitorAlertSettings
@@ -234,7 +261,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSett
     [JsonPropertyName("alertsForAllJobFailures")]
     public string? AlertsForAllJobFailures { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.MonitoringSettings Monitoring Settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSettings
@@ -247,7 +276,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesMonitoringSett
     [JsonPropertyName("azureMonitorAlertSettings")]
     public V1api20231101storageBackupVaultSpecPropertiesMonitoringSettingsAzureMonitorAlertSettings? AzureMonitorAlertSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.ImmutabilitySettings Immutability Settings at vault level</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettingsImmutabilitySettings
@@ -260,7 +291,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SoftDeleteSettings Soft delete related settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettingsSoftDeleteSettings
@@ -277,7 +310,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SecuritySettings Class containing security settings of vault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettings
@@ -294,7 +329,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesSecuritySettin
     [JsonPropertyName("softDeleteSettings")]
     public V1api20231101storageBackupVaultSpecPropertiesSecuritySettingsSoftDeleteSettings? SoftDeleteSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.StorageSetting Storage setting</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecPropertiesStorageSettings
@@ -311,7 +348,9 @@ public partial class V1api20231101storageBackupVaultSpecPropertiesStorageSetting
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.BackupVaultSpec Backup Vault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecProperties
@@ -340,7 +379,9 @@ public partial class V1api20231101storageBackupVaultSpecProperties
     [JsonPropertyName("storageSettings")]
     public IList<V1api20231101storageBackupVaultSpecPropertiesStorageSettings>? StorageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.BackupVault_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpec
@@ -381,7 +422,9 @@ public partial class V1api20231101storageBackupVaultSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusConditions
@@ -414,7 +457,9 @@ public partial class V1api20231101storageBackupVaultStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.UserAssignedIdentity_STATUS User assigned identity properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusIdentityUserAssignedIdentities
@@ -431,7 +476,9 @@ public partial class V1api20231101storageBackupVaultStatusIdentityUserAssignedId
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.DppIdentityDetails_STATUS Identity details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusIdentity
@@ -456,7 +503,9 @@ public partial class V1api20231101storageBackupVaultStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20231101storageBackupVaultStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.CrossRegionRestoreSettings_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettingsCrossRegionRestoreSettings
@@ -469,7 +518,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.CrossSubscriptionRestoreSettings_STATUS CrossSubscriptionRestore Settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettingsCrossSubscriptionRestoreSettings
@@ -482,7 +533,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.FeatureSettings_STATUS Class containing feature settings of vault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSettings
@@ -499,7 +552,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesFeatureSetti
     [JsonPropertyName("crossSubscriptionRestoreSettings")]
     public V1api20231101storageBackupVaultStatusPropertiesFeatureSettingsCrossSubscriptionRestoreSettings? CrossSubscriptionRestoreSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.AzureMonitorAlertSettings_STATUS Settings for Azure Monitor based alerts</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSettingsAzureMonitorAlertSettings
@@ -512,7 +567,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSe
     [JsonPropertyName("alertsForAllJobFailures")]
     public string? AlertsForAllJobFailures { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.MonitoringSettings_STATUS Monitoring Settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSettings
@@ -525,7 +582,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesMonitoringSe
     [JsonPropertyName("azureMonitorAlertSettings")]
     public V1api20231101storageBackupVaultStatusPropertiesMonitoringSettingsAzureMonitorAlertSettings? AzureMonitorAlertSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.ResourceMoveDetails_STATUS ResourceMoveDetails will be returned in response to GetResource call from ARM</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesResourceMoveDetails
@@ -554,7 +613,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesResourceMove
     [JsonPropertyName("targetResourcePath")]
     public string? TargetResourcePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.ImmutabilitySettings_STATUS Immutability Settings at vault level</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettingsImmutabilitySettings
@@ -567,7 +628,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SoftDeleteSettings_STATUS Soft delete related settings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettingsSoftDeleteSettings
@@ -584,7 +647,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SecuritySettings_STATUS Class containing security settings of vault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySettings
@@ -601,7 +666,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesSecuritySett
     [JsonPropertyName("softDeleteSettings")]
     public V1api20231101storageBackupVaultStatusPropertiesSecuritySettingsSoftDeleteSettings? SoftDeleteSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.StorageSetting_STATUS Storage setting</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusPropertiesStorageSettings
@@ -618,7 +685,9 @@ public partial class V1api20231101storageBackupVaultStatusPropertiesStorageSetti
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.BackupVault_STATUS Backup Vault</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusProperties
@@ -667,7 +736,9 @@ public partial class V1api20231101storageBackupVaultStatusProperties
     [JsonPropertyName("storageSettings")]
     public IList<V1api20231101storageBackupVaultStatusPropertiesStorageSettings>? StorageSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatusSystemData
@@ -700,7 +771,9 @@ public partial class V1api20231101storageBackupVaultStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.BackupVaultResource_STATUS Backup Vault Resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultStatus
@@ -749,7 +822,9 @@ public partial class V1api20231101storageBackupVaultStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.BackupVault Generator information: - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-11-01/dataprotection.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -779,3 +854,4 @@ public partial class V1api20231101storageBackupVault : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1api20231101storageBackupVaultStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ComputeNodeGroupList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1ComputeNodeGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupSpecAutoscalingPolicy
@@ -50,7 +53,9 @@ public partial class V1beta1ComputeNodeGroupSpecAutoscalingPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. contains properties for the timeframe of maintenance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupSpecMaintenanceWindow
@@ -59,7 +64,9 @@ public partial class V1beta1ComputeNodeGroupSpecMaintenanceWindow
     [JsonPropertyName("startTime")]
     public string StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The node template to which this node group belongs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupSpecNodeTemplateRef
@@ -76,7 +83,9 @@ public partial class V1beta1ComputeNodeGroupSpecNodeTemplateRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The key of this project config in the parent map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapIdRef
@@ -93,7 +102,9 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapIdRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project id/number should be the same as the key of this project config in the project map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectIdRef
@@ -110,7 +121,9 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectId
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMap
@@ -123,7 +136,9 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMap
     [JsonPropertyName("projectIdRef")]
     public V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectIdRef ProjectIdRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Share settings for the node group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupSpecShareSettings
@@ -136,7 +151,9 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettings
     [JsonPropertyName("shareType")]
     public string ShareType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupSpec
@@ -181,7 +198,9 @@ public partial class V1beta1ComputeNodeGroupSpec
     [JsonPropertyName("zone")]
     public string Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupStatusConditions
@@ -206,7 +225,9 @@ public partial class V1beta1ComputeNodeGroupStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeNodeGroupStatus
@@ -227,7 +248,9 @@ public partial class V1beta1ComputeNodeGroupStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -257,3 +280,4 @@ public partial class V1beta1ComputeNodeGroup : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ComputeNodeGroupStatus? Status { get; set; }
 }
+#nullable disable

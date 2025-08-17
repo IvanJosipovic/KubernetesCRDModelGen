@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigateway.aws.upbound.io;
+#nullable enable
 /// <summary>RestAPI is the Schema for the RestAPIs API. Manages an API Gateway REST API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RestAPIList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1RestAPI> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpointIdsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpoi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpointIdsRefs
@@ -59,7 +64,9 @@ public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpoi
     [JsonPropertyName("policy")]
     public V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpointIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpointIdsSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpoi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of VPCEndpoint in ec2 to populate vpcEndpointIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpointIdsSelector
@@ -89,7 +98,9 @@ public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpoi
     [JsonPropertyName("policy")]
     public V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpointIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecForProviderEndpointConfiguration
@@ -114,7 +125,9 @@ public partial class V1beta1RestAPISpecForProviderEndpointConfiguration
     [JsonPropertyName("vpcEndpointIdsSelector")]
     public V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpointIdsSelector? VpcEndpointIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecForProvider
@@ -171,7 +184,9 @@ public partial class V1beta1RestAPISpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpointIdsRefsPolicy
@@ -184,7 +199,9 @@ public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpointIdsRefs
@@ -197,7 +214,9 @@ public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpo
     [JsonPropertyName("policy")]
     public V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpointIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpointIdsSelectorPolicy
@@ -210,7 +229,9 @@ public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of VPCEndpoint in ec2 to populate vpcEndpointIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpointIdsSelector
@@ -227,7 +248,9 @@ public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpo
     [JsonPropertyName("policy")]
     public V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpointIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecInitProviderEndpointConfiguration
@@ -252,7 +275,9 @@ public partial class V1beta1RestAPISpecInitProviderEndpointConfiguration
     [JsonPropertyName("vpcEndpointIdsSelector")]
     public V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpointIdsSelector? VpcEndpointIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecInitProvider
@@ -305,7 +330,9 @@ public partial class V1beta1RestAPISpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecProviderConfigRefPolicy
@@ -318,7 +345,9 @@ public partial class V1beta1RestAPISpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecProviderConfigRef
@@ -331,7 +360,9 @@ public partial class V1beta1RestAPISpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1RestAPISpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecWriteConnectionSecretToRef
@@ -344,7 +375,9 @@ public partial class V1beta1RestAPISpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RestAPISpec defines the desired state of RestAPI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpec
@@ -373,7 +406,9 @@ public partial class V1beta1RestAPISpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RestAPISpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPIStatusAtProviderEndpointConfiguration
@@ -390,7 +425,9 @@ public partial class V1beta1RestAPIStatusAtProviderEndpointConfiguration
     [JsonPropertyName("vpcEndpointIds")]
     public IList<string>? VpcEndpointIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPIStatusAtProvider
@@ -475,7 +512,9 @@ public partial class V1beta1RestAPIStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPIStatusConditions
@@ -504,7 +543,9 @@ public partial class V1beta1RestAPIStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RestAPIStatus defines the observed state of RestAPI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPIStatus
@@ -521,7 +562,9 @@ public partial class V1beta1RestAPIStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RestAPI is the Schema for the RestAPIs API. Manages an API Gateway REST API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -551,3 +594,4 @@ public partial class V1beta1RestAPI : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1RestAPIStatus? Status { get; set; }
 }
+#nullable disable

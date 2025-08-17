@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>VPCEndpoint is the Schema for the VPCEndpoints API. Provides a VPC Endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VPCEndpointList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1VPCEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderDnsOptions
@@ -46,7 +49,9 @@ public partial class V1beta1VPCEndpointSpecForProviderDnsOptions
     [JsonPropertyName("privateDnsOnlyForInboundResolverEndpoint")]
     public bool? PrivateDnsOnlyForInboundResolverEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderServiceNameRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1VPCEndpointSpecForProviderServiceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpointService in ec2 to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderServiceNameRef
@@ -72,7 +79,9 @@ public partial class V1beta1VPCEndpointSpecForProviderServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecForProviderServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderServiceNameSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1VPCEndpointSpecForProviderServiceNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpointService in ec2 to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderServiceNameSelector
@@ -102,7 +113,9 @@ public partial class V1beta1VPCEndpointSpecForProviderServiceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecForProviderServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdRefPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdRef
@@ -128,7 +143,9 @@ public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetI
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelectorPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelector
@@ -158,7 +177,9 @@ public partial class V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetI
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderSubnetConfiguration
@@ -183,7 +204,9 @@ public partial class V1beta1VPCEndpointSpecForProviderSubnetConfiguration
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1VPCEndpointSpecForProviderSubnetConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderVpcIdRefPolicy
@@ -196,7 +219,9 @@ public partial class V1beta1VPCEndpointSpecForProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderVpcIdRef
@@ -209,7 +234,9 @@ public partial class V1beta1VPCEndpointSpecForProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelectorPolicy
@@ -222,7 +249,9 @@ public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelector
@@ -239,7 +268,9 @@ public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecForProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProvider
@@ -316,7 +347,9 @@ public partial class V1beta1VPCEndpointSpecForProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1VPCEndpointSpecForProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderDnsOptions
@@ -329,7 +362,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderDnsOptions
     [JsonPropertyName("privateDnsOnlyForInboundResolverEndpoint")]
     public bool? PrivateDnsOnlyForInboundResolverEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderServiceNameRefPolicy
@@ -342,7 +377,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderServiceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPCEndpointService in ec2 to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderServiceNameRef
@@ -355,7 +392,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecInitProviderServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderServiceNameSelectorPolicy
@@ -368,7 +407,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderServiceNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPCEndpointService in ec2 to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderServiceNameSelector
@@ -385,7 +426,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderServiceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecInitProviderServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdRefPolicy
@@ -398,7 +441,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdRef
@@ -411,7 +456,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnet
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelectorPolicy
@@ -424,7 +471,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnet in ec2 to populate subnetId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelector
@@ -441,7 +490,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnet
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfiguration
@@ -466,7 +517,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderSubnetConfiguration
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1VPCEndpointSpecInitProviderSubnetConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderVpcIdRefPolicy
@@ -479,7 +532,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderVpcIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderVpcIdRef
@@ -492,7 +547,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderVpcIdRef
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelectorPolicy
@@ -505,7 +562,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate vpcId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelector
@@ -522,7 +581,9 @@ public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelector
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecInitProviderVpcIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProvider
@@ -595,7 +656,9 @@ public partial class V1beta1VPCEndpointSpecInitProvider
     [JsonPropertyName("vpcIdSelector")]
     public V1beta1VPCEndpointSpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecProviderConfigRefPolicy
@@ -608,7 +671,9 @@ public partial class V1beta1VPCEndpointSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecProviderConfigRef
@@ -621,7 +686,9 @@ public partial class V1beta1VPCEndpointSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VPCEndpointSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecWriteConnectionSecretToRef
@@ -634,7 +701,9 @@ public partial class V1beta1VPCEndpointSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointSpec defines the desired state of VPCEndpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpec
@@ -663,7 +732,9 @@ public partial class V1beta1VPCEndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VPCEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointStatusAtProviderDnsEntry
@@ -676,7 +747,9 @@ public partial class V1beta1VPCEndpointStatusAtProviderDnsEntry
     [JsonPropertyName("hostedZoneId")]
     public string? HostedZoneId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointStatusAtProviderDnsOptions
@@ -689,7 +762,9 @@ public partial class V1beta1VPCEndpointStatusAtProviderDnsOptions
     [JsonPropertyName("privateDnsOnlyForInboundResolverEndpoint")]
     public bool? PrivateDnsOnlyForInboundResolverEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointStatusAtProviderSubnetConfiguration
@@ -706,7 +781,9 @@ public partial class V1beta1VPCEndpointStatusAtProviderSubnetConfiguration
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointStatusAtProvider
@@ -819,7 +896,9 @@ public partial class V1beta1VPCEndpointStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointStatusConditions
@@ -848,7 +927,9 @@ public partial class V1beta1VPCEndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpointStatus defines the observed state of VPCEndpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointStatus
@@ -865,7 +946,9 @@ public partial class V1beta1VPCEndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VPCEndpoint is the Schema for the VPCEndpoints API. Provides a VPC Endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -895,3 +978,4 @@ public partial class V1beta1VPCEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1VPCEndpointStatus? Status { get; set; }
 }
+#nullable disable

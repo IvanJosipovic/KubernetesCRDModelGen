@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IAMWorkforcePoolProviderList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1IAMWorkforcePoolProvider> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainTextValueFromSecretKeyRef
@@ -46,7 +49,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePla
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainTextValueFrom
@@ -55,7 +60,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePla
     [JsonPropertyName("secretKeyRef")]
     public V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainTextValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Input only. The plain text of the client secret value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainText
@@ -68,7 +75,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePla
     [JsonPropertyName("valueFrom")]
     public V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainTextValueFrom? ValueFrom { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The value of the client secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValue
@@ -77,7 +86,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValue
     [JsonPropertyName("plainText")]
     public V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValuePlainText? PlainText { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The optional client secret. Required to enable Authorization Code flow for web sign-in.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecret
@@ -86,7 +97,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcClientSecret
     [JsonPropertyName("value")]
     public V1beta1IAMWorkforcePoolProviderSpecOidcClientSecretValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers to console sign-in and gcloud sign-in through the browser.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidcWebSsoConfig
@@ -103,7 +116,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidcWebSsoConfig
     [JsonPropertyName("responseType")]
     public string ResponseType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An OpenId Connect 1.0 identity provider configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecOidc
@@ -128,7 +143,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecOidc
     [JsonPropertyName("webSsoConfig")]
     public V1beta1IAMWorkforcePoolProviderSpecOidcWebSsoConfig WebSsoConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A SAML identity provider configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecSaml
@@ -137,7 +154,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecSaml
     [JsonPropertyName("idpMetadataXml")]
     public string IdpMetadataXml { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpecWorkforcePoolRef
@@ -154,7 +173,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpecWorkforcePoolRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderSpec
@@ -199,7 +220,9 @@ public partial class V1beta1IAMWorkforcePoolProviderSpec
     [JsonPropertyName("workforcePoolRef")]
     public V1beta1IAMWorkforcePoolProviderSpecWorkforcePoolRef WorkforcePoolRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatusConditions
@@ -224,7 +247,9 @@ public partial class V1beta1IAMWorkforcePoolProviderStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatusOidcClientSecretValue
@@ -233,7 +258,9 @@ public partial class V1beta1IAMWorkforcePoolProviderStatusOidcClientSecretValue
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatusOidcClientSecret
@@ -242,7 +269,9 @@ public partial class V1beta1IAMWorkforcePoolProviderStatusOidcClientSecret
     [JsonPropertyName("value")]
     public V1beta1IAMWorkforcePoolProviderStatusOidcClientSecretValue? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatusOidc
@@ -251,7 +280,9 @@ public partial class V1beta1IAMWorkforcePoolProviderStatusOidc
     [JsonPropertyName("clientSecret")]
     public V1beta1IAMWorkforcePoolProviderStatusOidcClientSecret? ClientSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMWorkforcePoolProviderStatus
@@ -272,7 +303,9 @@ public partial class V1beta1IAMWorkforcePoolProviderStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -302,3 +335,4 @@ public partial class V1beta1IAMWorkforcePoolProvider : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1IAMWorkforcePoolProviderStatus? Status { get; set; }
 }
+#nullable disable

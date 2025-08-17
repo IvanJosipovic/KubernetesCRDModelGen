@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>LoggingLink is the Schema for the LoggingLink API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1LoggingLinkList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1alpha1LoggingLink> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The LoggingLogBucket that this Link is associated with</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LoggingLinkSpecLoggingLogBucketRef
@@ -50,7 +53,9 @@ public partial class V1alpha1LoggingLinkSpecLoggingLogBucketRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoggingLinkSpec defines the desired state of LoggingLink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LoggingLinkSpec
@@ -67,7 +72,9 @@ public partial class V1alpha1LoggingLinkSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LoggingLinkStatusConditions
@@ -92,7 +99,9 @@ public partial class V1alpha1LoggingLinkStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The information of a BigQuery Dataset. When a link is created, a BigQuery dataset is created along with it, in the same project as the LogBucket it's linked to. This dataset will also have BigQuery Views corresponding to the LogViews in the bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LoggingLinkStatusObservedStateBigQueryDataset
@@ -101,7 +110,9 @@ public partial class V1alpha1LoggingLinkStatusObservedStateBigQueryDataset
     [JsonPropertyName("datasetID")]
     public string? DatasetID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LoggingLinkStatusObservedState
@@ -118,7 +129,9 @@ public partial class V1alpha1LoggingLinkStatusObservedState
     [JsonPropertyName("lifecycleState")]
     public string? LifecycleState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoggingLinkStatus defines the config connector machine state of LoggingLink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LoggingLinkStatus
@@ -139,7 +152,9 @@ public partial class V1alpha1LoggingLinkStatus
     [JsonPropertyName("observedState")]
     public V1alpha1LoggingLinkStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoggingLink is the Schema for the LoggingLink API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -169,3 +184,4 @@ public partial class V1alpha1LoggingLink : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1alpha1LoggingLinkStatus? Status { get; set; }
 }
+#nullable disable

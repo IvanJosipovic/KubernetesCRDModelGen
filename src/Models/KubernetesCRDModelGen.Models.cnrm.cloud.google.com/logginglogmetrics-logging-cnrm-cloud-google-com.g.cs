@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>LoggingLogMetric is the Schema for the logging API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LoggingLogMetricList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1LoggingLogMetric> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The explicit buckets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecBucketOptionsExplicitBuckets
@@ -42,7 +45,9 @@ public partial class V1beta1LoggingLogMetricSpecBucketOptionsExplicitBuckets
     [JsonPropertyName("bounds")]
     public IList<double>? Bounds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The exponential buckets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecBucketOptionsExponentialBuckets
@@ -59,7 +64,9 @@ public partial class V1beta1LoggingLogMetricSpecBucketOptionsExponentialBuckets
     [JsonPropertyName("scale")]
     public double? Scale { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The linear bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecBucketOptionsLinearBuckets
@@ -76,7 +83,9 @@ public partial class V1beta1LoggingLogMetricSpecBucketOptionsLinearBuckets
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The `bucket_options` are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket boundaries used to create a histogram of the extracted values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecBucketOptions
@@ -93,7 +102,9 @@ public partial class V1beta1LoggingLogMetricSpecBucketOptions
     [JsonPropertyName("linearBuckets")]
     public V1beta1LoggingLogMetricSpecBucketOptionsLinearBuckets? LinearBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the Log Bucket that owns the Log Metric. Only Log Buckets in projects are supported. The bucket has to be in the same project as the metric. For example:projects/my-project/locations/global/buckets/my-bucket If empty, then the Log Metric is considered a non-Bucket Log Metric. Only `external` field is supported to configure the reference for now.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecLoggingLogBucketRef
@@ -114,7 +125,9 @@ public partial class V1beta1LoggingLogMetricSpecLoggingLogBucketRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecMetricDescriptorLabels
@@ -131,7 +144,9 @@ public partial class V1beta1LoggingLogMetricSpecMetricDescriptorLabels
     [JsonPropertyName("valueType")]
     public string? ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Metadata which can be used to guide usage of the metric.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecMetricDescriptorMetadata
@@ -144,7 +159,9 @@ public partial class V1beta1LoggingLogMetricSpecMetricDescriptorMetadata
     [JsonPropertyName("samplePeriod")]
     public string? SamplePeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The metric descriptor associated with the logs-based metric. If unspecified, it uses a default metric descriptor with a DELTA metric kind, INT64 value type, with no labels and a unit of "1". Such a metric counts the number of log entries matching the `filter` expression. The `name`, `type`, and `description` fields in the `metric_descriptor` are output only, and is constructed using the `name` and `description` field in the LogMetric. To create a logs-based metric that records a distribution of log values, a DELTA metric kind with a DISTRIBUTION value type must be used along with a `value_extractor` expression in the LogMetric. Each label in the metric descriptor must have a matching label name as the key and an extractor expression as the value in the `label_extractors` map. The `metric_kind` and `value_type` fields in the `metric_descriptor` cannot be updated once initially configured. New labels can be added in the `metric_descriptor`, but existing labels cannot be modified except for their description.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecMetricDescriptor
@@ -177,7 +194,9 @@ public partial class V1beta1LoggingLogMetricSpecMetricDescriptor
     [JsonPropertyName("valueType")]
     public string? ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecProjectRef
@@ -198,7 +217,9 @@ public partial class V1beta1LoggingLogMetricSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpec
@@ -243,7 +264,9 @@ public partial class V1beta1LoggingLogMetricSpec
     [JsonPropertyName("valueExtractor")]
     public string? ValueExtractor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricStatusConditions
@@ -268,7 +291,9 @@ public partial class V1beta1LoggingLogMetricStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricStatusMetricDescriptor
@@ -289,7 +314,9 @@ public partial class V1beta1LoggingLogMetricStatusMetricDescriptor
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricStatus
@@ -314,7 +341,9 @@ public partial class V1beta1LoggingLogMetricStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LoggingLogMetric is the Schema for the logging API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -344,3 +373,4 @@ public partial class V1beta1LoggingLogMetric : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1LoggingLogMetricStatus? Status { get; set; }
 }
+#nullable disable

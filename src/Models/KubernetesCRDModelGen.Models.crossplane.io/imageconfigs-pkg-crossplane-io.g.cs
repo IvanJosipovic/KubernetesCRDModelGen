@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+#nullable enable
 /// <summary>The ImageConfig resource is used to configure settings for package images.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ImageConfigList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ImageConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageMatch defines a rule for matching image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecMatchImages
@@ -46,7 +49,9 @@ public partial class V1beta1ImageConfigSpecMatchImages
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PullSecretRef is a reference to a secret that contains the credentials for the registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecRegistryAuthenticationPullSecretRef
@@ -55,7 +60,9 @@ public partial class V1beta1ImageConfigSpecRegistryAuthenticationPullSecretRef
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authentication is the authentication information for the registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecRegistryAuthentication
@@ -64,7 +71,9 @@ public partial class V1beta1ImageConfigSpecRegistryAuthentication
     [JsonPropertyName("pullSecretRef")]
     public V1beta1ImageConfigSpecRegistryAuthenticationPullSecretRef PullSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Registry is the configuration for the registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecRegistry
@@ -73,7 +82,9 @@ public partial class V1beta1ImageConfigSpecRegistry
     [JsonPropertyName("authentication")]
     public V1beta1ImageConfigSpecRegistryAuthentication? Authentication { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RewriteImage defines how a matched image's path should be rewritten.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecRewriteImage
@@ -82,7 +93,9 @@ public partial class V1beta1ImageConfigSpecRewriteImage
     [JsonPropertyName("prefix")]
     public string Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Attestation defines the type of attestation to validate and optionally apply a policy decision to it. Authority block is used to verify the specified attestation types, and if Policy is specified, then it's applied only after the validation of the Attestation signature has been verified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesAttestations
@@ -95,7 +108,9 @@ public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesAttestat
     [JsonPropertyName("predicateType")]
     public string PredicateType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRef sets a reference to a secret with the key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesKeySecretRef
@@ -108,7 +123,9 @@ public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesKeySecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Key defines the type of key to validate the image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesKey
@@ -121,7 +138,9 @@ public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesKey
     [JsonPropertyName("secretRef")]
     public V1beta1ImageConfigSpecVerificationCosignAuthoritiesKeySecretRef SecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Identity may contain the issuer and/or the subject found in the transparency log. Issuer/Subject uses a strict match, while IssuerRegExp and SubjectRegExp apply a regexp for matching.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesKeylessIdentities
@@ -142,7 +161,9 @@ public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesKeylessI
     [JsonPropertyName("subjectRegExp")]
     public string? SubjectRegExp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Keyless sets the configuration to verify the authority against a Fulcio instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesKeyless
@@ -155,7 +176,9 @@ public partial class V1beta1ImageConfigSpecVerificationCosignAuthoritiesKeyless
     [JsonPropertyName("insecureIgnoreSCT")]
     public bool? InsecureIgnoreSCT { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CosignAuthority defines the rules for discovering and validating signatures.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecVerificationCosignAuthorities
@@ -176,7 +199,9 @@ public partial class V1beta1ImageConfigSpecVerificationCosignAuthorities
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cosign is the configuration for verifying the image using cosign.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecVerificationCosign
@@ -185,7 +210,9 @@ public partial class V1beta1ImageConfigSpecVerificationCosign
     [JsonPropertyName("authorities")]
     public IList<V1beta1ImageConfigSpecVerificationCosignAuthorities> Authorities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Verification contains the configuration for verifying the image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecVerification
@@ -198,7 +225,9 @@ public partial class V1beta1ImageConfigSpecVerification
     [JsonPropertyName("provider")]
     public string Provider { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageConfigSpec contains the configuration for matching images.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpec
@@ -219,7 +248,9 @@ public partial class V1beta1ImageConfigSpec
     [JsonPropertyName("verification")]
     public V1beta1ImageConfigSpecVerification? Verification { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ImageConfig resource is used to configure settings for package images.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -245,3 +276,4 @@ public partial class V1beta1ImageConfig : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("spec")]
     public V1beta1ImageConfigSpec? Spec { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.m.upbound.io;
+#nullable enable
 /// <summary>SQLContainer is the Schema for the SQLContainers API. Manages a SQL Container within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SQLContainerList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1SQLContainer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SQLContainerSpecForProviderAccountNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderAccountNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1SQLContainerSpecForProviderAccountNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLContainerSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderAccountNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SQLContainerSpecForProviderAccountNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in cosmosdb to populate accountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderAccountNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SQLContainerSpecForProviderAccountNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLContainerSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderAutoscaleSettings
@@ -106,7 +117,9 @@ public partial class V1beta1SQLContainerSpecForProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A conflict_resolution_policy blocks as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderConflictResolutionPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1SQLContainerSpecForProviderConflictResolutionPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderDatabaseNameRefPolicy
@@ -136,7 +151,9 @@ public partial class V1beta1SQLContainerSpecForProviderDatabaseNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SQLDatabase in cosmosdb to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderDatabaseNameRef
@@ -153,7 +170,9 @@ public partial class V1beta1SQLContainerSpecForProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLContainerSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderDatabaseNameSelectorPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1SQLContainerSpecForProviderDatabaseNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SQLDatabase in cosmosdb to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderDatabaseNameSelector
@@ -187,7 +208,9 @@ public partial class V1beta1SQLContainerSpecForProviderDatabaseNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLContainerSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIndexIndex
@@ -200,7 +223,9 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIn
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIndex
@@ -209,7 +234,9 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIn
     [JsonPropertyName("index")]
     public IList<V1beta1SQLContainerSpecForProviderIndexingPolicyCompositeIndexIndex>? Index { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyExcludedPath
@@ -218,7 +245,9 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyExcludedPat
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyIncludedPath
@@ -227,7 +256,9 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicyIncludedPat
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicySpatialIndex
@@ -236,7 +267,9 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicySpatialInde
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An indexing_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderIndexingPolicy
@@ -261,7 +294,9 @@ public partial class V1beta1SQLContainerSpecForProviderIndexingPolicy
     [JsonPropertyName("spatialIndex")]
     public IList<V1beta1SQLContainerSpecForProviderIndexingPolicySpatialIndex>? SpatialIndex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameRefPolicy
@@ -274,7 +309,9 @@ public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameRef
@@ -291,7 +328,9 @@ public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1SQLContainerSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameSelectorPolicy
@@ -304,7 +343,9 @@ public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameSelector
@@ -325,7 +366,9 @@ public partial class V1beta1SQLContainerSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SQLContainerSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProviderUniqueKey
@@ -334,7 +377,9 @@ public partial class V1beta1SQLContainerSpecForProviderUniqueKey
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecForProvider
@@ -415,7 +460,9 @@ public partial class V1beta1SQLContainerSpecForProvider
     [JsonPropertyName("uniqueKey")]
     public IList<V1beta1SQLContainerSpecForProviderUniqueKey>? UniqueKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderAutoscaleSettings
@@ -424,7 +471,9 @@ public partial class V1beta1SQLContainerSpecInitProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A conflict_resolution_policy blocks as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderConflictResolutionPolicy
@@ -441,7 +490,9 @@ public partial class V1beta1SQLContainerSpecInitProviderConflictResolutionPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeIndexIndex
@@ -454,7 +505,9 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeI
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeIndex
@@ -463,7 +516,9 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeI
     [JsonPropertyName("index")]
     public IList<V1beta1SQLContainerSpecInitProviderIndexingPolicyCompositeIndexIndex>? Index { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyExcludedPath
@@ -472,7 +527,9 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyExcludedPa
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyIncludedPath
@@ -481,7 +538,9 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicyIncludedPa
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicySpatialIndex
@@ -490,7 +549,9 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicySpatialInd
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An indexing_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicy
@@ -515,7 +576,9 @@ public partial class V1beta1SQLContainerSpecInitProviderIndexingPolicy
     [JsonPropertyName("spatialIndex")]
     public IList<V1beta1SQLContainerSpecInitProviderIndexingPolicySpatialIndex>? SpatialIndex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProviderUniqueKey
@@ -524,7 +587,9 @@ public partial class V1beta1SQLContainerSpecInitProviderUniqueKey
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecInitProvider
@@ -569,7 +634,9 @@ public partial class V1beta1SQLContainerSpecInitProvider
     [JsonPropertyName("uniqueKey")]
     public IList<V1beta1SQLContainerSpecInitProviderUniqueKey>? UniqueKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecProviderConfigRef
@@ -582,7 +649,9 @@ public partial class V1beta1SQLContainerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpecWriteConnectionSecretToRef
@@ -591,7 +660,9 @@ public partial class V1beta1SQLContainerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLContainerSpec defines the desired state of SQLContainer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerSpec
@@ -616,7 +687,9 @@ public partial class V1beta1SQLContainerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SQLContainerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An autoscale_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderAutoscaleSettings
@@ -625,7 +698,9 @@ public partial class V1beta1SQLContainerStatusAtProviderAutoscaleSettings
     [JsonPropertyName("maxThroughput")]
     public double? MaxThroughput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A conflict_resolution_policy blocks as defined below. Changing this forces a new resource to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderConflictResolutionPolicy
@@ -642,7 +717,9 @@ public partial class V1beta1SQLContainerStatusAtProviderConflictResolutionPolicy
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeIndexIndex
@@ -655,7 +732,9 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeI
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeIndex
@@ -664,7 +743,9 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeI
     [JsonPropertyName("index")]
     public IList<V1beta1SQLContainerStatusAtProviderIndexingPolicyCompositeIndexIndex>? Index { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyExcludedPath
@@ -673,7 +754,9 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyExcludedPa
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyIncludedPath
@@ -682,7 +765,9 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicyIncludedPa
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicySpatialIndex
@@ -695,7 +780,9 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicySpatialInd
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An indexing_policy block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicy
@@ -720,7 +807,9 @@ public partial class V1beta1SQLContainerStatusAtProviderIndexingPolicy
     [JsonPropertyName("spatialIndex")]
     public IList<V1beta1SQLContainerStatusAtProviderIndexingPolicySpatialIndex>? SpatialIndex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProviderUniqueKey
@@ -729,7 +818,9 @@ public partial class V1beta1SQLContainerStatusAtProviderUniqueKey
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusAtProvider
@@ -790,7 +881,9 @@ public partial class V1beta1SQLContainerStatusAtProvider
     [JsonPropertyName("uniqueKey")]
     public IList<V1beta1SQLContainerStatusAtProviderUniqueKey>? UniqueKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatusConditions
@@ -819,7 +912,9 @@ public partial class V1beta1SQLContainerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLContainerStatus defines the observed state of SQLContainer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLContainerStatus
@@ -836,7 +931,9 @@ public partial class V1beta1SQLContainerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLContainer is the Schema for the SQLContainers API. Manages a SQL Container within a Cosmos DB Account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -866,3 +963,4 @@ public partial class V1beta1SQLContainer : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1SQLContainerStatus? Status { get; set; }
 }
+#nullable disable

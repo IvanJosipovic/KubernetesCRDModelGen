@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>DefaultNetworkACL is the Schema for the DefaultNetworkACLs API. Manage a default network ACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DefaultNetworkACLList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1DefaultNetworkACL> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate defaultNetworkAclId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdR
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate defaultNetworkAclId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdS
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderEgress
@@ -130,7 +141,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderEgress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRefPolicy
@@ -143,7 +156,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DefaultVPC in ec2 to populate cidrBlock.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRef
@@ -156,7 +171,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSelectorPolicy
@@ -169,7 +186,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DefaultVPC in ec2 to populate cidrBlock.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSelector
@@ -186,7 +205,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSele
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecForProviderIngressCidrBlockSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderIngress
@@ -235,7 +256,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderIngress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefsPolicy
@@ -248,7 +271,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefs
@@ -261,7 +286,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelectorPolicy
@@ -274,7 +301,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelector
@@ -291,7 +320,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProvider
@@ -336,7 +367,9 @@ public partial class V1beta1DefaultNetworkACLSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdRefPolicy
@@ -349,7 +382,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPC in ec2 to populate defaultNetworkAclId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdRef
@@ -362,7 +397,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclId
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdSelectorPolicy
@@ -375,7 +412,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPC in ec2 to populate defaultNetworkAclId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdSelector
@@ -392,7 +431,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclId
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecInitProviderDefaultNetworkAclIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderEgress
@@ -433,7 +474,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderEgress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRefPolicy
@@ -446,7 +489,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DefaultVPC in ec2 to populate cidrBlock.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRef
@@ -459,7 +504,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSelectorPolicy
@@ -472,7 +519,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DefaultVPC in ec2 to populate cidrBlock.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSelector
@@ -489,7 +538,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSel
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecInitProviderIngressCidrBlockSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderIngress
@@ -538,7 +589,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderIngress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefsPolicy
@@ -551,7 +604,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefs
@@ -564,7 +619,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefs
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelectorPolicy
@@ -577,7 +634,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnet in ec2 to populate subnetIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelector
@@ -594,7 +653,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecInitProvider
@@ -635,7 +696,9 @@ public partial class V1beta1DefaultNetworkACLSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecProviderConfigRefPolicy
@@ -648,7 +711,9 @@ public partial class V1beta1DefaultNetworkACLSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecProviderConfigRef
@@ -661,7 +726,9 @@ public partial class V1beta1DefaultNetworkACLSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DefaultNetworkACLSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecWriteConnectionSecretToRef
@@ -674,7 +741,9 @@ public partial class V1beta1DefaultNetworkACLSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultNetworkACLSpec defines the desired state of DefaultNetworkACL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpec
@@ -703,7 +772,9 @@ public partial class V1beta1DefaultNetworkACLSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DefaultNetworkACLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLStatusAtProviderEgress
@@ -744,7 +815,9 @@ public partial class V1beta1DefaultNetworkACLStatusAtProviderEgress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLStatusAtProviderIngress
@@ -785,7 +858,9 @@ public partial class V1beta1DefaultNetworkACLStatusAtProviderIngress
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLStatusAtProvider
@@ -834,7 +909,9 @@ public partial class V1beta1DefaultNetworkACLStatusAtProvider
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLStatusConditions
@@ -863,7 +940,9 @@ public partial class V1beta1DefaultNetworkACLStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultNetworkACLStatus defines the observed state of DefaultNetworkACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLStatus
@@ -880,7 +959,9 @@ public partial class V1beta1DefaultNetworkACLStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DefaultNetworkACL is the Schema for the DefaultNetworkACLs API. Manage a default network ACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -910,3 +991,4 @@ public partial class V1beta1DefaultNetworkACL : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1DefaultNetworkACLStatus? Status { get; set; }
 }
+#nullable disable

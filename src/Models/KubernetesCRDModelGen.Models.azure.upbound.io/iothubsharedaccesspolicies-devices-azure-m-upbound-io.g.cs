@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.m.upbound.io;
+#nullable enable
 /// <summary>IOTHubSharedAccessPolicy is the Schema for the IOTHubSharedAccessPolicys API. Manages an IotHub Shared Access Policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1IOTHubSharedAccessPolicyList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1IOTHubSharedAccessPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a IOTHub in devices to populate iothubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameRef
     [JsonPropertyName("policy")]
     public V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a IOTHub in devices to populate iothubName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameSel
     [JsonPropertyName("policy")]
     public V1beta1IOTHubSharedAccessPolicySpecForProviderIothubNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroupNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroupNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1IOTHubSharedAccessPolicySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecForProvider
@@ -206,7 +225,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecForProvider
     [JsonPropertyName("serviceConnect")]
     public bool? ServiceConnect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecInitProvider
@@ -227,7 +248,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecInitProvider
     [JsonPropertyName("serviceConnect")]
     public bool? ServiceConnect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecProviderConfigRef
@@ -240,7 +263,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpecWriteConnectionSecretToRef
@@ -249,7 +274,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubSharedAccessPolicySpec defines the desired state of IOTHubSharedAccessPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicySpec
@@ -274,7 +301,9 @@ public partial class V1beta1IOTHubSharedAccessPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1IOTHubSharedAccessPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicyStatusAtProvider
@@ -307,7 +336,9 @@ public partial class V1beta1IOTHubSharedAccessPolicyStatusAtProvider
     [JsonPropertyName("serviceConnect")]
     public bool? ServiceConnect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicyStatusConditions
@@ -336,7 +367,9 @@ public partial class V1beta1IOTHubSharedAccessPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubSharedAccessPolicyStatus defines the observed state of IOTHubSharedAccessPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubSharedAccessPolicyStatus
@@ -353,7 +386,9 @@ public partial class V1beta1IOTHubSharedAccessPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IOTHubSharedAccessPolicy is the Schema for the IOTHubSharedAccessPolicys API. Manages an IotHub Shared Access Policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -383,3 +418,4 @@ public partial class V1beta1IOTHubSharedAccessPolicy : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1IOTHubSharedAccessPolicyStatus? Status { get; set; }
 }
+#nullable disable

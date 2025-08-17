@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>BigtableAppProfile is the Schema for the BigtableAppProfile API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BigtableAppProfileList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1BigtableAppProfile> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that this app profile is intended for read-only usage via the Data Boost feature. Please opt-in to this feature by setting the `alpha.cnrm.cloud.google.com/reconciler: direct` annotation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpecDataBoostIsolationReadOnly
@@ -42,7 +45,9 @@ public partial class V1beta1BigtableAppProfileSpecDataBoostIsolationReadOnly
     [JsonPropertyName("computeBillingOwner")]
     public string? ComputeBillingOwner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InstanceRef defines the resource reference to BigtableInstance, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpecInstanceRef
@@ -59,7 +64,9 @@ public partial class V1beta1BigtableAppProfileSpecInstanceRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use a single-cluster routing policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpecSingleClusterRouting
@@ -72,7 +79,9 @@ public partial class V1beta1BigtableAppProfileSpecSingleClusterRouting
     [JsonPropertyName("clusterId")]
     public string? ClusterId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The standard options used for isolating this app profile's traffic from other use cases.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpecStandardIsolation
@@ -81,7 +90,9 @@ public partial class V1beta1BigtableAppProfileSpecStandardIsolation
     [JsonPropertyName("priority")]
     public string? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableAppProfileSpec defines the desired state of BigtableAppProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpec
@@ -118,7 +129,9 @@ public partial class V1beta1BigtableAppProfileSpec
     [JsonPropertyName("standardIsolation")]
     public V1beta1BigtableAppProfileSpecStandardIsolation? StandardIsolation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileStatusConditions
@@ -143,7 +156,9 @@ public partial class V1beta1BigtableAppProfileStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableAppProfileStatus defines the config connector machine state of BigtableAppProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileStatus
@@ -164,7 +179,9 @@ public partial class V1beta1BigtableAppProfileStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BigtableAppProfile is the Schema for the BigtableAppProfile API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -194,3 +211,4 @@ public partial class V1beta1BigtableAppProfile : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1BigtableAppProfileStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.automation.azure.m.upbound.io;
+#nullable enable
 /// <summary>HybridRunBookWorkerGroup is the Schema for the HybridRunBookWorkerGroups API. Manages a Automation Account Runbook Worker Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HybridRunBookWorkerGroupList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1HybridRunBookWorkerGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAcc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in automation to populate automationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAcc
     [JsonPropertyName("policy")]
     public V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAcc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in automation to populate automationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAcc
     [JsonPropertyName("policy")]
     public V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroup
     [JsonPropertyName("policy")]
     public V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecForProvider
@@ -198,7 +217,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRefPolicy
@@ -211,7 +232,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in automation to populate automationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRef
@@ -228,7 +251,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAc
     [JsonPropertyName("policy")]
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelectorPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in automation to populate automationAccountName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelector
@@ -262,7 +289,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAc
     [JsonPropertyName("policy")]
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefPolicy
@@ -275,7 +304,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRef
@@ -292,7 +323,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelectorPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGrou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelector
@@ -326,7 +361,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGrou
     [JsonPropertyName("policy")]
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecInitProvider
@@ -363,7 +400,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecProviderConfigRef
@@ -376,7 +415,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpecWriteConnectionSecretToRef
@@ -385,7 +426,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HybridRunBookWorkerGroupSpec defines the desired state of HybridRunBookWorkerGroup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupSpec
@@ -410,7 +453,9 @@ public partial class V1beta1HybridRunBookWorkerGroupSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HybridRunBookWorkerGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupStatusAtProvider
@@ -435,7 +480,9 @@ public partial class V1beta1HybridRunBookWorkerGroupStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupStatusConditions
@@ -464,7 +511,9 @@ public partial class V1beta1HybridRunBookWorkerGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HybridRunBookWorkerGroupStatus defines the observed state of HybridRunBookWorkerGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridRunBookWorkerGroupStatus
@@ -481,7 +530,9 @@ public partial class V1beta1HybridRunBookWorkerGroupStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HybridRunBookWorkerGroup is the Schema for the HybridRunBookWorkerGroups API. Manages a Automation Account Runbook Worker Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -511,3 +562,4 @@ public partial class V1beta1HybridRunBookWorkerGroup : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1HybridRunBookWorkerGroupStatus? Status { get; set; }
 }
+#nullable disable

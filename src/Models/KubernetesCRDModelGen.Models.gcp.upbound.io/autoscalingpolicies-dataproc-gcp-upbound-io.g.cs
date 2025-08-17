@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.upbound.io;
+#nullable enable
 /// <summary>AutoscalingPolicy is the Schema for the AutoscalingPolicys API. Describes an autoscaling policy for Dataproc cluster autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AutoscalingPolicyList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1AutoscalingPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecForProviderBasicAlgorithmYarnConfig
@@ -58,7 +61,9 @@ public partial class V1beta1AutoscalingPolicySpecForProviderBasicAlgorithmYarnCo
     [JsonPropertyName("scaleUpMinWorkerFraction")]
     public double? ScaleUpMinWorkerFraction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecForProviderBasicAlgorithm
@@ -71,7 +76,9 @@ public partial class V1beta1AutoscalingPolicySpecForProviderBasicAlgorithm
     [JsonPropertyName("yarnConfig")]
     public IList<V1beta1AutoscalingPolicySpecForProviderBasicAlgorithmYarnConfig>? YarnConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecForProviderSecondaryWorkerConfig
@@ -88,7 +95,9 @@ public partial class V1beta1AutoscalingPolicySpecForProviderSecondaryWorkerConfi
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecForProviderWorkerConfig
@@ -105,7 +114,9 @@ public partial class V1beta1AutoscalingPolicySpecForProviderWorkerConfig
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecForProvider
@@ -130,7 +141,9 @@ public partial class V1beta1AutoscalingPolicySpecForProvider
     [JsonPropertyName("workerConfig")]
     public IList<V1beta1AutoscalingPolicySpecForProviderWorkerConfig>? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecInitProviderBasicAlgorithmYarnConfig
@@ -155,7 +168,9 @@ public partial class V1beta1AutoscalingPolicySpecInitProviderBasicAlgorithmYarnC
     [JsonPropertyName("scaleUpMinWorkerFraction")]
     public double? ScaleUpMinWorkerFraction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecInitProviderBasicAlgorithm
@@ -168,7 +183,9 @@ public partial class V1beta1AutoscalingPolicySpecInitProviderBasicAlgorithm
     [JsonPropertyName("yarnConfig")]
     public IList<V1beta1AutoscalingPolicySpecInitProviderBasicAlgorithmYarnConfig>? YarnConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecInitProviderSecondaryWorkerConfig
@@ -185,7 +202,9 @@ public partial class V1beta1AutoscalingPolicySpecInitProviderSecondaryWorkerConf
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecInitProviderWorkerConfig
@@ -202,7 +221,9 @@ public partial class V1beta1AutoscalingPolicySpecInitProviderWorkerConfig
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecInitProvider
@@ -223,7 +244,9 @@ public partial class V1beta1AutoscalingPolicySpecInitProvider
     [JsonPropertyName("workerConfig")]
     public IList<V1beta1AutoscalingPolicySpecInitProviderWorkerConfig>? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecProviderConfigRefPolicy
@@ -236,7 +259,9 @@ public partial class V1beta1AutoscalingPolicySpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecProviderConfigRef
@@ -249,7 +274,9 @@ public partial class V1beta1AutoscalingPolicySpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1AutoscalingPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecWriteConnectionSecretToRef
@@ -262,7 +289,9 @@ public partial class V1beta1AutoscalingPolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AutoscalingPolicySpec defines the desired state of AutoscalingPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpec
@@ -291,7 +320,9 @@ public partial class V1beta1AutoscalingPolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AutoscalingPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicyStatusAtProviderBasicAlgorithmYarnConfig
@@ -316,7 +347,9 @@ public partial class V1beta1AutoscalingPolicyStatusAtProviderBasicAlgorithmYarnC
     [JsonPropertyName("scaleUpMinWorkerFraction")]
     public double? ScaleUpMinWorkerFraction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicyStatusAtProviderBasicAlgorithm
@@ -329,7 +362,9 @@ public partial class V1beta1AutoscalingPolicyStatusAtProviderBasicAlgorithm
     [JsonPropertyName("yarnConfig")]
     public IList<V1beta1AutoscalingPolicyStatusAtProviderBasicAlgorithmYarnConfig>? YarnConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicyStatusAtProviderSecondaryWorkerConfig
@@ -346,7 +381,9 @@ public partial class V1beta1AutoscalingPolicyStatusAtProviderSecondaryWorkerConf
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicyStatusAtProviderWorkerConfig
@@ -363,7 +400,9 @@ public partial class V1beta1AutoscalingPolicyStatusAtProviderWorkerConfig
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicyStatusAtProvider
@@ -396,7 +435,9 @@ public partial class V1beta1AutoscalingPolicyStatusAtProvider
     [JsonPropertyName("workerConfig")]
     public IList<V1beta1AutoscalingPolicyStatusAtProviderWorkerConfig>? WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicyStatusConditions
@@ -425,7 +466,9 @@ public partial class V1beta1AutoscalingPolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AutoscalingPolicyStatus defines the observed state of AutoscalingPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicyStatus
@@ -442,7 +485,9 @@ public partial class V1beta1AutoscalingPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AutoscalingPolicy is the Schema for the AutoscalingPolicys API. Describes an autoscaling policy for Dataproc cluster autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -472,3 +517,4 @@ public partial class V1beta1AutoscalingPolicy : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1AutoscalingPolicyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dynamodb.aws.upbound.io;
+#nullable enable
 /// <summary>KinesisStreamingDestination is the Schema for the KinesisStreamingDestinations API. Enables a Kinesis streaming destination for a DynamoDB table</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1KinesisStreamingDestinationList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1KinesisStreamingDestination> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in kinesis to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnR
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecForProviderStreamArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in kinesis to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnS
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecForProviderStreamArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameR
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecForProviderTableNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameS
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecForProviderTableNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProvider
     [JsonPropertyName("tableNameSelector")]
     public V1beta1KinesisStreamingDestinationSpecForProviderTableNameSelector? TableNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stream in kinesis to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnRef
@@ -208,7 +231,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArn
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stream in kinesis to populate streamArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnSelector
@@ -238,7 +265,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArn
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableNameRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Table in dynamodb to populate tableName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableNameRef
@@ -264,7 +295,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableName
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecInitProviderTableNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableNameSelectorPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Table in dynamodb to populate tableName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableNameSelector
@@ -294,7 +329,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableName
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecInitProviderTableNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProvider
@@ -327,7 +364,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProvider
     [JsonPropertyName("tableNameSelector")]
     public V1beta1KinesisStreamingDestinationSpecInitProviderTableNameSelector? TableNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecProviderConfigRefPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecProviderConfigRef
@@ -353,7 +394,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1KinesisStreamingDestinationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecWriteConnectionSecretToRef
@@ -366,7 +409,9 @@ public partial class V1beta1KinesisStreamingDestinationSpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KinesisStreamingDestinationSpec defines the desired state of KinesisStreamingDestination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpec
@@ -395,7 +440,9 @@ public partial class V1beta1KinesisStreamingDestinationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1KinesisStreamingDestinationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationStatusAtProvider
@@ -420,7 +467,9 @@ public partial class V1beta1KinesisStreamingDestinationStatusAtProvider
     [JsonPropertyName("tableName")]
     public string? TableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationStatusConditions
@@ -449,7 +498,9 @@ public partial class V1beta1KinesisStreamingDestinationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KinesisStreamingDestinationStatus defines the observed state of KinesisStreamingDestination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationStatus
@@ -466,7 +517,9 @@ public partial class V1beta1KinesisStreamingDestinationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KinesisStreamingDestination is the Schema for the KinesisStreamingDestinations API. Enables a Kinesis streaming destination for a DynamoDB table</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -496,3 +549,4 @@ public partial class V1beta1KinesisStreamingDestination : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1KinesisStreamingDestinationStatus? Status { get; set; }
 }
+#nullable disable

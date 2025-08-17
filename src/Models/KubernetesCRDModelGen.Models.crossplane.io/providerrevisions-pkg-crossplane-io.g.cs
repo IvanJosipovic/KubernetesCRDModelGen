@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+#nullable enable
 /// <summary>A ProviderRevision represents a revision of a Provider. Crossplane creates new revisions when there are changes to a Provider.  Crossplane creates and manages ProviderRevisions. Don't directly edit ProviderRevisions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ProviderRevisionList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1ProviderRevision> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionSpecPackagePullSecrets
@@ -42,7 +45,9 @@ public partial class V1ProviderRevisionSpecPackagePullSecrets
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RuntimeConfigRef references a RuntimeConfig resource that will be used to configure the package runtime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionSpecRuntimeConfigRef
@@ -59,7 +64,9 @@ public partial class V1ProviderRevisionSpecRuntimeConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderRevisionSpec specifies configuration for a ProviderRevision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionSpec
@@ -108,7 +115,9 @@ public partial class V1ProviderRevisionSpec
     [JsonPropertyName("tlsServerSecretName")]
     public string? TlsServerSecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageConfigRef is a reference to an image config that indicates how the referenced image config was used by the package manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionStatusAppliedImageConfigRefs
@@ -121,7 +130,9 @@ public partial class V1ProviderRevisionStatusAppliedImageConfigRefs
     [JsonPropertyName("reason")]
     public string Reason { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionStatusConditions
@@ -150,7 +161,9 @@ public partial class V1ProviderRevisionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A TypedReference refers to an object by Name, Kind, and APIVersion. It is commonly used to reference cluster-scoped objects or objects where the namespace is already known.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionStatusObjectRefs
@@ -171,7 +184,9 @@ public partial class V1ProviderRevisionStatusObjectRefs
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderRevisionStatus represents the observed state of a ProviderRevision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionStatus
@@ -216,7 +231,9 @@ public partial class V1ProviderRevisionStatus
     [JsonPropertyName("tlsServerSecretName")]
     public string? TlsServerSecretName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A ProviderRevision represents a revision of a Provider. Crossplane creates new revisions when there are changes to a Provider.  Crossplane creates and manages ProviderRevisions. Don't directly edit ProviderRevisions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -246,3 +263,4 @@ public partial class V1ProviderRevision : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1ProviderRevisionStatus? Status { get; set; }
 }
+#nullable disable

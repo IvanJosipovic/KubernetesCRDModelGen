@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudplatform.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ServiceAccountIAMMember is the Schema for the ServiceAccountIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServiceAccountIAMMemberList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1ServiceAccountIAMMember> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecForProviderCondition
@@ -50,7 +53,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecForProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccountIdRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccountIdRef
@@ -80,7 +87,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccount
     [JsonPropertyName("policy")]
     public V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccountIdSelectorPolicy
@@ -93,7 +102,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccount
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccountIdSelector
@@ -114,7 +125,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccount
     [JsonPropertyName("policy")]
     public V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecForProvider
@@ -143,7 +156,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecForProvider
     [JsonPropertyName("serviceAccountIdSelector")]
     public V1beta1ServiceAccountIAMMemberSpecForProviderServiceAccountIdSelector? ServiceAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderCondition
@@ -160,7 +175,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccountIdRefPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccountIdRef
@@ -190,7 +209,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccoun
     [JsonPropertyName("policy")]
     public V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccountIdSelectorPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccoun
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccountIdSelector
@@ -224,7 +247,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccoun
     [JsonPropertyName("policy")]
     public V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecInitProvider
@@ -253,7 +278,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecInitProvider
     [JsonPropertyName("serviceAccountIdSelector")]
     public V1beta1ServiceAccountIAMMemberSpecInitProviderServiceAccountIdSelector? ServiceAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecProviderConfigRef
@@ -266,7 +293,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpecWriteConnectionSecretToRef
@@ -275,7 +304,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceAccountIAMMemberSpec defines the desired state of ServiceAccountIAMMember</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberSpec
@@ -300,7 +331,9 @@ public partial class V1beta1ServiceAccountIAMMemberSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServiceAccountIAMMemberSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberStatusAtProviderCondition
@@ -317,7 +350,9 @@ public partial class V1beta1ServiceAccountIAMMemberStatusAtProviderCondition
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberStatusAtProvider
@@ -346,7 +381,9 @@ public partial class V1beta1ServiceAccountIAMMemberStatusAtProvider
     [JsonPropertyName("serviceAccountId")]
     public string? ServiceAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberStatusConditions
@@ -375,7 +412,9 @@ public partial class V1beta1ServiceAccountIAMMemberStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceAccountIAMMemberStatus defines the observed state of ServiceAccountIAMMember.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAccountIAMMemberStatus
@@ -392,7 +431,9 @@ public partial class V1beta1ServiceAccountIAMMemberStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServiceAccountIAMMember is the Schema for the ServiceAccountIAMMembers API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -422,3 +463,4 @@ public partial class V1beta1ServiceAccountIAMMember : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1ServiceAccountIAMMemberStatus? Status { get; set; }
 }
+#nullable disable

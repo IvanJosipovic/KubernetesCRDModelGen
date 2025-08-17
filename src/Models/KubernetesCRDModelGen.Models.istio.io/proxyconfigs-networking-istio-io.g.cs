@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ProxyConfigList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ProxyConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the details of the proxy image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyConfigSpecImage
@@ -42,7 +45,9 @@ public partial class V1beta1ProxyConfigSpecImage
     [JsonPropertyName("imageType")]
     public string? ImageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyConfigSpecSelector
@@ -51,7 +56,9 @@ public partial class V1beta1ProxyConfigSpecSelector
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Provides configuration for individual workloads. See more details at: https://istio.io/docs/reference/config/networking/proxy-config.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyConfigSpec
@@ -72,7 +79,9 @@ public partial class V1beta1ProxyConfigSpec
     [JsonPropertyName("selector")]
     public V1beta1ProxyConfigSpecSelector? Selector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -102,3 +111,4 @@ public partial class V1beta1ProxyConfig : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

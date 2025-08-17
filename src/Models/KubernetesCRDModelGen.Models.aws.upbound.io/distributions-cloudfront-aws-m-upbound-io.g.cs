@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.m.upbound.io;
+#nullable enable
 /// <summary>Distribution is the Schema for the Distributions API. Provides a CloudFront web distribution resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DistributionList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1Distribution> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderCustomErrorResponse
@@ -54,7 +57,9 @@ public partial class V1beta1DistributionSpecForProviderCustomErrorResponse
     [JsonPropertyName("responsePagePath")]
     public string? ResponsePagePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwardedValuesCookies
@@ -67,7 +72,9 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwa
     [JsonPropertyName("whitelistedNames")]
     public IList<string>? WhitelistedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values configuration that specifies how CloudFront handles query strings, cookies and headers (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwardedValues
@@ -88,7 +95,9 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorForwa
     [JsonPropertyName("queryStringCacheKeys")]
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorFunctionAssociation
@@ -101,7 +110,9 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorFunct
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A config block that sets the grpc config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorGrpcConfig
@@ -110,7 +121,9 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorGrpcC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorLambdaFunctionAssociation
@@ -127,7 +140,9 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorLambd
     [JsonPropertyName("lambdaArn")]
     public string? LambdaArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Default cache behavior for this distribution (maximum one). Requires either cache_policy_id (preferred) or forwarded_values (deprecated) be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
@@ -212,7 +227,9 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
     [JsonPropertyName("viewerProtocolPolicy")]
     public string? ViewerProtocolPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one). AWS provides two versions of access logs for CloudFront: Legacy and v2. This argument configures legacy version standard logs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderLoggingConfig
@@ -229,7 +246,9 @@ public partial class V1beta1DistributionSpecForProviderLoggingConfig
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwardedValuesCookies
@@ -242,7 +261,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwa
     [JsonPropertyName("whitelistedNames")]
     public IList<string>? WhitelistedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values configuration that specifies how CloudFront handles query strings, cookies and headers (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwardedValues
@@ -263,7 +284,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorForwa
     [JsonPropertyName("queryStringCacheKeys")]
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy
@@ -276,7 +299,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in cloudfront to populate functionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRef
@@ -293,7 +318,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy
@@ -306,7 +333,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in cloudfront to populate functionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector
@@ -327,7 +356,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociation
@@ -348,7 +379,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     [JsonPropertyName("functionArnSelector")]
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector? FunctionArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A config block that sets the grpc config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorGrpcConfig
@@ -357,7 +390,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorGrpcC
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy
@@ -370,7 +405,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRef
@@ -387,7 +424,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy
@@ -400,7 +439,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector
@@ -421,7 +462,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociation
@@ -446,7 +489,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambd
     [JsonPropertyName("lambdaArnSelector")]
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector? LambdaArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehavior
@@ -535,7 +580,9 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehavior
     [JsonPropertyName("viewerProtocolPolicy")]
     public string? ViewerProtocolPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginCustomHeader
@@ -548,7 +595,9 @@ public partial class V1beta1DistributionSpecForProviderOriginCustomHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CloudFront custom origin configuration information. If an S3 origin is required, use origin_access_control_id or s3_origin_config instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginCustomOriginConfig
@@ -577,7 +626,9 @@ public partial class V1beta1DistributionSpecForProviderOriginCustomOriginConfig
     [JsonPropertyName("originSslProtocols")]
     public IList<string>? OriginSslProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPolicy
@@ -590,7 +641,9 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRef
@@ -607,7 +660,9 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecForProviderOriginOriginAccessControlIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelectorPolicy
@@ -620,7 +675,9 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelector
@@ -641,7 +698,9 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginAccessControl
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecForProviderOriginOriginAccessControlIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudFront Origin Shield configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see Using Origin Shield in the Amazon CloudFront Developer Guide.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginOriginShield
@@ -654,7 +713,9 @@ public partial class V1beta1DistributionSpecForProviderOriginOriginShield
     [JsonPropertyName("originShieldRegion")]
     public string? OriginShieldRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy
@@ -667,7 +728,9 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRef
@@ -684,7 +747,9 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy
@@ -697,7 +762,9 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelector
@@ -718,7 +785,9 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfigOrigi
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudFront S3 origin configuration information. If a custom origin is required, use custom_origin_config instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfig
@@ -735,7 +804,9 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfig
     [JsonPropertyName("originAccessIdentitySelector")]
     public V1beta1DistributionSpecForProviderOriginS3OriginConfigOriginAccessIdentitySelector? OriginAccessIdentitySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The VPC origin configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginVpcOriginConfig
@@ -752,7 +823,9 @@ public partial class V1beta1DistributionSpecForProviderOriginVpcOriginConfig
     [JsonPropertyName("vpcOriginId")]
     public string? VpcOriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrigin
@@ -809,7 +882,9 @@ public partial class V1beta1DistributionSpecForProviderOrigin
     [JsonPropertyName("vpcOriginConfig")]
     public V1beta1DistributionSpecForProviderOriginVpcOriginConfig? VpcOriginConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginGroupFailoverCriteria
@@ -818,7 +893,9 @@ public partial class V1beta1DistributionSpecForProviderOriginGroupFailoverCriter
     [JsonPropertyName("statusCodes")]
     public IList<double>? StatusCodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginGroupMember
@@ -827,7 +904,9 @@ public partial class V1beta1DistributionSpecForProviderOriginGroupMember
     [JsonPropertyName("originId")]
     public string? OriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOriginGroup
@@ -844,7 +923,9 @@ public partial class V1beta1DistributionSpecForProviderOriginGroup
     [JsonPropertyName("originId")]
     public string? OriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderRestrictionsGeoRestriction
@@ -857,7 +938,9 @@ public partial class V1beta1DistributionSpecForProviderRestrictionsGeoRestrictio
     [JsonPropertyName("restrictionType")]
     public string? RestrictionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The restriction configuration for this distribution (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderRestrictions
@@ -866,7 +949,9 @@ public partial class V1beta1DistributionSpecForProviderRestrictions
     [JsonPropertyName("geoRestriction")]
     public V1beta1DistributionSpecForProviderRestrictionsGeoRestriction? GeoRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SSL configuration for this distribution (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderViewerCertificate
@@ -891,7 +976,9 @@ public partial class V1beta1DistributionSpecForProviderViewerCertificate
     [JsonPropertyName("sslSupportMethod")]
     public string? SslSupportMethod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProvider
@@ -984,7 +1071,9 @@ public partial class V1beta1DistributionSpecForProvider
     [JsonPropertyName("webAclId")]
     public string? WebAclId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderCustomErrorResponse
@@ -1005,7 +1094,9 @@ public partial class V1beta1DistributionSpecInitProviderCustomErrorResponse
     [JsonPropertyName("responsePagePath")]
     public string? ResponsePagePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForwardedValuesCookies
@@ -1018,7 +1109,9 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForw
     [JsonPropertyName("whitelistedNames")]
     public IList<string>? WhitelistedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values configuration that specifies how CloudFront handles query strings, cookies and headers (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForwardedValues
@@ -1039,7 +1132,9 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorForw
     [JsonPropertyName("queryStringCacheKeys")]
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorFunctionAssociation
@@ -1052,7 +1147,9 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorFunc
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A config block that sets the grpc config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorGrpcConfig
@@ -1061,7 +1158,9 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorGrpc
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorLambdaFunctionAssociation
@@ -1078,7 +1177,9 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorLamb
     [JsonPropertyName("lambdaArn")]
     public string? LambdaArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Default cache behavior for this distribution (maximum one). Requires either cache_policy_id (preferred) or forwarded_values (deprecated) be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
@@ -1163,7 +1264,9 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
     [JsonPropertyName("viewerProtocolPolicy")]
     public string? ViewerProtocolPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one). AWS provides two versions of access logs for CloudFront: Legacy and v2. This argument configures legacy version standard logs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderLoggingConfig
@@ -1180,7 +1283,9 @@ public partial class V1beta1DistributionSpecInitProviderLoggingConfig
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForwardedValuesCookies
@@ -1193,7 +1298,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForw
     [JsonPropertyName("whitelistedNames")]
     public IList<string>? WhitelistedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values configuration that specifies how CloudFront handles query strings, cookies and headers (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForwardedValues
@@ -1214,7 +1321,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorForw
     [JsonPropertyName("queryStringCacheKeys")]
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy
@@ -1227,7 +1336,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in cloudfront to populate functionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRef
@@ -1244,7 +1355,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy
@@ -1257,7 +1370,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in cloudfront to populate functionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector
@@ -1278,7 +1393,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociation
@@ -1299,7 +1416,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     [JsonPropertyName("functionArnSelector")]
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector? FunctionArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A config block that sets the grpc config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorGrpcConfig
@@ -1308,7 +1427,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorGrpc
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy
@@ -1321,7 +1442,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRef
@@ -1338,7 +1461,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy
@@ -1351,7 +1476,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate lambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector
@@ -1372,7 +1499,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociation
@@ -1397,7 +1526,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLamb
     [JsonPropertyName("lambdaArnSelector")]
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnSelector? LambdaArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehavior
@@ -1486,7 +1617,9 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehavior
     [JsonPropertyName("viewerProtocolPolicy")]
     public string? ViewerProtocolPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginCustomHeader
@@ -1499,7 +1632,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginCustomHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CloudFront custom origin configuration information. If an S3 origin is required, use origin_access_control_id or s3_origin_config instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginCustomOriginConfig
@@ -1528,7 +1663,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginCustomOriginConfig
     [JsonPropertyName("originSslProtocols")]
     public IList<string>? OriginSslProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPolicy
@@ -1541,7 +1678,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRef
@@ -1558,7 +1697,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelectorPolicy
@@ -1571,7 +1712,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a OriginAccessControl in cloudfront to populate originAccessControlId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelector
@@ -1592,7 +1735,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginAccessContro
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecInitProviderOriginOriginAccessControlIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudFront Origin Shield configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see Using Origin Shield in the Amazon CloudFront Developer Guide.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginOriginShield
@@ -1605,7 +1750,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginOriginShield
     [JsonPropertyName("originShieldRegion")]
     public string? OriginShieldRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy
@@ -1618,7 +1765,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRef
@@ -1635,7 +1784,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentityRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy
@@ -1648,7 +1799,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a OriginAccessIdentity in cloudfront to populate originAccessIdentity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelector
@@ -1669,7 +1822,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfigOrig
     [JsonPropertyName("policy")]
     public V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudFront S3 origin configuration information. If a custom origin is required, use custom_origin_config instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfig
@@ -1686,7 +1841,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfig
     [JsonPropertyName("originAccessIdentitySelector")]
     public V1beta1DistributionSpecInitProviderOriginS3OriginConfigOriginAccessIdentitySelector? OriginAccessIdentitySelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The VPC origin configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginVpcOriginConfig
@@ -1703,7 +1860,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginVpcOriginConfig
     [JsonPropertyName("vpcOriginId")]
     public string? VpcOriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrigin
@@ -1760,7 +1919,9 @@ public partial class V1beta1DistributionSpecInitProviderOrigin
     [JsonPropertyName("vpcOriginConfig")]
     public V1beta1DistributionSpecInitProviderOriginVpcOriginConfig? VpcOriginConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginGroupFailoverCriteria
@@ -1769,7 +1930,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroupFailoverCrite
     [JsonPropertyName("statusCodes")]
     public IList<double>? StatusCodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginGroupMember
@@ -1778,7 +1941,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroupMember
     [JsonPropertyName("originId")]
     public string? OriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOriginGroup
@@ -1795,7 +1960,9 @@ public partial class V1beta1DistributionSpecInitProviderOriginGroup
     [JsonPropertyName("originId")]
     public string? OriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderRestrictionsGeoRestriction
@@ -1808,7 +1975,9 @@ public partial class V1beta1DistributionSpecInitProviderRestrictionsGeoRestricti
     [JsonPropertyName("restrictionType")]
     public string? RestrictionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The restriction configuration for this distribution (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderRestrictions
@@ -1817,7 +1986,9 @@ public partial class V1beta1DistributionSpecInitProviderRestrictions
     [JsonPropertyName("geoRestriction")]
     public V1beta1DistributionSpecInitProviderRestrictionsGeoRestriction? GeoRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SSL configuration for this distribution (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderViewerCertificate
@@ -1842,7 +2013,9 @@ public partial class V1beta1DistributionSpecInitProviderViewerCertificate
     [JsonPropertyName("sslSupportMethod")]
     public string? SslSupportMethod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProvider
@@ -1935,7 +2108,9 @@ public partial class V1beta1DistributionSpecInitProvider
     [JsonPropertyName("webAclId")]
     public string? WebAclId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecProviderConfigRef
@@ -1948,7 +2123,9 @@ public partial class V1beta1DistributionSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecWriteConnectionSecretToRef
@@ -1957,7 +2134,9 @@ public partial class V1beta1DistributionSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DistributionSpec defines the desired state of Distribution</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpec
@@ -1982,7 +2161,9 @@ public partial class V1beta1DistributionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DistributionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderCustomErrorResponse
@@ -2003,7 +2184,9 @@ public partial class V1beta1DistributionStatusAtProviderCustomErrorResponse
     [JsonPropertyName("responsePagePath")]
     public string? ResponsePagePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForwardedValuesCookies
@@ -2016,7 +2199,9 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForw
     [JsonPropertyName("whitelistedNames")]
     public IList<string>? WhitelistedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values configuration that specifies how CloudFront handles query strings, cookies and headers (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForwardedValues
@@ -2037,7 +2222,9 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorForw
     [JsonPropertyName("queryStringCacheKeys")]
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorFunctionAssociation
@@ -2050,7 +2237,9 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorFunc
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A config block that sets the grpc config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorGrpcConfig
@@ -2059,7 +2248,9 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorGrpc
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorLambdaFunctionAssociation
@@ -2076,7 +2267,9 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorLamb
     [JsonPropertyName("lambdaArn")]
     public string? LambdaArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Default cache behavior for this distribution (maximum one). Requires either cache_policy_id (preferred) or forwarded_values (deprecated) be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
@@ -2161,7 +2354,9 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
     [JsonPropertyName("viewerProtocolPolicy")]
     public string? ViewerProtocolPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one). AWS provides two versions of access logs for CloudFront: Legacy and v2. This argument configures legacy version standard logs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderLoggingConfig
@@ -2178,7 +2373,9 @@ public partial class V1beta1DistributionStatusAtProviderLoggingConfig
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values cookies that specifies how CloudFront handles cookies (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForwardedValuesCookies
@@ -2191,7 +2388,9 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForw
     [JsonPropertyName("whitelistedNames")]
     public IList<string>? WhitelistedNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The forwarded values configuration that specifies how CloudFront handles query strings, cookies and headers (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForwardedValues
@@ -2212,7 +2411,9 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorForw
     [JsonPropertyName("queryStringCacheKeys")]
     public IList<string>? QueryStringCacheKeys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorFunctionAssociation
@@ -2225,7 +2426,9 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorFunc
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A config block that sets the grpc config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorGrpcConfig
@@ -2234,7 +2437,9 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorGrpc
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorLambdaFunctionAssociation
@@ -2251,7 +2456,9 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorLamb
     [JsonPropertyName("lambdaArn")]
     public string? LambdaArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehavior
@@ -2340,7 +2547,9 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehavior
     [JsonPropertyName("viewerProtocolPolicy")]
     public string? ViewerProtocolPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginCustomHeader
@@ -2353,7 +2562,9 @@ public partial class V1beta1DistributionStatusAtProviderOriginCustomHeader
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CloudFront custom origin configuration information. If an S3 origin is required, use origin_access_control_id or s3_origin_config instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginCustomOriginConfig
@@ -2382,7 +2593,9 @@ public partial class V1beta1DistributionStatusAtProviderOriginCustomOriginConfig
     [JsonPropertyName("originSslProtocols")]
     public IList<string>? OriginSslProtocols { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudFront Origin Shield configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see Using Origin Shield in the Amazon CloudFront Developer Guide.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginOriginShield
@@ -2395,7 +2608,9 @@ public partial class V1beta1DistributionStatusAtProviderOriginOriginShield
     [JsonPropertyName("originShieldRegion")]
     public string? OriginShieldRegion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudFront S3 origin configuration information. If a custom origin is required, use custom_origin_config instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginS3OriginConfig
@@ -2404,7 +2619,9 @@ public partial class V1beta1DistributionStatusAtProviderOriginS3OriginConfig
     [JsonPropertyName("originAccessIdentity")]
     public string? OriginAccessIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The VPC origin configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginVpcOriginConfig
@@ -2421,7 +2638,9 @@ public partial class V1beta1DistributionStatusAtProviderOriginVpcOriginConfig
     [JsonPropertyName("vpcOriginId")]
     public string? VpcOriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrigin
@@ -2470,7 +2689,9 @@ public partial class V1beta1DistributionStatusAtProviderOrigin
     [JsonPropertyName("vpcOriginConfig")]
     public V1beta1DistributionStatusAtProviderOriginVpcOriginConfig? VpcOriginConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The failover criteria for when to failover to the secondary origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginGroupFailoverCriteria
@@ -2479,7 +2700,9 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroupFailoverCrite
     [JsonPropertyName("statusCodes")]
     public IList<double>? StatusCodes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginGroupMember
@@ -2488,7 +2711,9 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroupMember
     [JsonPropertyName("originId")]
     public string? OriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOriginGroup
@@ -2505,7 +2730,9 @@ public partial class V1beta1DistributionStatusAtProviderOriginGroup
     [JsonPropertyName("originId")]
     public string? OriginId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderRestrictionsGeoRestriction
@@ -2518,7 +2745,9 @@ public partial class V1beta1DistributionStatusAtProviderRestrictionsGeoRestricti
     [JsonPropertyName("restrictionType")]
     public string? RestrictionType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The restriction configuration for this distribution (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderRestrictions
@@ -2527,7 +2756,9 @@ public partial class V1beta1DistributionStatusAtProviderRestrictions
     [JsonPropertyName("geoRestriction")]
     public V1beta1DistributionStatusAtProviderRestrictionsGeoRestriction? GeoRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroupsItems
@@ -2540,7 +2771,9 @@ public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroupsItems
     [JsonPropertyName("keyPairIds")]
     public IList<string>? KeyPairIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroups
@@ -2553,7 +2786,9 @@ public partial class V1beta1DistributionStatusAtProviderTrustedKeyGroups
     [JsonPropertyName("items")]
     public IList<V1beta1DistributionStatusAtProviderTrustedKeyGroupsItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderTrustedSignersItems
@@ -2566,7 +2801,9 @@ public partial class V1beta1DistributionStatusAtProviderTrustedSignersItems
     [JsonPropertyName("keyPairIds")]
     public IList<string>? KeyPairIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderTrustedSigners
@@ -2579,7 +2816,9 @@ public partial class V1beta1DistributionStatusAtProviderTrustedSigners
     [JsonPropertyName("items")]
     public IList<V1beta1DistributionStatusAtProviderTrustedSignersItems>? Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SSL configuration for this distribution (maximum one).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderViewerCertificate
@@ -2604,7 +2843,9 @@ public partial class V1beta1DistributionStatusAtProviderViewerCertificate
     [JsonPropertyName("sslSupportMethod")]
     public string? SslSupportMethod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProvider
@@ -2745,7 +2986,9 @@ public partial class V1beta1DistributionStatusAtProvider
     [JsonPropertyName("webAclId")]
     public string? WebAclId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusConditions
@@ -2774,7 +3017,9 @@ public partial class V1beta1DistributionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DistributionStatus defines the observed state of Distribution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatus
@@ -2791,7 +3036,9 @@ public partial class V1beta1DistributionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Distribution is the Schema for the Distributions API. Provides a CloudFront web distribution resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2821,3 +3068,4 @@ public partial class V1beta1Distribution : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1DistributionStatus? Status { get; set; }
 }
+#nullable disable

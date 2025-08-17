@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.azure.upbound.io;
+#nullable enable
 /// <summary>SecurityCenterAssessment is the Schema for the SecurityCenterAssessments API. Manages the Security Center Assessment for Azure Security Center.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecurityCenterAssessmentList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1SecurityCenterAssessment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPolicyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityCenterAssessmentPolicy in security to populate assessmentPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPolicyIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPol
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPolicyIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityCenterAssessmentPolicy in security to populate assessmentPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPolicyIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPol
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecForProviderAssessmentPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderStatus
@@ -106,7 +117,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderStatus
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderTargetResourceIdRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderTargetResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderTargetResourceIdRef
@@ -132,7 +147,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderTargetResourc
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecForProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderTargetResourceIdSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderTargetResourc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProviderTargetResourceIdSelector
@@ -162,7 +181,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProviderTargetResourc
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecForProvider
@@ -199,7 +220,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecForProvider
     [JsonPropertyName("targetResourceIdSelector")]
     public V1beta1SecurityCenterAssessmentSpecForProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPolicyIdRefPolicy
@@ -212,7 +235,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityCenterAssessmentPolicy in security to populate assessmentPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPolicyIdRef
@@ -225,7 +250,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPo
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPolicyIdSelectorPolicy
@@ -238,7 +265,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityCenterAssessmentPolicy in security to populate assessmentPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPolicyIdSelector
@@ -255,7 +284,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPo
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecInitProviderAssessmentPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderStatus
@@ -272,7 +303,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderStatus
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderTargetResourceIdRefPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderTargetResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderTargetResourceIdRef
@@ -298,7 +333,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderTargetResour
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecInitProviderTargetResourceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderTargetResourceIdSelectorPolicy
@@ -311,7 +348,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderTargetResour
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachineScaleSet in compute to populate targetResourceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProviderTargetResourceIdSelector
@@ -328,7 +367,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProviderTargetResour
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecInitProvider
@@ -365,7 +406,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecInitProvider
     [JsonPropertyName("targetResourceIdSelector")]
     public V1beta1SecurityCenterAssessmentSpecInitProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecProviderConfigRefPolicy
@@ -378,7 +421,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecProviderConfigRef
@@ -391,7 +436,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAssessmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpecWriteConnectionSecretToRef
@@ -404,7 +451,9 @@ public partial class V1beta1SecurityCenterAssessmentSpecWriteConnectionSecretToR
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterAssessmentSpec defines the desired state of SecurityCenterAssessment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentSpec
@@ -433,7 +482,9 @@ public partial class V1beta1SecurityCenterAssessmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SecurityCenterAssessmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentStatusAtProviderStatus
@@ -450,7 +501,9 @@ public partial class V1beta1SecurityCenterAssessmentStatusAtProviderStatus
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentStatusAtProvider
@@ -475,7 +528,9 @@ public partial class V1beta1SecurityCenterAssessmentStatusAtProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentStatusConditions
@@ -504,7 +559,9 @@ public partial class V1beta1SecurityCenterAssessmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterAssessmentStatus defines the observed state of SecurityCenterAssessment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAssessmentStatus
@@ -521,7 +578,9 @@ public partial class V1beta1SecurityCenterAssessmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterAssessment is the Schema for the SecurityCenterAssessments API. Manages the Security Center Assessment for Azure Security Center.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -551,3 +610,4 @@ public partial class V1beta1SecurityCenterAssessment : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1SecurityCenterAssessmentStatus? Status { get; set; }
 }
+#nullable disable

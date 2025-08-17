@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workflowexecutions.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>WorkflowsExecution is the Schema for the WorkflowsExecution API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1WorkflowsExecutionList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1alpha1WorkflowsExecution> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. The host project of the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionSpecProjectRef
@@ -54,7 +57,9 @@ public partial class V1alpha1WorkflowsExecutionSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionSpecWorkflowRef
@@ -71,7 +76,9 @@ public partial class V1alpha1WorkflowsExecutionSpecWorkflowRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkflowsExecutionSpec defines the desired state of WorkflowsExecution</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionSpec
@@ -104,7 +111,9 @@ public partial class V1alpha1WorkflowsExecutionSpec
     [JsonPropertyName("workflowRef")]
     public V1alpha1WorkflowsExecutionSpecWorkflowRef? WorkflowRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusConditions
@@ -129,7 +138,9 @@ public partial class V1alpha1WorkflowsExecutionStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The source position information of the stack trace element.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusObservedStateErrorStackTraceElementsPosition
@@ -146,7 +157,9 @@ public partial class V1alpha1WorkflowsExecutionStatusObservedStateErrorStackTrac
     [JsonPropertyName("line")]
     public long? Line { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusObservedStateErrorStackTraceElements
@@ -163,7 +176,9 @@ public partial class V1alpha1WorkflowsExecutionStatusObservedStateErrorStackTrac
     [JsonPropertyName("step")]
     public string? Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Stack trace with detailed information of where error was generated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusObservedStateErrorStackTrace
@@ -172,7 +187,9 @@ public partial class V1alpha1WorkflowsExecutionStatusObservedStateErrorStackTrac
     [JsonPropertyName("elements")]
     public IList<V1alpha1WorkflowsExecutionStatusObservedStateErrorStackTraceElements>? Elements { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusObservedStateError
@@ -189,7 +206,9 @@ public partial class V1alpha1WorkflowsExecutionStatusObservedStateError
     [JsonPropertyName("stackTrace")]
     public V1alpha1WorkflowsExecutionStatusObservedStateErrorStackTrace? StackTrace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Error regarding the state of the Execution resource. For example, this field will have error details if the execution data is unavailable due to revoked KMS key permissions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusObservedStateStateError
@@ -202,7 +221,9 @@ public partial class V1alpha1WorkflowsExecutionStatusObservedStateStateError
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusObservedStateStatusCurrentSteps
@@ -215,7 +236,9 @@ public partial class V1alpha1WorkflowsExecutionStatusObservedStateStatusCurrentS
     [JsonPropertyName("step")]
     public string? Step { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Status tracks the current steps and progress data of this execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusObservedStateStatus
@@ -224,7 +247,9 @@ public partial class V1alpha1WorkflowsExecutionStatusObservedStateStatus
     [JsonPropertyName("currentSteps")]
     public IList<V1alpha1WorkflowsExecutionStatusObservedStateStatusCurrentSteps>? CurrentSteps { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatusObservedState
@@ -265,7 +290,9 @@ public partial class V1alpha1WorkflowsExecutionStatusObservedState
     [JsonPropertyName("workflowRevisionID")]
     public string? WorkflowRevisionID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkflowsExecutionStatus defines the config connector machine state of WorkflowsExecution</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsExecutionStatus
@@ -286,7 +313,9 @@ public partial class V1alpha1WorkflowsExecutionStatus
     [JsonPropertyName("observedState")]
     public V1alpha1WorkflowsExecutionStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkflowsExecution is the Schema for the WorkflowsExecution API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -316,3 +345,4 @@ public partial class V1alpha1WorkflowsExecution : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1alpha1WorkflowsExecutionStatus? Status { get; set; }
 }
+#nullable disable

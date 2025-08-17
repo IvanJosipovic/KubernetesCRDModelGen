@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerattached.gcp.m.upbound.io;
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. An Anthos cluster running on customer owned infrastructure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ClusterList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Cluster> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to the cluster RBAC settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAuthorization
@@ -46,7 +49,9 @@ public partial class V1beta1ClusterSpecForProviderAuthorization
     [JsonPropertyName("adminUsers")]
     public IList<string>? AdminUsers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Binary Authorization configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderBinaryAuthorization
@@ -55,7 +60,9 @@ public partial class V1beta1ClusterSpecForProviderBinaryAuthorization
     [JsonPropertyName("evaluationMode")]
     public string? EvaluationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fleet configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderFleet
@@ -64,7 +71,9 @@ public partial class V1beta1ClusterSpecForProviderFleet
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the logging components Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingConfigComponentConfig
@@ -73,7 +82,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingConfigComponentConfig
     [JsonPropertyName("enableComponents")]
     public IList<string>? EnableComponents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Logging configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderLoggingConfig
@@ -82,7 +93,9 @@ public partial class V1beta1ClusterSpecForProviderLoggingConfig
     [JsonPropertyName("componentConfig")]
     public V1beta1ClusterSpecForProviderLoggingConfigComponentConfig? ComponentConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheusConfig
@@ -91,7 +104,9 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometh
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Monitoring configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMonitoringConfig
@@ -100,7 +115,9 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfig
     [JsonPropertyName("managedPrometheusConfig")]
     public V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheusConfig? ManagedPrometheusConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OIDC discovery information of the target cluster. Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This fields indicates how GCP services validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP. Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the issuer_url field while clusters with private issuers need to provide both issuer_url and jwks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderOidcConfig
@@ -113,7 +130,9 @@ public partial class V1beta1ClusterSpecForProviderOidcConfig
     [JsonPropertyName("jwks")]
     public string? Jwks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret resource that contains the HTTP(S) proxy configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderProxyConfigKubernetesSecret
@@ -126,7 +145,9 @@ public partial class V1beta1ClusterSpecForProviderProxyConfigKubernetesSecret
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Support for proxy configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderProxyConfig
@@ -135,7 +156,9 @@ public partial class V1beta1ClusterSpecForProviderProxyConfig
     [JsonPropertyName("kubernetesSecret")]
     public V1beta1ClusterSpecForProviderProxyConfigKubernetesSecret? KubernetesSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderSecurityPostureConfig
@@ -144,7 +167,9 @@ public partial class V1beta1ClusterSpecForProviderSecurityPostureConfig
     [JsonPropertyName("vulnerabilityMode")]
     public string? VulnerabilityMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
@@ -209,7 +234,9 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("securityPostureConfig")]
     public V1beta1ClusterSpecForProviderSecurityPostureConfig? SecurityPostureConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to the cluster RBAC settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAuthorization
@@ -222,7 +249,9 @@ public partial class V1beta1ClusterSpecInitProviderAuthorization
     [JsonPropertyName("adminUsers")]
     public IList<string>? AdminUsers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Binary Authorization configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderBinaryAuthorization
@@ -231,7 +260,9 @@ public partial class V1beta1ClusterSpecInitProviderBinaryAuthorization
     [JsonPropertyName("evaluationMode")]
     public string? EvaluationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fleet configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderFleet
@@ -240,7 +271,9 @@ public partial class V1beta1ClusterSpecInitProviderFleet
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the logging components Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingConfigComponentConfig
@@ -249,7 +282,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingConfigComponentConfig
     [JsonPropertyName("enableComponents")]
     public IList<string>? EnableComponents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Logging configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderLoggingConfig
@@ -258,7 +293,9 @@ public partial class V1beta1ClusterSpecInitProviderLoggingConfig
     [JsonPropertyName("componentConfig")]
     public V1beta1ClusterSpecInitProviderLoggingConfigComponentConfig? ComponentConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheusConfig
@@ -267,7 +304,9 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPromet
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Monitoring configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
@@ -276,7 +315,9 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
     [JsonPropertyName("managedPrometheusConfig")]
     public V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheusConfig? ManagedPrometheusConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OIDC discovery information of the target cluster. Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This fields indicates how GCP services validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP. Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the issuer_url field while clusters with private issuers need to provide both issuer_url and jwks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderOidcConfig
@@ -289,7 +330,9 @@ public partial class V1beta1ClusterSpecInitProviderOidcConfig
     [JsonPropertyName("jwks")]
     public string? Jwks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret resource that contains the HTTP(S) proxy configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderProxyConfigKubernetesSecret
@@ -302,7 +345,9 @@ public partial class V1beta1ClusterSpecInitProviderProxyConfigKubernetesSecret
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Support for proxy configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderProxyConfig
@@ -311,7 +356,9 @@ public partial class V1beta1ClusterSpecInitProviderProxyConfig
     [JsonPropertyName("kubernetesSecret")]
     public V1beta1ClusterSpecInitProviderProxyConfigKubernetesSecret? KubernetesSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderSecurityPostureConfig
@@ -320,7 +367,9 @@ public partial class V1beta1ClusterSpecInitProviderSecurityPostureConfig
     [JsonPropertyName("vulnerabilityMode")]
     public string? VulnerabilityMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
@@ -381,7 +430,9 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("securityPostureConfig")]
     public V1beta1ClusterSpecInitProviderSecurityPostureConfig? SecurityPostureConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecProviderConfigRef
@@ -394,7 +445,9 @@ public partial class V1beta1ClusterSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
@@ -403,7 +456,9 @@ public partial class V1beta1ClusterSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterSpec defines the desired state of Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpec
@@ -428,7 +483,9 @@ public partial class V1beta1ClusterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration related to the cluster RBAC settings. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAuthorization
@@ -441,7 +498,9 @@ public partial class V1beta1ClusterStatusAtProviderAuthorization
     [JsonPropertyName("adminUsers")]
     public IList<string>? AdminUsers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Binary Authorization configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderBinaryAuthorization
@@ -450,7 +509,9 @@ public partial class V1beta1ClusterStatusAtProviderBinaryAuthorization
     [JsonPropertyName("evaluationMode")]
     public string? EvaluationMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderErrors
@@ -459,7 +520,9 @@ public partial class V1beta1ClusterStatusAtProviderErrors
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Fleet configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderFleet
@@ -472,7 +535,9 @@ public partial class V1beta1ClusterStatusAtProviderFleet
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration of the logging components Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderLoggingConfigComponentConfig
@@ -481,7 +546,9 @@ public partial class V1beta1ClusterStatusAtProviderLoggingConfigComponentConfig
     [JsonPropertyName("enableComponents")]
     public IList<string>? EnableComponents { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Logging configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderLoggingConfig
@@ -490,7 +557,9 @@ public partial class V1beta1ClusterStatusAtProviderLoggingConfig
     [JsonPropertyName("componentConfig")]
     public V1beta1ClusterStatusAtProviderLoggingConfigComponentConfig? ComponentConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable Google Cloud Managed Service for Prometheus in the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheusConfig
@@ -499,7 +568,9 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPromet
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Monitoring configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
@@ -508,7 +579,9 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
     [JsonPropertyName("managedPrometheusConfig")]
     public V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheusConfig? ManagedPrometheusConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OIDC discovery information of the target cluster. Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This fields indicates how GCP services validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP. Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the issuer_url field while clusters with private issuers need to provide both issuer_url and jwks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderOidcConfig
@@ -521,7 +594,9 @@ public partial class V1beta1ClusterStatusAtProviderOidcConfig
     [JsonPropertyName("jwks")]
     public string? Jwks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Kubernetes Secret resource that contains the HTTP(S) proxy configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderProxyConfigKubernetesSecret
@@ -534,7 +609,9 @@ public partial class V1beta1ClusterStatusAtProviderProxyConfigKubernetesSecret
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Support for proxy configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderProxyConfig
@@ -543,7 +620,9 @@ public partial class V1beta1ClusterStatusAtProviderProxyConfig
     [JsonPropertyName("kubernetesSecret")]
     public V1beta1ClusterStatusAtProviderProxyConfigKubernetesSecret? KubernetesSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderSecurityPostureConfig
@@ -552,7 +631,9 @@ public partial class V1beta1ClusterStatusAtProviderSecurityPostureConfig
     [JsonPropertyName("vulnerabilityMode")]
     public string? VulnerabilityMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
@@ -569,7 +650,9 @@ public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
     [JsonPropertyName("workloadPool")]
     public string? WorkloadPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
@@ -678,7 +761,9 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("workloadIdentityConfig")]
     public IList<V1beta1ClusterStatusAtProviderWorkloadIdentityConfig>? WorkloadIdentityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusConditions
@@ -707,7 +792,9 @@ public partial class V1beta1ClusterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClusterStatus defines the observed state of Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatus
@@ -724,7 +811,9 @@ public partial class V1beta1ClusterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cluster is the Schema for the Clusters API. An Anthos cluster running on customer owned infrastructure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -754,3 +843,4 @@ public partial class V1beta1Cluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ClusterStatus? Status { get; set; }
 }
+#nullable disable

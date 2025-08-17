@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dms.aws.m.upbound.io;
+#nullable enable
 /// <summary>S3Endpoint is the Schema for the S3Endpoints API. Provides a DMS (Data Migration Service) S3 endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1S3EndpointList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1S3Endpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnRef
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecForProviderKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnSelector
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecForProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate serverSideEncryptionKmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyI
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate serverSideEncryptionKmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyI
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecForProviderServerSideEncryptionKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderServiceAccessRoleArnRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1S3EndpointSpecForProviderServiceAccessRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderServiceAccessRoleArnRef
@@ -191,7 +212,9 @@ public partial class V1beta1S3EndpointSpecForProviderServiceAccessRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecForProviderServiceAccessRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderServiceAccessRoleArnSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1S3EndpointSpecForProviderServiceAccessRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderServiceAccessRoleArnSelector
@@ -225,7 +250,9 @@ public partial class V1beta1S3EndpointSpecForProviderServiceAccessRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecForProviderServiceAccessRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProvider
@@ -446,7 +473,9 @@ public partial class V1beta1S3EndpointSpecForProvider
     [JsonPropertyName("useTaskStartTimeForFullLoadTimestamp")]
     public bool? UseTaskStartTimeForFullLoadTimestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderKmsKeyArnRefPolicy
@@ -459,7 +488,9 @@ public partial class V1beta1S3EndpointSpecInitProviderKmsKeyArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderKmsKeyArnRef
@@ -476,7 +507,9 @@ public partial class V1beta1S3EndpointSpecInitProviderKmsKeyArnRef
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecInitProviderKmsKeyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderKmsKeyArnSelectorPolicy
@@ -489,7 +522,9 @@ public partial class V1beta1S3EndpointSpecInitProviderKmsKeyArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderKmsKeyArnSelector
@@ -510,7 +545,9 @@ public partial class V1beta1S3EndpointSpecInitProviderKmsKeyArnSelector
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecInitProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKeyIdRefPolicy
@@ -523,7 +560,9 @@ public partial class V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKey
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate serverSideEncryptionKmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKeyIdRef
@@ -540,7 +579,9 @@ public partial class V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKey
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKeyIdSelectorPolicy
@@ -553,7 +594,9 @@ public partial class V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKey
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate serverSideEncryptionKmsKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKeyIdSelector
@@ -574,7 +617,9 @@ public partial class V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKey
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecInitProviderServerSideEncryptionKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnRefPolicy
@@ -587,7 +632,9 @@ public partial class V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate serviceAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnRef
@@ -604,7 +651,9 @@ public partial class V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnSelectorPolicy
@@ -617,7 +666,9 @@ public partial class V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate serviceAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnSelector
@@ -638,7 +689,9 @@ public partial class V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnSelect
     [JsonPropertyName("policy")]
     public V1beta1S3EndpointSpecInitProviderServiceAccessRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecInitProvider
@@ -855,7 +908,9 @@ public partial class V1beta1S3EndpointSpecInitProvider
     [JsonPropertyName("useTaskStartTimeForFullLoadTimestamp")]
     public bool? UseTaskStartTimeForFullLoadTimestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecProviderConfigRef
@@ -868,7 +923,9 @@ public partial class V1beta1S3EndpointSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecWriteConnectionSecretToRef
@@ -877,7 +934,9 @@ public partial class V1beta1S3EndpointSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>S3EndpointSpec defines the desired state of S3Endpoint</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpec
@@ -902,7 +961,9 @@ public partial class V1beta1S3EndpointSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1S3EndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointStatusAtProvider
@@ -1123,7 +1184,9 @@ public partial class V1beta1S3EndpointStatusAtProvider
     [JsonPropertyName("useTaskStartTimeForFullLoadTimestamp")]
     public bool? UseTaskStartTimeForFullLoadTimestamp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointStatusConditions
@@ -1152,7 +1215,9 @@ public partial class V1beta1S3EndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>S3EndpointStatus defines the observed state of S3Endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointStatus
@@ -1169,7 +1234,9 @@ public partial class V1beta1S3EndpointStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>S3Endpoint is the Schema for the S3Endpoints API. Provides a DMS (Data Migration Service) S3 endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1199,3 +1266,4 @@ public partial class V1beta1S3Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1S3EndpointStatus? Status { get; set; }
 }
+#nullable disable

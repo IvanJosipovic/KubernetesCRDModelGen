@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.upbound.io;
+#nullable enable
 /// <summary>Metric is the Schema for the Metrics API. Logs-based metric can also be used to extract values from logs and create a a distribution of the values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MetricList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1Metric> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1MetricSpecForProviderBucketNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ProjectBucketConfig in logging to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1MetricSpecForProviderBucketNameRef
     [JsonPropertyName("policy")]
     public V1beta1MetricSpecForProviderBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1MetricSpecForProviderBucketNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ProjectBucketConfig in logging to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1MetricSpecForProviderBucketNameSelector
     [JsonPropertyName("policy")]
     public V1beta1MetricSpecForProviderBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketOptionsExplicitBuckets
@@ -98,7 +109,9 @@ public partial class V1beta1MetricSpecForProviderBucketOptionsExplicitBuckets
     [JsonPropertyName("bounds")]
     public IList<double>? Bounds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketOptionsExponentialBuckets
@@ -115,7 +128,9 @@ public partial class V1beta1MetricSpecForProviderBucketOptionsExponentialBuckets
     [JsonPropertyName("scale")]
     public double? Scale { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketOptionsLinearBuckets
@@ -132,7 +147,9 @@ public partial class V1beta1MetricSpecForProviderBucketOptionsLinearBuckets
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketOptions
@@ -149,7 +166,9 @@ public partial class V1beta1MetricSpecForProviderBucketOptions
     [JsonPropertyName("linearBuckets")]
     public IList<V1beta1MetricSpecForProviderBucketOptionsLinearBuckets>? LinearBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderMetricDescriptorLabels
@@ -166,7 +185,9 @@ public partial class V1beta1MetricSpecForProviderMetricDescriptorLabels
     [JsonPropertyName("valueType")]
     public string? ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderMetricDescriptor
@@ -191,7 +212,9 @@ public partial class V1beta1MetricSpecForProviderMetricDescriptor
     [JsonPropertyName("valueType")]
     public string? ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProvider
@@ -240,7 +263,9 @@ public partial class V1beta1MetricSpecForProvider
     [JsonPropertyName("valueExtractor")]
     public string? ValueExtractor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderBucketNameRefPolicy
@@ -253,7 +278,9 @@ public partial class V1beta1MetricSpecInitProviderBucketNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ProjectBucketConfig in logging to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderBucketNameRef
@@ -266,7 +293,9 @@ public partial class V1beta1MetricSpecInitProviderBucketNameRef
     [JsonPropertyName("policy")]
     public V1beta1MetricSpecInitProviderBucketNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderBucketNameSelectorPolicy
@@ -279,7 +308,9 @@ public partial class V1beta1MetricSpecInitProviderBucketNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ProjectBucketConfig in logging to populate bucketName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderBucketNameSelector
@@ -296,7 +327,9 @@ public partial class V1beta1MetricSpecInitProviderBucketNameSelector
     [JsonPropertyName("policy")]
     public V1beta1MetricSpecInitProviderBucketNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderBucketOptionsExplicitBuckets
@@ -305,7 +338,9 @@ public partial class V1beta1MetricSpecInitProviderBucketOptionsExplicitBuckets
     [JsonPropertyName("bounds")]
     public IList<double>? Bounds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderBucketOptionsExponentialBuckets
@@ -322,7 +357,9 @@ public partial class V1beta1MetricSpecInitProviderBucketOptionsExponentialBucket
     [JsonPropertyName("scale")]
     public double? Scale { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderBucketOptionsLinearBuckets
@@ -339,7 +376,9 @@ public partial class V1beta1MetricSpecInitProviderBucketOptionsLinearBuckets
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderBucketOptions
@@ -356,7 +395,9 @@ public partial class V1beta1MetricSpecInitProviderBucketOptions
     [JsonPropertyName("linearBuckets")]
     public IList<V1beta1MetricSpecInitProviderBucketOptionsLinearBuckets>? LinearBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderMetricDescriptorLabels
@@ -373,7 +414,9 @@ public partial class V1beta1MetricSpecInitProviderMetricDescriptorLabels
     [JsonPropertyName("valueType")]
     public string? ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProviderMetricDescriptor
@@ -398,7 +441,9 @@ public partial class V1beta1MetricSpecInitProviderMetricDescriptor
     [JsonPropertyName("valueType")]
     public string? ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecInitProvider
@@ -447,7 +492,9 @@ public partial class V1beta1MetricSpecInitProvider
     [JsonPropertyName("valueExtractor")]
     public string? ValueExtractor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecProviderConfigRefPolicy
@@ -460,7 +507,9 @@ public partial class V1beta1MetricSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecProviderConfigRef
@@ -473,7 +522,9 @@ public partial class V1beta1MetricSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1MetricSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecWriteConnectionSecretToRef
@@ -486,7 +537,9 @@ public partial class V1beta1MetricSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetricSpec defines the desired state of Metric</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpec
@@ -515,7 +568,9 @@ public partial class V1beta1MetricSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1MetricSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatusAtProviderBucketOptionsExplicitBuckets
@@ -524,7 +579,9 @@ public partial class V1beta1MetricStatusAtProviderBucketOptionsExplicitBuckets
     [JsonPropertyName("bounds")]
     public IList<double>? Bounds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatusAtProviderBucketOptionsExponentialBuckets
@@ -541,7 +598,9 @@ public partial class V1beta1MetricStatusAtProviderBucketOptionsExponentialBucket
     [JsonPropertyName("scale")]
     public double? Scale { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatusAtProviderBucketOptionsLinearBuckets
@@ -558,7 +617,9 @@ public partial class V1beta1MetricStatusAtProviderBucketOptionsLinearBuckets
     [JsonPropertyName("width")]
     public double? Width { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatusAtProviderBucketOptions
@@ -575,7 +636,9 @@ public partial class V1beta1MetricStatusAtProviderBucketOptions
     [JsonPropertyName("linearBuckets")]
     public IList<V1beta1MetricStatusAtProviderBucketOptionsLinearBuckets>? LinearBuckets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatusAtProviderMetricDescriptorLabels
@@ -592,7 +655,9 @@ public partial class V1beta1MetricStatusAtProviderMetricDescriptorLabels
     [JsonPropertyName("valueType")]
     public string? ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatusAtProviderMetricDescriptor
@@ -617,7 +682,9 @@ public partial class V1beta1MetricStatusAtProviderMetricDescriptor
     [JsonPropertyName("valueType")]
     public string? ValueType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatusAtProvider
@@ -662,7 +729,9 @@ public partial class V1beta1MetricStatusAtProvider
     [JsonPropertyName("valueExtractor")]
     public string? ValueExtractor { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatusConditions
@@ -691,7 +760,9 @@ public partial class V1beta1MetricStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MetricStatus defines the observed state of Metric.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricStatus
@@ -708,7 +779,9 @@ public partial class V1beta1MetricStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metric is the Schema for the Metrics API. Logs-based metric can also be used to extract values from logs and create a a distribution of the values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -738,3 +811,4 @@ public partial class V1beta1Metric : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1MetricStatus? Status { get; set; }
 }
+#nullable disable

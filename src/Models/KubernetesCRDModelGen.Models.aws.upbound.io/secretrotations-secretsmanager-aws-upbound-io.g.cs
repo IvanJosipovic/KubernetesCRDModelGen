@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsmanager.aws.upbound.io;
+#nullable enable
 /// <summary>SecretRotation is the Schema for the SecretRotations API. Provides a resource to manage AWS Secrets Manager secret rotation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecretRotationList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1SecretRotation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate rotationLambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRef
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate rotationLambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnSelect
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderRotationRules
@@ -106,7 +117,9 @@ public partial class V1beta1SecretRotationSpecForProviderRotationRules
     [JsonPropertyName("scheduleExpression")]
     public string? ScheduleExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderSecretIdRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1SecretRotationSpecForProviderSecretIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Secret in secretsmanager to populate secretId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderSecretIdRef
@@ -132,7 +147,9 @@ public partial class V1beta1SecretRotationSpecForProviderSecretIdRef
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecForProviderSecretIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Secret in secretsmanager to populate secretId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderSecretIdSelector
@@ -162,7 +181,9 @@ public partial class V1beta1SecretRotationSpecForProviderSecretIdSelector
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProvider
@@ -203,7 +224,9 @@ public partial class V1beta1SecretRotationSpecForProvider
     [JsonPropertyName("secretIdSelector")]
     public V1beta1SecretRotationSpecForProviderSecretIdSelector? SecretIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate rotationLambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnRef
@@ -229,7 +254,9 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnRef
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicy
@@ -242,7 +269,9 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate rotationLambdaArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelector
@@ -259,7 +288,9 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelec
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderRotationRules
@@ -276,7 +307,9 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationRules
     [JsonPropertyName("scheduleExpression")]
     public string? ScheduleExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderSecretIdRefPolicy
@@ -289,7 +322,9 @@ public partial class V1beta1SecretRotationSpecInitProviderSecretIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Secret in secretsmanager to populate secretId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderSecretIdRef
@@ -302,7 +337,9 @@ public partial class V1beta1SecretRotationSpecInitProviderSecretIdRef
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecInitProviderSecretIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicy
@@ -315,7 +352,9 @@ public partial class V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Secret in secretsmanager to populate secretId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProviderSecretIdSelector
@@ -332,7 +371,9 @@ public partial class V1beta1SecretRotationSpecInitProviderSecretIdSelector
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecInitProvider
@@ -369,7 +410,9 @@ public partial class V1beta1SecretRotationSpecInitProvider
     [JsonPropertyName("secretIdSelector")]
     public V1beta1SecretRotationSpecInitProviderSecretIdSelector? SecretIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecProviderConfigRefPolicy
@@ -382,7 +425,9 @@ public partial class V1beta1SecretRotationSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecProviderConfigRef
@@ -395,7 +440,9 @@ public partial class V1beta1SecretRotationSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SecretRotationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecWriteConnectionSecretToRef
@@ -408,7 +455,9 @@ public partial class V1beta1SecretRotationSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRotationSpec defines the desired state of SecretRotation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpec
@@ -437,7 +486,9 @@ public partial class V1beta1SecretRotationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SecretRotationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationStatusAtProviderRotationRules
@@ -454,7 +505,9 @@ public partial class V1beta1SecretRotationStatusAtProviderRotationRules
     [JsonPropertyName("scheduleExpression")]
     public string? ScheduleExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationStatusAtProvider
@@ -487,7 +540,9 @@ public partial class V1beta1SecretRotationStatusAtProvider
     [JsonPropertyName("secretId")]
     public string? SecretId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationStatusConditions
@@ -516,7 +571,9 @@ public partial class V1beta1SecretRotationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRotationStatus defines the observed state of SecretRotation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationStatus
@@ -533,7 +590,9 @@ public partial class V1beta1SecretRotationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretRotation is the Schema for the SecretRotations API. Provides a resource to manage AWS Secrets Manager secret rotation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -563,3 +622,4 @@ public partial class V1beta1SecretRotation : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1SecretRotationStatus? Status { get; set; }
 }
+#nullable disable

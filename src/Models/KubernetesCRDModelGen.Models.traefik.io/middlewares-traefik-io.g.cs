@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+#nullable enable
 /// <summary>Middleware is the CRD implementation of a Traefik Middleware. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/overview/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1MiddlewareList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1alpha1Middleware> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AddPrefix holds the add prefix middleware configuration. This middleware updates the path of a request before forwarding it. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/addprefix/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecAddPrefix
@@ -42,7 +45,9 @@ public partial class V1alpha1MiddlewareSpecAddPrefix
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BasicAuth holds the basic auth middleware configuration. This middleware restricts access to your services to known users. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/basicauth/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecBasicAuth
@@ -63,7 +68,9 @@ public partial class V1alpha1MiddlewareSpecBasicAuth
     [JsonPropertyName("secret")]
     public string? Secret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Buffering holds the buffering middleware configuration. This middleware retries or limits the size of requests that can be forwarded to backends. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/buffering/#maxrequestbodybytes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecBuffering
@@ -88,7 +95,9 @@ public partial class V1alpha1MiddlewareSpecBuffering
     [JsonPropertyName("retryExpression")]
     public string? RetryExpression { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MiddlewareRef is a reference to a Middleware resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecChainMiddlewares
@@ -101,7 +110,9 @@ public partial class V1alpha1MiddlewareSpecChainMiddlewares
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Chain holds the configuration of the chain middleware. This middleware enables to define reusable combinations of other pieces of middleware. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/chain/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecChain
@@ -110,7 +121,9 @@ public partial class V1alpha1MiddlewareSpecChain
     [JsonPropertyName("middlewares")]
     public IList<V1alpha1MiddlewareSpecChainMiddlewares>? Middlewares { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CircuitBreaker holds the circuit breaker configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecCircuitBreaker
@@ -135,7 +148,9 @@ public partial class V1alpha1MiddlewareSpecCircuitBreaker
     [JsonPropertyName("responseCode")]
     public int? ResponseCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compress holds the compress middleware configuration. This middleware compresses responses before sending them to the client, using gzip, brotli, or zstd compression. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/compress/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecCompress
@@ -160,7 +175,9 @@ public partial class V1alpha1MiddlewareSpecCompress
     [JsonPropertyName("minResponseBodyBytes")]
     public int? MinResponseBodyBytes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContentType holds the content-type middleware configuration. This middleware exists to enable the correct behavior until at least the default one can be changed in a future version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecContentType
@@ -169,7 +186,9 @@ public partial class V1alpha1MiddlewareSpecContentType
     [JsonPropertyName("autoDetect")]
     public bool? AutoDetect { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DigestAuth holds the digest auth middleware configuration. This middleware restricts access to your services to known users. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/digestauth/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecDigestAuth
@@ -190,7 +209,9 @@ public partial class V1alpha1MiddlewareSpecDigestAuth
     [JsonPropertyName("secret")]
     public string? Secret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecErrorsServiceHealthCheck
@@ -243,7 +264,9 @@ public partial class V1alpha1MiddlewareSpecErrorsServiceHealthCheck
     [JsonPropertyName("unhealthyInterval")]
     public IntstrIntOrString? UnhealthyInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecErrorsServiceResponseForwarding
@@ -252,7 +275,9 @@ public partial class V1alpha1MiddlewareSpecErrorsServiceResponseForwarding
     [JsonPropertyName("flushInterval")]
     public string? FlushInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecErrorsServiceStickyCookie
@@ -285,7 +310,9 @@ public partial class V1alpha1MiddlewareSpecErrorsServiceStickyCookie
     [JsonPropertyName("secure")]
     public bool? Secure { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecErrorsServiceSticky
@@ -294,7 +321,9 @@ public partial class V1alpha1MiddlewareSpecErrorsServiceSticky
     [JsonPropertyName("cookie")]
     public V1alpha1MiddlewareSpecErrorsServiceStickyCookie? Cookie { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Service defines the reference to a Kubernetes Service that will serve the error page. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/errorpages/#service</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecErrorsService
@@ -355,7 +384,9 @@ public partial class V1alpha1MiddlewareSpecErrorsService
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ErrorPage holds the custom error middleware configuration. This middleware returns a custom page in lieu of the default, according to configured ranges of HTTP Status codes. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/errorpages/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecErrors
@@ -376,7 +407,9 @@ public partial class V1alpha1MiddlewareSpecErrors
     [JsonPropertyName("statusRewrites")]
     public IDictionary<string, int>? StatusRewrites { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS defines the configuration used to secure the connection to the authentication server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecForwardAuthTls
@@ -397,7 +430,9 @@ public partial class V1alpha1MiddlewareSpecForwardAuthTls
     [JsonPropertyName("insecureSkipVerify")]
     public bool? InsecureSkipVerify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ForwardAuth holds the forward auth middleware configuration. This middleware delegates the request authentication to a Service. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/forwardauth/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecForwardAuth
@@ -450,7 +485,9 @@ public partial class V1alpha1MiddlewareSpecForwardAuth
     [JsonPropertyName("trustForwardHeader")]
     public bool? TrustForwardHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GrpcWeb holds the gRPC web middleware configuration. This middleware converts a gRPC web request to an HTTP/2 gRPC request.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecGrpcWeb
@@ -459,7 +496,9 @@ public partial class V1alpha1MiddlewareSpecGrpcWeb
     [JsonPropertyName("allowOrigins")]
     public IList<string>? AllowOrigins { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Headers holds the headers middleware configuration. This middleware manages the requests and responses headers. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/headers/#customrequestheaders</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecHeaders
@@ -596,7 +635,9 @@ public partial class V1alpha1MiddlewareSpecHeaders
     [JsonPropertyName("stsSeconds")]
     public long? StsSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/ipallowlist/#ipstrategy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecInFlightReqSourceCriterionIpStrategy
@@ -613,7 +654,9 @@ public partial class V1alpha1MiddlewareSpecInFlightReqSourceCriterionIpStrategy
     [JsonPropertyName("ipv6Subnet")]
     public int? Ipv6Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SourceCriterion defines what criterion is used to group requests as originating from a common source. If several strategies are defined at the same time, an error will be raised. If none are set, the default is to use the requestHost. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/inflightreq/#sourcecriterion</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecInFlightReqSourceCriterion
@@ -630,7 +673,9 @@ public partial class V1alpha1MiddlewareSpecInFlightReqSourceCriterion
     [JsonPropertyName("requestHost")]
     public bool? RequestHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>InFlightReq holds the in-flight request middleware configuration. This middleware limits the number of requests being processed and served concurrently. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/inflightreq/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecInFlightReq
@@ -643,7 +688,9 @@ public partial class V1alpha1MiddlewareSpecInFlightReq
     [JsonPropertyName("sourceCriterion")]
     public V1alpha1MiddlewareSpecInFlightReqSourceCriterion? SourceCriterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/ipallowlist/#ipstrategy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecIpAllowListIpStrategy
@@ -660,7 +707,9 @@ public partial class V1alpha1MiddlewareSpecIpAllowListIpStrategy
     [JsonPropertyName("ipv6Subnet")]
     public int? Ipv6Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IPAllowList holds the IP allowlist middleware configuration. This middleware limits allowed requests based on the client IP. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/ipallowlist/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecIpAllowList
@@ -677,7 +726,9 @@ public partial class V1alpha1MiddlewareSpecIpAllowList
     [JsonPropertyName("sourceRange")]
     public IList<string>? SourceRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/ipallowlist/#ipstrategy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecIpWhiteListIpStrategy
@@ -694,7 +745,9 @@ public partial class V1alpha1MiddlewareSpecIpWhiteListIpStrategy
     [JsonPropertyName("ipv6Subnet")]
     public int? Ipv6Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Deprecated: please use IPAllowList instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecIpWhiteList
@@ -707,7 +760,9 @@ public partial class V1alpha1MiddlewareSpecIpWhiteList
     [JsonPropertyName("sourceRange")]
     public IList<string>? SourceRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Issuer defines the client certificate issuer details to add to the X-Forwarded-Tls-Client-Cert-Info header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfoIssuer
@@ -740,7 +795,9 @@ public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfoIssuer
     [JsonPropertyName("serialNumber")]
     public bool? SerialNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Subject defines the client certificate subject details to add to the X-Forwarded-Tls-Client-Cert-Info header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfoSubject
@@ -777,7 +834,9 @@ public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfoSubject
     [JsonPropertyName("serialNumber")]
     public bool? SerialNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Info selects the specific client certificate details you want to add to the X-Forwarded-Tls-Client-Cert-Info header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfo
@@ -806,7 +865,9 @@ public partial class V1alpha1MiddlewareSpecPassTLSClientCertInfo
     [JsonPropertyName("subject")]
     public V1alpha1MiddlewareSpecPassTLSClientCertInfoSubject? Subject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PassTLSClientCert holds the pass TLS client cert middleware configuration. This middleware adds the selected data from the passed client TLS certificate to a header. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/passtlsclientcert/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecPassTLSClientCert
@@ -819,7 +880,9 @@ public partial class V1alpha1MiddlewareSpecPassTLSClientCert
     [JsonPropertyName("pem")]
     public bool? Pem { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLS defines TLS-specific configurations, including the CA, certificate, and key, which can be provided as a file path or file content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecRateLimitRedisTls
@@ -836,7 +899,9 @@ public partial class V1alpha1MiddlewareSpecRateLimitRedisTls
     [JsonPropertyName("insecureSkipVerify")]
     public bool? InsecureSkipVerify { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Redis hold the configs of Redis as bucket in rate limiter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecRateLimitRedis
@@ -881,7 +946,9 @@ public partial class V1alpha1MiddlewareSpecRateLimitRedis
     [JsonPropertyName("writeTimeout")]
     public IntstrIntOrString? WriteTimeout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/ipallowlist/#ipstrategy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecRateLimitSourceCriterionIpStrategy
@@ -898,7 +965,9 @@ public partial class V1alpha1MiddlewareSpecRateLimitSourceCriterionIpStrategy
     [JsonPropertyName("ipv6Subnet")]
     public int? Ipv6Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SourceCriterion defines what criterion is used to group requests as originating from a common source. If several strategies are defined at the same time, an error will be raised. If none are set, the default is to use the request's remote address field (as an ipStrategy).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecRateLimitSourceCriterion
@@ -915,7 +984,9 @@ public partial class V1alpha1MiddlewareSpecRateLimitSourceCriterion
     [JsonPropertyName("requestHost")]
     public bool? RequestHost { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RateLimit holds the rate limit configuration. This middleware ensures that services will receive a fair amount of requests, and allows one to define what fair is. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/ratelimit/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecRateLimit
@@ -940,7 +1011,9 @@ public partial class V1alpha1MiddlewareSpecRateLimit
     [JsonPropertyName("sourceCriterion")]
     public V1alpha1MiddlewareSpecRateLimitSourceCriterion? SourceCriterion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedirectRegex holds the redirect regex middleware configuration. This middleware redirects a request using regex matching and replacement. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/redirectregex/#regex</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecRedirectRegex
@@ -957,7 +1030,9 @@ public partial class V1alpha1MiddlewareSpecRedirectRegex
     [JsonPropertyName("replacement")]
     public string? Replacement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RedirectScheme holds the redirect scheme middleware configuration. This middleware redirects requests from a scheme/port to another. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/redirectscheme/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecRedirectScheme
@@ -974,7 +1049,9 @@ public partial class V1alpha1MiddlewareSpecRedirectScheme
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplacePath holds the replace path middleware configuration. This middleware replaces the path of the request URL and store the original path in an X-Replaced-Path header. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/replacepath/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecReplacePath
@@ -983,7 +1060,9 @@ public partial class V1alpha1MiddlewareSpecReplacePath
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ReplacePathRegex holds the replace path regex middleware configuration. This middleware replaces the path of a URL using regex matching and replacement. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/replacepathregex/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecReplacePathRegex
@@ -996,7 +1075,9 @@ public partial class V1alpha1MiddlewareSpecReplacePathRegex
     [JsonPropertyName("replacement")]
     public string? Replacement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Retry holds the retry middleware configuration. This middleware reissues requests a given number of times to a backend server if that server does not reply. As soon as the server answers, the middleware stops retrying, regardless of the response status. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/retry/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecRetry
@@ -1009,7 +1090,9 @@ public partial class V1alpha1MiddlewareSpecRetry
     [JsonPropertyName("initialInterval")]
     public IntstrIntOrString? InitialInterval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StripPrefix holds the strip prefix middleware configuration. This middleware removes the specified prefixes from the URL path. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/stripprefix/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecStripPrefix
@@ -1022,7 +1105,9 @@ public partial class V1alpha1MiddlewareSpecStripPrefix
     [JsonPropertyName("prefixes")]
     public IList<string>? Prefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StripPrefixRegex holds the strip prefix regex middleware configuration. This middleware removes the matching prefixes from the URL path. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/stripprefixregex/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecStripPrefixRegex
@@ -1031,7 +1116,9 @@ public partial class V1alpha1MiddlewareSpecStripPrefixRegex
     [JsonPropertyName("regex")]
     public IList<string>? Regex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>MiddlewareSpec defines the desired state of a Middleware.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpec
@@ -1136,7 +1223,9 @@ public partial class V1alpha1MiddlewareSpec
     [JsonPropertyName("stripPrefixRegex")]
     public V1alpha1MiddlewareSpecStripPrefixRegex? StripPrefixRegex { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Middleware is the CRD implementation of a Traefik Middleware. More info: https://doc.traefik.io/traefik/v3.5/middlewares/http/overview/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1162,3 +1251,4 @@ public partial class V1alpha1Middleware : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("spec")]
     public V1alpha1MiddlewareSpec Spec { get; set; }
 }
+#nullable disable

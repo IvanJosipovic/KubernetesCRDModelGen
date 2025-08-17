@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.m.upbound.io;
+#nullable enable
 /// <summary>BackupProtectedVM is the Schema for the BackupProtectedVMs API. Manages an Azure Backup Protected Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1BackupProtectedVMList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1BackupProtectedVM> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupPolicyVM in recoveryservices to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdRef
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupPolicyVM in recoveryservices to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdSelect
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameRef
@@ -127,7 +140,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameRef
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameSelector
@@ -161,7 +178,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameSel
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameRef
@@ -191,7 +212,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameSelector
@@ -225,7 +250,9 @@ public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameSel
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProvider
@@ -282,7 +309,9 @@ public partial class V1beta1BackupProtectedVMSpecForProvider
     [JsonPropertyName("sourceVmId")]
     public string? SourceVmId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdRefPolicy
@@ -295,7 +324,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a BackupPolicyVM in recoveryservices to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdRef
@@ -312,7 +343,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdRef
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdSelectorPolicy
@@ -325,7 +358,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a BackupPolicyVM in recoveryservices to populate backupPolicyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdSelector
@@ -346,7 +381,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdSelec
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameRefPolicy
@@ -359,7 +396,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameRef
@@ -376,7 +415,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameRe
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameSelectorPolicy
@@ -389,7 +430,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Vault in recoveryservices to populate recoveryVaultName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameSelector
@@ -410,7 +453,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameSe
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameRefPolicy
@@ -423,7 +468,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameRef
@@ -440,7 +487,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameRe
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameSelectorPolicy
@@ -453,7 +502,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameSelector
@@ -474,7 +525,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameSe
     [JsonPropertyName("policy")]
     public V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProvider
@@ -531,7 +584,9 @@ public partial class V1beta1BackupProtectedVMSpecInitProvider
     [JsonPropertyName("sourceVmId")]
     public string? SourceVmId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecProviderConfigRef
@@ -544,7 +599,9 @@ public partial class V1beta1BackupProtectedVMSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecWriteConnectionSecretToRef
@@ -553,7 +610,9 @@ public partial class V1beta1BackupProtectedVMSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupProtectedVMSpec defines the desired state of BackupProtectedVM</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpec
@@ -578,7 +637,9 @@ public partial class V1beta1BackupProtectedVMSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1BackupProtectedVMSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMStatusAtProvider
@@ -615,7 +676,9 @@ public partial class V1beta1BackupProtectedVMStatusAtProvider
     [JsonPropertyName("sourceVmId")]
     public string? SourceVmId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMStatusConditions
@@ -644,7 +707,9 @@ public partial class V1beta1BackupProtectedVMStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupProtectedVMStatus defines the observed state of BackupProtectedVM.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMStatus
@@ -661,7 +726,9 @@ public partial class V1beta1BackupProtectedVMStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupProtectedVM is the Schema for the BackupProtectedVMs API. Manages an Azure Backup Protected Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -691,3 +758,4 @@ public partial class V1beta1BackupProtectedVM : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1BackupProtectedVMStatus? Status { get; set; }
 }
+#nullable disable

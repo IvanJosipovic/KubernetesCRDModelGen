@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.m.upbound.io;
+#nullable enable
 /// <summary>SpringCloudApp is the Schema for the SpringCloudApps API. Manage an Azure Spring Cloud Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudAppList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudApp> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderCustomPersistentDisk
@@ -58,7 +61,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderCustomPersistentDisk
     [JsonPropertyName("storageName")]
     public string? StorageName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderIdentity
@@ -71,7 +76,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An ingress_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderIngressSettings
@@ -96,7 +103,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderIngressSettings
     [JsonPropertyName("sessionCookieMaxAge")]
     public double? SessionCookieMaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An persistent_disk block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderPersistentDisk
@@ -109,7 +118,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderPersistentDisk
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameRefPolicy
@@ -122,7 +133,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameRef
@@ -139,7 +152,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelectorPolicy
@@ -152,7 +167,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelector
@@ -173,7 +190,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderServiceNameRefPolicy
@@ -186,7 +205,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderServiceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudService in appplatform to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderServiceNameRef
@@ -203,7 +224,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderServiceNameRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppSpecForProviderServiceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderServiceNameSelectorPolicy
@@ -216,7 +239,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderServiceNameSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudService in appplatform to populate serviceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProviderServiceNameSelector
@@ -237,7 +262,9 @@ public partial class V1beta1SpringCloudAppSpecForProviderServiceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppSpecForProviderServiceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecForProvider
@@ -302,7 +329,9 @@ public partial class V1beta1SpringCloudAppSpecForProvider
     [JsonPropertyName("tlsEnabled")]
     public bool? TlsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecInitProviderCustomPersistentDisk
@@ -327,7 +356,9 @@ public partial class V1beta1SpringCloudAppSpecInitProviderCustomPersistentDisk
     [JsonPropertyName("storageName")]
     public string? StorageName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecInitProviderIdentity
@@ -340,7 +371,9 @@ public partial class V1beta1SpringCloudAppSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An ingress_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecInitProviderIngressSettings
@@ -365,7 +398,9 @@ public partial class V1beta1SpringCloudAppSpecInitProviderIngressSettings
     [JsonPropertyName("sessionCookieMaxAge")]
     public double? SessionCookieMaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An persistent_disk block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecInitProviderPersistentDisk
@@ -378,7 +413,9 @@ public partial class V1beta1SpringCloudAppSpecInitProviderPersistentDisk
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecInitProvider
@@ -419,7 +456,9 @@ public partial class V1beta1SpringCloudAppSpecInitProvider
     [JsonPropertyName("tlsEnabled")]
     public bool? TlsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecProviderConfigRef
@@ -432,7 +471,9 @@ public partial class V1beta1SpringCloudAppSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpecWriteConnectionSecretToRef
@@ -441,7 +482,9 @@ public partial class V1beta1SpringCloudAppSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppSpec defines the desired state of SpringCloudApp</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppSpec
@@ -466,7 +509,9 @@ public partial class V1beta1SpringCloudAppSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudAppSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppStatusAtProviderCustomPersistentDisk
@@ -491,7 +536,9 @@ public partial class V1beta1SpringCloudAppStatusAtProviderCustomPersistentDisk
     [JsonPropertyName("storageName")]
     public string? StorageName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppStatusAtProviderIdentity
@@ -512,7 +559,9 @@ public partial class V1beta1SpringCloudAppStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An ingress_settings block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppStatusAtProviderIngressSettings
@@ -537,7 +586,9 @@ public partial class V1beta1SpringCloudAppStatusAtProviderIngressSettings
     [JsonPropertyName("sessionCookieMaxAge")]
     public double? SessionCookieMaxAge { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An persistent_disk block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppStatusAtProviderPersistentDisk
@@ -550,7 +601,9 @@ public partial class V1beta1SpringCloudAppStatusAtProviderPersistentDisk
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppStatusAtProvider
@@ -611,7 +664,9 @@ public partial class V1beta1SpringCloudAppStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppStatusConditions
@@ -640,7 +695,9 @@ public partial class V1beta1SpringCloudAppStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppStatus defines the observed state of SpringCloudApp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppStatus
@@ -657,7 +714,9 @@ public partial class V1beta1SpringCloudAppStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudApp is the Schema for the SpringCloudApps API. Manage an Azure Spring Cloud Application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -687,3 +746,4 @@ public partial class V1beta1SpringCloudApp : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1SpringCloudAppStatus? Status { get; set; }
 }
+#nullable disable

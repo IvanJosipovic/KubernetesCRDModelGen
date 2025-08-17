@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.batch.aws.m.upbound.io;
+#nullable enable
 /// <summary>JobQueue is the Schema for the JobQueues API. Provides a Batch Job Queue resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1JobQueueList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1JobQueue> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComputeEnvironmentRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComput
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ComputeEnvironment in batch to populate computeEnvironment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComputeEnvironmentRef
@@ -63,7 +68,9 @@ public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComput
     [JsonPropertyName("policy")]
     public V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComputeEnvironmentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComputeEnvironmentSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComput
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ComputeEnvironment in batch to populate computeEnvironment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComputeEnvironmentSelector
@@ -97,7 +106,9 @@ public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComput
     [JsonPropertyName("policy")]
     public V1beta1JobQueueSpecForProviderComputeEnvironmentOrderComputeEnvironmentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrder
@@ -118,7 +129,9 @@ public partial class V1beta1JobQueueSpecForProviderComputeEnvironmentOrder
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderJobStateTimeLimitAction
@@ -139,7 +152,9 @@ public partial class V1beta1JobQueueSpecForProviderJobStateTimeLimitAction
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderSchedulingPolicyArnRefPolicy
@@ -152,7 +167,9 @@ public partial class V1beta1JobQueueSpecForProviderSchedulingPolicyArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SchedulingPolicy in batch to populate schedulingPolicyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderSchedulingPolicyArnRef
@@ -169,7 +186,9 @@ public partial class V1beta1JobQueueSpecForProviderSchedulingPolicyArnRef
     [JsonPropertyName("policy")]
     public V1beta1JobQueueSpecForProviderSchedulingPolicyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderSchedulingPolicyArnSelectorPolicy
@@ -182,7 +201,9 @@ public partial class V1beta1JobQueueSpecForProviderSchedulingPolicyArnSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SchedulingPolicy in batch to populate schedulingPolicyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProviderSchedulingPolicyArnSelector
@@ -203,7 +224,9 @@ public partial class V1beta1JobQueueSpecForProviderSchedulingPolicyArnSelector
     [JsonPropertyName("policy")]
     public V1beta1JobQueueSpecForProviderSchedulingPolicyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecForProvider
@@ -244,7 +267,9 @@ public partial class V1beta1JobQueueSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderComputeEnvironmentRefPolicy
@@ -257,7 +282,9 @@ public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderCompu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ComputeEnvironment in batch to populate computeEnvironment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderComputeEnvironmentRef
@@ -274,7 +301,9 @@ public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderCompu
     [JsonPropertyName("policy")]
     public V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderComputeEnvironmentRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderComputeEnvironmentSelectorPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderCompu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ComputeEnvironment in batch to populate computeEnvironment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderComputeEnvironmentSelector
@@ -308,7 +339,9 @@ public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderCompu
     [JsonPropertyName("policy")]
     public V1beta1JobQueueSpecInitProviderComputeEnvironmentOrderComputeEnvironmentSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrder
@@ -329,7 +362,9 @@ public partial class V1beta1JobQueueSpecInitProviderComputeEnvironmentOrder
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderJobStateTimeLimitAction
@@ -350,7 +385,9 @@ public partial class V1beta1JobQueueSpecInitProviderJobStateTimeLimitAction
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderSchedulingPolicyArnRefPolicy
@@ -363,7 +400,9 @@ public partial class V1beta1JobQueueSpecInitProviderSchedulingPolicyArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SchedulingPolicy in batch to populate schedulingPolicyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderSchedulingPolicyArnRef
@@ -380,7 +419,9 @@ public partial class V1beta1JobQueueSpecInitProviderSchedulingPolicyArnRef
     [JsonPropertyName("policy")]
     public V1beta1JobQueueSpecInitProviderSchedulingPolicyArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderSchedulingPolicyArnSelectorPolicy
@@ -393,7 +434,9 @@ public partial class V1beta1JobQueueSpecInitProviderSchedulingPolicyArnSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SchedulingPolicy in batch to populate schedulingPolicyArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProviderSchedulingPolicyArnSelector
@@ -414,7 +457,9 @@ public partial class V1beta1JobQueueSpecInitProviderSchedulingPolicyArnSelector
     [JsonPropertyName("policy")]
     public V1beta1JobQueueSpecInitProviderSchedulingPolicyArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecInitProvider
@@ -451,7 +496,9 @@ public partial class V1beta1JobQueueSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecProviderConfigRef
@@ -464,7 +511,9 @@ public partial class V1beta1JobQueueSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpecWriteConnectionSecretToRef
@@ -473,7 +522,9 @@ public partial class V1beta1JobQueueSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobQueueSpec defines the desired state of JobQueue</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueSpec
@@ -498,7 +549,9 @@ public partial class V1beta1JobQueueSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1JobQueueSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueStatusAtProviderComputeEnvironmentOrder
@@ -511,7 +564,9 @@ public partial class V1beta1JobQueueStatusAtProviderComputeEnvironmentOrder
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueStatusAtProviderJobStateTimeLimitAction
@@ -532,7 +587,9 @@ public partial class V1beta1JobQueueStatusAtProviderJobStateTimeLimitAction
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueStatusAtProvider
@@ -577,7 +634,9 @@ public partial class V1beta1JobQueueStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueStatusConditions
@@ -606,7 +665,9 @@ public partial class V1beta1JobQueueStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobQueueStatus defines the observed state of JobQueue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobQueueStatus
@@ -623,7 +684,9 @@ public partial class V1beta1JobQueueStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>JobQueue is the Schema for the JobQueues API. Provides a Batch Job Queue resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -653,3 +716,4 @@ public partial class V1beta1JobQueue : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1JobQueueStatus? Status { get; set; }
 }
+#nullable disable

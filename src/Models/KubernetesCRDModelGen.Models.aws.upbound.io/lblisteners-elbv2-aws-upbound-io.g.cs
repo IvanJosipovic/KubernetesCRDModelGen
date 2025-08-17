@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elbv2.aws.upbound.io;
+#nullable enable
 /// <summary>LBListener is the Schema for the LBListeners API. Provides a Load Balancer Listener resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LBListenerList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1LBListener> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateCognito
@@ -70,7 +73,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateCo
     [JsonPropertyName("userPoolDomain")]
     public string? UserPoolDomain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth 2.0 client secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOidcClientSecretSecretRef
@@ -87,7 +92,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOi
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOidc
@@ -136,7 +143,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOi
     [JsonPropertyName("userInfoEndpoint")]
     public string? UserInfoEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionFixedResponse
@@ -153,7 +162,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionFixedResponse
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardStickiness
@@ -166,7 +177,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardStickin
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRefPolicy
@@ -179,7 +192,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRef
@@ -192,7 +207,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSelectorPolicy
@@ -205,7 +222,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSelector
@@ -222,7 +241,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroup
@@ -243,7 +264,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForward
@@ -256,7 +279,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForward
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroup>? TargetGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionRedirect
@@ -285,7 +310,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionRedirect
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRefPolicy
@@ -298,7 +325,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRef
@@ -311,7 +340,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelectorPolicy
@@ -324,7 +355,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelector
@@ -341,7 +374,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultAction
@@ -390,7 +425,9 @@ public partial class V1beta1LBListenerSpecForProviderDefaultAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicy
@@ -403,7 +440,9 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LB in elbv2 to populate loadBalancerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnRef
@@ -416,7 +455,9 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnRef
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecForProviderLoadBalancerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPolicy
@@ -429,7 +470,9 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LB in elbv2 to populate loadBalancerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelector
@@ -446,7 +489,9 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelector
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecForProviderLoadBalancerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderMutualAuthentication
@@ -467,7 +512,9 @@ public partial class V1beta1LBListenerSpecForProviderMutualAuthentication
     [JsonPropertyName("trustStoreArn")]
     public string? TrustStoreArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProvider
@@ -600,7 +647,9 @@ public partial class V1beta1LBListenerSpecForProvider
     [JsonPropertyName("tcpIdleTimeoutSeconds")]
     public double? TcpIdleTimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateCognito
@@ -637,7 +686,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateC
     [JsonPropertyName("userPoolDomain")]
     public string? UserPoolDomain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OAuth 2.0 client secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateOidcClientSecretSecretRef
@@ -654,7 +705,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateO
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateOidc
@@ -703,7 +756,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateO
     [JsonPropertyName("userInfoEndpoint")]
     public string? UserInfoEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionFixedResponse
@@ -720,7 +775,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionFixedResponse
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardStickiness
@@ -733,7 +790,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardSticki
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnRefPolicy
@@ -746,7 +805,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnRef
@@ -759,7 +820,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnSelectorPolicy
@@ -772,7 +835,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate arn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnSelector
@@ -789,7 +854,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroup
@@ -810,7 +877,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForward
@@ -823,7 +892,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForward
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroup>? TargetGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionRedirect
@@ -852,7 +923,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionRedirect
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRefPolicy
@@ -865,7 +938,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRef
@@ -878,7 +953,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelectorPolicy
@@ -891,7 +968,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelector
@@ -908,7 +987,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultAction
@@ -957,7 +1038,9 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicy
@@ -970,7 +1053,9 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LB in elbv2 to populate loadBalancerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnRef
@@ -983,7 +1068,9 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnRef
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecInitProviderLoadBalancerArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPolicy
@@ -996,7 +1083,9 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LB in elbv2 to populate loadBalancerArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelector
@@ -1013,7 +1102,9 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelector
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecInitProviderLoadBalancerArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderMutualAuthentication
@@ -1034,7 +1125,9 @@ public partial class V1beta1LBListenerSpecInitProviderMutualAuthentication
     [JsonPropertyName("trustStoreArn")]
     public string? TrustStoreArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProvider
@@ -1163,7 +1256,9 @@ public partial class V1beta1LBListenerSpecInitProvider
     [JsonPropertyName("tcpIdleTimeoutSeconds")]
     public double? TcpIdleTimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecProviderConfigRefPolicy
@@ -1176,7 +1271,9 @@ public partial class V1beta1LBListenerSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecProviderConfigRef
@@ -1189,7 +1286,9 @@ public partial class V1beta1LBListenerSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LBListenerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecWriteConnectionSecretToRef
@@ -1202,7 +1301,9 @@ public partial class V1beta1LBListenerSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBListenerSpec defines the desired state of LBListener</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpec
@@ -1231,7 +1332,9 @@ public partial class V1beta1LBListenerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LBListenerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateCognito
@@ -1268,7 +1371,9 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateC
     [JsonPropertyName("userPoolDomain")]
     public string? UserPoolDomain { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateOidc
@@ -1313,7 +1418,9 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateO
     [JsonPropertyName("userInfoEndpoint")]
     public string? UserInfoEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionFixedResponse
@@ -1330,7 +1437,9 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionFixedResponse
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardStickiness
@@ -1343,7 +1452,9 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardSticki
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardTargetGroup
@@ -1356,7 +1467,9 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardTarget
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionForward
@@ -1369,7 +1482,9 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionForward
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionForwardTargetGroup>? TargetGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionRedirect
@@ -1398,7 +1513,9 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionRedirect
     [JsonPropertyName("statusCode")]
     public string? StatusCode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultAction
@@ -1439,7 +1556,9 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultAction
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderMutualAuthentication
@@ -1460,7 +1579,9 @@ public partial class V1beta1LBListenerStatusAtProviderMutualAuthentication
     [JsonPropertyName("trustStoreArn")]
     public string? TrustStoreArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProvider
@@ -1597,7 +1718,9 @@ public partial class V1beta1LBListenerStatusAtProvider
     [JsonPropertyName("tcpIdleTimeoutSeconds")]
     public double? TcpIdleTimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusConditions
@@ -1626,7 +1749,9 @@ public partial class V1beta1LBListenerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBListenerStatus defines the observed state of LBListener.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatus
@@ -1643,7 +1768,9 @@ public partial class V1beta1LBListenerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBListener is the Schema for the LBListeners API. Provides a Load Balancer Listener resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1673,3 +1800,4 @@ public partial class V1beta1LBListener : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1LBListenerStatus? Status { get; set; }
 }
+#nullable disable

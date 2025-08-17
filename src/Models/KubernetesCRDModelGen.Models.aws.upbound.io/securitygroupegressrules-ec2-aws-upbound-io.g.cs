@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>SecurityGroupEgressRule is the Schema for the SecurityGroupEgressRules API. Provides a VPC security group egress rule resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecurityGroupEgressRuleList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1SecurityGroupEgressRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRe
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSe
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecForProviderPrefixListIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecu
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecu
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecu
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecForProviderReferencedSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in ec2 to populate securityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRef
@@ -171,7 +192,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupI
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in ec2 to populate securityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelector
@@ -201,7 +226,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupI
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecForProvider
@@ -274,7 +301,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecForProvider
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicy
@@ -287,7 +316,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRef
@@ -300,7 +331,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdR
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ManagedPrefixList in ec2 to populate prefixListId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelector
@@ -330,7 +365,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdS
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecInitProviderPrefixListIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicy
@@ -343,7 +380,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRef
@@ -356,7 +395,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSec
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicy
@@ -369,7 +410,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in ec2 to populate referencedSecurityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelector
@@ -386,7 +429,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSec
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecInitProviderReferencedSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicy
@@ -399,7 +444,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SecurityGroup in ec2 to populate securityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRef
@@ -412,7 +459,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroup
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicy
@@ -425,7 +474,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroup
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SecurityGroup in ec2 to populate securityGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelector
@@ -442,7 +493,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroup
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecInitProvider
@@ -511,7 +564,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecInitProvider
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicy
@@ -524,7 +579,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecProviderConfigRef
@@ -537,7 +594,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SecurityGroupEgressRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpecWriteConnectionSecretToRef
@@ -550,7 +609,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpecWriteConnectionSecretToRe
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityGroupEgressRuleSpec defines the desired state of SecurityGroupEgressRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleSpec
@@ -579,7 +640,9 @@ public partial class V1beta1SecurityGroupEgressRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SecurityGroupEgressRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleStatusAtProvider
@@ -644,7 +707,9 @@ public partial class V1beta1SecurityGroupEgressRuleStatusAtProvider
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleStatusConditions
@@ -673,7 +738,9 @@ public partial class V1beta1SecurityGroupEgressRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityGroupEgressRuleStatus defines the observed state of SecurityGroupEgressRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupEgressRuleStatus
@@ -690,7 +757,9 @@ public partial class V1beta1SecurityGroupEgressRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityGroupEgressRule is the Schema for the SecurityGroupEgressRules API. Provides a VPC security group egress rule resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -720,3 +789,4 @@ public partial class V1beta1SecurityGroupEgressRule : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1SecurityGroupEgressRuleStatus? Status { get; set; }
 }
+#nullable disable

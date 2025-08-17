@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.applications.azuread.upbound.io;
+#nullable enable
 /// <summary>PreAuthorized is the Schema for the PreAuthorizeds API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PreAuthorizedList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1PreAuthorized> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdRef
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecForProviderApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdSelector
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in applications to populate authorizedClientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRef
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in applications to populate authorizedClientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelect
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1PreAuthorizedSpecForProvider
     [JsonPropertyName("permissionIds")]
     public IList<string>? PermissionIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdRef
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecInitProviderApplicationIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdSelector
@@ -234,7 +261,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdSelector
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Application in applications to populate authorizedClientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRef
@@ -260,7 +291,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRef
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Application in applications to populate authorizedClientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelector
@@ -290,7 +325,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelec
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecInitProvider
@@ -323,7 +360,9 @@ public partial class V1beta1PreAuthorizedSpecInitProvider
     [JsonPropertyName("permissionIds")]
     public IList<string>? PermissionIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecProviderConfigRefPolicy
@@ -336,7 +375,9 @@ public partial class V1beta1PreAuthorizedSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecProviderConfigRef
@@ -349,7 +390,9 @@ public partial class V1beta1PreAuthorizedSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1PreAuthorizedSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpecWriteConnectionSecretToRef
@@ -362,7 +405,9 @@ public partial class V1beta1PreAuthorizedSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreAuthorizedSpec defines the desired state of PreAuthorized</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedSpec
@@ -391,7 +436,9 @@ public partial class V1beta1PreAuthorizedSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PreAuthorizedSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedStatusAtProvider
@@ -412,7 +459,9 @@ public partial class V1beta1PreAuthorizedStatusAtProvider
     [JsonPropertyName("permissionIds")]
     public IList<string>? PermissionIds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedStatusConditions
@@ -441,7 +490,9 @@ public partial class V1beta1PreAuthorizedStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreAuthorizedStatus defines the observed state of PreAuthorized.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PreAuthorizedStatus
@@ -458,7 +509,9 @@ public partial class V1beta1PreAuthorizedStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PreAuthorized is the Schema for the PreAuthorizeds API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -488,3 +541,4 @@ public partial class V1beta1PreAuthorized : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1PreAuthorizedStatus? Status { get; set; }
 }
+#nullable disable

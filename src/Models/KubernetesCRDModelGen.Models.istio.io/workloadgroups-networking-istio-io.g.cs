@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1WorkloadGroupList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1WorkloadGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Metadata that will be used for all corresponding `WorkloadEntries`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecMetadata
@@ -46,7 +49,9 @@ public partial class V1WorkloadGroupSpecMetadata
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Health is determined by how the command that is executed exited.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecProbeExec
@@ -55,7 +60,9 @@ public partial class V1WorkloadGroupSpecProbeExec
     [JsonPropertyName("command")]
     public IList<string> Command { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>GRPC call is made and response/error is used to determine health.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecProbeGrpc
@@ -68,7 +75,9 @@ public partial class V1WorkloadGroupSpecProbeGrpc
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecProbeHttpGetHttpHeaders
@@ -81,7 +90,9 @@ public partial class V1WorkloadGroupSpecProbeHttpGetHttpHeaders
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>`httpGet` is performed to a given endpoint and the status/able to connect determines health.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecProbeHttpGet
@@ -106,7 +117,9 @@ public partial class V1WorkloadGroupSpecProbeHttpGet
     [JsonPropertyName("scheme")]
     public string? Scheme { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Health is determined by if the proxy is able to connect.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecProbeTcpSocket
@@ -119,7 +132,9 @@ public partial class V1WorkloadGroupSpecProbeTcpSocket
     [JsonPropertyName("port")]
     public int Port { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>`ReadinessProbe` describes the configuration the user must provide for healthchecking on their workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecProbe
@@ -160,7 +175,9 @@ public partial class V1WorkloadGroupSpecProbe
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Template to be used for the generation of `WorkloadEntry` resources that belong to this `WorkloadGroup`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecTemplate
@@ -193,7 +210,9 @@ public partial class V1WorkloadGroupSpecTemplate
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Describes a collection of workload instances. See more details at: https://istio.io/docs/reference/config/networking/workload-group.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpec
@@ -210,7 +229,9 @@ public partial class V1WorkloadGroupSpec
     [JsonPropertyName("template")]
     public V1WorkloadGroupSpecTemplate Template { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -240,3 +261,4 @@ public partial class V1WorkloadGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+#nullable disable

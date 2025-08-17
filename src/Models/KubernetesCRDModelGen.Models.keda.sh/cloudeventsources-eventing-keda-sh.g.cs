@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.keda.sh;
+#nullable enable
 /// <summary>CloudEventSource defines how a KEDA event will be sent to event sink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1CloudEventSourceList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1alpha1CloudEventSource> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceSpecAuthenticationRef
@@ -46,7 +49,9 @@ public partial class V1alpha1CloudEventSourceSpecAuthenticationRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceSpecDestinationAzureEventGridTopic
@@ -55,7 +60,9 @@ public partial class V1alpha1CloudEventSourceSpecDestinationAzureEventGridTopic
     [JsonPropertyName("endpoint")]
     public string Endpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceSpecDestinationHttp
@@ -64,7 +71,9 @@ public partial class V1alpha1CloudEventSourceSpecDestinationHttp
     [JsonPropertyName("uri")]
     public string Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Destination defines the various ways to emit events</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceSpecDestination
@@ -77,7 +86,9 @@ public partial class V1alpha1CloudEventSourceSpecDestination
     [JsonPropertyName("http")]
     public V1alpha1CloudEventSourceSpecDestinationHttp? Http { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventSubscription defines filters for events</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceSpecEventSubscription
@@ -90,7 +101,9 @@ public partial class V1alpha1CloudEventSourceSpecEventSubscription
     [JsonPropertyName("includedEventTypes")]
     public IList<string>? IncludedEventTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudEventSourceSpec defines the spec of CloudEventSource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceSpec
@@ -111,7 +124,9 @@ public partial class V1alpha1CloudEventSourceSpec
     [JsonPropertyName("eventSubscription")]
     public V1alpha1CloudEventSourceSpecEventSubscription? EventSubscription { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition to store the condition state</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceStatusConditions
@@ -132,7 +147,9 @@ public partial class V1alpha1CloudEventSourceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudEventSourceStatus defines the observed state of CloudEventSource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceStatus
@@ -141,7 +158,9 @@ public partial class V1alpha1CloudEventSourceStatus
     [JsonPropertyName("conditions")]
     public IList<V1alpha1CloudEventSourceStatusConditions>? Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CloudEventSource defines how a KEDA event will be sent to event sink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -171,3 +190,4 @@ public partial class V1alpha1CloudEventSource : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1alpha1CloudEventSourceStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerapp.azure.upbound.io;
+#nullable enable
 /// <summary>ContainerApp is the Schema for the ContainerApps API. Manages a Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ContainerAppList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1ContainerApp> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
     [JsonPropertyName("policy")]
     public V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ContainerAppSpecForProviderContainerAppEnvironmentId
     [JsonPropertyName("policy")]
     public V1beta1ContainerAppSpecForProviderContainerAppEnvironmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderDapr
@@ -106,7 +117,9 @@ public partial class V1beta1ContainerAppSpecForProviderDapr
     [JsonPropertyName("appProtocol")]
     public string? AppProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIdentity
@@ -119,7 +132,9 @@ public partial class V1beta1ContainerAppSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIngressCors
@@ -148,7 +163,9 @@ public partial class V1beta1ContainerAppSpecForProviderIngressCors
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIngressIpSecurityRestriction
@@ -169,7 +186,9 @@ public partial class V1beta1ContainerAppSpecForProviderIngressIpSecurityRestrict
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIngressTrafficWeight
@@ -190,7 +209,9 @@ public partial class V1beta1ContainerAppSpecForProviderIngressTrafficWeight
     [JsonPropertyName("revisionSuffix")]
     public string? RevisionSuffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderIngress
@@ -231,7 +252,9 @@ public partial class V1beta1ContainerAppSpecForProviderIngress
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderRegistry
@@ -252,7 +275,9 @@ public partial class V1beta1ContainerAppSpecForProviderRegistry
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicy
@@ -265,7 +290,9 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRef
@@ -278,7 +305,9 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerAppSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicy
@@ -291,7 +320,9 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
@@ -308,7 +339,9 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The secret name. The secret name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderSecretNameSecretRef
@@ -325,7 +358,9 @@ public partial class V1beta1ContainerAppSpecForProviderSecretNameSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The value for this secret. The value for this secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderSecretValueSecretRef
@@ -342,7 +377,9 @@ public partial class V1beta1ContainerAppSpecForProviderSecretValueSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderSecret
@@ -363,7 +400,9 @@ public partial class V1beta1ContainerAppSpecForProviderSecret
     [JsonPropertyName("valueSecretRef")]
     public V1beta1ContainerAppSpecForProviderSecretValueSecretRef? ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRuleAuthentication
@@ -376,7 +415,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRu
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRule
@@ -397,7 +438,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateAzureQueueScaleRu
     [JsonPropertyName("queueName")]
     public string? QueueName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerEnv
@@ -414,7 +457,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLivenessProbeHeader
@@ -427,7 +472,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLiveness
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLivenessProbe
@@ -468,7 +515,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLiveness
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadinessProbeHeader
@@ -481,7 +530,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadines
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadinessProbe
@@ -526,7 +577,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadines
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupProbeHeader
@@ -539,7 +592,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupP
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupProbe
@@ -580,7 +635,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupP
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMounts
@@ -597,7 +654,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMo
     [JsonPropertyName("subPath")]
     public string? SubPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainer
@@ -646,7 +705,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainer
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRuleAuthentication
@@ -659,7 +720,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRuleAu
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRule
@@ -680,7 +743,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateCustomScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRuleAuthentication
@@ -693,7 +758,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRuleAuth
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRule
@@ -710,7 +777,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateHttpScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerEnv
@@ -727,7 +796,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerVolumeMounts
@@ -744,7 +815,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerVolu
     [JsonPropertyName("subPath")]
     public string? SubPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainer
@@ -781,7 +854,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainer
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1ContainerAppSpecForProviderTemplateInitContainerVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRuleAuthentication
@@ -794,7 +869,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRuleAuthe
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRule
@@ -811,7 +888,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateVolume
@@ -832,7 +911,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateVolume
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplate
@@ -881,7 +962,9 @@ public partial class V1beta1ContainerAppSpecForProviderTemplate
     [JsonPropertyName("volume")]
     public IList<V1beta1ContainerAppSpecForProviderTemplateVolume>? Volume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProvider
@@ -950,7 +1033,9 @@ public partial class V1beta1ContainerAppSpecForProvider
     [JsonPropertyName("workloadProfileName")]
     public string? WorkloadProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolicy
@@ -963,7 +1048,9 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRef
@@ -976,7 +1063,9 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
     [JsonPropertyName("policy")]
     public V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelectorPolicy
@@ -989,7 +1078,9 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Environment in containerapp to populate containerAppEnvironmentId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelector
@@ -1006,7 +1097,9 @@ public partial class V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentI
     [JsonPropertyName("policy")]
     public V1beta1ContainerAppSpecInitProviderContainerAppEnvironmentIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderDapr
@@ -1023,7 +1116,9 @@ public partial class V1beta1ContainerAppSpecInitProviderDapr
     [JsonPropertyName("appProtocol")]
     public string? AppProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIdentity
@@ -1036,7 +1131,9 @@ public partial class V1beta1ContainerAppSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIngressCors
@@ -1065,7 +1162,9 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressCors
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIngressIpSecurityRestriction
@@ -1086,7 +1185,9 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressIpSecurityRestric
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIngressTrafficWeight
@@ -1107,7 +1208,9 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressTrafficWeight
     [JsonPropertyName("revisionSuffix")]
     public string? RevisionSuffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderIngress
@@ -1148,7 +1251,9 @@ public partial class V1beta1ContainerAppSpecInitProviderIngress
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderRegistry
@@ -1169,7 +1274,9 @@ public partial class V1beta1ContainerAppSpecInitProviderRegistry
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The secret name. The secret name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderSecretNameSecretRef
@@ -1186,7 +1293,9 @@ public partial class V1beta1ContainerAppSpecInitProviderSecretNameSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The value for this secret. The value for this secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderSecretValueSecretRef
@@ -1203,7 +1312,9 @@ public partial class V1beta1ContainerAppSpecInitProviderSecretValueSecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderSecret
@@ -1224,7 +1335,9 @@ public partial class V1beta1ContainerAppSpecInitProviderSecret
     [JsonPropertyName("valueSecretRef")]
     public V1beta1ContainerAppSpecInitProviderSecretValueSecretRef? ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleRuleAuthentication
@@ -1237,7 +1350,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleR
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleRule
@@ -1258,7 +1373,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateAzureQueueScaleR
     [JsonPropertyName("queueName")]
     public string? QueueName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerEnv
@@ -1275,7 +1392,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenessProbeHeader
@@ -1288,7 +1407,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenessProbe
@@ -1329,7 +1450,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenes
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadinessProbeHeader
@@ -1342,7 +1465,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadine
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadinessProbe
@@ -1387,7 +1512,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadine
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartupProbeHeader
@@ -1400,7 +1527,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartup
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartupProbe
@@ -1441,7 +1570,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartup
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeMounts
@@ -1458,7 +1589,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeM
     [JsonPropertyName("subPath")]
     public string? SubPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainer
@@ -1507,7 +1640,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainer
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRuleAuthentication
@@ -1520,7 +1655,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRuleA
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRule
@@ -1541,7 +1678,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateCustomScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRuleAuthentication
@@ -1554,7 +1693,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRuleAut
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRule
@@ -1571,7 +1712,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateHttpScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerEnv
@@ -1588,7 +1731,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerVolumeMounts
@@ -1605,7 +1750,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerVol
     [JsonPropertyName("subPath")]
     public string? SubPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainer
@@ -1642,7 +1789,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainer
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1ContainerAppSpecInitProviderTemplateInitContainerVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRuleAuthentication
@@ -1655,7 +1804,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRuleAuth
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRule
@@ -1672,7 +1823,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateVolume
@@ -1693,7 +1846,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateVolume
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplate
@@ -1742,7 +1897,9 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplate
     [JsonPropertyName("volume")]
     public IList<V1beta1ContainerAppSpecInitProviderTemplateVolume>? Volume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProvider
@@ -1799,7 +1956,9 @@ public partial class V1beta1ContainerAppSpecInitProvider
     [JsonPropertyName("workloadProfileName")]
     public string? WorkloadProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecProviderConfigRefPolicy
@@ -1812,7 +1971,9 @@ public partial class V1beta1ContainerAppSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecProviderConfigRef
@@ -1825,7 +1986,9 @@ public partial class V1beta1ContainerAppSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ContainerAppSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecWriteConnectionSecretToRef
@@ -1838,7 +2001,9 @@ public partial class V1beta1ContainerAppSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerAppSpec defines the desired state of ContainerApp</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpec
@@ -1867,7 +2032,9 @@ public partial class V1beta1ContainerAppSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ContainerAppSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderDapr
@@ -1884,7 +2051,9 @@ public partial class V1beta1ContainerAppStatusAtProviderDapr
     [JsonPropertyName("appProtocol")]
     public string? AppProtocol { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIdentity
@@ -1905,7 +2074,9 @@ public partial class V1beta1ContainerAppStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngressCors
@@ -1934,7 +2105,9 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressCors
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngressCustomDomain
@@ -1951,7 +2124,9 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressCustomDomain
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngressIpSecurityRestriction
@@ -1972,7 +2147,9 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressIpSecurityRestric
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngressTrafficWeight
@@ -1993,7 +2170,9 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressTrafficWeight
     [JsonPropertyName("revisionSuffix")]
     public string? RevisionSuffix { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngress
@@ -2042,7 +2221,9 @@ public partial class V1beta1ContainerAppStatusAtProviderIngress
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderRegistry
@@ -2063,7 +2244,9 @@ public partial class V1beta1ContainerAppStatusAtProviderRegistry
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderSecret
@@ -2076,7 +2259,9 @@ public partial class V1beta1ContainerAppStatusAtProviderSecret
     [JsonPropertyName("keyVaultSecretId")]
     public string? KeyVaultSecretId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleRuleAuthentication
@@ -2089,7 +2274,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleR
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleRule
@@ -2110,7 +2297,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateAzureQueueScaleR
     [JsonPropertyName("queueName")]
     public string? QueueName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerEnv
@@ -2127,7 +2316,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenessProbeHeader
@@ -2140,7 +2331,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenes
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenessProbe
@@ -2185,7 +2378,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenes
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadinessProbeHeader
@@ -2198,7 +2393,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadine
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadinessProbe
@@ -2243,7 +2440,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadine
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartupProbeHeader
@@ -2256,7 +2455,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartup
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartupProbe
@@ -2301,7 +2502,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartup
     [JsonPropertyName("transport")]
     public string? Transport { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeMounts
@@ -2318,7 +2521,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeM
     [JsonPropertyName("subPath")]
     public string? SubPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainer
@@ -2371,7 +2576,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainer
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRuleAuthentication
@@ -2384,7 +2591,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRuleA
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRule
@@ -2405,7 +2614,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateCustomScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRuleAuthentication
@@ -2418,7 +2629,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRuleAut
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRule
@@ -2435,7 +2648,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateHttpScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerEnv
@@ -2452,7 +2667,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerEnv
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerVolumeMounts
@@ -2469,7 +2686,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerVol
     [JsonPropertyName("subPath")]
     public string? SubPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainer
@@ -2510,7 +2729,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainer
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1ContainerAppStatusAtProviderTemplateInitContainerVolumeMounts>? VolumeMounts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRuleAuthentication
@@ -2523,7 +2744,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRuleAuth
     [JsonPropertyName("triggerParameter")]
     public string? TriggerParameter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRule
@@ -2540,7 +2763,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateVolume
@@ -2561,7 +2786,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateVolume
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplate
@@ -2610,7 +2837,9 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplate
     [JsonPropertyName("volume")]
     public IList<V1beta1ContainerAppStatusAtProviderTemplateVolume>? Volume { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProvider
@@ -2683,7 +2912,9 @@ public partial class V1beta1ContainerAppStatusAtProvider
     [JsonPropertyName("workloadProfileName")]
     public string? WorkloadProfileName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusConditions
@@ -2712,7 +2943,9 @@ public partial class V1beta1ContainerAppStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerAppStatus defines the observed state of ContainerApp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatus
@@ -2729,7 +2962,9 @@ public partial class V1beta1ContainerAppStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ContainerApp is the Schema for the ContainerApps API. Manages a Container App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2759,3 +2994,4 @@ public partial class V1beta1ContainerApp : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1ContainerAppStatus? Status { get; set; }
 }
+#nullable disable

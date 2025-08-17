@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.m.upbound.io;
+#nullable enable
 /// <summary>HealthcareFHIRService is the Schema for the HealthcareFHIRServices API. Manages a Healthcare FHIR (Fast Healthcare Interoperability Resources) Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1HealthcareFHIRServiceList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1HealthcareFHIRService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An authentication block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderAuthentication
@@ -50,7 +53,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderAuthentication
     [JsonPropertyName("smartProxyEnabled")]
     public bool? SmartProxyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cors block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderCors
@@ -75,7 +80,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderCors
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderIdentity
@@ -88,7 +95,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderOciArtifact
@@ -105,7 +114,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderOciArtifact
     [JsonPropertyName("loginServer")]
     public string? LoginServer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameRefPolicy
@@ -118,7 +129,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameRef
@@ -135,7 +148,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameSelectorPolicy
@@ -148,7 +163,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameSelector
@@ -169,7 +186,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRefPolicy
@@ -182,7 +201,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a HealthcareWorkspace in healthcareapis to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRef
@@ -199,7 +220,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRef
     [JsonPropertyName("policy")]
     public V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelectorPolicy
@@ -212,7 +235,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a HealthcareWorkspace in healthcareapis to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelector
@@ -233,7 +258,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelec
     [JsonPropertyName("policy")]
     public V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecForProvider
@@ -302,7 +329,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProvider
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An authentication block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProviderAuthentication
@@ -319,7 +348,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderAuthentication
     [JsonPropertyName("smartProxyEnabled")]
     public bool? SmartProxyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cors block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProviderCors
@@ -344,7 +375,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderCors
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProviderIdentity
@@ -357,7 +390,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProviderOciArtifact
@@ -374,7 +409,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderOciArtifact
     [JsonPropertyName("loginServer")]
     public string? LoginServer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameRefPolicy
@@ -387,7 +424,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameRef
@@ -404,7 +443,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameSelectorPolicy
@@ -417,7 +458,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameSelector
@@ -438,7 +481,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNa
     [JsonPropertyName("policy")]
     public V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecInitProvider
@@ -495,7 +540,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecProviderConfigRef
@@ -508,7 +555,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpecWriteConnectionSecretToRef
@@ -517,7 +566,9 @@ public partial class V1beta1HealthcareFHIRServiceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareFHIRServiceSpec defines the desired state of HealthcareFHIRService</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceSpec
@@ -542,7 +593,9 @@ public partial class V1beta1HealthcareFHIRServiceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1HealthcareFHIRServiceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An authentication block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceStatusAtProviderAuthentication
@@ -559,7 +612,9 @@ public partial class V1beta1HealthcareFHIRServiceStatusAtProviderAuthentication
     [JsonPropertyName("smartProxyEnabled")]
     public bool? SmartProxyEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A cors block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceStatusAtProviderCors
@@ -584,7 +639,9 @@ public partial class V1beta1HealthcareFHIRServiceStatusAtProviderCors
     [JsonPropertyName("maxAgeInSeconds")]
     public double? MaxAgeInSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceStatusAtProviderIdentity
@@ -605,7 +662,9 @@ public partial class V1beta1HealthcareFHIRServiceStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceStatusAtProviderOciArtifact
@@ -622,7 +681,9 @@ public partial class V1beta1HealthcareFHIRServiceStatusAtProviderOciArtifact
     [JsonPropertyName("loginServer")]
     public string? LoginServer { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceStatusAtProvider
@@ -683,7 +744,9 @@ public partial class V1beta1HealthcareFHIRServiceStatusAtProvider
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceStatusConditions
@@ -712,7 +775,9 @@ public partial class V1beta1HealthcareFHIRServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareFHIRServiceStatus defines the observed state of HealthcareFHIRService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareFHIRServiceStatus
@@ -729,7 +794,9 @@ public partial class V1beta1HealthcareFHIRServiceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>HealthcareFHIRService is the Schema for the HealthcareFHIRServices API. Manages a Healthcare FHIR (Fast Healthcare Interoperability Resources) Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -759,3 +826,4 @@ public partial class V1beta1HealthcareFHIRService : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1HealthcareFHIRServiceStatus? Status { get; set; }
 }
+#nullable disable

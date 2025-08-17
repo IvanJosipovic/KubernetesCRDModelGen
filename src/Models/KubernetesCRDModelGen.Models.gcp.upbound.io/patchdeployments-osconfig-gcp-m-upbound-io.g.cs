@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osconfig.gcp.m.upbound.io;
+#nullable enable
 /// <summary>PatchDeployment is the Schema for the PatchDeployments API. Patch deployments are configurations that individual patch jobs use to complete a patch.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1PatchDeploymentList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1PatchDeployment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterGroupLabels
@@ -42,7 +45,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterGroupLab
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterInstancesRefsPolicy
@@ -55,7 +60,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterInstance
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterInstancesRefs
@@ -72,7 +79,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterInstance
     [JsonPropertyName("policy")]
     public V1beta1PatchDeploymentSpecForProviderInstanceFilterInstancesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterInstancesSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterInstance
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in compute to populate instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterInstancesSelector
@@ -106,7 +117,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterInstance
     [JsonPropertyName("policy")]
     public V1beta1PatchDeploymentSpecForProviderInstanceFilterInstancesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VM instances to patch. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilter
@@ -139,7 +152,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilter
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule a one-time execution. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderOneTimeSchedule
@@ -148,7 +163,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderOneTimeSchedule
     [JsonPropertyName("executeTime")]
     public string? ExecuteTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apt update settings. Use this setting to override the default apt patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigApt
@@ -165,7 +182,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigApt
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>goo update settings. Use this setting to override the default goo patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigGoo
@@ -174,7 +193,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigGoo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepLinuxExecStepConfigGcsObject
@@ -191,7 +212,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepLin
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepLinuxExecStepConfig
@@ -212,7 +235,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepLin
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWindowsExecStepConfigGcsObject
@@ -229,7 +254,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWin
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Windows VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWindowsExecStepConfig
@@ -250,7 +277,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWin
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStep to run after the patch update. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStep
@@ -263,7 +292,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPostStep
     [JsonPropertyName("windowsExecStepConfig")]
     public V1beta1PatchDeploymentSpecForProviderPatchConfigPostStepWindowsExecStepConfig? WindowsExecStepConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepLinuxExecStepConfigGcsObject
@@ -280,7 +311,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepLinu
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepLinuxExecStepConfig
@@ -301,7 +334,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepLinu
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWindowsExecStepConfigGcsObject
@@ -318,7 +353,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWind
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Windows VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWindowsExecStepConfig
@@ -339,7 +376,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWind
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStep to run before the patch update. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStep
@@ -352,7 +391,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigPreStep
     [JsonPropertyName("windowsExecStepConfig")]
     public V1beta1PatchDeploymentSpecForProviderPatchConfigPreStepWindowsExecStepConfig? WindowsExecStepConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Windows update settings. Use this setting to override the default Windows patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigWindowsUpdate
@@ -369,7 +410,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigWindowsUpda
     [JsonPropertyName("exclusivePatches")]
     public IList<string>? ExclusivePatches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Yum update settings. Use this setting to override the default yum patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigYum
@@ -390,7 +433,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigYum
     [JsonPropertyName("security")]
     public bool? Security { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>zypper update settings. Use this setting to override the default zypper patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigZypper
@@ -419,7 +464,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfigZypper
     [JsonPropertyName("withUpdate")]
     public bool? WithUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Patch configuration that is applied. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderPatchConfig
@@ -460,7 +507,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderPatchConfig
     [JsonPropertyName("zypper")]
     public V1beta1PatchDeploymentSpecForProviderPatchConfigZypper? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Week day in a month. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonthlyWeekDayOfMonth
@@ -477,7 +526,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonth
     [JsonPropertyName("weekOrdinal")]
     public double? WeekOrdinal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule with monthly executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonthly
@@ -490,7 +541,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonth
     [JsonPropertyName("weekDayOfMonth")]
     public V1beta1PatchDeploymentSpecForProviderRecurringScheduleMonthlyWeekDayOfMonth? WeekDayOfMonth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time of the day to run a recurring deployment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleTimeOfDay
@@ -511,7 +564,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleTimeO
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are determined by the chosen time zone. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleTimeZone
@@ -524,7 +579,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleTimeZ
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule with weekly executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleWeekly
@@ -533,7 +590,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringScheduleWeekl
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule recurring executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRecurringSchedule
@@ -562,7 +621,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderRecurringSchedule
     [JsonPropertyName("weekly")]
     public V1beta1PatchDeploymentSpecForProviderRecurringScheduleWeekly? Weekly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRolloutDisruptionBudget
@@ -575,7 +636,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderRolloutDisruptionBudge
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rollout strategy of the patch job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderRollout
@@ -588,7 +651,9 @@ public partial class V1beta1PatchDeploymentSpecForProviderRollout
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProvider
@@ -625,7 +690,9 @@ public partial class V1beta1PatchDeploymentSpecForProvider
     [JsonPropertyName("rollout")]
     public V1beta1PatchDeploymentSpecForProviderRollout? Rollout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterGroupLabels
@@ -634,7 +701,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterGroupLa
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstancesRefsPolicy
@@ -647,7 +716,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstanc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstancesRefs
@@ -664,7 +735,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstanc
     [JsonPropertyName("policy")]
     public V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstancesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstancesSelectorPolicy
@@ -677,7 +750,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstanc
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Instance in compute to populate instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstancesSelector
@@ -698,7 +773,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstanc
     [JsonPropertyName("policy")]
     public V1beta1PatchDeploymentSpecInitProviderInstanceFilterInstancesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VM instances to patch. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilter
@@ -731,7 +808,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderInstanceFilter
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule a one-time execution. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderOneTimeSchedule
@@ -740,7 +819,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderOneTimeSchedule
     [JsonPropertyName("executeTime")]
     public string? ExecuteTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apt update settings. Use this setting to override the default apt patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigApt
@@ -757,7 +838,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigApt
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>goo update settings. Use this setting to override the default goo patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigGoo
@@ -766,7 +849,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigGoo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepLinuxExecStepConfigGcsObject
@@ -783,7 +868,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepLi
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepLinuxExecStepConfig
@@ -804,7 +891,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepLi
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWindowsExecStepConfigGcsObject
@@ -821,7 +910,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWi
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Windows VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWindowsExecStepConfig
@@ -842,7 +933,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWi
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStep to run after the patch update. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStep
@@ -855,7 +948,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStep
     [JsonPropertyName("windowsExecStepConfig")]
     public V1beta1PatchDeploymentSpecInitProviderPatchConfigPostStepWindowsExecStepConfig? WindowsExecStepConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepLinuxExecStepConfigGcsObject
@@ -872,7 +967,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepLin
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepLinuxExecStepConfig
@@ -893,7 +990,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepLin
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWindowsExecStepConfigGcsObject
@@ -910,7 +1009,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWin
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Windows VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWindowsExecStepConfig
@@ -931,7 +1032,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWin
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStep to run before the patch update. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStep
@@ -944,7 +1047,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStep
     [JsonPropertyName("windowsExecStepConfig")]
     public V1beta1PatchDeploymentSpecInitProviderPatchConfigPreStepWindowsExecStepConfig? WindowsExecStepConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Windows update settings. Use this setting to override the default Windows patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigWindowsUpdate
@@ -961,7 +1066,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigWindowsUpd
     [JsonPropertyName("exclusivePatches")]
     public IList<string>? ExclusivePatches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Yum update settings. Use this setting to override the default yum patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigYum
@@ -982,7 +1089,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigYum
     [JsonPropertyName("security")]
     public bool? Security { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>zypper update settings. Use this setting to override the default zypper patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigZypper
@@ -1011,7 +1120,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfigZypper
     [JsonPropertyName("withUpdate")]
     public bool? WithUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Patch configuration that is applied. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfig
@@ -1052,7 +1163,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderPatchConfig
     [JsonPropertyName("zypper")]
     public V1beta1PatchDeploymentSpecInitProviderPatchConfigZypper? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Week day in a month. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMonthlyWeekDayOfMonth
@@ -1069,7 +1182,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMont
     [JsonPropertyName("weekOrdinal")]
     public double? WeekOrdinal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule with monthly executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMonthly
@@ -1082,7 +1197,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMont
     [JsonPropertyName("weekDayOfMonth")]
     public V1beta1PatchDeploymentSpecInitProviderRecurringScheduleMonthlyWeekDayOfMonth? WeekDayOfMonth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time of the day to run a recurring deployment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleTimeOfDay
@@ -1103,7 +1220,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleTime
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are determined by the chosen time zone. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleTimeZone
@@ -1116,7 +1235,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleTime
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule with weekly executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleWeekly
@@ -1125,7 +1246,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringScheduleWeek
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule recurring executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRecurringSchedule
@@ -1154,7 +1277,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRecurringSchedule
     [JsonPropertyName("weekly")]
     public V1beta1PatchDeploymentSpecInitProviderRecurringScheduleWeekly? Weekly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRolloutDisruptionBudget
@@ -1167,7 +1292,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRolloutDisruptionBudg
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rollout strategy of the patch job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProviderRollout
@@ -1180,7 +1307,9 @@ public partial class V1beta1PatchDeploymentSpecInitProviderRollout
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecInitProvider
@@ -1217,7 +1346,9 @@ public partial class V1beta1PatchDeploymentSpecInitProvider
     [JsonPropertyName("rollout")]
     public V1beta1PatchDeploymentSpecInitProviderRollout? Rollout { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecProviderConfigRef
@@ -1230,7 +1361,9 @@ public partial class V1beta1PatchDeploymentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecWriteConnectionSecretToRef
@@ -1239,7 +1372,9 @@ public partial class V1beta1PatchDeploymentSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PatchDeploymentSpec defines the desired state of PatchDeployment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpec
@@ -1264,7 +1399,9 @@ public partial class V1beta1PatchDeploymentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1PatchDeploymentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderInstanceFilterGroupLabels
@@ -1273,7 +1410,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderInstanceFilterGroupLa
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VM instances to patch. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderInstanceFilter
@@ -1298,7 +1437,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderInstanceFilter
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule a one-time execution. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderOneTimeSchedule
@@ -1307,7 +1448,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderOneTimeSchedule
     [JsonPropertyName("executeTime")]
     public string? ExecuteTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Apt update settings. Use this setting to override the default apt patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigApt
@@ -1324,7 +1467,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigApt
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>goo update settings. Use this setting to override the default goo patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigGoo
@@ -1333,7 +1478,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigGoo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepLinuxExecStepConfigGcsObject
@@ -1350,7 +1497,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepLi
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepLinuxExecStepConfig
@@ -1371,7 +1520,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepLi
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWindowsExecStepConfigGcsObject
@@ -1388,7 +1539,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWi
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Windows VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWindowsExecStepConfig
@@ -1409,7 +1562,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWi
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStep to run after the patch update. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStep
@@ -1422,7 +1577,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStep
     [JsonPropertyName("windowsExecStepConfig")]
     public V1beta1PatchDeploymentStatusAtProviderPatchConfigPostStepWindowsExecStepConfig? WindowsExecStepConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepLinuxExecStepConfigGcsObject
@@ -1439,7 +1596,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepLin
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Linux VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepLinuxExecStepConfig
@@ -1460,7 +1619,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepLin
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Cloud Storage object containing the executable. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWindowsExecStepConfigGcsObject
@@ -1477,7 +1638,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWin
     [JsonPropertyName("object")]
     public string? Object { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStepConfig for all Windows VMs targeted by the PatchJob. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWindowsExecStepConfig
@@ -1498,7 +1661,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWin
     [JsonPropertyName("localPath")]
     public string? LocalPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The ExecStep to run before the patch update. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStep
@@ -1511,7 +1676,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStep
     [JsonPropertyName("windowsExecStepConfig")]
     public V1beta1PatchDeploymentStatusAtProviderPatchConfigPreStepWindowsExecStepConfig? WindowsExecStepConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Windows update settings. Use this setting to override the default Windows patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigWindowsUpdate
@@ -1528,7 +1695,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigWindowsUpd
     [JsonPropertyName("exclusivePatches")]
     public IList<string>? ExclusivePatches { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Yum update settings. Use this setting to override the default yum patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigYum
@@ -1549,7 +1718,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigYum
     [JsonPropertyName("security")]
     public bool? Security { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>zypper update settings. Use this setting to override the default zypper patch rules. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigZypper
@@ -1578,7 +1749,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfigZypper
     [JsonPropertyName("withUpdate")]
     public bool? WithUpdate { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Patch configuration that is applied. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfig
@@ -1619,7 +1792,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderPatchConfig
     [JsonPropertyName("zypper")]
     public V1beta1PatchDeploymentStatusAtProviderPatchConfigZypper? Zypper { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Week day in a month. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMonthlyWeekDayOfMonth
@@ -1636,7 +1811,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMont
     [JsonPropertyName("weekOrdinal")]
     public double? WeekOrdinal { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule with monthly executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMonthly
@@ -1649,7 +1826,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMont
     [JsonPropertyName("weekDayOfMonth")]
     public V1beta1PatchDeploymentStatusAtProviderRecurringScheduleMonthlyWeekDayOfMonth? WeekDayOfMonth { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Time of the day to run a recurring deployment. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleTimeOfDay
@@ -1670,7 +1849,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleTime
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are determined by the chosen time zone. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleTimeZone
@@ -1683,7 +1864,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleTime
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule with weekly executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleWeekly
@@ -1692,7 +1875,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringScheduleWeek
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Schedule recurring executions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRecurringSchedule
@@ -1729,7 +1914,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRecurringSchedule
     [JsonPropertyName("weekly")]
     public V1beta1PatchDeploymentStatusAtProviderRecurringScheduleWeekly? Weekly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up. During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps. A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget. For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone. For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRolloutDisruptionBudget
@@ -1742,7 +1929,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRolloutDisruptionBudg
     [JsonPropertyName("percentage")]
     public double? Percentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Rollout strategy of the patch job. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProviderRollout
@@ -1755,7 +1944,9 @@ public partial class V1beta1PatchDeploymentStatusAtProviderRollout
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusAtProvider
@@ -1812,7 +2003,9 @@ public partial class V1beta1PatchDeploymentStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatusConditions
@@ -1841,7 +2034,9 @@ public partial class V1beta1PatchDeploymentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PatchDeploymentStatus defines the observed state of PatchDeployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentStatus
@@ -1858,7 +2053,9 @@ public partial class V1beta1PatchDeploymentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PatchDeployment is the Schema for the PatchDeployments API. Patch deployments are configurations that individual patch jobs use to complete a patch.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1888,3 +2085,4 @@ public partial class V1beta1PatchDeployment : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1PatchDeploymentStatus? Status { get; set; }
 }
+#nullable disable

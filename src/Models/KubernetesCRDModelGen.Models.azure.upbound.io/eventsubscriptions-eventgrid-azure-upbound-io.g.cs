@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventgrid.azure.upbound.io;
+#nullable enable
 /// <summary>EventSubscription is the Schema for the EventSubscriptions API. Manages an EventGrid Event Subscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1EventSubscriptionList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1EventSubscription> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterBoolEquals
@@ -46,7 +49,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterBoolEq
     [JsonPropertyName("value")]
     public bool? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterIsNotNull
@@ -55,7 +60,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterIsNotN
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterIsNullOrUndefined
@@ -64,7 +71,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterIsNull
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberGreaterThan
@@ -77,7 +86,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberGreaterThanOrEquals
@@ -90,7 +101,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberIn
@@ -103,7 +116,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberInRange
@@ -116,7 +131,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
     [JsonPropertyName("values")]
     public IList<IList<double>>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberLessThan
@@ -129,7 +146,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberLessThanOrEquals
@@ -142,7 +161,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberNotIn
@@ -155,7 +176,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumberNotInRange
@@ -168,7 +191,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterNumber
     [JsonPropertyName("values")]
     public IList<IList<double>>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringBeginsWith
@@ -181,7 +206,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringContains
@@ -194,7 +221,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringEndsWith
@@ -207,7 +236,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringIn
@@ -220,7 +251,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotBeginsWith
@@ -233,7 +266,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotContains
@@ -246,7 +281,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotEndsWith
@@ -259,7 +296,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotIn
@@ -272,7 +311,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilterString
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilter
@@ -353,7 +394,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAdvancedFilter
     [JsonPropertyName("stringNotIn")]
     public IList<V1beta1EventSubscriptionSpecForProviderAdvancedFilterStringNotIn>? StringNotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderAzureFunctionEndpoint
@@ -370,7 +413,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderAzureFunctionEndpoin
     [JsonPropertyName("preferredBatchSizeInKilobytes")]
     public double? PreferredBatchSizeInKilobytes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderDeadLetterIdentity
@@ -383,7 +428,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderDeadLetterIdentity
     [JsonPropertyName("userAssignedIdentity")]
     public string? UserAssignedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderDeliveryIdentity
@@ -396,7 +443,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderDeliveryIdentity
     [JsonPropertyName("userAssignedIdentity")]
     public string? UserAssignedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>If the type is Static, then provide the value to use</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderDeliveryPropertyValueSecretRef
@@ -413,7 +462,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderDeliveryPropertyValu
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderDeliveryProperty
@@ -438,7 +489,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderDeliveryProperty
     [JsonPropertyName("valueSecretRef")]
     public V1beta1EventSubscriptionSpecForProviderDeliveryPropertyValueSecretRef? ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderRetryPolicy
@@ -451,7 +504,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderRetryPolicy
     [JsonPropertyName("maxDeliveryAttempts")]
     public double? MaxDeliveryAttempts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderScopeRefPolicy
@@ -464,7 +519,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderScopeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderScopeRef
@@ -477,7 +534,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderScopeRef
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecForProviderScopeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicy
@@ -490,7 +549,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderScopeSelector
@@ -507,7 +568,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderScopeSelector
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecForProviderScopeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageBlobDeadLetterDestination
@@ -520,7 +583,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageBlobDeadLette
     [JsonPropertyName("storageBlobContainerName")]
     public string? StorageBlobContainerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameRefPolicy
@@ -533,7 +598,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in storage to populate queueName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameRef
@@ -546,7 +613,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameSelectorPolicy
@@ -559,7 +628,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in storage to populate queueName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameSelector
@@ -576,7 +647,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointQueueNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdRefPolicy
@@ -589,7 +662,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdRef
@@ -602,7 +677,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdSelectorPolicy
@@ -615,7 +692,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdSelector
@@ -632,7 +711,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
@@ -665,7 +746,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderStorageQueueEndpoint
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1EventSubscriptionSpecForProviderStorageQueueEndpointStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderSubjectFilter
@@ -682,7 +765,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderSubjectFilter
     [JsonPropertyName("subjectEndsWith")]
     public string? SubjectEndsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProviderWebhookEndpoint
@@ -707,7 +792,9 @@ public partial class V1beta1EventSubscriptionSpecForProviderWebhookEndpoint
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecForProvider
@@ -804,7 +891,9 @@ public partial class V1beta1EventSubscriptionSpecForProvider
     [JsonPropertyName("webhookEndpoint")]
     public IList<V1beta1EventSubscriptionSpecForProviderWebhookEndpoint>? WebhookEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterBoolEquals
@@ -817,7 +906,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterBoolE
     [JsonPropertyName("value")]
     public bool? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterIsNotNull
@@ -826,7 +917,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterIsNot
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterIsNullOrUndefined
@@ -835,7 +928,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterIsNul
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberGreaterThan
@@ -848,7 +943,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberGreaterThanOrEquals
@@ -861,7 +958,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberIn
@@ -874,7 +973,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberInRange
@@ -887,7 +988,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
     [JsonPropertyName("values")]
     public IList<IList<double>>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberLessThan
@@ -900,7 +1003,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberLessThanOrEquals
@@ -913,7 +1018,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberNotIn
@@ -926,7 +1033,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumberNotInRange
@@ -939,7 +1048,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterNumbe
     [JsonPropertyName("values")]
     public IList<IList<double>>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringBeginsWith
@@ -952,7 +1063,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringContains
@@ -965,7 +1078,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringEndsWith
@@ -978,7 +1093,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringIn
@@ -991,7 +1108,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotBeginsWith
@@ -1004,7 +1123,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotContains
@@ -1017,7 +1138,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotEndsWith
@@ -1030,7 +1153,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotIn
@@ -1043,7 +1168,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilter
@@ -1124,7 +1251,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAdvancedFilter
     [JsonPropertyName("stringNotIn")]
     public IList<V1beta1EventSubscriptionSpecInitProviderAdvancedFilterStringNotIn>? StringNotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderAzureFunctionEndpoint
@@ -1141,7 +1270,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderAzureFunctionEndpoi
     [JsonPropertyName("preferredBatchSizeInKilobytes")]
     public double? PreferredBatchSizeInKilobytes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderDeadLetterIdentity
@@ -1154,7 +1285,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderDeadLetterIdentity
     [JsonPropertyName("userAssignedIdentity")]
     public string? UserAssignedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderDeliveryIdentity
@@ -1167,7 +1300,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderDeliveryIdentity
     [JsonPropertyName("userAssignedIdentity")]
     public string? UserAssignedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderDeliveryProperty
@@ -1188,7 +1323,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderDeliveryProperty
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderRetryPolicy
@@ -1201,7 +1338,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderRetryPolicy
     [JsonPropertyName("maxDeliveryAttempts")]
     public double? MaxDeliveryAttempts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderScopeRefPolicy
@@ -1214,7 +1353,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderScopeRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderScopeRef
@@ -1227,7 +1368,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderScopeRef
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecInitProviderScopeRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicy
@@ -1240,7 +1383,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate scope.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderScopeSelector
@@ -1257,7 +1402,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderScopeSelector
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecInitProviderScopeSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageBlobDeadLetterDestination
@@ -1270,7 +1417,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageBlobDeadLett
     [JsonPropertyName("storageBlobContainerName")]
     public string? StorageBlobContainerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameRefPolicy
@@ -1283,7 +1432,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Queue in storage to populate queueName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameRef
@@ -1296,7 +1447,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameSelectorPolicy
@@ -1309,7 +1462,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Queue in storage to populate queueName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameSelector
@@ -1326,7 +1481,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointQueueNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdRefPolicy
@@ -1339,7 +1496,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdRef
@@ -1352,7 +1511,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdSelectorPolicy
@@ -1365,7 +1526,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdSelector
@@ -1382,7 +1545,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoint
@@ -1415,7 +1580,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpoin
     [JsonPropertyName("storageAccountIdSelector")]
     public V1beta1EventSubscriptionSpecInitProviderStorageQueueEndpointStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderSubjectFilter
@@ -1432,7 +1599,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderSubjectFilter
     [JsonPropertyName("subjectEndsWith")]
     public string? SubjectEndsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProviderWebhookEndpoint
@@ -1457,7 +1626,9 @@ public partial class V1beta1EventSubscriptionSpecInitProviderWebhookEndpoint
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecInitProvider
@@ -1554,7 +1725,9 @@ public partial class V1beta1EventSubscriptionSpecInitProvider
     [JsonPropertyName("webhookEndpoint")]
     public IList<V1beta1EventSubscriptionSpecInitProviderWebhookEndpoint>? WebhookEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecProviderConfigRefPolicy
@@ -1567,7 +1740,9 @@ public partial class V1beta1EventSubscriptionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecProviderConfigRef
@@ -1580,7 +1755,9 @@ public partial class V1beta1EventSubscriptionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1EventSubscriptionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpecWriteConnectionSecretToRef
@@ -1593,7 +1770,9 @@ public partial class V1beta1EventSubscriptionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventSubscriptionSpec defines the desired state of EventSubscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionSpec
@@ -1622,7 +1801,9 @@ public partial class V1beta1EventSubscriptionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1EventSubscriptionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterBoolEquals
@@ -1635,7 +1816,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterBoolE
     [JsonPropertyName("value")]
     public bool? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterIsNotNull
@@ -1644,7 +1827,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterIsNot
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterIsNullOrUndefined
@@ -1653,7 +1838,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterIsNul
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberGreaterThan
@@ -1666,7 +1853,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberGreaterThanOrEquals
@@ -1679,7 +1868,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberIn
@@ -1692,7 +1883,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberInRange
@@ -1705,7 +1898,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
     [JsonPropertyName("values")]
     public IList<IList<double>>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberLessThan
@@ -1718,7 +1913,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberLessThanOrEquals
@@ -1731,7 +1928,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
     [JsonPropertyName("value")]
     public double? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberNotIn
@@ -1744,7 +1943,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
     [JsonPropertyName("values")]
     public IList<double>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumberNotInRange
@@ -1757,7 +1958,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterNumbe
     [JsonPropertyName("values")]
     public IList<IList<double>>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringBeginsWith
@@ -1770,7 +1973,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringContains
@@ -1783,7 +1988,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringEndsWith
@@ -1796,7 +2003,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringIn
@@ -1809,7 +2018,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotBeginsWith
@@ -1822,7 +2033,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotContains
@@ -1835,7 +2048,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotEndsWith
@@ -1848,7 +2063,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotIn
@@ -1861,7 +2078,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStrin
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilter
@@ -1942,7 +2161,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAdvancedFilter
     [JsonPropertyName("stringNotIn")]
     public IList<V1beta1EventSubscriptionStatusAtProviderAdvancedFilterStringNotIn>? StringNotIn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderAzureFunctionEndpoint
@@ -1959,7 +2180,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderAzureFunctionEndpoi
     [JsonPropertyName("preferredBatchSizeInKilobytes")]
     public double? PreferredBatchSizeInKilobytes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderDeadLetterIdentity
@@ -1972,7 +2195,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderDeadLetterIdentity
     [JsonPropertyName("userAssignedIdentity")]
     public string? UserAssignedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderDeliveryIdentity
@@ -1985,7 +2210,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderDeliveryIdentity
     [JsonPropertyName("userAssignedIdentity")]
     public string? UserAssignedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderDeliveryProperty
@@ -2006,7 +2233,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderDeliveryProperty
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderRetryPolicy
@@ -2019,7 +2248,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderRetryPolicy
     [JsonPropertyName("maxDeliveryAttempts")]
     public double? MaxDeliveryAttempts { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderStorageBlobDeadLetterDestination
@@ -2032,7 +2263,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderStorageBlobDeadLett
     [JsonPropertyName("storageBlobContainerName")]
     public string? StorageBlobContainerName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderStorageQueueEndpoint
@@ -2049,7 +2282,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderStorageQueueEndpoin
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderSubjectFilter
@@ -2066,7 +2301,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderSubjectFilter
     [JsonPropertyName("subjectEndsWith")]
     public string? SubjectEndsWith { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProviderWebhookEndpoint
@@ -2095,7 +2332,9 @@ public partial class V1beta1EventSubscriptionStatusAtProviderWebhookEndpoint
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusAtProvider
@@ -2188,7 +2427,9 @@ public partial class V1beta1EventSubscriptionStatusAtProvider
     [JsonPropertyName("webhookEndpoint")]
     public IList<V1beta1EventSubscriptionStatusAtProviderWebhookEndpoint>? WebhookEndpoint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatusConditions
@@ -2217,7 +2458,9 @@ public partial class V1beta1EventSubscriptionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventSubscriptionStatus defines the observed state of EventSubscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSubscriptionStatus
@@ -2234,7 +2477,9 @@ public partial class V1beta1EventSubscriptionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EventSubscription is the Schema for the EventSubscriptions API. Manages an EventGrid Event Subscription</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2264,3 +2509,4 @@ public partial class V1beta1EventSubscription : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1EventSubscriptionStatus? Status { get; set; }
 }
+#nullable disable

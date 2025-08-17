@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.m.upbound.io;
+#nullable enable
 /// <summary>CatalogTable is the Schema for the CatalogTables API. Provides a Glue Catalog Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CatalogTableList : IKubernetesObject<V1ListMeta>, II
     [JsonPropertyName("items")]
     public IList<V1beta1CatalogTable> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderDatabaseNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CatalogTableSpecForProviderDatabaseNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderDatabaseNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1CatalogTableSpecForProviderDatabaseNameRef
     [JsonPropertyName("policy")]
     public V1beta1CatalogTableSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderDatabaseNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CatalogTableSpecForProviderDatabaseNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderDatabaseNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CatalogTableSpecForProviderDatabaseNameSelector
     [JsonPropertyName("policy")]
     public V1beta1CatalogTableSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for iceberg table config. See iceberg_input below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderOpenTableFormatInputIcebergInput
@@ -110,7 +121,9 @@ public partial class V1beta1CatalogTableSpecForProviderOpenTableFormatInputIcebe
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for open table formats. See open_table_format_input below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderOpenTableFormatInput
@@ -119,7 +132,9 @@ public partial class V1beta1CatalogTableSpecForProviderOpenTableFormatInput
     [JsonPropertyName("icebergInput")]
     public V1beta1CatalogTableSpecForProviderOpenTableFormatInputIcebergInput? IcebergInput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderPartitionIndex
@@ -132,7 +147,9 @@ public partial class V1beta1CatalogTableSpecForProviderPartitionIndex
     [JsonPropertyName("keys")]
     public IList<string>? Keys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderPartitionKeys
@@ -149,7 +166,9 @@ public partial class V1beta1CatalogTableSpecForProviderPartitionKeys
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorColumns
@@ -170,7 +189,9 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorColumns
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that contains schema identity fields. Either this or the schema_version_id has to be provided. See schema_id below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSchemaReferenceSchemaId
@@ -187,7 +208,9 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSchemaRe
     [JsonPropertyName("schemaName")]
     public string? SchemaName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSchemaReference
@@ -204,7 +227,9 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSchemaRe
     [JsonPropertyName("schemaVersionNumber")]
     public double? SchemaVersionNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for serialization and deserialization ("SerDe") information. See ser_de_info below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSerDeInfo
@@ -221,7 +246,9 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSerDeInf
     [JsonPropertyName("serializationLibrary")]
     public string? SerializationLibrary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with information about values that appear very frequently in a column (skewed values). See skewed_info below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSkewedInfo
@@ -238,7 +265,9 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSkewedIn
     [JsonPropertyName("skewedColumnValues")]
     public IList<string>? SkewedColumnValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSortColumns
@@ -251,7 +280,9 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptorSortColu
     [JsonPropertyName("sortOrder")]
     public double? SortOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the physical storage of this table. For more information, refer to the Glue Developer Guide. See storage_descriptor below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderStorageDescriptor
@@ -312,7 +343,9 @@ public partial class V1beta1CatalogTableSpecForProviderStorageDescriptor
     [JsonPropertyName("storedAsSubDirectories")]
     public bool? StoredAsSubDirectories { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of a target table for resource linking. See target_table below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProviderTargetTable
@@ -333,7 +366,9 @@ public partial class V1beta1CatalogTableSpecForProviderTargetTable
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecForProvider
@@ -406,7 +441,9 @@ public partial class V1beta1CatalogTableSpecForProvider
     [JsonPropertyName("viewOriginalText")]
     public string? ViewOriginalText { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for iceberg table config. See iceberg_input below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderOpenTableFormatInputIcebergInput
@@ -419,7 +456,9 @@ public partial class V1beta1CatalogTableSpecInitProviderOpenTableFormatInputIceb
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for open table formats. See open_table_format_input below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderOpenTableFormatInput
@@ -428,7 +467,9 @@ public partial class V1beta1CatalogTableSpecInitProviderOpenTableFormatInput
     [JsonPropertyName("icebergInput")]
     public V1beta1CatalogTableSpecInitProviderOpenTableFormatInputIcebergInput? IcebergInput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderPartitionIndex
@@ -441,7 +482,9 @@ public partial class V1beta1CatalogTableSpecInitProviderPartitionIndex
     [JsonPropertyName("keys")]
     public IList<string>? Keys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderPartitionKeys
@@ -458,7 +501,9 @@ public partial class V1beta1CatalogTableSpecInitProviderPartitionKeys
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorColumns
@@ -479,7 +524,9 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorColumns
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that contains schema identity fields. Either this or the schema_version_id has to be provided. See schema_id below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSchemaReferenceSchemaId
@@ -496,7 +543,9 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSchemaR
     [JsonPropertyName("schemaName")]
     public string? SchemaName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSchemaReference
@@ -513,7 +562,9 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSchemaR
     [JsonPropertyName("schemaVersionNumber")]
     public double? SchemaVersionNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for serialization and deserialization ("SerDe") information. See ser_de_info below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSerDeInfo
@@ -530,7 +581,9 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSerDeIn
     [JsonPropertyName("serializationLibrary")]
     public string? SerializationLibrary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with information about values that appear very frequently in a column (skewed values). See skewed_info below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSkewedInfo
@@ -547,7 +600,9 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSkewedI
     [JsonPropertyName("skewedColumnValues")]
     public IList<string>? SkewedColumnValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSortColumns
@@ -560,7 +615,9 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptorSortCol
     [JsonPropertyName("sortOrder")]
     public double? SortOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the physical storage of this table. For more information, refer to the Glue Developer Guide. See storage_descriptor below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptor
@@ -621,7 +678,9 @@ public partial class V1beta1CatalogTableSpecInitProviderStorageDescriptor
     [JsonPropertyName("storedAsSubDirectories")]
     public bool? StoredAsSubDirectories { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of a target table for resource linking. See target_table below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProviderTargetTable
@@ -630,7 +689,9 @@ public partial class V1beta1CatalogTableSpecInitProviderTargetTable
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecInitProvider
@@ -683,7 +744,9 @@ public partial class V1beta1CatalogTableSpecInitProvider
     [JsonPropertyName("viewOriginalText")]
     public string? ViewOriginalText { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecProviderConfigRef
@@ -696,7 +759,9 @@ public partial class V1beta1CatalogTableSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpecWriteConnectionSecretToRef
@@ -705,7 +770,9 @@ public partial class V1beta1CatalogTableSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CatalogTableSpec defines the desired state of CatalogTable</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableSpec
@@ -730,7 +797,9 @@ public partial class V1beta1CatalogTableSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CatalogTableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for iceberg table config. See iceberg_input below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderOpenTableFormatInputIcebergInput
@@ -743,7 +812,9 @@ public partial class V1beta1CatalogTableStatusAtProviderOpenTableFormatInputIceb
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for open table formats. See open_table_format_input below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderOpenTableFormatInput
@@ -752,7 +823,9 @@ public partial class V1beta1CatalogTableStatusAtProviderOpenTableFormatInput
     [JsonPropertyName("icebergInput")]
     public V1beta1CatalogTableStatusAtProviderOpenTableFormatInputIcebergInput? IcebergInput { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderPartitionIndex
@@ -769,7 +842,9 @@ public partial class V1beta1CatalogTableStatusAtProviderPartitionIndex
     [JsonPropertyName("keys")]
     public IList<string>? Keys { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderPartitionKeys
@@ -786,7 +861,9 @@ public partial class V1beta1CatalogTableStatusAtProviderPartitionKeys
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorColumns
@@ -807,7 +884,9 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorColumns
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block that contains schema identity fields. Either this or the schema_version_id has to be provided. See schema_id below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSchemaReferenceSchemaId
@@ -824,7 +903,9 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSchemaR
     [JsonPropertyName("schemaName")]
     public string? SchemaName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSchemaReference
@@ -841,7 +922,9 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSchemaR
     [JsonPropertyName("schemaVersionNumber")]
     public double? SchemaVersionNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for serialization and deserialization ("SerDe") information. See ser_de_info below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSerDeInfo
@@ -858,7 +941,9 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSerDeIn
     [JsonPropertyName("serializationLibrary")]
     public string? SerializationLibrary { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block with information about values that appear very frequently in a column (skewed values). See skewed_info below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSkewedInfo
@@ -875,7 +960,9 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSkewedI
     [JsonPropertyName("skewedColumnValues")]
     public IList<string>? SkewedColumnValues { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSortColumns
@@ -888,7 +975,9 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptorSortCol
     [JsonPropertyName("sortOrder")]
     public double? SortOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for information about the physical storage of this table. For more information, refer to the Glue Developer Guide. See storage_descriptor below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptor
@@ -949,7 +1038,9 @@ public partial class V1beta1CatalogTableStatusAtProviderStorageDescriptor
     [JsonPropertyName("storedAsSubDirectories")]
     public bool? StoredAsSubDirectories { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block of a target table for resource linking. See target_table below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProviderTargetTable
@@ -970,7 +1061,9 @@ public partial class V1beta1CatalogTableStatusAtProviderTargetTable
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusAtProvider
@@ -1043,7 +1136,9 @@ public partial class V1beta1CatalogTableStatusAtProvider
     [JsonPropertyName("viewOriginalText")]
     public string? ViewOriginalText { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatusConditions
@@ -1072,7 +1167,9 @@ public partial class V1beta1CatalogTableStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CatalogTableStatus defines the observed state of CatalogTable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CatalogTableStatus
@@ -1089,7 +1186,9 @@ public partial class V1beta1CatalogTableStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CatalogTable is the Schema for the CatalogTables API. Provides a Glue Catalog Table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1119,3 +1218,4 @@ public partial class V1beta1CatalogTable : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1CatalogTableStatus? Status { get; set; }
 }
+#nullable disable

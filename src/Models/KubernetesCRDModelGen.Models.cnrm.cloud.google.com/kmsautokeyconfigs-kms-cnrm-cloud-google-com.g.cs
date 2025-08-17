@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>KMSAutokeyConfig is the Schema for the KMSAutokeyConfig API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1KMSAutokeyConfigList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1KMSAutokeyConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSAutokeyConfigSpecFolderRef
@@ -50,7 +53,9 @@ public partial class V1beta1KMSAutokeyConfigSpecFolderRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSAutokeyConfigSpecKeyProject
@@ -71,7 +76,9 @@ public partial class V1beta1KMSAutokeyConfigSpecKeyProject
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMSAutokeyConfigSpec defines the desired state of KMSAutokeyConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSAutokeyConfigSpec
@@ -84,7 +91,9 @@ public partial class V1beta1KMSAutokeyConfigSpec
     [JsonPropertyName("keyProject")]
     public V1beta1KMSAutokeyConfigSpecKeyProject? KeyProject { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSAutokeyConfigStatusConditions
@@ -109,7 +118,9 @@ public partial class V1beta1KMSAutokeyConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSAutokeyConfigStatusObservedState
@@ -118,7 +129,9 @@ public partial class V1beta1KMSAutokeyConfigStatusObservedState
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMSAutokeyConfigStatus defines the config connector machine state of KMSAutokeyConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSAutokeyConfigStatus
@@ -139,7 +152,9 @@ public partial class V1beta1KMSAutokeyConfigStatus
     [JsonPropertyName("observedState")]
     public V1beta1KMSAutokeyConfigStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>KMSAutokeyConfig is the Schema for the KMSAutokeyConfig API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -169,3 +184,4 @@ public partial class V1beta1KMSAutokeyConfig : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1KMSAutokeyConfigStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
+#nullable enable
 /// <summary>StaticIPAttachment is the Schema for the StaticIPAttachments API. Manages a Lightsail Static IP Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StaticIPAttachmentList : IKubernetesObject<V1ListMet
     [JsonPropertyName("items")]
     public IList<V1beta1StaticIPAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProviderInstanceNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderInstanceNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProviderInstanceNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderInstanceNameRef
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecForProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProviderInstanceNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderInstanceNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProviderInstanceNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderInstanceNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecForProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a StaticIP in lightsail to populate staticIpName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameRef
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecForProviderStaticIpNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a StaticIP in lightsail to populate staticIpName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameSelecto
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecForProviderStaticIpNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProvider
@@ -178,7 +197,9 @@ public partial class V1beta1StaticIPAttachmentSpecForProvider
     [JsonPropertyName("staticIpNameSelector")]
     public V1beta1StaticIPAttachmentSpecForProviderStaticIpNameSelector? StaticIpNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProviderInstanceNameRefPolicy
@@ -191,7 +212,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderInstanceNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProviderInstanceNameRef
@@ -204,7 +227,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderInstanceNameRef
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecInitProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProviderInstanceNameSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderInstanceNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProviderInstanceNameSelector
@@ -234,7 +261,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderInstanceNameSelect
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecInitProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameRefPolicy
@@ -247,7 +276,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a StaticIP in lightsail to populate staticIpName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameRef
@@ -260,7 +291,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameRef
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameSelectorPolicy
@@ -273,7 +306,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a StaticIP in lightsail to populate staticIpName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameSelector
@@ -290,7 +325,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameSelect
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProvider
@@ -319,7 +356,9 @@ public partial class V1beta1StaticIPAttachmentSpecInitProvider
     [JsonPropertyName("staticIpNameSelector")]
     public V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameSelector? StaticIpNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecProviderConfigRefPolicy
@@ -332,7 +371,9 @@ public partial class V1beta1StaticIPAttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecProviderConfigRef
@@ -345,7 +386,9 @@ public partial class V1beta1StaticIPAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1StaticIPAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecWriteConnectionSecretToRef
@@ -358,7 +401,9 @@ public partial class V1beta1StaticIPAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StaticIPAttachmentSpec defines the desired state of StaticIPAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpec
@@ -387,7 +432,9 @@ public partial class V1beta1StaticIPAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1StaticIPAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentStatusAtProvider
@@ -412,7 +459,9 @@ public partial class V1beta1StaticIPAttachmentStatusAtProvider
     [JsonPropertyName("staticIpName")]
     public string? StaticIpName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentStatusConditions
@@ -441,7 +490,9 @@ public partial class V1beta1StaticIPAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StaticIPAttachmentStatus defines the observed state of StaticIPAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentStatus
@@ -458,7 +509,9 @@ public partial class V1beta1StaticIPAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StaticIPAttachment is the Schema for the StaticIPAttachments API. Manages a Lightsail Static IP Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -488,3 +541,4 @@ public partial class V1beta1StaticIPAttachment : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1StaticIPAttachmentStatus? Status { get; set; }
 }
+#nullable disable

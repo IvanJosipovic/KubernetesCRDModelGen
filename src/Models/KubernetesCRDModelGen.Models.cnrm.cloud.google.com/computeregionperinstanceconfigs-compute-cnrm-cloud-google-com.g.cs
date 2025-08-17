@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1alpha1ComputeRegionPerInstanceConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateDisk
@@ -54,7 +57,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateDis
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ip address representation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExternalIpIpAddress
@@ -63,7 +68,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExt
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExternalIp
@@ -80,7 +87,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExt
     [JsonPropertyName("ipAddress")]
     public V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateExternalIpIpAddress? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Ip address representation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInternalIpIpAddress
@@ -89,7 +98,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInt
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInternalIp
@@ -106,7 +117,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInt
     [JsonPropertyName("ipAddress")]
     public V1alpha1ComputeRegionPerInstanceConfigSpecPreservedStateInternalIpIpAddress? IpAddress { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The preserved state for this instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedState
@@ -127,7 +140,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecPreservedState
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecProjectRef
@@ -144,7 +159,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpecRegionInstanceGroupManagerRef
@@ -161,7 +178,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpecRegionInstanceGro
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigSpec
@@ -198,7 +217,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigStatusConditions
@@ -223,7 +244,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeRegionPerInstanceConfigStatus
@@ -236,7 +259,9 @@ public partial class V1alpha1ComputeRegionPerInstanceConfigStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -266,3 +291,4 @@ public partial class V1alpha1ComputeRegionPerInstanceConfig : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1alpha1ComputeRegionPerInstanceConfigStatus? Status { get; set; }
 }
+#nullable disable

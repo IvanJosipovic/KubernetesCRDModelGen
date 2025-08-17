@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ram.aws.upbound.io;
+#nullable enable
 /// <summary>ResourceShareAccepter is the Schema for the ResourceShareAccepters API. Manages accepting a Resource Access Manager (RAM) Resource Share invitation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourceShareAccepterList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1ResourceShareAccepter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecForProviderShareArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ResourceShareAccepterSpecForProviderShareArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrincipalAssociation in ram to populate shareArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecForProviderShareArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1ResourceShareAccepterSpecForProviderShareArnRef
     [JsonPropertyName("policy")]
     public V1beta1ResourceShareAccepterSpecForProviderShareArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecForProviderShareArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ResourceShareAccepterSpecForProviderShareArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrincipalAssociation in ram to populate shareArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecForProviderShareArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ResourceShareAccepterSpecForProviderShareArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ResourceShareAccepterSpecForProviderShareArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecForProvider
@@ -110,7 +121,9 @@ public partial class V1beta1ResourceShareAccepterSpecForProvider
     [JsonPropertyName("shareArnSelector")]
     public V1beta1ResourceShareAccepterSpecForProviderShareArnSelector? ShareArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecInitProviderShareArnRefPolicy
@@ -123,7 +136,9 @@ public partial class V1beta1ResourceShareAccepterSpecInitProviderShareArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a PrincipalAssociation in ram to populate shareArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecInitProviderShareArnRef
@@ -136,7 +151,9 @@ public partial class V1beta1ResourceShareAccepterSpecInitProviderShareArnRef
     [JsonPropertyName("policy")]
     public V1beta1ResourceShareAccepterSpecInitProviderShareArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecInitProviderShareArnSelectorPolicy
@@ -149,7 +166,9 @@ public partial class V1beta1ResourceShareAccepterSpecInitProviderShareArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a PrincipalAssociation in ram to populate shareArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecInitProviderShareArnSelector
@@ -166,7 +185,9 @@ public partial class V1beta1ResourceShareAccepterSpecInitProviderShareArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1ResourceShareAccepterSpecInitProviderShareArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecInitProvider
@@ -183,7 +204,9 @@ public partial class V1beta1ResourceShareAccepterSpecInitProvider
     [JsonPropertyName("shareArnSelector")]
     public V1beta1ResourceShareAccepterSpecInitProviderShareArnSelector? ShareArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecProviderConfigRefPolicy
@@ -196,7 +219,9 @@ public partial class V1beta1ResourceShareAccepterSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecProviderConfigRef
@@ -209,7 +234,9 @@ public partial class V1beta1ResourceShareAccepterSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ResourceShareAccepterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpecWriteConnectionSecretToRef
@@ -222,7 +249,9 @@ public partial class V1beta1ResourceShareAccepterSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceShareAccepterSpec defines the desired state of ResourceShareAccepter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterSpec
@@ -251,7 +280,9 @@ public partial class V1beta1ResourceShareAccepterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourceShareAccepterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterStatusAtProvider
@@ -296,7 +327,9 @@ public partial class V1beta1ResourceShareAccepterStatusAtProvider
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterStatusConditions
@@ -325,7 +358,9 @@ public partial class V1beta1ResourceShareAccepterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceShareAccepterStatus defines the observed state of ResourceShareAccepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceShareAccepterStatus
@@ -342,7 +377,9 @@ public partial class V1beta1ResourceShareAccepterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceShareAccepter is the Schema for the ResourceShareAccepters API. Manages accepting a Resource Access Manager (RAM) Resource Share invitation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -372,3 +409,4 @@ public partial class V1beta1ResourceShareAccepter : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ResourceShareAccepterStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatchevents.aws.m.upbound.io;
+#nullable enable
 /// <summary>Archive is the Schema for the Archives API. Provides an EventBridge event archive resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ArchiveList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1beta1Archive> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderEventSourceArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ArchiveSpecForProviderEventSourceArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bus in cloudwatchevents to populate eventSourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderEventSourceArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1ArchiveSpecForProviderEventSourceArnRef
     [JsonPropertyName("policy")]
     public V1beta1ArchiveSpecForProviderEventSourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderEventSourceArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ArchiveSpecForProviderEventSourceArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bus in cloudwatchevents to populate eventSourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderEventSourceArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ArchiveSpecForProviderEventSourceArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ArchiveSpecForProviderEventSourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderKmsKeyIdentifierRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ArchiveSpecForProviderKmsKeyIdentifierRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderKmsKeyIdentifierRef
@@ -127,7 +140,9 @@ public partial class V1beta1ArchiveSpecForProviderKmsKeyIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta1ArchiveSpecForProviderKmsKeyIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderKmsKeyIdentifierSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ArchiveSpecForProviderKmsKeyIdentifierSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderKmsKeyIdentifierSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ArchiveSpecForProviderKmsKeyIdentifierSelector
     [JsonPropertyName("policy")]
     public V1beta1ArchiveSpecForProviderKmsKeyIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProvider
@@ -206,7 +225,9 @@ public partial class V1beta1ArchiveSpecForProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProviderEventSourceArnRefPolicy
@@ -219,7 +240,9 @@ public partial class V1beta1ArchiveSpecInitProviderEventSourceArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Bus in cloudwatchevents to populate eventSourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProviderEventSourceArnRef
@@ -236,7 +259,9 @@ public partial class V1beta1ArchiveSpecInitProviderEventSourceArnRef
     [JsonPropertyName("policy")]
     public V1beta1ArchiveSpecInitProviderEventSourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProviderEventSourceArnSelectorPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1ArchiveSpecInitProviderEventSourceArnSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Bus in cloudwatchevents to populate eventSourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProviderEventSourceArnSelector
@@ -270,7 +297,9 @@ public partial class V1beta1ArchiveSpecInitProviderEventSourceArnSelector
     [JsonPropertyName("policy")]
     public V1beta1ArchiveSpecInitProviderEventSourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProviderKmsKeyIdentifierRefPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1ArchiveSpecInitProviderKmsKeyIdentifierRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in kms to populate kmsKeyIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProviderKmsKeyIdentifierRef
@@ -300,7 +331,9 @@ public partial class V1beta1ArchiveSpecInitProviderKmsKeyIdentifierRef
     [JsonPropertyName("policy")]
     public V1beta1ArchiveSpecInitProviderKmsKeyIdentifierRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProviderKmsKeyIdentifierSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1ArchiveSpecInitProviderKmsKeyIdentifierSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in kms to populate kmsKeyIdentifier.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProviderKmsKeyIdentifierSelector
@@ -334,7 +369,9 @@ public partial class V1beta1ArchiveSpecInitProviderKmsKeyIdentifierSelector
     [JsonPropertyName("policy")]
     public V1beta1ArchiveSpecInitProviderKmsKeyIdentifierSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecInitProvider
@@ -375,7 +412,9 @@ public partial class V1beta1ArchiveSpecInitProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecProviderConfigRef
@@ -388,7 +427,9 @@ public partial class V1beta1ArchiveSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecWriteConnectionSecretToRef
@@ -397,7 +438,9 @@ public partial class V1beta1ArchiveSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ArchiveSpec defines the desired state of Archive</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpec
@@ -422,7 +465,9 @@ public partial class V1beta1ArchiveSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ArchiveSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveStatusAtProvider
@@ -459,7 +504,9 @@ public partial class V1beta1ArchiveStatusAtProvider
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveStatusConditions
@@ -488,7 +535,9 @@ public partial class V1beta1ArchiveStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ArchiveStatus defines the observed state of Archive.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveStatus
@@ -505,7 +554,9 @@ public partial class V1beta1ArchiveStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Archive is the Schema for the Archives API. Provides an EventBridge event archive resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -535,3 +586,4 @@ public partial class V1beta1Archive : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ArchiveStatus? Status { get; set; }
 }
+#nullable disable

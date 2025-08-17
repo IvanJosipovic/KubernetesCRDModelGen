@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+#nullable enable
 /// <summary>Workteam is the Schema for the Workteams API. Provides a SageMaker AI Workteam resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WorkteamList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1Workteam> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserGroup in cognitoidp to populate userGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupRef
@@ -127,7 +140,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserGroup in cognitoidp to populate userGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelector
@@ -161,7 +178,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolRef
@@ -191,7 +212,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelector
@@ -225,7 +250,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinition
@@ -266,7 +293,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMember
     [JsonPropertyName("userPoolSelector")]
     public V1beta1WorkteamSpecForProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelector? UserPoolSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinitionOidcMemberDefinition
@@ -275,7 +304,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinitionOidcMemberDef
     [JsonPropertyName("groups")]
     public IList<string>? Groups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderMemberDefinition
@@ -288,7 +319,9 @@ public partial class V1beta1WorkteamSpecForProviderMemberDefinition
     [JsonPropertyName("oidcMemberDefinition")]
     public V1beta1WorkteamSpecForProviderMemberDefinitionOidcMemberDefinition? OidcMemberDefinition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderNotificationConfiguration
@@ -297,7 +330,9 @@ public partial class V1beta1WorkteamSpecForProviderNotificationConfiguration
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
@@ -310,7 +345,9 @@ public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Pr
     [JsonPropertyName("vpcSourceIp")]
     public string? VpcSourceIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Presign
@@ -319,7 +356,9 @@ public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Pr
     [JsonPropertyName("iamPolicyConstraints")]
     public V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfiguration
@@ -328,7 +367,9 @@ public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfiguration
     [JsonPropertyName("s3Presign")]
     public V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Presign? S3Presign { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkforceNameRefPolicy
@@ -341,7 +382,9 @@ public partial class V1beta1WorkteamSpecForProviderWorkforceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workforce in sagemaker to populate workforceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkforceNameRef
@@ -358,7 +401,9 @@ public partial class V1beta1WorkteamSpecForProviderWorkforceNameRef
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecForProviderWorkforceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkforceNameSelectorPolicy
@@ -371,7 +416,9 @@ public partial class V1beta1WorkteamSpecForProviderWorkforceNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workforce in sagemaker to populate workforceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkforceNameSelector
@@ -392,7 +439,9 @@ public partial class V1beta1WorkteamSpecForProviderWorkforceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecForProviderWorkforceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProvider
@@ -433,7 +482,9 @@ public partial class V1beta1WorkteamSpecForProvider
     [JsonPropertyName("workforceNameSelector")]
     public V1beta1WorkteamSpecForProviderWorkforceNameSelector? WorkforceNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdRefPolicy
@@ -446,7 +497,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdRef
@@ -463,7 +516,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdSelectorPolicy
@@ -476,7 +531,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolClient in cognitoidp to populate clientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdSelector
@@ -497,7 +554,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionClientIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupRefPolicy
@@ -510,7 +569,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserGroup in cognitoidp to populate userGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupRef
@@ -527,7 +588,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelectorPolicy
@@ -540,7 +603,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserGroup in cognitoidp to populate userGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelector
@@ -561,7 +626,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserGroupSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolRefPolicy
@@ -574,7 +641,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a UserPoolDomain in cognitoidp to populate userPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolRef
@@ -591,7 +660,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicy
@@ -604,7 +675,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a UserPoolDomain in cognitoidp to populate userPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelector
@@ -625,7 +698,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinition
@@ -666,7 +741,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("userPoolSelector")]
     public V1beta1WorkteamSpecInitProviderMemberDefinitionCognitoMemberDefinitionUserPoolSelector? UserPoolSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionOidcMemberDefinition
@@ -675,7 +752,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinitionOidcMemberDe
     [JsonPropertyName("groups")]
     public IList<string>? Groups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderMemberDefinition
@@ -688,7 +767,9 @@ public partial class V1beta1WorkteamSpecInitProviderMemberDefinition
     [JsonPropertyName("oidcMemberDefinition")]
     public V1beta1WorkteamSpecInitProviderMemberDefinitionOidcMemberDefinition? OidcMemberDefinition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderNotificationConfiguration
@@ -697,7 +778,9 @@ public partial class V1beta1WorkteamSpecInitProviderNotificationConfiguration
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
@@ -710,7 +793,9 @@ public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3P
     [JsonPropertyName("vpcSourceIp")]
     public string? VpcSourceIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3Presign
@@ -719,7 +804,9 @@ public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3P
     [JsonPropertyName("iamPolicyConstraints")]
     public V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfiguration
@@ -728,7 +815,9 @@ public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfiguration
     [JsonPropertyName("s3Presign")]
     public V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3Presign? S3Presign { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkforceNameRefPolicy
@@ -741,7 +830,9 @@ public partial class V1beta1WorkteamSpecInitProviderWorkforceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Workforce in sagemaker to populate workforceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkforceNameRef
@@ -758,7 +849,9 @@ public partial class V1beta1WorkteamSpecInitProviderWorkforceNameRef
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecInitProviderWorkforceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkforceNameSelectorPolicy
@@ -771,7 +864,9 @@ public partial class V1beta1WorkteamSpecInitProviderWorkforceNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Workforce in sagemaker to populate workforceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkforceNameSelector
@@ -792,7 +887,9 @@ public partial class V1beta1WorkteamSpecInitProviderWorkforceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1WorkteamSpecInitProviderWorkforceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProvider
@@ -829,7 +926,9 @@ public partial class V1beta1WorkteamSpecInitProvider
     [JsonPropertyName("workforceNameSelector")]
     public V1beta1WorkteamSpecInitProviderWorkforceNameSelector? WorkforceNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecProviderConfigRef
@@ -842,7 +941,9 @@ public partial class V1beta1WorkteamSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecWriteConnectionSecretToRef
@@ -851,7 +952,9 @@ public partial class V1beta1WorkteamSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkteamSpec defines the desired state of Workteam</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpec
@@ -876,7 +979,9 @@ public partial class V1beta1WorkteamSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WorkteamSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderMemberDefinitionCognitoMemberDefinition
@@ -893,7 +998,9 @@ public partial class V1beta1WorkteamStatusAtProviderMemberDefinitionCognitoMembe
     [JsonPropertyName("userPool")]
     public string? UserPool { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderMemberDefinitionOidcMemberDefinition
@@ -902,7 +1009,9 @@ public partial class V1beta1WorkteamStatusAtProviderMemberDefinitionOidcMemberDe
     [JsonPropertyName("groups")]
     public IList<string>? Groups { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderMemberDefinition
@@ -915,7 +1024,9 @@ public partial class V1beta1WorkteamStatusAtProviderMemberDefinition
     [JsonPropertyName("oidcMemberDefinition")]
     public V1beta1WorkteamStatusAtProviderMemberDefinitionOidcMemberDefinition? OidcMemberDefinition { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderNotificationConfiguration
@@ -924,7 +1035,9 @@ public partial class V1beta1WorkteamStatusAtProviderNotificationConfiguration
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
@@ -937,7 +1050,9 @@ public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3P
     [JsonPropertyName("vpcSourceIp")]
     public string? VpcSourceIp { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3Presign
@@ -946,7 +1061,9 @@ public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3P
     [JsonPropertyName("iamPolicyConstraints")]
     public V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfiguration
@@ -955,7 +1072,9 @@ public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfiguration
     [JsonPropertyName("s3Presign")]
     public V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3Presign? S3Presign { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProvider
@@ -1004,7 +1123,9 @@ public partial class V1beta1WorkteamStatusAtProvider
     [JsonPropertyName("workforceName")]
     public string? WorkforceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusConditions
@@ -1033,7 +1154,9 @@ public partial class V1beta1WorkteamStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WorkteamStatus defines the observed state of Workteam.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatus
@@ -1050,7 +1173,9 @@ public partial class V1beta1WorkteamStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Workteam is the Schema for the Workteams API. Provides a SageMaker AI Workteam resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1080,3 +1205,4 @@ public partial class V1beta1Workteam : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1WorkteamStatus? Status { get; set; }
 }
+#nullable disable

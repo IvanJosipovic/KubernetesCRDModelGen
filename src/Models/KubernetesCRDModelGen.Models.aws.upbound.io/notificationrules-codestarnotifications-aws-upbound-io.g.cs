@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codestarnotifications.aws.upbound.io;
+#nullable enable
 /// <summary>NotificationRule is the Schema for the NotificationRules API. Provides a CodeStar Notifications Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NotificationRuleList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1NotificationRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderResourceRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1NotificationRuleSpecForProviderResourceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Repository in codecommit to populate resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderResourceRef
@@ -59,7 +64,9 @@ public partial class V1beta1NotificationRuleSpecForProviderResourceRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecForProviderResourceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderResourceSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1NotificationRuleSpecForProviderResourceSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Repository in codecommit to populate resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderResourceSelector
@@ -89,7 +98,9 @@ public partial class V1beta1NotificationRuleSpecForProviderResourceSelector
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecForProviderResourceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderTargetAddressRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1NotificationRuleSpecForProviderTargetAddressRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderTargetAddressRef
@@ -115,7 +128,9 @@ public partial class V1beta1NotificationRuleSpecForProviderTargetAddressRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecForProviderTargetAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderTargetAddressSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1NotificationRuleSpecForProviderTargetAddressSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderTargetAddressSelector
@@ -145,7 +162,9 @@ public partial class V1beta1NotificationRuleSpecForProviderTargetAddressSelector
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecForProviderTargetAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProviderTarget
@@ -166,7 +185,9 @@ public partial class V1beta1NotificationRuleSpecForProviderTarget
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecForProvider
@@ -211,7 +232,9 @@ public partial class V1beta1NotificationRuleSpecForProvider
     [JsonPropertyName("target")]
     public IList<V1beta1NotificationRuleSpecForProviderTarget>? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderResourceRefPolicy
@@ -224,7 +247,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderResourceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Repository in codecommit to populate resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderResourceRef
@@ -237,7 +262,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderResourceRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecInitProviderResourceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderResourceSelectorPolicy
@@ -250,7 +277,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderResourceSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Repository in codecommit to populate resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderResourceSelector
@@ -267,7 +296,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderResourceSelector
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecInitProviderResourceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderTargetAddressRefPolicy
@@ -280,7 +311,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderTargetAddressRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Topic in sns to populate address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderTargetAddressRef
@@ -293,7 +326,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderTargetAddressRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecInitProviderTargetAddressRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderTargetAddressSelectorPolicy
@@ -306,7 +341,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderTargetAddressSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Topic in sns to populate address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderTargetAddressSelector
@@ -323,7 +360,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderTargetAddressSelecto
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecInitProviderTargetAddressSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProviderTarget
@@ -344,7 +383,9 @@ public partial class V1beta1NotificationRuleSpecInitProviderTarget
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecInitProvider
@@ -385,7 +426,9 @@ public partial class V1beta1NotificationRuleSpecInitProvider
     [JsonPropertyName("target")]
     public IList<V1beta1NotificationRuleSpecInitProviderTarget>? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecProviderConfigRefPolicy
@@ -398,7 +441,9 @@ public partial class V1beta1NotificationRuleSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecProviderConfigRef
@@ -411,7 +456,9 @@ public partial class V1beta1NotificationRuleSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1NotificationRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpecWriteConnectionSecretToRef
@@ -424,7 +471,9 @@ public partial class V1beta1NotificationRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationRuleSpec defines the desired state of NotificationRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleSpec
@@ -453,7 +502,9 @@ public partial class V1beta1NotificationRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1NotificationRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleStatusAtProviderTarget
@@ -470,7 +521,9 @@ public partial class V1beta1NotificationRuleStatusAtProviderTarget
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleStatusAtProvider
@@ -519,7 +572,9 @@ public partial class V1beta1NotificationRuleStatusAtProvider
     [JsonPropertyName("target")]
     public IList<V1beta1NotificationRuleStatusAtProviderTarget>? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleStatusConditions
@@ -548,7 +603,9 @@ public partial class V1beta1NotificationRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationRuleStatus defines the observed state of NotificationRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRuleStatus
@@ -565,7 +622,9 @@ public partial class V1beta1NotificationRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>NotificationRule is the Schema for the NotificationRules API. Provides a CodeStar Notifications Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -595,3 +654,4 @@ public partial class V1beta1NotificationRule : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1NotificationRuleStatus? Status { get; set; }
 }
+#nullable disable

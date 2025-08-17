@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+#nullable enable
 /// <summary>SnapshotCreateVolumePermission is the Schema for the SnapshotCreateVolumePermissions API. Adds create volume permission to an EBS Snapshot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1SnapshotCreateVolumePermission> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapshotIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapsho
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EBSSnapshot in ec2 to populate snapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapshotIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapsho
     [JsonPropertyName("policy")]
     public V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapshotIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapshotIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapsho
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EBSSnapshot in ec2 to populate snapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapshotIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapsho
     [JsonPropertyName("policy")]
     public V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapshotIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecForProvider
@@ -114,7 +125,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecForProvider
     [JsonPropertyName("snapshotIdSelector")]
     public V1beta1SnapshotCreateVolumePermissionSpecForProviderSnapshotIdSelector? SnapshotIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapshotIdRefPolicy
@@ -127,7 +140,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapsh
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a EBSSnapshot in ec2 to populate snapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapshotIdRef
@@ -140,7 +155,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapsh
     [JsonPropertyName("policy")]
     public V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapshotIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapshotIdSelectorPolicy
@@ -153,7 +170,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapsh
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a EBSSnapshot in ec2 to populate snapshotId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapshotIdSelector
@@ -170,7 +189,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapsh
     [JsonPropertyName("policy")]
     public V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapshotIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProvider
@@ -191,7 +212,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecInitProvider
     [JsonPropertyName("snapshotIdSelector")]
     public V1beta1SnapshotCreateVolumePermissionSpecInitProviderSnapshotIdSelector? SnapshotIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecProviderConfigRefPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecProviderConfigRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecProviderConfigRef
@@ -217,7 +242,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SnapshotCreateVolumePermissionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpecWriteConnectionSecretToRef
@@ -230,7 +257,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecWriteConnectionSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotCreateVolumePermissionSpec defines the desired state of SnapshotCreateVolumePermission</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionSpec
@@ -259,7 +288,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SnapshotCreateVolumePermissionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionStatusAtProvider
@@ -280,7 +311,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionStatusAtProvider
     [JsonPropertyName("snapshotId")]
     public string? SnapshotId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionStatusConditions
@@ -309,7 +342,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotCreateVolumePermissionStatus defines the observed state of SnapshotCreateVolumePermission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCreateVolumePermissionStatus
@@ -326,7 +361,9 @@ public partial class V1beta1SnapshotCreateVolumePermissionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SnapshotCreateVolumePermission is the Schema for the SnapshotCreateVolumePermissions API. Adds create volume permission to an EBS Snapshot</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -356,3 +393,4 @@ public partial class V1beta1SnapshotCreateVolumePermission : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1SnapshotCreateVolumePermissionStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.waf.aws.m.upbound.io;
+#nullable enable
 /// <summary>SQLInjectionMatchSet is the Schema for the SQLInjectionMatchSets API. Provides a AWS WAF SQL Injection Match Set resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SQLInjectionMatchSetList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1SQLInjectionMatchSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies where in a web request to look for snippets of malicious SQL code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpecForProviderSqlInjectionMatchTuplesFieldToMatch
@@ -46,7 +49,9 @@ public partial class V1beta1SQLInjectionMatchSetSpecForProviderSqlInjectionMatch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpecForProviderSqlInjectionMatchTuples
@@ -59,7 +64,9 @@ public partial class V1beta1SQLInjectionMatchSetSpecForProviderSqlInjectionMatch
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpecForProvider
@@ -72,7 +79,9 @@ public partial class V1beta1SQLInjectionMatchSetSpecForProvider
     [JsonPropertyName("sqlInjectionMatchTuples")]
     public IList<V1beta1SQLInjectionMatchSetSpecForProviderSqlInjectionMatchTuples>? SqlInjectionMatchTuples { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies where in a web request to look for snippets of malicious SQL code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpecInitProviderSqlInjectionMatchTuplesFieldToMatch
@@ -85,7 +94,9 @@ public partial class V1beta1SQLInjectionMatchSetSpecInitProviderSqlInjectionMatc
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpecInitProviderSqlInjectionMatchTuples
@@ -98,7 +109,9 @@ public partial class V1beta1SQLInjectionMatchSetSpecInitProviderSqlInjectionMatc
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpecInitProvider
@@ -111,7 +124,9 @@ public partial class V1beta1SQLInjectionMatchSetSpecInitProvider
     [JsonPropertyName("sqlInjectionMatchTuples")]
     public IList<V1beta1SQLInjectionMatchSetSpecInitProviderSqlInjectionMatchTuples>? SqlInjectionMatchTuples { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpecProviderConfigRef
@@ -124,7 +139,9 @@ public partial class V1beta1SQLInjectionMatchSetSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpecWriteConnectionSecretToRef
@@ -133,7 +150,9 @@ public partial class V1beta1SQLInjectionMatchSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLInjectionMatchSetSpec defines the desired state of SQLInjectionMatchSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetSpec
@@ -158,7 +177,9 @@ public partial class V1beta1SQLInjectionMatchSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SQLInjectionMatchSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies where in a web request to look for snippets of malicious SQL code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetStatusAtProviderSqlInjectionMatchTuplesFieldToMatch
@@ -171,7 +192,9 @@ public partial class V1beta1SQLInjectionMatchSetStatusAtProviderSqlInjectionMatc
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetStatusAtProviderSqlInjectionMatchTuples
@@ -184,7 +207,9 @@ public partial class V1beta1SQLInjectionMatchSetStatusAtProviderSqlInjectionMatc
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetStatusAtProvider
@@ -205,7 +230,9 @@ public partial class V1beta1SQLInjectionMatchSetStatusAtProvider
     [JsonPropertyName("sqlInjectionMatchTuples")]
     public IList<V1beta1SQLInjectionMatchSetStatusAtProviderSqlInjectionMatchTuples>? SqlInjectionMatchTuples { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetStatusConditions
@@ -234,7 +261,9 @@ public partial class V1beta1SQLInjectionMatchSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLInjectionMatchSetStatus defines the observed state of SQLInjectionMatchSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetStatus
@@ -251,7 +280,9 @@ public partial class V1beta1SQLInjectionMatchSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SQLInjectionMatchSet is the Schema for the SQLInjectionMatchSets API. Provides a AWS WAF SQL Injection Match Set resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -281,3 +312,4 @@ public partial class V1beta1SQLInjectionMatchSet : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1SQLInjectionMatchSetStatus? Status { get; set; }
 }
+#nullable disable

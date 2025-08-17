@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallPolicy Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-01-01/webapplicationfirewall.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/{policyName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyList : IKub
     [JsonPropertyName("items")]
     public IList<V1api20240101storageWebApplicationFirewallPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.GroupByVariable Define user session group by clause variables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomRulesGroupByUserSessionGroupByVariables
@@ -46,7 +49,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomR
     [JsonPropertyName("variableName")]
     public string? VariableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.GroupByUserSession Define user session identifier group by clauses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomRulesGroupByUserSession
@@ -59,7 +64,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomR
     [JsonPropertyName("groupByVariables")]
     public IList<V1api20240101storageWebApplicationFirewallPolicySpecCustomRulesGroupByUserSessionGroupByVariables>? GroupByVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.MatchVariable Define match variables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomRulesMatchConditionsMatchVariables
@@ -76,7 +83,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomR
     [JsonPropertyName("variableName")]
     public string? VariableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.MatchCondition Define match conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomRulesMatchConditions
@@ -105,7 +114,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomR
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallCustomRule Defines contents of a web application rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomRules
@@ -150,7 +161,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecCustomR
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ExclusionManagedRule Defines a managed rule to use for exclusion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesExclusionsExclusionManagedRuleSetsRuleGroupsRules
@@ -163,7 +176,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecManaged
     [JsonPropertyName("ruleId")]
     public string? RuleId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ExclusionManagedRuleGroup Defines a managed rule group to use for exclusion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesExclusionsExclusionManagedRuleSetsRuleGroups
@@ -180,7 +195,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecManaged
     [JsonPropertyName("rules")]
     public IList<V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesExclusionsExclusionManagedRuleSetsRuleGroupsRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ExclusionManagedRuleSet Defines a managed rule set for Exclusions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesExclusionsExclusionManagedRuleSets
@@ -201,7 +218,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecManaged
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.OwaspCrsExclusionEntry Allow to exclude some variable satisfy the condition for the WAF check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesExclusions
@@ -226,7 +245,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecManaged
     [JsonPropertyName("selectorMatchOperator")]
     public string? SelectorMatchOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ManagedRuleOverride Defines a managed rule group override setting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesRules
@@ -247,7 +268,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecManaged
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ManagedRuleGroupOverride Defines a managed rule group override setting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverrides
@@ -264,7 +287,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecManaged
     [JsonPropertyName("rules")]
     public IList<V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSetsRuleGroupOverridesRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ManagedRuleSet Defines a managed rule set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSets
@@ -285,7 +310,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecManaged
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ManagedRulesDefinition Allow to exclude some variable satisfy the condition for the WAF check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecManagedRules
@@ -302,7 +329,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecManaged
     [JsonPropertyName("managedRuleSets")]
     public IList<V1api20240101storageWebApplicationFirewallPolicySpecManagedRulesManagedRuleSets>? ManagedRuleSets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecOperatorSpecConfigMapExpressions
@@ -319,7 +348,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecOperato
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecOperatorSpecSecretExpressions
@@ -336,7 +367,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecOperato
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallPolicyOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecOperatorSpec
@@ -353,7 +386,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecOperato
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240101storageWebApplicationFirewallPolicySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecOwner
@@ -366,7 +401,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallScrubbingRules Allow certain variables to be scrubbed on WAF logs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecPolicySettingsLogScrubbingScrubbingRules
@@ -391,7 +428,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecPolicyS
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.PolicySettings_LogScrubbing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecPolicySettingsLogScrubbing
@@ -408,7 +447,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecPolicyS
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.PolicySettings Defines contents of a web application firewall global configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpecPolicySettings
@@ -465,7 +506,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpecPolicyS
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicySpec
@@ -510,7 +553,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicySpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ApplicationGateway_STATUS_ApplicationGatewayWebApplicationFirewallPolicy_SubResourceEmbedded Application gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusApplicationGateways
@@ -523,7 +568,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusAppli
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusConditions
@@ -556,7 +603,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCondi
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.GroupByVariable_STATUS Define user session group by clause variables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCustomRulesGroupByUserSessionGroupByVariables
@@ -569,7 +618,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCusto
     [JsonPropertyName("variableName")]
     public string? VariableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.GroupByUserSession_STATUS Define user session identifier group by clauses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCustomRulesGroupByUserSession
@@ -582,7 +633,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCusto
     [JsonPropertyName("groupByVariables")]
     public IList<V1api20240101storageWebApplicationFirewallPolicyStatusCustomRulesGroupByUserSessionGroupByVariables>? GroupByVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.MatchVariable_STATUS Define match variables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCustomRulesMatchConditionsMatchVariables
@@ -599,7 +652,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCusto
     [JsonPropertyName("variableName")]
     public string? VariableName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.MatchCondition_STATUS Define match conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCustomRulesMatchConditions
@@ -628,7 +683,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCusto
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallCustomRule_STATUS Defines contents of a web application rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCustomRules
@@ -677,7 +734,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusCusto
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusHttpListeners
@@ -690,7 +749,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusHttpL
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ExclusionManagedRule_STATUS Defines a managed rule to use for exclusion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesExclusionsExclusionManagedRuleSetsRuleGroupsRules
@@ -703,7 +764,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManag
     [JsonPropertyName("ruleId")]
     public string? RuleId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ExclusionManagedRuleGroup_STATUS Defines a managed rule group to use for exclusion.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesExclusionsExclusionManagedRuleSetsRuleGroups
@@ -720,7 +783,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManag
     [JsonPropertyName("rules")]
     public IList<V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesExclusionsExclusionManagedRuleSetsRuleGroupsRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ExclusionManagedRuleSet_STATUS Defines a managed rule set for Exclusions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesExclusionsExclusionManagedRuleSets
@@ -741,7 +806,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManag
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.OwaspCrsExclusionEntry_STATUS Allow to exclude some variable satisfy the condition for the WAF check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesExclusions
@@ -766,7 +833,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManag
     [JsonPropertyName("selectorMatchOperator")]
     public string? SelectorMatchOperator { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ManagedRuleOverride_STATUS Defines a managed rule group override setting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesRules
@@ -787,7 +856,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManag
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ManagedRuleGroupOverride_STATUS Defines a managed rule group override setting.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverrides
@@ -804,7 +875,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManag
     [JsonPropertyName("rules")]
     public IList<V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSetsRuleGroupOverridesRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ManagedRuleSet_STATUS Defines a managed rule set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSets
@@ -825,7 +898,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManag
     [JsonPropertyName("ruleSetVersion")]
     public string? RuleSetVersion { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.ManagedRulesDefinition_STATUS Allow to exclude some variable satisfy the condition for the WAF check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManagedRules
@@ -842,7 +917,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusManag
     [JsonPropertyName("managedRuleSets")]
     public IList<V1api20240101storageWebApplicationFirewallPolicyStatusManagedRulesManagedRuleSets>? ManagedRuleSets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusPathBasedRules
@@ -855,7 +932,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusPathB
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallScrubbingRules_STATUS Allow certain variables to be scrubbed on WAF logs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusPolicySettingsLogScrubbingScrubbingRules
@@ -880,7 +959,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusPolic
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.PolicySettings_LogScrubbing_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusPolicySettingsLogScrubbing
@@ -897,7 +978,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusPolic
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.PolicySettings_STATUS Defines contents of a web application firewall global configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatusPolicySettings
@@ -954,7 +1037,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatusPolic
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageWebApplicationFirewallPolicyStatus
@@ -1023,7 +1108,9 @@ public partial class V1api20240101storageWebApplicationFirewallPolicyStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240101.WebApplicationFirewallPolicy Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-01-01/webapplicationfirewall.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/{policyName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1053,3 +1140,4 @@ public partial class V1api20240101storageWebApplicationFirewallPolicy : IKuberne
     [JsonPropertyName("status")]
     public V1api20240101storageWebApplicationFirewallPolicyStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>ImageCatalog is the Schema for the imagecatalogs API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1ImageCatalogList : IKubernetesObject<V1ListMeta>, IItems<
     [JsonPropertyName("items")]
     public IList<V1ImageCatalog> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CatalogImage defines the image and major version</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ImageCatalogSpecImages
@@ -46,7 +49,9 @@ public partial class V1ImageCatalogSpecImages
     [JsonPropertyName("major")]
     public int Major { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the ImageCatalog. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ImageCatalogSpec
@@ -55,7 +60,9 @@ public partial class V1ImageCatalogSpec
     [JsonPropertyName("images")]
     public IList<V1ImageCatalogSpecImages> Images { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ImageCatalog is the Schema for the imagecatalogs API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -81,3 +88,4 @@ public partial class V1ImageCatalog : IKubernetesObject<V1ObjectMeta>, ISpec<V1I
     [JsonPropertyName("spec")]
     public V1ImageCatalogSpec Spec { get; set; }
 }
+#nullable disable

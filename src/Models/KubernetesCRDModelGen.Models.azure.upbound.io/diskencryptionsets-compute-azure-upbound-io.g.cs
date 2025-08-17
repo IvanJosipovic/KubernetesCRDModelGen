@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+#nullable enable
 /// <summary>DiskEncryptionSet is the Schema for the DiskEncryptionSets API. Manages a Disk Encryption Set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DiskEncryptionSetList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1DiskEncryptionSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderIdentity
@@ -46,7 +49,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in keyvault to populate keyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in keyvault to populate keyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdSelector
@@ -102,7 +113,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdSelecto
     [JsonPropertyName("policy")]
     public V1beta1DiskEncryptionSetSpecForProviderKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameRefPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameRef
@@ -128,7 +143,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameSelectorPolicy
@@ -141,7 +158,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameSelector
@@ -158,7 +177,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameSel
     [JsonPropertyName("policy")]
     public V1beta1DiskEncryptionSetSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecForProvider
@@ -215,7 +236,9 @@ public partial class V1beta1DiskEncryptionSetSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecInitProviderIdentity
@@ -228,7 +251,9 @@ public partial class V1beta1DiskEncryptionSetSpecInitProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdRefPolicy
@@ -241,7 +266,9 @@ public partial class V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Key in keyvault to populate keyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdRef
@@ -254,7 +281,9 @@ public partial class V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdRef
     [JsonPropertyName("policy")]
     public V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdSelectorPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Key in keyvault to populate keyVaultKeyId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdSelector
@@ -284,7 +315,9 @@ public partial class V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdSelect
     [JsonPropertyName("policy")]
     public V1beta1DiskEncryptionSetSpecInitProviderKeyVaultKeyIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecInitProvider
@@ -329,7 +362,9 @@ public partial class V1beta1DiskEncryptionSetSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecProviderConfigRefPolicy
@@ -342,7 +377,9 @@ public partial class V1beta1DiskEncryptionSetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecProviderConfigRef
@@ -355,7 +392,9 @@ public partial class V1beta1DiskEncryptionSetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DiskEncryptionSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpecWriteConnectionSecretToRef
@@ -368,7 +407,9 @@ public partial class V1beta1DiskEncryptionSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskEncryptionSetSpec defines the desired state of DiskEncryptionSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetSpec
@@ -397,7 +438,9 @@ public partial class V1beta1DiskEncryptionSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DiskEncryptionSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetStatusAtProviderIdentity
@@ -418,7 +461,9 @@ public partial class V1beta1DiskEncryptionSetStatusAtProviderIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetStatusAtProvider
@@ -467,7 +512,9 @@ public partial class V1beta1DiskEncryptionSetStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetStatusConditions
@@ -496,7 +543,9 @@ public partial class V1beta1DiskEncryptionSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskEncryptionSetStatus defines the observed state of DiskEncryptionSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskEncryptionSetStatus
@@ -513,7 +562,9 @@ public partial class V1beta1DiskEncryptionSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskEncryptionSet is the Schema for the DiskEncryptionSets API. Manages a Disk Encryption Set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -543,3 +594,4 @@ public partial class V1beta1DiskEncryptionSet : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1DiskEncryptionSetStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.transcribe.aws.upbound.io;
+#nullable enable
 /// <summary>LanguageModel is the Schema for the LanguageModels API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LanguageModelList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1beta1LanguageModel> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecForProviderInputDataConfigDataAccessRoleArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LanguageModelSpecForProviderInputDataConfigDataAcces
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate dataAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecForProviderInputDataConfigDataAccessRoleArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1LanguageModelSpecForProviderInputDataConfigDataAcces
     [JsonPropertyName("policy")]
     public V1beta1LanguageModelSpecForProviderInputDataConfigDataAccessRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecForProviderInputDataConfigDataAccessRoleArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1LanguageModelSpecForProviderInputDataConfigDataAcces
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate dataAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecForProviderInputDataConfigDataAccessRoleArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1LanguageModelSpecForProviderInputDataConfigDataAcces
     [JsonPropertyName("policy")]
     public V1beta1LanguageModelSpecForProviderInputDataConfigDataAccessRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecForProviderInputDataConfig
@@ -114,7 +125,9 @@ public partial class V1beta1LanguageModelSpecForProviderInputDataConfig
     [JsonPropertyName("tuningDataS3Uri")]
     public string? TuningDataS3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecForProvider
@@ -139,7 +152,9 @@ public partial class V1beta1LanguageModelSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecInitProviderInputDataConfigDataAccessRoleArnRefPolicy
@@ -152,7 +167,9 @@ public partial class V1beta1LanguageModelSpecInitProviderInputDataConfigDataAcce
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate dataAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecInitProviderInputDataConfigDataAccessRoleArnRef
@@ -165,7 +182,9 @@ public partial class V1beta1LanguageModelSpecInitProviderInputDataConfigDataAcce
     [JsonPropertyName("policy")]
     public V1beta1LanguageModelSpecInitProviderInputDataConfigDataAccessRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecInitProviderInputDataConfigDataAccessRoleArnSelectorPolicy
@@ -178,7 +197,9 @@ public partial class V1beta1LanguageModelSpecInitProviderInputDataConfigDataAcce
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate dataAccessRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecInitProviderInputDataConfigDataAccessRoleArnSelector
@@ -195,7 +216,9 @@ public partial class V1beta1LanguageModelSpecInitProviderInputDataConfigDataAcce
     [JsonPropertyName("policy")]
     public V1beta1LanguageModelSpecInitProviderInputDataConfigDataAccessRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecInitProviderInputDataConfig
@@ -220,7 +243,9 @@ public partial class V1beta1LanguageModelSpecInitProviderInputDataConfig
     [JsonPropertyName("tuningDataS3Uri")]
     public string? TuningDataS3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecInitProvider
@@ -241,7 +266,9 @@ public partial class V1beta1LanguageModelSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecProviderConfigRefPolicy
@@ -254,7 +281,9 @@ public partial class V1beta1LanguageModelSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecProviderConfigRef
@@ -267,7 +296,9 @@ public partial class V1beta1LanguageModelSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1LanguageModelSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpecWriteConnectionSecretToRef
@@ -280,7 +311,9 @@ public partial class V1beta1LanguageModelSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LanguageModelSpec defines the desired state of LanguageModel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelSpec
@@ -309,7 +342,9 @@ public partial class V1beta1LanguageModelSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LanguageModelSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelStatusAtProviderInputDataConfig
@@ -326,7 +361,9 @@ public partial class V1beta1LanguageModelStatusAtProviderInputDataConfig
     [JsonPropertyName("tuningDataS3Uri")]
     public string? TuningDataS3Uri { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelStatusAtProvider
@@ -363,7 +400,9 @@ public partial class V1beta1LanguageModelStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelStatusConditions
@@ -392,7 +431,9 @@ public partial class V1beta1LanguageModelStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LanguageModelStatus defines the observed state of LanguageModel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LanguageModelStatus
@@ -409,7 +450,9 @@ public partial class V1beta1LanguageModelStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LanguageModel is the Schema for the LanguageModels API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -439,3 +482,4 @@ public partial class V1beta1LanguageModel : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1LanguageModelStatus? Status { get; set; }
 }
+#nullable disable

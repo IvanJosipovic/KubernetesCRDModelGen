@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataprocBatch is the Schema for the DataprocBatch API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DataprocBatchList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1alpha1DataprocBatch> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The Cloud KMS key to use for encryption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfigKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfigKm
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Service account that used to execute workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfigServiceAccountRef
@@ -67,7 +72,9 @@ public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfigSe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. A Cloud Storage bucket used to stage workload dependencies, config files, and store workload output and other ephemeral data, such as Spark history files. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location according to the region where your workload is running, and then create and manage project-level, per-location staging and temporary buckets. **This field requires a Cloud Storage bucket name, not a `gs://...` URI to a Cloud Storage bucket.**</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfigStagingBucketRef
@@ -84,7 +91,9 @@ public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfigSt
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Execution configuration for a workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfig
@@ -121,7 +130,9 @@ public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfig
     [JsonPropertyName("ttl")]
     public string? Ttl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Resource name of an existing Dataproc Cluster to act as a Spark  History Server for the workload.   Example:   * `projects/[project_id]/regions/[region]/clusters/[cluster_name]`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfigSparkHistoryServerConfigDataprocClusterRef
@@ -138,7 +149,9 @@ public partial class V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfig
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The Spark History Server configuration for the workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig
@@ -147,7 +160,9 @@ public partial class V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfig
     [JsonPropertyName("dataprocClusterRef")]
     public V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfigSparkHistoryServerConfigDataprocClusterRef? DataprocClusterRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Peripherals configuration that workload has access to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfig
@@ -160,7 +175,9 @@ public partial class V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfig
     [JsonPropertyName("sparkHistoryServerConfig")]
     public V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfigSparkHistoryServerConfig? SparkHistoryServerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Environment configuration for the batch execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfig
@@ -173,7 +190,9 @@ public partial class V1alpha1DataprocBatchSpecEnvironmentConfig
     [JsonPropertyName("peripheralsConfig")]
     public V1alpha1DataprocBatchSpecEnvironmentConfigPeripheralsConfig? PeripheralsConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecProjectRef
@@ -194,7 +213,9 @@ public partial class V1alpha1DataprocBatchSpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. PySpark batch config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecPysparkBatch
@@ -223,7 +244,9 @@ public partial class V1alpha1DataprocBatchSpecPysparkBatch
     [JsonPropertyName("pythonFileURIs")]
     public IList<string>? PythonFileURIs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Autotuning configuration of the workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecRuntimeConfigAutotuningConfig
@@ -232,7 +255,9 @@ public partial class V1alpha1DataprocBatchSpecRuntimeConfigAutotuningConfig
     [JsonPropertyName("scenarios")]
     public IList<string>? Scenarios { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Configuration for PyPi repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecRuntimeConfigRepositoryConfigPypiRepositoryConfig
@@ -241,7 +266,9 @@ public partial class V1alpha1DataprocBatchSpecRuntimeConfigRepositoryConfigPypiR
     [JsonPropertyName("pypiRepository")]
     public string? PypiRepository { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Dependency repository configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecRuntimeConfigRepositoryConfig
@@ -250,7 +277,9 @@ public partial class V1alpha1DataprocBatchSpecRuntimeConfigRepositoryConfig
     [JsonPropertyName("pypiRepositoryConfig")]
     public V1alpha1DataprocBatchSpecRuntimeConfigRepositoryConfigPypiRepositoryConfig? PypiRepositoryConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Runtime configuration for the batch execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecRuntimeConfig
@@ -279,7 +308,9 @@ public partial class V1alpha1DataprocBatchSpecRuntimeConfig
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Spark batch config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecSparkBatch
@@ -308,7 +339,9 @@ public partial class V1alpha1DataprocBatchSpecSparkBatch
     [JsonPropertyName("mainJarFileURI")]
     public string? MainJarFileURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. SparkR batch config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecSparkRBatch
@@ -329,7 +362,9 @@ public partial class V1alpha1DataprocBatchSpecSparkRBatch
     [JsonPropertyName("mainRFileURI")]
     public string? MainRFileURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. SparkSql batch config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecSparkSQLBatch
@@ -346,7 +381,9 @@ public partial class V1alpha1DataprocBatchSpecSparkSQLBatch
     [JsonPropertyName("queryVariables")]
     public IDictionary<string, string>? QueryVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocBatchSpec defines the desired state of DataprocBatch</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpec
@@ -391,7 +428,9 @@ public partial class V1alpha1DataprocBatchSpec
     [JsonPropertyName("sparkSQLBatch")]
     public V1alpha1DataprocBatchSpecSparkSQLBatch? SparkSQLBatch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchStatusConditions
@@ -416,7 +455,9 @@ public partial class V1alpha1DataprocBatchStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Approximate workload resource usage, calculated when  the workload completes (see [Dataproc Serverless pricing]  (https://cloud.google.com/dataproc-serverless/pricing)).   **Note:** This metric calculation may change in the future, for  example, to capture cumulative workload resource  consumption during workload execution (see the  [Dataproc Serverless release notes]  (https://cloud.google.com/dataproc-serverless/docs/release-notes)  for announcements, changes, fixes  and other Dataproc developments).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchStatusObservedStateRuntimeInfoApproximateUsage
@@ -437,7 +478,9 @@ public partial class V1alpha1DataprocBatchStatusObservedStateRuntimeInfoApproxim
     [JsonPropertyName("shuffleStorageGBSeconds")]
     public long? ShuffleStorageGBSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Snapshot of current workload resource usage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchStatusObservedStateRuntimeInfoCurrentUsage
@@ -470,7 +513,9 @@ public partial class V1alpha1DataprocBatchStatusObservedStateRuntimeInfoCurrentU
     [JsonPropertyName("snapshotTime")]
     public string? SnapshotTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Runtime information about batch execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchStatusObservedStateRuntimeInfo
@@ -495,7 +540,9 @@ public partial class V1alpha1DataprocBatchStatusObservedStateRuntimeInfo
     [JsonPropertyName("outputURI")]
     public string? OutputURI { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchStatusObservedStateStateHistory
@@ -512,7 +559,9 @@ public partial class V1alpha1DataprocBatchStatusObservedStateStateHistory
     [JsonPropertyName("stateStartTime")]
     public string? StateStartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchStatusObservedState
@@ -553,7 +602,9 @@ public partial class V1alpha1DataprocBatchStatusObservedState
     [JsonPropertyName("uuid")]
     public string? Uuid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocBatchStatus defines the config connector machine state of DataprocBatch</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchStatus
@@ -574,7 +625,9 @@ public partial class V1alpha1DataprocBatchStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DataprocBatchStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataprocBatch is the Schema for the DataprocBatch API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -604,3 +657,4 @@ public partial class V1alpha1DataprocBatch : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1alpha1DataprocBatchStatus? Status { get; set; }
 }
+#nullable disable

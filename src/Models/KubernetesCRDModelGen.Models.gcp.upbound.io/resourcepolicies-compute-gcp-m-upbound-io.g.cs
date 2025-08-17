@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>ResourcePolicy is the Schema for the ResourcePolicys API. A policy that can be attached to a resource to specify or schedule actions on that resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourcePolicyList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1ResourcePolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replication consistency group for asynchronous disk replication. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderDiskConsistencyGroupPolicy
@@ -42,7 +45,9 @@ public partial class V1beta1ResourcePolicySpecForProviderDiskConsistencyGroupPol
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policy for instances used for placement configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderGroupPlacementPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1ResourcePolicySpecForProviderGroupPlacementPolicy
     [JsonPropertyName("vmCount")]
     public double? VmCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the schedule for starting instances. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyVmStartSchedule
@@ -72,7 +79,9 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyV
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the schedule for stopping instances. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyVmStopSchedule
@@ -81,7 +90,9 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyV
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policy for scheduling instance operations. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicy
@@ -106,7 +117,9 @@ public partial class V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicy
     [JsonPropertyName("vmStopSchedule")]
     public V1beta1ResourcePolicySpecForProviderInstanceSchedulePolicyVmStopSchedule? VmStopSchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Retention policy applied to snapshots created by this resource policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyRetentionPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyR
     [JsonPropertyName("onSourceDiskDelete")]
     public string? OnSourceDiskDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy will execute every nth day at the specified time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleDailySchedule
@@ -132,7 +147,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy will execute every nth hour starting at the specified time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleHourlySchedule
@@ -145,7 +162,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
@@ -158,7 +177,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows specifying a snapshot time for each day of the week. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklySchedule
@@ -167,7 +188,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("dayOfWeeks")]
     public IList<V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks>? DayOfWeeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains one of an hourlySchedule, dailySchedule, or weeklySchedule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicySchedule
@@ -184,7 +207,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("weeklySchedule")]
     public V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyScheduleWeeklySchedule? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties with which the snapshots are created, such as labels. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicySnapshotProperties
@@ -205,7 +230,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicyS
     [JsonPropertyName("storageLocations")]
     public IList<string>? StorageLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy for creating snapshots of persistent disks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicy
@@ -222,7 +249,9 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicy
     [JsonPropertyName("snapshotProperties")]
     public V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicySnapshotProperties? SnapshotProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the workload policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProviderWorkloadPolicy
@@ -239,7 +268,9 @@ public partial class V1beta1ResourcePolicySpecForProviderWorkloadPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProvider
@@ -276,7 +307,9 @@ public partial class V1beta1ResourcePolicySpecForProvider
     [JsonPropertyName("workloadPolicy")]
     public V1beta1ResourcePolicySpecForProviderWorkloadPolicy? WorkloadPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replication consistency group for asynchronous disk replication. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderDiskConsistencyGroupPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderDiskConsistencyGroupPo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policy for instances used for placement configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderGroupPlacementPolicy
@@ -306,7 +341,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderGroupPlacementPolicy
     [JsonPropertyName("vmCount")]
     public double? VmCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the schedule for starting instances. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicyVmStartSchedule
@@ -315,7 +352,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the schedule for stopping instances. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicyVmStopSchedule
@@ -324,7 +363,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policy for scheduling instance operations. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
@@ -349,7 +390,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicy
     [JsonPropertyName("vmStopSchedule")]
     public V1beta1ResourcePolicySpecInitProviderInstanceSchedulePolicyVmStopSchedule? VmStopSchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Retention policy applied to snapshots created by this resource policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyRetentionPolicy
@@ -362,7 +405,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("onSourceDiskDelete")]
     public string? OnSourceDiskDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy will execute every nth day at the specified time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleDailySchedule
@@ -375,7 +420,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy will execute every nth hour starting at the specified time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleHourlySchedule
@@ -388,7 +435,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
@@ -401,7 +450,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows specifying a snapshot time for each day of the week. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklySchedule
@@ -410,7 +461,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("dayOfWeeks")]
     public IList<V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks>? DayOfWeeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains one of an hourlySchedule, dailySchedule, or weeklySchedule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySchedule
@@ -427,7 +480,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("weeklySchedule")]
     public V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicyScheduleWeeklySchedule? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties with which the snapshots are created, such as labels. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySnapshotProperties
@@ -448,7 +503,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("storageLocations")]
     public IList<string>? StorageLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy for creating snapshots of persistent disks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
@@ -465,7 +522,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     [JsonPropertyName("snapshotProperties")]
     public V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySnapshotProperties? SnapshotProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the workload policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProviderWorkloadPolicy
@@ -482,7 +541,9 @@ public partial class V1beta1ResourcePolicySpecInitProviderWorkloadPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProvider
@@ -515,7 +576,9 @@ public partial class V1beta1ResourcePolicySpecInitProvider
     [JsonPropertyName("workloadPolicy")]
     public V1beta1ResourcePolicySpecInitProviderWorkloadPolicy? WorkloadPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecProviderConfigRef
@@ -528,7 +591,9 @@ public partial class V1beta1ResourcePolicySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecWriteConnectionSecretToRef
@@ -537,7 +602,9 @@ public partial class V1beta1ResourcePolicySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourcePolicySpec defines the desired state of ResourcePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpec
@@ -562,7 +629,9 @@ public partial class V1beta1ResourcePolicySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourcePolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Replication consistency group for asynchronous disk replication. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderDiskConsistencyGroupPolicy
@@ -571,7 +640,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderDiskConsistencyGroupPo
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policy for instances used for placement configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderGroupPlacementPolicy
@@ -592,7 +663,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderGroupPlacementPolicy
     [JsonPropertyName("vmCount")]
     public double? VmCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the schedule for starting instances. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicyVmStartSchedule
@@ -601,7 +674,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the schedule for stopping instances. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicyVmStopSchedule
@@ -610,7 +685,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Resource policy for scheduling instance operations. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
@@ -635,7 +712,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicy
     [JsonPropertyName("vmStopSchedule")]
     public V1beta1ResourcePolicyStatusAtProviderInstanceSchedulePolicyVmStopSchedule? VmStopSchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Retention policy applied to snapshots created by this resource policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyRetentionPolicy
@@ -648,7 +727,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("onSourceDiskDelete")]
     public string? OnSourceDiskDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy will execute every nth day at the specified time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleDailySchedule
@@ -661,7 +742,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The policy will execute every nth hour starting at the specified time. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleHourlySchedule
@@ -674,7 +757,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
@@ -687,7 +772,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Allows specifying a snapshot time for each day of the week. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklySchedule
@@ -696,7 +783,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("dayOfWeeks")]
     public IList<V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks>? DayOfWeeks { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Contains one of an hourlySchedule, dailySchedule, or weeklySchedule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicySchedule
@@ -713,7 +802,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("weeklySchedule")]
     public V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicyScheduleWeeklySchedule? WeeklySchedule { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Properties with which the snapshots are created, such as labels. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicySnapshotProperties
@@ -734,7 +825,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("storageLocations")]
     public IList<string>? StorageLocations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policy for creating snapshots of persistent disks. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
@@ -751,7 +844,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
     [JsonPropertyName("snapshotProperties")]
     public V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicySnapshotProperties? SnapshotProperties { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents the workload policy. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProviderWorkloadPolicy
@@ -768,7 +863,9 @@ public partial class V1beta1ResourcePolicyStatusAtProviderWorkloadPolicy
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProvider
@@ -813,7 +910,9 @@ public partial class V1beta1ResourcePolicyStatusAtProvider
     [JsonPropertyName("workloadPolicy")]
     public V1beta1ResourcePolicyStatusAtProviderWorkloadPolicy? WorkloadPolicy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusConditions
@@ -842,7 +941,9 @@ public partial class V1beta1ResourcePolicyStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourcePolicyStatus defines the observed state of ResourcePolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatus
@@ -859,7 +960,9 @@ public partial class V1beta1ResourcePolicyStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourcePolicy is the Schema for the ResourcePolicys API. A policy that can be attached to a resource to specify or schedule actions on that resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -889,3 +992,4 @@ public partial class V1beta1ResourcePolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1ResourcePolicyStatus? Status { get; set; }
 }
+#nullable disable

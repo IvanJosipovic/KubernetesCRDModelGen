@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.m.upbound.io;
+#nullable enable
 /// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Manages a Network Manager Customer Gateway Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1CustomerGatewayAssociationList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1beta1CustomerGatewayAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomerGateway in ec2 to populate customerGatewayArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGat
     [JsonPropertyName("policy")]
     public V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGat
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomerGateway in ec2 to populate customerGatewayArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGat
     [JsonPropertyName("policy")]
     public V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Device in networkmanager to populate deviceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRef
     [JsonPropertyName("policy")]
     public V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Device in networkmanager to populate deviceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSel
     [JsonPropertyName("policy")]
     public V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdRefPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdRef
@@ -191,7 +212,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetwo
     [JsonPropertyName("policy")]
     public V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetwo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelector
@@ -225,7 +250,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetwo
     [JsonPropertyName("policy")]
     public V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProvider
@@ -270,7 +297,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProvider
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRefPolicy
@@ -283,7 +312,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Device in networkmanager to populate deviceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRef
@@ -300,7 +331,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRe
     [JsonPropertyName("policy")]
     public V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelectorPolicy
@@ -313,7 +346,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Device in networkmanager to populate deviceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelector
@@ -334,7 +369,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSe
     [JsonPropertyName("policy")]
     public V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecInitProvider
@@ -355,7 +392,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProvider
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecProviderConfigRef
@@ -368,7 +407,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecWriteConnectionSecretToRef
@@ -377,7 +418,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecWriteConnectionSecretT
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomerGatewayAssociationSpec defines the desired state of CustomerGatewayAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpec
@@ -402,7 +445,9 @@ public partial class V1beta1CustomerGatewayAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1CustomerGatewayAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationStatusAtProvider
@@ -427,7 +472,9 @@ public partial class V1beta1CustomerGatewayAssociationStatusAtProvider
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationStatusConditions
@@ -456,7 +503,9 @@ public partial class V1beta1CustomerGatewayAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomerGatewayAssociationStatus defines the observed state of CustomerGatewayAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationStatus
@@ -473,7 +522,9 @@ public partial class V1beta1CustomerGatewayAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Manages a Network Manager Customer Gateway Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -503,3 +554,4 @@ public partial class V1beta1CustomerGatewayAssociation : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1CustomerGatewayAssociationStatus? Status { get; set; }
 }
+#nullable disable

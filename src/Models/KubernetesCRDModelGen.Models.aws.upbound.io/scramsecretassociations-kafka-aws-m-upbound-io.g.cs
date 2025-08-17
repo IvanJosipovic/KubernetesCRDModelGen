@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kafka.aws.m.upbound.io;
+#nullable enable
 /// <summary>ScramSecretAssociation is the Schema for the ScramSecretAssociations API. Associates SCRAM secrets with a Managed Streaming for Kafka (MSK) cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ScramSecretAssociationList : IKubernetesObject<V1Lis
     [JsonPropertyName("items")]
     public IList<V1beta1ScramSecretAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kafka to populate clusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnRef
     [JsonPropertyName("policy")]
     public V1beta1ScramSecretAssociationSpecForProviderClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kafka to populate clusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ScramSecretAssociationSpecForProviderClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderSecretArnRefsPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProviderSecretArnRefsPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderSecretArnRefs
@@ -127,7 +140,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProviderSecretArnRefs
     [JsonPropertyName("policy")]
     public V1beta1ScramSecretAssociationSpecForProviderSecretArnRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderSecretArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProviderSecretArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Secret in secretsmanager to populate secretArnList.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderSecretArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProviderSecretArnSelect
     [JsonPropertyName("policy")]
     public V1beta1ScramSecretAssociationSpecForProviderSecretArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProvider
@@ -194,7 +213,9 @@ public partial class V1beta1ScramSecretAssociationSpecForProvider
     [JsonPropertyName("secretArnSelector")]
     public V1beta1ScramSecretAssociationSpecForProviderSecretArnSelector? SecretArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProviderClusterArnRefPolicy
@@ -207,7 +228,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProviderClusterArnRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Cluster in kafka to populate clusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProviderClusterArnRef
@@ -224,7 +247,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProviderClusterArnRef
     [JsonPropertyName("policy")]
     public V1beta1ScramSecretAssociationSpecInitProviderClusterArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProviderClusterArnSelectorPolicy
@@ -237,7 +262,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProviderClusterArnSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Cluster in kafka to populate clusterArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProviderClusterArnSelector
@@ -258,7 +285,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProviderClusterArnSele
     [JsonPropertyName("policy")]
     public V1beta1ScramSecretAssociationSpecInitProviderClusterArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProviderSecretArnRefsPolicy
@@ -271,7 +300,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProviderSecretArnRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProviderSecretArnRefs
@@ -288,7 +319,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProviderSecretArnRefs
     [JsonPropertyName("policy")]
     public V1beta1ScramSecretAssociationSpecInitProviderSecretArnRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProviderSecretArnSelectorPolicy
@@ -301,7 +334,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProviderSecretArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Secret in secretsmanager to populate secretArnList.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProviderSecretArnSelector
@@ -322,7 +357,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProviderSecretArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ScramSecretAssociationSpecInitProviderSecretArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecInitProvider
@@ -351,7 +388,9 @@ public partial class V1beta1ScramSecretAssociationSpecInitProvider
     [JsonPropertyName("secretArnSelector")]
     public V1beta1ScramSecretAssociationSpecInitProviderSecretArnSelector? SecretArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecProviderConfigRef
@@ -364,7 +403,9 @@ public partial class V1beta1ScramSecretAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecWriteConnectionSecretToRef
@@ -373,7 +414,9 @@ public partial class V1beta1ScramSecretAssociationSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScramSecretAssociationSpec defines the desired state of ScramSecretAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpec
@@ -398,7 +441,9 @@ public partial class V1beta1ScramSecretAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ScramSecretAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationStatusAtProvider
@@ -419,7 +464,9 @@ public partial class V1beta1ScramSecretAssociationStatusAtProvider
     [JsonPropertyName("secretArnList")]
     public IList<string>? SecretArnList { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationStatusConditions
@@ -448,7 +495,9 @@ public partial class V1beta1ScramSecretAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScramSecretAssociationStatus defines the observed state of ScramSecretAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationStatus
@@ -465,7 +514,9 @@ public partial class V1beta1ScramSecretAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ScramSecretAssociation is the Schema for the ScramSecretAssociations API. Associates SCRAM secrets with a Managed Streaming for Kafka (MSK) cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -495,3 +546,4 @@ public partial class V1beta1ScramSecretAssociation : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1ScramSecretAssociationStatus? Status { get; set; }
 }
+#nullable disable

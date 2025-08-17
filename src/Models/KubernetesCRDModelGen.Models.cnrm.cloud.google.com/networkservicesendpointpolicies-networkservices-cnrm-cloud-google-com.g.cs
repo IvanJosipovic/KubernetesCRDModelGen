@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1NetworkServicesEndpointPolicyList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1beta1NetworkServicesEndpointPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpecAuthorizationPolicyRef
@@ -50,7 +53,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpecAuthorizationPolicy
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpecClientTlsPolicyRef
@@ -67,7 +72,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpecClientTlsPolicyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpecEndpointMatcherMetadataLabelMatcherMetadataLabels
@@ -80,7 +87,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpecEndpointMatcherMeta
     [JsonPropertyName("labelValue")]
     public string LabelValue { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The matcher is based on node metadata presented by xDS clients.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpecEndpointMatcherMetadataLabelMatcher
@@ -93,7 +102,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpecEndpointMatcherMeta
     [JsonPropertyName("metadataLabels")]
     public IList<V1beta1NetworkServicesEndpointPolicySpecEndpointMatcherMetadataLabelMatcherMetadataLabels>? MetadataLabels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. A matcher that selects endpoints to which the policies should be applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpecEndpointMatcher
@@ -102,7 +113,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpecEndpointMatcher
     [JsonPropertyName("metadataLabelMatcher")]
     public V1beta1NetworkServicesEndpointPolicySpecEndpointMatcherMetadataLabelMatcher? MetadataLabelMatcher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpecProjectRef
@@ -119,7 +132,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpecServerTlsPolicyRef
@@ -136,7 +151,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpecServerTlsPolicyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Port selector for the (matched) endpoints. If no port selector is provided, the matched config is applied to all ports.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpecTrafficPortSelector
@@ -145,7 +162,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpecTrafficPortSelector
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicySpec
@@ -190,7 +209,9 @@ public partial class V1beta1NetworkServicesEndpointPolicySpec
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicyStatusConditions
@@ -215,7 +236,9 @@ public partial class V1beta1NetworkServicesEndpointPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesEndpointPolicyStatus
@@ -236,7 +259,9 @@ public partial class V1beta1NetworkServicesEndpointPolicyStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -266,3 +291,4 @@ public partial class V1beta1NetworkServicesEndpointPolicy : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1NetworkServicesEndpointPolicyStatus? Status { get; set; }
 }
+#nullable disable

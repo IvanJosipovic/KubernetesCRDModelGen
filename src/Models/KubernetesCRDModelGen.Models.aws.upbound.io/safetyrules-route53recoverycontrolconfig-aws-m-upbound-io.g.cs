@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53recoverycontrolconfig.aws.m.upbound.io;
+#nullable enable
 /// <summary>SafetyRule is the Schema for the SafetyRules API. Provides an AWS Route 53 Recovery Control Config Safety Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SafetyRuleList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1SafetyRule> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsRefs
@@ -63,7 +68,9 @@ public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsRefs
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecForProviderAssertedControlsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of RoutingControl in route53recoverycontrolconfig to populate assertedControls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SafetyRuleSpecForProviderAssertedControlsSelector
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecForProviderAssertedControlsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnRef
@@ -127,7 +140,9 @@ public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnRef
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecForProviderControlPanelArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnSelector
@@ -161,7 +178,9 @@ public partial class V1beta1SafetyRuleSpecForProviderControlPanelArnSelector
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecForProviderControlPanelArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderGatingControlsRefsPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1SafetyRuleSpecForProviderGatingControlsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderGatingControlsRefs
@@ -191,7 +212,9 @@ public partial class V1beta1SafetyRuleSpecForProviderGatingControlsRefs
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecForProviderGatingControlsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderGatingControlsSelectorPolicy
@@ -204,7 +227,9 @@ public partial class V1beta1SafetyRuleSpecForProviderGatingControlsSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of RoutingControl in route53recoverycontrolconfig to populate gatingControls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderGatingControlsSelector
@@ -225,7 +250,9 @@ public partial class V1beta1SafetyRuleSpecForProviderGatingControlsSelector
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecForProviderGatingControlsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for safety rule criteria. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderRuleConfig
@@ -242,7 +269,9 @@ public partial class V1beta1SafetyRuleSpecForProviderRuleConfig
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderTargetControlsRefsPolicy
@@ -255,7 +284,9 @@ public partial class V1beta1SafetyRuleSpecForProviderTargetControlsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderTargetControlsRefs
@@ -272,7 +303,9 @@ public partial class V1beta1SafetyRuleSpecForProviderTargetControlsRefs
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecForProviderTargetControlsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderTargetControlsSelectorPolicy
@@ -285,7 +318,9 @@ public partial class V1beta1SafetyRuleSpecForProviderTargetControlsSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of RoutingControl in route53recoverycontrolconfig to populate targetControls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProviderTargetControlsSelector
@@ -306,7 +341,9 @@ public partial class V1beta1SafetyRuleSpecForProviderTargetControlsSelector
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecForProviderTargetControlsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecForProvider
@@ -371,7 +408,9 @@ public partial class V1beta1SafetyRuleSpecForProvider
     [JsonPropertyName("waitPeriodMs")]
     public double? WaitPeriodMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsRefsPolicy
@@ -384,7 +423,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsRefs
@@ -401,7 +442,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsRefs
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecInitProviderAssertedControlsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsSelectorPolicy
@@ -414,7 +457,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of RoutingControl in route53recoverycontrolconfig to populate assertedControls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsSelector
@@ -435,7 +480,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderAssertedControlsSelector
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecInitProviderAssertedControlsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnRefPolicy
@@ -448,7 +495,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnRef
@@ -465,7 +514,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnRef
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecInitProviderControlPanelArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnSelectorPolicy
@@ -478,7 +529,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ControlPanel in route53recoverycontrolconfig to populate controlPanelArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnSelector
@@ -499,7 +552,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderControlPanelArnSelector
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecInitProviderControlPanelArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderGatingControlsRefsPolicy
@@ -512,7 +567,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderGatingControlsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderGatingControlsRefs
@@ -529,7 +586,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderGatingControlsRefs
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecInitProviderGatingControlsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderGatingControlsSelectorPolicy
@@ -542,7 +601,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderGatingControlsSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of RoutingControl in route53recoverycontrolconfig to populate gatingControls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderGatingControlsSelector
@@ -563,7 +624,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderGatingControlsSelector
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecInitProviderGatingControlsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for safety rule criteria. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderRuleConfig
@@ -580,7 +643,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderRuleConfig
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderTargetControlsRefsPolicy
@@ -593,7 +658,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderTargetControlsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderTargetControlsRefs
@@ -610,7 +677,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderTargetControlsRefs
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecInitProviderTargetControlsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderTargetControlsSelectorPolicy
@@ -623,7 +692,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderTargetControlsSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of RoutingControl in route53recoverycontrolconfig to populate targetControls.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProviderTargetControlsSelector
@@ -644,7 +715,9 @@ public partial class V1beta1SafetyRuleSpecInitProviderTargetControlsSelector
     [JsonPropertyName("policy")]
     public V1beta1SafetyRuleSpecInitProviderTargetControlsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecInitProvider
@@ -709,7 +782,9 @@ public partial class V1beta1SafetyRuleSpecInitProvider
     [JsonPropertyName("waitPeriodMs")]
     public double? WaitPeriodMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecProviderConfigRef
@@ -722,7 +797,9 @@ public partial class V1beta1SafetyRuleSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpecWriteConnectionSecretToRef
@@ -731,7 +808,9 @@ public partial class V1beta1SafetyRuleSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SafetyRuleSpec defines the desired state of SafetyRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleSpec
@@ -756,7 +835,9 @@ public partial class V1beta1SafetyRuleSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SafetyRuleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration block for safety rule criteria. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleStatusAtProviderRuleConfig
@@ -773,7 +854,9 @@ public partial class V1beta1SafetyRuleStatusAtProviderRuleConfig
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleStatusAtProvider
@@ -818,7 +901,9 @@ public partial class V1beta1SafetyRuleStatusAtProvider
     [JsonPropertyName("waitPeriodMs")]
     public double? WaitPeriodMs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleStatusConditions
@@ -847,7 +932,9 @@ public partial class V1beta1SafetyRuleStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SafetyRuleStatus defines the observed state of SafetyRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SafetyRuleStatus
@@ -864,7 +951,9 @@ public partial class V1beta1SafetyRuleStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SafetyRule is the Schema for the SafetyRules API. Provides an AWS Route 53 Recovery Control Config Safety Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -894,3 +983,4 @@ public partial class V1beta1SafetyRule : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1SafetyRuleStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
+#nullable enable
 /// <summary>DiskAttachment is the Schema for the DiskAttachments API. Manages the attachment of a Lightsail disk to an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DiskAttachmentList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1DiskAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProviderDiskNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DiskAttachmentSpecForProviderDiskNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Disk in lightsail to populate diskName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProviderDiskNameRef
@@ -59,7 +64,9 @@ public partial class V1beta1DiskAttachmentSpecForProviderDiskNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecForProviderDiskNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProviderDiskNameSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DiskAttachmentSpecForProviderDiskNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Disk in lightsail to populate diskName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProviderDiskNameSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DiskAttachmentSpecForProviderDiskNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecForProviderDiskNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecForProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecForProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProvider
@@ -182,7 +201,9 @@ public partial class V1beta1DiskAttachmentSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProviderDiskNameRefPolicy
@@ -195,7 +216,9 @@ public partial class V1beta1DiskAttachmentSpecInitProviderDiskNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Disk in lightsail to populate diskName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProviderDiskNameRef
@@ -208,7 +231,9 @@ public partial class V1beta1DiskAttachmentSpecInitProviderDiskNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecInitProviderDiskNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProviderDiskNameSelectorPolicy
@@ -221,7 +246,9 @@ public partial class V1beta1DiskAttachmentSpecInitProviderDiskNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Disk in lightsail to populate diskName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProviderDiskNameSelector
@@ -238,7 +265,9 @@ public partial class V1beta1DiskAttachmentSpecInitProviderDiskNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecInitProviderDiskNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameRef
@@ -264,7 +295,9 @@ public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameRef
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecInitProviderInstanceNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameSelectorPolicy
@@ -277,7 +310,9 @@ public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Instance in lightsail to populate instanceName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameSelector
@@ -294,7 +329,9 @@ public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameSelector
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecInitProviderInstanceNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProvider
@@ -327,7 +364,9 @@ public partial class V1beta1DiskAttachmentSpecInitProvider
     [JsonPropertyName("instanceNameSelector")]
     public V1beta1DiskAttachmentSpecInitProviderInstanceNameSelector? InstanceNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecProviderConfigRefPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1DiskAttachmentSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecProviderConfigRef
@@ -353,7 +394,9 @@ public partial class V1beta1DiskAttachmentSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DiskAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecWriteConnectionSecretToRef
@@ -366,7 +409,9 @@ public partial class V1beta1DiskAttachmentSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskAttachmentSpec defines the desired state of DiskAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpec
@@ -395,7 +440,9 @@ public partial class V1beta1DiskAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DiskAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentStatusAtProvider
@@ -420,7 +467,9 @@ public partial class V1beta1DiskAttachmentStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentStatusConditions
@@ -449,7 +498,9 @@ public partial class V1beta1DiskAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskAttachmentStatus defines the observed state of DiskAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentStatus
@@ -466,7 +517,9 @@ public partial class V1beta1DiskAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DiskAttachment is the Schema for the DiskAttachments API. Manages the attachment of a Lightsail disk to an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -496,3 +549,4 @@ public partial class V1beta1DiskAttachment : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1DiskAttachmentStatus? Status { get; set; }
 }
+#nullable disable

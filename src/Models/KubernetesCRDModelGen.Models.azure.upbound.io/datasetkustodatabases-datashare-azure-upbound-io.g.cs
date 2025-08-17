@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datashare.azure.upbound.io;
+#nullable enable
 /// <summary>DataSetKustoDatabase is the Schema for the DataSetKustoDatabases API. Manages a Data Share Kusto Database Dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataSetKustoDatabaseList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1beta1DataSetKustoDatabase> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate kustoDatabaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRe
     [JsonPropertyName("policy")]
     public V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate kustoDatabaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSe
     [JsonPropertyName("policy")]
     public V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a DataShare in datashare to populate shareId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdRef
@@ -115,7 +128,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetKustoDatabaseSpecForProviderShareIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelectorPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a DataShare in datashare to populate shareId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelector
@@ -145,7 +162,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelector
     [JsonPropertyName("policy")]
     public V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProvider
@@ -174,7 +193,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProvider
     [JsonPropertyName("shareIdSelector")]
     public V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelector? ShareIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Database in kusto to populate kustoDatabaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdRef
@@ -200,7 +223,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdR
     [JsonPropertyName("policy")]
     public V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdSelectorPolicy
@@ -213,7 +238,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Database in kusto to populate kustoDatabaseId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdSelector
@@ -230,7 +257,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdS
     [JsonPropertyName("policy")]
     public V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecInitProvider
@@ -247,7 +276,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecInitProvider
     [JsonPropertyName("kustoDatabaseIdSelector")]
     public V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdSelector? KustoDatabaseIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecProviderConfigRefPolicy
@@ -260,7 +291,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecProviderConfigRef
@@ -273,7 +306,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1DataSetKustoDatabaseSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecWriteConnectionSecretToRef
@@ -286,7 +321,9 @@ public partial class V1beta1DataSetKustoDatabaseSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetKustoDatabaseSpec defines the desired state of DataSetKustoDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpec
@@ -315,7 +352,9 @@ public partial class V1beta1DataSetKustoDatabaseSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DataSetKustoDatabaseSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseStatusAtProvider
@@ -340,7 +379,9 @@ public partial class V1beta1DataSetKustoDatabaseStatusAtProvider
     [JsonPropertyName("shareId")]
     public string? ShareId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseStatusConditions
@@ -369,7 +410,9 @@ public partial class V1beta1DataSetKustoDatabaseStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetKustoDatabaseStatus defines the observed state of DataSetKustoDatabase.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseStatus
@@ -386,7 +429,9 @@ public partial class V1beta1DataSetKustoDatabaseStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataSetKustoDatabase is the Schema for the DataSetKustoDatabases API. Manages a Data Share Kusto Database Dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -416,3 +461,4 @@ public partial class V1beta1DataSetKustoDatabase : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1DataSetKustoDatabaseStatus? Status { get; set; }
 }
+#nullable disable

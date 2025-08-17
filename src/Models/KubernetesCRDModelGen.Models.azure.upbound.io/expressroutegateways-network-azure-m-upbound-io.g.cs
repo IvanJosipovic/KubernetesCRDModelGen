@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+#nullable enable
 /// <summary>ExpressRouteGateway is the Schema for the ExpressRouteGateways API. Manages an ExpressRoute gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ExpressRouteGatewayList : IKubernetesObject<V1ListMe
     [JsonPropertyName("items")]
     public IList<V1beta1ExpressRouteGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameR
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameS
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteGatewaySpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdRef
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdSelect
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecForProvider
@@ -206,7 +225,9 @@ public partial class V1beta1ExpressRouteGatewaySpecForProvider
     [JsonPropertyName("virtualHubIdSelector")]
     public V1beta1ExpressRouteGatewaySpecForProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdRefPolicy
@@ -219,7 +240,9 @@ public partial class V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdRef
@@ -236,7 +259,9 @@ public partial class V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdRef
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdSelectorPolicy
@@ -249,7 +274,9 @@ public partial class V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualHub in network to populate virtualHubId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdSelector
@@ -270,7 +297,9 @@ public partial class V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdSelec
     [JsonPropertyName("policy")]
     public V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecInitProvider
@@ -303,7 +332,9 @@ public partial class V1beta1ExpressRouteGatewaySpecInitProvider
     [JsonPropertyName("virtualHubIdSelector")]
     public V1beta1ExpressRouteGatewaySpecInitProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecProviderConfigRef
@@ -316,7 +347,9 @@ public partial class V1beta1ExpressRouteGatewaySpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpecWriteConnectionSecretToRef
@@ -325,7 +358,9 @@ public partial class V1beta1ExpressRouteGatewaySpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteGatewaySpec defines the desired state of ExpressRouteGateway</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewaySpec
@@ -350,7 +385,9 @@ public partial class V1beta1ExpressRouteGatewaySpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ExpressRouteGatewaySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewayStatusAtProvider
@@ -383,7 +420,9 @@ public partial class V1beta1ExpressRouteGatewayStatusAtProvider
     [JsonPropertyName("virtualHubId")]
     public string? VirtualHubId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewayStatusConditions
@@ -412,7 +451,9 @@ public partial class V1beta1ExpressRouteGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteGatewayStatus defines the observed state of ExpressRouteGateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteGatewayStatus
@@ -429,7 +470,9 @@ public partial class V1beta1ExpressRouteGatewayStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExpressRouteGateway is the Schema for the ExpressRouteGateways API. Manages an ExpressRoute gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -459,3 +502,4 @@ public partial class V1beta1ExpressRouteGateway : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ExpressRouteGatewayStatus? Status { get; set; }
 }
+#nullable disable

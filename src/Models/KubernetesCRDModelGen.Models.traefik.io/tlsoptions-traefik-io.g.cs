@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+#nullable enable
 /// <summary>TLSOption is the CRD implementation of a Traefik TLS Option, allowing to configure some parameters of the TLS connection. More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1TLSOptionList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1alpha1TLSOption> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ClientAuth defines the server's policy for TLS Client Authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSOptionSpecClientAuth
@@ -46,7 +49,9 @@ public partial class V1alpha1TLSOptionSpecClientAuth
     [JsonPropertyName("secretNames")]
     public IList<string>? SecretNames { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLSOptionSpec defines the desired state of a TLSOption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSOptionSpec
@@ -87,7 +92,9 @@ public partial class V1alpha1TLSOptionSpec
     [JsonPropertyName("sniStrict")]
     public bool? SniStrict { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>TLSOption is the CRD implementation of a Traefik TLS Option, allowing to configure some parameters of the TLS connection. More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -113,3 +120,4 @@ public partial class V1alpha1TLSOption : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("spec")]
     public V1alpha1TLSOptionSpec Spec { get; set; }
 }
+#nullable disable

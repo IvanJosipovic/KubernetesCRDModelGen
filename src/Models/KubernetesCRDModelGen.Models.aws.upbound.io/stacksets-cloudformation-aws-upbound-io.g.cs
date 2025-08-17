@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudformation.aws.upbound.io;
+#nullable enable
 /// <summary>StackSet is the Schema for the StackSets API. Manages a CloudFormation StackSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1StackSetList : IKubernetesObject<V1ListMeta>, IItems
     [JsonPropertyName("items")]
     public IList<V1beta1StackSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnRefPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate administrationRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnRef
@@ -59,7 +64,9 @@ public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1StackSetSpecForProviderAdministrationRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnSelector
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate administrationRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnSelector
@@ -89,7 +98,9 @@ public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnSelector
     [JsonPropertyName("policy")]
     public V1beta1StackSetSpecForProviderAdministrationRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProviderAutoDeployment
@@ -102,7 +113,9 @@ public partial class V1beta1StackSetSpecForProviderAutoDeployment
     [JsonPropertyName("retainStacksOnAccountRemoval")]
     public bool? RetainStacksOnAccountRemoval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProviderManagedExecution
@@ -111,7 +124,9 @@ public partial class V1beta1StackSetSpecForProviderManagedExecution
     [JsonPropertyName("active")]
     public bool? Active { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProviderOperationPreferences
@@ -140,7 +155,9 @@ public partial class V1beta1StackSetSpecForProviderOperationPreferences
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProvider
@@ -209,7 +226,9 @@ public partial class V1beta1StackSetSpecForProvider
     [JsonPropertyName("templateUrl")]
     public string? TemplateUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecInitProviderAdministrationRoleArnRefPolicy
@@ -222,7 +241,9 @@ public partial class V1beta1StackSetSpecInitProviderAdministrationRoleArnRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Role in iam to populate administrationRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecInitProviderAdministrationRoleArnRef
@@ -235,7 +256,9 @@ public partial class V1beta1StackSetSpecInitProviderAdministrationRoleArnRef
     [JsonPropertyName("policy")]
     public V1beta1StackSetSpecInitProviderAdministrationRoleArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecInitProviderAdministrationRoleArnSelectorPolicy
@@ -248,7 +271,9 @@ public partial class V1beta1StackSetSpecInitProviderAdministrationRoleArnSelecto
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Role in iam to populate administrationRoleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecInitProviderAdministrationRoleArnSelector
@@ -265,7 +290,9 @@ public partial class V1beta1StackSetSpecInitProviderAdministrationRoleArnSelecto
     [JsonPropertyName("policy")]
     public V1beta1StackSetSpecInitProviderAdministrationRoleArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecInitProviderAutoDeployment
@@ -278,7 +305,9 @@ public partial class V1beta1StackSetSpecInitProviderAutoDeployment
     [JsonPropertyName("retainStacksOnAccountRemoval")]
     public bool? RetainStacksOnAccountRemoval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecInitProviderManagedExecution
@@ -287,7 +316,9 @@ public partial class V1beta1StackSetSpecInitProviderManagedExecution
     [JsonPropertyName("active")]
     public bool? Active { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecInitProviderOperationPreferences
@@ -316,7 +347,9 @@ public partial class V1beta1StackSetSpecInitProviderOperationPreferences
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecInitProvider
@@ -381,7 +414,9 @@ public partial class V1beta1StackSetSpecInitProvider
     [JsonPropertyName("templateUrl")]
     public string? TemplateUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecProviderConfigRefPolicy
@@ -394,7 +429,9 @@ public partial class V1beta1StackSetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecProviderConfigRef
@@ -407,7 +444,9 @@ public partial class V1beta1StackSetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1StackSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecWriteConnectionSecretToRef
@@ -420,7 +459,9 @@ public partial class V1beta1StackSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StackSetSpec defines the desired state of StackSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpec
@@ -449,7 +490,9 @@ public partial class V1beta1StackSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1StackSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetStatusAtProviderAutoDeployment
@@ -462,7 +505,9 @@ public partial class V1beta1StackSetStatusAtProviderAutoDeployment
     [JsonPropertyName("retainStacksOnAccountRemoval")]
     public bool? RetainStacksOnAccountRemoval { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetStatusAtProviderManagedExecution
@@ -471,7 +516,9 @@ public partial class V1beta1StackSetStatusAtProviderManagedExecution
     [JsonPropertyName("active")]
     public bool? Active { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetStatusAtProviderOperationPreferences
@@ -500,7 +547,9 @@ public partial class V1beta1StackSetStatusAtProviderOperationPreferences
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetStatusAtProvider
@@ -577,7 +626,9 @@ public partial class V1beta1StackSetStatusAtProvider
     [JsonPropertyName("templateUrl")]
     public string? TemplateUrl { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetStatusConditions
@@ -606,7 +657,9 @@ public partial class V1beta1StackSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StackSetStatus defines the observed state of StackSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetStatus
@@ -623,7 +676,9 @@ public partial class V1beta1StackSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>StackSet is the Schema for the StackSets API. Manages a CloudFormation StackSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -653,3 +708,4 @@ public partial class V1beta1StackSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1StackSetStatus? Status { get; set; }
 }
+#nullable disable

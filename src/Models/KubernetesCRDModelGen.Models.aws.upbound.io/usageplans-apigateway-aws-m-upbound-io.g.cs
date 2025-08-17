@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigateway.aws.m.upbound.io;
+#nullable enable
 /// <summary>UsagePlan is the Schema for the UsagePlans API. Provides an API Gateway Usage Plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1UsagePlanList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1UsagePlan> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RestAPI in apigateway to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanSpecForProviderApiStagesApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RestAPI in apigateway to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanSpecForProviderApiStagesApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesStageRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesStageRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stage in apigateway to populate stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesStageRef
@@ -127,7 +140,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesStageRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanSpecForProviderApiStagesStageRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesStageSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesStageSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stage in apigateway to populate stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesStageSelector
@@ -161,7 +178,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesStageSelector
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanSpecForProviderApiStagesStageSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStagesThrottle
@@ -178,7 +197,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStagesThrottle
     [JsonPropertyName("rateLimit")]
     public double? RateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderApiStages
@@ -211,7 +232,9 @@ public partial class V1beta1UsagePlanSpecForProviderApiStages
     [JsonPropertyName("throttle")]
     public IList<V1beta1UsagePlanSpecForProviderApiStagesThrottle>? Throttle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The quota settings of the usage plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderQuotaSettings
@@ -228,7 +251,9 @@ public partial class V1beta1UsagePlanSpecForProviderQuotaSettings
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The throttling limits of the usage plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProviderThrottleSettings
@@ -241,7 +266,9 @@ public partial class V1beta1UsagePlanSpecForProviderThrottleSettings
     [JsonPropertyName("rateLimit")]
     public double? RateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecForProvider
@@ -278,7 +305,9 @@ public partial class V1beta1UsagePlanSpecForProvider
     [JsonPropertyName("throttleSettings")]
     public V1beta1UsagePlanSpecForProviderThrottleSettings? ThrottleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdRefPolicy
@@ -291,7 +320,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a RestAPI in apigateway to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdRef
@@ -308,7 +339,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanSpecInitProviderApiStagesApiIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelectorPolicy
@@ -321,7 +354,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a RestAPI in apigateway to populate apiId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelector
@@ -342,7 +377,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelector
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanSpecInitProviderApiStagesApiIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageRefPolicy
@@ -355,7 +392,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Stage in apigateway to populate stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageRef
@@ -372,7 +411,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageRef
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanSpecInitProviderApiStagesStageRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageSelectorPolicy
@@ -385,7 +426,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Stage in apigateway to populate stage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageSelector
@@ -406,7 +449,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesStageSelector
     [JsonPropertyName("policy")]
     public V1beta1UsagePlanSpecInitProviderApiStagesStageSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStagesThrottle
@@ -423,7 +468,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStagesThrottle
     [JsonPropertyName("rateLimit")]
     public double? RateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderApiStages
@@ -456,7 +503,9 @@ public partial class V1beta1UsagePlanSpecInitProviderApiStages
     [JsonPropertyName("throttle")]
     public IList<V1beta1UsagePlanSpecInitProviderApiStagesThrottle>? Throttle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The quota settings of the usage plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderQuotaSettings
@@ -473,7 +522,9 @@ public partial class V1beta1UsagePlanSpecInitProviderQuotaSettings
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The throttling limits of the usage plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProviderThrottleSettings
@@ -486,7 +537,9 @@ public partial class V1beta1UsagePlanSpecInitProviderThrottleSettings
     [JsonPropertyName("rateLimit")]
     public double? RateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecInitProvider
@@ -519,7 +572,9 @@ public partial class V1beta1UsagePlanSpecInitProvider
     [JsonPropertyName("throttleSettings")]
     public V1beta1UsagePlanSpecInitProviderThrottleSettings? ThrottleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecProviderConfigRef
@@ -532,7 +587,9 @@ public partial class V1beta1UsagePlanSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpecWriteConnectionSecretToRef
@@ -541,7 +598,9 @@ public partial class V1beta1UsagePlanSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UsagePlanSpec defines the desired state of UsagePlan</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanSpec
@@ -566,7 +625,9 @@ public partial class V1beta1UsagePlanSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1UsagePlanSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanStatusAtProviderApiStagesThrottle
@@ -583,7 +644,9 @@ public partial class V1beta1UsagePlanStatusAtProviderApiStagesThrottle
     [JsonPropertyName("rateLimit")]
     public double? RateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanStatusAtProviderApiStages
@@ -600,7 +663,9 @@ public partial class V1beta1UsagePlanStatusAtProviderApiStages
     [JsonPropertyName("throttle")]
     public IList<V1beta1UsagePlanStatusAtProviderApiStagesThrottle>? Throttle { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The quota settings of the usage plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanStatusAtProviderQuotaSettings
@@ -617,7 +682,9 @@ public partial class V1beta1UsagePlanStatusAtProviderQuotaSettings
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The throttling limits of the usage plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanStatusAtProviderThrottleSettings
@@ -630,7 +697,9 @@ public partial class V1beta1UsagePlanStatusAtProviderThrottleSettings
     [JsonPropertyName("rateLimit")]
     public double? RateLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanStatusAtProvider
@@ -679,7 +748,9 @@ public partial class V1beta1UsagePlanStatusAtProvider
     [JsonPropertyName("throttleSettings")]
     public V1beta1UsagePlanStatusAtProviderThrottleSettings? ThrottleSettings { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanStatusConditions
@@ -708,7 +779,9 @@ public partial class V1beta1UsagePlanStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UsagePlanStatus defines the observed state of UsagePlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UsagePlanStatus
@@ -725,7 +798,9 @@ public partial class V1beta1UsagePlanStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>UsagePlan is the Schema for the UsagePlans API. Provides an API Gateway Usage Plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -755,3 +830,4 @@ public partial class V1beta1UsagePlan : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1UsagePlanStatus? Status { get; set; }
 }
+#nullable disable

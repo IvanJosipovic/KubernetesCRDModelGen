@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DataprocAutoscalingPolicyList : IKubernetesObject<V1
     [JsonPropertyName("items")]
     public IList<V1beta1DataprocAutoscalingPolicy> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. YARN autoscaling configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocAutoscalingPolicySpecBasicAlgorithmYarnConfig
@@ -58,7 +61,9 @@ public partial class V1beta1DataprocAutoscalingPolicySpecBasicAlgorithmYarnConfi
     [JsonPropertyName("scaleUpMinWorkerFraction")]
     public double? ScaleUpMinWorkerFraction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocAutoscalingPolicySpecBasicAlgorithm
@@ -71,7 +76,9 @@ public partial class V1beta1DataprocAutoscalingPolicySpecBasicAlgorithm
     [JsonPropertyName("yarnConfig")]
     public V1beta1DataprocAutoscalingPolicySpecBasicAlgorithmYarnConfig YarnConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocAutoscalingPolicySpecProjectRef
@@ -88,7 +95,9 @@ public partial class V1beta1DataprocAutoscalingPolicySpecProjectRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Describes how the autoscaler will operate for secondary workers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocAutoscalingPolicySpecSecondaryWorkerConfig
@@ -105,7 +114,9 @@ public partial class V1beta1DataprocAutoscalingPolicySpecSecondaryWorkerConfig
     [JsonPropertyName("weight")]
     public long? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Describes how the autoscaler will operate for primary workers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocAutoscalingPolicySpecWorkerConfig
@@ -122,7 +133,9 @@ public partial class V1beta1DataprocAutoscalingPolicySpecWorkerConfig
     [JsonPropertyName("weight")]
     public long? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocAutoscalingPolicySpec
@@ -151,7 +164,9 @@ public partial class V1beta1DataprocAutoscalingPolicySpec
     [JsonPropertyName("workerConfig")]
     public V1beta1DataprocAutoscalingPolicySpecWorkerConfig WorkerConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocAutoscalingPolicyStatusConditions
@@ -176,7 +191,9 @@ public partial class V1beta1DataprocAutoscalingPolicyStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataprocAutoscalingPolicyStatus
@@ -189,7 +206,9 @@ public partial class V1beta1DataprocAutoscalingPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -219,3 +238,4 @@ public partial class V1beta1DataprocAutoscalingPolicy : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1DataprocAutoscalingPolicyStatus? Status { get; set; }
 }
+#nullable disable

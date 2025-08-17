@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elasticsearch.aws.m.upbound.io;
+#nullable enable
 /// <summary>DomainSAMLOptions is the Schema for the DomainSAMLOptionss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1DomainSAMLOptionsList : IKubernetesObject<V1ListMeta
     [JsonPropertyName("items")]
     public IList<V1beta1DomainSAMLOptions> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information from your identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecForProviderSamlOptionsIdp
@@ -46,7 +49,9 @@ public partial class V1beta1DomainSAMLOptionsSpecForProviderSamlOptionsIdp
     [JsonPropertyName("metadataContent")]
     public string? MetadataContent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This username from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecForProviderSamlOptionsMasterUserNameSecretRef
@@ -59,7 +64,9 @@ public partial class V1beta1DomainSAMLOptionsSpecForProviderSamlOptionsMasterUse
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SAML authentication options for an AWS Elasticsearch Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecForProviderSamlOptions
@@ -92,7 +99,9 @@ public partial class V1beta1DomainSAMLOptionsSpecForProviderSamlOptions
     [JsonPropertyName("subjectKey")]
     public string? SubjectKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecForProvider
@@ -105,7 +114,9 @@ public partial class V1beta1DomainSAMLOptionsSpecForProvider
     [JsonPropertyName("samlOptions")]
     public V1beta1DomainSAMLOptionsSpecForProviderSamlOptions? SamlOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information from your identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecInitProviderSamlOptionsIdp
@@ -118,7 +129,9 @@ public partial class V1beta1DomainSAMLOptionsSpecInitProviderSamlOptionsIdp
     [JsonPropertyName("metadataContent")]
     public string? MetadataContent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>This username from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecInitProviderSamlOptionsMasterUserNameSecretRef
@@ -131,7 +144,9 @@ public partial class V1beta1DomainSAMLOptionsSpecInitProviderSamlOptionsMasterUs
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SAML authentication options for an AWS Elasticsearch Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecInitProviderSamlOptions
@@ -164,7 +179,9 @@ public partial class V1beta1DomainSAMLOptionsSpecInitProviderSamlOptions
     [JsonPropertyName("subjectKey")]
     public string? SubjectKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecInitProvider
@@ -173,7 +190,9 @@ public partial class V1beta1DomainSAMLOptionsSpecInitProvider
     [JsonPropertyName("samlOptions")]
     public V1beta1DomainSAMLOptionsSpecInitProviderSamlOptions? SamlOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecProviderConfigRef
@@ -186,7 +205,9 @@ public partial class V1beta1DomainSAMLOptionsSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpecWriteConnectionSecretToRef
@@ -195,7 +216,9 @@ public partial class V1beta1DomainSAMLOptionsSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainSAMLOptionsSpec defines the desired state of DomainSAMLOptions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsSpec
@@ -220,7 +243,9 @@ public partial class V1beta1DomainSAMLOptionsSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1DomainSAMLOptionsSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information from your identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsStatusAtProviderSamlOptionsIdp
@@ -233,7 +258,9 @@ public partial class V1beta1DomainSAMLOptionsStatusAtProviderSamlOptionsIdp
     [JsonPropertyName("metadataContent")]
     public string? MetadataContent { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The SAML authentication options for an AWS Elasticsearch Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsStatusAtProviderSamlOptions
@@ -262,7 +289,9 @@ public partial class V1beta1DomainSAMLOptionsStatusAtProviderSamlOptions
     [JsonPropertyName("subjectKey")]
     public string? SubjectKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsStatusAtProvider
@@ -279,7 +308,9 @@ public partial class V1beta1DomainSAMLOptionsStatusAtProvider
     [JsonPropertyName("samlOptions")]
     public V1beta1DomainSAMLOptionsStatusAtProviderSamlOptions? SamlOptions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsStatusConditions
@@ -308,7 +339,9 @@ public partial class V1beta1DomainSAMLOptionsStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainSAMLOptionsStatus defines the observed state of DomainSAMLOptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSAMLOptionsStatus
@@ -325,7 +358,9 @@ public partial class V1beta1DomainSAMLOptionsStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DomainSAMLOptions is the Schema for the DomainSAMLOptionss API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -355,3 +390,4 @@ public partial class V1beta1DomainSAMLOptions : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1DomainSAMLOptionsStatus? Status { get; set; }
 }
+#nullable disable

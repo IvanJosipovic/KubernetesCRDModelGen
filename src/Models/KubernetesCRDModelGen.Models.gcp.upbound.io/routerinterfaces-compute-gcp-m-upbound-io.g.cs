@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>RouterInterface is the Schema for the RouterInterfaces API. Manages a Cloud Router interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RouterInterfaceList : IKubernetesObject<V1ListMeta>,
     [JsonPropertyName("items")]
     public IList<V1beta1RouterInterface> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProviderRouterRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1RouterInterfaceSpecForProviderRouterRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProviderRouterRef
@@ -63,7 +68,9 @@ public partial class V1beta1RouterInterfaceSpecForProviderRouterRef
     [JsonPropertyName("policy")]
     public V1beta1RouterInterfaceSpecForProviderRouterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProviderRouterSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1RouterInterfaceSpecForProviderRouterSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProviderRouterSelector
@@ -97,7 +106,9 @@ public partial class V1beta1RouterInterfaceSpecForProviderRouterSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterInterfaceSpecForProviderRouterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNTunnel in compute to populate vpnTunnel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelRef
@@ -127,7 +140,9 @@ public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelRef
     [JsonPropertyName("policy")]
     public V1beta1RouterInterfaceSpecForProviderVpnTunnelRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNTunnel in compute to populate vpnTunnel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelSelector
@@ -161,7 +178,9 @@ public partial class V1beta1RouterInterfaceSpecForProviderVpnTunnelSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterInterfaceSpecForProviderVpnTunnelSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecForProvider
@@ -226,7 +245,9 @@ public partial class V1beta1RouterInterfaceSpecForProvider
     [JsonPropertyName("vpnTunnelSelector")]
     public V1beta1RouterInterfaceSpecForProviderVpnTunnelSelector? VpnTunnelSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProviderRouterRefPolicy
@@ -239,7 +260,9 @@ public partial class V1beta1RouterInterfaceSpecInitProviderRouterRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProviderRouterRef
@@ -256,7 +279,9 @@ public partial class V1beta1RouterInterfaceSpecInitProviderRouterRef
     [JsonPropertyName("policy")]
     public V1beta1RouterInterfaceSpecInitProviderRouterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProviderRouterSelectorPolicy
@@ -269,7 +294,9 @@ public partial class V1beta1RouterInterfaceSpecInitProviderRouterSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProviderRouterSelector
@@ -290,7 +317,9 @@ public partial class V1beta1RouterInterfaceSpecInitProviderRouterSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterInterfaceSpecInitProviderRouterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelRefPolicy
@@ -303,7 +332,9 @@ public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VPNTunnel in compute to populate vpnTunnel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelRef
@@ -320,7 +351,9 @@ public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelRef
     [JsonPropertyName("policy")]
     public V1beta1RouterInterfaceSpecInitProviderVpnTunnelRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelectorPolicy
@@ -333,7 +366,9 @@ public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VPNTunnel in compute to populate vpnTunnel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelector
@@ -354,7 +389,9 @@ public partial class V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecInitProvider
@@ -419,7 +456,9 @@ public partial class V1beta1RouterInterfaceSpecInitProvider
     [JsonPropertyName("vpnTunnelSelector")]
     public V1beta1RouterInterfaceSpecInitProviderVpnTunnelSelector? VpnTunnelSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecProviderConfigRef
@@ -432,7 +471,9 @@ public partial class V1beta1RouterInterfaceSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpecWriteConnectionSecretToRef
@@ -441,7 +482,9 @@ public partial class V1beta1RouterInterfaceSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterInterfaceSpec defines the desired state of RouterInterface</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceSpec
@@ -466,7 +509,9 @@ public partial class V1beta1RouterInterfaceSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RouterInterfaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceStatusAtProvider
@@ -519,7 +564,9 @@ public partial class V1beta1RouterInterfaceStatusAtProvider
     [JsonPropertyName("vpnTunnel")]
     public string? VpnTunnel { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceStatusConditions
@@ -548,7 +595,9 @@ public partial class V1beta1RouterInterfaceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterInterfaceStatus defines the observed state of RouterInterface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterInterfaceStatus
@@ -565,7 +614,9 @@ public partial class V1beta1RouterInterfaceStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterInterface is the Schema for the RouterInterfaces API. Manages a Cloud Router interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -595,3 +646,4 @@ public partial class V1beta1RouterInterface : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1RouterInterfaceStatus? Status { get; set; }
 }
+#nullable disable

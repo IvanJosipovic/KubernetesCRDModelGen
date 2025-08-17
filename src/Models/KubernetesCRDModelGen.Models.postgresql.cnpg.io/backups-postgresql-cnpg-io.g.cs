@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>A Backup resource is a request for a PostgreSQL backup by the user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1BackupList : IKubernetesObject<V1ListMeta>, IItems<V1Back
     [JsonPropertyName("items")]
     public IList<V1Backup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The cluster to backup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupSpecCluster
@@ -42,7 +45,9 @@ public partial class V1BackupSpecCluster
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters to control the online/hot backup with volume snapshots Overrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupSpecOnlineConfiguration
@@ -55,7 +60,9 @@ public partial class V1BackupSpecOnlineConfiguration
     [JsonPropertyName("waitForArchive")]
     public bool? WaitForArchive { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration parameters passed to the plugin managing this backup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupSpecPluginConfiguration
@@ -68,7 +75,9 @@ public partial class V1BackupSpecPluginConfiguration
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired behavior of the backup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupSpec
@@ -97,7 +106,9 @@ public partial class V1BackupSpec
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The connection string to be used</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusAzureCredentialsConnectionString
@@ -110,7 +121,9 @@ public partial class V1BackupStatusAzureCredentialsConnectionString
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The storage account where to upload data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusAzureCredentialsStorageAccount
@@ -123,7 +136,9 @@ public partial class V1BackupStatusAzureCredentialsStorageAccount
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The storage account key to be used in conjunction with the storage account name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusAzureCredentialsStorageKey
@@ -136,7 +151,9 @@ public partial class V1BackupStatusAzureCredentialsStorageKey
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A shared-access-signature to be used in conjunction with the storage account name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusAzureCredentialsStorageSasToken
@@ -149,7 +166,9 @@ public partial class V1BackupStatusAzureCredentialsStorageSasToken
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to Azure Blob Storage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusAzureCredentials
@@ -174,7 +193,9 @@ public partial class V1BackupStatusAzureCredentials
     [JsonPropertyName("storageSasToken")]
     public V1BackupStatusAzureCredentialsStorageSasToken? StorageSasToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>EndpointCA store the CA bundle of the barman endpoint. Useful when using self-signed certificates to avoid errors with certificate issuer and barman-cloud-wal-archive.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusEndpointCA
@@ -187,7 +208,9 @@ public partial class V1BackupStatusEndpointCA
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The secret containing the Google Cloud Storage JSON file with the credentials</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusGoogleCredentialsApplicationCredentials
@@ -200,7 +223,9 @@ public partial class V1BackupStatusGoogleCredentialsApplicationCredentials
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to Google Cloud Storage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusGoogleCredentials
@@ -213,7 +238,9 @@ public partial class V1BackupStatusGoogleCredentials
     [JsonPropertyName("gkeEnvironment")]
     public bool? GkeEnvironment { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Information to identify the instance where the backup has been taken from</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusInstanceID
@@ -226,7 +253,9 @@ public partial class V1BackupStatusInstanceID
     [JsonPropertyName("podName")]
     public string? PodName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the access key id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusS3CredentialsAccessKeyId
@@ -239,7 +268,9 @@ public partial class V1BackupStatusS3CredentialsAccessKeyId
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the secret containing the region name</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusS3CredentialsRegion
@@ -252,7 +283,9 @@ public partial class V1BackupStatusS3CredentialsRegion
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The reference to the secret access key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusS3CredentialsSecretAccessKey
@@ -265,7 +298,9 @@ public partial class V1BackupStatusS3CredentialsSecretAccessKey
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The references to the session key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusS3CredentialsSessionToken
@@ -278,7 +313,9 @@ public partial class V1BackupStatusS3CredentialsSessionToken
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The credentials to use to upload data to S3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusS3Credentials
@@ -303,7 +340,9 @@ public partial class V1BackupStatusS3Credentials
     [JsonPropertyName("sessionToken")]
     public V1BackupStatusS3CredentialsSessionToken? SessionToken { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>BackupSnapshotElementStatus is a volume snapshot that is part of a volume snapshot method backup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusSnapshotBackupStatusElements
@@ -320,7 +359,9 @@ public partial class V1BackupStatusSnapshotBackupStatusElements
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Status of the volumeSnapshot backup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatusSnapshotBackupStatus
@@ -329,7 +370,9 @@ public partial class V1BackupStatusSnapshotBackupStatus
     [JsonPropertyName("elements")]
     public IList<V1BackupStatusSnapshotBackupStatusElements>? Elements { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Most recently observed status of the backup. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupStatus
@@ -442,7 +485,9 @@ public partial class V1BackupStatus
     [JsonPropertyName("tablespaceMapFile")]
     public string? TablespaceMapFile { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Backup resource is a request for a PostgreSQL backup by the user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -472,3 +517,4 @@ public partial class V1Backup : IKubernetesObject<V1ObjectMeta>, ISpec<V1BackupS
     [JsonPropertyName("status")]
     public V1BackupStatus? Status { get; set; }
 }
+#nullable disable

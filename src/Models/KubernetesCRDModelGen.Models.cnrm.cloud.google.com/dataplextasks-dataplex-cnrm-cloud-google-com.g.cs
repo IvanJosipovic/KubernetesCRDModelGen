@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.cnrm.cloud.google.com;
+#nullable enable
 /// <summary>DataplexTask is the Schema for the DataplexTask API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1DataplexTaskList : IKubernetesObject<V1ListMeta>, I
     [JsonPropertyName("items")]
     public IList<V1alpha1DataplexTask> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. The Cloud KMS key to use for encryption, of the form: `projects/{project_number}/locations/{location_id}/keyRings/{key-ring-name}/cryptoKeys/{key-name}`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecExecutionSpecKmsKeyRef
@@ -50,7 +53,9 @@ public partial class V1alpha1DataplexTaskSpecExecutionSpecKmsKeyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Service account to use to execute a task. If not provided, the default Compute service account for the project is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecExecutionSpecServiceAccountRef
@@ -67,7 +72,9 @@ public partial class V1alpha1DataplexTaskSpecExecutionSpecServiceAccountRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Spec related to how a task is executed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecExecutionSpec
@@ -92,7 +99,9 @@ public partial class V1alpha1DataplexTaskSpecExecutionSpec
     [JsonPropertyName("serviceAccountRef")]
     public V1alpha1DataplexTaskSpecExecutionSpecServiceAccountRef ServiceAccountRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LakeRef defines the resource reference to DataplexLake, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecLakeRef
@@ -109,7 +118,9 @@ public partial class V1alpha1DataplexTaskSpecLakeRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compute resources needed for a Task when using Dataproc Serverless.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecNotebookInfrastructureSpecBatch
@@ -122,7 +133,9 @@ public partial class V1alpha1DataplexTaskSpecNotebookInfrastructureSpecBatch
     [JsonPropertyName("maxExecutorsCount")]
     public int? MaxExecutorsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container Image Runtime Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecNotebookInfrastructureSpecContainerImage
@@ -143,7 +156,9 @@ public partial class V1alpha1DataplexTaskSpecNotebookInfrastructureSpecContainer
     [JsonPropertyName("pythonPackages")]
     public IList<string>? PythonPackages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Vpc network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecNotebookInfrastructureSpecVpcNetwork
@@ -160,7 +175,9 @@ public partial class V1alpha1DataplexTaskSpecNotebookInfrastructureSpecVpcNetwor
     [JsonPropertyName("subNetwork")]
     public string? SubNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Infrastructure specification for the execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecNotebookInfrastructureSpec
@@ -177,7 +194,9 @@ public partial class V1alpha1DataplexTaskSpecNotebookInfrastructureSpec
     [JsonPropertyName("vpcNetwork")]
     public V1alpha1DataplexTaskSpecNotebookInfrastructureSpecVpcNetwork? VpcNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config related to running scheduled Notebooks. Exactly one of spark or notebook must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecNotebook
@@ -198,7 +217,9 @@ public partial class V1alpha1DataplexTaskSpecNotebook
     [JsonPropertyName("notebook")]
     public string Notebook { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Compute resources needed for a Task when using Dataproc Serverless.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecSparkInfrastructureSpecBatch
@@ -211,7 +232,9 @@ public partial class V1alpha1DataplexTaskSpecSparkInfrastructureSpecBatch
     [JsonPropertyName("maxExecutorsCount")]
     public int? MaxExecutorsCount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Container Image Runtime Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecSparkInfrastructureSpecContainerImage
@@ -232,7 +255,9 @@ public partial class V1alpha1DataplexTaskSpecSparkInfrastructureSpecContainerIma
     [JsonPropertyName("pythonPackages")]
     public IList<string>? PythonPackages { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Vpc network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecSparkInfrastructureSpecVpcNetwork
@@ -249,7 +274,9 @@ public partial class V1alpha1DataplexTaskSpecSparkInfrastructureSpecVpcNetwork
     [JsonPropertyName("subNetwork")]
     public string? SubNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Optional. Infrastructure specification for the execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecSparkInfrastructureSpec
@@ -266,7 +293,9 @@ public partial class V1alpha1DataplexTaskSpecSparkInfrastructureSpec
     [JsonPropertyName("vpcNetwork")]
     public V1alpha1DataplexTaskSpecSparkInfrastructureSpecVpcNetwork? VpcNetwork { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Config related to running custom Spark tasks. Exactly one of spark or notebook must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecSpark
@@ -303,7 +332,9 @@ public partial class V1alpha1DataplexTaskSpecSpark
     [JsonPropertyName("sqlScriptFile")]
     public string? SqlScriptFile { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Spec related to how often and when a task should be triggered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecTriggerSpec
@@ -328,7 +359,9 @@ public partial class V1alpha1DataplexTaskSpecTriggerSpec
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataplexTaskSpec defines the desired state of DataplexTask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpec
@@ -369,7 +402,9 @@ public partial class V1alpha1DataplexTaskSpec
     [JsonPropertyName("triggerSpec")]
     public V1alpha1DataplexTaskSpecTriggerSpec TriggerSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskStatusConditions
@@ -394,7 +429,9 @@ public partial class V1alpha1DataplexTaskStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. Spec related to how a task is executed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskStatusObservedStateExecutionStatusLatestJobExecutionSpec
@@ -419,7 +456,9 @@ public partial class V1alpha1DataplexTaskStatusObservedStateExecutionStatusLates
     [JsonPropertyName("serviceAccount")]
     public string ServiceAccount { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Output only. latest job execution</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskStatusObservedStateExecutionStatusLatestJob
@@ -472,7 +511,9 @@ public partial class V1alpha1DataplexTaskStatusObservedStateExecutionStatusLates
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary> Status of the task execution (e.g. Jobs).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskStatusObservedStateExecutionStatus
@@ -485,7 +526,9 @@ public partial class V1alpha1DataplexTaskStatusObservedStateExecutionStatus
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskStatusObservedState
@@ -510,7 +553,9 @@ public partial class V1alpha1DataplexTaskStatusObservedState
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataplexTaskStatus defines the config connector machine state of DataplexTask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskStatus
@@ -531,7 +576,9 @@ public partial class V1alpha1DataplexTaskStatus
     [JsonPropertyName("observedState")]
     public V1alpha1DataplexTaskStatusObservedState? ObservedState { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DataplexTask is the Schema for the DataplexTask API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -561,3 +608,4 @@ public partial class V1alpha1DataplexTask : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1alpha1DataplexTaskStatus? Status { get; set; }
 }
+#nullable disable

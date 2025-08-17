@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.m.upbound.io;
+#nullable enable
 /// <summary>VirtualMachineRunCommand is the Schema for the VirtualMachineRunCommands API. Manages a Virtual Machine Run Command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualMachineRunCommandList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualMachineRunCommand> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityClientIdSecretRef
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityObjectIdSecretRef
@@ -59,7 +64,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentity
@@ -72,7 +79,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Blob in storage to populate errorBlobUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRef
@@ -102,7 +113,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriR
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicy
@@ -115,7 +128,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Blob in storage to populate errorBlobUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelector
@@ -136,7 +151,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriS
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityClientIdSecretRef
@@ -149,7 +166,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityObjectIdSecretRef
@@ -162,7 +181,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output_blob_managed_identity block as defined below. User-assigned managed Identity that has access to outputBlobUri storage blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentity
@@ -175,7 +196,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy
@@ -188,7 +211,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Blob in storage to populate outputBlobUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRef
@@ -205,7 +230,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicy
@@ -218,7 +245,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Blob in storage to populate outputBlobUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelector
@@ -239,7 +268,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderParameter
@@ -252,7 +283,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The run parameter name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameterNameSecretRef
@@ -265,7 +298,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The run parameter value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameterValueSecretRef
@@ -278,7 +313,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameter
@@ -291,7 +328,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderProtectedPara
     [JsonPropertyName("valueSecretRef")]
     public V1beta1VirtualMachineRunCommandSpecForProviderProtectedParameterValueSecretRef? ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the user account password on the VM when executing the Virtual Machine Run Command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderRunAsPasswordSecretRef
@@ -304,7 +343,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderRunAsPassword
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityClientIdSecretRef
@@ -317,7 +358,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityObjectIdSecretRef
@@ -330,7 +373,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A script_uri_managed_identity block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentity
@@ -343,7 +388,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicy
@@ -356,7 +403,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Blob in storage to populate scriptUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRef
@@ -373,7 +422,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicy
@@ -386,7 +437,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Blob in storage to populate scriptUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelector
@@ -407,7 +460,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A source block as defined below. The source of the run command script.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderSource
@@ -436,7 +491,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSource
     [JsonPropertyName("scriptUriSelector")]
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelector? ScriptUriSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicy
@@ -449,7 +506,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRef
@@ -466,7 +525,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicy
@@ -479,7 +540,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LinuxVirtualMachine in compute to populate virtualMachineId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelector
@@ -500,7 +563,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecForProvider
@@ -577,7 +642,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProvider
     [JsonPropertyName("virtualMachineIdSelector")]
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobManagedIdentityClientIdSecretRef
@@ -590,7 +657,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobMan
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobManagedIdentityObjectIdSecretRef
@@ -603,7 +672,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobMan
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobManagedIdentity
@@ -616,7 +687,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobMan
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy
@@ -629,7 +702,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Blob in storage to populate errorBlobUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRef
@@ -646,7 +721,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicy
@@ -659,7 +736,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Blob in storage to populate errorBlobUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelector
@@ -680,7 +759,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobManagedIdentityClientIdSecretRef
@@ -693,7 +774,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobMa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobManagedIdentityObjectIdSecretRef
@@ -706,7 +789,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobMa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output_blob_managed_identity block as defined below. User-assigned managed Identity that has access to outputBlobUri storage blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobManagedIdentity
@@ -719,7 +804,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobMa
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicy
@@ -732,7 +819,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Blob in storage to populate outputBlobUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRef
@@ -749,7 +838,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicy
@@ -762,7 +853,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Blob in storage to populate outputBlobUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelector
@@ -783,7 +876,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderParameter
@@ -796,7 +891,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The run parameter name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderProtectedParameterNameSecretRef
@@ -809,7 +906,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderProtectedPar
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The run parameter value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderProtectedParameterValueSecretRef
@@ -822,7 +921,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderProtectedPar
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderProtectedParameter
@@ -835,7 +936,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderProtectedPar
     [JsonPropertyName("valueSecretRef")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderProtectedParameterValueSecretRef ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the user account password on the VM when executing the Virtual Machine Run Command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderRunAsPasswordSecretRef
@@ -848,7 +951,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderRunAsPasswor
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriManagedIdentityClientIdSecretRef
@@ -861,7 +966,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriManagedIdentityObjectIdSecretRef
@@ -874,7 +981,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A script_uri_managed_identity block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriManagedIdentity
@@ -887,7 +996,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicy
@@ -900,7 +1011,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Blob in storage to populate scriptUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRef
@@ -917,7 +1030,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicy
@@ -930,7 +1045,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Blob in storage to populate scriptUri.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelector
@@ -951,7 +1068,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     [JsonPropertyName("policy")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A source block as defined below. The source of the run command script.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSource
@@ -980,7 +1099,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSource
     [JsonPropertyName("scriptUriSelector")]
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelector? ScriptUriSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecInitProvider
@@ -1045,7 +1166,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRef
@@ -1058,7 +1181,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpecWriteConnectionSecretToRef
@@ -1067,7 +1192,9 @@ public partial class V1beta1VirtualMachineRunCommandSpecWriteConnectionSecretToR
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineRunCommandSpec defines the desired state of VirtualMachineRunCommand</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandSpec
@@ -1092,7 +1219,9 @@ public partial class V1beta1VirtualMachineRunCommandSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualMachineRunCommandSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentityClientIdSecretRef
@@ -1105,7 +1234,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentityObjectIdSecretRef
@@ -1118,7 +1249,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An error_blob_managed_identity block as defined below. User-assigned managed Identity that has access to errorBlobUri storage blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentity
@@ -1131,7 +1264,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobMan
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandStatusAtProviderErrorBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderInstanceView
@@ -1164,7 +1299,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderInstanceView
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentityClientIdSecretRef
@@ -1177,7 +1314,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentityObjectIdSecretRef
@@ -1190,7 +1329,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An output_blob_managed_identity block as defined below. User-assigned managed Identity that has access to outputBlobUri storage blob.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentity
@@ -1203,7 +1344,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobMa
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandStatusAtProviderOutputBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderParameter
@@ -1216,7 +1359,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderParameter
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The run parameter name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameterNameSecretRef
@@ -1229,7 +1374,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The run parameter value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameterValueSecretRef
@@ -1242,7 +1389,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameter
@@ -1255,7 +1404,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderProtectedPar
     [JsonPropertyName("valueSecretRef")]
     public V1beta1VirtualMachineRunCommandStatusAtProviderProtectedParameterValueSecretRef? ValueSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The client ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentityClientIdSecretRef
@@ -1268,7 +1419,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The object ID of the managed identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentityObjectIdSecretRef
@@ -1281,7 +1434,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A script_uri_managed_identity block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentity
@@ -1294,7 +1449,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSourceScript
     [JsonPropertyName("objectIdSecretRef")]
     public V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A source block as defined below. The source of the run command script.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSource
@@ -1315,7 +1472,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProviderSource
     [JsonPropertyName("scriptUriManagedIdentity")]
     public V1beta1VirtualMachineRunCommandStatusAtProviderSourceScriptUriManagedIdentity? ScriptUriManagedIdentity { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusAtProvider
@@ -1372,7 +1531,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusAtProvider
     [JsonPropertyName("virtualMachineId")]
     public string? VirtualMachineId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatusConditions
@@ -1401,7 +1562,9 @@ public partial class V1beta1VirtualMachineRunCommandStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineRunCommandStatus defines the observed state of VirtualMachineRunCommand.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineRunCommandStatus
@@ -1418,7 +1581,9 @@ public partial class V1beta1VirtualMachineRunCommandStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualMachineRunCommand is the Schema for the VirtualMachineRunCommands API. Manages a Virtual Machine Run Command.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1448,3 +1613,4 @@ public partial class V1beta1VirtualMachineRunCommand : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1VirtualMachineRunCommandStatus? Status { get; set; }
 }
+#nullable disable

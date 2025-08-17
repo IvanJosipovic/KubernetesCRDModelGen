@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.m.upbound.io;
+#nullable enable
 /// <summary>SharedImage is the Schema for the SharedImages API. Manages a Shared Image within a Shared Image Gallery.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SharedImageList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1SharedImage> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderGalleryNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SharedImageSpecForProviderGalleryNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SharedImageGallery in compute to populate galleryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderGalleryNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1SharedImageSpecForProviderGalleryNameRef
     [JsonPropertyName("policy")]
     public V1beta1SharedImageSpecForProviderGalleryNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderGalleryNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SharedImageSpecForProviderGalleryNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SharedImageGallery in compute to populate galleryName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderGalleryNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SharedImageSpecForProviderGalleryNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SharedImageSpecForProviderGalleryNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identifier block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderIdentifier
@@ -114,7 +125,9 @@ public partial class V1beta1SharedImageSpecForProviderIdentifier
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A purchase_plan block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderPurchasePlan
@@ -131,7 +144,9 @@ public partial class V1beta1SharedImageSpecForProviderPurchasePlan
     [JsonPropertyName("publisher")]
     public string? Publisher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderResourceGroupNameRefPolicy
@@ -144,7 +159,9 @@ public partial class V1beta1SharedImageSpecForProviderResourceGroupNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderResourceGroupNameRef
@@ -161,7 +178,9 @@ public partial class V1beta1SharedImageSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1SharedImageSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderResourceGroupNameSelectorPolicy
@@ -174,7 +193,9 @@ public partial class V1beta1SharedImageSpecForProviderResourceGroupNameSelectorP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProviderResourceGroupNameSelector
@@ -195,7 +216,9 @@ public partial class V1beta1SharedImageSpecForProviderResourceGroupNameSelector
     [JsonPropertyName("policy")]
     public V1beta1SharedImageSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecForProvider
@@ -324,7 +347,9 @@ public partial class V1beta1SharedImageSpecForProvider
     [JsonPropertyName("trustedLaunchSupported")]
     public bool? TrustedLaunchSupported { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identifier block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecInitProviderIdentifier
@@ -341,7 +366,9 @@ public partial class V1beta1SharedImageSpecInitProviderIdentifier
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A purchase_plan block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecInitProviderPurchasePlan
@@ -358,7 +385,9 @@ public partial class V1beta1SharedImageSpecInitProviderPurchasePlan
     [JsonPropertyName("publisher")]
     public string? Publisher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecInitProvider
@@ -463,7 +492,9 @@ public partial class V1beta1SharedImageSpecInitProvider
     [JsonPropertyName("trustedLaunchSupported")]
     public bool? TrustedLaunchSupported { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecProviderConfigRef
@@ -476,7 +507,9 @@ public partial class V1beta1SharedImageSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpecWriteConnectionSecretToRef
@@ -485,7 +518,9 @@ public partial class V1beta1SharedImageSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SharedImageSpec defines the desired state of SharedImage</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageSpec
@@ -510,7 +545,9 @@ public partial class V1beta1SharedImageSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SharedImageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An identifier block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageStatusAtProviderIdentifier
@@ -527,7 +564,9 @@ public partial class V1beta1SharedImageStatusAtProviderIdentifier
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A purchase_plan block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageStatusAtProviderPurchasePlan
@@ -544,7 +583,9 @@ public partial class V1beta1SharedImageStatusAtProviderPurchasePlan
     [JsonPropertyName("publisher")]
     public string? Publisher { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageStatusAtProvider
@@ -661,7 +702,9 @@ public partial class V1beta1SharedImageStatusAtProvider
     [JsonPropertyName("trustedLaunchSupported")]
     public bool? TrustedLaunchSupported { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageStatusConditions
@@ -690,7 +733,9 @@ public partial class V1beta1SharedImageStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SharedImageStatus defines the observed state of SharedImage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageStatus
@@ -707,7 +752,9 @@ public partial class V1beta1SharedImageStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SharedImage is the Schema for the SharedImages API. Manages a Shared Image within a Shared Image Gallery.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -737,3 +784,4 @@ public partial class V1beta1SharedImage : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1SharedImageStatus? Status { get; set; }
 }
+#nullable disable

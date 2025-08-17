@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AccessContextManagerAccessLevelList : IKubernetesObj
     [JsonPropertyName("items")]
     public IList<V1beta1AccessContextManagerAccessLevel> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The AccessContextManagerAccessPolicy this AccessContextManagerAccessLevel lives in.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecAccessPolicyRef
@@ -50,7 +53,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecAccessPolicyRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsDevicePolicyOsConstraints
@@ -67,7 +72,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsDe
     [JsonPropertyName("requireVerifiedChromeOs")]
     public bool? RequireVerifiedChromeOs { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsDevicePolicy
@@ -96,7 +103,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsDe
     [JsonPropertyName("requireScreenLock")]
     public bool? RequireScreenLock { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsMembersServiceAccountRef
@@ -113,7 +122,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsMe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>An allowed list of members (users, service accounts). Using groups is not supported.  The signed-in user originating the request must be a part of one of the provided members. If not specified, a request may come from any user (logged in/not logged in, not present in any groups, etc.).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsMembers
@@ -126,7 +137,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsMe
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A list of other access levels defined in the same policy. Referencing an AccessContextManagerAccessLevel which does not exist is an error. All access levels listed must be granted for the condition to be true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsRequiredAccessLevels
@@ -143,7 +156,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditionsRe
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditions
@@ -172,7 +187,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasicConditions
     [JsonPropertyName("requiredAccessLevels")]
     public IList<V1beta1AccessContextManagerAccessLevelSpecBasicConditionsRequiredAccessLevels>? RequiredAccessLevels { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A set of predefined conditions for the access level and a combining function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecBasic
@@ -185,7 +202,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecBasic
     [JsonPropertyName("conditions")]
     public IList<V1beta1AccessContextManagerAccessLevelSpecBasicConditions> Conditions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language. This page details the objects and attributes that are used to the build the CEL expressions for custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecCustomExpr
@@ -206,7 +225,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecCustomExpr
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. See CEL spec at: https://github.com/google/cel-spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpecCustom
@@ -215,7 +236,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpecCustom
     [JsonPropertyName("expr")]
     public V1beta1AccessContextManagerAccessLevelSpecCustomExpr Expr { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelSpec
@@ -244,7 +267,9 @@ public partial class V1beta1AccessContextManagerAccessLevelSpec
     [JsonPropertyName("title")]
     public string Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelStatusConditions
@@ -269,7 +294,9 @@ public partial class V1beta1AccessContextManagerAccessLevelStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessLevelStatus
@@ -282,7 +309,9 @@ public partial class V1beta1AccessContextManagerAccessLevelStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -312,3 +341,4 @@ public partial class V1beta1AccessContextManagerAccessLevel : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1AccessContextManagerAccessLevelStatus? Status { get; set; }
 }
+#nullable disable

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafregional.aws.upbound.io;
+#nullable enable
 /// <summary>XSSMatchSet is the Schema for the XSSMatchSets API. Provides an AWS WAF Regional XSS Match Set resource for use with ALB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1XSSMatchSetList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1XSSMatchSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTupleFieldToMatch
@@ -46,7 +49,9 @@ public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTupleFieldToMatch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTuple
@@ -59,7 +64,9 @@ public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTuple
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecForProvider
@@ -76,7 +83,9 @@ public partial class V1beta1XSSMatchSetSpecForProvider
     [JsonPropertyName("xssMatchTuple")]
     public IList<V1beta1XSSMatchSetSpecForProviderXssMatchTuple>? XssMatchTuple { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecInitProviderXssMatchTupleFieldToMatch
@@ -89,7 +98,9 @@ public partial class V1beta1XSSMatchSetSpecInitProviderXssMatchTupleFieldToMatch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecInitProviderXssMatchTuple
@@ -102,7 +113,9 @@ public partial class V1beta1XSSMatchSetSpecInitProviderXssMatchTuple
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecInitProvider
@@ -115,7 +128,9 @@ public partial class V1beta1XSSMatchSetSpecInitProvider
     [JsonPropertyName("xssMatchTuple")]
     public IList<V1beta1XSSMatchSetSpecInitProviderXssMatchTuple>? XssMatchTuple { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecProviderConfigRefPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1XSSMatchSetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecProviderConfigRef
@@ -141,7 +158,9 @@ public partial class V1beta1XSSMatchSetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1XSSMatchSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecWriteConnectionSecretToRef
@@ -154,7 +173,9 @@ public partial class V1beta1XSSMatchSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>XSSMatchSetSpec defines the desired state of XSSMatchSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpec
@@ -183,7 +204,9 @@ public partial class V1beta1XSSMatchSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1XSSMatchSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetStatusAtProviderXssMatchTupleFieldToMatch
@@ -196,7 +219,9 @@ public partial class V1beta1XSSMatchSetStatusAtProviderXssMatchTupleFieldToMatch
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetStatusAtProviderXssMatchTuple
@@ -209,7 +234,9 @@ public partial class V1beta1XSSMatchSetStatusAtProviderXssMatchTuple
     [JsonPropertyName("textTransformation")]
     public string? TextTransformation { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetStatusAtProvider
@@ -230,7 +257,9 @@ public partial class V1beta1XSSMatchSetStatusAtProvider
     [JsonPropertyName("xssMatchTuple")]
     public IList<V1beta1XSSMatchSetStatusAtProviderXssMatchTuple>? XssMatchTuple { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetStatusConditions
@@ -259,7 +288,9 @@ public partial class V1beta1XSSMatchSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>XSSMatchSetStatus defines the observed state of XSSMatchSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetStatus
@@ -276,7 +307,9 @@ public partial class V1beta1XSSMatchSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>XSSMatchSet is the Schema for the XSSMatchSets API. Provides an AWS WAF Regional XSS Match Set resource for use with ALB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -306,3 +339,4 @@ public partial class V1beta1XSSMatchSet : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1XSSMatchSetStatus? Status { get; set; }
 }
+#nullable disable

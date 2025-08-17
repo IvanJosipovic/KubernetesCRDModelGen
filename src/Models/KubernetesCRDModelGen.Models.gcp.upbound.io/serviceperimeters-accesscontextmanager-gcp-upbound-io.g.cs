@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.gcp.upbound.io;
+#nullable enable
 /// <summary>ServicePerimeter is the Schema for the ServicePerimeters API. ServicePerimeter describes a set of GCP resources which can freely import and export data amongst themselves, but not export outside of the ServicePerimeter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ServicePerimeterList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1ServicePerimeter> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefs
@@ -59,7 +64,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefs
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of AccessLevel in accesscontextmanager to populate accessLevels.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelector
@@ -89,7 +98,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelec
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressFromSources
@@ -102,7 +113,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressFrom
@@ -123,7 +136,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressToOperationsMethodSelectors
@@ -136,7 +151,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressToOperations
@@ -149,7 +166,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressTo
@@ -170,7 +189,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPolicies
@@ -187,7 +208,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressFromSources
@@ -200,7 +223,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressFrom
@@ -217,7 +242,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressToOperationsMethodSelectors
@@ -230,7 +257,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressToOperations
@@ -243,7 +272,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressTo
@@ -260,7 +291,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPolicies
@@ -277,7 +310,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpecVpcAccessibleServices
@@ -290,7 +325,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecVpcAccessibleServ
     [JsonPropertyName("enableRestriction")]
     public bool? EnableRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderSpec
@@ -327,7 +364,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpec
     [JsonPropertyName("vpcAccessibleServices")]
     public IList<V1beta1ServicePerimeterSpecForProviderSpecVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicy
@@ -340,7 +379,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRef
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefs
@@ -353,7 +394,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRef
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPolicy
@@ -366,7 +409,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSel
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of AccessLevel in accesscontextmanager to populate accessLevels.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelector
@@ -383,7 +428,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSel
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressFromSources
@@ -396,7 +443,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressFrom
@@ -417,7 +466,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressToOperationsMethodSelectors
@@ -430,7 +481,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressToOperations
@@ -443,7 +496,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressTo
@@ -464,7 +519,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPolicies
@@ -481,7 +538,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicy
@@ -494,7 +553,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRef
@@ -507,7 +568,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicy
@@ -520,7 +583,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelector
@@ -537,7 +602,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSources
@@ -558,7 +625,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFrom
@@ -575,7 +644,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressToOperationsMethodSelectors
@@ -588,7 +659,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressToOperations
@@ -601,7 +674,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressTo
@@ -618,7 +693,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
@@ -635,7 +712,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatusVpcAccessibleServices
@@ -648,7 +727,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusVpcAccessibleSe
     [JsonPropertyName("enableRestriction")]
     public bool? EnableRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProviderStatus
@@ -685,7 +766,9 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatus
     [JsonPropertyName("vpcAccessibleServices")]
     public IList<V1beta1ServicePerimeterSpecForProviderStatusVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecForProvider
@@ -722,7 +805,9 @@ public partial class V1beta1ServicePerimeterSpecForProvider
     [JsonPropertyName("useExplicitDryRunSpec")]
     public bool? UseExplicitDryRunSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicy
@@ -735,7 +820,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefs
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefs
@@ -748,7 +835,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefs
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolicy
@@ -761,7 +850,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSele
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of AccessLevel in accesscontextmanager to populate accessLevels.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelector
@@ -778,7 +869,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSele
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressFromSources
@@ -791,7 +884,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressFrom
@@ -812,7 +907,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressToOperationsMethodSelectors
@@ -825,7 +922,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressToOperations
@@ -838,7 +937,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressTo
@@ -859,7 +960,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPolicies
@@ -876,7 +979,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressFromSources
@@ -889,7 +994,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressFrom
@@ -906,7 +1013,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressToOperationsMethodSelectors
@@ -919,7 +1028,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressToOperations
@@ -932,7 +1043,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressTo
@@ -949,7 +1062,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPolicies
@@ -966,7 +1081,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpecVpcAccessibleServices
@@ -979,7 +1096,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecVpcAccessibleSer
     [JsonPropertyName("enableRestriction")]
     public bool? EnableRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderSpec
@@ -1016,7 +1135,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpec
     [JsonPropertyName("vpcAccessibleServices")]
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicy
@@ -1029,7 +1150,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Reference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefs
@@ -1042,7 +1165,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRe
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPolicy
@@ -1055,7 +1180,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of AccessLevel in accesscontextmanager to populate accessLevels.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelector
@@ -1072,7 +1199,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSe
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressFromSources
@@ -1085,7 +1214,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressFrom
@@ -1106,7 +1237,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressToOperationsMethodSelectors
@@ -1119,7 +1252,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressToOperations
@@ -1132,7 +1267,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressTo
@@ -1153,7 +1290,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
@@ -1170,7 +1309,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicy
@@ -1183,7 +1324,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRef
@@ -1196,7 +1339,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicy
@@ -1209,7 +1354,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a AccessLevel in accesscontextmanager to populate accessLevel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelector
@@ -1226,7 +1373,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSources
@@ -1247,7 +1396,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFrom
@@ -1264,7 +1415,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressToOperationsMethodSelectors
@@ -1277,7 +1430,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressToOperations
@@ -1290,7 +1445,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressTo
@@ -1307,7 +1464,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicies
@@ -1324,7 +1483,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatusVpcAccessibleServices
@@ -1337,7 +1498,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusVpcAccessibleS
     [JsonPropertyName("enableRestriction")]
     public bool? EnableRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProviderStatus
@@ -1374,7 +1537,9 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatus
     [JsonPropertyName("vpcAccessibleServices")]
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecInitProvider
@@ -1411,7 +1576,9 @@ public partial class V1beta1ServicePerimeterSpecInitProvider
     [JsonPropertyName("useExplicitDryRunSpec")]
     public bool? UseExplicitDryRunSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecProviderConfigRefPolicy
@@ -1424,7 +1591,9 @@ public partial class V1beta1ServicePerimeterSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecProviderConfigRef
@@ -1437,7 +1606,9 @@ public partial class V1beta1ServicePerimeterSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ServicePerimeterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpecWriteConnectionSecretToRef
@@ -1450,7 +1621,9 @@ public partial class V1beta1ServicePerimeterSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServicePerimeterSpec defines the desired state of ServicePerimeter</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterSpec
@@ -1479,7 +1652,9 @@ public partial class V1beta1ServicePerimeterSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServicePerimeterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressFromSources
@@ -1492,7 +1667,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressFrom
@@ -1513,7 +1690,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressToOperationsMethodSelectors
@@ -1526,7 +1705,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressToOperations
@@ -1539,7 +1720,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressTo
@@ -1560,7 +1743,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPolicies
@@ -1577,7 +1762,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressFromSources
@@ -1590,7 +1777,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressFrom
@@ -1607,7 +1796,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressToOperationsMethodSelectors
@@ -1620,7 +1811,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressToOperations
@@ -1633,7 +1826,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressTo
@@ -1650,7 +1845,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPolicies
@@ -1667,7 +1864,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpecVpcAccessibleServices
@@ -1680,7 +1879,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecVpcAccessibleSer
     [JsonPropertyName("enableRestriction")]
     public bool? EnableRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderSpec
@@ -1709,7 +1910,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpec
     [JsonPropertyName("vpcAccessibleServices")]
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressFromSources
@@ -1722,7 +1925,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressFrom
@@ -1743,7 +1948,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressToOperationsMethodSelectors
@@ -1756,7 +1963,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressToOperations
@@ -1769,7 +1978,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressTo
@@ -1790,7 +2001,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
@@ -1807,7 +2020,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressFromSources
@@ -1820,7 +2035,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     [JsonPropertyName("resource")]
     public string? Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressFrom
@@ -1837,7 +2054,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     [JsonPropertyName("sources")]
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressFromSources>? Sources { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressToOperationsMethodSelectors
@@ -1850,7 +2069,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     [JsonPropertyName("permission")]
     public string? Permission { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressToOperations
@@ -1863,7 +2084,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressTo
@@ -1880,7 +2103,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicies
@@ -1897,7 +2122,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     [JsonPropertyName("title")]
     public string? Title { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatusVpcAccessibleServices
@@ -1910,7 +2137,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusVpcAccessibleS
     [JsonPropertyName("enableRestriction")]
     public bool? EnableRestriction { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProviderStatus
@@ -1939,7 +2168,9 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatus
     [JsonPropertyName("vpcAccessibleServices")]
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusAtProvider
@@ -1988,7 +2219,9 @@ public partial class V1beta1ServicePerimeterStatusAtProvider
     [JsonPropertyName("useExplicitDryRunSpec")]
     public bool? UseExplicitDryRunSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatusConditions
@@ -2017,7 +2250,9 @@ public partial class V1beta1ServicePerimeterStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServicePerimeterStatus defines the observed state of ServicePerimeter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterStatus
@@ -2034,7 +2269,9 @@ public partial class V1beta1ServicePerimeterStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ServicePerimeter is the Schema for the ServicePerimeters API. ServicePerimeter describes a set of GCP resources which can freely import and export data amongst themselves, but not export outside of the ServicePerimeter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -2064,3 +2301,4 @@ public partial class V1beta1ServicePerimeter : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ServicePerimeterStatus? Status { get; set; }
 }
+#nullable disable

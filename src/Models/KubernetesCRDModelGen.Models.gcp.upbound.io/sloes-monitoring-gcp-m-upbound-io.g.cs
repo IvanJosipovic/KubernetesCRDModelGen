@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.gcp.m.upbound.io;
+#nullable enable
 /// <summary>SLO is the Schema for the SLOs API. A Service-Level Objective (SLO) describes the level of desired good service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SLOList : IKubernetesObject<V1ListMeta>, IItems<V1be
     [JsonPropertyName("items")]
     public IList<V1beta1SLO> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderBasicSliAvailability
@@ -42,7 +45,9 @@ public partial class V1beta1SLOSpecForProviderBasicSliAvailability
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters for a latency threshold SLI. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderBasicSliLatency
@@ -51,7 +56,9 @@ public partial class V1beta1SLOSpecForProviderBasicSliLatency
     [JsonPropertyName("threshold")]
     public string? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderBasicSli
@@ -76,7 +83,9 @@ public partial class V1beta1SLOSpecForProviderBasicSli
     [JsonPropertyName("version")]
     public IList<string>? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCutRange
@@ -89,7 +98,9 @@ public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCutRang
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCut
@@ -102,7 +113,9 @@ public partial class V1beta1SLOSpecForProviderRequestBasedSliDistributionCut
     [JsonPropertyName("range")]
     public V1beta1SLOSpecForProviderRequestBasedSliDistributionCutRange? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A means to compute a ratio of good_service to total_service. Defines computing this ratio with two TimeSeries monitoring filters Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderRequestBasedSliGoodTotalRatio
@@ -119,7 +132,9 @@ public partial class V1beta1SLOSpecForProviderRequestBasedSliGoodTotalRatio
     [JsonPropertyName("totalServiceFilter")]
     public string? TotalServiceFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request-based SLI defines a SLI for which atomic units of service are counted directly. A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderRequestBasedSli
@@ -132,7 +147,9 @@ public partial class V1beta1SLOSpecForProviderRequestBasedSli
     [JsonPropertyName("goodTotalRatio")]
     public V1beta1SLOSpecForProviderRequestBasedSliGoodTotalRatio? GoodTotalRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderServiceRefPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1SLOSpecForProviderServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomService in monitoring to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderServiceRef
@@ -162,7 +181,9 @@ public partial class V1beta1SLOSpecForProviderServiceRef
     [JsonPropertyName("policy")]
     public V1beta1SLOSpecForProviderServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderServiceSelectorPolicy
@@ -175,7 +196,9 @@ public partial class V1beta1SLOSpecForProviderServiceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomService in monitoring to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderServiceSelector
@@ -196,7 +219,9 @@ public partial class V1beta1SLOSpecForProviderServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1SLOSpecForProviderServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability
@@ -205,7 +230,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters for a latency threshold SLI. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency
@@ -214,7 +241,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("threshold")]
     public string? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Basic SLI to evaluate to judge window quality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance
@@ -239,7 +268,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("version")]
     public IList<string>? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange
@@ -252,7 +283,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut
@@ -265,7 +298,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("range")]
     public V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A means to compute a ratio of good_service to total_service. Defines computing this ratio with two TimeSeries monitoring filters Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio
@@ -282,7 +317,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("totalServiceFilter")]
     public string? TotalServiceFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Request-based SLI to evaluate to judge window quality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformance
@@ -295,7 +332,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("goodTotalRatio")]
     public V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio? GoodTotalRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if its performance is high enough. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThreshold
@@ -312,7 +351,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliGoodTotalRatioThres
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRangeRange
@@ -325,7 +366,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRangeRa
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRange
@@ -338,7 +381,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricMeanInRange
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRangeRange
@@ -351,7 +396,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRangeRan
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRange
@@ -364,7 +411,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSliMetricSumInRange
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A windows-based SLI defines the criteria for time windows. good_service is defined based off the count of these time windows for which the provided service was of good quality. A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProviderWindowsBasedSli
@@ -389,7 +438,9 @@ public partial class V1beta1SLOSpecForProviderWindowsBasedSli
     [JsonPropertyName("windowPeriod")]
     public string? WindowPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecForProvider
@@ -446,7 +497,9 @@ public partial class V1beta1SLOSpecForProvider
     [JsonPropertyName("windowsBasedSli")]
     public V1beta1SLOSpecForProviderWindowsBasedSli? WindowsBasedSli { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderBasicSliAvailability
@@ -455,7 +508,9 @@ public partial class V1beta1SLOSpecInitProviderBasicSliAvailability
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters for a latency threshold SLI. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderBasicSliLatency
@@ -464,7 +519,9 @@ public partial class V1beta1SLOSpecInitProviderBasicSliLatency
     [JsonPropertyName("threshold")]
     public string? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderBasicSli
@@ -489,7 +546,9 @@ public partial class V1beta1SLOSpecInitProviderBasicSli
     [JsonPropertyName("version")]
     public IList<string>? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCutRange
@@ -502,7 +561,9 @@ public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCutRan
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCut
@@ -515,7 +576,9 @@ public partial class V1beta1SLOSpecInitProviderRequestBasedSliDistributionCut
     [JsonPropertyName("range")]
     public V1beta1SLOSpecInitProviderRequestBasedSliDistributionCutRange? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A means to compute a ratio of good_service to total_service. Defines computing this ratio with two TimeSeries monitoring filters Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderRequestBasedSliGoodTotalRatio
@@ -532,7 +595,9 @@ public partial class V1beta1SLOSpecInitProviderRequestBasedSliGoodTotalRatio
     [JsonPropertyName("totalServiceFilter")]
     public string? TotalServiceFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request-based SLI defines a SLI for which atomic units of service are counted directly. A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderRequestBasedSli
@@ -545,7 +610,9 @@ public partial class V1beta1SLOSpecInitProviderRequestBasedSli
     [JsonPropertyName("goodTotalRatio")]
     public V1beta1SLOSpecInitProviderRequestBasedSliGoodTotalRatio? GoodTotalRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderServiceRefPolicy
@@ -558,7 +625,9 @@ public partial class V1beta1SLOSpecInitProviderServiceRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a CustomService in monitoring to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderServiceRef
@@ -575,7 +644,9 @@ public partial class V1beta1SLOSpecInitProviderServiceRef
     [JsonPropertyName("policy")]
     public V1beta1SLOSpecInitProviderServiceRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderServiceSelectorPolicy
@@ -588,7 +659,9 @@ public partial class V1beta1SLOSpecInitProviderServiceSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a CustomService in monitoring to populate service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderServiceSelector
@@ -609,7 +682,9 @@ public partial class V1beta1SLOSpecInitProviderServiceSelector
     [JsonPropertyName("policy")]
     public V1beta1SLOSpecInitProviderServiceSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability
@@ -618,7 +693,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters for a latency threshold SLI. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency
@@ -627,7 +704,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("threshold")]
     public string? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Basic SLI to evaluate to judge window quality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance
@@ -652,7 +731,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("version")]
     public IList<string>? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange
@@ -665,7 +746,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut
@@ -678,7 +761,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("range")]
     public V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A means to compute a ratio of good_service to total_service. Defines computing this ratio with two TimeSeries monitoring filters Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio
@@ -695,7 +780,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("totalServiceFilter")]
     public string? TotalServiceFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Request-based SLI to evaluate to judge window quality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformance
@@ -708,7 +795,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("goodTotalRatio")]
     public V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio? GoodTotalRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if its performance is high enough. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThreshold
@@ -725,7 +814,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRangeRange
@@ -738,7 +829,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRangeR
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRange
@@ -751,7 +844,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricMeanInRange
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRangeRange
@@ -764,7 +859,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRangeRa
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRange
@@ -777,7 +874,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSliMetricSumInRange
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A windows-based SLI defines the criteria for time windows. good_service is defined based off the count of these time windows for which the provided service was of good quality. A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProviderWindowsBasedSli
@@ -802,7 +901,9 @@ public partial class V1beta1SLOSpecInitProviderWindowsBasedSli
     [JsonPropertyName("windowPeriod")]
     public string? WindowPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecInitProvider
@@ -859,7 +960,9 @@ public partial class V1beta1SLOSpecInitProvider
     [JsonPropertyName("windowsBasedSli")]
     public V1beta1SLOSpecInitProviderWindowsBasedSli? WindowsBasedSli { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecProviderConfigRef
@@ -872,7 +975,9 @@ public partial class V1beta1SLOSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpecWriteConnectionSecretToRef
@@ -881,7 +986,9 @@ public partial class V1beta1SLOSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SLOSpec defines the desired state of SLO</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOSpec
@@ -906,7 +1013,9 @@ public partial class V1beta1SLOSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SLOSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderBasicSliAvailability
@@ -915,7 +1024,9 @@ public partial class V1beta1SLOStatusAtProviderBasicSliAvailability
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters for a latency threshold SLI. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderBasicSliLatency
@@ -924,7 +1035,9 @@ public partial class V1beta1SLOStatusAtProviderBasicSliLatency
     [JsonPropertyName("threshold")]
     public string? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Basic Service-Level Indicator (SLI) on a well-known service type. Performance will be computed on the basis of pre-defined metrics. SLIs are used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderBasicSli
@@ -949,7 +1062,9 @@ public partial class V1beta1SLOStatusAtProviderBasicSli
     [JsonPropertyName("version")]
     public IList<string>? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCutRange
@@ -962,7 +1077,9 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCutRan
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCut
@@ -975,7 +1092,9 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSliDistributionCut
     [JsonPropertyName("range")]
     public V1beta1SLOStatusAtProviderRequestBasedSliDistributionCutRange? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A means to compute a ratio of good_service to total_service. Defines computing this ratio with two TimeSeries monitoring filters Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderRequestBasedSliGoodTotalRatio
@@ -992,7 +1111,9 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSliGoodTotalRatio
     [JsonPropertyName("totalServiceFilter")]
     public string? TotalServiceFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A request-based SLI defines a SLI for which atomic units of service are counted directly. A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderRequestBasedSli
@@ -1005,7 +1126,9 @@ public partial class V1beta1SLOStatusAtProviderRequestBasedSli
     [JsonPropertyName("goodTotalRatio")]
     public V1beta1SLOStatusAtProviderRequestBasedSliGoodTotalRatio? GoodTotalRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Availability based SLI, dervied from count of requests made to this service that return successfully. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability
@@ -1014,7 +1137,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Parameters for a latency threshold SLI. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency
@@ -1023,7 +1148,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("threshold")]
     public string? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Basic SLI to evaluate to judge window quality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance
@@ -1048,7 +1175,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("version")]
     public IList<string>? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange
@@ -1061,7 +1190,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Used when good_service is defined by a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution. Defines a distribution TimeSeries filter and thresholds used for measuring good service and total service. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut
@@ -1074,7 +1205,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("range")]
     public V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange? Range { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A means to compute a ratio of good_service to total_service. Defines computing this ratio with two TimeSeries monitoring filters Must specify exactly two of good, bad, and total service filters. The relationship good_service + bad_service = total_service will be assumed. Exactly one of distribution_cut or good_total_ratio can be set. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio
@@ -1091,7 +1224,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("totalServiceFilter")]
     public string? TotalServiceFilter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Request-based SLI to evaluate to judge window quality. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformance
@@ -1104,7 +1239,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("goodTotalRatio")]
     public V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio? GoodTotalRatio { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if its performance is high enough. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThreshold
@@ -1121,7 +1258,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliGoodTotalRatioThre
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRangeRange
@@ -1134,7 +1273,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRangeR
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if the metric's value is in a good range, averaged across returned streams. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Average value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRange
@@ -1147,7 +1288,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricMeanInRange
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Range of numerical values. The computed good_service will be the count of values x in the Distribution such that range.min &lt;= x &lt;= range.max. inclusive of min and max. Open ranges can be defined by setting just one of min or max. Summed value X should satisfy range.min &lt;= X &lt;= range.max for a good window. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRangeRange
@@ -1160,7 +1303,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRangeRa
     [JsonPropertyName("min")]
     public double? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Criterion that describes a window as good if the metric's value is in a good range, summed across returned streams. Summed value X of time_series should satisfy range.min &lt;= X &lt;= range.max for a good window. One of good_bad_metric_filter, good_total_ratio_threshold, metric_mean_in_range, metric_sum_in_range must be set for windows_based_sli. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRange
@@ -1173,7 +1318,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSliMetricSumInRange
     [JsonPropertyName("timeSeries")]
     public string? TimeSeries { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A windows-based SLI defines the criteria for time windows. good_service is defined based off the count of these time windows for which the provided service was of good quality. A SLI describes a good service. It is used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality. Exactly one of the following must be set: basic_sli, request_based_sli, windows_based_sli Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProviderWindowsBasedSli
@@ -1198,7 +1345,9 @@ public partial class V1beta1SLOStatusAtProviderWindowsBasedSli
     [JsonPropertyName("windowPeriod")]
     public string? WindowPeriod { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusAtProvider
@@ -1255,7 +1404,9 @@ public partial class V1beta1SLOStatusAtProvider
     [JsonPropertyName("windowsBasedSli")]
     public V1beta1SLOStatusAtProviderWindowsBasedSli? WindowsBasedSli { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatusConditions
@@ -1284,7 +1435,9 @@ public partial class V1beta1SLOStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SLOStatus defines the observed state of SLO.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SLOStatus
@@ -1301,7 +1454,9 @@ public partial class V1beta1SLOStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SLO is the Schema for the SLOs API. A Service-Level Objective (SLO) describes the level of desired good service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1331,3 +1486,4 @@ public partial class V1beta1SLO : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1SLOStatus? Status { get; set; }
 }
+#nullable disable

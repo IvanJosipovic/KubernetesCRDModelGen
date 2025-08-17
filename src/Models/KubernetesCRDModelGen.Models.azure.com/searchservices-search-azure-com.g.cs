@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.search.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20231101.SearchService Generator information: - Generated from: /search/resource-manager/Microsoft.Search/stable/2023-11-01/search.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20231101storageSearchServiceList : IKubernetesObject<V
     [JsonPropertyName("items")]
     public IList<V1api20231101storageSearchService> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.DataPlaneAadOrApiKeyAuthOption Indicates that either the API key or an access token from a Microsoft Entra ID tenant can be used for authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecAuthOptionsAadOrApiKey
@@ -46,7 +49,9 @@ public partial class V1api20231101storageSearchServiceSpecAuthOptionsAadOrApiKey
     [JsonPropertyName("aadAuthFailureMode")]
     public string? AadAuthFailureMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.DataPlaneAuthOptions Defines the options for how the search service authenticates a data plane request. This cannot be set if 'disableLocalAuth' is set to true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecAuthOptions
@@ -59,7 +64,9 @@ public partial class V1api20231101storageSearchServiceSpecAuthOptions
     [JsonPropertyName("aadOrApiKey")]
     public V1api20231101storageSearchServiceSpecAuthOptionsAadOrApiKey? AadOrApiKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.EncryptionWithCmk Describes a policy that determines how resources within the search service are to be encrypted with customer=managed keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecEncryptionWithCmk
@@ -72,7 +79,9 @@ public partial class V1api20231101storageSearchServiceSpecEncryptionWithCmk
     [JsonPropertyName("enforcement")]
     public string? Enforcement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.Identity Identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecIdentity
@@ -85,7 +94,9 @@ public partial class V1api20231101storageSearchServiceSpecIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.IpRule The IP restriction rule of the search service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecNetworkRuleSetIpRules
@@ -98,7 +109,9 @@ public partial class V1api20231101storageSearchServiceSpecNetworkRuleSetIpRules
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.NetworkRuleSet Network-specific rules that determine how the search service can be reached.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecNetworkRuleSet
@@ -111,7 +124,9 @@ public partial class V1api20231101storageSearchServiceSpecNetworkRuleSet
     [JsonPropertyName("ipRules")]
     public IList<V1api20231101storageSearchServiceSpecNetworkRuleSetIpRules>? IpRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecConfigMapExpressions
@@ -128,7 +143,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecConfigMapE
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecConfigMapsIdentityPrincipalId
@@ -141,7 +158,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecConfigMaps
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecConfigMapsIdentityTenantId
@@ -154,7 +173,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecConfigMaps
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SearchServiceOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecConfigMaps
@@ -171,7 +192,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecConfigMaps
     [JsonPropertyName("identityTenantId")]
     public V1api20231101storageSearchServiceSpecOperatorSpecConfigMapsIdentityTenantId? IdentityTenantId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecretExpressions
@@ -188,7 +211,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecretExpr
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecretsAdminPrimaryKey
@@ -201,7 +226,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecretsAdm
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecretsAdminSecondaryKey
@@ -214,7 +241,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecretsAdm
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecretsQueryKey
@@ -227,7 +256,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecretsQue
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SearchServiceOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecrets
@@ -248,7 +279,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpecSecrets
     [JsonPropertyName("queryKey")]
     public V1api20231101storageSearchServiceSpecOperatorSpecSecretsQueryKey? QueryKey { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SearchServiceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOperatorSpec
@@ -273,7 +306,9 @@ public partial class V1api20231101storageSearchServiceSpecOperatorSpec
     [JsonPropertyName("secrets")]
     public V1api20231101storageSearchServiceSpecOperatorSpecSecrets? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecOwner
@@ -286,7 +321,9 @@ public partial class V1api20231101storageSearchServiceSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.Sku Defines the SKU of a search service, which determines billing rate and capacity limits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecSku
@@ -299,7 +336,9 @@ public partial class V1api20231101storageSearchServiceSpecSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SearchService_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpec
@@ -376,7 +415,9 @@ public partial class V1api20231101storageSearchServiceSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.DataPlaneAadOrApiKeyAuthOption_STATUS Indicates that either the API key or an access token from a Microsoft Entra ID tenant can be used for authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusAuthOptionsAadOrApiKey
@@ -389,7 +430,9 @@ public partial class V1api20231101storageSearchServiceStatusAuthOptionsAadOrApiK
     [JsonPropertyName("aadAuthFailureMode")]
     public string? AadAuthFailureMode { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.DataPlaneAuthOptions_STATUS Defines the options for how the search service authenticates a data plane request. This cannot be set if 'disableLocalAuth' is set to true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusAuthOptions
@@ -406,7 +449,9 @@ public partial class V1api20231101storageSearchServiceStatusAuthOptions
     [JsonPropertyName("apiKeyOnly")]
     public IDictionary<string, JsonNode>? ApiKeyOnly { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusConditions
@@ -439,7 +484,9 @@ public partial class V1api20231101storageSearchServiceStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.EncryptionWithCmk_STATUS Describes a policy that determines how resources within the search service are to be encrypted with customer=managed keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusEncryptionWithCmk
@@ -456,7 +503,9 @@ public partial class V1api20231101storageSearchServiceStatusEncryptionWithCmk
     [JsonPropertyName("enforcement")]
     public string? Enforcement { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.Identity_STATUS Identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusIdentity
@@ -477,7 +526,9 @@ public partial class V1api20231101storageSearchServiceStatusIdentity
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.IpRule_STATUS The IP restriction rule of the search service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusNetworkRuleSetIpRules
@@ -490,7 +541,9 @@ public partial class V1api20231101storageSearchServiceStatusNetworkRuleSetIpRule
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.NetworkRuleSet_STATUS Network-specific rules that determine how the search service can be reached.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusNetworkRuleSet
@@ -503,7 +556,9 @@ public partial class V1api20231101storageSearchServiceStatusNetworkRuleSet
     [JsonPropertyName("ipRules")]
     public IList<V1api20231101storageSearchServiceStatusNetworkRuleSetIpRules>? IpRules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.PrivateEndpointConnection_STATUS Describes an existing private endpoint connection to the search service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusPrivateEndpointConnections
@@ -516,7 +571,9 @@ public partial class V1api20231101storageSearchServiceStatusPrivateEndpointConne
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SharedPrivateLinkResource_STATUS Describes a Shared Private Link Resource managed by the search service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusSharedPrivateLinkResources
@@ -529,7 +586,9 @@ public partial class V1api20231101storageSearchServiceStatusSharedPrivateLinkRes
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.Sku_STATUS Defines the SKU of a search service, which determines billing rate and capacity limits.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatusSku
@@ -542,7 +601,9 @@ public partial class V1api20231101storageSearchServiceStatusSku
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SearchService_STATUS Describes a search service and its current state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceStatus
@@ -639,7 +700,9 @@ public partial class V1api20231101storageSearchServiceStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20231101.SearchService Generator information: - Generated from: /search/resource-manager/Microsoft.Search/stable/2023-11-01/search.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -669,3 +732,4 @@ public partial class V1api20231101storageSearchService : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1api20231101storageSearchServiceStatus? Status { get; set; }
 }
+#nullable disable

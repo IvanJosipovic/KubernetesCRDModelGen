@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafv2.aws.m.upbound.io;
+#nullable enable
 /// <summary>WebACL is the Schema for the WebACLs API. Creates a WAFv2 Web ACL resource. The 'rule' field is not supported due to Kubernetes CRD size limitations with deeply nested fields. Please use the 'ruleJson' field to define rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1WebACLList : IKubernetesObject<V1ListMeta>, IItems<V
     [JsonPropertyName("items")]
     public IList<V1beta1WebACL> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon API Gateway REST APIs forward to AWS WAF for inspection. Applicable only when scope is set to CLOUDFRONT. See api_gateway below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyApiGateway
@@ -42,7 +45,9 @@ public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyApi
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon App Runner services forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See app_runner_service below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyAppRunnerService
@@ -51,7 +56,9 @@ public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyApp
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon CloudFront distributions forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See cloudfront below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyCloudfront
@@ -60,7 +67,9 @@ public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyClo
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon Cognito user pools forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See cognito_user_pool below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyCognitoUserPool
@@ -69,7 +78,9 @@ public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyCog
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected AWS Verfied Access instances forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See verified_access_instance below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyVerifiedAccessInstance
@@ -78,7 +89,9 @@ public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBodyVer
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBody
@@ -103,7 +116,9 @@ public partial class V1beta1WebACLSpecForProviderAssociationConfigRequestBody
     [JsonPropertyName("verifiedAccessInstance")]
     public V1beta1WebACLSpecForProviderAssociationConfigRequestBodyVerifiedAccessInstance? VerifiedAccessInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies custom configurations for the associations between the web ACL and protected resources. See association_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderAssociationConfig
@@ -112,7 +127,9 @@ public partial class V1beta1WebACLSpecForProviderAssociationConfig
     [JsonPropertyName("requestBody")]
     public IList<V1beta1WebACLSpecForProviderAssociationConfigRequestBody>? RequestBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom immunity time. See immunity_time_property below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderCaptchaConfigImmunityTimeProperty
@@ -121,7 +138,9 @@ public partial class V1beta1WebACLSpecForProviderCaptchaConfigImmunityTimeProper
     [JsonPropertyName("immunityTime")]
     public double? ImmunityTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies how AWS WAF should handle CAPTCHA evaluations on the ACL level (used by AWS Bot Control). See captcha_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderCaptchaConfig
@@ -130,7 +149,9 @@ public partial class V1beta1WebACLSpecForProviderCaptchaConfig
     [JsonPropertyName("immunityTimeProperty")]
     public V1beta1WebACLSpecForProviderCaptchaConfigImmunityTimeProperty? ImmunityTimeProperty { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom immunity time. See immunity_time_property below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderChallengeConfigImmunityTimeProperty
@@ -139,7 +160,9 @@ public partial class V1beta1WebACLSpecForProviderChallengeConfigImmunityTimeProp
     [JsonPropertyName("immunityTime")]
     public double? ImmunityTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies how AWS WAF should handle Challenge evaluations on the ACL level (used by AWS Bot Control). See challenge_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderChallengeConfig
@@ -148,7 +171,9 @@ public partial class V1beta1WebACLSpecForProviderChallengeConfig
     [JsonPropertyName("immunityTimeProperty")]
     public V1beta1WebACLSpecForProviderChallengeConfigImmunityTimeProperty? ImmunityTimeProperty { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderCustomResponseBody
@@ -165,7 +190,9 @@ public partial class V1beta1WebACLSpecForProviderCustomResponseBody
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDataProtectionConfigDataProtectionField
@@ -178,7 +205,9 @@ public partial class V1beta1WebACLSpecForProviderDataProtectionConfigDataProtect
     [JsonPropertyName("fieldType")]
     public string? FieldType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDataProtectionConfigDataProtection
@@ -199,7 +228,9 @@ public partial class V1beta1WebACLSpecForProviderDataProtectionConfigDataProtect
     [JsonPropertyName("field")]
     public V1beta1WebACLSpecForProviderDataProtectionConfigDataProtectionField? Field { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDataProtectionConfig
@@ -208,7 +239,9 @@ public partial class V1beta1WebACLSpecForProviderDataProtectionConfig
     [JsonPropertyName("dataProtection")]
     public IList<V1beta1WebACLSpecForProviderDataProtectionConfigDataProtection>? DataProtection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultActionAllowCustomRequestHandlingInsertHeader
@@ -221,7 +254,9 @@ public partial class V1beta1WebACLSpecForProviderDefaultActionAllowCustomRequest
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom handling for the web request. See custom_request_handling below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultActionAllowCustomRequestHandling
@@ -230,7 +265,9 @@ public partial class V1beta1WebACLSpecForProviderDefaultActionAllowCustomRequest
     [JsonPropertyName("insertHeader")]
     public IList<V1beta1WebACLSpecForProviderDefaultActionAllowCustomRequestHandlingInsertHeader>? InsertHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that AWS WAF should allow requests by default. See allow below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultActionAllow
@@ -239,7 +276,9 @@ public partial class V1beta1WebACLSpecForProviderDefaultActionAllow
     [JsonPropertyName("customRequestHandling")]
     public V1beta1WebACLSpecForProviderDefaultActionAllowCustomRequestHandling? CustomRequestHandling { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultActionBlockCustomResponseResponseHeader
@@ -252,7 +291,9 @@ public partial class V1beta1WebACLSpecForProviderDefaultActionBlockCustomRespons
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a custom response for the web request. See custom_response below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultActionBlockCustomResponse
@@ -269,7 +310,9 @@ public partial class V1beta1WebACLSpecForProviderDefaultActionBlockCustomRespons
     [JsonPropertyName("responseHeader")]
     public IList<V1beta1WebACLSpecForProviderDefaultActionBlockCustomResponseResponseHeader>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that AWS WAF should block requests by default. See block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultActionBlock
@@ -278,7 +321,9 @@ public partial class V1beta1WebACLSpecForProviderDefaultActionBlock
     [JsonPropertyName("customResponse")]
     public V1beta1WebACLSpecForProviderDefaultActionBlockCustomResponse? CustomResponse { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to perform if none of the rules contained in the WebACL match. See default_action below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultAction
@@ -291,7 +336,9 @@ public partial class V1beta1WebACLSpecForProviderDefaultAction
     [JsonPropertyName("block")]
     public V1beta1WebACLSpecForProviderDefaultActionBlock? Block { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines and enables Amazon CloudWatch metrics and web request sample collection. See visibility_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderVisibilityConfig
@@ -308,7 +355,9 @@ public partial class V1beta1WebACLSpecForProviderVisibilityConfig
     [JsonPropertyName("sampledRequestsEnabled")]
     public bool? SampledRequestsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProvider
@@ -369,7 +418,9 @@ public partial class V1beta1WebACLSpecForProvider
     [JsonPropertyName("visibilityConfig")]
     public V1beta1WebACLSpecForProviderVisibilityConfig? VisibilityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon API Gateway REST APIs forward to AWS WAF for inspection. Applicable only when scope is set to CLOUDFRONT. See api_gateway below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyApiGateway
@@ -378,7 +429,9 @@ public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyAp
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon App Runner services forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See app_runner_service below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyAppRunnerService
@@ -387,7 +440,9 @@ public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyAp
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon CloudFront distributions forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See cloudfront below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyCloudfront
@@ -396,7 +451,9 @@ public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyCl
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon Cognito user pools forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See cognito_user_pool below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyCognitoUserPool
@@ -405,7 +462,9 @@ public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyCo
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected AWS Verfied Access instances forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See verified_access_instance below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyVerifiedAccessInstance
@@ -414,7 +473,9 @@ public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyVe
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBody
@@ -439,7 +500,9 @@ public partial class V1beta1WebACLSpecInitProviderAssociationConfigRequestBody
     [JsonPropertyName("verifiedAccessInstance")]
     public V1beta1WebACLSpecInitProviderAssociationConfigRequestBodyVerifiedAccessInstance? VerifiedAccessInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies custom configurations for the associations between the web ACL and protected resources. See association_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderAssociationConfig
@@ -448,7 +511,9 @@ public partial class V1beta1WebACLSpecInitProviderAssociationConfig
     [JsonPropertyName("requestBody")]
     public IList<V1beta1WebACLSpecInitProviderAssociationConfigRequestBody>? RequestBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom immunity time. See immunity_time_property below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderCaptchaConfigImmunityTimeProperty
@@ -457,7 +522,9 @@ public partial class V1beta1WebACLSpecInitProviderCaptchaConfigImmunityTimePrope
     [JsonPropertyName("immunityTime")]
     public double? ImmunityTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies how AWS WAF should handle CAPTCHA evaluations on the ACL level (used by AWS Bot Control). See captcha_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderCaptchaConfig
@@ -466,7 +533,9 @@ public partial class V1beta1WebACLSpecInitProviderCaptchaConfig
     [JsonPropertyName("immunityTimeProperty")]
     public V1beta1WebACLSpecInitProviderCaptchaConfigImmunityTimeProperty? ImmunityTimeProperty { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom immunity time. See immunity_time_property below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderChallengeConfigImmunityTimeProperty
@@ -475,7 +544,9 @@ public partial class V1beta1WebACLSpecInitProviderChallengeConfigImmunityTimePro
     [JsonPropertyName("immunityTime")]
     public double? ImmunityTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies how AWS WAF should handle Challenge evaluations on the ACL level (used by AWS Bot Control). See challenge_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderChallengeConfig
@@ -484,7 +555,9 @@ public partial class V1beta1WebACLSpecInitProviderChallengeConfig
     [JsonPropertyName("immunityTimeProperty")]
     public V1beta1WebACLSpecInitProviderChallengeConfigImmunityTimeProperty? ImmunityTimeProperty { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderCustomResponseBody
@@ -501,7 +574,9 @@ public partial class V1beta1WebACLSpecInitProviderCustomResponseBody
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtectionField
@@ -514,7 +589,9 @@ public partial class V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtec
     [JsonPropertyName("fieldType")]
     public string? FieldType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtection
@@ -535,7 +612,9 @@ public partial class V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtec
     [JsonPropertyName("field")]
     public V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtectionField? Field { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDataProtectionConfig
@@ -544,7 +623,9 @@ public partial class V1beta1WebACLSpecInitProviderDataProtectionConfig
     [JsonPropertyName("dataProtection")]
     public IList<V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtection>? DataProtection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultActionAllowCustomRequestHandlingInsertHeader
@@ -557,7 +638,9 @@ public partial class V1beta1WebACLSpecInitProviderDefaultActionAllowCustomReques
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom handling for the web request. See custom_request_handling below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultActionAllowCustomRequestHandling
@@ -566,7 +649,9 @@ public partial class V1beta1WebACLSpecInitProviderDefaultActionAllowCustomReques
     [JsonPropertyName("insertHeader")]
     public IList<V1beta1WebACLSpecInitProviderDefaultActionAllowCustomRequestHandlingInsertHeader>? InsertHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that AWS WAF should allow requests by default. See allow below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultActionAllow
@@ -575,7 +660,9 @@ public partial class V1beta1WebACLSpecInitProviderDefaultActionAllow
     [JsonPropertyName("customRequestHandling")]
     public V1beta1WebACLSpecInitProviderDefaultActionAllowCustomRequestHandling? CustomRequestHandling { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultActionBlockCustomResponseResponseHeader
@@ -588,7 +675,9 @@ public partial class V1beta1WebACLSpecInitProviderDefaultActionBlockCustomRespon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a custom response for the web request. See custom_response below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultActionBlockCustomResponse
@@ -605,7 +694,9 @@ public partial class V1beta1WebACLSpecInitProviderDefaultActionBlockCustomRespon
     [JsonPropertyName("responseHeader")]
     public IList<V1beta1WebACLSpecInitProviderDefaultActionBlockCustomResponseResponseHeader>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that AWS WAF should block requests by default. See block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultActionBlock
@@ -614,7 +705,9 @@ public partial class V1beta1WebACLSpecInitProviderDefaultActionBlock
     [JsonPropertyName("customResponse")]
     public V1beta1WebACLSpecInitProviderDefaultActionBlockCustomResponse? CustomResponse { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to perform if none of the rules contained in the WebACL match. See default_action below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultAction
@@ -627,7 +720,9 @@ public partial class V1beta1WebACLSpecInitProviderDefaultAction
     [JsonPropertyName("block")]
     public V1beta1WebACLSpecInitProviderDefaultActionBlock? Block { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines and enables Amazon CloudWatch metrics and web request sample collection. See visibility_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderVisibilityConfig
@@ -644,7 +739,9 @@ public partial class V1beta1WebACLSpecInitProviderVisibilityConfig
     [JsonPropertyName("sampledRequestsEnabled")]
     public bool? SampledRequestsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProvider
@@ -701,7 +798,9 @@ public partial class V1beta1WebACLSpecInitProvider
     [JsonPropertyName("visibilityConfig")]
     public V1beta1WebACLSpecInitProviderVisibilityConfig? VisibilityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecProviderConfigRef
@@ -714,7 +813,9 @@ public partial class V1beta1WebACLSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecWriteConnectionSecretToRef
@@ -723,7 +824,9 @@ public partial class V1beta1WebACLSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACLSpec defines the desired state of WebACL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpec
@@ -748,7 +851,9 @@ public partial class V1beta1WebACLSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1WebACLSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon API Gateway REST APIs forward to AWS WAF for inspection. Applicable only when scope is set to CLOUDFRONT. See api_gateway below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyApiGateway
@@ -757,7 +862,9 @@ public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyAp
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon App Runner services forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See app_runner_service below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyAppRunnerService
@@ -766,7 +873,9 @@ public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyAp
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon CloudFront distributions forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See cloudfront below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyCloudfront
@@ -775,7 +884,9 @@ public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyCl
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected Amazon Cognito user pools forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See cognito_user_pool below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyCognitoUserPool
@@ -784,7 +895,9 @@ public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyCo
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Customizes the request body that your protected AWS Verfied Access instances forward to AWS WAF for inspection. Applicable only when scope is set to REGIONAL. See verified_access_instance below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyVerifiedAccessInstance
@@ -793,7 +906,9 @@ public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyVe
     [JsonPropertyName("defaultSizeInspectionLimit")]
     public string? DefaultSizeInspectionLimit { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBody
@@ -818,7 +933,9 @@ public partial class V1beta1WebACLStatusAtProviderAssociationConfigRequestBody
     [JsonPropertyName("verifiedAccessInstance")]
     public V1beta1WebACLStatusAtProviderAssociationConfigRequestBodyVerifiedAccessInstance? VerifiedAccessInstance { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies custom configurations for the associations between the web ACL and protected resources. See association_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderAssociationConfig
@@ -827,7 +944,9 @@ public partial class V1beta1WebACLStatusAtProviderAssociationConfig
     [JsonPropertyName("requestBody")]
     public IList<V1beta1WebACLStatusAtProviderAssociationConfigRequestBody>? RequestBody { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom immunity time. See immunity_time_property below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderCaptchaConfigImmunityTimeProperty
@@ -836,7 +955,9 @@ public partial class V1beta1WebACLStatusAtProviderCaptchaConfigImmunityTimePrope
     [JsonPropertyName("immunityTime")]
     public double? ImmunityTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies how AWS WAF should handle CAPTCHA evaluations on the ACL level (used by AWS Bot Control). See captcha_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderCaptchaConfig
@@ -845,7 +966,9 @@ public partial class V1beta1WebACLStatusAtProviderCaptchaConfig
     [JsonPropertyName("immunityTimeProperty")]
     public V1beta1WebACLStatusAtProviderCaptchaConfigImmunityTimeProperty? ImmunityTimeProperty { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom immunity time. See immunity_time_property below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderChallengeConfigImmunityTimeProperty
@@ -854,7 +977,9 @@ public partial class V1beta1WebACLStatusAtProviderChallengeConfigImmunityTimePro
     [JsonPropertyName("immunityTime")]
     public double? ImmunityTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies how AWS WAF should handle Challenge evaluations on the ACL level (used by AWS Bot Control). See challenge_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderChallengeConfig
@@ -863,7 +988,9 @@ public partial class V1beta1WebACLStatusAtProviderChallengeConfig
     [JsonPropertyName("immunityTimeProperty")]
     public V1beta1WebACLStatusAtProviderChallengeConfigImmunityTimeProperty? ImmunityTimeProperty { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderCustomResponseBody
@@ -880,7 +1007,9 @@ public partial class V1beta1WebACLStatusAtProviderCustomResponseBody
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtectionField
@@ -893,7 +1022,9 @@ public partial class V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtec
     [JsonPropertyName("fieldType")]
     public string? FieldType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtection
@@ -914,7 +1045,9 @@ public partial class V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtec
     [JsonPropertyName("field")]
     public V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtectionField? Field { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDataProtectionConfig
@@ -923,7 +1056,9 @@ public partial class V1beta1WebACLStatusAtProviderDataProtectionConfig
     [JsonPropertyName("dataProtection")]
     public IList<V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtection>? DataProtection { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultActionAllowCustomRequestHandlingInsertHeader
@@ -936,7 +1071,9 @@ public partial class V1beta1WebACLStatusAtProviderDefaultActionAllowCustomReques
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines custom handling for the web request. See custom_request_handling below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultActionAllowCustomRequestHandling
@@ -945,7 +1082,9 @@ public partial class V1beta1WebACLStatusAtProviderDefaultActionAllowCustomReques
     [JsonPropertyName("insertHeader")]
     public IList<V1beta1WebACLStatusAtProviderDefaultActionAllowCustomRequestHandlingInsertHeader>? InsertHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that AWS WAF should allow requests by default. See allow below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultActionAllow
@@ -954,7 +1093,9 @@ public partial class V1beta1WebACLStatusAtProviderDefaultActionAllow
     [JsonPropertyName("customRequestHandling")]
     public V1beta1WebACLStatusAtProviderDefaultActionAllowCustomRequestHandling? CustomRequestHandling { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultActionBlockCustomResponseResponseHeader
@@ -967,7 +1108,9 @@ public partial class V1beta1WebACLStatusAtProviderDefaultActionBlockCustomRespon
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines a custom response for the web request. See custom_response below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultActionBlockCustomResponse
@@ -984,7 +1127,9 @@ public partial class V1beta1WebACLStatusAtProviderDefaultActionBlockCustomRespon
     [JsonPropertyName("responseHeader")]
     public IList<V1beta1WebACLStatusAtProviderDefaultActionBlockCustomResponseResponseHeader>? ResponseHeader { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies that AWS WAF should block requests by default. See block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultActionBlock
@@ -993,7 +1138,9 @@ public partial class V1beta1WebACLStatusAtProviderDefaultActionBlock
     [JsonPropertyName("customResponse")]
     public V1beta1WebACLStatusAtProviderDefaultActionBlockCustomResponse? CustomResponse { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Action to perform if none of the rules contained in the WebACL match. See default_action below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultAction
@@ -1006,7 +1153,9 @@ public partial class V1beta1WebACLStatusAtProviderDefaultAction
     [JsonPropertyName("block")]
     public V1beta1WebACLStatusAtProviderDefaultActionBlock? Block { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Defines and enables Amazon CloudWatch metrics and web request sample collection. See visibility_config below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderVisibilityConfig
@@ -1023,7 +1172,9 @@ public partial class V1beta1WebACLStatusAtProviderVisibilityConfig
     [JsonPropertyName("sampledRequestsEnabled")]
     public bool? SampledRequestsEnabled { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProvider
@@ -1108,7 +1259,9 @@ public partial class V1beta1WebACLStatusAtProvider
     [JsonPropertyName("visibilityConfig")]
     public V1beta1WebACLStatusAtProviderVisibilityConfig? VisibilityConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusConditions
@@ -1137,7 +1290,9 @@ public partial class V1beta1WebACLStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACLStatus defines the observed state of WebACL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatus
@@ -1154,7 +1309,9 @@ public partial class V1beta1WebACLStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebACL is the Schema for the WebACLs API. Creates a WAFv2 Web ACL resource. The 'rule' field is not supported due to Kubernetes CRD size limitations with deeply nested fields. Please use the 'ruleJson' field to define rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1184,3 +1341,4 @@ public partial class V1beta1WebACL : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1WebACLStatus? Status { get; set; }
 }
+#nullable disable

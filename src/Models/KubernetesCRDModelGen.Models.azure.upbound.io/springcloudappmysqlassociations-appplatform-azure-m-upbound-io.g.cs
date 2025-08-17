@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.m.upbound.io;
+#nullable enable
 /// <summary>SpringCloudAppMySQLAssociation is the Schema for the SpringCloudAppMySQLAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudAppMySQLAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabas
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FlexibleDatabase in dbformysql to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRef
@@ -63,7 +68,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabas
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabas
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FlexibleDatabase in dbformysql to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSelector
@@ -97,7 +106,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabas
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRefPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRef
@@ -127,7 +140,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlSe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlSe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdSelector
@@ -161,7 +178,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlSe
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the password which should be used when connecting to the MySQL Database from the Spring Cloud App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderPasswordSecretRef
@@ -174,7 +193,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderPasswor
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdRefPolicy
@@ -187,7 +208,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdRef
@@ -204,7 +227,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringC
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdSelectorPolicy
@@ -217,7 +242,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringC
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudApp in appplatform to populate springCloudAppId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdSelector
@@ -238,7 +265,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringC
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRefPolicy
@@ -251,7 +280,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FlexibleServer in dbformysql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRef
@@ -268,7 +299,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernam
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelectorPolicy
@@ -281,7 +314,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FlexibleServer in dbformysql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelector
@@ -302,7 +337,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernam
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProvider
@@ -359,7 +396,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProvider
     [JsonPropertyName("usernameSelector")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelector? UsernameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRefPolicy
@@ -372,7 +411,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDataba
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FlexibleDatabase in dbformysql to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRef
@@ -389,7 +430,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDataba
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSelectorPolicy
@@ -402,7 +445,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDataba
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FlexibleDatabase in dbformysql to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSelector
@@ -423,7 +468,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDataba
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRefPolicy
@@ -436,7 +483,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRef
@@ -453,7 +502,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlS
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdSelectorPolicy
@@ -466,7 +517,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdSelector
@@ -487,7 +540,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlS
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specifies the password which should be used when connecting to the MySQL Database from the Spring Cloud App.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderPasswordSecretRef
@@ -500,7 +555,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderPasswo
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRefPolicy
@@ -513,7 +570,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUserna
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FlexibleServer in dbformysql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRef
@@ -530,7 +589,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUserna
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelectorPolicy
@@ -543,7 +604,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUserna
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FlexibleServer in dbformysql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelector
@@ -564,7 +627,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUserna
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProvider
@@ -609,7 +674,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProvider
     [JsonPropertyName("usernameSelector")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelector? UsernameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecProviderConfigRef
@@ -622,7 +689,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecWriteConnectionSecretToRef
@@ -631,7 +700,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecWriteConnectionSec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppMySQLAssociationSpec defines the desired state of SpringCloudAppMySQLAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpec
@@ -656,7 +727,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudAppMySQLAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationStatusAtProvider
@@ -681,7 +754,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationStatusAtProvider
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationStatusConditions
@@ -710,7 +785,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppMySQLAssociationStatus defines the observed state of SpringCloudAppMySQLAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationStatus
@@ -727,7 +804,9 @@ public partial class V1beta1SpringCloudAppMySQLAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudAppMySQLAssociation is the Schema for the SpringCloudAppMySQLAssociations API. Associates a</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -757,3 +836,4 @@ public partial class V1beta1SpringCloudAppMySQLAssociation : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1SpringCloudAppMySQLAssociationStatus? Status { get; set; }
 }
+#nullable disable

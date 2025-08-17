@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetworkGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayList : IKubernetes
     [JsonPropertyName("items")]
     public IList<V1api20240301storageVirtualNetworkGateway> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayAutoScaleBounds</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecAutoScaleConfigurationBounds
@@ -50,7 +53,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecAutoScaleConfi
     [JsonPropertyName("min")]
     public int? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayAutoScaleConfiguration Virtual Network Gateway Autoscale Configuration details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecAutoScaleConfiguration
@@ -63,7 +68,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecAutoScaleConfi
     [JsonPropertyName("bounds")]
     public V1api20240301storageVirtualNetworkGatewaySpecAutoScaleConfigurationBounds? Bounds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IPConfigurationBgpPeeringAddress Properties of IPConfigurationBgpPeeringAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecBgpSettingsBgpPeeringAddresses
@@ -80,7 +87,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecBgpSettingsBgp
     [JsonPropertyName("ipconfigurationId")]
     public string? IpconfigurationId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BgpSettings BGP settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecBgpSettings
@@ -105,7 +114,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecBgpSettings
     [JsonPropertyName("peerWeight")]
     public int? PeerWeight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecCustomRoutes
@@ -118,7 +129,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecCustomRoutes
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecExtendedLocation
@@ -135,7 +148,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecExtendedLocati
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecGatewayDefaultSiteReference
@@ -156,7 +171,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecGatewayDefault
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecGatewayDefaultSite
@@ -169,7 +186,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecGatewayDefault
     [JsonPropertyName("reference")]
     public V1api20240301storageVirtualNetworkGatewaySpecGatewayDefaultSiteReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecIdentityUserAssignedIdentitiesReference
@@ -190,7 +209,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecIdentityUserAs
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecIdentityUserAssignedIdentities
@@ -203,7 +224,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecIdentityUserAs
     [JsonPropertyName("reference")]
     public V1api20240301storageVirtualNetworkGatewaySpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ManagedServiceIdentity Identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecIdentity
@@ -220,7 +243,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IList<V1api20240301storageVirtualNetworkGatewaySpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfigurationsPublicIPAddressReference
@@ -241,7 +266,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfiguratio
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfigurationsPublicIPAddress
@@ -254,7 +281,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfiguratio
     [JsonPropertyName("reference")]
     public V1api20240301storageVirtualNetworkGatewaySpecIpConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfigurationsSubnetReference
@@ -275,7 +304,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfiguratio
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfigurationsSubnet
@@ -288,7 +319,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfiguratio
     [JsonPropertyName("reference")]
     public V1api20240301storageVirtualNetworkGatewaySpecIpConfigurationsSubnetReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayIPConfiguration IP configuration for virtual network gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfigurations
@@ -313,7 +346,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecIpConfiguratio
     [JsonPropertyName("subnet")]
     public V1api20240301storageVirtualNetworkGatewaySpecIpConfigurationsSubnet? Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnNatRuleMapping Vpn NatRule mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecNatRulesExternalMappings
@@ -330,7 +365,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecNatRulesExtern
     [JsonPropertyName("portRange")]
     public string? PortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnNatRuleMapping Vpn NatRule mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecNatRulesInternalMappings
@@ -347,7 +384,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecNatRulesIntern
     [JsonPropertyName("portRange")]
     public string? PortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayNatRule VirtualNetworkGatewayNatRule Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecNatRules
@@ -380,7 +419,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecNatRules
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecOperatorSpecConfigMapExpressions
@@ -397,7 +438,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecOperatorSpecCo
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecOperatorSpecSecretExpressions
@@ -414,7 +457,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecOperatorSpecSe
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecOperatorSpec
@@ -431,7 +476,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20240301storageVirtualNetworkGatewaySpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecOwner
@@ -444,7 +491,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewaySku VirtualNetworkGatewaySku details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecSku
@@ -461,7 +510,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVNetExtendedLocationResourceReference
@@ -482,7 +533,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVNetExtendedLo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayPolicyGroupMember Vpn Client Connection configuration PolicyGroup member</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVirtualNetworkGatewayPolicyGroupsPolicyMembers
@@ -503,7 +556,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVirtualNetwork
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayPolicyGroup Parameters for VirtualNetworkGatewayPolicyGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVirtualNetworkGatewayPolicyGroups
@@ -528,7 +583,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVirtualNetwork
     [JsonPropertyName("priority")]
     public int? Priority { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.RadiusServer Radius Server Settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationRadiusServers
@@ -549,7 +606,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfi
     [JsonPropertyName("radiusServerSecret")]
     public string? RadiusServerSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationVngClientConnectionConfigurationsReference
@@ -570,7 +629,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VngClientConnectionConfiguration A vpn client connection configuration for client connection configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationVngClientConnectionConfigurations
@@ -583,7 +644,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfi
     [JsonPropertyName("reference")]
     public V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationVngClientConnectionConfigurationsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientAddressPool
@@ -596,7 +659,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfi
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IpsecPolicy An IPSec Policy configuration for a virtual network gateway connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientIpsecPolicies
@@ -637,7 +702,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfi
     [JsonPropertyName("saLifeTimeSeconds")]
     public int? SaLifeTimeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnClientRevokedCertificate VPN client revoked certificate of virtual network gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientRevokedCertificates
@@ -654,7 +721,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfi
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnClientRootCertificate VPN client root certificate of virtual network gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientRootCertificates
@@ -671,7 +740,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfi
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnClientConfiguration VpnClientConfiguration for P2S client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfiguration
@@ -732,7 +803,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfi
     [JsonPropertyName("vpnClientRootCertificates")]
     public IList<V1api20240301storageVirtualNetworkGatewaySpecVpnClientConfigurationVpnClientRootCertificates>? VpnClientRootCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGateway_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewaySpec
@@ -865,7 +938,9 @@ public partial class V1api20240301storageVirtualNetworkGatewaySpec
     [JsonPropertyName("vpnType")]
     public string? VpnType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayAutoScaleBounds_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusAutoScaleConfigurationBounds
@@ -882,7 +957,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusAutoScaleCon
     [JsonPropertyName("min")]
     public int? Min { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayAutoScaleConfiguration_STATUS Virtual Network Gateway Autoscale Configuration details</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusAutoScaleConfiguration
@@ -895,7 +972,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusAutoScaleCon
     [JsonPropertyName("bounds")]
     public V1api20240301storageVirtualNetworkGatewayStatusAutoScaleConfigurationBounds? Bounds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IPConfigurationBgpPeeringAddress_STATUS Properties of IPConfigurationBgpPeeringAddress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusBgpSettingsBgpPeeringAddresses
@@ -920,7 +999,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusBgpSettingsB
     [JsonPropertyName("tunnelIpAddresses")]
     public IList<string>? TunnelIpAddresses { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.BgpSettings_STATUS BGP settings details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusBgpSettings
@@ -945,7 +1026,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusBgpSettings
     [JsonPropertyName("peerWeight")]
     public int? PeerWeight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusConditions
@@ -978,7 +1061,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusCustomRoutes
@@ -991,7 +1076,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusCustomRoutes
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusExtendedLocation
@@ -1008,7 +1095,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusExtendedLoca
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusGatewayDefaultSite
@@ -1021,7 +1110,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusGatewayDefau
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ManagedServiceIdentity_UserAssignedIdentities_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusIdentityUserAssignedIdentities
@@ -1038,7 +1129,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusIdentityUser
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.ManagedServiceIdentity_STATUS Identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusIdentity
@@ -1063,7 +1156,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusIdentity
     [JsonPropertyName("userAssignedIdentities")]
     public IDictionary<string, V1api20240301storageVirtualNetworkGatewayStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusIpConfigurationsPublicIPAddress
@@ -1076,7 +1171,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusIpConfigurat
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusIpConfigurationsSubnet
@@ -1089,7 +1186,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusIpConfigurat
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayIPConfiguration_STATUS IP configuration for virtual network gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusIpConfigurations
@@ -1130,7 +1229,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusIpConfigurat
     [JsonPropertyName("subnet")]
     public V1api20240301storageVirtualNetworkGatewayStatusIpConfigurationsSubnet? Subnet { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnNatRuleMapping_STATUS Vpn NatRule mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusNatRulesExternalMappings
@@ -1147,7 +1248,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusNatRulesExte
     [JsonPropertyName("portRange")]
     public string? PortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnNatRuleMapping_STATUS Vpn NatRule mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusNatRulesInternalMappings
@@ -1164,7 +1267,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusNatRulesInte
     [JsonPropertyName("portRange")]
     public string? PortRange { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayNatRule_STATUS VirtualNetworkGatewayNatRule Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusNatRules
@@ -1213,7 +1318,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusNatRules
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewaySku_STATUS VirtualNetworkGatewaySku details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusSku
@@ -1234,7 +1341,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusSku
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayPolicyGroupMember_STATUS Vpn Client Connection configuration PolicyGroup member</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVirtualNetworkGatewayPolicyGroupsPolicyMembers
@@ -1255,7 +1364,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVirtualNetwo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVirtualNetworkGatewayPolicyGroupsVngClientConnectionConfigurations
@@ -1268,7 +1379,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVirtualNetwo
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGatewayPolicyGroup_STATUS Parameters for VirtualNetworkGatewayPolicyGroup.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVirtualNetworkGatewayPolicyGroups
@@ -1309,7 +1422,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVirtualNetwo
     [JsonPropertyName("vngClientConnectionConfigurations")]
     public IList<V1api20240301storageVirtualNetworkGatewayStatusVirtualNetworkGatewayPolicyGroupsVngClientConnectionConfigurations>? VngClientConnectionConfigurations { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.RadiusServer_STATUS Radius Server Settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientConfigurationRadiusServers
@@ -1330,7 +1445,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientCon
     [JsonPropertyName("radiusServerSecret")]
     public string? RadiusServerSecret { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VngClientConnectionConfiguration_STATUS A vpn client connection configuration for client connection configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientConfigurationVngClientConnectionConfigurations
@@ -1343,7 +1460,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientCon
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientAddressPool
@@ -1356,7 +1475,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientCon
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.IpsecPolicy_STATUS An IPSec Policy configuration for a virtual network gateway connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientIpsecPolicies
@@ -1397,7 +1518,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientCon
     [JsonPropertyName("saLifeTimeSeconds")]
     public int? SaLifeTimeSeconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnClientRevokedCertificate_STATUS VPN client revoked certificate of virtual network gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientRevokedCertificates
@@ -1426,7 +1549,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientCon
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnClientRootCertificate_STATUS VPN client root certificate of virtual network gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientRootCertificates
@@ -1455,7 +1580,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientCon
     [JsonPropertyName("publicCertData")]
     public string? PublicCertData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VpnClientConfiguration_STATUS VpnClientConfiguration for P2S client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientConfiguration
@@ -1516,7 +1643,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatusVpnClientCon
     [JsonPropertyName("vpnClientRootCertificates")]
     public IList<V1api20240301storageVirtualNetworkGatewayStatusVpnClientConfigurationVpnClientRootCertificates>? VpnClientRootCertificates { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGateway_STATUS_VirtualNetworkGateway_SubResourceEmbedded A common class for general resource information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageVirtualNetworkGatewayStatus
@@ -1665,7 +1794,9 @@ public partial class V1api20240301storageVirtualNetworkGatewayStatus
     [JsonPropertyName("vpnType")]
     public string? VpnType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20240301.VirtualNetworkGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetworkGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1695,3 +1826,4 @@ public partial class V1api20240301storageVirtualNetworkGateway : IKubernetesObje
     [JsonPropertyName("status")]
     public V1api20240301storageVirtualNetworkGatewayStatus? Status { get; set; }
 }
+#nullable disable

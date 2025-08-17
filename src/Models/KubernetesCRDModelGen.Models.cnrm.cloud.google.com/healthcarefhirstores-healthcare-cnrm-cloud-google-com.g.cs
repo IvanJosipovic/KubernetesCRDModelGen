@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1alpha1HealthcareFHIRStoreList : IKubernetesObject<V1ListM
     [JsonPropertyName("items")]
     public IList<V1alpha1HealthcareFHIRStore> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecNotificationConfig
@@ -42,7 +45,9 @@ public partial class V1alpha1HealthcareFHIRStoreSpecNotificationConfig
     [JsonPropertyName("pubsubTopic")]
     public string PubsubTopic { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecNotificationConfigs
@@ -59,7 +64,9 @@ public partial class V1alpha1HealthcareFHIRStoreSpecNotificationConfigs
     [JsonPropertyName("sendPreviousResourceOnDelete")]
     public bool? SendPreviousResourceOnDelete { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for exported BigQuery tables to be partitioned by FHIR resource's last updated time column.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfig
@@ -72,7 +79,9 @@ public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestina
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the exported BigQuery schema.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestinationSchemaConfig
@@ -89,7 +98,9 @@ public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestina
     [JsonPropertyName("schemaType")]
     public string? SchemaType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The destination BigQuery structure that contains both the dataset location and corresponding schema config. The output is organized in one table per resource type. The server reuses the existing tables (if any) that are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given resource type, the server attempts to create one. See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestination
@@ -102,7 +113,9 @@ public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestina
     [JsonPropertyName("schemaConfig")]
     public V1alpha1HealthcareFHIRStoreSpecStreamConfigsBigqueryDestinationSchemaConfig SchemaConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigs
@@ -115,7 +128,9 @@ public partial class V1alpha1HealthcareFHIRStoreSpecStreamConfigs
     [JsonPropertyName("resourceTypes")]
     public IList<string>? ResourceTypes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreSpec
@@ -168,7 +183,9 @@ public partial class V1alpha1HealthcareFHIRStoreSpec
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreStatusConditions
@@ -193,7 +210,9 @@ public partial class V1alpha1HealthcareFHIRStoreStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1HealthcareFHIRStoreStatus
@@ -210,7 +229,9 @@ public partial class V1alpha1HealthcareFHIRStoreStatus
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -240,3 +261,4 @@ public partial class V1alpha1HealthcareFHIRStore : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1HealthcareFHIRStoreStatus? Status { get; set; }
 }
+#nullable disable

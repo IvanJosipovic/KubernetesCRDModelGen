@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.memcache.cnrm.cloud.google.com;
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1MemcacheInstanceList : IKubernetesObject<V1ListMeta>
     [JsonPropertyName("items")]
     public IList<V1beta1MemcacheInstance> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Required. Start time of the window in UTC time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
@@ -54,7 +57,9 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenan
     [JsonPropertyName("seconds")]
     public int? Seconds { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
@@ -71,7 +76,9 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenan
     [JsonPropertyName("startTime")]
     public V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Maintenance policy for an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecMaintenancePolicy
@@ -92,7 +99,9 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicy
     [JsonPropertyName("weeklyMaintenanceWindow")]
     public IList<V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow> WeeklyMaintenanceWindow { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. User-specified parameters for this memcache instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecMemcacheParameters
@@ -105,7 +114,9 @@ public partial class V1beta1MemcacheInstanceSpecMemcacheParameters
     [JsonPropertyName("params")]
     public IDictionary<string, string>? Params { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The full name of the network to connect the instance to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecNetworkRef
@@ -122,7 +133,9 @@ public partial class V1beta1MemcacheInstanceSpecNetworkRef
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Immutable. Configuration for memcache nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpecNodeConfig
@@ -135,7 +148,9 @@ public partial class V1beta1MemcacheInstanceSpecNodeConfig
     [JsonPropertyName("memorySizeMb")]
     public int MemorySizeMb { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceSpec
@@ -180,7 +195,9 @@ public partial class V1beta1MemcacheInstanceSpec
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceStatusConditions
@@ -205,7 +222,9 @@ public partial class V1beta1MemcacheInstanceStatusConditions
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
@@ -222,7 +241,9 @@ public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
     [JsonPropertyName("startTime")]
     public string? StartTime { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceStatusMemcacheNodes
@@ -247,7 +268,9 @@ public partial class V1beta1MemcacheInstanceStatusMemcacheNodes
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MemcacheInstanceStatus
@@ -280,7 +303,9 @@ public partial class V1beta1MemcacheInstanceStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -310,3 +335,4 @@ public partial class V1beta1MemcacheInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1MemcacheInstanceStatus? Status { get; set; }
 }
+#nullable disable

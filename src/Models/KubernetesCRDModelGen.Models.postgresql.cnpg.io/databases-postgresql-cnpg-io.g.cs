@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+#nullable enable
 /// <summary>Database is the Schema for the databases API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1DatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1Da
     [JsonPropertyName("items")]
     public IList<V1Database> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The name of the PostgreSQL cluster hosting the database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DatabaseSpecCluster
@@ -42,7 +45,9 @@ public partial class V1DatabaseSpecCluster
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ExtensionSpec configures an extension in a database</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DatabaseSpecExtensions
@@ -63,7 +68,9 @@ public partial class V1DatabaseSpecExtensions
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SchemaSpec configures a schema in a database</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DatabaseSpecSchemas
@@ -80,7 +87,9 @@ public partial class V1DatabaseSpecSchemas
     [JsonPropertyName("owner")]
     public string? Owner { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Specification of the desired Database. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DatabaseSpec
@@ -169,7 +178,9 @@ public partial class V1DatabaseSpec
     [JsonPropertyName("template")]
     public string? Template { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseObjectStatus is the status of the managed database objects</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DatabaseStatusExtensions
@@ -186,7 +197,9 @@ public partial class V1DatabaseStatusExtensions
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DatabaseObjectStatus is the status of the managed database objects</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DatabaseStatusSchemas
@@ -203,7 +216,9 @@ public partial class V1DatabaseStatusSchemas
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Most recently observed status of the Database. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DatabaseStatus
@@ -228,7 +243,9 @@ public partial class V1DatabaseStatus
     [JsonPropertyName("schemas")]
     public IList<V1DatabaseStatusSchemas>? Schemas { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Database is the Schema for the databases API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -258,3 +275,4 @@ public partial class V1Database : IKubernetesObject<V1ObjectMeta>, ISpec<V1Datab
     [JsonPropertyName("status")]
     public V1DatabaseStatus? Status { get; set; }
 }
+#nullable disable

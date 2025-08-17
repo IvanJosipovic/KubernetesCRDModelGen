@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+#nullable enable
 /// <summary>SpringCloudBuildPackBinding is the Schema for the SpringCloudBuildPackBindings API. Manages a Spring Cloud Build Pack Binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SpringCloudBuildPackBindingList : IKubernetesObject<
     [JsonPropertyName("items")]
     public IList<V1beta1SpringCloudBuildPackBinding> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderLaunch
@@ -46,7 +49,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderLaunch
     [JsonPropertyName("secrets")]
     public IDictionary<string, string>? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderSpringCloudBuilderIdRefPolicy
@@ -59,7 +64,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderSpringClou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a SpringCloudBuilder in appplatform to populate springCloudBuilderId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderSpringCloudBuilderIdRef
@@ -72,7 +79,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderSpringClou
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudBuildPackBindingSpecForProviderSpringCloudBuilderIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderSpringCloudBuilderIdSelectorPolicy
@@ -85,7 +94,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderSpringClou
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a SpringCloudBuilder in appplatform to populate springCloudBuilderId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderSpringCloudBuilderIdSelector
@@ -102,7 +113,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderSpringClou
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudBuildPackBindingSpecForProviderSpringCloudBuilderIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecForProvider
@@ -127,7 +140,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecForProvider
     [JsonPropertyName("springCloudBuilderIdSelector")]
     public V1beta1SpringCloudBuildPackBindingSpecForProviderSpringCloudBuilderIdSelector? SpringCloudBuilderIdSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecInitProviderLaunch
@@ -140,7 +155,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecInitProviderLaunch
     [JsonPropertyName("secrets")]
     public IDictionary<string, string>? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecInitProvider
@@ -153,7 +170,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecInitProvider
     [JsonPropertyName("launch")]
     public IList<V1beta1SpringCloudBuildPackBindingSpecInitProviderLaunch>? Launch { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecProviderConfigRefPolicy
@@ -166,7 +185,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecProviderConfigRefPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecProviderConfigRef
@@ -179,7 +200,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SpringCloudBuildPackBindingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecWriteConnectionSecretToRef
@@ -192,7 +215,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpecWriteConnectionSecret
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudBuildPackBindingSpec defines the desired state of SpringCloudBuildPackBinding</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpec
@@ -221,7 +246,9 @@ public partial class V1beta1SpringCloudBuildPackBindingSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SpringCloudBuildPackBindingSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingStatusAtProviderLaunch
@@ -234,7 +261,9 @@ public partial class V1beta1SpringCloudBuildPackBindingStatusAtProviderLaunch
     [JsonPropertyName("secrets")]
     public IDictionary<string, string>? Secrets { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingStatusAtProvider
@@ -255,7 +284,9 @@ public partial class V1beta1SpringCloudBuildPackBindingStatusAtProvider
     [JsonPropertyName("springCloudBuilderId")]
     public string? SpringCloudBuilderId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingStatusConditions
@@ -284,7 +315,9 @@ public partial class V1beta1SpringCloudBuildPackBindingStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudBuildPackBindingStatus defines the observed state of SpringCloudBuildPackBinding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingStatus
@@ -301,7 +334,9 @@ public partial class V1beta1SpringCloudBuildPackBindingStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SpringCloudBuildPackBinding is the Schema for the SpringCloudBuildPackBindings API. Manages a Spring Cloud Build Pack Binding.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -331,3 +366,4 @@ public partial class V1beta1SpringCloudBuildPackBinding : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1SpringCloudBuildPackBindingStatus? Status { get; set; }
 }
+#nullable disable

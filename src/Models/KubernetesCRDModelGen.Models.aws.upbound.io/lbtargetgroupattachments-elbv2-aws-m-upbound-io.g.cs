@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elbv2.aws.m.upbound.io;
+#nullable enable
 /// <summary>LBTargetGroupAttachment is the Schema for the LBTargetGroupAttachments API. Provides the ability to register instances and containers with a LB target group</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1LBTargetGroupAttachmentList : IKubernetesObject<V1Li
     [JsonPropertyName("items")]
     public IList<V1beta1LBTargetGroupAttachment> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArn
     [JsonPropertyName("policy")]
     public V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArn
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArn
     [JsonPropertyName("policy")]
     public V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecForProvider
@@ -130,7 +141,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecForProvider
     [JsonPropertyName("targetId")]
     public string? TargetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupArnRefPolicy
@@ -143,7 +156,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupArnRef
@@ -160,7 +175,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupAr
     [JsonPropertyName("policy")]
     public V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupArnSelectorPolicy
@@ -173,7 +190,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupAr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a LBTargetGroup in elbv2 to populate targetGroupArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupArnSelector
@@ -194,7 +213,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupAr
     [JsonPropertyName("policy")]
     public V1beta1LBTargetGroupAttachmentSpecInitProviderTargetGroupArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecInitProvider
@@ -223,7 +244,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecInitProvider
     [JsonPropertyName("targetId")]
     public string? TargetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecProviderConfigRef
@@ -236,7 +259,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecWriteConnectionSecretToRef
@@ -245,7 +270,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpecWriteConnectionSecretToRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBTargetGroupAttachmentSpec defines the desired state of LBTargetGroupAttachment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpec
@@ -270,7 +297,9 @@ public partial class V1beta1LBTargetGroupAttachmentSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1LBTargetGroupAttachmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentStatusAtProvider
@@ -299,7 +328,9 @@ public partial class V1beta1LBTargetGroupAttachmentStatusAtProvider
     [JsonPropertyName("targetId")]
     public string? TargetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentStatusConditions
@@ -328,7 +359,9 @@ public partial class V1beta1LBTargetGroupAttachmentStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBTargetGroupAttachmentStatus defines the observed state of LBTargetGroupAttachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentStatus
@@ -345,7 +378,9 @@ public partial class V1beta1LBTargetGroupAttachmentStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>LBTargetGroupAttachment is the Schema for the LBTargetGroupAttachments API. Provides the ability to register instances and containers with a LB target group</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -375,3 +410,4 @@ public partial class V1beta1LBTargetGroupAttachment : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1LBTargetGroupAttachmentStatus? Status { get; set; }
 }
+#nullable disable

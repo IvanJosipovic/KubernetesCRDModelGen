@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+#nullable enable
 /// <summary>VirtualNetworkPeering is the Schema for the VirtualNetworkPeerings API. Manages a virtual network peering which allows resources to access other resources in the linked virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1VirtualNetworkPeeringList : IKubernetesObject<V1List
     [JsonPropertyName("items")]
     public IList<V1beta1VirtualNetworkPeering> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdRef
@@ -59,7 +64,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNet
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdSelectorPolicy
@@ -72,7 +79,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNet
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdSelector
@@ -89,7 +98,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNet
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecForProviderRemoteVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameRefPolicy
@@ -102,7 +113,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameRef
@@ -115,7 +128,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameSelectorPolicy
@@ -128,7 +143,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNam
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameSelector
@@ -145,7 +162,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNam
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameRefPolicy
@@ -158,7 +177,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate virtualNetworkName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameRef
@@ -171,7 +192,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNa
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelectorPolicy
@@ -184,7 +207,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate virtualNetworkName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelector
@@ -201,7 +226,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNa
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecForProvider
@@ -278,7 +305,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProvider
     [JsonPropertyName("virtualNetworkNameSelector")]
     public V1beta1VirtualNetworkPeeringSpecForProviderVirtualNetworkNameSelector? VirtualNetworkNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdRefPolicy
@@ -291,7 +320,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdRef
@@ -304,7 +335,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNe
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdSelectorPolicy
@@ -317,7 +350,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNe
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a VirtualNetwork in network to populate remoteVirtualNetworkId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdSelector
@@ -334,7 +369,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNe
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecInitProviderRemoteVirtualNetworkIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecInitProvider
@@ -387,7 +424,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProvider
     [JsonPropertyName("useRemoteGateways")]
     public bool? UseRemoteGateways { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecProviderConfigRefPolicy
@@ -400,7 +439,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecProviderConfigRef
@@ -413,7 +454,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1VirtualNetworkPeeringSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpecWriteConnectionSecretToRef
@@ -426,7 +469,9 @@ public partial class V1beta1VirtualNetworkPeeringSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNetworkPeeringSpec defines the desired state of VirtualNetworkPeering</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringSpec
@@ -455,7 +500,9 @@ public partial class V1beta1VirtualNetworkPeeringSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1VirtualNetworkPeeringSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringStatusAtProvider
@@ -512,7 +559,9 @@ public partial class V1beta1VirtualNetworkPeeringStatusAtProvider
     [JsonPropertyName("virtualNetworkName")]
     public string? VirtualNetworkName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringStatusConditions
@@ -541,7 +590,9 @@ public partial class V1beta1VirtualNetworkPeeringStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNetworkPeeringStatus defines the observed state of VirtualNetworkPeering.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkPeeringStatus
@@ -558,7 +609,9 @@ public partial class V1beta1VirtualNetworkPeeringStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>VirtualNetworkPeering is the Schema for the VirtualNetworkPeerings API. Manages a virtual network peering which allows resources to access other resources in the linked virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -588,3 +641,4 @@ public partial class V1beta1VirtualNetworkPeering : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1VirtualNetworkPeeringStatus? Status { get; set; }
 }
+#nullable disable

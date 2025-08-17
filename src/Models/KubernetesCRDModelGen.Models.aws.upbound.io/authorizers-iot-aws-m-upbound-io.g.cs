@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.m.upbound.io;
+#nullable enable
 /// <summary>Authorizer is the Schema for the Authorizers API. Creates and manages an AWS IoT Authorizer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AuthorizerList : IKubernetesObject<V1ListMeta>, IIte
     [JsonPropertyName("items")]
     public IList<V1beta1Authorizer> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate authorizerFunctionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnRef
@@ -63,7 +68,9 @@ public partial class V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnRef
     [JsonPropertyName("policy")]
     public V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate authorizerFunctionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnSelector
@@ -97,7 +106,9 @@ public partial class V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnSelect
     [JsonPropertyName("policy")]
     public V1beta1AuthorizerSpecForProviderAuthorizerFunctionArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The public keys used to verify the digital signature returned by your custom authentication service. This value is required if signing is enabled in your authorizer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecForProviderTokenSigningPublicKeysSecretRef
@@ -106,7 +117,9 @@ public partial class V1beta1AuthorizerSpecForProviderTokenSigningPublicKeysSecre
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecForProvider
@@ -151,7 +164,9 @@ public partial class V1beta1AuthorizerSpecForProvider
     [JsonPropertyName("tokenSigningPublicKeysSecretRef")]
     public V1beta1AuthorizerSpecForProviderTokenSigningPublicKeysSecretRef? TokenSigningPublicKeysSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnRefPolicy
@@ -164,7 +179,9 @@ public partial class V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Function in lambda to populate authorizerFunctionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnRef
@@ -181,7 +198,9 @@ public partial class V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnRef
     [JsonPropertyName("policy")]
     public V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnSelectorPolicy
@@ -194,7 +213,9 @@ public partial class V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Function in lambda to populate authorizerFunctionArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnSelector
@@ -215,7 +236,9 @@ public partial class V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnSelec
     [JsonPropertyName("policy")]
     public V1beta1AuthorizerSpecInitProviderAuthorizerFunctionArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecInitProvider
@@ -256,7 +279,9 @@ public partial class V1beta1AuthorizerSpecInitProvider
     [JsonPropertyName("tokenSigningPublicKeysSecretRef")]
     public IDictionary<string, string>? TokenSigningPublicKeysSecretRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecProviderConfigRef
@@ -269,7 +294,9 @@ public partial class V1beta1AuthorizerSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpecWriteConnectionSecretToRef
@@ -278,7 +305,9 @@ public partial class V1beta1AuthorizerSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AuthorizerSpec defines the desired state of Authorizer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerSpec
@@ -303,7 +332,9 @@ public partial class V1beta1AuthorizerSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AuthorizerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerStatusAtProvider
@@ -348,7 +379,9 @@ public partial class V1beta1AuthorizerStatusAtProvider
     [JsonPropertyName("tokenKeyName")]
     public string? TokenKeyName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerStatusConditions
@@ -377,7 +410,9 @@ public partial class V1beta1AuthorizerStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AuthorizerStatus defines the observed state of Authorizer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizerStatus
@@ -394,7 +429,9 @@ public partial class V1beta1AuthorizerStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Authorizer is the Schema for the Authorizers API. Creates and manages an AWS IoT Authorizer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -424,3 +461,4 @@ public partial class V1beta1Authorizer : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1AuthorizerStatus? Status { get; set; }
 }
+#nullable disable

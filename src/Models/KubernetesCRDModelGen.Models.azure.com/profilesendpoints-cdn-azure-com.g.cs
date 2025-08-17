@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20210601.ProfilesEndpoint Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2021-06-01/cdn.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20210601storageProfilesEndpointList : IKubernetesObjec
     [JsonPropertyName("items")]
     public IList<V1api20210601storageProfilesEndpoint> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDefaultOriginGroupReference
@@ -54,7 +57,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDefaultOriginGroupR
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResourceReference Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDefaultOriginGroup
@@ -67,7 +72,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDefaultOriginGroup
     [JsonPropertyName("reference")]
     public V1api20210601storageProfilesEndpointSpecDefaultOriginGroupReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CacheExpirationActionParameters Defines the parameters for the cache expiration action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsCacheExpirationParameters
@@ -92,7 +99,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleCacheExpirationAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsCacheExpiration
@@ -109,7 +118,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsCacheExpirationParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CacheKeyQueryStringActionParameters Defines the parameters for the cache-key query string action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsCacheKeyQueryStringParameters
@@ -130,7 +141,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleCacheKeyQueryStringAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsCacheKeyQueryString
@@ -147,7 +160,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsCacheKeyQueryStringParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HeaderActionParameters Defines the parameters for the request header action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsModifyRequestHeaderParameters
@@ -172,7 +187,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestHeaderAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsModifyRequestHeader
@@ -189,7 +206,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsModifyRequestHeaderParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HeaderActionParameters Defines the parameters for the request header action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsModifyResponseHeaderParameters
@@ -214,7 +233,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleResponseHeaderAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsModifyResponseHeader
@@ -231,7 +252,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsModifyResponseHeaderParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsOriginGroupOverrideParametersOriginGroupReference
@@ -252,7 +275,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResourceReference Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsOriginGroupOverrideParametersOriginGroup
@@ -265,7 +290,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("reference")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsOriginGroupOverrideParametersOriginGroupReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.OriginGroupOverrideActionParameters Defines the parameters for the origin group override action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsOriginGroupOverrideParameters
@@ -282,7 +309,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.OriginGroupOverrideAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsOriginGroupOverride
@@ -299,7 +328,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsOriginGroupOverrideParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CacheConfiguration Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersCacheConfiguration
@@ -328,7 +359,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("queryStringCachingBehavior")]
     public string? QueryStringCachingBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroupReference
@@ -349,7 +382,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResourceReference Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroup
@@ -362,7 +397,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("reference")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroupReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.OriginGroupOverride Defines the parameters for the origin group override configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersOriginGroupOverride
@@ -379,7 +416,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("originGroup")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroup? OriginGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RouteConfigurationOverrideActionParameters Defines the parameters for the route configuration override action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverrideParameters
@@ -400,7 +439,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRouteConfigurationOverrideAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverride
@@ -417,7 +458,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsRouteConfigurationOverrideParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlRedirectActionParameters Defines the parameters for the url redirect action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlRedirectParameters
@@ -454,7 +497,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlRedirectAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlRedirect
@@ -471,7 +516,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlRedirectParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlRewriteActionParameters Defines the parameters for the url rewrite action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlRewriteParameters
@@ -496,7 +543,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlRewriteAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlRewrite
@@ -513,7 +562,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlRewriteParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlSigningParamIdentifier Defines how to identify a parameter for a specific purpose e.g. expires</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlSigningParametersParameterNameOverride
@@ -530,7 +581,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("paramName")]
     public string? ParamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlSigningActionParameters Defines the parameters for the Url Signing action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlSigningParameters
@@ -551,7 +604,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlSigningAction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlSigning
@@ -568,7 +623,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlSigningParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleAction An action for the delivery rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActions
@@ -613,7 +670,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("urlSigning")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesActionsUrlSigning? UrlSigning { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ClientPortMatchConditionParameters Defines the parameters for ClientPort match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsClientPortParameters
@@ -642,7 +701,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleClientPortCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsClientPort
@@ -659,7 +720,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsClientPortParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CookiesMatchConditionParameters Defines the parameters for Cookies match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsCookiesParameters
@@ -692,7 +755,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleCookiesCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsCookies
@@ -709,7 +774,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsCookiesParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HostNameMatchConditionParameters Defines the parameters for HostName match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsHostNameParameters
@@ -738,7 +805,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleHostNameCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsHostName
@@ -755,7 +824,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsHostNameParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HttpVersionMatchConditionParameters Defines the parameters for HttpVersion match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsHttpVersionParameters
@@ -784,7 +855,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleHttpVersionCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsHttpVersion
@@ -801,7 +874,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsHttpVersionParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.IsDeviceMatchConditionParameters Defines the parameters for IsDevice match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsIsDeviceParameters
@@ -830,7 +905,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleIsDeviceCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsIsDevice
@@ -847,7 +924,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsIsDeviceParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.PostArgsMatchConditionParameters Defines the parameters for PostArgs match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsPostArgsParameters
@@ -880,7 +959,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRulePostArgsCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsPostArgs
@@ -897,7 +978,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsPostArgsParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.QueryStringMatchConditionParameters Defines the parameters for QueryString match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsQueryStringParameters
@@ -926,7 +1009,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleQueryStringCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsQueryString
@@ -943,7 +1028,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsQueryStringParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RemoteAddressMatchConditionParameters Defines the parameters for RemoteAddress match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRemoteAddressParameters
@@ -972,7 +1059,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRemoteAddressCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRemoteAddress
@@ -989,7 +1078,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRemoteAddressParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestBodyMatchConditionParameters Defines the parameters for RequestBody match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestBodyParameters
@@ -1018,7 +1109,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestBodyCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestBody
@@ -1035,7 +1128,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestBodyParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestHeaderMatchConditionParameters Defines the parameters for RequestHeader match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestHeaderParameters
@@ -1068,7 +1163,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestHeaderCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestHeader
@@ -1085,7 +1182,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestHeaderParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestMethodMatchConditionParameters Defines the parameters for RequestMethod match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestMethodParameters
@@ -1114,7 +1213,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestMethodCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestMethod
@@ -1131,7 +1232,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestMethodParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestSchemeMatchConditionParameters Defines the parameters for RequestScheme match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestSchemeParameters
@@ -1160,7 +1263,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestSchemeCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestScheme
@@ -1177,7 +1282,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestSchemeParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestUriMatchConditionParameters Defines the parameters for RequestUri match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestUriParameters
@@ -1206,7 +1313,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestUriCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestUri
@@ -1223,7 +1332,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsRequestUriParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ServerPortMatchConditionParameters Defines the parameters for ServerPort match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsServerPortParameters
@@ -1252,7 +1363,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleServerPortCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsServerPort
@@ -1269,7 +1382,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsServerPortParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.SocketAddrMatchConditionParameters Defines the parameters for SocketAddress match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsSocketAddrParameters
@@ -1298,7 +1413,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleSocketAddrCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsSocketAddr
@@ -1315,7 +1432,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsSocketAddrParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.SslProtocolMatchConditionParameters Defines the parameters for SslProtocol match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsSslProtocolParameters
@@ -1344,7 +1463,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleSslProtocolCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsSslProtocol
@@ -1361,7 +1482,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsSslProtocolParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlFileExtensionMatchConditionParameters Defines the parameters for UrlFileExtension match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlFileExtensionParameters
@@ -1390,7 +1513,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleUrlFileExtensionCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlFileExtension
@@ -1407,7 +1532,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlFileExtensionParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlFileNameMatchConditionParameters Defines the parameters for UrlFilename match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlFileNameParameters
@@ -1436,7 +1563,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleUrlFileNameCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlFileName
@@ -1453,7 +1582,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlFileNameParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlPathMatchConditionParameters Defines the parameters for UrlPath match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlPathParameters
@@ -1482,7 +1613,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleUrlPathCondition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlPath
@@ -1499,7 +1632,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlPathParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleCondition A condition for the delivery rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditions
@@ -1584,7 +1719,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("urlPath")]
     public V1api20210601storageProfilesEndpointSpecDeliveryPolicyRulesConditionsUrlPath? UrlPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRule A rule that specifies a set of actions and conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
@@ -1609,7 +1746,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules
     [JsonPropertyName("order")]
     public int? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.EndpointProperties_DeliveryPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicy
@@ -1626,7 +1765,9 @@ public partial class V1api20210601storageProfilesEndpointSpecDeliveryPolicy
     [JsonPropertyName("rules")]
     public IList<V1api20210601storageProfilesEndpointSpecDeliveryPolicyRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.GeoFilter Rules defining user's geo access within a CDN endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecGeoFilters
@@ -1647,7 +1788,9 @@ public partial class V1api20210601storageProfilesEndpointSpecGeoFilters
     [JsonPropertyName("relativePath")]
     public string? RelativePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOperatorSpecConfigMapExpressions
@@ -1664,7 +1807,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOperatorSpecConfigM
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOperatorSpecSecretExpressions
@@ -1681,7 +1826,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOperatorSpecSecretE
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ProfilesEndpointOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOperatorSpec
@@ -1698,7 +1845,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20210601storageProfilesEndpointSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HealthProbeParameters The JSON object that contains the properties to send health probes to origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsHealthProbeSettings
@@ -1723,7 +1872,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsHealthP
     [JsonPropertyName("probeRequestType")]
     public string? ProbeRequestType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsOriginsReference
@@ -1744,7 +1895,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsOrigins
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResourceReference Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsOrigins
@@ -1757,7 +1910,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsOrigins
     [JsonPropertyName("reference")]
     public V1api20210601storageProfilesEndpointSpecOriginGroupsOriginsReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HttpErrorRangeParameters The JSON object that represents the range for http status codes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsResponseBasedOriginErrorDetectionSettingsHttpErrorRanges
@@ -1774,7 +1929,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsRespons
     [JsonPropertyName("end")]
     public int? End { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResponseBasedOriginErrorDetectionParameters The JSON object that contains the properties to determine origin health using real requests/responses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsResponseBasedOriginErrorDetectionSettings
@@ -1795,7 +1952,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOriginGroupsRespons
     [JsonPropertyName("responseBasedFailoverThresholdPercentage")]
     public int? ResponseBasedFailoverThresholdPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeepCreatedOriginGroup The origin group for CDN content which is added when creating a CDN endpoint. Traffic is sent to the origins within the origin group based on origin health.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOriginGroups
@@ -1824,7 +1983,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOriginGroups
     [JsonPropertyName("trafficRestorationTimeToHealedOrNewEndpointsInMinutes")]
     public int? TrafficRestorationTimeToHealedOrNewEndpointsInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateLinkLocationReference: The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOriginsPrivateLinkLocationReference
@@ -1845,7 +2006,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOriginsPrivateLinkL
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>PrivateLinkResourceReference: The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOriginsPrivateLinkResourceReference
@@ -1866,7 +2029,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOriginsPrivateLinkR
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeepCreatedOrigin The main origin of CDN content which is added when creating a CDN endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOrigins
@@ -1923,7 +2088,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOrigins
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/Profile resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecOwner
@@ -1936,7 +2103,9 @@ public partial class V1api20210601storageProfilesEndpointSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.KeyVaultSigningKeyParameters Describes the parameters for using a user's KeyVault for URL Signing Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecUrlSigningKeysKeySourceParameters
@@ -1969,7 +2138,9 @@ public partial class V1api20210601storageProfilesEndpointSpecUrlSigningKeysKeySo
     [JsonPropertyName("vaultName")]
     public string? VaultName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlSigningKey Url signing key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecUrlSigningKeys
@@ -1986,7 +2157,9 @@ public partial class V1api20210601storageProfilesEndpointSpecUrlSigningKeys
     [JsonPropertyName("keySourceParameters")]
     public V1api20210601storageProfilesEndpointSpecUrlSigningKeysKeySourceParameters? KeySourceParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecWebApplicationFirewallPolicyLinkReference
@@ -2007,7 +2180,9 @@ public partial class V1api20210601storageProfilesEndpointSpecWebApplicationFirew
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.EndpointProperties_WebApplicationFirewallPolicyLink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpecWebApplicationFirewallPolicyLink
@@ -2020,7 +2195,9 @@ public partial class V1api20210601storageProfilesEndpointSpecWebApplicationFirew
     [JsonPropertyName("reference")]
     public V1api20210601storageProfilesEndpointSpecWebApplicationFirewallPolicyLinkReference? Reference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ProfilesEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpec
@@ -2117,7 +2294,9 @@ public partial class V1api20210601storageProfilesEndpointSpec
     [JsonPropertyName("webApplicationFirewallPolicyLink")]
     public V1api20210601storageProfilesEndpointSpecWebApplicationFirewallPolicyLink? WebApplicationFirewallPolicyLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusConditions
@@ -2150,7 +2329,9 @@ public partial class V1api20210601storageProfilesEndpointStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeepCreatedCustomDomain_STATUS Custom domains created on the CDN endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusCustomDomains
@@ -2171,7 +2352,9 @@ public partial class V1api20210601storageProfilesEndpointStatusCustomDomains
     [JsonPropertyName("validationData")]
     public string? ValidationData { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResourceReference_STATUS Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDefaultOriginGroup
@@ -2184,7 +2367,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDefaultOriginGrou
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CacheExpirationActionParameters_STATUS Defines the parameters for the cache expiration action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsCacheExpirationParameters
@@ -2209,7 +2394,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleCacheExpirationAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsCacheExpiration
@@ -2226,7 +2413,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsCacheExpirationParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CacheKeyQueryStringActionParameters_STATUS Defines the parameters for the cache-key query string action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsCacheKeyQueryStringParameters
@@ -2247,7 +2436,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleCacheKeyQueryStringAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsCacheKeyQueryString
@@ -2264,7 +2455,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsCacheKeyQueryStringParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HeaderActionParameters_STATUS Defines the parameters for the request header action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsModifyRequestHeaderParameters
@@ -2289,7 +2482,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestHeaderAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsModifyRequestHeader
@@ -2306,7 +2501,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsModifyRequestHeaderParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HeaderActionParameters_STATUS Defines the parameters for the request header action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsModifyResponseHeaderParameters
@@ -2331,7 +2528,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleResponseHeaderAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsModifyResponseHeader
@@ -2348,7 +2547,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsModifyResponseHeaderParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResourceReference_STATUS Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsOriginGroupOverrideParametersOriginGroup
@@ -2361,7 +2562,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.OriginGroupOverrideActionParameters_STATUS Defines the parameters for the origin group override action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsOriginGroupOverrideParameters
@@ -2378,7 +2581,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.OriginGroupOverrideAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsOriginGroupOverride
@@ -2395,7 +2600,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsOriginGroupOverrideParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CacheConfiguration_STATUS Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersCacheConfiguration
@@ -2424,7 +2631,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("queryStringCachingBehavior")]
     public string? QueryStringCachingBehavior { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResourceReference_STATUS Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroup
@@ -2437,7 +2646,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.OriginGroupOverride_STATUS Defines the parameters for the origin group override configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersOriginGroupOverride
@@ -2454,7 +2665,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("originGroup")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsRouteConfigurationOverrideParametersOriginGroupOverrideOriginGroup? OriginGroup { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RouteConfigurationOverrideActionParameters_STATUS Defines the parameters for the route configuration override action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsRouteConfigurationOverrideParameters
@@ -2475,7 +2688,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRouteConfigurationOverrideAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsRouteConfigurationOverride
@@ -2492,7 +2707,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsRouteConfigurationOverrideParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlRedirectActionParameters_STATUS Defines the parameters for the url redirect action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlRedirectParameters
@@ -2529,7 +2746,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlRedirectAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlRedirect
@@ -2546,7 +2765,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlRedirectParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlRewriteActionParameters_STATUS Defines the parameters for the url rewrite action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlRewriteParameters
@@ -2571,7 +2792,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlRewriteAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlRewrite
@@ -2588,7 +2811,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlRewriteParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlSigningParamIdentifier_STATUS Defines how to identify a parameter for a specific purpose e.g. expires</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlSigningParametersParameterNameOverride
@@ -2605,7 +2830,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("paramName")]
     public string? ParamName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlSigningActionParameters_STATUS Defines the parameters for the Url Signing action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlSigningParameters
@@ -2626,7 +2853,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlSigningAction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlSigning
@@ -2643,7 +2872,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlSigningParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleAction_STATUS An action for the delivery rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActions
@@ -2688,7 +2919,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("urlSigning")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesActionsUrlSigning? UrlSigning { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ClientPortMatchConditionParameters_STATUS Defines the parameters for ClientPort match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsClientPortParameters
@@ -2717,7 +2950,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleClientPortCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsClientPort
@@ -2734,7 +2969,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsClientPortParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.CookiesMatchConditionParameters_STATUS Defines the parameters for Cookies match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsCookiesParameters
@@ -2767,7 +3004,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleCookiesCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsCookies
@@ -2784,7 +3023,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsCookiesParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HostNameMatchConditionParameters_STATUS Defines the parameters for HostName match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsHostNameParameters
@@ -2813,7 +3054,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleHostNameCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsHostName
@@ -2830,7 +3073,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsHostNameParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HttpVersionMatchConditionParameters_STATUS Defines the parameters for HttpVersion match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsHttpVersionParameters
@@ -2859,7 +3104,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleHttpVersionCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsHttpVersion
@@ -2876,7 +3123,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsHttpVersionParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.IsDeviceMatchConditionParameters_STATUS Defines the parameters for IsDevice match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsIsDeviceParameters
@@ -2905,7 +3154,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleIsDeviceCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsIsDevice
@@ -2922,7 +3173,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsIsDeviceParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.PostArgsMatchConditionParameters_STATUS Defines the parameters for PostArgs match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsPostArgsParameters
@@ -2955,7 +3208,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRulePostArgsCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsPostArgs
@@ -2972,7 +3227,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsPostArgsParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.QueryStringMatchConditionParameters_STATUS Defines the parameters for QueryString match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsQueryStringParameters
@@ -3001,7 +3258,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleQueryStringCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsQueryString
@@ -3018,7 +3277,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsQueryStringParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RemoteAddressMatchConditionParameters_STATUS Defines the parameters for RemoteAddress match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRemoteAddressParameters
@@ -3047,7 +3308,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRemoteAddressCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRemoteAddress
@@ -3064,7 +3327,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRemoteAddressParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestBodyMatchConditionParameters_STATUS Defines the parameters for RequestBody match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestBodyParameters
@@ -3093,7 +3358,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestBodyCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestBody
@@ -3110,7 +3377,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestBodyParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestHeaderMatchConditionParameters_STATUS Defines the parameters for RequestHeader match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestHeaderParameters
@@ -3143,7 +3412,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestHeaderCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestHeader
@@ -3160,7 +3431,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestHeaderParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestMethodMatchConditionParameters_STATUS Defines the parameters for RequestMethod match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestMethodParameters
@@ -3189,7 +3462,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestMethodCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestMethod
@@ -3206,7 +3481,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestMethodParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestSchemeMatchConditionParameters_STATUS Defines the parameters for RequestScheme match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestSchemeParameters
@@ -3235,7 +3512,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestSchemeCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestScheme
@@ -3252,7 +3531,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestSchemeParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.RequestUriMatchConditionParameters_STATUS Defines the parameters for RequestUri match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestUriParameters
@@ -3281,7 +3562,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleRequestUriCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestUri
@@ -3298,7 +3581,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsRequestUriParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ServerPortMatchConditionParameters_STATUS Defines the parameters for ServerPort match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsServerPortParameters
@@ -3327,7 +3612,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleServerPortCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsServerPort
@@ -3344,7 +3631,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsServerPortParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.SocketAddrMatchConditionParameters_STATUS Defines the parameters for SocketAddress match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsSocketAddrParameters
@@ -3373,7 +3662,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleSocketAddrCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsSocketAddr
@@ -3390,7 +3681,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsSocketAddrParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.SslProtocolMatchConditionParameters_STATUS Defines the parameters for SslProtocol match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsSslProtocolParameters
@@ -3419,7 +3712,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleSslProtocolCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsSslProtocol
@@ -3436,7 +3731,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsSslProtocolParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlFileExtensionMatchConditionParameters_STATUS Defines the parameters for UrlFileExtension match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlFileExtensionParameters
@@ -3465,7 +3762,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleUrlFileExtensionCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlFileExtension
@@ -3482,7 +3781,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlFileExtensionParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlFileNameMatchConditionParameters_STATUS Defines the parameters for UrlFilename match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlFileNameParameters
@@ -3511,7 +3812,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleUrlFileNameCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlFileName
@@ -3528,7 +3831,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlFileNameParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlPathMatchConditionParameters_STATUS Defines the parameters for UrlPath match conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlPathParameters
@@ -3557,7 +3862,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("typeName")]
     public string? TypeName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleUrlPathCondition_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlPath
@@ -3574,7 +3881,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("parameters")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlPathParameters? Parameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRuleCondition_STATUS A condition for the delivery rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditions
@@ -3659,7 +3968,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("urlPath")]
     public V1api20210601storageProfilesEndpointStatusDeliveryPolicyRulesConditionsUrlPath? UrlPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeliveryRule_STATUS A rule that specifies a set of actions and conditions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRules
@@ -3684,7 +3995,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicyRul
     [JsonPropertyName("order")]
     public int? Order { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.EndpointProperties_DeliveryPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicy
@@ -3701,7 +4014,9 @@ public partial class V1api20210601storageProfilesEndpointStatusDeliveryPolicy
     [JsonPropertyName("rules")]
     public IList<V1api20210601storageProfilesEndpointStatusDeliveryPolicyRules>? Rules { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.GeoFilter_STATUS Rules defining user's geo access within a CDN endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusGeoFilters
@@ -3722,7 +4037,9 @@ public partial class V1api20210601storageProfilesEndpointStatusGeoFilters
     [JsonPropertyName("relativePath")]
     public string? RelativePath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HealthProbeParameters_STATUS The JSON object that contains the properties to send health probes to origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusOriginGroupsHealthProbeSettings
@@ -3747,7 +4064,9 @@ public partial class V1api20210601storageProfilesEndpointStatusOriginGroupsHealt
     [JsonPropertyName("probeRequestType")]
     public string? ProbeRequestType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResourceReference_STATUS Reference to another resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusOriginGroupsOrigins
@@ -3760,7 +4079,9 @@ public partial class V1api20210601storageProfilesEndpointStatusOriginGroupsOrigi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.HttpErrorRangeParameters_STATUS The JSON object that represents the range for http status codes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusOriginGroupsResponseBasedOriginErrorDetectionSettingsHttpErrorRanges
@@ -3777,7 +4098,9 @@ public partial class V1api20210601storageProfilesEndpointStatusOriginGroupsRespo
     [JsonPropertyName("end")]
     public int? End { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ResponseBasedOriginErrorDetectionParameters_STATUS The JSON object that contains the properties to determine origin health using real requests/responses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusOriginGroupsResponseBasedOriginErrorDetectionSettings
@@ -3798,7 +4121,9 @@ public partial class V1api20210601storageProfilesEndpointStatusOriginGroupsRespo
     [JsonPropertyName("responseBasedFailoverThresholdPercentage")]
     public int? ResponseBasedFailoverThresholdPercentage { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeepCreatedOriginGroup_STATUS The origin group for CDN content which is added when creating a CDN endpoint. Traffic is sent to the origins within the origin group based on origin health.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusOriginGroups
@@ -3827,7 +4152,9 @@ public partial class V1api20210601storageProfilesEndpointStatusOriginGroups
     [JsonPropertyName("trafficRestorationTimeToHealedOrNewEndpointsInMinutes")]
     public int? TrafficRestorationTimeToHealedOrNewEndpointsInMinutes { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.DeepCreatedOrigin_STATUS The main origin of CDN content which is added when creating a CDN endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusOrigins
@@ -3888,7 +4215,9 @@ public partial class V1api20210601storageProfilesEndpointStatusOrigins
     [JsonPropertyName("weight")]
     public int? Weight { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.SystemData_STATUS Read only system data</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusSystemData
@@ -3921,7 +4250,9 @@ public partial class V1api20210601storageProfilesEndpointStatusSystemData
     [JsonPropertyName("lastModifiedByType")]
     public string? LastModifiedByType { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.KeyVaultSigningKeyParameters_STATUS Describes the parameters for using a user's KeyVault for URL Signing Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusUrlSigningKeysKeySourceParameters
@@ -3954,7 +4285,9 @@ public partial class V1api20210601storageProfilesEndpointStatusUrlSigningKeysKey
     [JsonPropertyName("vaultName")]
     public string? VaultName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.UrlSigningKey_STATUS Url signing key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusUrlSigningKeys
@@ -3971,7 +4304,9 @@ public partial class V1api20210601storageProfilesEndpointStatusUrlSigningKeys
     [JsonPropertyName("keySourceParameters")]
     public V1api20210601storageProfilesEndpointStatusUrlSigningKeysKeySourceParameters? KeySourceParameters { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.EndpointProperties_WebApplicationFirewallPolicyLink_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatusWebApplicationFirewallPolicyLink
@@ -3984,7 +4319,9 @@ public partial class V1api20210601storageProfilesEndpointStatusWebApplicationFir
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ProfilesEndpoint_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatus
@@ -4101,7 +4438,9 @@ public partial class V1api20210601storageProfilesEndpointStatus
     [JsonPropertyName("webApplicationFirewallPolicyLink")]
     public V1api20210601storageProfilesEndpointStatusWebApplicationFirewallPolicyLink? WebApplicationFirewallPolicyLink { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20210601.ProfilesEndpoint Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2021-06-01/cdn.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -4131,3 +4470,4 @@ public partial class V1api20210601storageProfilesEndpoint : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1api20210601storageProfilesEndpointStatus? Status { get; set; }
 }
+#nullable disable

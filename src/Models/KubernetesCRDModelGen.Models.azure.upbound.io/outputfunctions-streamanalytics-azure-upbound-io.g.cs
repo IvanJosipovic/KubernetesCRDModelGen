@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+#nullable enable
 /// <summary>OutputFunction is the Schema for the OutputFunctions API. Manages a Stream Analytics Output Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1OutputFunctionList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1OutputFunction> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The API key for the Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderApiKeySecretRef
@@ -50,7 +53,9 @@ public partial class V1beta1OutputFunctionSpecForProviderApiKeySecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderFunctionAppRefPolicy
@@ -63,7 +68,9 @@ public partial class V1beta1OutputFunctionSpecForProviderFunctionAppRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FunctionApp in web to populate functionApp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderFunctionAppRef
@@ -76,7 +83,9 @@ public partial class V1beta1OutputFunctionSpecForProviderFunctionAppRef
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecForProviderFunctionAppRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderFunctionAppSelectorPolicy
@@ -89,7 +98,9 @@ public partial class V1beta1OutputFunctionSpecForProviderFunctionAppSelectorPoli
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FunctionApp in web to populate functionApp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderFunctionAppSelector
@@ -106,7 +117,9 @@ public partial class V1beta1OutputFunctionSpecForProviderFunctionAppSelector
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecForProviderFunctionAppSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderResourceGroupNameRefPolicy
@@ -119,7 +132,9 @@ public partial class V1beta1OutputFunctionSpecForProviderResourceGroupNameRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderResourceGroupNameRef
@@ -132,7 +147,9 @@ public partial class V1beta1OutputFunctionSpecForProviderResourceGroupNameRef
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderResourceGroupNameSelectorPolicy
@@ -145,7 +162,9 @@ public partial class V1beta1OutputFunctionSpecForProviderResourceGroupNameSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderResourceGroupNameSelector
@@ -162,7 +181,9 @@ public partial class V1beta1OutputFunctionSpecForProviderResourceGroupNameSelect
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameRefPolicy
@@ -175,7 +196,9 @@ public partial class V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameRef
@@ -188,7 +211,9 @@ public partial class V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameR
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameSelectorPolicy
@@ -201,7 +226,9 @@ public partial class V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameS
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameSelector
@@ -218,7 +245,9 @@ public partial class V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameS
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecForProvider
@@ -275,7 +304,9 @@ public partial class V1beta1OutputFunctionSpecForProvider
     [JsonPropertyName("streamAnalyticsJobNameSelector")]
     public V1beta1OutputFunctionSpecForProviderStreamAnalyticsJobNameSelector? StreamAnalyticsJobNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The API key for the Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderApiKeySecretRef
@@ -292,7 +323,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderApiKeySecretRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderFunctionAppRefPolicy
@@ -305,7 +338,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderFunctionAppRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FunctionApp in web to populate functionApp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderFunctionAppRef
@@ -318,7 +353,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderFunctionAppRef
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecInitProviderFunctionAppRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderFunctionAppSelectorPolicy
@@ -331,7 +368,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderFunctionAppSelectorPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FunctionApp in web to populate functionApp.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderFunctionAppSelector
@@ -348,7 +387,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderFunctionAppSelector
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecInitProviderFunctionAppSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobNameRefPolicy
@@ -361,7 +402,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobNameRef
@@ -374,7 +417,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobName
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobNameSelectorPolicy
@@ -387,7 +432,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobName
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Job in streamanalytics to populate streamAnalyticsJobName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobNameSelector
@@ -404,7 +451,9 @@ public partial class V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobName
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecInitProvider
@@ -449,7 +498,9 @@ public partial class V1beta1OutputFunctionSpecInitProvider
     [JsonPropertyName("streamAnalyticsJobNameSelector")]
     public V1beta1OutputFunctionSpecInitProviderStreamAnalyticsJobNameSelector? StreamAnalyticsJobNameSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecProviderConfigRefPolicy
@@ -462,7 +513,9 @@ public partial class V1beta1OutputFunctionSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecProviderConfigRef
@@ -475,7 +528,9 @@ public partial class V1beta1OutputFunctionSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1OutputFunctionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpecWriteConnectionSecretToRef
@@ -488,7 +543,9 @@ public partial class V1beta1OutputFunctionSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputFunctionSpec defines the desired state of OutputFunction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionSpec
@@ -517,7 +574,9 @@ public partial class V1beta1OutputFunctionSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1OutputFunctionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionStatusAtProvider
@@ -550,7 +609,9 @@ public partial class V1beta1OutputFunctionStatusAtProvider
     [JsonPropertyName("streamAnalyticsJobName")]
     public string? StreamAnalyticsJobName { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionStatusConditions
@@ -579,7 +640,9 @@ public partial class V1beta1OutputFunctionStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputFunctionStatus defines the observed state of OutputFunction.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputFunctionStatus
@@ -596,7 +659,9 @@ public partial class V1beta1OutputFunctionStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>OutputFunction is the Schema for the OutputFunctions API. Manages a Stream Analytics Output Function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -626,3 +691,4 @@ public partial class V1beta1OutputFunction : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1OutputFunctionStatus? Status { get; set; }
 }
+#nullable disable

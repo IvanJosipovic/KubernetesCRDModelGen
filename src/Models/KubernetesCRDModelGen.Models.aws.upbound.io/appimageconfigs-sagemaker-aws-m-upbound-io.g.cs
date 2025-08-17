@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+#nullable enable
 /// <summary>AppImageConfig is the Schema for the AppImageConfigs API. Provides a SageMaker AI App Image Config resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1AppImageConfigList : IKubernetesObject<V1ListMeta>, 
     [JsonPropertyName("items")]
     public IList<V1beta1AppImageConfig> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfigContainerConfig
@@ -50,7 +53,9 @@ public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfi
     [JsonPropertyName("containerEnvironmentVariables")]
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfigFileSystemConfig
@@ -67,7 +72,9 @@ public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfi
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CodeEditorAppImageConfig. See Code Editor App Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfig
@@ -80,7 +87,9 @@ public partial class V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfi
     [JsonPropertyName("fileSystemConfig")]
     public V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfigFileSystemConfig? FileSystemConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigContainerConfig
@@ -97,7 +106,9 @@ public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigCo
     [JsonPropertyName("containerEnvironmentVariables")]
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigFileSystemConfig
@@ -114,7 +125,9 @@ public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigFi
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The JupyterLabAppImageConfig. See Jupyter Lab Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfig
@@ -127,7 +140,9 @@ public partial class V1beta1AppImageConfigSpecForProviderJupyterLabImageConfig
     [JsonPropertyName("fileSystemConfig")]
     public V1beta1AppImageConfigSpecForProviderJupyterLabImageConfigFileSystemConfig? FileSystemConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfigFileSystemConfig
@@ -144,7 +159,9 @@ public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfi
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfigKernelSpec
@@ -157,7 +174,9 @@ public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfi
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the file system and kernels in a SageMaker AI image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfig
@@ -170,7 +189,9 @@ public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfi
     [JsonPropertyName("kernelSpec")]
     public IList<V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfigKernelSpec>? KernelSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProvider
@@ -195,7 +216,9 @@ public partial class V1beta1AppImageConfigSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfigContainerConfig
@@ -212,7 +235,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConf
     [JsonPropertyName("containerEnvironmentVariables")]
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfigFileSystemConfig
@@ -229,7 +254,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConf
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CodeEditorAppImageConfig. See Code Editor App Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfig
@@ -242,7 +269,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConf
     [JsonPropertyName("fileSystemConfig")]
     public V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfigFileSystemConfig? FileSystemConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigContainerConfig
@@ -259,7 +288,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigC
     [JsonPropertyName("containerEnvironmentVariables")]
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigFileSystemConfig
@@ -276,7 +307,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigF
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The JupyterLabAppImageConfig. See Jupyter Lab Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfig
@@ -289,7 +322,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfig
     [JsonPropertyName("fileSystemConfig")]
     public V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfigFileSystemConfig? FileSystemConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfigFileSystemConfig
@@ -306,7 +341,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConf
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfigKernelSpec
@@ -319,7 +356,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the file system and kernels in a SageMaker AI image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfig
@@ -332,7 +371,9 @@ public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConf
     [JsonPropertyName("kernelSpec")]
     public IList<V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfigKernelSpec>? KernelSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProvider
@@ -353,7 +394,9 @@ public partial class V1beta1AppImageConfigSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecProviderConfigRef
@@ -366,7 +409,9 @@ public partial class V1beta1AppImageConfigSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecWriteConnectionSecretToRef
@@ -375,7 +420,9 @@ public partial class V1beta1AppImageConfigSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppImageConfigSpec defines the desired state of AppImageConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpec
@@ -400,7 +447,9 @@ public partial class V1beta1AppImageConfigSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1AppImageConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfigContainerConfig
@@ -417,7 +466,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConf
     [JsonPropertyName("containerEnvironmentVariables")]
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfigFileSystemConfig
@@ -434,7 +485,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConf
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The CodeEditorAppImageConfig. See Code Editor App Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfig
@@ -447,7 +500,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConf
     [JsonPropertyName("fileSystemConfig")]
     public V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfigFileSystemConfig? FileSystemConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration used to run the application image container. See Container Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigContainerConfig
@@ -464,7 +519,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigC
     [JsonPropertyName("containerEnvironmentVariables")]
     public IDictionary<string, string>? ContainerEnvironmentVariables { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigFileSystemConfig
@@ -481,7 +538,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigF
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The JupyterLabAppImageConfig. See Jupyter Lab Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfig
@@ -494,7 +553,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfig
     [JsonPropertyName("fileSystemConfig")]
     public V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfigFileSystemConfig? FileSystemConfig { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The URL where the Git repository is located. See File System Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfigFileSystemConfig
@@ -511,7 +572,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConf
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfigKernelSpec
@@ -524,7 +587,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConf
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The configuration for the file system and kernels in a SageMaker AI image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfig
@@ -537,7 +602,9 @@ public partial class V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConf
     [JsonPropertyName("kernelSpec")]
     public IList<V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfigKernelSpec>? KernelSpec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusAtProvider
@@ -574,7 +641,9 @@ public partial class V1beta1AppImageConfigStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatusConditions
@@ -603,7 +672,9 @@ public partial class V1beta1AppImageConfigStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppImageConfigStatus defines the observed state of AppImageConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigStatus
@@ -620,7 +691,9 @@ public partial class V1beta1AppImageConfigStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>AppImageConfig is the Schema for the AppImageConfigs API. Provides a SageMaker AI App Image Config resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -650,3 +723,4 @@ public partial class V1beta1AppImageConfig : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1AppImageConfigStatus? Status { get; set; }
 }
+#nullable disable

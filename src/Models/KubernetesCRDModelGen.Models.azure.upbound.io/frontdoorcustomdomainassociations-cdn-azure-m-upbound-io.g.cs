@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.m.upbound.io;
+#nullable enable
 /// <summary>FrontdoorCustomDomainAssociation is the Schema for the FrontdoorCustomDomainAssociations API. Manages the association between a Front Door (standard/premium) Custom Domain and one or more Front Door (standard/premium) Routes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationList : IKubernetesOb
     [JsonPropertyName("items")]
     public IList<V1beta1FrontdoorCustomDomainAssociation> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorCustomDomainIdRefPolicy
@@ -46,7 +49,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FrontdoorCustomDomain in cdn to populate cdnFrontdoorCustomDomainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorCustomDomainIdRef
@@ -63,7 +68,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFr
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorCustomDomainIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorCustomDomainIdSelectorPolicy
@@ -76,7 +83,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FrontdoorCustomDomain in cdn to populate cdnFrontdoorCustomDomainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorCustomDomainIdSelector
@@ -97,7 +106,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFr
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorCustomDomainIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorRouteIdsRefsPolicy
@@ -110,7 +121,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorRouteIdsRefs
@@ -127,7 +140,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFr
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorRouteIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorRouteIdsSelectorPolicy
@@ -140,7 +155,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFr
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of FrontdoorRoute in cdn to populate cdnFrontdoorRouteIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorRouteIdsSelector
@@ -161,7 +178,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFr
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorRouteIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProvider
@@ -190,7 +209,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecForProvider
     [JsonPropertyName("cdnFrontdoorRouteIdsSelector")]
     public V1beta1FrontdoorCustomDomainAssociationSpecForProviderCdnFrontdoorRouteIdsSelector? CdnFrontdoorRouteIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorCustomDomainIdRefPolicy
@@ -203,7 +224,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnF
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a FrontdoorCustomDomain in cdn to populate cdnFrontdoorCustomDomainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorCustomDomainIdRef
@@ -220,7 +243,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnF
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorCustomDomainIdRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorCustomDomainIdSelectorPolicy
@@ -233,7 +258,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnF
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a FrontdoorCustomDomain in cdn to populate cdnFrontdoorCustomDomainId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorCustomDomainIdSelector
@@ -254,7 +281,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnF
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorCustomDomainIdSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorRouteIdsRefsPolicy
@@ -267,7 +296,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnF
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorRouteIdsRefs
@@ -284,7 +315,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnF
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorRouteIdsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorRouteIdsSelectorPolicy
@@ -297,7 +330,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnF
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of FrontdoorRoute in cdn to populate cdnFrontdoorRouteIds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorRouteIdsSelector
@@ -318,7 +353,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnF
     [JsonPropertyName("policy")]
     public V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorRouteIdsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProvider
@@ -347,7 +384,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecInitProvider
     [JsonPropertyName("cdnFrontdoorRouteIdsSelector")]
     public V1beta1FrontdoorCustomDomainAssociationSpecInitProviderCdnFrontdoorRouteIdsSelector? CdnFrontdoorRouteIdsSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecProviderConfigRef
@@ -360,7 +399,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecProviderConfigRe
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpecWriteConnectionSecretToRef
@@ -369,7 +410,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpecWriteConnectionS
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorCustomDomainAssociationSpec defines the desired state of FrontdoorCustomDomainAssociation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationSpec
@@ -394,7 +437,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1FrontdoorCustomDomainAssociationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationStatusAtProvider
@@ -411,7 +456,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationStatusConditions
@@ -440,7 +487,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorCustomDomainAssociationStatus defines the observed state of FrontdoorCustomDomainAssociation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorCustomDomainAssociationStatus
@@ -457,7 +506,9 @@ public partial class V1beta1FrontdoorCustomDomainAssociationStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FrontdoorCustomDomainAssociation is the Schema for the FrontdoorCustomDomainAssociations API. Manages the association between a Front Door (standard/premium) Custom Domain and one or more Front Door (standard/premium) Routes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -487,3 +538,4 @@ public partial class V1beta1FrontdoorCustomDomainAssociation : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1FrontdoorCustomDomainAssociationStatus? Status { get; set; }
 }
+#nullable disable

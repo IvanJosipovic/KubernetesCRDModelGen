@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+#nullable enable
 /// <summary>RouterNAT is the Schema for the RouterNATs API. A NAT service created in a router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1RouterNATList : IKubernetesObject<V1ListMeta>, IItem
     [JsonPropertyName("items")]
     public IList<V1beta1RouterNAT> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for logging on NAT Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderLogConfig
@@ -46,7 +49,9 @@ public partial class V1beta1RouterNATSpecForProviderLogConfig
     [JsonPropertyName("filter")]
     public string? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderNat64Subnetwork
@@ -55,7 +60,9 @@ public partial class V1beta1RouterNATSpecForProviderNat64Subnetwork
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderNatIpsRefsPolicy
@@ -68,7 +75,9 @@ public partial class V1beta1RouterNATSpecForProviderNatIpsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderNatIpsRefs
@@ -85,7 +94,9 @@ public partial class V1beta1RouterNATSpecForProviderNatIpsRefs
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderNatIpsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderNatIpsSelectorPolicy
@@ -98,7 +109,9 @@ public partial class V1beta1RouterNATSpecForProviderNatIpsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Address in compute to populate natIps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderNatIpsSelector
@@ -119,7 +132,9 @@ public partial class V1beta1RouterNATSpecForProviderNatIpsSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderNatIpsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRouterRefPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1RouterNATSpecForProviderRouterRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRouterRef
@@ -149,7 +166,9 @@ public partial class V1beta1RouterNATSpecForProviderRouterRef
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderRouterRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRouterSelectorPolicy
@@ -162,7 +181,9 @@ public partial class V1beta1RouterNATSpecForProviderRouterSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Router in compute to populate router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRouterSelector
@@ -183,7 +204,9 @@ public partial class V1beta1RouterNATSpecForProviderRouterSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderRouterSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIpsRefsPolicy
@@ -196,7 +219,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIpsRefs
@@ -213,7 +238,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIp
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIpsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIpsSelectorPolicy
@@ -226,7 +253,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIp
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Address in compute to populate sourceNatActiveIps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIpsSelector
@@ -247,7 +276,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIp
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIpsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesRefsPolicy
@@ -260,7 +291,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesRefs
@@ -277,7 +310,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRa
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesSelectorPolicy
@@ -290,7 +325,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRa
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnetwork in compute to populate sourceNatActiveRanges.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesSelector
@@ -311,7 +348,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRa
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The action to be enforced for traffic that matches this rule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesAction
@@ -348,7 +387,9 @@ public partial class V1beta1RouterNATSpecForProviderRulesAction
     [JsonPropertyName("sourceNatDrainRanges")]
     public IList<string>? SourceNatDrainRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRules
@@ -369,7 +410,9 @@ public partial class V1beta1RouterNATSpecForProviderRules
     [JsonPropertyName("ruleNumber")]
     public double? RuleNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderSubnetworkNameRefPolicy
@@ -382,7 +425,9 @@ public partial class V1beta1RouterNATSpecForProviderSubnetworkNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderSubnetworkNameRef
@@ -399,7 +444,9 @@ public partial class V1beta1RouterNATSpecForProviderSubnetworkNameRef
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderSubnetworkNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderSubnetworkNameSelectorPolicy
@@ -412,7 +459,9 @@ public partial class V1beta1RouterNATSpecForProviderSubnetworkNameSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderSubnetworkNameSelector
@@ -433,7 +482,9 @@ public partial class V1beta1RouterNATSpecForProviderSubnetworkNameSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecForProviderSubnetworkNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderSubnetwork
@@ -458,7 +509,9 @@ public partial class V1beta1RouterNATSpecForProviderSubnetwork
     [JsonPropertyName("sourceIpRangesToNat")]
     public IList<string>? SourceIpRangesToNat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProvider
@@ -579,7 +632,9 @@ public partial class V1beta1RouterNATSpecForProvider
     [JsonPropertyName("udpIdleTimeoutSec")]
     public double? UdpIdleTimeoutSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for logging on NAT Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderLogConfig
@@ -592,7 +647,9 @@ public partial class V1beta1RouterNATSpecInitProviderLogConfig
     [JsonPropertyName("filter")]
     public string? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderNat64Subnetwork
@@ -601,7 +658,9 @@ public partial class V1beta1RouterNATSpecInitProviderNat64Subnetwork
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderNatIpsRefsPolicy
@@ -614,7 +673,9 @@ public partial class V1beta1RouterNATSpecInitProviderNatIpsRefsPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderNatIpsRefs
@@ -631,7 +692,9 @@ public partial class V1beta1RouterNATSpecInitProviderNatIpsRefs
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecInitProviderNatIpsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderNatIpsSelectorPolicy
@@ -644,7 +707,9 @@ public partial class V1beta1RouterNATSpecInitProviderNatIpsSelectorPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Address in compute to populate natIps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderNatIpsSelector
@@ -665,7 +730,9 @@ public partial class V1beta1RouterNATSpecInitProviderNatIpsSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecInitProviderNatIpsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveIpsRefsPolicy
@@ -678,7 +745,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveIpsRefs
@@ -695,7 +764,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveI
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveIpsRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveIpsSelectorPolicy
@@ -708,7 +779,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveI
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Address in compute to populate sourceNatActiveIps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveIpsSelector
@@ -729,7 +802,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveI
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveIpsSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesRefsPolicy
@@ -742,7 +817,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A NamespacedReference to a named object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesRefs
@@ -759,7 +836,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveR
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesRefsPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesSelectorPolicy
@@ -772,7 +851,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveR
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a list of Subnetwork in compute to populate sourceNatActiveRanges.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesSelector
@@ -793,7 +874,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveR
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The action to be enforced for traffic that matches this rule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesAction
@@ -830,7 +913,9 @@ public partial class V1beta1RouterNATSpecInitProviderRulesAction
     [JsonPropertyName("sourceNatDrainRanges")]
     public IList<string>? SourceNatDrainRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRules
@@ -851,7 +936,9 @@ public partial class V1beta1RouterNATSpecInitProviderRules
     [JsonPropertyName("ruleNumber")]
     public double? RuleNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameRefPolicy
@@ -864,7 +951,9 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a Subnetwork in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameRef
@@ -881,7 +970,9 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameRef
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecInitProviderSubnetworkNameRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameSelectorPolicy
@@ -894,7 +985,9 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameSelectorPolic
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a Subnetwork in compute to populate name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameSelector
@@ -915,7 +1008,9 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetworkNameSelector
     [JsonPropertyName("policy")]
     public V1beta1RouterNATSpecInitProviderSubnetworkNameSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderSubnetwork
@@ -940,7 +1035,9 @@ public partial class V1beta1RouterNATSpecInitProviderSubnetwork
     [JsonPropertyName("sourceIpRangesToNat")]
     public IList<string>? SourceIpRangesToNat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProvider
@@ -1045,7 +1142,9 @@ public partial class V1beta1RouterNATSpecInitProvider
     [JsonPropertyName("udpIdleTimeoutSec")]
     public double? UdpIdleTimeoutSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecProviderConfigRef
@@ -1058,7 +1157,9 @@ public partial class V1beta1RouterNATSpecProviderConfigRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecWriteConnectionSecretToRef
@@ -1067,7 +1168,9 @@ public partial class V1beta1RouterNATSpecWriteConnectionSecretToRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterNATSpec defines the desired state of RouterNAT</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpec
@@ -1092,7 +1195,9 @@ public partial class V1beta1RouterNATSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1RouterNATSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Configuration for logging on NAT Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATStatusAtProviderLogConfig
@@ -1105,7 +1210,9 @@ public partial class V1beta1RouterNATStatusAtProviderLogConfig
     [JsonPropertyName("filter")]
     public string? Filter { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATStatusAtProviderNat64Subnetwork
@@ -1114,7 +1221,9 @@ public partial class V1beta1RouterNATStatusAtProviderNat64Subnetwork
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>The action to be enforced for traffic that matches this rule. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATStatusAtProviderRulesAction
@@ -1135,7 +1244,9 @@ public partial class V1beta1RouterNATStatusAtProviderRulesAction
     [JsonPropertyName("sourceNatDrainRanges")]
     public IList<string>? SourceNatDrainRanges { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATStatusAtProviderRules
@@ -1156,7 +1267,9 @@ public partial class V1beta1RouterNATStatusAtProviderRules
     [JsonPropertyName("ruleNumber")]
     public double? RuleNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATStatusAtProviderSubnetwork
@@ -1173,7 +1286,9 @@ public partial class V1beta1RouterNATStatusAtProviderSubnetwork
     [JsonPropertyName("sourceIpRangesToNat")]
     public IList<string>? SourceIpRangesToNat { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATStatusAtProvider
@@ -1282,7 +1397,9 @@ public partial class V1beta1RouterNATStatusAtProvider
     [JsonPropertyName("udpIdleTimeoutSec")]
     public double? UdpIdleTimeoutSec { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATStatusConditions
@@ -1311,7 +1428,9 @@ public partial class V1beta1RouterNATStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterNATStatus defines the observed state of RouterNAT.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATStatus
@@ -1328,7 +1447,9 @@ public partial class V1beta1RouterNATStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>RouterNAT is the Schema for the RouterNATs API. A NAT service created in a router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -1358,3 +1479,4 @@ public partial class V1beta1RouterNAT : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1RouterNATStatus? Status { get; set; }
 }
+#nullable disable

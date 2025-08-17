@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53recoveryreadiness.aws.upbound.io;
+#nullable enable
 /// <summary>ResourceSet is the Schema for the ResourceSets API. Provides an AWS Route 53 Recovery Readiness Resource Set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1ResourceSetList : IKubernetesObject<V1ListMeta>, IIt
     [JsonPropertyName("items")]
     public IList<V1beta1ResourceSet> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResourceNlbResource
@@ -42,7 +45,9 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResourceR53Resource
@@ -55,7 +60,9 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
     [JsonPropertyName("recordSetId")]
     public string? RecordSetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResource
@@ -68,7 +75,9 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
     [JsonPropertyName("r53Resource")]
     public IList<V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResourceR53Resource>? R53Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
@@ -93,7 +102,9 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResource
     [JsonPropertyName("targetResource")]
     public IList<V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResource>? TargetResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnRefPolicy
@@ -106,7 +117,9 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnRefPol
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MetricAlarm in cloudwatch to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnRef
@@ -119,7 +132,9 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnRef
     [JsonPropertyName("policy")]
     public V1beta1ResourceSetSpecForProviderResourcesResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnSelectorPolicy
@@ -132,7 +147,9 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnSelect
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MetricAlarm in cloudwatch to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnSelector
@@ -149,7 +166,9 @@ public partial class V1beta1ResourceSetSpecForProviderResourcesResourceArnSelect
     [JsonPropertyName("policy")]
     public V1beta1ResourceSetSpecForProviderResourcesResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResources
@@ -174,7 +193,9 @@ public partial class V1beta1ResourceSetSpecForProviderResources
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1ResourceSetSpecForProviderResourcesResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProvider
@@ -191,7 +212,9 @@ public partial class V1beta1ResourceSetSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResourceNlbResource
@@ -200,7 +223,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourc
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResourceR53Resource
@@ -213,7 +238,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourc
     [JsonPropertyName("recordSetId")]
     public string? RecordSetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResource
@@ -226,7 +253,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourc
     [JsonPropertyName("r53Resource")]
     public IList<V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResourceR53Resource>? R53Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResource
@@ -251,7 +280,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourc
     [JsonPropertyName("targetResource")]
     public IList<V1beta1ResourceSetSpecInitProviderResourcesDnsTargetResourceTargetResource>? TargetResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnRefPolicy
@@ -264,7 +295,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnRefPo
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Reference to a MetricAlarm in cloudwatch to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnRef
@@ -277,7 +310,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnRef
     [JsonPropertyName("policy")]
     public V1beta1ResourceSetSpecInitProviderResourcesResourceArnRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelectorPolicy
@@ -290,7 +325,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelec
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Selector for a MetricAlarm in cloudwatch to populate resourceArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelector
@@ -307,7 +344,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelec
     [JsonPropertyName("policy")]
     public V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelectorPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProviderResources
@@ -332,7 +371,9 @@ public partial class V1beta1ResourceSetSpecInitProviderResources
     [JsonPropertyName("resourceArnSelector")]
     public V1beta1ResourceSetSpecInitProviderResourcesResourceArnSelector? ResourceArnSelector { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecInitProvider
@@ -349,7 +390,9 @@ public partial class V1beta1ResourceSetSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecProviderConfigRefPolicy
@@ -362,7 +405,9 @@ public partial class V1beta1ResourceSetSpecProviderConfigRefPolicy
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecProviderConfigRef
@@ -375,7 +420,9 @@ public partial class V1beta1ResourceSetSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1ResourceSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecWriteConnectionSecretToRef
@@ -388,7 +435,9 @@ public partial class V1beta1ResourceSetSpecWriteConnectionSecretToRef
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceSetSpec defines the desired state of ResourceSet</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpec
@@ -417,7 +466,9 @@ public partial class V1beta1ResourceSetSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ResourceSetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResourceNlbResource
@@ -426,7 +477,9 @@ public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourc
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResourceR53Resource
@@ -439,7 +492,9 @@ public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourc
     [JsonPropertyName("recordSetId")]
     public string? RecordSetId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResource
@@ -452,7 +507,9 @@ public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourc
     [JsonPropertyName("r53Resource")]
     public IList<V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResourceR53Resource>? R53Resource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResource
@@ -477,7 +534,9 @@ public partial class V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourc
     [JsonPropertyName("targetResource")]
     public IList<V1beta1ResourceSetStatusAtProviderResourcesDnsTargetResourceTargetResource>? TargetResource { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetStatusAtProviderResources
@@ -498,7 +557,9 @@ public partial class V1beta1ResourceSetStatusAtProviderResources
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetStatusAtProvider
@@ -527,7 +588,9 @@ public partial class V1beta1ResourceSetStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetStatusConditions
@@ -556,7 +619,9 @@ public partial class V1beta1ResourceSetStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceSetStatus defines the observed state of ResourceSet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetStatus
@@ -573,7 +638,9 @@ public partial class V1beta1ResourceSetStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceSet is the Schema for the ResourceSets API. Provides an AWS Route 53 Recovery Readiness Resource Set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -603,3 +670,4 @@ public partial class V1beta1ResourceSet : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1ResourceSetStatus? Status { get; set; }
 }
+#nullable disable

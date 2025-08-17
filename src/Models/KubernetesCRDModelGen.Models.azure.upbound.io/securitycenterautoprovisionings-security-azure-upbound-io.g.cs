@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.azure.upbound.io;
+#nullable enable
 /// <summary>SecurityCenterAutoProvisioning is the Schema for the SecurityCenterAutoProvisionings API. Manages the subscription's Security Center Auto Provisioning.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningList : IKubernetesObje
     [JsonPropertyName("items")]
     public IList<V1beta1SecurityCenterAutoProvisioning> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningSpecForProvider
@@ -42,7 +45,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningSpecForProvider
     [JsonPropertyName("autoProvision")]
     public string? AutoProvision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningSpecInitProvider
@@ -51,7 +56,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningSpecInitProvider
     [JsonPropertyName("autoProvision")]
     public string? AutoProvision { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningSpecProviderConfigRefPolicy
@@ -64,7 +71,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningSpecProviderConfigRefP
     [JsonPropertyName("resolve")]
     public string? Resolve { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningSpecProviderConfigRef
@@ -77,7 +86,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningSpecProviderConfigRef
     [JsonPropertyName("policy")]
     public V1beta1SecurityCenterAutoProvisioningSpecProviderConfigRefPolicy? Policy { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningSpecWriteConnectionSecretToRef
@@ -90,7 +101,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningSpecWriteConnectionSec
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterAutoProvisioningSpec defines the desired state of SecurityCenterAutoProvisioning</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningSpec
@@ -119,7 +132,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningSpec
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1SecurityCenterAutoProvisioningSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningStatusAtProvider
@@ -132,7 +147,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningStatusConditions
@@ -161,7 +178,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterAutoProvisioningStatus defines the observed state of SecurityCenterAutoProvisioning.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityCenterAutoProvisioningStatus
@@ -178,7 +197,9 @@ public partial class V1beta1SecurityCenterAutoProvisioningStatus
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>SecurityCenterAutoProvisioning is the Schema for the SecurityCenterAutoProvisionings API. Manages the subscription's Security Center Auto Provisioning.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -208,3 +229,4 @@ public partial class V1beta1SecurityCenterAutoProvisioning : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1beta1SecurityCenterAutoProvisioningStatus? Status { get; set; }
 }
+#nullable disable

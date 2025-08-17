@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+#nullable enable
 /// <summary>Storage version of v1api20230101.ActionGroup Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2023-01-01/actionGroups_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -33,7 +34,9 @@ public partial class V1api20230101storageActionGroupList : IKubernetesObject<V1L
     [JsonPropertyName("items")]
     public IList<V1api20230101storageActionGroup> Items { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ArmRoleReceiver An arm role receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecArmRoleReceivers
@@ -54,7 +57,9 @@ public partial class V1api20230101storageActionGroupSpecArmRoleReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>WebhookResourceReference: The resource id for webhook linked to this runbook.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceiversWebhookResourceReference
@@ -75,7 +80,9 @@ public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceive
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.AutomationRunbookReceiver The Azure Automation Runbook notification receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceivers
@@ -112,7 +119,9 @@ public partial class V1api20230101storageActionGroupSpecAutomationRunbookReceive
     [JsonPropertyName("webhookResourceReference")]
     public V1api20230101storageActionGroupSpecAutomationRunbookReceiversWebhookResourceReference WebhookResourceReference { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.AzureAppPushReceiver The Azure mobile App push notification receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAzureAppPushReceivers
@@ -129,7 +138,9 @@ public partial class V1api20230101storageActionGroupSpecAzureAppPushReceivers
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>FunctionAppResourceReference: The azure resource id of the function app.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAzureFunctionReceiversFunctionAppResourceReference
@@ -150,7 +161,9 @@ public partial class V1api20230101storageActionGroupSpecAzureFunctionReceiversFu
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.AzureFunctionReceiver An azure function receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecAzureFunctionReceivers
@@ -179,7 +192,9 @@ public partial class V1api20230101storageActionGroupSpecAzureFunctionReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.EmailReceiver An email receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecEmailReceivers
@@ -200,7 +215,9 @@ public partial class V1api20230101storageActionGroupSpecEmailReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.EventHubReceiver An Event hub receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecEventHubReceivers
@@ -233,7 +250,9 @@ public partial class V1api20230101storageActionGroupSpecEventHubReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ItsmReceiver An Itsm receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecItsmReceivers
@@ -262,7 +281,9 @@ public partial class V1api20230101storageActionGroupSpecItsmReceivers
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>ResourceReference: The azure resource id of the logic app receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecLogicAppReceiversResourceReference
@@ -283,7 +304,9 @@ public partial class V1api20230101storageActionGroupSpecLogicAppReceiversResourc
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.LogicAppReceiver A logic app receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecLogicAppReceivers
@@ -308,7 +331,9 @@ public partial class V1api20230101storageActionGroupSpecLogicAppReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecOperatorSpecConfigMapExpressions
@@ -325,7 +350,9 @@ public partial class V1api20230101storageActionGroupSpecOperatorSpecConfigMapExp
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecOperatorSpecSecretExpressions
@@ -342,7 +369,9 @@ public partial class V1api20230101storageActionGroupSpecOperatorSpecSecretExpres
     [JsonPropertyName("value")]
     public string Value { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ActionGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecOperatorSpec
@@ -359,7 +388,9 @@ public partial class V1api20230101storageActionGroupSpecOperatorSpec
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20230101storageActionGroupSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecOwner
@@ -372,7 +403,9 @@ public partial class V1api20230101storageActionGroupSpecOwner
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.SmsReceiver An SMS receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecSmsReceivers
@@ -393,7 +426,9 @@ public partial class V1api20230101storageActionGroupSpecSmsReceivers
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.VoiceReceiver A voice receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecVoiceReceivers
@@ -414,7 +449,9 @@ public partial class V1api20230101storageActionGroupSpecVoiceReceivers
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.WebhookReceiver A webhook receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpecWebhookReceivers
@@ -451,7 +488,9 @@ public partial class V1api20230101storageActionGroupSpecWebhookReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ActionGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupSpec
@@ -536,7 +575,9 @@ public partial class V1api20230101storageActionGroupSpec
     [JsonPropertyName("webhookReceivers")]
     public IList<V1api20230101storageActionGroupSpecWebhookReceivers>? WebhookReceivers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ArmRoleReceiver_STATUS An arm role receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusArmRoleReceivers
@@ -557,7 +598,9 @@ public partial class V1api20230101storageActionGroupStatusArmRoleReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.AutomationRunbookReceiver_STATUS The Azure Automation Runbook notification receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusAutomationRunbookReceivers
@@ -594,7 +637,9 @@ public partial class V1api20230101storageActionGroupStatusAutomationRunbookRecei
     [JsonPropertyName("webhookResourceId")]
     public string? WebhookResourceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.AzureAppPushReceiver_STATUS The Azure mobile App push notification receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusAzureAppPushReceivers
@@ -611,7 +656,9 @@ public partial class V1api20230101storageActionGroupStatusAzureAppPushReceivers
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.AzureFunctionReceiver_STATUS An azure function receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusAzureFunctionReceivers
@@ -640,7 +687,9 @@ public partial class V1api20230101storageActionGroupStatusAzureFunctionReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusConditions
@@ -673,7 +722,9 @@ public partial class V1api20230101storageActionGroupStatusConditions
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.EmailReceiver_STATUS An email receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusEmailReceivers
@@ -698,7 +749,9 @@ public partial class V1api20230101storageActionGroupStatusEmailReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.EventHubReceiver_STATUS An Event hub receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusEventHubReceivers
@@ -731,7 +784,9 @@ public partial class V1api20230101storageActionGroupStatusEventHubReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ItsmReceiver_STATUS An Itsm receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusItsmReceivers
@@ -760,7 +815,9 @@ public partial class V1api20230101storageActionGroupStatusItsmReceivers
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.LogicAppReceiver_STATUS A logic app receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusLogicAppReceivers
@@ -785,7 +842,9 @@ public partial class V1api20230101storageActionGroupStatusLogicAppReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.SmsReceiver_STATUS An SMS receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusSmsReceivers
@@ -810,7 +869,9 @@ public partial class V1api20230101storageActionGroupStatusSmsReceivers
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.VoiceReceiver_STATUS A voice receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusVoiceReceivers
@@ -831,7 +892,9 @@ public partial class V1api20230101storageActionGroupStatusVoiceReceivers
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.WebhookReceiver_STATUS A webhook receiver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatusWebhookReceivers
@@ -868,7 +931,9 @@ public partial class V1api20230101storageActionGroupStatusWebhookReceivers
     [JsonPropertyName("useCommonAlertSchema")]
     public bool? UseCommonAlertSchema { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ActionGroupResource_STATUS An action group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageActionGroupStatus
@@ -953,7 +1018,9 @@ public partial class V1api20230101storageActionGroupStatus
     [JsonPropertyName("webhookReceivers")]
     public IList<V1api20230101storageActionGroupStatusWebhookReceivers>? WebhookReceivers { get; set; }
 }
+#nullable disable
 
+#nullable enable
 /// <summary>Storage version of v1api20230101.ActionGroup Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2023-01-01/actionGroups_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/actionGroups/{actionGroupName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
@@ -983,3 +1050,4 @@ public partial class V1api20230101storageActionGroup : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1api20230101storageActionGroupStatus? Status { get; set; }
 }
+#nullable disable
