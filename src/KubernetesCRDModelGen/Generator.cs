@@ -75,13 +75,13 @@ public class Generator : IGenerator
 
         namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind ?? crd.Spec.Names.Kind + "List"));
 
-        var nullableTrivia = SyntaxFactory.ParseLeadingTrivia("#nullable enable\r\n");
+        var nullableTrivia = SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true);
 
         var compilationUnit = SyntaxFactory.CompilationUnit()
             .WithUsings(GenerateUsings())
-            .WithLeadingTrivia(nullableTrivia);
+            .AddMembers(namespaceDeclaration);
 
-        return compilationUnit.AddMembers(namespaceDeclaration);
+        return compilationUnit;
     }
 
     private static SyntaxList<UsingDirectiveSyntax> GenerateUsings()
@@ -121,8 +121,12 @@ public class Generator : IGenerator
                         )
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
+                                SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)),
                                 SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed));
+                                SyntaxFactory.CarriageReturnLineFeed))
+                        .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
+
+
 
         if (isRoot)
         {
@@ -146,8 +150,10 @@ public class Generator : IGenerator
                 )
                 .WithLeadingTrivia(
                     SyntaxFactory.TriviaList(
+                        SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)),
                         SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                        SyntaxFactory.CarriageReturnLineFeed));
+                        SyntaxFactory.CarriageReturnLineFeed))
+                .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
 
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
 
