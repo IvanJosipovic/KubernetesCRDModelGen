@@ -33,18 +33,6 @@ jobs:
       - name: Add Models to Solution
         run: dotnet sln add ./src/Models/**/*.csproj
 
-      - name: Build Model packages
-        shell: pwsh
-        run: |
-          $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
-          foreach($project in $projects){
-
-            dotnet run --project src\KubernetesCRDModelGen.Tool\KubernetesCRDModelGen.Tool.csproj --FolderPath $($project.Directory)
-            if (-not $?) {
-              throw "CRD Generation Failed"
-            }
-          }
-
       - name: Validate Yamls
         working-directory: src/Models
         shell: pwsh

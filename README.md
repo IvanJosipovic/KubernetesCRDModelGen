@@ -29,6 +29,29 @@ This project contains components which allow generation of C# Classes/Assemblies
   - Run
     - `KubernetesCRDModelGen --FolderPath /path/to/yamls --Namespace Namespace`
 
+## How to use the Source Generator
+Create a C# Class Library Project and add some CRD yaml files to the project.
+Update the .csproj with the following settings. The Models will be generated in the "KubernetesCRDModelGen.Models.{CRD Group Name}" namespace.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="KubernetesClient" Version="17.0.4" />
+    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-0" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+    <AdditionalFiles Include="*.yaml" />
+  </ItemGroup>
+
+</Project>
+```
+
 ## Published Packages
 
 We publish the following premade packages
